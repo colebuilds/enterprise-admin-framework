@@ -1,5 +1,3 @@
-import type { Recordable, UserInfo } from '@vben/types';
-
 import { ref } from 'vue';
 import { useRouter } from 'vue-router';
 
@@ -10,8 +8,10 @@ import { resetAllStores, useAccessStore, useUserStore } from '@vben/stores';
 import { defineStore } from 'pinia';
 
 import { notification } from '#/adapter/naive';
-import { getAccessCodesApi, getUserInfoApi, loginApi, logoutApi } from '#/api';
+import { api } from '#/api';
 import { $t } from '#/locales';
+
+import { useAppUserStore } from './app-user';
 
 export const useAuthStore = defineStore('auth', () => {
   const accessStore = useAccessStore();
@@ -20,99 +20,104 @@ export const useAuthStore = defineStore('auth', () => {
 
   const loginLoading = ref(false);
 
-  /**
-   * 异步处理登录操作
-   * Asynchronously handle the login process
-   * @param params 登录表单数据
-   */
   async function authLogin(
-    params: Recordable<any>,
+    params: Record<string, any>,
     onSuccess?: () => Promise<void> | void,
   ) {
-    // 异步处理用户登录操作并获取 accessToken
-    let userInfo: null | UserInfo = null;
     try {
       loginLoading.value = true;
-      const { accessToken } = await loginApi(params);
 
-      // 如果成功获取到 accessToken
-      if (accessToken) {
-        // 将 accessToken 存储到 accessStore 中
-        accessStore.setAccessToken(accessToken);
+      // 1. Login — map form field names to AR admin API field names
+      const { token } = await api.admin.login({
+        userName: params.username as string,
+        pwd: params.password as string,
+      });
+      accessStore.setAccessToken(token);
 
-        // 获取用户信息并存储到 accessStore 中
-        const [fetchUserInfoResult, accessCodes] = await Promise.all([
-          fetchUserInfo(),
-          getAccessCodesApi(),
-        ]);
+      // 2. Fetch user info (permission codes + user details)
+      const vbenUserInfo = await fetchUserInfo();
 
-        userInfo = fetchUserInfoResult;
+      // 3. Navigate
+      if (accessStore.loginExpired) {
+        accessStore.setLoginExpired(false);
+      } else {
+        onSuccess
+          ? await onSuccess()
+          : await router.push(
+              vbenUserInfo.homePath || preferences.app.defaultHomePath,
+            );
+      }
 
-        userStore.setUserInfo(userInfo);
-        accessStore.setAccessCodes(accessCodes);
-
-        if (accessStore.loginExpired) {
-          accessStore.setLoginExpired(false);
-        } else {
-          onSuccess
-            ? await onSuccess?.()
-            : await router.push(
-                userInfo.homePath || preferences.app.defaultHomePath,
-              );
-        }
-
-        if (userInfo?.realName) {
-          notification.success({
-            content: $t('authentication.loginSuccess'),
-            description: `${$t('authentication.loginSuccessDesc')}:${userInfo?.realName}`,
-            duration: 3000,
-          });
-        }
+      if (vbenUserInfo.realName) {
+        notification.success({
+          content: $t('authentication.loginSuccess'),
+          description: `${$t('authentication.loginSuccessDesc')}:${vbenUserInfo.realName}`,
+          duration: 3000,
+        });
       }
     } finally {
       loginLoading.value = false;
     }
-
-    return {
-      userInfo,
-    };
   }
 
-  async function logout(redirect: boolean = true) {
+  async function fetchUserInfo() {
+    const appUserStore = useAppUserStore();
+
+    // Fetch full user info from AR admin
+    const info = await api.admin.getSysUserInfo();
+    appUserStore.setUserInfo(info);
+
+    // Extract permission codes from menus tree (flat walk)
+    const codes = appUserStore.getPermissionCodes;
+
+    // Add localhost sentinel for local dev permissions
+    const hostname = globalThis.location?.hostname ?? '';
+    if (
+      hostname === 'localhost' ||
+      hostname === '127.0.0.1' ||
+      hostname.startsWith('192.168.') ||
+      hostname.startsWith('10.') ||
+      /^172\.(1[6-9]|2\d|3[01])\./.test(hostname)
+    ) {
+      codes.push('localhost');
+    }
+
+    accessStore.setAccessCodes(codes);
+
+    // Sync minimal info to vben userStore (used by layout header etc.)
+    const vbenUserInfo = {
+      avatar: '',
+      homePath: '/dashboard/welcome',
+      realName: info.userName,
+      roles: [] as string[],
+      userId: String(info.userId),
+      username: info.userName,
+    };
+    userStore.setUserInfo(vbenUserInfo);
+
+    return vbenUserInfo;
+  }
+
+  async function logout(redirect = true) {
     try {
-      await logoutApi();
+      await api.admin.loginOff();
     } catch {
-      // 不做任何处理
+      // ignore logout errors
     }
     resetAllStores();
     accessStore.setLoginExpired(false);
 
-    // 回登录页带上当前路由地址
     await router.replace({
       path: LOGIN_PATH,
       query: redirect
-        ? {
-            redirect: encodeURIComponent(router.currentRoute.value.fullPath),
-          }
+        ? { redirect: encodeURIComponent(router.currentRoute.value.fullPath) }
         : {},
     });
-  }
-
-  async function fetchUserInfo() {
-    const userInfo = await getUserInfoApi();
-    userStore.setUserInfo(userInfo);
-    return userInfo;
   }
 
   function $reset() {
     loginLoading.value = false;
   }
 
-  return {
-    $reset,
-    authLogin,
-    fetchUserInfo,
-    loginLoading,
-    logout,
-  };
+  return { $reset, authLogin, fetchUserInfo, loginLoading, logout };
 });
