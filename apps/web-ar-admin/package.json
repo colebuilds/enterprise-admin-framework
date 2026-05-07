@@ -10,7 +10,7 @@
     "build:prod": "vite build --mode prod",
     "preview": "vite preview",
     "typecheck": "vue-tsc --noEmit --skipLibCheck",
-    "gen:api": "tsx tools/api.ts"
+    "gen:api": "esno tools/api.ts"
   },
   "imports": {
     "#/*": "./src/*"
@@ -37,5 +37,9 @@
     "pinia": "catalog:",
     "vue": "catalog:",
     "vue-router": "catalog:"
+  },
+  "devDependencies": {
+    "axios": "catalog:",
+    "esno": "^4.8.0"
   }
 }
