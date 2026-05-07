@@ -1,5 +1,5 @@
 import { requestClient } from '#/api/request';
-import {
+import type {
   CodeNameRspListApiResponse,
   CountryListReq,
   CountryModelRspListPageBaseResponse,

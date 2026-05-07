@@ -1,5 +1,5 @@
 import { requestClient } from '#/api/request';
-import {
+import type {
   MetricsQueryDto,
   CreateFeedbackDto,
   MessageFeedbackVO,
@@ -63,7 +63,7 @@ export * from './types';
  * @url: /api/ai/metrics
  */
 export const metrics = (params: MetricsQueryDto) => {
-  return requestClient.get<any>('/ai/metrics', params);
+  return requestClient.get<any>('/ai/metrics', { params });
 }
 
 // ==================== Feedback ====================
@@ -102,7 +102,7 @@ export const chat = (params: ChatRequestDto) => {
  * @url: /api/ai/chat/sessions
  */
 export const chatSessions = (params?: ChatSessionsQueryDto) => {
-  return requestClient.get<PaginatedSessionDataVO>('/ai/chat/sessions', params);
+  return requestClient.get<PaginatedSessionDataVO>('/ai/chat/sessions', { params });
 }
 
 /**
@@ -121,7 +121,7 @@ export const chatSessionsDelete = (id: string) => {
  * @url: /api/ai/chat/sessions/{sessionId}/messages
  */
 export const messages = (sessionId: string, params?: MessagesQueryDto) => {
-  return requestClient.get<PaginatedMessageDataVO>(`/ai/chat/sessions/${sessionId}/messages`, params);
+  return requestClient.get<PaginatedMessageDataVO>(`/ai/chat/sessions/${sessionId}/messages`, { params });
 }
 
 /**
@@ -140,7 +140,7 @@ export const intentFeedback = (messageId: string, params: MessageIntentFeedbackD
  * @url: /api/ai/chat/config
  */
 export const chatConfig = (params?: ChatConfigQueryDto) => {
-  return requestClient.get<AssistantConfigVO>('/ai/chat/config', params);
+  return requestClient.get<AssistantConfigVO>('/ai/chat/config', { params });
 }
 
 /**
@@ -207,7 +207,7 @@ export const message = (messageId: string) => {
  * @url: /api/ai/admin/escalation
  */
 export const escalation = (params?: EscalationQueryDto) => {
-  return requestClient.get<any>('/ai/admin/escalation', params);
+  return requestClient.get<any>('/ai/admin/escalation', { params });
 }
 
 /**
@@ -217,7 +217,7 @@ export const escalation = (params?: EscalationQueryDto) => {
  * @url: /api/ai/admin/escalation/{id}/resolve
  */
 export const resolve = (id: string, params: ResolveEscalationDto) => {
-  return requestClient.patch<any>(`/ai/admin/escalation/${id}/resolve`, params);
+  return requestClient.request<any>(`/ai/admin/escalation/${id}/resolve`, { method: 'PATCH', data: params });
 }
 
 /**
@@ -236,7 +236,7 @@ export const escalationStats = () => {
  * @url: /api/ai/knowledge/documents
  */
 export const knowledgeDocuments = (params?: KnowledgeDocumentsQueryDto) => {
-  return requestClient.get<PaginatedDocumentDataDto>('/ai/knowledge/documents', params);
+  return requestClient.get<PaginatedDocumentDataDto>('/ai/knowledge/documents', { params });
 }
 
 /**
@@ -299,7 +299,7 @@ export const sync = (params: ExecuteSyncDto) => {
  * @url: /api/ai/sync/logs
  */
 export const syncLogs = (params?: SyncLogsQueryDto) => {
-  return requestClient.get<PaginatedSyncLogDataVO>('/ai/sync/logs', params);
+  return requestClient.get<PaginatedSyncLogDataVO>('/ai/sync/logs', { params });
 }
 
 /**
@@ -347,7 +347,7 @@ export const text = (params: ContentGenTextDto) => {
  * @url: /api/ai/content-gen/logs
  */
 export const contentGenLogs = (params?: ContentGenLogsQueryDto) => {
-  return requestClient.get<any>('/ai/content-gen/logs', params);
+  return requestClient.get<any>('/ai/content-gen/logs', { params });
 }
 
 // ==================== Report - 报表统计 ====================
@@ -358,7 +358,7 @@ export const contentGenLogs = (params?: ContentGenLogsQueryDto) => {
  * @url: /api/ai/report/dashboard/snapshot
  */
 export const snapshot = (params?: SnapshotQueryDto) => {
-  return requestClient.get<DashboardSnapshotDataVO>('/ai/report/dashboard/snapshot', params);
+  return requestClient.get<DashboardSnapshotDataVO>('/ai/report/dashboard/snapshot', { params });
 }
 
 /**
@@ -367,7 +367,7 @@ export const snapshot = (params?: SnapshotQueryDto) => {
  * @url: /api/ai/report/planner/stats
  */
 export const plannerStats = (params?: PlannerStatsQueryDto) => {
-  return requestClient.get<PlannerStatsDataVO>('/ai/report/planner/stats', params);
+  return requestClient.get<PlannerStatsDataVO>('/ai/report/planner/stats', { params });
 }
 
 /**
@@ -393,7 +393,7 @@ export const alertsConfigPut = (params: UpdateAlertConfigDto) => {
  * @url: /api/ai/report/sessions
  */
 export const reportSessions = (params?: ReportSessionsQueryDto) => {
-  return requestClient.get<any>('/ai/report/sessions', params);
+  return requestClient.get<any>('/ai/report/sessions', { params });
 }
 
 /**
@@ -411,7 +411,7 @@ export const reportSessionsGet = (sessionId: string) => {
  * @url: /api/ai/report/evaluation/six-dimensions
  */
 export const sixDimensions = (params: SixDimensionsQueryDto) => {
-  return requestClient.get<SixDimensionEvaluationDataVO>('/ai/report/evaluation/six-dimensions', params);
+  return requestClient.get<SixDimensionEvaluationDataVO>('/ai/report/evaluation/six-dimensions', { params });
 }
 
 /**
@@ -420,7 +420,7 @@ export const sixDimensions = (params: SixDimensionsQueryDto) => {
  * @url: /api/ai/report/evaluation/contest-stats
  */
 export const contestStats = (params: ContestStatsQueryDto) => {
-  return requestClient.get<ContestStatsDataVO>('/ai/report/evaluation/contest-stats', params);
+  return requestClient.get<ContestStatsDataVO>('/ai/report/evaluation/contest-stats', { params });
 }
 
 /**
@@ -429,7 +429,7 @@ export const contestStats = (params: ContestStatsQueryDto) => {
  * @url: /api/ai/report/prompt/versions
  */
 export const versions = (params: VersionsQueryDto) => {
-  return requestClient.get<PromptVersionListResponseVO>('/ai/report/prompt/versions', params);
+  return requestClient.get<PromptVersionListResponseVO>('/ai/report/prompt/versions', { params });
 }
 
 /**
@@ -438,7 +438,7 @@ export const versions = (params: VersionsQueryDto) => {
  * @url: /api/ai/report/prompt/optimizations
  */
 export const optimizations = (params: OptimizationsQueryDto) => {
-  return requestClient.get<PromptOptimizationListResponseVO>('/ai/report/prompt/optimizations', params);
+  return requestClient.get<PromptOptimizationListResponseVO>('/ai/report/prompt/optimizations', { params });
 }
 
 /**
@@ -483,5 +483,5 @@ export const reject = (id: string) => {
  * @url: /api/ai/report/failed-queries
  */
 export const failedQueries = (params?: FailedQueriesQueryDto) => {
-  return requestClient.get<FailedQueryListDataVO>('/ai/report/failed-queries', params);
+  return requestClient.get<FailedQueryListDataVO>('/ai/report/failed-queries', { params });
 }

@@ -1,5 +1,5 @@
 import { requestClient } from '#/api/request';
-import {
+import type {
   EventMetricsQueryDto,
   NodeInfoListResponseVO,
   AggregatedMetricsVO,
@@ -110,7 +110,7 @@ export * from './types';
  * @url: /api/event/metrics
  */
 export const eventMetrics = (params: EventMetricsQueryDto) => {
-  return requestClient.get<any>('/event/metrics', params);
+  return requestClient.get<any>('/event/metrics', { params });
 }
 
 // ==================== 流量监控 ====================
@@ -137,7 +137,7 @@ export const trafficMetrics = () => {
  * @url: /api/event/traffic/trend
  */
 export const trend = (params?: TrendQueryDto) => {
-  return requestClient.get<TrafficTrendListResponseVO>('/event/traffic/trend', params);
+  return requestClient.get<TrafficTrendListResponseVO>('/event/traffic/trend', { params });
 }
 
 /**
@@ -228,7 +228,7 @@ export const adminProject = (params: CreateProjectDto) => {
  * @url: /api/event/admin/project
  */
 export const adminProjectGet = (params?: AdminProjectGetQueryDto) => {
-  return requestClient.get<ProjectListResponseVO>('/event/admin/project', params);
+  return requestClient.get<ProjectListResponseVO>('/event/admin/project', { params });
 }
 
 /**
@@ -276,7 +276,7 @@ export const adminAlarm = (params: CreateAlarmDto) => {
  * @url: /api/event/admin/alarm
  */
 export const adminAlarmGet = (params?: AdminAlarmGetQueryDto) => {
-  return requestClient.get<AlarmRuleListResponseVO>('/event/admin/alarm', params);
+  return requestClient.get<AlarmRuleListResponseVO>('/event/admin/alarm', { params });
 }
 
 /**
@@ -285,7 +285,7 @@ export const adminAlarmGet = (params?: AdminAlarmGetQueryDto) => {
  * @url: /api/event/admin/alarm/messages
  */
 export const messages = (params?: MessagesQueryDto) => {
-  return requestClient.get<AlarmMessageListResponseVO>('/event/admin/alarm/messages', params);
+  return requestClient.get<AlarmMessageListResponseVO>('/event/admin/alarm/messages', { params });
 }
 
 /**
@@ -294,7 +294,7 @@ export const messages = (params?: MessagesQueryDto) => {
  * @url: /api/event/admin/alarm/stats
  */
 export const alarmStats = (params?: AlarmStatsQueryDto) => {
-  return requestClient.get<AlarmStatsVO>('/event/admin/alarm/stats', params);
+  return requestClient.get<AlarmStatsVO>('/event/admin/alarm/stats', { params });
 }
 
 /**
@@ -378,7 +378,7 @@ export const adminCard = (params: CreateCardDto) => {
  * @url: /api/event/admin/card
  */
 export const adminCardGet = (params?: AdminCardGetQueryDto) => {
-  return requestClient.get<CardListResponseVO>('/event/admin/card', params);
+  return requestClient.get<CardListResponseVO>('/event/admin/card', { params });
 }
 
 /**
@@ -481,7 +481,7 @@ export const adminCardPage = (params: CreateCardPageDto) => {
  * @url: /api/event/admin/card-page
  */
 export const adminCardPageGet = (params?: AdminCardPageGetQueryDto) => {
-  return requestClient.get<CardPageListResponseVO>('/event/admin/card-page', params);
+  return requestClient.get<CardPageListResponseVO>('/event/admin/card-page', { params });
 }
 
 /**
@@ -490,7 +490,7 @@ export const adminCardPageGet = (params?: AdminCardPageGetQueryDto) => {
  * @url: /api/event/admin/card-page/tree
  */
 export const tree = (params?: TreeQueryDto) => {
-  return requestClient.get<CardPageTreeResponseVO>('/event/admin/card-page/tree', params);
+  return requestClient.get<CardPageTreeResponseVO>('/event/admin/card-page/tree', { params });
 }
 
 /**
@@ -531,7 +531,7 @@ export const bind = (projectId: string, params: BindIdentityDto) => {
  * @url: /api/event/admin/identity/{projectId}/unbind
  */
 export const unbind = (projectId: string, params: UnbindIdentityDto) => {
-  return requestClient.delete<UnbindResultVO>(`/event/admin/identity/${projectId}/unbind`, params);
+  return requestClient.delete<UnbindResultVO>(`/event/admin/identity/${projectId}/unbind`, { params });
 }
 
 // ==================== init ====================
@@ -550,7 +550,7 @@ export const init = () => {
  * @url: /api/event/admin/init/status
  */
 export const status = (params?: StatusQueryDto) => {
-  return requestClient.get<any>('/event/admin/init/status', params);
+  return requestClient.get<any>('/event/admin/init/status', { params });
 }
 
 // ==================== Analyze - 数据分析 ====================
@@ -579,7 +579,7 @@ export const eventTrend = (params: EventTrendQueryDto) => {
  * @url: /api/event/analysis/event/realtime
  */
 export const realtime = (params?: RealtimeQueryDto) => {
-  return requestClient.get<RealtimeStatsVO>('/event/analysis/event/realtime', params);
+  return requestClient.get<RealtimeStatsVO>('/event/analysis/event/realtime', { params });
 }
 
 /**
@@ -702,7 +702,7 @@ export const flow = (params: PathQueryDto) => {
  * @url: /api/event/analysis/user/relations
  */
 export const relations = (params: RelationsQueryDto) => {
-  return requestClient.get<UserRelationListResponseVO>('/event/analysis/user/relations', params);
+  return requestClient.get<UserRelationListResponseVO>('/event/analysis/user/relations', { params });
 }
 
 /**
@@ -766,5 +766,5 @@ export const userStats = (projectId: string) => {
  * @url: /api/event/analysis/user/{projectId}/source-values
  */
 export const sourceValues = (projectId: string, params: SourceValuesQueryDto) => {
-  return requestClient.get<SourceValueListResponseVO>(`/event/analysis/user/${projectId}/source-values`, params);
+  return requestClient.get<SourceValueListResponseVO>(`/event/analysis/user/${projectId}/source-values`, { params });
 }

@@ -1,5 +1,5 @@
 import { requestClient, uploadFile } from '#/api/request';
-import {
+import type {
   AssetQueryDto,
   AssetListResponse,
   IdDto,

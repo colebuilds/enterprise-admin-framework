@@ -1,5 +1,5 @@
 import { requestClient } from '#/api/request';
-import {
+import type {
   HomeSysUserInfoRsp,
   StringApiResponse,
   HealthCheckRsp,
@@ -113,7 +113,7 @@ export const loginOff = () => {
  * @url: /api/Probe/GetStartupProbe
  */
 export const getStartupProbe = (params?: GetStartupProbeQueryDto) => {
-  return requestClient.get<any>('/Probe/GetStartupProbe', params);
+  return requestClient.get<any>('/Probe/GetStartupProbe', { params });
 }
 
 /**
@@ -122,7 +122,7 @@ export const getStartupProbe = (params?: GetStartupProbeQueryDto) => {
  * @url: /api/Probe/GetReadinessProbe
  */
 export const getReadinessProbe = (params?: GetReadinessProbeQueryDto) => {
-  return requestClient.get<any>('/Probe/GetReadinessProbe', params);
+  return requestClient.get<any>('/Probe/GetReadinessProbe', { params });
 }
 
 /**
@@ -131,7 +131,7 @@ export const getReadinessProbe = (params?: GetReadinessProbeQueryDto) => {
  * @url: /api/StaticCache/GetStaticCache
  */
 export const getStaticCache = (params?: GetStaticCacheQueryDto) => {
-  return requestClient.get<any>('/StaticCache/GetStaticCache', params);
+  return requestClient.get<any>('/StaticCache/GetStaticCache', { params });
 }
 
 // ==================== SchedulerTask ====================

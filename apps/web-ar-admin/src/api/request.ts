@@ -7,6 +7,9 @@ export const requestClient = new RequestClient({
   baseURL: '/api',
 });
 
+// Alias for vben core files that import baseRequestClient (no refresh token in AR admin)
+export const baseRequestClient = requestClient;
+
 requestClient.addRequestInterceptor({
   fulfilled: async (config) => {
     const accessStore = useAccessStore();

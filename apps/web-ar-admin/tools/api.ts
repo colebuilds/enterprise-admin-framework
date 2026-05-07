@@ -366,18 +366,35 @@ export const ${funcName} = (${params}) => {
     const params = paramsList.join(', ');
     const paramComment =
       paramComments.length > 0 ? `${paramComments.join('\n')}\n` : '';
-    const requestParam = reqName ? ', params' : '';
-
     // 使用模板字符串还是普通字符串
     const urlQuote = hasPathParams ? '`' : "'";
 
-    const mainFunc = `/**
+    // patch 走 requestClient.request，其余走具名方法
+    let mainFunc: string;
+    if (method === 'patch') {
+      const dataArg = reqName ? ', params' : '';
+      mainFunc = `/**
+ * @description: ${summary}
+${paramComment} * @url: ${url}
+ */
+export const ${funcName} = (${params}) => {
+  return requestClient.request<${responseType}>(${urlQuote}${cleanUrl}${urlQuote}, { method: 'PATCH'${dataArg ? ', data: params' : ''} });
+}`;
+    } else {
+      // GET/DELETE 的 query 参数包裹成 { params }，POST/PUT 直接传 data
+      const requestParam = reqName
+        ? (method === 'get' || method === 'delete'
+          ? ', { params }'
+          : ', params')
+        : '';
+      mainFunc = `/**
  * @description: ${summary}
 ${paramComment} * @url: ${url}
  */
 export const ${funcName} = (${params}) => {
   return requestClient.${method}<${responseType}>(${urlQuote}${cleanUrl}${urlQuote}${requestParam});
 }`;
+    }
 
     // 若请求类型含 isExport 字段，额外生成 blob 导出版本（供 downloadApiResponse 使用）
     if (method === 'post' && reqName && this.hasIsExportField(reqName)) {
@@ -1143,7 +1160,7 @@ export default api;
       return '';
     }
 
-    return `import {
+    return `import type {
 ${uniqueImports.map((item) => `  ${item}`).join(',\n')}
 } from './types';`;
   }
