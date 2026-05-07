@@ -44,7 +44,7 @@ requestClient.addResponseInterceptor<{ code: number; data: any; msg: string }>({
 
 export function uploadFile<T = any>(
   config: { url: string },
-  params: { [key: string]: any; files: File | File[]; },
+  params: { [key: string]: any; files: File | File[] },
   fieldName = 'files',
 ): Promise<T> {
   const fileList = Array.isArray(params.files) ? params.files : [params.files];
@@ -56,7 +56,5 @@ export function uploadFile<T = any>(
       formData.append(key, String(value));
     }
   }
-  return requestClient.post<T>(config.url, formData, {
-    headers: { 'Content-Type': 'multipart/form-data' },
-  });
+  return requestClient.post<T>(config.url, formData);
 }
