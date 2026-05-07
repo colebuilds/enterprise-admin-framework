@@ -16,17 +16,19 @@ export const baseRequestClient = requestClient;
 
 function randomInt(n: number): number {
   if (n <= 0) return -1;
-  const limit = Math.pow(10, n);
+  const limit = 10 ** n;
   const value = Math.floor(Math.random() * limit);
   if (value < limit / 10 && value !== 0) return randomInt(n);
   return value;
 }
 
-function sortObjectForSign(obj: Record<string, unknown>): Record<string, unknown> {
+function sortObjectForSign(
+  obj: Record<string, unknown>,
+): Record<string, unknown> {
   const result: Record<string, unknown> = {};
   const keys = Object.keys(obj)
     .filter((k) => !Array.isArray(obj[k]) && obj[k] !== '')
-    .sort();
+    .toSorted();
   for (const k of keys) {
     if (obj[k] !== null && obj[k] !== '') {
       result[k] =
@@ -57,7 +59,9 @@ function signBody(body: Record<string, unknown>): Record<string, unknown> {
   const withMeta = { ...body, language, random };
   const forSign = removeArrayFields(withMeta) as Record<string, unknown>;
   const sorted = sortObjectForSign(forSign);
-  const signature = SparkMD5.hash(JSON.stringify(sorted)).toUpperCase().slice(0, 32);
+  const signature = SparkMD5.hash(JSON.stringify(sorted))
+    .toUpperCase()
+    .slice(0, 32);
   const timestamp = Math.floor(Date.now() / 1000);
   return { ...withMeta, signature, timestamp };
 }
@@ -84,9 +88,13 @@ requestClient.addRequestInterceptor({
 
     config.headers.domainUrl = resolveDomainUrl();
 
-    // Inject signing fields into JSON body (skip FormData)
-    if (config.data && !(config.data instanceof FormData)) {
-      config.data = signBody(config.data as Record<string, unknown>);
+    // Sign all POST/PUT/PATCH requests (even empty body) — backend requires signing fields
+    const method = config.method?.toUpperCase();
+    if (
+      (method === 'POST' || method === 'PUT' || method === 'PATCH') &&
+      !(config.data instanceof FormData)
+    ) {
+      config.data = signBody((config.data ?? {}) as Record<string, unknown>);
     }
 
     return config;

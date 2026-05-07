@@ -20,7 +20,9 @@ function pickFirstText(...values: Array<null | string | undefined>): string {
   return values.find((v) => typeof v === 'string' && v.trim() !== '') ?? '';
 }
 
-function buildTenantGroups(info?: null | Partial<UserInfoType>): UserTenantGroupItem[] {
+function buildTenantGroups(
+  info?: null | Partial<UserInfoType>,
+): UserTenantGroupItem[] {
   const groups: UserTenantGroupItem[] = [];
   const groupMap = new Map<number, UserTenantGroupItem>();
   const seenIds = new Set<number>();
@@ -48,7 +50,10 @@ function buildTenantGroups(info?: null | Partial<UserInfoType>): UserTenantGroup
   for (const item of info?.tenantList ?? []) {
     if (seenIds.has(item.id)) continue;
     seenIds.add(item.id);
-    const group = ensureGroup(item.orgId, groupMap.get(item.orgId)?.orgName ?? info?.orgName);
+    const group = ensureGroup(
+      item.orgId,
+      groupMap.get(item.orgId)?.orgName ?? info?.orgName,
+    );
     if (!group) continue;
     group.tenants.push({ ...item, orgName: group.orgName });
   }
@@ -100,7 +105,8 @@ export const useAppUserStore = defineStore('app-user', {
       return Object.fromEntries(this.getTenantFlatList.map((t) => [t.id, t]));
     },
     getTenantById(): (id?: null | number) => null | UserTenantItem {
-      return (id) => (typeof id === 'number' ? (this.getTenantMap[id] ?? null) : null);
+      return (id) =>
+        typeof id === 'number' ? (this.getTenantMap[id] ?? null) : null;
     },
     getActiveTenant(): null | UserTenantItem {
       return this.getTenantById(this.activeTenantId);
@@ -143,7 +149,9 @@ export const useAppUserStore = defineStore('app-user', {
         return;
       }
       const valid = tenants.find((t) => t.id === this.activeTenantId);
-      this.activeTenantId = valid ? this.activeTenantId : (tenants[0]?.id ?? null);
+      this.activeTenantId = valid
+        ? this.activeTenantId
+        : (tenants[0]?.id ?? null);
     },
 
     setDictionary(dictionary: DictionaryRsp) {

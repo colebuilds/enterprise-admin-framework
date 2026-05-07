@@ -22,6 +22,7 @@ export default defineConfig(async ({ mode } = {}) => {
         proxy: {
           '/api': {
             changeOrigin: true,
+            secure: false,
             target: apiTarget,
             ws: true,
           },
