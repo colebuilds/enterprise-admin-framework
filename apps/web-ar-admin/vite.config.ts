@@ -2,9 +2,15 @@ import process from 'node:process';
 
 import { defineConfig } from '@vben/vite-config';
 
-export default defineConfig(async () => {
-  const appType = process.env.VITE_APP_TYPE ?? 'ADMIN';
+import { loadEnv } from 'vite';
+
+export default defineConfig(async ({ mode } = {}) => {
+  const env = loadEnv(mode ?? 'dev', process.cwd());
+
+  // cross-env VITE_APP_TYPE=TENANT takes precedence over env file
+  const appType = process.env.VITE_APP_TYPE ?? env.VITE_APP_TYPE ?? 'ADMIN';
   const isTenant = appType === 'TENANT';
+  const apiTarget = isTenant ? env.VITE_TENANT_API_URL : env.VITE_API_BASE_URL;
 
   return {
     application: {},
@@ -16,9 +22,8 @@ export default defineConfig(async () => {
         proxy: {
           '/api': {
             changeOrigin: true,
-            target: isTenant
-              ? process.env.VITE_TENANT_API_URL
-              : process.env.VITE_API_BASE_URL,
+            target: apiTarget,
+            ws: true,
           },
         },
       },
