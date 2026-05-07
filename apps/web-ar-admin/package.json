@@ -16,6 +16,8 @@
     "#/*": "./src/*"
   },
   "dependencies": {
+    "@vicons/antd": "^0.13.0",
+    "@vicons/ionicons5": "^0.13.0",
     "@vben-core/shadcn-ui": "workspace:*",
     "@vben/access": "workspace:*",
     "@vben/common-ui": "workspace:*",
@@ -36,9 +38,16 @@
     "naive-ui": "catalog:",
     "pinia": "catalog:",
     "vue": "catalog:",
+    "date-fns": "^4.1.0",
+    "date-fns-tz": "^3.2.0",
+    "lodash-es": "^4.17.23",
+    "sortablejs": "catalog:",
+    "vue-i18n": "catalog:",
     "vue-router": "catalog:"
   },
   "devDependencies": {
+    "@types/lodash-es": "^4.17.12",
+    "@types/sortablejs": "catalog:",
     "axios": "catalog:",
     "esno": "^4.8.0"
   }
