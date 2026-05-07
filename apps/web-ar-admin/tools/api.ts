@@ -730,9 +730,9 @@ ${fields}}\n\n`;
       fields += `  [key: string]: ${additionalType};\n`;
     }
 
-    // 如果没有字段，生成空接口
+    // 如果没有字段，生成 Record 类型避免空接口 lint 报错
     if (!fields.trim()) {
-      return `${description}export interface ${name} {}\n\n`;
+      return `${description}export type ${name} = Record<string, unknown>;\n\n`;
     }
 
     return `${description}export interface ${name} {
@@ -1069,13 +1069,18 @@ class FileWriter {
     const imports = this.generateImports(allImports);
 
     // 生成完整代码 (同时导出 types)
-    const code = `${CONFIG.IMPORT}
+    const joined = allApis.join('\n\n');
+    const hasUpload = joined.includes('uploadFile');
+    const importLine = hasUpload
+      ? `import { requestClient, uploadFile } from '#/api/request';`
+      : `import { requestClient } from '#/api/request';`;
+    const code = `${importLine}
 ${imports}
 
 // 导出类型
 export * from './types';
 
-${allApis.join('\n\n')}
+${joined}
 `;
 
     // 写入文件
@@ -1097,6 +1102,8 @@ ${allApis.join('\n\n')}
     const exports = modules.join(',\n  ');
 
     const code = `${imports}
+
+export * from './core';
 
 export const api = {
   ${exports}
@@ -1219,19 +1226,10 @@ class OpenApiGenerator {
         }
       }
 
-      // Manually preserved modules (not generated, but need to be included in index.ts)
-      const PRESERVED_MODULES = [
-        'system',
-        'member',
-        'activity',
-        'thirdgame',
-        'thirdanalytics',
-      ];
-      for (const mod of PRESERVED_MODULES) {
-        if (!this.processedModules.includes(mod)) {
-          this.processedModules.push(mod);
-        }
-      }
+      // Only include modules that have an actual directory + index.ts on disk
+      this.processedModules = this.processedModules.filter((mod) =>
+        fs.existsSync(path.join(CONFIG.BASE_PATH, mod, 'index.ts')),
+      );
 
       // 生成主入口文件
       this.fileWriter.writeMainIndex(this.processedModules);
