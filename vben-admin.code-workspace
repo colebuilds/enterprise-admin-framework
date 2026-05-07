@@ -13,6 +13,10 @@
       "path": "apps/web-antdv-next"
     },
     {
+      "name": "@vben/web-ar-admin",
+      "path": "apps/web-ar-admin"
+    },
+    {
       "name": "@vben/web-ele",
       "path": "apps/web-ele"
     },
