@@ -748,10 +748,7 @@ async function loadDataTable(params: {
     pageSize: params?.pageSize ?? 10,
   };
 
-  const { data, result } = await api.system.getTenantPageList(requestParams);
-  if (!result) return { list: [], total: 0 };
-
-  return data;
+  return api.system.getTenantPageList(requestParams);
 }
 
 function handleAdd() {

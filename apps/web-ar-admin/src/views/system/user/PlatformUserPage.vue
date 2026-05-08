@@ -275,10 +275,7 @@ async function loadDataTable(params: {
     pageSize: params?.pageSize ?? 10,
   };
 
-  const { data, result } = await api.system.sysUsersGetPageList(requestParams);
-  if (!result) return { list: [], total: 0 };
-
-  return data;
+  return await api.system.sysUsersGetPageList(requestParams);
 }
 
 function handleOpenUserModal(

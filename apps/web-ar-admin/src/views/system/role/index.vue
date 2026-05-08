@@ -134,8 +134,8 @@ async function loadDataTable(params: RolePageReq) {
     pageSize: params.pageSize ?? 20,
     pageNo: params.pageNo ?? 1,
   };
-  const { data, result } = await api.system.roleGetPageList(requestParams);
-  if (!result) return { list: [], total: 0 };
+  const data = await api.system.roleGetPageList(requestParams);
+  
   return data;
 }
 
@@ -209,7 +209,7 @@ async function handleMenuAuth(record: RoleRow) {
 
   try {
     roleLoading.value = true;
-    const { data } = await api.system.getMenuTreeByRoleId({
+    const data = await api.system.getMenuTreeByRoleId({
       roleId: record.id,
     });
     filterTreeData(data);
