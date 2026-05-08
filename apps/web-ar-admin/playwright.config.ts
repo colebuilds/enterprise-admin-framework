@@ -1,6 +1,6 @@
 import { defineConfig, devices } from '@playwright/test';
 
-import { AUTH_FILE } from './e2e/constants';
+import { TENANT_AUTH_FILE } from './e2e/constants';
 
 export default defineConfig({
   testDir: './e2e',
@@ -25,12 +25,12 @@ export default defineConfig({
       use: { ...devices['Desktop Chrome'] },
     },
 
-    // All tests run with the saved auth state
+    // All tests run with the saved auth state (商户后台 TENANT)
     {
       name: 'chromium',
       use: {
         ...devices['Desktop Chrome'],
-        storageState: AUTH_FILE,
+        storageState: TENANT_AUTH_FILE,
       },
       dependencies: ['setup'],
     },
