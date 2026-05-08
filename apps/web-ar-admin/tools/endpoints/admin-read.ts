@@ -73,7 +73,7 @@ export const ADMIN_READ_ENDPOINTS: Endpoint[] = [
   {
     method: 'POST',
     path: '/Role/GetPageList',
-    body: { pageNo: 1, pageSize: 20, orderBy: 'Desc' },
+    body: { pageNo: 1, pageSize: 20, orderBy: 'Desc', sortField: 'id' },
   },
   {
     method: 'POST',
