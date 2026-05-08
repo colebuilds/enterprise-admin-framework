@@ -1,0 +1,213 @@
+{
+  "components": {
+    "proCrudTable": {
+      "expand": "Mở rộng",
+      "collapse": "Thu gọn",
+      "selectCurrentPage": "Chọn tất cả trên trang",
+      "batchAction": "Thao tác hàng loạt",
+      "selectedCount": "Đã chọn {count} mục",
+      "totalCount": "Tổng cộng {count}",
+      "action": "Thao tác"
+    },
+    "proAdvancedSearch": {
+      "title": "Bộ lọc nâng cao",
+      "panelTitle": "Tìm kiếm nâng cao",
+      "quickEdit": "Sửa nhanh",
+      "cancelEdit": "Hủy sửa",
+      "pinHint": "Ghim trường vào vùng tìm kiếm chính (tối đa {max})",
+      "pinCount": "Đã chọn {count}/{max}",
+      "cancel": "Hủy",
+      "clearAll": "Xóa",
+      "resetDefault": "Đặt lại",
+      "apply": "Áp dụng",
+      "saveConfig": "Lưu cấu hình",
+      "groupOther": "Khác"
+    },
+    "proSearchForm": {
+      "search": "Tìm kiếm",
+      "reset": "Đặt lại",
+      "expand": "Mở rộng",
+      "collapse": "Thu gọn"
+    },
+    "proColumnSetting": {
+      "customColumns": "Cột",
+      "columnDisplay": "Hiển thị cột",
+      "reset": "Đặt lại"
+    },
+    "tenantCheckPanel": {
+      "selected": "Đã chọn {count}/{total}",
+      "selectAll": "Chọn tất cả",
+      "clear": "Xóa",
+      "loading": "Đang tải...",
+      "empty": "Không có thương nhân khả dụng"
+    },
+    "aiAssistant": {
+      "openAssistant": "Mở Trợ lý AI",
+      "eyebrow": "AI",
+      "title": "Trợ lý thông minh",
+      "input": {
+        "configUnavailable": "Cấu hình trợ lý không khả dụng",
+        "stopGenerating": "Dừng tạo",
+        "overLimit": "Nội dung vượt quá giới hạn độ dài",
+        "waitReply": "Vui lòng chờ phản hồi",
+        "sendEnter": "Gửi (phím Enter)"
+      },
+      "panel": {
+        "newChat": "Cuộc trò chuyện mới",
+        "history": "Lịch sử",
+        "undock": "Hủy ghim",
+        "dockRight": "Ghim sang phải",
+        "exitFullscreen": "Thoát toàn màn hình",
+        "fullscreen": "Toàn màn hình",
+        "close": "Đóng",
+        "loadingConfig": "Đang tải cấu hình trợ lý",
+        "loadingWelcome": "Vui lòng chờ, nội dung chào mừng sẽ hiển thị sau khi cấu hình trả về.",
+        "emptyTitle": "Gửi tin nhắn để bắt đầu",
+        "emptyCopy": "Hỗ trợ truy xuất tri thức, hỏi đáp quy trình và xử lý sự cố."
+      },
+      "session": {
+        "count": "{count} phiên",
+        "justNow": "Vừa xong",
+        "minutesAgo": "{count} phút trước",
+        "hoursAgo": "{count} giờ trước",
+        "noMessages": "Chưa có tin nhắn",
+        "messages": "{count} tin nhắn",
+        "deleteTitle": "Xóa phiên",
+        "deleteConfirm": "Bạn có chắc muốn xóa phiên này không? Sau khi xóa sẽ không thể khôi phục.",
+        "current": "Hiện tại",
+        "emptyDescription": "Các phiên lịch sử sẽ hiển thị tại đây",
+        "newChat": "Cuộc trò chuyện mới"
+      },
+      "message": {
+        "copiedToClipboard": "Đã sao chép vào bộ nhớ tạm",
+        "waitingAnalyzing": "Đang phân tích...",
+        "waitingThinking": "Đang suy nghĩ...",
+        "loadFailed": "Tải tin nhắn thất bại",
+        "recoveringLatestAnswer": "Kết nối không ổn định. Đang khôi phục câu trả lời mới nhất..."
+      },
+      "feedback": {
+        "thanks": "Cảm ơn phản hồi của bạn",
+        "thanksImprove": "Cảm ơn phản hồi của bạn. Chúng tôi sẽ tiếp tục cải thiện.",
+        "submitFailed": "Gửi phản hồi thất bại",
+        "correctedTo": "Đã chỉnh thành \"{intent}\"",
+        "intentConfirmed": "Đã xác nhận kết quả nhận diện",
+        "intentRecorded": "Đã ghi nhận vấn đề nhận diện",
+        "invalidIntent": "Loại ý định không hợp lệ",
+        "recognitionResult": "Kết quả nhận diện",
+        "helpfulQuestion": "Câu trả lời này có hữu ích không?",
+        "helpful": "Hữu ích",
+        "unhelpful": "Không hữu ích",
+        "liked": "Đã thích",
+        "feedbackSent": "Đã gửi phản hồi",
+        "correctIntent": "Chỉnh ý định",
+        "intentHint": "Nếu kết quả nhận diện chưa chính xác, bạn có thể chỉnh ý định để hỗ trợ tối ưu sau này."
+      },
+      "runtime": {
+        "title": "Thực thi tác vụ",
+        "currentStep": "Bước hiện tại",
+        "taskStatus": "Trạng thái tác vụ",
+        "failedRetry": "Tác vụ phân tích thất bại. Vui lòng thử lại sau.",
+        "runningHint": "Hệ thống đang phân tích bất đồng bộ và sẽ tự ghi kết quả khi hoàn tất.",
+        "status": {
+          "queued": "Đã xếp hàng",
+          "running": "Đang phân tích",
+          "answering": "Đang tạo câu trả lời",
+          "completed": "Đã hoàn tất",
+          "failed": "Thực thi thất bại",
+          "cancelled": "Đã hủy",
+          "retrying": "Đang thử lại",
+          "processing": "Đang xử lý"
+        }
+      },
+      "answer": {
+        "confidenceHigh": "Độ tin cậy cao",
+        "confidenceMedium": "Độ tin cậy trung bình",
+        "confidenceLow": "Độ tin cậy thấp",
+        "supportSemanticCache": "Bộ nhớ đệm ngữ nghĩa",
+        "supportVectorCache": "Bộ nhớ đệm truy xuất",
+        "supportKnowledge": "Truy xuất tri thức",
+        "supportAnalysis": "Dữ liệu phân tích",
+        "supportFallback": "Ghi chú dự phòng",
+        "page": "Trang: {page}",
+        "basis": "Cơ sở: {basis}",
+        "documentHits": "Khớp {count} tài liệu",
+        "fallbackHint": "Câu trả lời hiện được tạo từ hướng dẫn dự phòng. Hãy bổ sung thêm trang, chức năng hoặc chỉ số quan trọng.",
+        "references": "Tài liệu tham khảo"
+      },
+      "stream": {
+        "http": {
+          "badRequest": "Tham số yêu cầu không hợp lệ",
+          "unauthorized": "Phiên đăng nhập đã hết hạn, vui lòng đăng nhập lại",
+          "forbidden": "Không có quyền truy cập",
+          "unavailable": "Dịch vụ không khả dụng",
+          "tooManyRequests": "Yêu cầu quá thường xuyên, vui lòng thử lại sau",
+          "internalError": "Lỗi máy chủ nội bộ",
+          "temporaryUnavailable": "Dịch vụ tạm thời không khả dụng",
+          "maintenance": "Dịch vụ đang bảo trì",
+          "timeout": "Yêu cầu hết thời gian chờ",
+          "requestFailed": "Yêu cầu thất bại ({status})"
+        },
+        "errors": {
+          "rateLimit": "Dịch vụ AI đang bận, vui lòng thử lại sau",
+          "toolLoopExceeded": "Câu hỏi này có quá nhiều bước phân tích, vui lòng thu hẹp phạm vi rồi thử lại",
+          "streamConflict": "Bạn đang có một cuộc trò chuyện đang diễn ra, vui lòng thử lại sau",
+          "serviceUnavailable": "Dịch vụ AI tạm thời không khả dụng, vui lòng thử lại sau",
+          "timeout": "Phản hồi AI hết thời gian chờ, vui lòng thử lại sau",
+          "internalError": "Trợ lý AI tạm thời không khả dụng, vui lòng thử lại sau",
+          "timeoutNarrowScope": "Phản hồi AI hết thời gian chờ, vui lòng thu hẹp câu hỏi rồi thử lại",
+          "networkFailed": "Kết nối mạng thất bại, vui lòng kiểm tra mạng",
+          "requestRetry": "Yêu cầu thất bại, vui lòng thử lại sau"
+        }
+      },
+      "socket": {
+        "invalidConfig": "Thiếu cấu hình đẩy tác vụ, không thể đăng ký tiến trình thực thi.",
+        "unauthorized": "Phiên đăng nhập đã hết hạn, vui lòng đăng nhập lại.",
+        "connectFailed": "Kết nối đẩy tác vụ thất bại.",
+        "taskFailed": "Thực thi tác vụ thất bại."
+      },
+      "welcome": {
+        "configLoadFailed": "Tải cấu hình thất bại",
+        "unavailableRetry": "Cấu hình trang chào mừng tạm thời không khả dụng. Vui lòng thử lại trước khi mở trợ lý.",
+        "reload": "Tải lại"
+      },
+      "clarify": {
+        "message": "Tôi muốn hỏi về {intent}"
+      },
+      "escalate": {
+        "unavailable": "Phiên bản hiện tại chưa kết nối hỗ trợ trực tiếp. Vui lòng liên hệ CSKH thủ công.",
+        "title": "Cần hỗ trợ từ nhân viên",
+        "copy": "Có thể bạn cần hỗ trợ chuyên sâu hơn. Nên liên hệ CSKH.",
+        "contact": "Liên hệ CSKH"
+      }
+    },
+    "proDataTable": {
+      "densityDefault": "Mặc định",
+      "densityMiddle": "Trung bình",
+      "densityCompact": "Thu gọn"
+    },
+    "htmlCodeEditor": {
+      "editTitle": "Sửa mã HTML",
+      "completionHint": "Ctrl+Space gợi ý mã",
+      "format": "Định dạng",
+      "previewTitle": "Xem trước rich text",
+      "realtimeRender": "Render thời gian thực",
+      "formatSuccess": "Đã định dạng xong",
+      "formatFailed": "Định dạng thất bại, vui lòng kiểm tra cấu trúc HTML"
+    },
+    "batchTemplateModal": {
+      "title": "Mẫu nhập hàng loạt",
+      "download": "Tải mẫu"
+    },
+    "phonePreview": {
+      "expand": "Mở rộng xem trước",
+      "collapse": "Thu gọn xem trước"
+    },
+    "summaryTable": {
+      "amountLabel": "Số tiền:"
+    },
+    "proEditDataTable": {
+      "addRow": "Thêm một dòng",
+      "deleteConfirm": "Bạn có chắc muốn xóa bản ghi này không?"
+    }
+  }
+}

@@ -1,0 +1,663 @@
+{
+  "game": {
+    "platform": {
+      "title": "Provider game manajemen",
+      "searchForm": {
+        "categoryType": "Kategori game",
+        "categoryTypePlaceholder": "Pilih game kategori",
+        "state": "aktifkan Status",
+        "search": {
+          "categoryLabel": "Kategori game",
+          "orderNoLabel": "Game Tidak. pesanan",
+          "orderNoPlaceholder": "Game Tidak. pesanan",
+          "memberIdLabel": "ID anggota",
+          "memberIdPlaceholder": "Silakan masukkan ID anggota",
+          "vendorLabel": "Provider game",
+          "vendorPlaceholder": "Silakan pilih Provider game"
+        },
+        "statePlaceholder": "Pilih Status",
+        "isMaintenance": "Maintenance Status",
+        "maintenancePlaceholder": "Pilih Status",
+        "normal": "Normal",
+        "maintenance": "Maintenance"
+      },
+      "columns": {
+        "state": "Status",
+        "isMaintenance": "Maintenance Status",
+        "vendorMapping": "Vendor Mapping",
+        "vendorCode": "Vendor Kode",
+        "vendorName": "Provider game nama",
+        "displayName": "frontend tampilan Name",
+        "imgUrl": "Ikon",
+        "vendorLogoUrl": "provider LOGO",
+        "selectedVendorLogoUrl": "Vendor Logo (Aktif)",
+        "categoryType": "Kategori game",
+        "customCategoryList": "tampilan Categories",
+        "sort": "Urutan Pesanan",
+        "lastUpdateTime": "Terakhir Waktu diperbarui",
+        "lastUpdateMan": "Operator",
+        "mapTip": "Setelah enabling mapping, the vendor will no longer be displayed independently on the frontend"
+      },
+      "actions": {
+        "edit": "Edit",
+        "subGameManagement": "sub-game manajemen",
+        "syncSubGame": "Sync Games",
+        "syncTenant": "Sync Tenants",
+        "syncGameVendor": "Sync Provider games",
+        "fetchBet": "Fetch Missing Taruhan",
+        "enable": "aktifkan",
+        "disable": "nonaktifkan",
+        "maintenance": "Maintenance",
+        "cancel": "batal",
+        "save": "simpan"
+      },
+      "modal": {
+        "editTitle": "edit Provider game",
+        "fetchBetTitle": "Fetch Missing {gameType} Taruhan",
+        "addBatchClass": "Tambah categories in batches",
+        "deleteBatchClass": "Hapus categories in batches",
+        "addBatchSort": "Batch pengaturan sorting",
+        "syncTenantTitle": "Sync merchant Games",
+        "syncGameVendorTitle": "Sync Provider games Reminder",
+        "syncGameVendorConfirm": "Anda yakin ingin sync Semua Game providers?",
+        "syncSubGameTitle": "Sync Games Reminder",
+        "syncSubGameConfirm": "Anda yakin ingin sync {vendorName} games?"
+      },
+      "syncTenant": {
+        "syncType": "Sync Tipe",
+        "allTenants": "Semua Tenants",
+        "selectTenants": "Pilih Tenants",
+        "tenants": "Tenants",
+        "selectTenantRequired": "Silakan pilih tenants",
+        "syncTypeRequired": "Silakan pilih sync type",
+        "syncSuccess": "Game sync berhasil"
+      },
+      "edit": {
+        "vendorName": "Provider game nama",
+        "displayCategory": "tampilan Categories",
+        "displayCategoryPlaceholder": "Pilih tampilan Categories",
+        "displayName": "frontend tampilan Name",
+        "displayNamePlaceholder": "Silakan masukkan nama",
+        "sort": "Urutan",
+        "icon": "Ikon",
+        "vendorLogo": "provider LOGO",
+        "selectedVendorLogo": "Vendor Logo (Aktif)",
+        "validation": {
+          "iconRequired": "silakan upload game gambar",
+          "selectedLogoRequired": "silakan upload active vendor logo",
+          "vendorLogoRequired": "silakan upload vendor logo",
+          "sortRequired": "Masukkan sort value",
+          "displayCategoryRequired": "Pilih tampilan categories",
+          "validImageRequired": "silakan upload a valid gambar"
+        },
+        "messages": {
+          "editSuccess": "Perbarui berhasil",
+          "createSuccess": "buat berhasil"
+        }
+      },
+      "fetchBet": {
+        "timeRange": "Rentang waktu",
+        "timeRangeError": "Silakan pilih time range",
+        "submitSuccess": "Fetch missing Taruhan task Dikirim. silakan check results later."
+      }
+    },
+    "category": {
+      "title": "Game tampilan kategori Management",
+      "columns": {
+        "categoryName": "game kategori nama",
+        "imgUrl": "Ikon",
+        "smallImgUrl": "Small Ikon",
+        "selectedImgUrl": "Aktif Ikon",
+        "sort": "Kategori Urutan",
+        "state": "aktifkan Status",
+        "lastUpdateTime": "Terakhir Waktu diperbarui",
+        "lastUpdateMan": "Terakhir Operator"
+      },
+      "actions": {
+        "edit": "Edit",
+        "showLanguage": "tampilkan Languages",
+        "categoryDescription": "Kategori Deskripsi",
+        "add": "tambah Game tampilan kategori",
+        "enable": "aktifkan",
+        "disable": "nonaktifkan",
+        "cancel": "batal",
+        "save": "simpan"
+      },
+      "modal": {
+        "editTitle": "edit game kategori",
+        "addTitle": "tambah game kategori",
+        "languageTitle": "Edit Languages",
+        "descriptionTitle": "Edit Kategori Deskripsi"
+      },
+      "edit": {
+        "categoryName": "kategori nama",
+        "categoryNamePlaceholder": "Silakan masukkan kategori nama",
+        "sort": "Kategori Urutan",
+        "icon": "Ikon",
+        "smallIcon": "Small Ikon",
+        "selectedIcon": "Small Ikon (Aktif)",
+        "validation": {
+          "categoryNameRequired": "Silakan masukkan kategori nama",
+          "sortRequired": "Masukkan kategori sort",
+          "sortMinValue": "Kategori sort tidak boleh kurang dari 0",
+          "iconRequired": "silakan upload game kategori gambar",
+          "selectedIconRequired": "silakan upload active icon gambar",
+          "smallIconRequired": "silakan upload icon",
+          "validImageRequired": "silakan upload a valid gambar"
+        },
+        "messages": {
+          "editSuccess": "Perbarui berhasil",
+          "createSuccess": "buat berhasil"
+        }
+      }
+    },
+    "mapping": {
+      "title": "Configure Mapping",
+      "editTitle": "Edit Mapping",
+      "currentGame": "Saat ini Game",
+      "targetVendor": "Target Vendor",
+      "targetVendorPlaceholder": "Pilih target vendor",
+      "targetGame": "Target Game",
+      "targetGamePlaceholder": "Pilih target game",
+      "tips": {
+        "tip1": "A target game Dapat only be used sekali",
+        "tip2": "The target game will be dikunci setelah konfigurasi",
+        "tip3": "Dapat only be reused setelah canceling the mapping"
+      },
+      "validation": {
+        "vendorRequired": "Silakan pilih target vendor",
+        "gameRequired": "Silakan pilih target game"
+      },
+      "messages": {
+        "configSuccess": "konfigurasi berhasil",
+        "updateSuccess": "Perbarui berhasil",
+        "cancelConfirm": "Anda yakin ingin batal the mapping for this game?",
+        "cancelSuccess": "Mapping canceled berhasil"
+      },
+      "actions": {
+        "config": "Configure Mapping",
+        "edit": "Edit Mapping",
+        "cancel": "Batal Mapping"
+      }
+    },
+    "hotGameConfig": {
+      "title": "populer game",
+      "pageTitle": "populer game manajemen",
+      "addButton": "Tambah Popular Game",
+      "editDescription": "Edit Kategori Deskripsi",
+      "columns": {
+        "vendor": "Provider game",
+        "gameName": "Nama game",
+        "gameImage": "game gambar",
+        "sort": "Urutan",
+        "status": "aktifkan Status",
+        "lastUpdateTime": "Terakhir Waktu diperbarui",
+        "lastUpdateUser": "Terakhir Operator"
+      },
+      "actions": {
+        "edit": "Edit",
+        "gameDescription": "Game Deskripsi"
+      },
+      "edit": {
+        "vendor": "Provider game",
+        "vendorPlaceholder": "Silakan pilih Provider game",
+        "subGame": "sub-game",
+        "subGamePlaceholder": "Silakan pilih sub-game",
+        "gameImage": "game gambar",
+        "sort": "Urutan",
+        "validation": {
+          "vendorRequired": "Silakan pilih provider",
+          "sortRequired": "Masukkan kategori sort",
+          "sortMin": "Kategori sort tidak boleh kurang dari 0",
+          "imageRequired": "silakan upload game kategori gambar",
+          "gameIdRequired": "Silakan pilih sub-game"
+        }
+      },
+      "describe": {
+        "title": "Judul",
+        "description": "Deskripsi"
+      }
+    },
+    "thirdBalance": {
+      "title": "game saldo pemulihan",
+      "batchRecoverText": "Massal Recover",
+      "memberIdRequired": "Silakan masukkan ID anggota",
+      "recoverSuccess": "pemulihan berhasil",
+      "batchRecoverSuccess": "Batch recovery berhasil",
+      "columns": {
+        "memberId": "ID anggota",
+        "vendor": "Provider game",
+        "balance": "saldo"
+      },
+      "actions": {
+        "balanceRecover": "saldo pemulihan"
+      },
+      "modal": {
+        "batchRecoverTitle": "Batch Saldo Recovery",
+        "warningTitle": "Peringatan",
+        "recoverConfirm": "Anda yakin ingin recover the balance of {account} {vendorCode}?"
+      },
+      "search": {
+        "memberIdLabel": "ID anggota",
+        "memberIdPlaceholder": "Silakan masukkan ID anggota"
+      },
+      "batchRecover": {
+        "userIdLabel": "pengguna ID",
+        "userIdPlaceholder": "Masukkan pengguna IDs separated by space or comma",
+        "vendorLabel": "Provider game",
+        "validation": {
+          "vendorRequired": "Silakan pilih Provider game",
+          "userIdRequired": "Masukkan pengguna IDs separated by space or comma",
+          "maxUsersLimit": "Up to 100 pengguna per recovery",
+          "numberOnly": "Must be numbers"
+        }
+      }
+    },
+    "betRecord": {
+      "title": "game taruhan pesanan",
+      "tabs": {
+        "lottery": "Lottery Bet Order",
+        "live": "Live Casino Bet Order",
+        "sports": "Sports Bet Order",
+        "electronic": "Elektronik Bet Order",
+        "chess": "Card Game Bet Order"
+      },
+      "lotteryTabs": {
+        "wingoLabel": "Win Go",
+        "k3Label": "K3",
+        "fiveDLabel": "5D",
+        "trxWingoLabel": "TRX Win Go",
+        "xosoLabel": "XOSO",
+        "wingoSub": "Win Go Lotere",
+        "k3Sub": "K3 Lotere",
+        "fiveDSub": "5D Lotere",
+        "trxWingoSub": "TRX Wingo Lotere",
+        "xosoSub": "XOSO Vietnam Lotere",
+        "newLottery": "Baru Lotere",
+        "newLotterySub": "MOTO Video"
+      },
+      "xosoRegion": {
+        "north75": "North 75s",
+        "central75": "Central 75s",
+        "south45": "South 45s"
+      },
+      "exportButton": "ekspor",
+      "summary": {
+        "betAmount": "Jumlah taruhan",
+        "validAmount": "Taruhan valid",
+        "winAmount": "pembayaran hadiah jumlah",
+        "winLose": "Laba/Rugi",
+        "feeAmount": "Tax"
+      },
+      "columns": {
+        "orderNo": "game No. pesanan",
+        "memberId": "ID anggota",
+        "vendor": "Provider game",
+        "gameName": "Nama game",
+        "issueNumber": "Issue Tidak.",
+        "betType": "taruhan tipe",
+        "betContent": "Bet Content",
+        "betAmount": "Jumlah taruhan",
+        "validAmount": "Taruhan valid",
+        "winAmount": "pembayaran hadiah jumlah",
+        "winLose": "Laba/Rugi",
+        "feeAmount": "Tax",
+        "status": "Status",
+        "userType": "pengguna tipe",
+        "followOrderNo": "Follow Strategy Tidak. pesanan",
+        "betTime": "Waktu taruhan",
+        "settlementTime": "Waktu settlement",
+        "createTime": "Waktu dibuat",
+        "updateTime": "Waktu diperbarui",
+        "remark": "Catatan-Versi",
+        "roundNumber": "Round Tidak."
+      },
+      "userTypes": {
+        "formal": "Regular Anggota",
+        "test": "Test Anggota"
+      },
+      "search": {
+        "categoryLabel": "Kategori game",
+        "categoryPlaceholder": "Pilih Kategori game",
+        "gameType": "Tipe game",
+        "gameTypePlaceholder": "Silakan pilih Tipe game",
+        "orderNoLabel": "Game Tidak. pesanan",
+        "orderNoPlaceholder": "Game Tidak. pesanan",
+        "memberIdLabel": "ID anggota",
+        "memberIdPlaceholder": "Silakan masukkan ID anggota",
+        "vendorLabel": "Provider game",
+        "vendorPlaceholder": "Silakan pilih Provider game",
+        "subGameLabel": "sub-game",
+        "subGamePlaceholder": "Silakan pilih sub-game",
+        "issueNumberLabel": "Issue Tidak.",
+        "issueNumberPlaceholder": "Lotere Issue Tidak.",
+        "orderStateLabel": "Bet Status",
+        "orderStatePlaceholder": "Pilih Status",
+        "userTypeLabel": "pengguna tipe",
+        "userTypePlaceholder": "Pilih Pengguna Tipe",
+        "roundLabel": "Round Tidak.",
+        "roundPlaceholder": "Game Round Tidak.",
+        "timeLabel": "waktu",
+        "timeTypePlaceholder": "Silakan pilih waktu tipe",
+        "timePlaceholder": "Silakan pilih Waktu berakhir",
+        "betTimeLabel": "Waktu taruhan",
+        "settleTimeLabel": "Waktu settlement",
+        "betAmountLabel": "Jumlah taruhan",
+        "minAmountPlaceholder": "Jumlah minimum",
+        "maxAmountPlaceholder": "Jumlah maksimum",
+        "winLoseAmountLabel": "profit/rugi jumlah",
+        "followOrderLabel": "Follow Strategy Tidak.",
+        "followOrderPlaceholder": "Follow Strategy Tidak. pesanan",
+        "userTypes": {
+          "formal": "Regular Anggota",
+          "test": "Test Anggota"
+        },
+        "timeTypes": {
+          "betTime": "Waktu taruhan",
+          "settleTime": "Waktu settlement"
+        },
+        "validation": {
+          "timeRequired": "Silakan pilih pencarian waktu",
+          "timeRangeRequired": "Silakan pilih pencarian waktu",
+          "endTimeLimit": "End waktu tidak boleh lebih besar dari",
+          "maxDays15": "Pilih a time dalam 15 days",
+          "maxDays31": "Pilih a time dalam 31 days"
+        },
+        "tips": {
+          "memberIdQuery": "By ID anggota: Limit any 31-day range (max span 31 days)",
+          "orderQuery": "By Game Tidak. pesanan: Tidak time limit",
+          "emptyQuery": "Both ID anggota and Game Tidak. pesanan empty: time range limited to 15 days (max span 15 days)"
+        }
+      },
+      "status": {
+        "unsettled": "Unsettled",
+        "settled": "Settled",
+        "cancelled": "Dibatalkan",
+        "refunded": "Refunded",
+        "voided": "Voided",
+        "earlySettled": "Early Settled",
+        "resettled": "Resettled"
+      },
+      "winLose": {
+        "lose": "Lose",
+        "win": "Win",
+        "tie": "Tie",
+        "halfLose": "Half Lose",
+        "halfWin": "Half Win"
+      },
+      "modal": {
+        "detailTitle": "Bet Detail"
+      },
+      "export": {
+        "fileName": "game taruhan pesanan"
+      },
+      "info": {
+        "memberSection": {
+          "title": "Anggota Info",
+          "memberId": "ID anggota",
+          "currency": "mata uang",
+          "betIP": "taruhan IP"
+        },
+        "gameSection": {
+          "title": "Game Info",
+          "orderNo": "Bet Order No.",
+          "gameCategory": "Kategori game",
+          "vendor": "Provider game",
+          "gameName": "Nama game",
+          "gameCode": "Kode game",
+          "betAmount": "Jumlah taruhan",
+          "validAmount": "Taruhan valid",
+          "feeAmount": "Handling Biaya",
+          "winAmount": "Winning Jumlah",
+          "winLoseAmount": "Jumlah menang/kalah",
+          "status": "Status",
+          "betTime": "Waktu taruhan",
+          "settlementTime": "Waktu settlement",
+          "createTime": "Waktu dibuat",
+          "updateTime": "Waktu diperbarui"
+        },
+        "sportsSection": {
+          "title": "Sports Bet Info",
+          "leagueInfo": "League Info",
+          "teamInfo": "Tim Info",
+          "betContent": "Bet Content",
+          "odds": "Odds",
+          "handicapType": "Handicap Tipe",
+          "winLoseType": "menang/kalah tipe",
+          "result": "hasil",
+          "remark": "Catatan-Versi"
+        },
+        "liveSection": {
+          "title": "Live Casino Bet Info",
+          "tableNo": "Tabel Tidak.",
+          "roundIssue": "Round/Issue Tidak.",
+          "betContent": "Bet Content",
+          "drawResult": "Results",
+          "remark": "Catatan-Versi"
+        },
+        "cardSection": {
+          "title": "Card Game Bet Info",
+          "tableNo": "Tabel Tidak.",
+          "roundIssue": "Round/Issue Tidak.",
+          "betContent": "Bet Content",
+          "drawResult": "Results"
+        },
+        "lotterySection": {
+          "title": "Lottery Bet Info",
+          "issueNumber": "Issue Tidak.",
+          "odds": "Odds",
+          "betMultiple": "Bet Kelipatan",
+          "playType": "Play Tipe",
+          "betContent": "Bet Content",
+          "drawResult": "Results"
+        }
+      }
+    },
+    "subgame": {
+      "title": "sub-game manajemen",
+      "addButton": "tambah game",
+      "batchEnableButton": "Aktifkan massal",
+      "batchDisableButton": "Nonaktifkan massal",
+      "search": {
+        "gameNameLabel": "Nama game",
+        "gameNamePlaceholder": "Nama game",
+        "gameIdLabel": "Game ID/Code",
+        "gameIdPlaceholder": "ID game or Kode game",
+        "categoryLabel": "Kategori game",
+        "categoryPlaceholder": "Pilih Kategori game",
+        "vendorLabel": "Provider game",
+        "vendorPlaceholder": "Silakan pilih Provider game",
+        "stateLabel": "Game Status",
+        "statePlaceholder": "Pilih Status",
+        "mappingRoleLabel": "Mapping Role",
+        "mappingRolePlaceholder": "Pilih Mapping role"
+      },
+      "columns": {
+        "gameId": "Game ID",
+        "gameName": "Nama game",
+        "gameCode": "Kode game",
+        "vendor": "provider",
+        "category": "Kategori game",
+        "gameImage": "game gambar",
+        "displayCategory": "tampilan Categories",
+        "mappingRole": "Mapping Role",
+        "mappingRelation": "Mapping Relation",
+        "maxMultiple": "Maksimum Multiplier",
+        "maxBetAmount": "Max Bet Rate",
+        "sort": "Urutan",
+        "state": "Status",
+        "createTime": "Waktu dibuat",
+        "updateTime": "Terakhir Waktu diperbarui",
+        "operator": "Operator",
+        "clicks": "Clicks"
+      },
+      "mappingRole": {
+        "normal": "Normal",
+        "source": "Mapping Sumber",
+        "target": "Mapping Target"
+      },
+      "status": {
+        "enabled": "aktifkan",
+        "disabled": "nonaktifkan"
+      },
+      "actions": {
+        "edit": "Edit",
+        "switch": "Ganti",
+        "batchEnable": "One-click Aktifkan",
+        "batchDisable": "One-click Nonaktifkan"
+      },
+      "messages": {
+        "batchOperationConfirm": "Anda yakin ingin {action} the dipilih games?",
+        "noSelectionWarning": "Silakan pilih data to operate",
+        "operationSuccess": "Operasi berhasil",
+        "batchOperationSuccess": "Batch operation berhasil",
+        "switchSuccess": "Ganti berhasil",
+        "batchEnableTitle": "Aktifkan massal Games",
+        "batchDisableTitle": "Nonaktifkan massal Games",
+        "batchEnableConfirm": "ya tidak aktifkan game",
+        "batchDisableConfirm": "ya tidak tutup game"
+      },
+      "edit": {
+        "title": "Game Edit",
+        "gameNameCn": "Nama game (Chinese)",
+        "gameNameEn": "Nama game (English)",
+        "sort": "Urutan",
+        "gameImage": "game gambar",
+        "displayCategory": "tampilan Categories",
+        "validation": {
+          "gameNameCnRequired": "Masukkan Chinese game name",
+          "gameNameEnRequired": "Masukkan English game name",
+          "imageRequired": "silakan upload game gambar",
+          "validImageRequired": "silakan upload a valid gambar",
+          "sortRequired": "Masukkan sort value",
+          "sortMinValue": "Urutan value tidak boleh kurang dari 0",
+          "displayCategoryRequired": "Pilih tampilan categories"
+        },
+        "messages": {
+          "editSuccess": "Perbarui berhasil",
+          "createSuccess": "buat berhasil"
+        }
+      }
+    },
+    "transfer": {
+      "title": "game transfer catatan",
+      "columns": {
+        "memberId": "ID anggota",
+        "platformOrderNo": "platform No. pesanan",
+        "transferAmount": "transfer jumlah",
+        "currency": "mata uang",
+        "triggerVendor": "Pemicu Vendor for Credit",
+        "payType": "Transaction Tipe",
+        "transactionStatus": "Transaction Status",
+        "remark": "catatan",
+        "transactionTime": "Transaction waktu"
+      },
+      "payTypes": {
+        "transferIn": "Transfer In (Credit)",
+        "transferOut": "Transfer Out (Debit)"
+      },
+      "transactionStatus": {
+        "processing": "Diproses",
+        "success": "berhasil",
+        "failed": "gagal"
+      },
+      "search": {
+        "platformOrderNo": "platform No. pesanan",
+        "platformOrderNoPlaceholder": "Silakan masukkan platform No. pesanan",
+        "memberId": "ID anggota",
+        "memberIdPlaceholder": "Silakan masukkan ID anggota",
+        "triggerVendor": "Pemicu Vendor for Credit",
+        "vendorPlaceholder": "Silakan pilih Provider game",
+        "transferType": "transfer tipe",
+        "transferTypePlaceholder": "Pilih Transaction Tipe",
+        "transactionStatus": "Transaction Status",
+        "transactionStatusPlaceholder": "Pilih Transaction Status",
+        "time": "waktu",
+        "today": "Hari ini",
+        "yesterday": "Kemarin",
+        "thisWeek": "Minggu ini",
+        "lastWeek": "Minggu lalu",
+        "thisMonth": "Bulan ini",
+        "lastMonth": "Bulan lalu"
+      },
+      "validation": {
+        "selectTime": "Silakan pilih pencarian waktu",
+        "endTimeLimit": "End waktu tidak boleh lebih besar dari",
+        "selectWithin15Days": "Pilih a time dalam 15 days",
+        "selectWithin31Days": "Pilih a time dalam 31 days"
+      },
+      "tips": {
+        "memberIdQuery": "By ID anggota: Limit any 31-day range (max span 31 days)",
+        "orderQuery": "By Platform Tidak. pesanan: Tidak time limit",
+        "emptyQuery": "Both ID anggota and Platform Tidak. pesanan empty: time range limited to 15 days (max span 15 days)"
+      }
+    },
+    "types": {
+      "0": "Elektronik Games",
+      "1": "Live Kasino",
+      "2": "Olahraga Betting",
+      "3": "Lotere",
+      "4": "Card Games"
+    },
+    "status": {
+      "0": "nonaktifkan",
+      "1": "aktifkan",
+      "2": "Under Maintenance"
+    },
+    "lottery": {
+      "Num": "nomor",
+      "Color": "Color",
+      "Green": "Green",
+      "Red": "Red",
+      "Violet": "Violet",
+      "OddEven": "Odd/Even",
+      "BigSmall": "Big/Small",
+      "Small": "Small",
+      "Big": "Big",
+      "Even": "Even",
+      "Odd": "Odd",
+      "SumNum": "Sum",
+      "SumBigSmall": "Sum Big/Small",
+      "SumOddEven": "Sum Odd/Even",
+      "NumSame2": "Two Same Single",
+      "NumSame2Mult": "Two Same Kelipatan",
+      "NumSame3": "Three Same Single",
+      "NumSame3All": "Three Same Semua",
+      "NumDiff3": "Three Different",
+      "NumNear3All": "Three Consecutive Semua",
+      "NumDiff2": "Two Different",
+      "FirstNum": "Pertama Digit",
+      "FirstBigSmall": "Pertama Big/Small",
+      "FirstOddEven": "Pertama Odd/Even",
+      "SecondNum": "Second Digit",
+      "SecondBigSmall": "Second Big/Small",
+      "SecondOddEven": "Second Odd/Even",
+      "ThirdNum": "Third Digit",
+      "ThirdBigSmall": "Third Big/Small",
+      "ThirdOddEven": "Third Odd/Even",
+      "FourthNum": "Fourth Digit",
+      "FourthBigSmall": "Fourth Big/Small",
+      "FourthOddEven": "Fourth Odd/Even",
+      "FifthNum": "Fifth Digit",
+      "FifthBigSmall": "Fifth Big/Small",
+      "FifthOddEven": "Fifth Odd/Even",
+      "D5_SumBigSmall": "Sum Big/Small",
+      "D5_SumOddEven": "Sum Odd/Even"
+    },
+    "financial": {
+      "TransIn": "Merchant Transfer In (Top Up)",
+      "TransOut": "merchant Transfer Out (tarik dana)",
+      "TransReturn": "Merchant Transfer Return",
+      "GameBet": "Place Bet",
+      "GameEnd": "Settlement",
+      "GameTransIn": "Game Top Up",
+      "GameTransOut": "Game Tarik",
+      "GameReduce": "Game Deduction",
+      "GamePlus": "Penyesuaian kredit game",
+      "GameActivityPlus": "Game Aktivitas Hadiah",
+      "GameReturn": "Game Refund",
+      "GameCombineEnd": "Combined Settlement",
+      "GameCancel": "Game Cancellation"
+    }
+  }
+}

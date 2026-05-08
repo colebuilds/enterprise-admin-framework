@@ -1,0 +1,4316 @@
+{
+  "operations": {
+    "cloudflare": {
+      "index": {
+        "title": "cloudflare quản lý",
+        "tabs": {
+          "domainReport": "tên miền báo cáo",
+          "domainWAF": "tên miền WAF quản lý"
+        }
+      },
+      "domainReport": {
+        "columns": {
+          "domain": "tên miền",
+          "visitorNum": "Khách truy cập duy nhất",
+          "date": "ngày"
+        },
+        "form": {
+          "domain": "tên miền",
+          "date": "ngày",
+          "domainPlaceholder": "Vui lòng chọn"
+        },
+        "validation": {
+          "domainRequired": "Vui lòng nhập tên miền",
+          "dateRequired": "Vui lòng chọn ngày"
+        },
+        "messages": {
+          "selectDomain": "Vui lòng chọn tên miền"
+        },
+        "details": {
+          "columns": {
+            "domain1": "tên miền/IP(1)",
+            "domain2": "tên miền/IP(2)",
+            "remark": "ghi chú",
+            "status": "trạng thái",
+            "executedAt": "Thực thi lúc"
+          },
+          "status": {
+            "success": "thành công",
+            "failed": "thất bại"
+          }
+        }
+      },
+      "domainWAF": {
+        "columns": {
+          "name": "tên",
+          "action": "Thao tác",
+          "ruleType": "Quy tắc Loại",
+          "enabled": "có không bật"
+        },
+        "form": {
+          "domain": "tên miền",
+          "domainPlaceholder": "Vui lòng chọn",
+          "ruleName": "Quy tắc Tên",
+          "limitRule": "Quy tắc giới hạn",
+          "action": "Thao tác",
+          "logging": "Nhật ký yêu cầu khớp",
+          "loggingTip": "Khi tắt, các yêu cầu khớp sẽ không xuất hiện trong tổng quan \"Bảo mật\"",
+          "skipComponents": "Bỏ qua thành phần WAF",
+          "position": "Vị trí",
+          "afterRule": "Chọn quy tắc sẽ kích hoạt sau quy tắc này:",
+          "conditionTip": "Quan hệ giữa các nhóm điều kiện là HOẶC, trong mỗi nhóm là VÀ",
+          "conditionGroup": "Điều kiện Nhóm {index}",
+          "conditionRelation": "Quan hệ điều kiện trong nhóm này: VÀ",
+          "field": "Trường",
+          "operator": "Người thao tác",
+          "value": "Giá trị",
+          "placeholder": "Vui lòng chọn",
+          "selectOrInput": "Vui lòng chọn hoặc nhập",
+          "inputExample": "Vui lòng nhập (ví dụ: /nội dung)"
+        },
+        "validation": {
+          "domainRequired": "Vui lòng chọn tên miền",
+          "positionRequired": "Vị trí không được để trống",
+          "descriptionRequired": "Tên quy tắc không được để trống",
+          "actionRequired": "Thao tác không được để trống",
+          "fieldRequired": "Trường trong nhóm {group}, dòng điều kiện {row} không được để trống",
+          "operatorRequired": "Người thao tác Trong nhóm {group} điều kiện row {row} không được để trống",
+          "valueRequired": "Giá trị Trong nhóm {group} điều kiện row {row} không được để trống"
+        },
+        "actions": {
+          "add": "thêm",
+          "edit": "sửa",
+          "delete": "xóa",
+          "deleteGroup": "Xóa Nhóm",
+          "addCondition": "Thêm Điều kiện",
+          "addConditionGroup": "Thêm Điều kiện Nhóm",
+          "cancel": "hủy",
+          "save": "lưu"
+        },
+        "status": {
+          "enable": "bật",
+          "disable": "tắt"
+        },
+        "dialog": {
+          "addRule": "Thêm Quy tắc",
+          "editRule": "Sửa Quy tắc"
+        },
+        "messages": {
+          "selectDomain": "Vui lòng chọn tên miền để truy vấn"
+        }
+      },
+      "useCloudFlare": {
+        "state": {
+          "initializing": "Đang khởi tạo",
+          "pending": "Đang chờ",
+          "active": "Đang hoạt động",
+          "moved": "Đã di chuyển"
+        },
+        "clearState": {
+          "clearing": "Đang xóa",
+          "success": "Xóa Thành công",
+          "failed": "Xóa Thất bại"
+        },
+        "model": {
+          "off": "tắt",
+          "flexible": "Linh hoạt",
+          "full": "Đầy đủ",
+          "strict": "Đầy đủ (nghiêm ngặt)"
+        },
+        "ttl": {
+          "auto": "Tự động",
+          "1min": "1 phút",
+          "2min": "2 Phút",
+          "5min": "5 Phút",
+          "10min": "10 Phút",
+          "15min": "15 Phút",
+          "30min": "30 Phút",
+          "1hour": "1 giờ",
+          "2hour": "2 giờ",
+          "5hour": "5 giờ",
+          "12hour": "12 giờ",
+          "1day": "1 ngày"
+        }
+      },
+      "useRule": {
+        "position": {
+          "first": "Đầu tiên",
+          "last": "Cuối cùng",
+          "custom": "Tùy chỉnh"
+        }
+      }
+    },
+    "imageCrop": {
+      "title": "hình ảnh cắt",
+      "settingsTitle": "cắt cấu hình",
+      "workspaceTitle": "Vùng cắt",
+      "resultTitle": "Kết quả cắt",
+      "sourceTitle": "Nguồn Thông tin",
+      "sourceName": "Tên tệp",
+      "sourceFormat": "Định dạng",
+      "sourceSize": "Kích thước tệp",
+      "sourceWidth": "Nguồn Width",
+      "sourceHeight": "Nguồn Height",
+      "adjustTitle": "Điều chỉnh",
+      "cropDataTitle": "cắt dữ liệu",
+      "resultPreviewTitle": "kết quả Xem trước",
+      "aspectRatio": "Aspect Tỷ lệ",
+      "aspectRatioPlaceholder": "Vui lòng chọn aspect ratio",
+      "customRatio": "Tùy chỉnh Tỷ lệ",
+      "outputWidth": "Chiều rộng đầu ra",
+      "outputHeight": "Chiều cao đầu ra",
+      "exportFormat": "Xuất Format",
+      "exportFormatPlaceholder": "Vui lòng chọn định dạng xuất",
+      "exportFormatOriginal": "Giữ định dạng gốc",
+      "exportFormatPng": "PNG",
+      "exportFormatJpeg": "JPEG",
+      "exportFormatWebp": "WebP",
+      "exportQuality": "Xuất Quality",
+      "exportQualityHint": "Chỉ áp dụng cho JPEG / WebP",
+      "quickTemplatesTitle": "Cài sẵn nhanh cho vận hành",
+      "quickTemplatesHint": "Kích thước cài sẵn dựa trên cách dùng hiện tại của dự án. Nhấp để áp dụng ngay.",
+      "configTitle": "Crop & Xuất Cài đặt",
+      "quickCategoryBanner": "Biểu ngữ",
+      "quickCategoryGame": "Trò chơi Hình ảnh",
+      "quickCategoryAnnouncement": "Thông báo",
+      "quickPresetHomePromoBanner": "Banner khuyến mãi trang chủ",
+      "quickPresetActivityBanner": "Hoạt động Banner",
+      "quickPresetActivityTopBanner": "Hoạt động hàng đầu Hình ảnh",
+      "quickPresetGameHorizontalCover": "Ảnh bìa ngang trò chơi",
+      "quickPresetGameCard": "Trò chơi thẻ Hình ảnh",
+      "quickPresetGameSquareIcon": "Trò chơi Square Biểu tượng",
+      "quickPresetAnnouncementThumbnail": "Tin nhắn Thumbnail",
+      "quickPresetAnnouncementCard": "Thông báo thẻ",
+      "quickPresetAnnouncementPoster": "Thông báo Poster",
+      "previewSize": "Xem trước Width",
+      "previewSizePlaceholder": "Vui lòng chọn xem trước width",
+      "uploadImage": "tải lên hình ảnh",
+      "selectImage": "Chọn Hình ảnh",
+      "cropTitle": "hình ảnh cắt",
+      "imageUrl": "Hình ảnh URL",
+      "resultSize": "Kích thước kết quả",
+      "generateResult": "Tạo kết quả",
+      "downloadResult": "Tải xuống kết quả",
+      "clearResult": "Xóa kết quả",
+      "zoom": "Thu phóng",
+      "zoomIn": "Phóng Đến",
+      "zoomOut": "Thu nhỏ",
+      "rotateLeft": "Xoay trái 90°",
+      "rotateRight": "Xoay phải 90°",
+      "rotateFineStep": "Xoay tinh chỉnh (°)",
+      "rotateFineLeft": "Xoay trái -{step}°",
+      "rotateFineRight": "Xoay phải +{step}°",
+      "flipHorizontal": "Lật ngang",
+      "flipVertical": "Lật dọc",
+      "dragMode": "Chế độ kéo",
+      "dragModeFree": "Kéo tự do",
+      "dragModeLocked": "Khóa xem",
+      "cropX": "cắt X",
+      "cropY": "cắt Y",
+      "cropWidth": "Chiều rộng cắt",
+      "cropHeight": "Chiều cao cắt",
+      "rotateValue": "Xoay",
+      "flipXValue": "Lật ngang",
+      "flipYValue": "Lật dọc",
+      "resetCropper": "Đặt lại Xem",
+      "clearOperationData": "Xóa Thao tác Dữ liệu",
+      "historyTitle": "Lịch sử",
+      "historySourceTab": "Nguồn",
+      "historyExportTab": "Đã nén",
+      "historyUse": "Sử dụng",
+      "historyLocateSource": "Locate Nguồn",
+      "historyDownload": "tải xuống",
+      "historyRemove": "xóa",
+      "historyClear": "Xóa",
+      "historySourceLabel": "Nguồn",
+      "historySourceMissing": "Related nguồn image Đã Không found.",
+      "historyEmpty": "Không history records",
+      "historyBlobMissing": "Tệp lịch sử này đã được dọn dẹp. Vui lòng tạo lại.",
+      "historyQualityValue": "Chất lượng {quality}",
+      "workspaceEmpty": "Vui lòng chọn một hình ảnh để bắt đầu cắt",
+      "empty": "Vui lòng tải lên và cắt ảnh trước",
+      "tip": "Chọn một hình ảnh, điều chỉnh trong vùng làm việc, sau đó tạo kết quả để xem trước và tải xuống."
+    },
+    "eventTrackManage": {
+      "index": {
+        "title": "Theo dõi sự kiện bên thứ ba",
+        "tabs": {
+          "services": "Bản ghi sự kiện phía máy chủ",
+          "facebook": "Phân bổ Facebook Pixel",
+          "adjust": "Adjust cấu hình",
+          "appsflyer": "appsflyer cấu hình",
+          "googleAnalytics": "Google Analytics",
+          "googleAds": "Google Ads"
+        }
+      },
+      "adjust": {
+        "index": {
+          "title": "Adjust quản lý",
+          "recentModifications": "3 lần sửa gần nhất khi bật Adjust pixel",
+          "channelName": "Tên kênh",
+          "appToken": "Ứng dụng Token",
+          "createTime": "Thời gian tạo",
+          "remark": "ghi chú",
+          "actionsColumn": "thao tác",
+          "addApp": "Thêm ứng dụng",
+          "tokenConfig": "Token cấu hình",
+          "adjustAppConfig": "Adjust Ứng dụng Cấu hình",
+          "eventTokenConfig": "Sự kiện Token Cấu hình",
+          "eventToken": "Token sự kiện",
+          "triggerMode": "Chế độ kích hoạt",
+          "serverParams": "Tham số máy chủ",
+          "customParams": "Tham số tùy chỉnh",
+          "noEventConfig": "Chưa có cấu hình sự kiện",
+          "addConfigTitle": "thêm Adjust cấu hình",
+          "editConfigTitle": "sửa Adjust cấu hình",
+          "addSuccess": "Thêm thành công",
+          "editSuccess": "Sửa thành công",
+          "messages": {
+            "getKeyFailed": "Không lấy được khóa cấu hình Adjust",
+            "getKeyError": "Lấy khóa cấu hình Adjust thất bại",
+            "getEventListFailed": "Không thể lấy danh sách sự kiện",
+            "updateFailed": "cập nhật thất bại",
+            "adjustPixelEnabled": "Đã bật Adjust pixel",
+            "adjustPixelDisabled": "Đã tắt Adjust pixel",
+            "loadDataFailed": "Không thể tải dữ liệu"
+          },
+          "dialog": {
+            "tip": "Gợi ý",
+            "confirmClose": "Có xác nhận tắt Adjust？",
+            "confirmEnable": "Có xác nhận",
+            "confirm": "xác nhận",
+            "cancel": "hủy"
+          },
+          "switch": {
+            "enableAdjust": "bật Adjust",
+            "viewHistory": "Nhấp để xem lịch sử",
+            "on": "bật",
+            "off": "tắt"
+          },
+          "triggerModes": {
+            "clientOnly": "Chỉ máy khách",
+            "serverOnly": "Giá trị truyền qua máy chủ",
+            "clientAndServer": "Máy khách + máy chủ"
+          },
+          "actions": {
+            "delete": "xóa",
+            "edit": "sửa",
+            "modify": "Chỉnh sửa",
+            "view": "xem"
+          }
+        },
+        "configModal": {
+          "form": {
+            "appToken": "Ứng dụng Token",
+            "channelName": "Tên kênh",
+            "remark": "ghi chú",
+            "appTokenPlaceholder": "Vui lòng nhập Adjust App Token",
+            "channelNamePlaceholder": "Vui lòng nhập tên kênh",
+            "remarkPlaceholder": "Vui lòng nhập ghi chú"
+          },
+          "validation": {
+            "appTokenRequired": "Vui lòng nhập appToken",
+            "channelNameRequired": "Vui lòng nhập tên kênh",
+            "channelNameFormat": "Vui lòng nhập đúng tên kênh (letters, Số, spaces, -, _)"
+          },
+          "messages": {
+            "submitSuccess": "Gửi thành công",
+            "submitFailed": "Gửi thất bại"
+          },
+          "actions": {
+            "cancel": "hủy",
+            "save": "lưu"
+          }
+        },
+        "addConfigModal": {
+          "form": {
+            "packageName": "Tên gói",
+            "packageNamePlaceholder": "Vui lòng nhập tên gói",
+            "bundleId": "Tên gói/Bundle ID",
+            "platformType": "Loại nền tảng",
+            "platformTypePlaceholder": "Vui lòng chọn loại nền tảng",
+            "apiUrl": "API URL",
+            "apiUrlFeedback": "URL báo cáo sự kiện Adjust, mặc định: https://s2s.adjust.com",
+            "status": "trạng thái",
+            "statusOn": "bật",
+            "statusOff": "tắt",
+            "tip": "Gợi ý",
+            "tipText": "Vui lòng dùng tên gói hiện tại để vào cấu hình hậu đài Adjust và lấy appToken"
+          },
+          "validation": {
+            "channelExists": "Tên kênh đã tồn tại, vui lòng chỉnh sửa",
+            "packageNameInvalid": "Định dạng tên gói không đúng, vui lòng sửa",
+            "bundleIdRequired": "Vui lòng nhập tên gói"
+          },
+          "messages": {
+            "copySuccess": "Sao chép thành công"
+          },
+          "actions": {
+            "nextStep": "Tiếp theo bước",
+            "prevStep": "Trước đó bước",
+            "save": "lưu",
+            "copy": "Sao chép"
+          }
+        },
+        "eventToken": {
+          "form": {
+            "eventTokenPlaceholder": "Vui lòng nhập event token"
+          },
+          "validation": {
+            "notEmpty": "không được để trống"
+          },
+          "messages": {
+            "updateSuccess": "Cập nhật event thành công",
+            "updateFailed": "Cập nhật event thất bại",
+            "getTokenListFailed": "Lấy danh sách token sự kiện thất bại"
+          },
+          "actions": {
+            "cancel": "hủy",
+            "save": "lưu"
+          }
+        },
+        "triggerModes": {
+          "clientOnly": "Chỉ máy khách",
+          "serverOnly": "Chỉ máy chủ",
+          "clientAndServer": "Máy khách + máy chủ"
+        }
+      },
+      "appsflyer": {
+        "index": {
+          "title": "AppsFlyer quản lý",
+          "recentModifications": "3 lần sửa gần nhất khi bật AppsFlyer pixel",
+          "appName": "Tên ứng dụng",
+          "platform": "nền tảng",
+          "status": "trạng thái",
+          "createTime": "Thời gian tạo",
+          "remark": "ghi chú",
+          "actionsColumn": "thao tác",
+          "addConfig": "thêm cấu hình",
+          "editConfig": "sửa cấu hình",
+          "addAppsflyerConfig": "thêm AppsFlyer cấu hình",
+          "editAppsflyerConfig": "sửa AppsFlyer cấu hình",
+          "eventConfig": "Cấu hình sự kiện",
+          "triggerMethod": "kích hoạt Phương thức",
+          "serverParams": "Tham số máy chủ",
+          "customParams": "Tham số tùy chỉnh",
+          "noEventConfig": "Chưa có cấu hình sự kiện",
+          "platforms": {
+            "web": "Trang web",
+            "ios": "iOS",
+            "android": "Android",
+            "unknown": "Không xác định"
+          },
+          "messages": {
+            "getKeyFailed": "Không lấy được khóa cấu hình AppsFlyer",
+            "getKeyError": "Lấy khóa cấu hình AppsFlyer thất bại",
+            "updateFailed": "cập nhật thất bại",
+            "appsflyerPixelEnabled": "Đã bật AppsFlyer pixel",
+            "appsflyerPixelDisabled": "Đã tắt AppsFlyer pixel",
+            "statusUpdateFailed": "trạng thái cập nhật thất bại",
+            "statusUpdateSuccess": "trạng thái {action} thành công",
+            "deleteFailed": "Xóa thất bại",
+            "deleteSuccess": "Xóa thành công",
+            "getEventListFailed": "Không thể lấy danh sách sự kiện",
+            "loadDataFailed": "Không thể tải dữ liệu",
+            "addSuccess": "Thêm thành công",
+            "editSuccess": "Sửa thành công"
+          },
+          "dialog": {
+            "tip": "Gợi ý",
+            "confirmClose": "Có xác nhận tắt AppsFlyer？",
+            "confirmEnable": "Có xác nhận",
+            "confirmStatus": "Có xác nhận {action}",
+            "confirm": "xác nhận",
+            "cancel": "hủy"
+          },
+          "actions": {
+            "enable": "bật",
+            "disable": "tắt",
+            "delete": "xóa",
+            "edit": "sửa"
+          }
+        },
+        "configModal": {
+          "form": {
+            "appName": "Tên ứng dụng",
+            "appNamePlaceholder": "Vui lòng nhập tên ứng dụng",
+            "devKey": "Khóa Dev",
+            "devKeyPlaceholder": "Vui lòng nhập AppsFlyer Dev Key",
+            "devKeyFeedback": "Khóa nhà phát triển ứng dụng AppsFlyer",
+            "s2sToken": "Token S2S",
+            "s2sTokenPlaceholder": "Vui lòng nhập AppsFlyer S2S token",
+            "s2sTokenFeedback": "Token S2S của ứng dụng AppsFlyer",
+            "appId": "ID ứng dụng",
+            "appIdPlaceholder": "Vui lòng nhập App Store ID hoặc tên gói",
+            "appIdFeedback": "iOS là App Store ID, Android là tên gói",
+            "platformType": "Loại nền tảng",
+            "platformTypePlaceholder": "Vui lòng chọn loại nền tảng",
+            "apiUrl": "API URL",
+            "apiUrlPlaceholder": "https://events.appsflyer.com",
+            "apiUrlFeedback": "URL báo cáo sự kiện AppsFlyer, mặc định: https://events.appsflyer.com",
+            "status": "trạng thái",
+            "statusOn": "bật",
+            "statusOff": "tắt",
+            "remark": "ghi chú",
+            "remarkPlaceholder": "Vui lòng nhập ghi chú"
+          },
+          "validation": {
+            "appNameRequired": "Vui lòng nhập tên ứng dụng",
+            "devKeyRequired": "Vui lòng nhập AppsFlyer Dev Key",
+            "s2sTokenRequired": "Vui lòng nhập AppsFlyer S2S token",
+            "appIdRequired": "Vui lòng nhập App Store ID hoặc tên gói",
+            "platformTypeRequired": "Vui lòng chọn loại nền tảng",
+            "apiUrlRequired": "Vui lòng nhập API URL"
+          },
+          "messages": {
+            "submitSuccess": "Gửi thành công",
+            "submitFailed": "Gửi thất bại"
+          },
+          "actions": {
+            "cancel": "hủy",
+            "save": "lưu"
+          }
+        }
+      },
+      "facebook": {
+        "index": {
+          "title": "Cấu hình ID Facebook Pixel",
+          "recentModifications": "3 lần sửa gần nhất khi bật Facebook pixel",
+          "pixelId": "ID Pixel",
+          "packageName": "Tên kênh",
+          "accessToken": "Token truy cập",
+          "createTime": "Thời gian tạo",
+          "remark": "ghi chú",
+          "actionsColumn": "thao tác",
+          "addPixelId": "Thêm ID Pixel",
+          "editConfig": "sửa facebook cấu hình",
+          "addConfig": "thêm facebook cấu hình",
+          "eventConfig": "Cấu hình sự kiện",
+          "noEventConfig": "Chưa có cấu hình sự kiện",
+          "triggerMethod": "kích hoạt Phương thức",
+          "serverParams": "Tham số máy chủ",
+          "customParams": "Tham số tùy chỉnh",
+          "batchAdd": "Hàng loạt Thêm",
+          "batchAddTitle": "Hàng loạt Thêm Facebook Cấu hình",
+          "messages": {
+            "getKeyFailed": "Không lấy được khóa cấu hình Facebook",
+            "getKeyError": "Lấy khóa cấu hình Facebook thất bại",
+            "updateFailed": "cập nhật thất bại",
+            "facebookPixelEnabled": "Đã bật Facebook pixel",
+            "facebookPixelDisabled": "Đã tắt Facebook pixel",
+            "loadDataFailed": "Không thể tải dữ liệu",
+            "getEventListFailed": "Không thể lấy danh sách sự kiện",
+            "addSuccess": "Thêm thành công",
+            "editSuccess": "Sửa thành công"
+          },
+          "dialog": {
+            "tip": "Gợi ý",
+            "confirmClose": "Đóng Facebook pixel?",
+            "confirmEnable": "Có xác nhận",
+            "confirm": "xác nhận",
+            "cancel": "hủy"
+          },
+          "switch": {
+            "enableFacebook": "Bật Facebook pixel",
+            "viewHistory": "Nhấp để xem lịch sử sửa đổi",
+            "on": "bật",
+            "off": "tắt"
+          },
+          "triggerModes": {
+            "clientOnly": "Chỉ máy khách",
+            "serverOnly": "Chỉ máy chủ",
+            "clientAndServer": "Máy khách + máy chủ"
+          },
+          "actions": {
+            "enable": "bật",
+            "disable": "tắt",
+            "delete": "xóa",
+            "edit": "sửa"
+          }
+        },
+        "configModal": {
+          "form": {
+            "pixelId": "ID Pixel",
+            "pixelIdPlaceholder": "Vui lòng nhập Facebook pixel ID",
+            "packageName": "Tên kênh",
+            "packageNamePlaceholder": "Vui lòng nhập tên kênh",
+            "accessToken": "Token truy cập",
+            "accessTokenPlaceholder": "Vui lòng nhập token truy cập Facebook",
+            "accessTokenFeedback": "Token truy cập cho lệnh gọi API Facebook",
+            "remark": "ghi chú",
+            "remarkPlaceholder": "Vui lòng nhập remark"
+          },
+          "validation": {
+            "pixelIdRequired": "Vui lòng nhập Facebook pixel ID",
+            "packageNameRequired": "Vui lòng nhập tên kênh",
+            "packageNameFormat": "Vui lòng nhập đúng tên kênh (letters, Số, spaces, -, _)",
+            "accessTokenRequired": "Vui lòng nhập token truy cập Facebook"
+          },
+          "messages": {
+            "submitSuccess": "Gửi thành công",
+            "submitFailed": "Gửi thất bại"
+          },
+          "actions": {
+            "cancel": "hủy",
+            "save": "lưu"
+          }
+        },
+        "addBatches": {
+          "title": "Hàng loạt Thêm Facebook Cấu hình",
+          "form": {
+            "batchInputLabel": "FBID + Tab + Token + Tab + Name (nhiều dữ liệu phân tách bằng xuống dòng)",
+            "batchInputPlaceholder": "Nhiều dữ liệu phân tách bằng xuống dòng"
+          },
+          "validation": {
+            "configListRequired": "Vui lòng nhập hàng loạt thêm nội dung"
+          },
+          "messages": {
+            "addSuccess": "Thêm thành công",
+            "editSuccess": "Sửa thành công"
+          },
+          "actions": {
+            "cancel": "hủy",
+            "preview": "Xem trước",
+            "save": "lưu"
+          },
+          "preview": {
+            "title": "Xem trước mẫu hàng loạt",
+            "pixelIdColumn": "ID Pixel",
+            "accessTokenColumn": "Token truy cập",
+            "packageNameColumn": "Tên kênh"
+          }
+        }
+      },
+      "googleAds": {
+        "index": {
+          "title": "Google Ads quản lý",
+          "recentModifications": "3 lần sửa Google Ads gần nhất",
+          "accountName": "tài khoản tên",
+          "customerId": "ID khách hàng",
+          "conversionId": "ID chuyển đổi",
+          "conversionLabel": "Nhãn chuyển đổi",
+          "platform": "nền tảng",
+          "status": "trạng thái",
+          "createTime": "Thời gian tạo",
+          "remark": "ghi chú",
+          "actionsColumn": "thao tác",
+          "addAccount": "thêm tài khoản",
+          "conversionConfig": "Chuyển đổi Cấu hình",
+          "eventConfig": "Cấu hình sự kiện",
+          "noEventConfig": "Chưa có cấu hình sự kiện",
+          "triggerMethod": "kích hoạt Phương thức",
+          "serverParams": "Tham số máy chủ",
+          "customParams": "Tham số tùy chỉnh",
+          "editAccountTitle": "sửa Google Ads tài khoản",
+          "addAccountTitle": "thêm Google Ads tài khoản",
+          "addSuccess": "Thêm thành công",
+          "editSuccess": "Sửa thành công",
+          "messages": {
+            "getKeyFailed": "Không lấy được khóa cấu hình Google Ads",
+            "getKeyError": "Lấy khóa cấu hình Google Ads thất bại",
+            "updateFailed": "cập nhật thất bại",
+            "statusUpdateFailed": "trạng thái cập nhật thất bại",
+            "statusUpdateSuccess": "trạng thái {action} thành công",
+            "googleAdsEnabled": "Đã bật Google Ads",
+            "googleAdsDisabled": "Đã tắt Google Ads",
+            "loadDataFailed": "Không thể tải dữ liệu",
+            "deleteFailed": "Xóa thất bại",
+            "deleteSuccess": "Xóa thành công",
+            "getEventListFailed": "Không thể lấy danh sách sự kiện"
+          },
+          "dialog": {
+            "tip": "Gợi ý",
+            "confirmClose": "Có xác nhận tắt Google Ads？",
+            "confirmStatus": "Có xác nhận {action}",
+            "confirm": "xác nhận",
+            "cancel": "hủy"
+          },
+          "switch": {
+            "enableGoogleAds": "bật Google Ads",
+            "viewHistory": "Nhấp để xem lịch sử sửa đổi",
+            "on": "bật",
+            "off": "tắt"
+          },
+          "triggerModes": {
+            "clientOnly": "Chỉ máy khách",
+            "serverOnly": "Chỉ máy chủ",
+            "clientAndServer": "Máy khách + máy chủ"
+          },
+          "actions": {
+            "enable": "bật",
+            "disable": "tắt",
+            "delete": "xóa",
+            "edit": "sửa"
+          }
+        },
+        "configModal": {
+          "form": {
+            "accountName": "tài khoản tên",
+            "accountNamePlaceholder": "Vui lòng nhập tài khoản tên",
+            "customerId": "ID khách hàng",
+            "customerIdPlaceholder": "Vui lòng nhập ID khách hàng",
+            "conversionId": "ID chuyển đổi",
+            "conversionIdPlaceholder": "Vui lòng nhập ID theo dõi chuyển đổi",
+            "conversionLabel": "Nhãn chuyển đổi",
+            "conversionLabelPlaceholder": "Vui lòng nhập nhãn chuyển đổi",
+            "apiUrl": "API URL",
+            "apiUrlPlaceholder": "https://www.google.com/pagead/conversion",
+            "apiUrlFeedback": "URL báo cáo sự kiện Google Ads, mặc định: https://www.google.com/pagead/conversion, hoặc dùng vùng chứa GTM Server để triển khai địa chỉ máy chủ riêng",
+            "platformType": "Loại nền tảng",
+            "platformTypePlaceholder": "Vui lòng chọn loại nền tảng",
+            "status": "trạng thái",
+            "statusOn": "bật",
+            "statusOff": "tắt",
+            "remark": "ghi chú",
+            "remarkPlaceholder": "Vui lòng nhập ghi chú"
+          },
+          "validation": {
+            "accountNameRequired": "Vui lòng nhập tài khoản tên",
+            "customerIdRequired": "Vui lòng nhập ID khách hàng Google Ads",
+            "conversionIdRequired": "Vui lòng nhập ID theo dõi chuyển đổi",
+            "conversionLabelRequired": "Vui lòng nhập nhãn chuyển đổi",
+            "apiUrlRequired": "Vui lòng nhập API URL",
+            "platformTypeRequired": "Vui lòng chọn loại nền tảng"
+          },
+          "messages": {
+            "submitSuccess": "Gửi thành công",
+            "submitFailed": "Gửi thất bại"
+          },
+          "actions": {
+            "cancel": "hủy",
+            "save": "lưu"
+          }
+        }
+      },
+      "googleAnalytics": {
+        "index": {
+          "title": "Google Analytics 4 quản lý",
+          "recentModifications": "3 lần sửa Google Analytics 4 gần nhất",
+          "projectName": "Tên dự án",
+          "measurementId": "ID đo lường",
+          "apiKey": "Khóa API",
+          "apiUrl": "API URL",
+          "dataStreamName": "Tên luồng dữ liệu",
+          "platform": "nền tảng",
+          "status": "trạng thái",
+          "createTime": "Thời gian tạo",
+          "remark": "ghi chú",
+          "actionsColumn": "thao tác",
+          "addGoogleAnalytics": "thêm GoogleAnalytics",
+          "editGoogleAnalytics": "sửa GoogleAnalytics",
+          "googleAnalyticsConfig": "GoogleAnalytics",
+          "eventConfig": "Cấu hình sự kiện",
+          "noEventConfig": "Chưa có cấu hình sự kiện",
+          "triggerMethod": "kích hoạt Phương thức",
+          "serverParams": "Tham số máy chủ",
+          "customParams": "Tham số tùy chỉnh",
+          "addSuccess": "Thêm thành công",
+          "editSuccess": "Sửa thành công",
+          "platforms": {
+            "web": "Trang web",
+            "ios": "iOS",
+            "android": "Android",
+            "unknown": "Không xác định"
+          },
+          "messages": {
+            "getKeyFailed": "Không thể lấy khóa cấu hình Google Analytics 4",
+            "getKeyError": "Không thể lấy khóa Google Analytics 4",
+            "updateFailed": "cập nhật thất bại",
+            "statusUpdateFailed": "trạng thái cập nhật thất bại",
+            "statusUpdateSuccess": "trạng thái {action} thành công",
+            "googleAnalyticsEnabled": "Google Analytics 4 đã bật",
+            "googleAnalyticsDisabled": "Google Analytics 4 đã tắt",
+            "loadDataFailed": "Không thể tải dữ liệu",
+            "deleteFailed": "Xóa thất bại",
+            "deleteSuccess": "Xóa thành công",
+            "getEventListFailed": "Không thể lấy danh sách sự kiện"
+          },
+          "dialog": {
+            "tip": "Gợi ý",
+            "confirmClose": "Có xác nhận tắt Google Analytics 4",
+            "confirmStatus": "Có xác nhận {action}",
+            "confirm": "xác nhận",
+            "cancel": "hủy"
+          },
+          "switch": {
+            "enableGoogleAnalytics": "bật Google Analytics 4",
+            "viewHistory": "Nhấp để xem lịch sử sửa đổi",
+            "on": "bật",
+            "off": "tắt"
+          },
+          "triggerModes": {
+            "clientOnly": "Chỉ máy khách",
+            "serverOnly": "Chỉ máy chủ",
+            "clientAndServer": "Máy khách + máy chủ"
+          },
+          "actions": {
+            "enable": "bật",
+            "disable": "tắt",
+            "delete": "xóa",
+            "edit": "sửa"
+          }
+        },
+        "configModal": {
+          "form": {
+            "projectName": "Tên dự án",
+            "projectNamePlaceholder": "Vui lòng nhập tên dự án",
+            "measurementId": "ID đo lường",
+            "measurementIdPlaceholder": "Vui lòng nhập đo lường ID",
+            "measurementIdFeedback": "Định dạng: G-XXXXXXXXXX",
+            "apiKey": "Khóa API",
+            "apiKeyPlaceholder": "Vui lòng nhập API key",
+            "apiUrl": "API URL",
+            "apiUrlPlaceholder": "https://www.google-analytics.com",
+            "apiUrlFeedback": "URL báo cáo sự kiện GA4, mặc định: https://www.google-analytics.com",
+            "dataStreamName": "Tên luồng dữ liệu",
+            "dataStreamNamePlaceholder": "Vui lòng nhập tên luồng dữ liệu",
+            "platformType": "Loại nền tảng",
+            "platformTypePlaceholder": "Vui lòng chọn loại nền tảng",
+            "status": "trạng thái",
+            "statusOn": "bật",
+            "statusOff": "tắt",
+            "remark": "ghi chú",
+            "remarkPlaceholder": "Vui lòng nhập ghi chú"
+          },
+          "validation": {
+            "projectNameRequired": "Vui lòng nhập tên dự án",
+            "measurementIdRequired": "Vui lòng nhập đo lường ID (G-XXXXXXXXXX)",
+            "apiKeyRequired": "Vui lòng nhập API key",
+            "dataStreamNameRequired": "Vui lòng nhập tên luồng dữ liệu"
+          },
+          "messages": {
+            "submitSuccess": "Gửi thành công",
+            "submitFailed": "Gửi thất bại"
+          },
+          "actions": {
+            "cancel": "hủy",
+            "save": "lưu"
+          }
+        }
+      },
+      "services": {
+        "index": {
+          "title": "Bản ghi theo dõi sự kiện",
+          "columns": {
+            "time": "thời gian",
+            "memberId": "ID thành viên",
+            "platformType": "Loại nền tảng theo dõi",
+            "eventId": "ID sự kiện",
+            "keyword": "Từ khóa",
+            "orderNo": "Mã đơn",
+            "status": "trạng thái"
+          },
+          "form": {
+            "memberId": "ID thành viên",
+            "memberIdPlaceholder": "Vui lòng nhập ID thành viên",
+            "platformType": "Loại nền tảng theo dõi",
+            "platformTypePlaceholder": "Vui lòng chọn loại nền tảng theo dõi",
+            "eventId": "ID sự kiện",
+            "eventIdPlaceholder": "Vui lòng nhập event ID",
+            "keyword": "Từ khóa",
+            "keywordPlaceholder": "Vui lòng nhập từ khóa",
+            "orderNo": "Mã đơn",
+            "orderNoPlaceholder": "Vui lòng nhập Mã đơn",
+            "status": "trạng thái",
+            "statusPlaceholder": "Vui lòng chọn trạng thái",
+            "timeRange": "Khoảng thời gian",
+            "startTime": "Thời gian bắt đầu",
+            "endTime": "Thời gian kết thúc"
+          },
+          "status": {
+            "success": "thành công",
+            "failed": "thất bại",
+            "pending": "Đang chờ",
+            "processing": "Đang xử lý"
+          },
+          "actions": {
+            "export": "xuất",
+            "search": "tìm kiếm",
+            "reset": "đặt lại",
+            "query": "tra cứu"
+          },
+          "messages": {
+            "loadDataFailed": "Không thể tải dữ liệu",
+            "exportSuccess": "xuất thành công",
+            "exportFailed": "xuất thất bại",
+            "noData": "Không có dữ liệu"
+          }
+        }
+      },
+      "logModal": {
+        "columns": {
+          "updateTime": "Thời gian thao tác",
+          "operatorName": "Người thao tác",
+          "updateContent": "Giá trị cấu hình (cũ -> mới)"
+        },
+        "messages": {
+          "loadDataFailed": "Không thể tải dữ liệu"
+        }
+      }
+    },
+    "maintenance": {
+      "index": {
+        "title": "bảo trì quản lý",
+        "buttons": {
+          "search": "tra cứu",
+          "reset": "đặt lại",
+          "add": "thêm bảo trì"
+        },
+        "form": {
+          "maintenanceTime": "bảo trì thời gian",
+          "startTime": "Thời gian bắt đầu bảo trì",
+          "endTime": "Thời gian kết thúc bảo trì",
+          "status": "trạng thái",
+          "placeholders": {
+            "selectStatus": "Vui lòng chọn trạng thái",
+            "selectStartTime": "Vui lòng chọn thời gian bắt đầu",
+            "selectEndTime": "Vui lòng chọn thời gian kết thúc"
+          }
+        },
+        "columns": {
+          "status": "trạng thái",
+          "maintenanceAnnouncement": "bảo trì thông báo",
+          "modifier": "Người sửa",
+          "lastModified": "Lần sửa cuối",
+          "actions": "thao tác"
+        },
+        "status": {
+          "enabled": "bật",
+          "disabled": "tắt"
+        },
+        "actions": {
+          "edit": "sửa"
+        },
+        "dialog": {
+          "setMaintenanceStatus": "Thiết lập trạng thái bảo trì",
+          "maintenanceContent": "Nội dung bảo trì",
+          "editMaintenance": "Sửa bảo trì",
+          "addMaintenance": "Thêm bảo trì"
+        },
+        "messages": {
+          "modifySuccess": "Chỉnh sửa thành công",
+          "confirmStatusChange": "Bạn có chắc muốn {action} bảo trì này không?"
+        }
+      },
+      "editMaintenance": {
+        "form": {
+          "startTime": "Thời gian bắt đầu bảo trì",
+          "endTime": "Thời gian kết thúc bảo trì",
+          "content": "Nội dung bảo trì"
+        },
+        "buttons": {
+          "cancel": "hủy",
+          "save": "lưu"
+        },
+        "validation": {
+          "startTimeRequired": "Thời gian bắt đầu không được để trống",
+          "endTimeRequired": "Thời gian kết thúc không được để trống",
+          "timesCannotBeSame": "Thời gian bắt đầu và kết thúc không được giống nhau",
+          "endTimeCannotBeEarlier": "Thời gian kết thúc không được sớm hơn thời gian bắt đầu",
+          "contentRequired": "Vui lòng nhập nội dung bảo trì"
+        },
+        "messages": {
+          "editSuccess": "Chỉnh sửa thành công",
+          "addSuccess": "Thêm thành công"
+        }
+      }
+    },
+    "materials": {
+      "index": {
+        "title": "Tải xuống Khuyến mãi",
+        "tabs": {
+          "shareMaterials": "Tài liệu chia sẻ khuyến mãi",
+          "downPage": "Quản lý trang tải xuống",
+          "rechargePageAd": "Quảng cáo trang nạp tiền"
+        }
+      },
+      "shareMaterials": {
+        "languageNotice": "Tài liệu cho các ngôn ngữ khác nhau cần tải lên riêng:",
+        "uploadLimit": "Đã tải lên {count}/5",
+        "buttons": {
+          "uploadMaterial": "Tải lên Tài liệu",
+          "edit": "sửa",
+          "enable": "bật",
+          "disable": "Tắt",
+          "delete": "xóa"
+        },
+        "status": {
+          "active": "Đang hoạt động",
+          "inactive": "Không hoạt động"
+        },
+        "actions": {
+          "enable": "bật",
+          "disable": "tắt"
+        },
+        "uploadTime": "tải lên thời gian",
+        "clickPreview": "Nhấp Đến Xem trước",
+        "dialog": {
+          "editMaterial": "Sửa Tài liệu",
+          "uploadMaterial": "Tải lên Tài liệu",
+          "previewMaterial": "Xem trước Tài liệu",
+          "deleteWarning": "Cảnh báo",
+          "deleteContent": "Không thể hoàn tác thao tác này. Bạn có chắc muốn xóa tài liệu này không?",
+          "statusWarning": "Gợi ý",
+          "statusContent": "Bạn có chắc muốn {action} tài liệu này không?",
+          "confirm": "Xác nhận",
+          "cancel": "hủy"
+        },
+        "messages": {
+          "noData": "Không có dữ liệu"
+        },
+        "rewardConfig": {
+          "title": "Cấu hình thưởng quảng bá",
+          "websiteTitle": "Khuyến mãi Hiển thị Website",
+          "websiteLabel": "URL website",
+          "websitePlaceholder": "Nhập URL website",
+          "websiteTip": "Thiết lập liên kết website hiển thị trong khuyến mãi",
+          "rewardSwitch": "Thưởng Chuyển",
+          "rewardType": "Loại thưởng được hỗ trợ",
+          "rewardDelay": "Thưởng Delay thời gian",
+          "rewardDelayUnit": "giây",
+          "rewardRequirement": "Thưởng Yêu cầu",
+          "allUserTitle": "Tất cả Người dùng (Thấp Ưu tiên)",
+          "bindPhoneUserTitle": "Người dùng đã liên kết điện thoại (ưu tiên trung bình)",
+          "rechargeUserTitle": "Nạp tiền Người dùng (High Ưu tiên)",
+          "status": "trạng thái",
+          "userType": "người dùng loại",
+          "allUser": "tất cả người dùng",
+          "bindPhoneUser": "Người dùng đã liên kết điện thoại",
+          "rechargeUser": "nạp tiền người dùng",
+          "receiveTimes": "Số lần nhận",
+          "canReceive": "Có thể nhận",
+          "canReceiveUnit": "lần",
+          "rewardAmount": "Số tiền thưởng",
+          "rewardAmountUnit": "nhân dân tệ",
+          "rewardMultiple": "Bội số cược",
+          "rewardMultipleUnit": "lần",
+          "rechargeAmountGreater": "Số tiền nạp lớn hơn",
+          "selectPlaceholder": "Vui lòng chọn",
+          "inputPlaceholder": "Vui lòng nhập",
+          "agentShare": "Đại lý Share",
+          "inviteWheelShare": "Chia sẻ vòng quay mời bạn",
+          "daily": "Hằng ngày",
+          "weekly": "Mỗi tuần dương lịch",
+          "monthly": "Mỗi tháng dương lịch",
+          "lifetime": "Trọn đời",
+          "cancel": "hủy",
+          "save": "lưu"
+        },
+        "targetConfig": "Cấu hình hiển thị mục tiêu",
+        "rechargeTimes": "thành viên nạp tiền số lần",
+        "times": "lần"
+      },
+      "downPage": {
+        "languageNotice": "Tài liệu cho các ngôn ngữ khác nhau cần tải lên riêng:",
+        "uploadStatus": "Đã tải lên {current}/{total}",
+        "platformStatus": "Android: {android}/5, iOS: {ios}/5",
+        "platform": "nền tảng",
+        "platformUnknown": "Không xác định",
+        "platformTypes": {
+          "android": "Android Nền tảng",
+          "ios": "IOS nền tảng"
+        },
+        "uploadTime": "tải lên thời gian",
+        "clickPreview": "Nhấp Đến Xem trước",
+        "noData": "Không có dữ liệu",
+        "config": {
+          "downloadConfig": "Cấu hình URL tải xuống",
+          "androidDownload": "Android Tải xuống URL",
+          "androidDownloadDesc": "Thiết lập liên kết tải APP Android",
+          "iosDownload": "iOS Tải xuống URL",
+          "iosDownloadDesc": "Thiết lập liên kết tải APP iOS",
+          "androidShellDownload": "Android Shell Gói Tải xuống",
+          "androidShellDownloadDesc": "Thiết lập liên kết tải gói shell Android",
+          "iosShellDownload": "iOS Shell Gói Tải xuống",
+          "iosShellDownloadDesc": "Thiết lập liên kết tải gói shell iOS",
+          "IsRechargeForceDownload": "Nạp tiền để bắt buộc tải xuống"
+        },
+        "table": {
+          "operationTime": "Thời gian thao tác",
+          "operator": "Người thao tác",
+          "configValue": "Giá trị cấu hình (cũ -> mới)"
+        },
+        "buttons": {
+          "uploadMaterial": "Tải lên Tài liệu",
+          "edit": "sửa",
+          "enable": "bật",
+          "disable": "Tắt",
+          "delete": "xóa"
+        },
+        "status": {
+          "active": "Đang hoạt động",
+          "inactive": "Không hoạt động"
+        },
+        "actions": {
+          "enable": "bật",
+          "disable": "tắt"
+        },
+        "dialog": {
+          "editMaterial": "Sửa Tài liệu",
+          "uploadMaterial": "Tải lên Tài liệu",
+          "previewMaterial": "Xem trước Tài liệu",
+          "editConfig": "sửa {name}",
+          "deleteWarning": "Cảnh báo",
+          "deleteContent": "Không thể hoàn tác thao tác này. Bạn có chắc muốn xóa tài liệu này không?",
+          "statusWarning": "Gợi ý",
+          "statusContent": "Bạn có chắc muốn {action} tài liệu này không?",
+          "confirm": "Xác nhận",
+          "cancel": "hủy"
+        }
+      },
+      "addMaterial": {
+        "materialImage": "Tài liệu Hình ảnh",
+        "qrCodePosition": "QR Mã Vị trí",
+        "isEnabled": "có không bật",
+        "platformType": "Loại nền tảng",
+        "cancel": "hủy",
+        "save": "lưu",
+        "validation": {
+          "imageRequired": "Vui lòng tải ảnh lên",
+          "platformRequired": "Vui lòng chọn loại nền tảng"
+        },
+        "updatePosition": "Đã cập nhật vị trí:"
+      },
+      "previewMaterial": {
+        "withQrCode": "Với QR Mã hiệu lực",
+        "originalImage": "Original Hình ảnh",
+        "qrCodeArea": "QR Mã Area Simulation",
+        "previewImage": "Xem trước Hình ảnh",
+        "cancel": "hủy"
+      }
+    },
+    "firebase": {
+      "config": {
+        "title": "Cấu hình thông báo đẩy Firebase",
+        "addConfig": "thêm cấu hình",
+        "editConfig": "sửa Firebase cấu hình",
+        "columns": {
+          "projectName": "Tên dự án",
+          "projectId": "ID dự án",
+          "platformType": "Loại nền tảng",
+          "status": "trạng thái",
+          "createTime": "Thời gian tạo"
+        },
+        "platformTypes": {
+          "web": "Trang web",
+          "ios": "iOS",
+          "android": "Android",
+          "unknown": "Không xác định"
+        },
+        "messages": {
+          "statusUpdateFailed": "trạng thái cập nhật thất bại",
+          "statusUpdateSuccess": "trạng thái {status} thành công",
+          "enabled": "bật",
+          "disabled": "tắt",
+          "deleteFailed": "Xóa thất bại",
+          "deleteSuccess": "Xóa thành công",
+          "editSuccess": "Sửa thành công",
+          "addSuccess": "Thêm thành công",
+          "loadDataFailed": "tải dữ liệu thất bại"
+        }
+      },
+      "push": {
+        "title": "Quản lý thông báo đẩy Firebase",
+        "pageTitle": "Bản ghi thông báo đẩy Firebase",
+        "addPush": "Thêm thông báo đẩy",
+        "columns": {
+          "id": "ID",
+          "title": "Tiêu đề thông báo đẩy",
+          "target": "Mục tiêu thông báo đẩy",
+          "content": "Nội dung thông báo đẩy",
+          "sendCount": "Số lần gửi",
+          "successCount": "thành công số lượng",
+          "receivedTotal": "Đã nhận Tổng cộng",
+          "receivedRate": "Đã nhận Tỷ lệ",
+          "clickTotal": "Nhấp Tổng cộng",
+          "clickRate": "Nhấp Tỷ lệ",
+          "status": "trạng thái",
+          "createTime": "Thời gian tạo",
+          "sendTime": "Thời gian gửi",
+          "firebaseProject": "Dự án Firebase"
+        },
+        "targetTypes": {
+          "selected": "Đã chọn"
+        },
+        "buttons": {
+          "download": "tải xuống",
+          "sendNow": "Gửi ngay",
+          "detail": "xem chi tiết",
+          "delete": "xóa",
+          "addPush": "Thêm thông báo đẩy"
+        },
+        "search": {
+          "pushStatus": "Trạng thái thông báo đẩy",
+          "pushStatusPlaceholder": "Vui lòng chọn trạng thái thông báo đẩy",
+          "all": "tất cả",
+          "createTime": "Thời gian tạo",
+          "createTimePlaceholder": "Vui lòng chọn thời gian tạo"
+        },
+        "messages": {
+          "downloadFailed": "Tải xuống thất bại, vui lòng thử lại sau",
+          "operationSuccess": "Thao tác thành công",
+          "operationFailed": "Thao tác thất bại",
+          "sendFailed": "Gửi thông báo đẩy thất bại"
+        }
+      },
+      "template": {
+        "formatDescription": "Mô tả định dạng mẫu:",
+        "rule1": "Mỗi dòng một ID hội viên",
+        "rule2": "Chỉ hỗ trợ định dạng văn bản thuần",
+        "rule3": "Không hỗ trợ dữ liệu ngoài ID hội viên",
+        "example": "Ví dụ:",
+        "close": "tắt",
+        "downloadTemplate": "Tải mẫu xuống"
+      },
+      "modal": {
+        "form": {
+          "projectName": "Tên dự án",
+          "projectId": "ID dự án",
+          "platformType": "Loại nền tảng",
+          "serverKey": "Khóa máy chủ",
+          "status": "trạng thái",
+          "pushTitle": "Tiêu đề thông báo đẩy",
+          "pushContent": "Nội dung thông báo đẩy",
+          "targetType": "Mục tiêu thông báo đẩy",
+          "sendTime": "Thời gian gửi",
+          "apiKey": "Khóa API",
+          "authDomain": "Tên miền xác thực",
+          "measurementId": "ID đo lường",
+          "measurementApiSecret": "API giao thức đo lường",
+          "appId": "Ứng dụng ID",
+          "storageBucket": "Kho lưu trữ",
+          "msgSenderId": "Tin nhắn Sender ID",
+          "serviceAccountKey": "Dịch vụ Tài khoản Key",
+          "remark": "ghi chú",
+          "msgSenderIdFormat": "Thường là chuỗi số thuần (các chữ số sau phần đầu '1:' Trong Ứng dụng ID)",
+          "uploadServiceKey": "Tải lên Dịch vụ Tài khoản Key",
+          "serviceKeyDescription": "Vui lòng tải lên tệp JSON khóa tài khoản dịch vụ được tải xuống từ Firebase Console để xác minh đẩy phía máy chủ. Đường dẫn: Firebase Console > Cài đặt dự án > Tài khoản dịch vụ > Tạo khóa riêng mới",
+          "statusDescription": "Sau khi tắt, dự án này không thể được chọn để gửi thông báo đẩy",
+          "firebaseProject": "Dự án Firebase",
+          "pushTarget": "Mục tiêu thông báo đẩy",
+          "memberIds": "ID thành viên",
+          "uploadMemberIds": "tải lên ID thành viên",
+          "uploadFile": "Tải lên Tệp",
+          "uploadMemberIdsDescription": "Vui lòng tải lên tệp văn bản chứa ID hội viên",
+          "viewTemplateDescription": "Xem Mẫu Mô tả",
+          "autoTag": "Nền tảng tự động Tag",
+          "group": "nhóm",
+          "vipLevel": "Cấp VIP",
+          "channel": "Kênh",
+          "sourceChannel": "Nguồn Kênh",
+          "pushIcon": "Biểu tượng thông báo đẩy",
+          "iconSizeRecommendation": "Hỗ trợ ảnh định dạng JPG/PNG (kích thước khuyến nghị: 96 x 96)",
+          "clickAction": "Nhấp Thao tác",
+          "targetLink": "mục tiêu Liên kết",
+          "openPage": "Mở Trang",
+          "scheduledSendTime": "Thời gian gửi theo lịch",
+          "pushPriority": "Mức ưu tiên thông báo đẩy",
+          "survivalTime": "Thời gian tồn tại",
+          "survivalTimeDescription": "Giây (0 nghĩa là hết hạn ngay, tối đa 28 ngày)",
+          "batchTemplateDescription": "Hàng loạt Mẫu Mô tả",
+          "failCount": "thất bại số lượng",
+          "successRate": "Thành công Tỷ lệ",
+          "pushContentDetail": "Nội dung thông báo đẩy"
+        },
+        "validation": {
+          "projectNameRequired": "Vui lòng nhập tên dự án",
+          "projectIdRequired": "Vui lòng nhập Firebase dự án ID",
+          "platformTypeRequired": "Vui lòng chọn loại nền tảng",
+          "serverKeyRequired": "Vui lòng nhập máy chủ key",
+          "pushTitleRequired": "Vui lòng nhập tiêu đề thông báo đẩy",
+          "pushContentRequired": "Vui lòng nhập nội dung thông báo đẩy",
+          "targetTypeRequired": "Vui lòng chọn mục tiêu thông báo đẩy",
+          "apiKeyRequired": "Vui lòng nhập API key",
+          "authDomainRequired": "Vui lòng nhập auth tên miền",
+          "appIdRequired": "Vui lòng nhập app ID",
+          "measurementIdRequired": "Vui lòng nhập đo lường ID",
+          "measurementApiSecretRequired": "Vui lòng nhập đo lường protocol API secret",
+          "storageBucketRequired": "Vui lòng nhập bucket lưu trữ",
+          "msgSenderIdRequired": "Vui lòng nhập tin nhắn sender ID",
+          "serviceAccountKeyRequired": "Vui lòng tải lên khóa tài khoản dịch vụ",
+          "remarkRequired": "Vui lòng nhập remark",
+          "firebaseProjectRequired": "Vui lòng chọn firebase dự án",
+          "titleRequired": "Vui lòng nhập title",
+          "contentRequired": "Vui lòng nhập nội dung",
+          "pushTargetRequired": "Vui lòng chọn mục tiêu thông báo đẩy",
+          "memberIdsRequired": "Vui lòng nhập hội viên IDs, phân tách Bởi commas",
+          "clickActionRequired": "Vui lòng chọn nhấp action",
+          "targetLinkRequired": "Vui lòng nhập mục tiêu liên kết",
+          "openPageRequired": "Vui lòng chọn trang để mở",
+          "sendTimeRequired": "Vui lòng chọn thời gian gửi",
+          "scheduledSendTimeRequired": "Vui lòng chọn thời gian gửi theo lịch",
+          "pushPriorityRequired": "Vui lòng chọn mức ưu tiên thông báo đẩy",
+          "survivalTimeRequired": "Vui lòng nhập thời gian tồn tại (giây)"
+        },
+        "buttons": {
+          "cancel": "hủy",
+          "save": "lưu",
+          "submit": "Gửi"
+        },
+        "messages": {
+          "saveSuccess": "Lưu thành công",
+          "saveFailed": "lưu thất bại",
+          "submitSuccess": "Gửi thành công",
+          "submitFailed": "Gửi thất bại",
+          "addSuccess": "Thêm thành công",
+          "editSuccess": "Sửa thành công",
+          "fileReadFailed": "Đọc tệp thất bại, vui lòng chọn lại tệp",
+          "uploadJsonFile": "Vui lòng tải lên tệp JSON",
+          "fileContentEmpty": "Nội dung tệp không được để trống",
+          "getAutoTagListFailed": "Không thể lấy danh sách nhãn tự động",
+          "getFirebaseProjectListFailed": "Không thể lấy danh sách dự án Firebase",
+          "initDataFailed": "Không thể ban đầuize dữ liệu",
+          "getDetailFailed": "Không thể lấy chi tiết đẩy"
+        },
+        "viewDetail": "Xem chi tiết thông báo đẩy",
+        "addDetail": "Thêm chi tiết thông báo đẩy",
+        "addPush": "Tạo thông báo đẩy Firebase",
+        "confirmTitle": "Xác nhận",
+        "sendConfirm": "Bạn có chắc muốn gửi thông báo đẩy này ngay không?",
+        "cancel": "hủy",
+        "confirm": "Xác nhận"
+      }
+    },
+    "engageLab": {
+      "platformType": {
+        "web": "Trang web (PWA)",
+        "app": "Ứng dụng"
+      },
+      "config": {
+        "title": "Cấu hình push Jiguang",
+        "addConfig": "thêm cấu hình",
+        "editConfig": "sửa cấu hình",
+        "preview": "Xem trước",
+        "fold": "Thu gọn",
+        "columns": {
+          "pushend": "Endpoint push",
+          "placeholderKey": "Vui lòng nhập Key",
+          "Key": "Khóa",
+          "masterSecret": "Khóa bí mật chính",
+          "placeholderMasterSecret": "Vui lòng nhập Master Secret",
+          "appName": "APP Gói Tên",
+          "placeholderAppName": "Vui lòng nhập APP tên gói",
+          "validAppName": "Vui lòng nhập hợp lệ APP tên gói, e.g.: com.xxx.app",
+          "gs": "GoogleService",
+          "chooseFile": "Chọn tệp",
+          "placeholderGs": "Vui lòng chọn GoogleService",
+          "status": "trạng thái",
+          "edit": "sửa"
+        }
+      },
+      "push": {
+        "title": "Thông báo đẩy Jiguang",
+        "addPush": "Thêm push",
+        "editPush": "Sửa push",
+        "record": "Bản ghi push",
+        "pending": "Đang chờ",
+        "success": "Thông báo đẩy thành công",
+        "failed": "Thông báo đẩy thất bại",
+        "columns": {
+          "pushTime": "Thời gian push",
+          "pushPlatform": "Nền tảng push",
+          "pushTitle": "Tiêu đề thông báo đẩy",
+          "pushContent": "Nội dung push",
+          "jumpLink": "Trang nhảy",
+          "pushState": "Trạng thái push",
+          "placeholderJumpLink": "Vui lòng chọn chuyển hướng trang, follow dropdown Quy tắc Của khác modules",
+          "pushImage": "Ảnh push",
+          "imageAdvice": "Hỗ trợ ảnh định dạng JPG/PNG (kích thước khuyến nghị: 96 x 96)"
+        }
+      }
+    },
+    "messageManage": {
+      "index": {
+        "title": "tin nhắn quản lý",
+        "tabs": {
+          "generalMessage": "General Tin nhắn",
+          "customPopup": "Tùy chỉnh cửa sổ bật lên",
+          "siteMessage": "tin nhắn nội bộ",
+          "siteMessageRecord": "Website Tin nhắn Bản ghi",
+          "firebaseMessage": "Firebase tin nhắn",
+          "externalMessage": "bên ngoài Tin nhắn"
+        }
+      },
+      "messageList": {
+        "columns": {
+          "id": "ID",
+          "messageType": "tin nhắn loại",
+          "image": "hình ảnh",
+          "title": "Tiêu đề",
+          "contentOrUrl": "Nội dung/Chuyển hướng Liên kết",
+          "sort": "Sắp xếp",
+          "lastUpdateTime": "Thời gian cập nhật cuối",
+          "lastUpdateUser": "Người thao tác",
+          "status": "trạng thái",
+          "targetObject": "Đối tượng hiển thị"
+        },
+        "typeMap": {
+          "scrollMessage": "Scroll Tin nhắn",
+          "beforeLoginPopup": "trước Đăng nhập cửa sổ bật lên",
+          "afterLoginPopup": "sau Đăng nhập cửa sổ bật lên",
+          "carousel": "Băng chuyền",
+          "customCarousel": "Tùy chỉnh bố cục Carousel"
+        },
+        "form": {
+          "messageType": "tin nhắn loại",
+          "messageTypePlaceholder": "Vui lòng chọn tin nhắn loại",
+          "statusPlaceholder": "Vui lòng chọn bật trạng thái"
+        },
+        "buttons": {
+          "add": "thêm",
+          "enable": "bật",
+          "disable": "tắt"
+        },
+        "modal": {
+          "addTitle": "thêm tin nhắn",
+          "editTitle": "Sửa Tin nhắn",
+          "deleteTitle": "Xác nhận",
+          "deleteConfirm": "Bạn có chắc muốn xóa không?",
+          "deletePositive": "Xác nhận",
+          "deleteNegative": "hủy"
+        },
+        "unknownTag": "Không xác định tag",
+        "times": "Số lần",
+        "batchImport": "Hàng loạt Nhập",
+        "download": "tải xuống",
+        "selected": "Đã chọn:",
+        "batchImportFileName": "Hàng loạt Nhập Tệp.txt",
+        "downloadFailed": "Tải xuống thất bại, vui lòng thử lại sau"
+      },
+      "addMessage": {
+        "typeMap": {
+          "scrollMessage": "Scroll Tin nhắn",
+          "beforeLoginPopup": "trước Đăng nhập cửa sổ bật lên",
+          "afterLoginPopup": "sau Đăng nhập cửa sổ bật lên",
+          "carousel": "Băng chuyền",
+          "customCarousel": "Tùy chỉnh bố cục Carousel"
+        },
+        "form": {
+          "messageType": "tin nhắn loại",
+          "messageTypePlaceholder": "Vui lòng chọn tin nhắn loại",
+          "sort": "Sắp xếp (cao hơn số nghĩa là ưu tiên cao hơn)",
+          "image": "hình ảnh",
+          "carousel": "Băng chuyền",
+          "title": "Tiêu đề",
+          "content": "Nội dung",
+          "buttonText": "Văn bản nút",
+          "buttonTextTip": "Văn bản này sẽ hiển thị trên nút bên dưới carousel",
+          "jumpType": "Loại chuyển hướng",
+          "jumpUrl": "URL nhảy",
+          "jumpUrlTip": "Vui lòng nhập một hoàn tất URL, e.g., https://www.example.com",
+          "jumpPage": "Trang nhảy",
+          "popupTitle": "cửa sổ bật lên Tiêu đề",
+          "gameVendor": "Nhà cung cấp trò chơi",
+          "subGame": "trò chơi con",
+          "customerCustomPopup": "ticket loại",
+          "orderTypePlaceholder": "Vui lòng chọn ticket loại"
+        },
+        "validation": {
+          "contentRequired": "Vui lòng nhập nội dung",
+          "sortRequired": "Vui lòng nhập sắp xếp đơn",
+          "sortPattern": "Thứ tự sắp xếp phải là số nguyên dương bắt đầu từ 0",
+          "imageRequired": "Vui lòng tải ảnh lên",
+          "buttonTextRequired": "Vui lòng nhập nút text",
+          "popupIdRequired": "Vui lòng chọn cửa sổ bật lên title",
+          "vendorCodeRequired": "Vui lòng chọn Nhà cung cấp trò chơi",
+          "jumpTypeRequired": "Vui lòng chọn chuyển hướng loại",
+          "pageTypeRequired": "Vui lòng chọn chuyển hướng trang",
+          "jumpUrlRequired": "Vui lòng nhập chuyển hướng URL",
+          "jumpUrlPattern": "Vui lòng nhập hợp lệ URL"
+        },
+        "buttons": {
+          "cancel": "hủy",
+          "save": "lưu"
+        },
+        "messages": {
+          "addSuccess": "Thêm thành công",
+          "editSuccess": "Sửa thành công"
+        }
+      },
+      "addOrUpdatePopup": {
+        "form": {
+          "title": "Tiêu đề",
+          "sort": "Sắp xếp",
+          "popupCoverImage": "Ảnh bìa cửa sổ bật lên",
+          "time": "thời gian",
+          "longTermValid": "Long Term Hợp lệ",
+          "fixedTime": "Thời gian cố định",
+          "timeRange": "Khoảng thời gian",
+          "isForcePopup": "Bắt buộc bật cửa sổ bật lên",
+          "yes": "có",
+          "no": "không",
+          "jumpType": "Loại chuyển hướng",
+          "jumpTypePlaceholder": "Vui lòng chọn chuyển hướng loại",
+          "jumpLink": "Chuyển hướng Liên kết",
+          "jumpPage": "Chọn trang",
+          "jumpPagePlaceholder": "Vui lòng chọn chuyển hướng trang",
+          "popupTarget": "Mục tiêu cửa sổ bật lên",
+          "popupTargetPlaceholder": "Vui lòng chọn mục tiêu object",
+          "platformAutoTag": "Nền tảng tự động Tag",
+          "platformAutoTagPlaceholder": "Vui lòng chọn tags, nhiều selection allowed",
+          "group": "nhóm",
+          "groupPlaceholder": "Vui lòng chọn Nhóm, nhiều selection allowed",
+          "vipLevel": "Cấp VIP",
+          "vipLevelPlaceholder": "Vui lòng chọn VIP levels, nhiều selection allowed",
+          "sourceChannel": "Nguồn Kênh",
+          "sourceChannelPlaceholder": "Vui lòng chọn nguồn Kênh, nhiều selection allowed",
+          "memberId": "ID thành viên",
+          "memberIdPlaceholder": "Vui lòng nhập hội viên IDs, phân tách bằng dấu phẩy hoặc xuống dòng",
+          "uploadMemberId": "tải lên ID thành viên",
+          "selectFile": "Chọn Tệp",
+          "uploadMemberIdTip": "Vui lòng tải lên tệp văn bản chứa ID hội viên",
+          "templateDescription": "Xem Mẫu Mô tả",
+          "popupFrequency": "Tần suất cửa sổ bật lên",
+          "popupFrequencyPlaceholder": "Vui lòng chọn cửa sổ bật lên tần suất"
+        },
+        "validation": {
+          "titleRequired": "Vui lòng nhập title",
+          "sortRequired": "Vui lòng nhập sắp xếp đơn",
+          "timeRangeRequired": "Vui lòng chọn khoảng thời gian",
+          "jumpTypeRequired": "Vui lòng chọn chuyển hướng loại",
+          "jumpLinkRequired": "Vui lòng nhập chuyển hướng liên kết",
+          "jumpPageRequired": "Vui lòng chọn chuyển hướng trang",
+          "popupTargetRequired": "Vui lòng chọn cửa sổ bật lên mục tiêu",
+          "popupFrequencyRequired": "Vui lòng chọn cửa sổ bật lên tần suất",
+          "jumpPageOrderRequired": "Vui lòng chọn ticket loại"
+        },
+        "buttons": {
+          "cancel": "hủy",
+          "save": "lưu"
+        },
+        "messages": {
+          "addSuccess": "Thêm thành công",
+          "editSuccess": "Sửa thành công",
+          "fileReadFailed": "Đọc tệp thất bại, vui lòng chọn lại tệp",
+          "uploadTxtFile": "Vui lòng tải lên tệp txt",
+          "fileSizeLimit": "Kích thước tệp không được vượt quá 5MB",
+          "fileContentEmpty": "Nội dung tệp không được để trống",
+          "fileReadError": "Đọc tệp thất bại"
+        },
+        "templateModal": {
+          "title": "Mẫu Mô tả",
+          "description": "Vui lòng tải lên tệp văn bản định dạng txt chứa ID hội viên, mỗi dòng một ID",
+          "example": "Ví dụ:"
+        }
+      },
+      "siteMessage": {
+        "columns": {
+          "id": "ID",
+          "siteMsgDescription": "Website Tin nhắn Mô tả",
+          "siteMsgTitle": "Website Tin nhắn Tiêu đề",
+          "content": "Nội dung",
+          "duration": "Thời lượng",
+          "sendTime": "Thời gian gửi",
+          "jumpType": "Loại chuyển hướng",
+          "receiveTarget": "Mục tiêu nhận",
+          "hasReward": "Has Thưởng",
+          "isEnabled": "có không bật",
+          "status": "trạng thái",
+          "operator": "Người thao tác"
+        },
+        "duration": {
+          "longTerm": "Long Term Hợp lệ"
+        },
+        "reward": {
+          "yes": "có",
+          "no": "không"
+        },
+        "status": {
+          "normal": "Bình thường",
+          "revoked": "Đã thu hồi",
+          "enabled": "bật",
+          "disabled": "tắt"
+        },
+        "receiveTarget": {
+          "batchImport": "Hàng loạt Nhập",
+          "download": "tải xuống",
+          "selected": "Đã chọn:"
+        },
+        "modal": {
+          "contentTitle": "Nội dung",
+          "unknownTag": "Không xác định Tag"
+        },
+        "form": {
+          "siteMsgDescription": "Website Tin nhắn Mô tả",
+          "siteMsgDescriptionPlaceholder": "Vui lòng nhập site tin nhắn description",
+          "operator": "Người thao tác",
+          "operatorPlaceholder": "Vui lòng nhập operator"
+        },
+        "actions": {
+          "revoke": "Thu hồi",
+          "view": "xem",
+          "edit": "sửa",
+          "addSiteMsg": "Thêm Website Tin nhắn",
+          "viewSiteMsg": "xem tin nhắn nội bộ",
+          "editSiteMsg": "sửa tin nhắn nội bộ"
+        },
+        "revoke": {
+          "confirmTitle": "Xác nhận thu hồi",
+          "confirmContent": "Bạn có chắc muốn thu hồi tin nhắn site \"{name}\" không? Sau khi thu hồi, tin nhắn này sẽ bị vô hiệu hóa và không thể bật lại.",
+          "confirmButton": "Xác nhận Revoke",
+          "cancelButton": "hủy",
+          "processing": "Đang thu hồi...",
+          "success": "Thu hồi tin nhắn website thành công",
+          "failed": "Thu hồi thất bại, vui lòng thử lại sau"
+        },
+        "download": {
+          "batchImportFileName": "Hàng loạt Nhập Tệp.txt",
+          "downloadFailedError": "Tải xuống thất bại, vui lòng thử lại sau"
+        }
+      },
+      "outSitMessage": {
+        "columns": {
+          "id": "ID",
+          "emailDescription": "Mô tả email",
+          "emailSubject": "Tiêu đề email",
+          "emailContent": "Nội dung email",
+          "receiveTarget": "Mục tiêu nhận",
+          "emailServiceProvider": "Nhà cung cấp dịch vụ email",
+          "sendTime": "Thời gian gửi",
+          "sendStatus": "Trạng thái gửi",
+          "sendCount": "Số lần gửi",
+          "successCount": "thành công số lượng"
+        },
+        "receiveTarget": {
+          "batchImport": "Hàng loạt Nhập",
+          "download": "tải xuống",
+          "selected": "Đã chọn:"
+        },
+        "sendStatus": {
+          "pending": "Đang chờ",
+          "sending": "Đang gửi",
+          "success": "Thành công",
+          "failed": "Thất bại"
+        },
+        "modal": {
+          "contentTitle": "Nội dung email"
+        },
+        "form": {
+          "emailDescription": "Mô tả email",
+          "emailDescriptionPlaceholder": "Vui lòng nhập email description",
+          "sendStatus": "Trạng thái gửi",
+          "sendStatusPlaceholder": "Vui lòng chọn gửi trạng thái"
+        },
+        "actions": {
+          "view": "xem",
+          "send": "Gửi",
+          "addOutSitMessage": "Thêm Out-Website Tin nhắn",
+          "viewOutSitMessage": "Xem Out-Website Tin nhắn",
+          "configEmailProvider": "Cấu hình nhà cung cấp email"
+        },
+        "send": {
+          "confirmTitle": "Gửi tin nhắn ngoài website",
+          "confirmContent": "Bạn có chắc muốn gửi tin nhắn ngoài site này không?",
+          "confirmButton": "Xác nhận",
+          "cancelButton": "hủy",
+          "success": "Gửi thành công"
+        },
+        "download": {
+          "batchImportFileName": "Hàng loạt Nhập Tệp.txt",
+          "downloadFailedError": "Tải xuống thất bại, vui lòng thử lại sau"
+        },
+        "unknown": {
+          "tag": "Không xác định Tag"
+        }
+      },
+      "promptSetting": {
+        "columns": {
+          "id": "ID",
+          "popupTitle": "cửa sổ bật lên Tiêu đề",
+          "popupCoverImage": "Ảnh bìa cửa sổ bật lên",
+          "time": "thời gian",
+          "sort": "Sắp xếp",
+          "isForcePopup": "Bắt buộc bật cửa sổ bật lên",
+          "jumpType": "Loại chuyển hướng",
+          "popupTarget": "Mục tiêu cửa sổ bật lên",
+          "popupFrequency": "Tần suất cửa sổ bật lên",
+          "isEnabled": "có không bật"
+        },
+        "time": {
+          "longTerm": "Long Term Hợp lệ"
+        },
+        "forcePopup": {
+          "yes": "có",
+          "no": "không"
+        },
+        "popupTarget": {
+          "batchImport": "Hàng loạt Nhập",
+          "download": "tải xuống",
+          "selected": "Đã chọn:"
+        },
+        "status": {
+          "enabled": "bật",
+          "disabled": "tắt"
+        },
+        "modal": {
+          "popupCoverTitle": "Ảnh bìa cửa sổ bật lên",
+          "noImage": "Không Hình ảnh"
+        },
+        "form": {
+          "popupTitle": "cửa sổ bật lên Tiêu đề",
+          "popupTitlePlaceholder": "Vui lòng nhập cửa sổ bật lên title"
+        },
+        "actions": {
+          "edit": "sửa",
+          "addPrompt": "Thêm cửa sổ bật lên",
+          "editPrompt": "Sửa cửa sổ bật lên"
+        },
+        "download": {
+          "batchImportFileName": "Hàng loạt Nhập Tệp.txt",
+          "downloadFailedError": "Tải xuống thất bại, vui lòng thử lại sau"
+        },
+        "unknown": {
+          "tag": "Không xác định Tag"
+        }
+      },
+      "addOutSitMessage": {
+        "form": {
+          "emailDescription": "Mô tả email",
+          "emailSubject": "Tiêu đề email",
+          "emailContent": "Nội dung email",
+          "emailContentPlaceholder": "Vui lòng nhập nội dung",
+          "emailServiceProvider": "Nhà cung cấp dịch vụ email",
+          "emailServiceProviderPlaceholder": "Vui lòng chọn email service nhà cung cấp",
+          "receiveTarget": "Mục tiêu nhận",
+          "receiveTargetPlaceholder": "Vui lòng chọn mục tiêu object",
+          "platformAutoTag": "Nền tảng tự động Tag",
+          "platformAutoTagPlaceholder": "Vui lòng chọn tags, nhiều selection allowed",
+          "group": "nhóm",
+          "groupPlaceholder": "Vui lòng chọn Nhóm, nhiều selection allowed",
+          "vipLevel": "Cấp VIP",
+          "vipLevelPlaceholder": "Vui lòng chọn VIP levels, nhiều selection allowed",
+          "channel": "Kênh",
+          "channelPlaceholder": "Vui lòng chọn đăng ký Kênh, nhiều selection allowed",
+          "memberId": "ID thành viên:",
+          "memberIdPlaceholder": "Vui lòng nhập hội viên IDs, phân tách nhiều ID bằng dấu phẩy hoặc xuống dòng",
+          "uploadMemberId": "tải lên ID thành viên",
+          "selectFile": "Chọn Tệp"
+        },
+        "validation": {
+          "emailDescriptionRequired": "Vui lòng nhập email description",
+          "timeRequired": "Vui lòng chọn thời gian",
+          "receiveTargetRequired": "Vui lòng chọn cửa sổ bật lên mục tiêu",
+          "emailServiceProviderRequired": "Vui lòng chọn email service nhà cung cấp",
+          "emailSubjectRequired": "Vui lòng nhập email subject",
+          "emailContentRequired": "Vui lòng nhập email nội dung"
+        },
+        "messages": {
+          "addSuccess": "Thêm thành công",
+          "fileReadFailure": "Đọc tệp thất bại, vui lòng chọn lại tệp",
+          "uploadTxtFileOnly": "Vui lòng chỉ tải lên tệp txt",
+          "fileSizeExceeded": "Kích thước tệp không được vượt quá 5MB",
+          "fileContentEmpty": "Nội dung tệp không được để trống",
+          "fileReadError": "Đọc tệp thất bại"
+        },
+        "upload": {
+          "templateTitle": "Mẫu Mô tả",
+          "templateDescription": "Vui lòng tải lên tệp văn bản chứa ID hội viên, định dạng tệp phải là txt, mỗi dòng một ID",
+          "example": "Ví dụ:",
+          "uploadDescription": "Vui lòng tải lên tệp văn bản chứa ID hội viên",
+          "viewTemplate": "Xem Mẫu Mô tả"
+        },
+        "sendTime": {
+          "label": "Thời gian gửi",
+          "immediately": "Gửi ngay",
+          "scheduled": "Gửi theo lịch",
+          "placeholder": "Vui lòng chọn thời gian gửi"
+        },
+        "buttons": {
+          "cancel": "hủy",
+          "confirm": "Xác nhận"
+        }
+      },
+      "addSitMessage": {
+        "form": {
+          "labels": {
+            "description": "Website Tin nhắn Mô tả",
+            "content": "Website Tin nhắn Nội dung",
+            "validTime": "thời gian:",
+            "duration": "Thời lượng:",
+            "sendType": "Loại gửi",
+            "sendDuration": "Thời lượng:",
+            "jumpType": "Loại chuyển hướng",
+            "jumpLink": "Chuyển hướng Liên kết",
+            "pageSelection": "Chọn trang",
+            "jumpButtonText": "Văn bản nút nhảy",
+            "targetType": "Đối tượng nhận",
+            "autoTags": "Nền tảng tự động Tags",
+            "groups": "nhóm",
+            "vipLevel": "Cấp VIP",
+            "channel": "Kênh",
+            "sourceChannel": "Nguồn Kênh",
+            "memberIds": "ID thành viên:",
+            "uploadMemberIds": "tải lên ID thành viên",
+            "hasReward": "Has Thưởng",
+            "rewardType": "Loại thưởng",
+            "freeReward": "Miễn phí Thưởng",
+            "paidReward": "Paid Thưởng",
+            "rewardAmount": "Số tiền thưởng:",
+            "codingMultiple": "Bội số cược:",
+            "coupons": "Phiếu thưởng:",
+            "paidRewardLabel": "Paid Thưởng:",
+            "rechargeCount": "Số lần nạp:",
+            "rechargeAmountMin": "Số tiền nạp >=",
+            "expireType": "Loại hết hạn thưởng",
+            "noLimit": "Không Giới hạn",
+            "expireAfterHours": "Hết hạn sau N giờ kể từ khi gửi",
+            "specificDateTime": "Ngày giờ chỉ định",
+            "expireAfterSendTime": "Hết hạn sau thời gian gửi",
+            "hoursAfterExpire": "giờ sau thì hết hạn",
+            "expireDateTime": "Thời gian hết hạn",
+            "titleForLanguage": "{language} Tiêu đề",
+            "contentForLanguage": "{language} Nội dung",
+            "thumbnailForLanguage": "{language} Thumbnail (Tùy chọn 640*120)"
+          },
+          "placeholders": {
+            "messageTitle": "Vui lòng nhập title",
+            "contentForLanguage": "Vui lòng nhập {language} nội dung",
+            "selectJumpType": "Vui lòng chọn chuyển hướng loại",
+            "selectJumpPage": "Vui lòng chọn chuyển hướng trang",
+            "jumpButtonText": "Vui lòng nhập chuyển hướng nút text (tùy chọn)",
+            "selectTargetType": "Vui lòng chọn mục tiêu object",
+            "selectTags": "Vui lòng chọn tags, nhiều selection allowed",
+            "selectGroups": "Vui lòng chọn Nhóm, nhiều selection allowed",
+            "selectVipLevel": "Vui lòng chọn VIP levels, nhiều selection allowed",
+            "selectRegisterChannel": "Vui lòng chọn đăng ký Kênh, nhiều selection allowed",
+            "selectSourceChannel": "Vui lòng chọn nguồn Kênh, nhiều selection allowed",
+            "memberIds": "Vui lòng nhập hội viên IDs, phân tách nhiều ID bằng dấu phẩy hoặc xuống dòng",
+            "selectCoupons": "Vui lòng chọn phiếu thưởng"
+          },
+          "options": {
+            "longTerm": "Hiệu lực dài hạn",
+            "fixedTime": "Thời gian cố định",
+            "immediately": "Gửi ngay",
+            "scheduled": "Gửi theo lịch",
+            "yes": "có",
+            "no": "không",
+            "unlimited": "Không giới hạn",
+            "expireAfterHours": "Hết hạn sau N giờ kể từ khi gửi",
+            "specificDateTime": "Ngày giờ chỉ định"
+          },
+          "upload": {
+            "templateTitle": "Mẫu Mô tả",
+            "templateDescription": "Vui lòng tải lên tệp văn bản chứa ID hội viên, định dạng txt, mỗi dòng một ID",
+            "example": "Ví dụ:",
+            "uploadDescription": "Vui lòng tải lên tệp văn bản chứa ID hội viên",
+            "viewTemplate": "Xem Mẫu Mô tả",
+            "selectFile": "Chọn Tệp"
+          },
+          "description": "Website Tin nhắn Mô tả",
+          "content": "Website Tin nhắn Nội dung",
+          "title": "Tiêu đề",
+          "titlePlaceholder": "Vui lòng nhập title",
+          "contentPlaceholder": "Vui lòng nhập {language} nội dung",
+          "thumbnail": "Ảnh thu nhỏ (tùy chọn 640*120)",
+          "time": "thời gian:",
+          "longTerm": "Long Term Hợp lệ",
+          "fixedTime": "Thời gian cố định",
+          "duration": "Thời lượng:",
+          "sendType": "Loại gửi",
+          "immediately": "Gửi ngay",
+          "scheduled": "Gửi theo lịch",
+          "jumpType": "Loại chuyển hướng",
+          "jumpTypePlaceholder": "Vui lòng chọn chuyển hướng loại",
+          "jumpLink": "Chuyển hướng Liên kết",
+          "pageSelection": "Chọn trang",
+          "pageSelectionPlaceholder": "Vui lòng chọn chuyển hướng trang",
+          "receiveTarget": "Mục tiêu nhận",
+          "receiveTargetPlaceholder": "Vui lòng chọn mục tiêu object",
+          "platformAutoTag": "Nền tảng tự động Tag",
+          "platformAutoTagPlaceholder": "Vui lòng chọn tags, nhiều selection allowed",
+          "group": "nhóm",
+          "groupPlaceholder": "Vui lòng chọn Nhóm, nhiều selection allowed",
+          "vipLevel": "Cấp VIP",
+          "vipLevelPlaceholder": "Vui lòng chọn VIP levels, nhiều selection allowed",
+          "regChannel": "Đăng ký Kênh",
+          "regChannelPlaceholder": "Vui lòng chọn đăng ký Kênh, nhiều selection allowed",
+          "memberId": "ID thành viên:",
+          "memberIdPlaceholder": "Vui lòng nhập hội viên IDs, phân tách nhiều ID bằng dấu phẩy hoặc xuống dòng",
+          "uploadMemberId": "tải lên ID thành viên",
+          "selectFile": "Chọn Tệp",
+          "jumpButtonText": "Văn bản nút nhảy",
+          "jumpButtonTextPlaceholder": "Vui lòng nhập chuyển hướng nút text",
+          "rewardWater": "Thưởng Water",
+          "rewardWaterPlaceholder": "Vui lòng nhập water nhiều",
+          "freeRewardWater": "Miễn phí Thưởng Water",
+          "freeRewardWaterPlaceholder": "Vui lòng nhập water nhiều",
+          "rewardAmount": "Số tiền thưởng",
+          "rewardAmountPlaceholder": "Vui lòng nhập thưởng số tiền"
+        },
+        "validation": {
+          "titleRequired": "Vui lòng nhập title",
+          "timeRangeRequired": "Vui lòng chọn khoảng thời gian",
+          "timeRequired": "Vui lòng chọn thời gian",
+          "jumpTypeRequired": "Vui lòng chọn chuyển hướng loại",
+          "jumpLinkRequired": "Vui lòng nhập chuyển hướng liên kết",
+          "jumpPageRequired": "Vui lòng chọn chuyển hướng trang",
+          "receiveTargetRequired": "Vui lòng chọn cửa sổ bật lên mục tiêu",
+          "rewardWaterRequired": "Vui lòng nhập water nhiều",
+          "freeRewardWaterRequired": "Vui lòng nhập water nhiều",
+          "rewardAmountRequired": "Vui lòng nhập thưởng số tiền",
+          "selectRewardType": "Vui lòng chọn Ít nhất một loại thưởng",
+          "selectAtLeastOneRewardType": "Vui lòng chọn Ít nhất một loại thưởng"
+        },
+        "messages": {
+          "addSuccess": "Thêm thành công",
+          "fileReadFailure": "Đọc tệp thất bại, vui lòng chọn lại tệp",
+          "uploadTxtFileOnly": "Vui lòng chỉ tải lên tệp txt",
+          "fileSizeExceeded": "Kích thước tệp không được vượt quá 5MB",
+          "fileContentEmpty": "Nội dung tệp không được để trống",
+          "fileReadError": "Đọc tệp thất bại"
+        },
+        "upload": {
+          "templateTitle": "Mẫu Mô tả",
+          "templateDescription": "Vui lòng tải lên tệp văn bản chứa ID hội viên, định dạng tệp phải là txt, mỗi dòng một ID",
+          "example": "Ví dụ:",
+          "uploadDescription": "Vui lòng tải lên tệp văn bản chứa ID hội viên",
+          "viewTemplate": "Xem Mẫu Mô tả",
+          "selectFile": "Chọn Tệp"
+        },
+        "buttons": {
+          "cancel": "hủy",
+          "save": "lưu"
+        }
+      },
+      "editSitMessage": {
+        "messages": {
+          "editSuccess": "Sửa thành công"
+        }
+      },
+      "sitMessageRecord": {
+        "columns": {
+          "memberId": "ID thành viên",
+          "messageId": "tin nhắn nội bộ ID",
+          "messageTitle": "Tin nhắn Tiêu đề",
+          "rewardType": "Loại thưởng",
+          "rewardContent": "Thưởng Nội dung",
+          "amount": "số tiền",
+          "coupons": "Phiếu thưởng",
+          "pieces": "cái",
+          "claimTime": "Thời gian nhận",
+          "status": "trạng thái"
+        },
+        "form": {
+          "memberId": "ID thành viên",
+          "memberIdPlaceholder": "Vui lòng nhập ID thành viên",
+          "messageId": "tin nhắn nội bộ ID",
+          "messageIdPlaceholder": "Vui lòng nhập tin nhắn nội bộ ID",
+          "status": "trạng thái",
+          "statusPlaceholder": "Vui lòng chọn trạng thái",
+          "statusOptions": {
+            "unclaimed": "Chưa nhận",
+            "claimed": "Đã nhận"
+          },
+          "claimTime": "Thời gian nhận",
+          "claimTimePlaceholder": "Vui lòng chọn thời gian"
+        },
+        "buttons": {
+          "export": "xuất"
+        },
+        "export": {
+          "fileName": "Website Tin nhắn Bản ghi nhận"
+        }
+      }
+    },
+    "registerManage": {
+      "index": {
+        "title": "Quản lý đăng ký",
+        "tabs": {
+          "registerManage": "Quản lý đăng ký",
+          "domainManage": "tên miền quản lý",
+          "channelSourceManage": "Quản lý nguồn kênh",
+          "packageTransferConfig": "Gói Chuyển Cấu hình",
+          "smsConfig": "Cấu hình nhà cung cấp SMS",
+          "emailConfig": "email cấu hình",
+          "landingPageManage": "Quản lý trang đích"
+        }
+      },
+      "components": {
+        "smsConfig": {
+          "config": {
+            "sendAccountSMSCount": "Giới hạn SMS hằng ngày mỗi tài khoản",
+            "sendIPSMSCount": "Giới hạn SMS hằng ngày mỗi IP",
+            "smsCodeExpiredTime": "Hiệu lực mã xác minh (phút)"
+          },
+          "scenarios": {
+            "memberRegister": "Thành viên Đăng ký",
+            "addWithdrawMethod": "Thêm Rút tiền Phương thức",
+            "forgotPassword": "Forgot Mật khẩu",
+            "memberGoogleVerify": "Xác minh Google của hội viên"
+          },
+          "columns": {
+            "operationTime": "Thời gian thao tác",
+            "operator": "Người thao tác",
+            "configValue": "Giá trị cấu hình (cũ -> mới)",
+            "smsProviderName": "Tên nhà cung cấp SMS",
+            "template": "Mẫu",
+            "requestUrl": "URL yêu cầu"
+          },
+          "status": {
+            "enable": "bật",
+            "disable": "tắt"
+          },
+          "messages": {
+            "operationSuccess": "Thao tác thành công"
+          },
+          "modal": {
+            "editSmsProvider": "Sửa SMS Nhà cung cấp",
+            "addSmsProvider": "Thêm SMS Nhà cung cấp"
+          },
+          "buttons": {
+            "cancel": "hủy",
+            "save": "lưu",
+            "add": "thêm"
+          },
+          "smsVerificationScenarios": "Kịch bản xác minh SMS",
+          "addTemplateNote": "Khi thêm sẽ tạo mẫu cho tất cả ngôn ngữ cùng lúc"
+        },
+        "emailConfig": {
+          "config": {
+            "sendAccountEmailCount": "Giới hạn email hằng ngày mỗi tài khoản",
+            "sendIPEmailCount": "Giới hạn email hằng ngày mỗi IP",
+            "emailCodeExpiredTime": "Hiệu lực mã xác minh (phút)"
+          },
+          "scenarios": {
+            "memberRegister": "Thành viên Đăng ký",
+            "addWithdrawMethod": "Thêm Rút tiền Phương thức",
+            "forgotPassword": "Forgot Mật khẩu",
+            "memberGoogleVerify": "Xác minh Google của hội viên"
+          },
+          "columns": {
+            "operationTime": "Thời gian thao tác",
+            "operator": "Người thao tác",
+            "configValue": "Giá trị cấu hình (cũ -> mới)",
+            "icon": "Biểu tượng",
+            "code": "Mã",
+            "name": "tên",
+            "account": "tài khoản",
+            "title": "Tiêu đề",
+            "content": "Nội dung",
+            "contentDetail": "Nội dung rich text, nhấp để xem chi tiết"
+          },
+          "status": {
+            "enable": "bật",
+            "disable": "tắt"
+          },
+          "messages": {
+            "operationSuccess": "Thao tác thành công"
+          },
+          "modal": {
+            "editEmailConfig": "sửa email cấu hình",
+            "addEmailConfig": "thêm email cấu hình",
+            "emailContent": "Nội dung cấu hình email"
+          },
+          "emailVerificationScenarios": "Kịch bản xác minh email"
+        },
+        "register": {
+          "config": {
+            "registerMobile": {
+              "name": "Bật đăng ký bằng số điện thoại",
+              "desc": "Allow đăng ký dùng di động điện thoại",
+              "link": "Cấu hình SMS"
+            },
+            "registerEmail": {
+              "name": "Bật đăng ký bằng email",
+              "desc": "Cho phép đăng ký bằng email",
+              "link": "email cài đặt"
+            },
+            "isOpenRegisterCaptcha": {
+              "name": "Bật Đăng ký Captcha",
+              "desc": "Yêu cầu captcha khi đăng ký"
+            },
+            "isInvitecode": {
+              "name": "Yêu cầu Invitation Mã",
+              "desc": "Bắt buộc nhập mã mời khi đăng ký"
+            },
+            "registerPrivacyChecked": {
+              "name": "Mặc định tích chọn thỏa thuận riêng tư",
+              "desc": "Mặc định tích chọn thỏa thuận riêng tư khi đăng ký"
+            },
+            "isEnableGuestLogin": {
+              "name": "Bật Guest Đăng nhập",
+              "desc": "Cho phép khách đăng nhập hệ thống"
+            },
+            "registerCount": {
+              "name": "Giới hạn đăng ký theo IP",
+              "desc": "Số tài khoản tối đa có thể đăng ký từ một IP"
+            },
+            "sameBrowserRegistCount": {
+              "name": "Đăng ký Giới hạn mỗi Trình duyệt Dấu vân tay",
+              "desc": "Số tài khoản tối đa có thể đăng ký từ một fingerprint trình duyệt"
+            },
+            "sameDeviceRegistCount": {
+              "name": "Đăng ký Giới hạn mỗi Thiết bị",
+              "desc": "Số tài khoản tối đa có thể đăng ký từ một thiết bị"
+            }
+          },
+          "columns": {
+            "operationTime": "Thời gian thao tác",
+            "operator": "Người thao tác",
+            "configValue": "Giá trị cấu hình (cũ -> mới)"
+          },
+          "status": {
+            "yes": "có",
+            "no": "không"
+          },
+          "buttons": {
+            "cancel": "hủy",
+            "save": "lưu",
+            "add": "Thêm",
+            "delete": "xóa",
+            "savePhoneNumbers": "Lưu Số điện thoạis"
+          },
+          "messages": {
+            "noConfigFile": "Không tìm thấy tệp cấu hình",
+            "operationSuccess": "Thao tác thành công"
+          },
+          "phone": {
+            "supportImage": "Hỗ trợ định dạng ảnh (.png,.webp), kích thước ảnh không được vượt quá 1MB",
+            "noImage": "Không có hình ảnh",
+            "imageTitle": "Cấu hình ảnh trang đăng ký",
+            "imageSubTitle": "Cấu hình ảnh nền hiển thị trên trang đăng ký, hỗ trợ nhiều định dạng ảnh",
+            "title": "Registrable Số điện thoạis (Mặc định includes primary countries' Số, phải added Đến dictionary)",
+            "description": "[Area mã + điện thoại số độ dài không được nhỏ hơn 10 chữ số, Không including + sign Trong area mã. Điện thoại area mã format: must bắt đầu Với +, format +x, +xx hoặc +xxx (e.g.: +1, +66, +666). 2-digit area mã, 8-13 digit điện thoại số; 3-digit area mã, 7-13 digit điện thoại số; 1-digit area mã, 9-13 digit điện thoại số]"
+          },
+          "form": {
+            "areaCode": "Area Mã",
+            "phoneLength": "Số điện thoại Length"
+          },
+          "validation": {
+            "areaCodeRequired": "Vui lòng nhập area mã",
+            "areaCodeFormat": "Phải bắt đầu bằng + và theo sau là 1-3 chữ số",
+            "phoneLengthRequired": "Vui lòng nhập điện thoại số length",
+            "phoneLengthFormat": "Điện thoại số length format Là incorrect"
+          }
+        },
+        "channel": {
+          "form": {
+            "domainUrl": "URL tên miền",
+            "domainUrlPlaceholder": "Vui lòng nhập tên miền URL"
+          },
+          "buttons": {
+            "add": "Thêm",
+            "edit": "sửa"
+          },
+          "columns": {
+            "channelName": "Tên kênh",
+            "channelType": "Loại kênh",
+            "status": "trạng thái",
+            "domainUrl": "URL tên miền",
+            "remark": "ghi chú",
+            "createTime": "Thời gian tạo",
+            "lastUpdateTime": "Thời gian cập nhật cuối",
+            "operator": "Người thao tác"
+          },
+          "types": {
+            "agentPromotion": "Đại lý Khuyến mãi",
+            "adPromotion": "Khuyến mãi quảng cáo",
+            "registerDomain": "Tên miền đăng ký",
+            "antiBlockDomain": "Tên miền chống chặn"
+          },
+          "status": {
+            "enable": "bật",
+            "disable": "tắt"
+          },
+          "modal": {
+            "editChannel": "Sửa Kênh",
+            "addChannel": "Thêm Kênh"
+          },
+          "seoConfig": {
+            "title": "SEO cấu hình"
+          },
+          "seo": {
+            "seoTit": "Tên website:",
+            "seoDesc": "Website Mô tả:",
+            "seoImage": "Promotional Hình ảnh:",
+            "uploadHelpText": "Hỗ trợ ảnh PNG trong 500KB (kích thước trong 1000*1000; khuyến nghị 780*440)",
+            "placeholders": {
+              "siteNamePlaceholder": "Vui lòng nhập tên website",
+              "siteDescPlaceholder": "Vui lòng nhập website introduction"
+            },
+            "buttons": {
+              "cancel": "hủy",
+              "saveConfig": "lưu cấu hình"
+            },
+            "validation": {
+              "siteNameRequired": "Vui lòng nhập tên website",
+              "siteNameLength": "Webtên website length phải 1-100 ký tự",
+              "siteDescRequired": "Vui lòng nhập site description",
+              "siteDescLength": "Website description length phải 1-500 ký tự"
+            },
+            "messages": {
+              "saveSuccess": "lưu cấu hình thành công！",
+              "validationFailed": "Biểu mẫu validation thất bại:",
+              "getInfoFailed": "Lấy thông tin thất bại:"
+            }
+          }
+        },
+        "addChannel": {
+          "form": {
+            "channelName": "Tên kênh:",
+            "channelType": "Loại kênh:",
+            "domainUrl": "URL tên miền:",
+            "remark": "ghi chú:",
+            "selectPlaceholder": "Vui lòng chọn"
+          },
+          "channelTypes": {
+            "agentPromotion": "Đại lý Khuyến mãi",
+            "adPromotion": "Khuyến mãi quảng cáo",
+            "registerDomain": "Tên miền đăng ký",
+            "antiBlockDomain": "Tên miền chống chặn"
+          },
+          "validation": {
+            "channelNameRequired": "Vui lòng nhập tên kênh",
+            "channelTypeRequired": "Vui lòng chọn kênh loại",
+            "domainRequired": "Vui lòng nhập tên miền URL",
+            "invalidDomain": "Vui lòng nhập hợp lệ tên miền URL"
+          },
+          "buttons": {
+            "cancel": "hủy",
+            "save": "lưu"
+          },
+          "messages": {
+            "operationSuccess": "Thao tác thành công"
+          }
+        },
+        "addEmailTemplate": {
+          "form": {
+            "emailTemplate": "Mẫu email:",
+            "selectPlaceholder": "Vui lòng chọn",
+            "emailName": "email tên:",
+            "emailAccount": "email tài khoản:",
+            "emailPassword": "Mật khẩu email:",
+            "smtpServer": "Máy chủ SMTP:",
+            "smtpPort": "Cổng SMTP:",
+            "emailTitle": "Tiêu đề email:",
+            "icon": "Biểu tượng:"
+          },
+          "validation": {
+            "emailLogoRequired": "Vui lòng tải lên logo mẫu",
+            "nameRequired": "Vui lòng nhập tên mẫu",
+            "emailCodeRequired": "Vui lòng chọn mẫu email",
+            "accountRequired": "Vui lòng nhập email tài khoản",
+            "passwordRequired": "Vui lòng nhập email mật khẩu",
+            "smtpServerRequired": "Vui lòng nhập SMTP máy chủ",
+            "smtpPortRequired": "Vui lòng nhập SMTP port",
+            "emailTitleRequired": "Vui lòng nhập email title"
+          },
+          "buttons": {
+            "cancel": "hủy",
+            "save": "lưu"
+          },
+          "messages": {
+            "operationSuccess": "Thao tác thành công"
+          }
+        },
+        "addPackage": {
+          "form": {
+            "packageName": "Tên gói:",
+            "remark": "ghi chú:"
+          },
+          "validation": {
+            "packageNameRequired": "Vui lòng nhập tên gói"
+          },
+          "buttons": {
+            "cancel": "hủy",
+            "save": "lưu"
+          },
+          "messages": {
+            "operationSuccess": "Thao tác thành công"
+          }
+        },
+        "addPackageConfig": {
+          "form": {
+            "configType": "Loại gói:",
+            "configTypePlaceholder": "Vui lòng chọn gói loại",
+            "sourceIdentity": "Tên gói:",
+            "sourceIdentityPlaceholder": "Vui lòng chọn tên gói",
+            "targetIdentity": "Tên gói mục tiêu:",
+            "targetIdentityPlaceholder": "Vui lòng chọn tên gói",
+            "popupImage": "cửa sổ bật lên Hình ảnh:",
+            "targetType": "Gói Nhóm:",
+            "jumpUrl": "URL nhảy:",
+            "hasReward": "Has Thưởng:",
+            "rewardPopupImage": "Thưởng cửa sổ bật lên Hình ảnh:",
+            "rewardMode": "Thưởng Người dùng Cấu hình:",
+            "bonusAmount": "Số tiền thưởng:",
+            "bonusAmountPlaceholder": "Vui lòng nhập bonus số tiền",
+            "bonusMultiplier": "Vòng cược:",
+            "bonusMultiplierPlaceholder": "Vui lòng nhập Vòng cược",
+            "vipConfig": "Cấp VIP cấu hình:",
+            "rechargeConfig": "Nạp tiền Range Cấu hình:",
+            "selectPlaceholder": "Vui lòng chọn",
+            "no": "không",
+            "yes": "có"
+          },
+          "validation": {
+            "invalidDomain": "Vui lòng nhập hợp lệ tên miền address",
+            "configTypeRequired": "Vui lòng chọn gói loại",
+            "sourceIdentityRequired": "Vui lòng chọn tên gói",
+            "targetIdentityRequired": "Vui lòng chọn tên gói",
+            "groupTypeRequired": "Vui lòng chọn gói nhóm",
+            "popupImageRequired": "Vui lòng tải ảnh lên",
+            "rewardPopupImageRequired": "Vui lòng tải ảnh lên",
+            "jumpUrlRequired": "Vui lòng nhập chuyển hướng URL"
+          },
+          "buttons": {
+            "addVipLevel": "thêm Cấp VIP",
+            "addRechargeConfig": "Thêm cấu hình nạp tiền",
+            "delete": "xóa",
+            "cancel": "hủy",
+            "save": "lưu"
+          },
+          "table": {
+            "vipLevel": "Cấp VIP",
+            "bonusAmount": "Số tiền thưởng",
+            "bonusMultiplier": "Vòng cược",
+            "operation": "thao tác",
+            "minRecharge": "Số tiền nạp >=",
+            "maxRecharge": "Số tiền nạp <"
+          },
+          "messages": {
+            "samePackageError": "Tên gói và tên gói mục tiêu không được giống nhau",
+            "operationSuccess": "Thao tác thành công"
+          }
+        },
+        "addPageConfig": {
+          "form": {
+            "channelName": "Tên kênh",
+            "landingPageStyle": "Kiểu trang đích",
+            "adGroup": "Nhóm quảng cáo",
+            "pwaPackage": "Gói PWA"
+          },
+          "validation": {
+            "landingPageRequired": "Vui lòng chọn trang đích kiểu"
+          },
+          "buttons": {
+            "cancel": "hủy",
+            "save": "lưu"
+          },
+          "messages": {
+            "operationSuccess": "Thao tác thành công"
+          }
+        },
+        "addPwa": {
+          "form": {
+            "domain": "tên miền"
+          },
+          "validation": {
+            "domainRequired": "Vui lòng chọn tên miền"
+          },
+          "buttons": {
+            "cancel": "hủy",
+            "save": "lưu"
+          },
+          "messages": {
+            "operationSuccess": "Thao tác thành công"
+          }
+        },
+        "addSmsTemplate": {
+          "form": {
+            "smsProvider": "SMS Nhà cung cấp:",
+            "apiKey": "APIKey:",
+            "apiSecret": "APISecret:",
+            "apiId": "APIID:",
+            "requestUrl": "URL yêu cầu:",
+            "selectPlaceholder": "Vui lòng chọn"
+          },
+          "validation": {
+            "smsProviderRequired": "Vui lòng chọn SMS nhà cung cấp",
+            "apiKeyRequired": "Vui lòng nhập APIKey",
+            "apiSecretRequired": "Vui lòng nhập APISecret",
+            "apiIdRequired": "Vui lòng nhập APIID",
+            "requestUrlRequired": "Vui lòng nhập yêu cầu URL"
+          },
+          "buttons": {
+            "cancel": "hủy",
+            "save": "lưu"
+          },
+          "messages": {
+            "operationSuccess": "Thao tác thành công"
+          }
+        },
+        "groupSetting": {
+          "form": {
+            "addGroupTitle": "Thêm Nhóm quảng cáo",
+            "existingGroupsTitle": "Existing Nhóm quảng cáo",
+            "groupNamePlaceholder": "Vui lòng nhập tên nhóm quảng cáo"
+          },
+          "validation": {
+            "groupNameRequired": "Vui lòng nhập nhóm quảng cáo"
+          },
+          "dialog": {
+            "deleteTitle": "Xóa Nhóm quảng cáo",
+            "deleteConfirm": "Bạn có chắc muốn xóa nhóm quảng cáo này không?",
+            "confirm": "xác nhận",
+            "cancel": "hủy"
+          },
+          "buttons": {
+            "add": "Thêm",
+            "delete": "xóa",
+            "close": "tắt"
+          }
+        },
+        "packageManage": {
+          "form": {
+            "channelName": "Tên kênh",
+            "channelType": "Loại kênh",
+            "landingPageStyle": "Kiểu trang đích",
+            "landingPageStatus": "Trạng thái trang đích",
+            "adGroup": "Nhóm quảng cáo",
+            "landingPageDomain": "Tên miền landing page",
+            "channelNamePlaceholder": "Vui lòng nhập tên kênh",
+            "channelTypePlaceholder": "Vui lòng chọn kênh loại",
+            "landingPageStylePlaceholder": "Vui lòng chọn trang đích kiểu",
+            "landingPageStatusPlaceholder": "Vui lòng chọn trang đích trạng thái",
+            "adGroupPlaceholder": "Vui lòng chọn nhóm quảng cáo",
+            "landingPageDomainPlaceholder": "Vui lòng nhập trang đích tên miền",
+            "default": "Mặc định"
+          },
+          "columns": {
+            "channelName": "Tên kênh",
+            "channelType": "Loại kênh",
+            "landingPageDomain": "Tên miền landing page",
+            "landingPageStyle": "Kiểu trang đích",
+            "adGroup": "Nhóm quảng cáo",
+            "landingPageStatus": "Trạng thái trang đích",
+            "createTime": "Thời gian tạo",
+            "default": "Mặc định"
+          },
+          "actions": {
+            "getDownloadUrl": "Get Tải xuống URL",
+            "repackage": "Đóng gói lại",
+            "configLandingPage": "Cấu hình trang đích",
+            "publishLandingPage": "Phát hành trang đích"
+          },
+          "buttons": {
+            "groupSetting": "Nhóm quảng cáo Cài đặt"
+          },
+          "dialog": {
+            "configTitle": "Cấu hình trang đích",
+            "publishTitle": "Phát hành Confirmation",
+            "groupSettingTitle": "Nhóm quảng cáo Cài đặt"
+          },
+          "messages": {
+            "getDownloadUrlSuccess": "Lấy URL tải xuống của {channelName}",
+            "getDownloadUrlFailed": "Không thể lấy tải xuống URL",
+            "packaging": "Đang đóng gói, vui lòng chờ...",
+            "packagingSuccess": "yêu cầu packaging {channelName} thành công",
+            "packagingFailed": "yêu cầu packaging {channelName} thất bại",
+            "publishFailed": "Phát hành thất bại"
+          }
+        },
+        "packageTransfConf": {
+          "form": {
+            "packageName": "Tên gói",
+            "packageNamePlaceholder": "Nhập tên gói"
+          },
+          "columns": {
+            "sequence": "Thứ tự",
+            "packageName": "Tên gói",
+            "targetPackageName": "Tên gói mục tiêu",
+            "transferType": "Loại chuyển",
+            "popupImage": "cửa sổ bật lên Hình ảnh",
+            "jumpUrl": "URL nhảy",
+            "notTransferUser": "Không Transferred Người dùng",
+            "transferUserCount": "Transferred Người dùng",
+            "createTime": "Thời gian tạo",
+            "updateTime": "Thời gian cập nhật",
+            "operator": "Người thao tác"
+          },
+          "transferTypes": {
+            "forced": "Cấu hình chuyển bắt buộc",
+            "nonForced": "Cấu hình chuyển không bắt buộc"
+          },
+          "buttons": {
+            "add": "Thêm",
+            "download": "tải xuống"
+          },
+          "actions": {
+            "edit": "sửa",
+            "delete": "xóa"
+          },
+          "dialog": {
+            "addTitle": "Thêm tên gói",
+            "editTitle": "Sửa tên gói",
+            "popupImageTitle": "cửa sổ bật lên Hình ảnh",
+            "tip": "Gợi ý",
+            "deleteConfirm": "Bạn có chắc muốn xóa không?",
+            "confirm": "Xác nhận",
+            "cancel": "hủy"
+          },
+          "common": {
+            "noImage": "Không Hình ảnh"
+          },
+          "messages": {
+            "dataTooBig": "Dữ liệu quá lớn, vui lòng đến trung tâm tải xuống",
+            "downloadFailed": "tải xuống thất bại"
+          }
+        },
+        "pageConfig": {
+          "usePWA": {
+            "no": "Không sử dụng PWA",
+            "yes": "Sử dụng PWA"
+          },
+          "packageState": {
+            "unpublished": "Chưa phát hành",
+            "publishing": "Đang phát hành",
+            "published": "Đã phát hành",
+            "failed": "Thất bại"
+          },
+          "messages": {
+            "getLandingPageStylesFailed": "Không thể lấy kiểu trang đích",
+            "getAdGroupFailed": "Không thể lấy nhóm quảng cáo",
+            "addAdGroupSuccess": "Thêm nhóm quảng cáo {name} thành công",
+            "addAdGroupFailed": "Thêm nhóm quảng cáo {name} thất bại",
+            "deleteAdGroupSuccess": "Xóa nhóm quảng cáo {name} thành công",
+            "deleteAdGroupFailed": "Xóa nhóm quảng cáo {name} thất bại"
+          }
+        },
+        "publishPage": {
+          "confirmPublish": "Bạn có chắc muốn phát hành trang đích cho kênh sau không?",
+          "channelName": "Tên kênh",
+          "currentDomain": "Tên miền hiện tại",
+          "autoGenerateDomain": "Hệ thống sẽ tự động tạo tên miền trang đích",
+          "redeployWarning": "Thao tác này sẽ triển khai lại trang đích",
+          "cancel": "hủy",
+          "re": "Re",
+          "confirmPublishButton": "Xác nhận {prefix}Phát hành",
+          "methods": {
+            "keepCurrentDomain": "Giữ tên miền hiện tại",
+            "useNewDomain": "Sử dụng tên miền mới"
+          },
+          "messages": {
+            "publishSuccess": "Phát hành thành công"
+          }
+        },
+        "pwa": {
+          "form": {
+            "domain": "tên miền",
+            "domainPlaceholder": "Vui lòng nhập tên miền",
+            "status": "trạng thái",
+            "statusPlaceholder": "Vui lòng chọn trạng thái"
+          },
+          "columns": {
+            "domain": "tên miền",
+            "status": "trạng thái",
+            "createTime": "Thời gian tạo"
+          },
+          "status": {
+            "disabled": "Đã tắt",
+            "active": "Đang hoạt động"
+          },
+          "buttons": {
+            "add": "thêm"
+          },
+          "actions": {
+            "activate": "Kích hoạt",
+            "deactivate": "Vô hiệu hóa",
+            "delete": "xóa"
+          },
+          "dialog": {
+            "confirmActivate": "Xác nhận kích hoạt",
+            "confirmDeactivate": "Xác nhận vô hiệu hóa",
+            "confirmActivateMessage": "Bạn có chắc muốn kích hoạt tên miền không",
+            "confirmDeactivateMessage": "Bạn có chắc muốn vô hiệu hóa tên miền không",
+            "addTitle": "Thêm tên miền PWA",
+            "confirmDelete": "Xác nhận xóa",
+            "confirmDeleteMessage": "Bạn có chắc muốn xóa tên miền không",
+            "confirm": "xác nhận",
+            "cancel": "hủy",
+            "questionMark": "?"
+          },
+          "messages": {
+            "operationSuccess": "Thao tác thành công"
+          }
+        },
+        "relatedChannel": {
+          "columns": {
+            "channelName": "Tên kênh",
+            "channelType": "Loại kênh",
+            "domainAddress": "Địa chỉ tên miền",
+            "actions": "thao tác"
+          },
+          "actions": {
+            "add": "Thêm"
+          },
+          "cards": {
+            "assignedChannels": "Kênh đã phân công",
+            "availableChannels": "Available Kênh"
+          },
+          "search": {
+            "placeholder": "Tìm kiếm tên kênh hoặc tên miền"
+          },
+          "dialog": {
+            "confirmAddChannel": "Xác nhận Thêm Kênh",
+            "addChannelText": "Bạn Là abra Đến thêm kênh:",
+            "domain": "tên miền:",
+            "warningText": "Lưu ý: sau khi thêm, tên miền không thể bị xóa. Bạn có chắc muốn xác nhận tên miền này cho gói này không?",
+            "confirmAdd": "Xác nhận Thêm",
+            "cancel": "hủy"
+          },
+          "messages": {
+            "addSuccess": "Thêm thành công",
+            "addFailed": "Thêm thất bại"
+          }
+        }
+      },
+      "landingPage": {
+        "copylink": "Sao chép Liên kết",
+        "types": {
+          "mall": "Kiểu trung tâm thương mại",
+          "photo": "Kiểu hình ảnh"
+        },
+        "columns": {
+          "pageName": "Tên trang",
+          "pageType": "Loại trang",
+          "status": "trạng thái",
+          "pageUrl": "URL trang",
+          "createTime": "Thời gian tạo",
+          "operation": "thao tác"
+        },
+        "form": {
+          "pageName": "Tên trang",
+          "pageNamePlaceholder": "Vui lòng nhập tên trang",
+          "pageType": "Loại trang",
+          "pageTypePlaceholder": "Vui lòng chọn trang loại"
+        },
+        "buttons": {
+          "search": "tìm kiếm",
+          "reset": "đặt lại",
+          "addPage": "Thêm Trang",
+          "confirm": "xác nhận",
+          "cancel": "hủy",
+          "edit": "sửa",
+          "delete": "xóa"
+        },
+        "empty": {
+          "description": "Không có dữ liệu"
+        },
+        "modal": {
+          "deleteLandingPage": "Xóa trang đích",
+          "deleteConfirm": "Bạn có chắc muốn xóa trang đích không",
+          "editSuccess": "Sửa thành công",
+          "addSuccess": "Thêm thành công",
+          "preview": "Xem trước trực tiếp",
+          "edit": "sửa",
+          "add": "thêm",
+          "landingPage": "trang đích",
+          "form": {
+            "pageName": "Kiểu trang đích",
+            "pageNamePlaceholder": "Vui lòng nhập trang đích kiểu",
+            "landingType": "Loại trang đích",
+            "appName": "APP tên",
+            "appNamePlaceholder": "Vui lòng nhập APP tên",
+            "domain": "tên miền",
+            "domainPlaceholder": "Vui lòng nhập tên miền",
+            "peopleNum": "Số người",
+            "peopleNumPlaceholder": "Vui lòng nhập số Của people",
+            "rating": "Đánh giá",
+            "ratingPlaceholder": "Vui lòng nhập đánh giá",
+            "icon": "Biểu tượng",
+            "carouselImgs": "Ảnh carousel",
+            "maxImages": "Tải lên tối đa 5 images",
+            "description": "Mô tả Text",
+            "topImg": "Thanh cố định trên cùng",
+            "contentImg": "Nội dung Hình ảnh"
+          },
+          "validation": {
+            "pageNameRequired": "Vui lòng nhập trang đích kiểu",
+            "landingTypeRequired": "Vui lòng chọn trang đích loại",
+            "appNameRequired": "Vui lòng nhập APP tên",
+            "domainRequired": "Vui lòng nhập tên miền",
+            "peopleNumRequired": "Vui lòng nhập số Của people",
+            "ratingRequired": "Vui lòng nhập đánh giá",
+            "appIcoRequired": "Vui lòng tải lên icon",
+            "carouselImgsRequired": "Vui lòng tải lên ảnh carousel",
+            "richTextRequired": "Vui lòng nhập description text",
+            "topImgRequired": "Vui lòng tải lên ảnh thanh cố định trên cùng",
+            "contentImgRequired": "Vui lòng tải lên ảnh nội dung"
+          }
+        },
+        "preview": {
+          "defaultPageName": "Xem trước trang đích",
+          "defaultAppName": "APP tên",
+          "topFixedBar": "Thanh cố định trên cùng",
+          "contentArea": "Nội dung Area",
+          "landingPageStyle": "Kiểu trang đích",
+          "selectType": "Vui lòng chọn loại"
+        },
+        "messages": {
+          "deleteSuccess": "Xóa thành công",
+          "deleteError": "Xóa thất bại",
+          "statusUpdateSuccess": "trạng thái Cập nhật thành công",
+          "statusUpdateError": "trạng thái cập nhật thất bại",
+          "loadListError": "Không thể tải danh sách"
+        }
+      }
+    },
+    "riskManage": {
+      "title": "rủi ro quản lý",
+      "tabs": {
+        "blacklistMember": "danh sách đen thành viên",
+        "blacklistIP": "danh sách đen IP",
+        "blacklistPhone": "Danh sách đen Số điện thoạis",
+        "blacklistDevice": "Danh sách đen Devices",
+        "blacklistAccount": "danh sách đen rút tiền tài khoản"
+      },
+      "account": {
+        "form": {
+          "withdrawAccount": "rút tiền tài khoản",
+          "createTime": "Thời gian tạo",
+          "accountPlaceholder": "Vui lòng nhập rút tiền tài khoản",
+          "blacklistAccount": "danh sách đen rút tiền tài khoản:",
+          "batchAccountList": "rút tiền tài khoản danh sách:",
+          "batchAccountPlaceholder": "Vui lòng nhập tài khoản rút tiền, phân tách nhiều tài khoản bằng cách xuống dòng"
+        },
+        "columns": {
+          "blacklistAccount": "danh sách đen rút tiền tài khoản",
+          "createTime": "Thời gian tạo",
+          "creator": "Người tạo"
+        },
+        "buttons": {
+          "export": "xuất",
+          "batchImport": "Hàng loạt Nhập Danh sách đen Rút tiền Tài khoảns",
+          "add": "Thêm",
+          "batchDelete": "Xóa hàng loạt",
+          "cancel": "hủy",
+          "save": "lưu"
+        },
+        "dialog": {
+          "batchImportTitle": "Hàng loạt Nhập Danh sách đen Rút tiền Tài khoảns",
+          "addTitle": "Thêm Danh sách đen Rút tiền Tài khoản",
+          "editTitle": "sửa danh sách đen rút tiền tài khoản",
+          "tip": "Gợi ý",
+          "deleteConfirm": "Bạn có chắc muốn xóa không?",
+          "deleteAccountTitle": "xóa danh sách đen rút tiền tài khoản xác nhận",
+          "deleteAccountConfirm": "Bạn có chắc muốn xóa tài khoản rút tiền này không?",
+          "confirm": "Xác nhận",
+          "cancel": "hủy"
+        },
+        "export": {
+          "fileName": "danh sách đen rút tiền tài khoản"
+        },
+        "validation": {
+          "accountRequired": "Vui lòng nhập rút tiền tài khoản"
+        },
+        "messages": {
+          "operationSuccess": "Thao tác thành công"
+        }
+      },
+      "device": {
+        "form": {
+          "blacklistDevice": "Danh sách đen Thiết bị số:",
+          "createTime": "Thời gian tạo",
+          "devicePlaceholder": "Vui lòng nhập device số",
+          "batchDeviceList": "Thiết bị số Danh sách:",
+          "batchDevicePlaceholder": "Vui lòng nhập device Số, phân tách nhiều device Số Với tuyến breaks"
+        },
+        "columns": {
+          "blacklistDevice": "Danh sách đen Thiết bị số",
+          "createTime": "Thời gian tạo",
+          "creator": "Người tạo"
+        },
+        "buttons": {
+          "export": "xuất",
+          "batchImport": "Hàng loạt Nhập Danh sách đen Thiết bị Số",
+          "add": "Thêm",
+          "batchDelete": "Xóa hàng loạt",
+          "cancel": "hủy",
+          "save": "lưu"
+        },
+        "dialog": {
+          "batchImportTitle": "Hàng loạt Nhập Danh sách đen Thiết bị Số",
+          "addTitle": "Thêm Danh sách đen Thiết bị số",
+          "editTitle": "Sửa Danh sách đen Thiết bị số",
+          "tip": "Gợi ý",
+          "deleteConfirm": "Bạn có chắc muốn xóa không?",
+          "deleteDeviceTitle": "Xóa Danh sách đen Thiết bị số Confirmation",
+          "deleteDeviceConfirm": "Bạn có chắc muốn xóa số thiết bị này không?",
+          "confirm": "Xác nhận",
+          "cancel": "hủy"
+        },
+        "export": {
+          "fileName": "Danh sách đen Thiết bị số"
+        },
+        "validation": {
+          "deviceRequired": "Vui lòng nhập device số"
+        },
+        "messages": {
+          "operationSuccess": "Thao tác thành công"
+        }
+      },
+      "ip": {
+        "form": {
+          "blacklistIP": "IP:",
+          "createTime": "Thời gian tạo",
+          "ipPlaceholder": "Vui lòng nhập IP",
+          "batchIPList": "IP danh sách:",
+          "batchIPPlaceholder": "Vui lòng nhập IP addresses, phân tách nhiều IPs Với tuyến breaks"
+        },
+        "columns": {
+          "blacklistIP": "danh sách đen IP",
+          "createTime": "Thời gian tạo",
+          "creator": "Người tạo"
+        },
+        "buttons": {
+          "export": "xuất",
+          "batchImport": "Hàng loạt Nhập Danh sách đen IPs",
+          "add": "Thêm",
+          "batchDelete": "Xóa hàng loạt",
+          "cancel": "hủy",
+          "save": "lưu"
+        },
+        "dialog": {
+          "batchImportTitle": "Hàng loạt Nhập Danh sách đen IPs",
+          "addTitle": "Thêm Danh sách đen IP",
+          "editTitle": "sửa danh sách đen IP",
+          "tip": "Gợi ý",
+          "deleteConfirm": "Bạn có chắc muốn xóa không?",
+          "deleteIPTitle": "xóa danh sách đen IP xác nhận",
+          "deleteIPConfirm": "Bạn có chắc muốn xóa IP này không?",
+          "confirm": "Xác nhận",
+          "cancel": "hủy"
+        },
+        "export": {
+          "fileName": "danh sách đen IP"
+        },
+        "validation": {
+          "ipRequired": "Vui lòng nhập IP"
+        },
+        "messages": {
+          "operationSuccess": "Thao tác thành công"
+        }
+      },
+      "tel": {
+        "form": {
+          "blacklistPhone": "Danh sách đen Số điện thoại:",
+          "phoneList": "Số điện thoại Danh sách:",
+          "createTime": "Thời gian tạo",
+          "phonePlaceholder": "Vui lòng nhập điện thoại số",
+          "batchPhonePlaceholder": "Vui lòng nhập điện thoại Số, phân tách nhiều điện thoại Số Với tuyến breaks"
+        },
+        "columns": {
+          "blacklistPhone": "Danh sách đen Số điện thoại",
+          "createTime": "Thời gian tạo",
+          "creator": "Người tạo"
+        },
+        "buttons": {
+          "export": "xuất",
+          "batchImport": "Hàng loạt Nhập Danh sách đen Số điện thoạis",
+          "add": "Thêm",
+          "batchDelete": "Xóa hàng loạt",
+          "cancel": "hủy",
+          "save": "lưu"
+        },
+        "dialog": {
+          "batchImportTitle": "Hàng loạt Nhập Danh sách đen Số điện thoạis",
+          "deleteConfirm": "Bạn có chắc muốn xóa không?",
+          "deletePhoneTitle": "Xóa Danh sách đen Số điện thoại Confirmation",
+          "deletePhoneConfirm": "Bạn có chắc muốn xóa Này điện thoại số?"
+        },
+        "export": {
+          "fileName": "Danh sách đen Số điện thoạis"
+        },
+        "validation": {
+          "phoneRequired": "Vui lòng nhập điện thoại số"
+        },
+        "blacklistPhone": "Danh sách đen Số điện thoại"
+      },
+      "member": {
+        "form": {
+          "memberId": "ID thành viên",
+          "freezeCategory": "Đóng băng Danh mục",
+          "freezeCategoryReason": "Đóng băng Danh mục Reason",
+          "remarkReason": "Ghi chú Thao tác Reason",
+          "selectAll": "Chọn tất cả",
+          "remarkPlaceholder": "Vui lòng nhập ghi chú",
+          "memberIdList": "ID thành viên danh sách",
+          "batchMemberIdPlaceholder": "Vui lòng nhập hội viên IDs, phân tách nhiều hội viên IDs Với tuyến breaks",
+          "mobile": "Số di động",
+          "device": "Thiết bị số",
+          "registerIP": "IP đăng ký",
+          "loginIP": "đăng nhập IP",
+          "status": "trạng thái",
+          "statusPlaceholder": "Vui lòng chọn trạng thái",
+          "statusActive": "Đang hoạt động",
+          "statusRelieved": "Đã gỡ",
+          "blacklistMobile": "Danh sách đen Số di động",
+          "blacklistDevice": "Danh sách đen Thiết bị số",
+          "blacklistRegisterIP": "Danh sách đen IP đăng ký",
+          "blacklistLoginIP": "danh sách đen đăng nhập IP",
+          "createTime": "Thời gian tạo",
+          "memberIdPlaceholder": "Vui lòng nhập ID thành viên",
+          "mobilePlaceholder": "Vui lòng nhập số điện thoại",
+          "devicePlaceholder": "Vui lòng nhập device số",
+          "registerIPPlaceholder": "Vui lòng nhập đăng ký IP",
+          "loginIPPlaceholder": "Vui lòng nhập đăng nhập IP",
+          "blacklistMember": "danh sách đen thành viên:",
+          "batchMemberList": "ID thành viên danh sách:",
+          "batchMemberPlaceholder": "Vui lòng nhập hội viên IDs, phân tách nhiều hội viên IDs Với tuyến breaks"
+        },
+        "columns": {
+          "memberId": "ID thành viên",
+          "status": "trạng thái",
+          "statusActive": "Đang hoạt động",
+          "statusRelieved": "Đã gỡ",
+          "freezeCategoryReason": "Đóng băng Danh mục Reason",
+          "remarkReason": "Ghi chú Thao tác Reason",
+          "blacklistWithdrawAccount": "danh sách đen rút tiền tài khoản",
+          "blacklistMobile": "Danh sách đen Số di động",
+          "blacklistDevice": "Danh sách đen Thiết bị số",
+          "blacklistRegisterIP": "Danh sách đen IP đăng ký",
+          "blacklistLoginIP": "danh sách đen đăng nhập IP",
+          "mobile": "Số di động",
+          "device": "Thiết bị số",
+          "registerIP": "IP đăng ký",
+          "loginIP": "đăng nhập IP",
+          "createTime": "Thời gian tạo",
+          "creator": "Người tạo"
+        },
+        "status": {
+          "active": "Đang hoạt động",
+          "relieved": "Đã gỡ"
+        },
+        "buttons": {
+          "export": "xuất",
+          "batchImport": "Hàng loạt Nhập Danh sách đen hội viên",
+          "add": "Thêm",
+          "batchRelieve": "Gỡ hàng loạt",
+          "cancel": "hủy",
+          "save": "lưu"
+        },
+        "actions": {
+          "relieve": "Gỡ",
+          "reactivate": "Kích hoạt lại",
+          "restore": "Khôi phục"
+        },
+        "dialog": {
+          "batchImportTitle": "Hàng loạt Nhập Danh sách đen hội viên",
+          "addTitle": "Thêm Danh sách đen Thành viên",
+          "editTitle": "sửa danh sách đen thành viên"
+        },
+        "export": {
+          "fileName": "danh sách đen thành viên"
+        },
+        "validation": {
+          "memberIdRequired": "Vui lòng nhập ID thành viên",
+          "freezeCategoryRequired": "Vui lòng chọn freeze danh mục"
+        },
+        "messages": {
+          "operationSuccess": "Thao tác thành công"
+        },
+        "confirmRelieve": "Bạn có chắc muốn gỡ không?",
+        "confirmTitle": "danh sách đen xác nhận",
+        "confirmContent": "Bạn có chắc muốn",
+        "memberBlacklistStatus": "trạng thái danh sách đen của hội viên này?",
+        "blacklistMember": "danh sách đen thành viên"
+      }
+    },
+    "site": {
+      "notice": {
+        "columns": {
+          "typeCode": "Loại Mã",
+          "title": "Tiêu đề",
+          "content": "Nội dung"
+        },
+        "form": {
+          "title": "Tiêu đề:",
+          "content": "Nội dung:",
+          "titleRequired": "Vui lòng nhập title",
+          "contentRequired": "Vui lòng nhập nội dung"
+        },
+        "editNotice": "Sửa Thông báo"
+      },
+      "settings": {
+        "operationTime": "Thời gian thao tác",
+        "operator": "Người thao tác",
+        "configValue": "Cấu hình Giá trị (Old->Mới)",
+        "siteName": "Website Tên",
+        "headerLogo": "Logo đầu trang",
+        "siteLogo2": "Logo website 2",
+        "loginPageLogo": "Đăng nhập Trang Logo",
+        "pwaBigImg": "PWA Lớn Hình ảnh",
+        "pwaSmallImg": "PWA Small Hình ảnh",
+        "pwaStartImg": "Hình ảnh khởi động APP",
+        "webIco": "Trình duyệt & Tải xuống Ứng dụng Biểu tượng",
+        "defaultLanguage": "giao diện Mặc định Ngôn ngữ",
+        "logoDesc": "Hỗ trợ định dạng ảnh (png, svg, gif, json, webp), kích thước không vượt quá 2M",
+        "pwaBigImgDesc": "Vui lòng tải ảnh 512px * 512px, hỗ trợ (png, webp), kích thước không vượt quá 1M",
+        "pwaSmallImgDesc": "Vui lòng tải ảnh 192px * 192px, hỗ trợ (png, webp), kích thước không vượt quá 1M",
+        "pwaStartImgDesc": "Vui lòng tải ảnh 640px * 1136px, hỗ trợ (png, webp), kích thước không vượt quá 1M",
+        "webIcoDesc": "Vui lòng tải ảnh 32px * 32px, hỗ trợ (png, svg, ico, webp), kích thước không vượt quá 10kb",
+        "amountGreaterEqual": "số tiền ≥",
+        "enableLoginCaptcha": "bật đăng nhập hình ảnh mã xác minh",
+        "enableLoginCaptchaDesc": "Bật image captcha Cho đăng nhập",
+        "allowNoRechargeGame": "Allow Không Nạp tiền Trò chơi",
+        "allowNoRechargeGameDesc": "Cho phép người dùng chưa hoàn tất nạp lần đầu chơi trò chơi",
+        "homeWinDisplay": "Trang chủ Winning Thông tin Hiển thị",
+        "homeWinDisplayDesc": "Số tiền ngưỡng Cho trang chủ winning information hiển thị",
+        "loginErrorCount": "Mật khẩu đăng nhập Lỗi Giới hạn",
+        "loginErrorCountDesc": "Vượt quá giới hạn này sẽ tạm thời đóng băng tài khoản, cần đổi mật khẩu hoặc quản trị viên Có thể thiệp",
+        "lowestRechargeAmount": "Số tiền nạp tối thiểu để truy cập trò chơi",
+        "lowestRechargeAmountDesc": "Tổng tiền nạp tích lũy không được thấp hơn số tiền này để tham gia trò chơi",
+        "confirmLanguageChange": "Xác nhận Ngôn ngữ Change",
+        "confirmLanguageChangeContent": "Bạn có chắc muốn đổi ngôn ngữ mặc định giao diện từ",
+        "tgUrl": "Official Telegram Kênh Liên kết",
+        "changeTo": "đến",
+        "questionMark": "?",
+        "languageChangeWarning": "Thay đổi này sẽ ảnh hưởng đến ngôn ngữ mặc định của tất cả người dùng mới truy cập.",
+        "updateSuccess": "Cập nhật thành công"
+      },
+      "protocol": {
+        "privacyProtocol": "Giao thức quyền riêng tư",
+        "riskProtocol": "Thỏa thuận rủi ro",
+        "userGuide": "Hướng dẫn người dùng"
+      },
+      "itemManual": {
+        "lastUpdateTime": "Cuối cùng Thời gian cập nhật",
+        "operator": "Người thao tác",
+        "edit": "sửa",
+        "cancel": "hủy",
+        "save": "lưu",
+        "updateSuccess": "Cập nhật thành công!",
+        "contentRequired": "Nội dung không được để trống!"
+      },
+      "index": {
+        "title": "Website Cài đặt",
+        "siteSettings": "Website Cài đặt",
+        "autoNotice": "tự động Thông báo",
+        "frontProtocolManual": "Hướng dẫn giao thức giao diện",
+        "firstPagePop": "Floating khung Cài đặt trên trang chủ trang"
+      },
+      "firstPagePop": {
+        "popname": "Tên Của floating khung",
+        "popnamePlaceholder": "Vui lòng nhập tên của khung nổi",
+        "status": "trạng thái",
+        "statusPlaceholder": "Vui lòng chọn trạng thái",
+        "popupid": "ID cửa sổ nổi",
+        "popupname": "Tên Của floating khung",
+        "minIcon": "Biểu tượng",
+        "target": "Hiển thị mục tiêu",
+        "first": "Ưu tiên",
+        "firstPlaceholder": "Nhập ưu tiên",
+        "uploadIcon": "Biểu tượng",
+        "uploadPlaceholder": "Tải lên Biểu tượng",
+        "uploadTips": "Vui lòng tải ảnh tỷ lệ 1:1, hỗ trợ (png, webp), kích thước không vượt quá 3M",
+        "uploadIconError": "Vui lòng tải ảnh tỷ lệ 1:1",
+        "uploadSizeError": "Vui lòng tải ảnh không vượt quá 3MB",
+        "updateTime": "Thời gian cập nhật",
+        "validTimeType": "Thời gian hiệu lực",
+        "langtime": "Hiệu lực dài hạn",
+        "timeRanges": "Thời gian hiệu lực chỉ định",
+        "time": "Thời gian chỉ định",
+        "validTimeTypePlaceholder": "Vui lòng chọn thời gian hiệu lực",
+        "timeRange": "Vui lòng chọn khoảng thời gian",
+        "updator": "Cập nhật person",
+        "newPopup": "Mới Float khung",
+        "editPopup": "Sửa Float khung",
+        "popupTarget": "Hiển thị Người dùng",
+        "popupTargetPlaceholder": "Vui lòng chọn hiển thị mục tiêu",
+        "unknownTag": "Không xác định Tag",
+        "times": "lần",
+        "batchImportFileName": "Nhập hàng loạt tệp.txt",
+        "downloadFailed": "Tải xuống thất bại. Vui lòng thử lại sau.",
+        "batchImport": "Nhập hàng loạt",
+        "download": "tải xuống",
+        "selected": "Đã chọn:",
+        "statusOptions": {
+          "enabled": "bật",
+          "disabled": "tắt"
+        }
+      }
+    },
+    "takePackage": {
+      "components": {
+        "addOrEdit": {
+          "validation": {
+            "appNameRequired": "Vui lòng nhập tên ứng dụng",
+            "appTypeRequired": "Vui lòng chọn app loại",
+            "packageTypeRequired": "Vui lòng chọn gói loại",
+            "channelPackageIdRequired": "Vui lòng chọn kênh nguồn",
+            "domainUrlRequired": "Vui lòng chọn bind tên miền",
+            "appIcoRequired": "Vui lòng tải lên icon ứng dụng",
+            "loadingImgRequired": "Vui lòng tải lên ảnh loading"
+          },
+          "messages": {
+            "updateSuccess": "Cập nhật thành công",
+            "addSuccess": "Thêm thành công"
+          },
+          "sections": {
+            "basicInfo": "Thông tin cơ bản",
+            "packageTypeConfig": "Gói Loại Cấu hình",
+            "inviteCodeConfig": "Mời Mã Cấu hình",
+            "analyticsConfig": "bên thứ ba Phân tích Cấu hình",
+            "appAppearance": "Ứng dụng Appearance"
+          },
+          "labels": {
+            "appName": "Ứng dụng Tên",
+            "appType": "Ứng dụng Loại",
+            "packageName": "Gói Tên",
+            "packageType": "Gói Loại",
+            "domainUrl": "Bind Tên miền",
+            "inviteCode": "Mời Mã",
+            "analyticsService": "Phân tích Dịch vụ",
+            "channelSource": "Kênh Nguồn",
+            "appIcon": "Ứng dụng Biểu tượng",
+            "loadingImage": "Loading Hình ảnh"
+          },
+          "placeholders": {
+            "appName": "Vui lòng nhập tên ứng dụng",
+            "packageName": "Vui lòng nhập tên gói",
+            "inviteCode": "Vui lòng nhập mã mời (tùy chọn)",
+            "channelSource": "Vui lòng chọn kênh nguồn"
+          },
+          "tips": {
+            "packageNameGenerated": "Tên gói được hệ thống tự động tạo theo tên ứng dụng",
+            "packageTypeTip": "Gói native không cần tên miền, gói shell cần liên kết tên miền",
+            "inviteCodeTip": "Để trống nếu không dùng mã mời",
+            "analyticsTip": "Chỉ được chọn một dịch vụ phân tích",
+            "channelTip": "Chọn corresponding {channelTip} kênh configuration",
+            "appIconTip": "Kích thước khuyến nghị: 512x512px, hỗ trợ PNG",
+            "loadingImageTip": "Kích thước khuyến nghị: 1080x1920px, hỗ trợ PNG/JPG"
+          },
+          "options": {
+            "notUse": "Không sử dụng"
+          },
+          "buttons": {
+            "cancel": "hủy",
+            "save": "lưu"
+          },
+          "channelTips": {
+            "facebook": "Pixel Facebook",
+            "adjust": "Theo dõi Adjust"
+          }
+        },
+        "detail": {
+          "labels": {
+            "appName": "Ứng dụng Tên",
+            "appType": "Ứng dụng Loại",
+            "status": "trạng thái",
+            "packageName": "Gói Tên",
+            "domainUrl": "Bind Tên miền",
+            "inviteCode": "Mời Mã",
+            "createTime": "Thời gian tạo",
+            "finishTime": "Thời gian hoàn tất",
+            "analyticsService": "Phân tích Dịch vụ",
+            "channelSource": "Kênh Nguồn"
+          },
+          "sections": {
+            "analyticsConfig": "bên thứ ba Phân tích Cấu hình"
+          },
+          "options": {
+            "notUse": "Không sử dụng"
+          }
+        }
+      },
+      "index": {
+        "buildStatus": {
+          "waiting": "Đang chờ",
+          "building": "Đang đóng gói",
+          "success": "Thành công",
+          "failed": "Thất bại"
+        },
+        "buildTypes": {
+          "android": "APK Android",
+          "ios": "IPA iOS"
+        },
+        "packageTypes": {
+          "shell": "Gói shell",
+          "native": "Gói native"
+        }
+      },
+      "page": {
+        "title": "Quản lý gói ứng dụng",
+        "labels": {
+          "buildStatus": "Xây dựng Trạng thái",
+          "channelSource": "Kênh Nguồn",
+          "appType": "Ứng dụng Loại",
+          "timeRange": "Khoảng thời gian"
+        },
+        "placeholders": {
+          "buildStatus": "Chọn Xây dựng Trạng thái",
+          "selectBuildStatus": "Chọn Xây dựng Trạng thái",
+          "channelSource": "Chọn Kênh Nguồn",
+          "selectChannelSource": "Chọn Kênh Nguồn",
+          "appType": "Chọn Ứng dụng Loại",
+          "selectAppType": "Chọn Ứng dụng Loại",
+          "selectTimeRange": "Chọn Khoảng thời gian"
+        },
+        "columns": {
+          "appName": "Ứng dụng Tên",
+          "appType": "Ứng dụng Loại",
+          "packageType": "Gói Loại",
+          "packageName": "Gói Tên",
+          "analyticsService": "Phân tích Dịch vụ",
+          "channelSource": "Kênh Nguồn",
+          "domainUrl": "tên miền",
+          "inviteCode": "Mời Mã",
+          "buildStatus": "Xây dựng Trạng thái",
+          "createTime": "Thời gian tạo",
+          "actions": "thao tác"
+        },
+        "dialogs": {
+          "editPackage": "Sửa Gói",
+          "createPackage": "Tạo Gói",
+          "packageDetail": "Gói Chi tiết"
+        },
+        "buttons": {
+          "createPackage": "Tạo Gói",
+          "rebuild": "Xây dựng lại",
+          "download": "tải xuống",
+          "viewDetails": "xem chi tiết",
+          "edit": "sửa",
+          "delete": "xóa"
+        },
+        "messages": {
+          "buildFailed": "Xây dựng Thất bại",
+          "downloadFailed": "tải xuống thất bại",
+          "downloadFailedTryLater": "Tải xuống thất bại, vui lòng thử lại sau",
+          "rebuildSuccess": "Rebuild {packageName} thành công",
+          "buildingInProgress": "Đang đóng gói, vui lòng chờ..."
+        },
+        "options": {
+          "all": "tất cả",
+          "notUse": "Không sử dụng"
+        }
+      }
+    },
+    "workOrder": {
+      "tabs": {
+        "pendingList": "Đang chờ Danh sách",
+        "workOrderList": "ticket danh sách",
+        "supplementRecord": "Cộng tiền thủ công Bản ghi",
+        "supplementStats": "Cộng tiền thủ công Thống kê",
+        "faqType": "FAQ loại quản lý",
+        "faqSub": "Câu hỏi phụ FAQ",
+        "forwardRecord": "bên thứ ba Chuyển tiếp Truy vấn Bản ghi",
+        "forwardConfig": "Cấu hình truy vấn chuyển tiếp bên thứ ba",
+        "telegramConfig": "Telegram cấu hình",
+        "homeConfig": "Cấu hình trang chủ",
+        "workOrderConfig": "ticket cấu hình",
+        "workOrderDaily": "Work Đơn Hằng ngày"
+      },
+      "columns": {
+        "workOrderNumber": "Work Mã đơn",
+        "workOrderType": "ticket loại",
+        "workOrderName": "ticket tên",
+        "vipLevel": "Cấp VIP",
+        "memberId": "ID thành viên",
+        "status": "trạng thái",
+        "thirdPartyName": "bên thứ ba tên",
+        "thirdPartyMappingCode": "bên thứ ba Mapping Mã",
+        "thirdPartyChannelId": "bên thứ ba kênh ID",
+        "orderAmount": "đơn số tiền",
+        "reminderCount": "Reminder Số lượng",
+        "attachmentType": "Loại tệp đính kèm",
+        "submitTime": "Gửi thời gian",
+        "operationTime": "Thời gian thao tác",
+        "operator": "Người thao tác",
+        "remark": "ghi chú"
+      },
+      "fileTypes": {
+        "image": "hình ảnh",
+        "video": "Tệp video",
+        "pdf": "PDF",
+        "other": "Khác"
+      },
+      "useWorkOrder": {
+        "states": {
+          "all": "tất cả",
+          "systemProcessing": "Hệ thống đang xử lý",
+          "pending": "Đang chờ",
+          "processing": "Đang xử lý",
+          "rejected": "Bị từ chối",
+          "completed": "Hoàn tất"
+        },
+        "form": {
+          "memberId": "ID thành viên",
+          "memberIdPlaceholder": "Vui lòng nhập ID thành viên/tài khoản",
+          "workOrderNumber": "Work Mã đơn",
+          "workOrderNumberPlaceholder": "Tìm kiếm work đơn số",
+          "thirdPartyName": "bên thứ ba tên",
+          "thirdPartyNamePlaceholder": "Vui lòng chọn bên thứ ba tên",
+          "status": "trạng thái",
+          "statusPlaceholder": "Vui lòng chọn trạng thái",
+          "channelSource": "Kênh Nguồn",
+          "channelSourcePlaceholder": "Vui lòng chọn kênh nguồn",
+          "attachmentType": "Loại tệp đính kèm",
+          "attachmentTypePlaceholder": "Vui lòng chọn attachment loại",
+          "vipLevel": "Cấp VIP",
+          "vipLevelPlaceholder": "Vui lòng chọn VIP level",
+          "amountRange": "Số tiền Range",
+          "minAmount": "Số tiền tối thiểu",
+          "maxAmount": "Số tiền tối đa",
+          "workOrderName": "ticket tên",
+          "workOrderNamePlaceholder": "Vui lòng nhập ticket tên",
+          "workOrderType": "ticket loại",
+          "workOrderTypePlaceholder": "Vui lòng chọn ticket loại",
+          "operator": "Người thao tác",
+          "operatorPlaceholder": "Vui lòng nhập operator",
+          "timeType": "Vui lòng chọn thời gian loại",
+          "submitTime": "Gửi thời gian",
+          "operationTime": "Thời gian thao tác",
+          "endTimePlaceholder": "Vui lòng chọn thời gian kết thúc"
+        },
+        "attachmentOptions": {
+          "image": "hình ảnh",
+          "video": "Tệp video",
+          "pdf": "PDF"
+        },
+        "messages": {
+          "querySuccess": "tra cứu thành công",
+          "exportSuccess": "xuất thành công"
+        }
+      },
+      "faqSub": {
+        "columns": {
+          "faqType": "FAQ loại",
+          "questionTitle": "Question Tiêu đề",
+          "questionContent": "Question Nội dung",
+          "sort": "Sắp xếp",
+          "status": "trạng thái",
+          "lastUpdateTime": "Thời gian cập nhật cuối",
+          "lastUpdateUser": "Người thao tác"
+        },
+        "form": {
+          "questionTitle": "Question Tiêu đề",
+          "questionTitlePlaceholder": "Vui lòng nhập question title",
+          "faqType": "FAQ loại",
+          "faqTypePlaceholder": "Vui lòng chọn loại",
+          "status": "trạng thái",
+          "statusPlaceholder": "Vui lòng chọn trạng thái"
+        },
+        "dialog": {
+          "questionContent": "Question Nội dung",
+          "edit": "sửa",
+          "add": "thêm"
+        },
+        "messages": {
+          "deleteSuccess": "Xóa thành công!",
+          "operationSuccess": "Thao tác thành công"
+        },
+        "buttons": {
+          "addQuestion": "Thêm Question"
+        },
+        "addEdit": {
+          "faqType": "FAQ loại",
+          "faqTypePlaceholder": "Vui lòng chọn Của bạn FAQ loại",
+          "questionContent": "Question Nội dung",
+          "title": "Tiêu đề",
+          "titlePlaceholder": "Vui lòng nhập title",
+          "content": "Nội dung",
+          "contentPlaceholder": "Vui lòng nhập {language} nội dung",
+          "status": "trạng thái",
+          "sort": "Sắp xếp",
+          "sortPlaceholder": "Vui lòng nhập sắp xếp giá trị",
+          "validation": {
+            "faqTypeRequired": "Vui lòng chọn loại",
+            "sortRequired": "Vui lòng nhập sắp xếp giá trị"
+          }
+        }
+      },
+      "faqType": {
+        "columns": {
+          "moduleName": "FAQ loại",
+          "sort": "Sắp xếp",
+          "state": "bật trạng thái",
+          "lastUpdateTime": "Thời gian cập nhật cuối",
+          "lastUpdateUser": "Người thao tác"
+        },
+        "form": {
+          "moduleNameLabel": "FAQ loại tên",
+          "moduleNamePlaceholder": "Vui lòng nhập FAQ loại tên",
+          "status": "trạng thái",
+          "statusPlaceholder": "Vui lòng chọn loại"
+        },
+        "status": {
+          "enable": "bật",
+          "disable": "tắt"
+        },
+        "dialog": {
+          "add": "thêm FAQ loại",
+          "edit": "sửa FAQ loại"
+        },
+        "buttons": {
+          "addType": "thêm loại",
+          "edit": "sửa",
+          "delete": "xóa",
+          "cancel": "hủy",
+          "save": "lưu"
+        },
+        "messages": {
+          "deleteSuccess": "Xóa thành công!",
+          "operationSuccess": "Thao tác thành công"
+        },
+        "addEdit": {
+          "nameLabel": "{language} tên",
+          "namePlaceholder": "Vui lòng nhập FAQ loại tên （{language}）",
+          "nameRequired": "Vui lòng nhập {language} tên",
+          "sort": "Sắp xếp",
+          "sortPlaceholder": "Vui lòng nhập sắp xếp",
+          "status": "trạng thái",
+          "validation": {
+            "statusRequired": "Vui lòng chọn trạng thái",
+            "sortRequired": "Vui lòng nhập sắp xếp"
+          }
+        }
+      },
+      "forwardConfig": {
+        "columns": {
+          "channelName": "nạp tiền kênh tên",
+          "channelId": "kênh Id",
+          "apiId": "Ứng dụng Id",
+          "chatId": "Nhóm ID",
+          "state": "bật trạng thái",
+          "lastUpdateTime": "Thời gian cập nhật cuối",
+          "lastUpdateUser": "Cuối cùng Cập nhật Người dùng"
+        },
+        "form": {
+          "channelIdLabel": "bên thứ ba kênh Id",
+          "channelIdPlaceholder": "Vui lòng nhập bên thứ ba kênh Id"
+        },
+        "status": {
+          "enable": "bật",
+          "disable": "tắt"
+        },
+        "dialog": {
+          "add": "thêm cấu hình",
+          "edit": "sửa cấu hình",
+          "autoConfig": "Cấu hình tự động"
+        },
+        "buttons": {
+          "addConfig": "thêm cấu hình",
+          "edit": "sửa",
+          "autoConfig": "Cấu hình tự động",
+          "addRule": "Thêm Quy tắc",
+          "delete": "xóa",
+          "cancel": "hủy",
+          "save": "lưu"
+        },
+        "messages": {
+          "operationSuccess": "Thao tác thành công",
+          "allFieldsRequired": "Vui lòng đảm bảo đã điền tất cả trường"
+        },
+        "addEdit": {
+          "channelId": "kênh ID:",
+          "channelIdPlaceholder": "Vui lòng chọn",
+          "channelName": "kênh tên:",
+          "apiId": "Ứng dụng Id",
+          "apiIdPlaceholder": "Vui lòng chọn apild",
+          "chatId": "Nhóm ID",
+          "chatIdPlaceholder": "Vui lòng nhập nhóm ID",
+          "validation": {
+            "channelIdRequired": "Vui lòng nhập kênh ID",
+            "apiIdRequired": "Vui lòng chọn adild",
+            "chatIdRequired": "Vui lòng nhập nhóm ID"
+          }
+        },
+        "autoConfig": {
+          "title": "{channelName} - Cấu hình xử lý tự động",
+          "ruleTitle": "Quy tắc {index}",
+          "replyContent": "Nội dung trả lời bên thứ ba",
+          "replyContentPlaceholder": "Nội dung phản hồi bên thứ ba",
+          "autoProcess": "Tự động xử lý",
+          "autoProcessPlaceholder": "Tự động xử lý",
+          "memberRemark": "Thành viên Trả lời Ghi chú",
+          "memberRemarkPlaceholder": "Vui lòng nhập hội viên trả lời remark",
+          "options": {
+            "reject": "Từ chối",
+            "approve": "thông qua",
+            "pending": "Đang chờ"
+          }
+        }
+      },
+      "forwardRecord": {
+        "columns": {
+          "workOrderNo": "Work Đơn Không",
+          "payTypeName": "bên thứ ba tên",
+          "rechargeOrderNo": "nạp tiền Mã đơn",
+          "queryOperator": "Truy vấn Người thao tác",
+          "queryTime": "tra cứu thời gian",
+          "queryResult": "Truy vấn kết quả",
+          "replyContent": "Nội dung trả lời",
+          "replyTime": "Thời gian trả lời"
+        },
+        "form": {
+          "payTypeName": "bên thứ ba tên",
+          "payTypeNamePlaceholder": "Vui lòng nhập bên thứ ba tên",
+          "orderNumber": "nạp tiền Mã đơn",
+          "orderNumberPlaceholder": "Vui lòng nhập nạp tiền Mã đơn",
+          "workOrderId": "Work Đơn Không",
+          "workOrderIdPlaceholder": "Vui lòng nhập work đơn số",
+          "dateRange": "Khoảng ngày"
+        },
+        "status": {
+          "replied": "Đã trả lời",
+          "pending": "Đang chờ",
+          "failed": "thất bại"
+        },
+        "shortcuts": {
+          "today": "Hôm nay",
+          "yesterday": "Hôm qua",
+          "thisWeek": "Tuần này",
+          "lastWeek": "Tuần trước",
+          "thisMonth": "Tháng này",
+          "lastMonth": "Tháng trước"
+        },
+        "dialog": {
+          "replyDetails": "Chi tiết trả lời",
+          "close": "tắt"
+        },
+        "details": {
+          "workOrderNo": "Work Đơn Không:",
+          "rechargeOrderNo": "nạp tiền Mã đơn:",
+          "payTypeName": "bên thứ ba tên:",
+          "queryTime": "tra cứu thời gian:",
+          "queryResult": "Truy vấn kết quả:",
+          "replyTime": "Thời gian trả lời:",
+          "replyContent": "Nội dung trả lời"
+        }
+      },
+      "homeConfig": {
+        "faq": {
+          "label": "có không bật FAQ",
+          "enableText": "bật",
+          "disableText": "tắt",
+          "description": "Khi bật, module FAQ sẽ hiển thị trên trang chủ"
+        },
+        "content": {
+          "lastUpdateTime": "Thời gian cập nhật cuối",
+          "lastUpdateBy": "Người thao tác",
+          "bannerTitle": "Banner hình ảnh",
+          "textTitle": "Trang chủ Text Nội dung",
+          "textPlaceholder": "Vui lòng nhập nội dung được hiển thị Trong Trang chủ Kind Gợi ý, mặc định nội dung sẽ được Đã hiển thị Nếu left trống"
+        },
+        "buttons": {
+          "cancel": "hủy",
+          "save": "lưu",
+          "edit": "sửa"
+        },
+        "messages": {
+          "operationSuccess": "Thao tác thành công"
+        },
+        "dialog": {
+          "confirmTitle": "xác nhận thao tác",
+          "faqCloseConfirm": "Bạn có chắc muốn tắt tính năng FAQ không?",
+          "confirm": "Xác nhận",
+          "cancel": "hủy"
+        }
+      },
+      "supplementRecord": {
+        "form": {
+          "thirdPartyName": "bên thứ ba tên",
+          "thirdPartyNamePlaceholder": "Vui lòng nhập bên thứ ba tên",
+          "thirdPartyChannelId": "bên thứ ba kênh ID",
+          "thirdPartyChannelIdPlaceholder": "Vui lòng nhập bên thứ ba kênh ID",
+          "rechargeOrderNo": "nạp tiền Mã đơn",
+          "rechargeOrderNoPlaceholder": "Vui lòng nhập nạp tiền Mã đơn",
+          "workOrderNumber": "Work Mã đơn",
+          "workOrderNumberPlaceholder": "Vui lòng nhập work đơn số",
+          "utr": "UTR",
+          "utrPlaceholder": "Vui lòng nhập UTR",
+          "supplementResult": "Cộng tiền thủ công kết quả",
+          "supplementResultPlaceholder": "Vui lòng chọn kết quả ghi có thủ công",
+          "dateRange": "Khoảng ngày"
+        },
+        "columns": {
+          "workOrderNumber": "Work Mã đơn",
+          "thirdPartyName": "bên thứ ba tên",
+          "thirdPartyChannelId": "bên thứ ba kênh ID",
+          "rechargeOrderNo": "nạp tiền Mã đơn",
+          "orderAmount": "đơn số tiền",
+          "utr": "UTR",
+          "latestSupplementResult": "Latest Cộng tiền thủ công kết quả",
+          "latestSupplementUpdateTime": "Thời gian cập nhật bổ sung mới nhất",
+          "totalSupplementCount": "Tổng cộng Cộng tiền thủ công Số lượng"
+        },
+        "detailColumns": {
+          "serialNumber": "STT",
+          "initiateTime": "Thời gian khởi tạo",
+          "queryResponseResult": "Truy vấn phản hồi kết quả",
+          "thirdPartyResponseResult": "Kết quả phản hồi bên thứ ba",
+          "supplementResult": "Cộng tiền thủ công kết quả",
+          "supplementResponseResult": "Cộng tiền thủ công phản hồi kết quả"
+        },
+        "status": {
+          "success": "thành công",
+          "failed": "thất bại"
+        },
+        "options": {
+          "failed": "thất bại",
+          "success": "thành công"
+        },
+        "dialog": {
+          "supplementDetail": "Cộng tiền thủ công Chi tiết"
+        },
+        "actions": {
+          "operation": "thao tác",
+          "detail": "Chi tiết"
+        },
+        "messages": {
+          "operationSuccess": "Thao tác thành công"
+        }
+      },
+      "supplementStats": {
+        "form": {
+          "thirdPartyName": "bên thứ ba tên",
+          "thirdPartyNamePlaceholder": "Vui lòng nhập bên thứ ba tên",
+          "dateRange": "Khoảng ngày"
+        },
+        "columns": {
+          "thirdPartyName": "bên thứ ba tên",
+          "thirdPartyChannelId": "bên thứ ba kênh ID",
+          "unpaidOrderCount": "Nạp tiền Unreached Work Đơn Số lượng",
+          "submitQueryCount": "Gửi Truy vấn Số lượng",
+          "querySuccessCount": "tra cứu thành công số lượng",
+          "supplementSuccessCount": "Cộng tiền thủ công Thành công Số lượng",
+          "supplementFailCount": "Cộng tiền thủ công Thất bại Số lượng",
+          "firstSuccessRate": "Đầu tiên Cộng tiền thủ công Thành công Tỷ lệ",
+          "secondSuccessRate": "Lần hai Cộng tiền thủ công Thành công Tỷ lệ",
+          "thirdSuccessRate": "Lần ba Cộng tiền thủ công Thành công Tỷ lệ",
+          "totalSubmitSuccessRate": "Tổng cộng Gửi Thành công Tỷ lệ",
+          "actualSuccessRate": "Thực tế Thành công Tỷ lệ"
+        }
+      },
+      "telegramConfig": {
+        "form": {
+          "accountStatus": "tài khoản trạng thái",
+          "accountStatusPlaceholder": "Vui lòng chọn trạng thái",
+          "apiIdPlaceholder": "Vui lòng nhập apiId",
+          "apiHashPlaceholder": "Vui lòng nhập apiHash",
+          "phoneNumber": "Số điện thoại",
+          "phoneNumberPlaceholder": "Vui lòng nhập điện thoại số",
+          "firstName": "tên",
+          "firstNamePlaceholder": "Vui lòng nhập tên",
+          "lastName": "Họ",
+          "lastNamePlaceholder": "Vui lòng nhập họ",
+          "password": "Mật khẩu (Two-factor Authentication)",
+          "passwordPlaceholder": "Vui lòng nhập mật khẩu",
+          "selectApiIdPlaceholder": "Vui lòng chọn apild"
+        },
+        "columns": {
+          "loginStatus": "đăng nhập trạng thái",
+          "lastUpdateTime": "Thời gian cập nhật cuối",
+          "lastUpdateMan": "Cuối cùng Người cập nhật"
+        },
+        "actions": {
+          "edit": "sửa",
+          "login": "đăng nhập",
+          "logout": "Đăng xuất",
+          "verify": "Xác minh",
+          "delete": "xóa",
+          "deleteSession": "Xóa Phiên",
+          "cancelLogin": "hủy đăng nhập",
+          "addConfig": "thêm cấu hình",
+          "cancel": "hủy",
+          "save": "lưu"
+        },
+        "status": {
+          "notLoggedIn": "Chưa đăng nhập",
+          "waitingVerification": "Đang chờ xác minh",
+          "loggedIn": "Đã đăng nhập",
+          "loggedOut": "Đã đăng xuất",
+          "waitingLogin": "đang chờ Cho Đăng nhập",
+          "verification": "Xác minh",
+          "login": "đăng nhập",
+          "exitLogin": "Exit Đăng nhập"
+        },
+        "messages": {
+          "operationSuccess": "Thao tác thành công",
+          "loginConfirm": "đăng nhập xác nhận",
+          "logoutConfirm": "Đăng xuất Confirmation",
+          "loginConfirmText": "Bạn có chắc muốn đăng nhập không?",
+          "logoutConfirmText": "Bạn có chắc muốn đăng xuất không?",
+          "confirm": "Xác nhận",
+          "cancel": "hủy",
+          "logoutSuccess": "Đăng xuất Thành công",
+          "logoutFailed": "Đăng xuất Thất bại",
+          "loginTriggered": "Đã kích hoạt đăng nhập, vui lòng nhập mã xác minh",
+          "loginFailed": "đăng nhập thất bại",
+          "deleteSuccess": "Xóa thành công",
+          "deleteSessionSuccess": "Xóa Phiên Thành công",
+          "cancelLoginSuccess": "hủy Đăng nhập thành công",
+          "verifySuccess": "Xác minh thành công",
+          "enterVerifyCode": "Vui lòng nhập mã xác minh",
+          "enterFiveDigitCode": "Vui lòng nhập 5-digit xác minh mã"
+        },
+        "dialog": {
+          "editConfig": "sửa cấu hình",
+          "verifyCode": "mã xác minh"
+        },
+        "validation": {
+          "apiIdRequired": "Vui lòng nhập apiId",
+          "firstNameRequired": "Bắt buộc nhập tên",
+          "lastNameRequired": "Bắt buộc nhập họ",
+          "apiHashRequired": "Vui lòng nhập apiHash",
+          "phoneNumberRequired": "Vui lòng nhập điện thoại số",
+          "passwordRequired": "Vui lòng nhập mật khẩu",
+          "fiveDigitCodeRequired": "Vui lòng nhập 5-digit xác minh mã"
+        }
+      },
+      "workOrderConfig": {
+        "form": {
+          "workOrderTypeName": "ticket loại tên",
+          "workOrderTypePlaceholder": "Vui lòng chọn ticket loại",
+          "workOrderLimitType": "Loại giới hạn phiếu công việc",
+          "workOrderLimitTypePlaceholder": "Vui lòng chọn loại",
+          "loggedIn": "Đã đăng nhập",
+          "notLoggedIn": "Chưa đăng nhập"
+        },
+        "columns": {
+          "workOrderTypeName": "ticket loại tên",
+          "workOrderLimitType": "Loại giới hạn phiếu công việc",
+          "sort": "Sắp xếp",
+          "status": "trạng thái",
+          "lastUpdateTime": "Thời gian cập nhật cuối",
+          "operator": "Người thao tác",
+          "enabled": "bật",
+          "disabled": "tắt"
+        },
+        "actions": {
+          "edit": "sửa",
+          "autoReply": "Tự động trả lời",
+          "paramConfig": "Cấu hình tham số",
+          "tutorial": "Hướng dẫn",
+          "autoForward": "Tự động chuyển tiếp",
+          "quickReply": "Trả lời nhanh",
+          "addConfig": "thêm cấu hình"
+        },
+        "dialog": {
+          "editWorkOrderType": "sửa ticket loại",
+          "paramConfig": "Cấu hình tham số",
+          "quickReply": "Trả lời nhanh",
+          "tutorialConfig": "Cấu hình hướng dẫn",
+          "autoReplyConfig": "Cấu hình trả lời tự động",
+          "autoForward": "Tự động chuyển tiếp",
+          "autoForwardStatus": "tự động Chuyển tiếp Trạng thái"
+        },
+        "messages": {
+          "operationSuccess": "Thao tác thành công"
+        },
+        "paramsConfig": {
+          "autoQueryTotalCount": "tự động Truy vấn Tổng số lượng",
+          "autoQueryFrequency": "tự động Truy vấn tần suất",
+          "orderLowerLimit": "Đơn Lower Giới hạn thời gian",
+          "orderUpperLimit": "Đơn Upper Giới hạn thời gian",
+          "times": "lần",
+          "minutes": "phút",
+          "hours": "giờ"
+        },
+        "autoReply": {
+          "enableAutoReply": "Bật trả lời tự động",
+          "replyContent": "Nội dung trả lời",
+          "delayTime": "Thời gian trễ (giây)",
+          "placeholders": {
+            "enterReplyContent": "Vui lòng nhập trả lời nội dung",
+            "enterDelayTime": "Vui lòng nhập thời gian trễ"
+          },
+          "validation": {
+            "replyContentRequired": "Vui lòng nhập trả lời nội dung",
+            "contentRequired": "Vui lòng nhập nội dung",
+            "delayTimeRequired": "Vui lòng nhập thời gian trễ"
+          }
+        },
+        "courseConfig": {
+          "tutorialContent": "Nội dung hướng dẫn",
+          "placeholders": {
+            "enterContent": "Vui lòng nhập {code} nội dung"
+          }
+        },
+        "editDetail": {
+          "labels": {
+            "workOrderType": "ticket loại",
+            "sort": "Sắp xếp",
+            "icon": "ICON",
+            "dailyLimit": "Hằng ngày Work Đơn Giới hạn mỗi Person",
+            "limitType": "Loại giới hạn",
+            "status": "trạng thái",
+            "displayName": "Tên hiển thị",
+            "projectName": "Tên dự án",
+            "formConfig": "Cấu hình biểu mẫu",
+            "fillType": "Loại điền",
+            "linkName": "Tên liên kết {index}",
+            "linkAddress": "Liên kết {index} Địa chỉ"
+          },
+          "placeholders": {
+            "selectWorkOrderType": "Vui lòng chọn ticket loại",
+            "enterSort": "Vui lòng nhập",
+            "enterInput": "Vui lòng nhập",
+            "selectFormConfig": "Vui lòng chọn form configuration"
+          },
+          "options": {
+            "notLoggedIn": "Chưa đăng nhập",
+            "loggedIn": "Đã đăng nhập",
+            "disabled": "tắt",
+            "enabled": "bật",
+            "required": "bắt buộc",
+            "optional": "Tùy chọn"
+          },
+          "sections": {
+            "externalLinkConfig": "Cấu hình liên kết ngoài",
+            "formConfigItems": "Mục cấu hình biểu mẫu"
+          },
+          "buttons": {
+            "addItem": "Thêm Mục",
+            "deleteItem": "Xóa Mục",
+            "cancel": "hủy",
+            "save": "lưu"
+          },
+          "validation": {
+            "selectWorkOrderType": "Vui lòng chọn ticket loại",
+            "enterSort": "Vui lòng nhập sắp xếp",
+            "enterExternalLink": "Vui lòng nhập bên ngoài liên kết"
+          },
+          "messages": {
+            "selectWorkOrderTypeFirst": "Vui lòng chọn work đơn loại Đầu tiên"
+          }
+        },
+        "editReply": {
+          "labels": {
+            "quickTab": "Nhanh {index}",
+            "quickDisplay": "Hiển thị nhanh",
+            "status": "trạng thái",
+            "content": "Nội dung"
+          },
+          "placeholders": {
+            "enterTitle": "Vui lòng nhập",
+            "enterContent": "Vui lòng nhập nội dung"
+          },
+          "options": {
+            "disabled": "tắt",
+            "enabled": "bật"
+          },
+          "buttons": {
+            "cancel": "hủy",
+            "save": "lưu"
+          },
+          "validation": {
+            "titleRequired": "Vui lòng nhập title",
+            "titleCannotBeEmpty": "Tiêu đề nhanh {index} không được để trống",
+            "contentCannotBeEmpty": "Nội dung nhanh {index} không được để trống",
+            "contentCannotContainChinese": "Nội dung nhanh {index} không được chứa tiếng Trung"
+          }
+        }
+      },
+      "workOrderList": {
+        "labels": {
+          "systemProcessing": "Hệ thống đang xử lý",
+          "pending": "Đang chờ",
+          "operation": "thao tác",
+          "refreshCountdown": "Đếm ngược làm mới: {count}s",
+          "secondsRefresh": "giây làm mới"
+        },
+        "buttons": {
+          "reset": "đặt lại",
+          "batchReject": "Hàng loạt Từ chối",
+          "batchThirdPartyQuery": "Hàng loạt bên thứ ba Truy vấn",
+          "batchThirdPartyForward": "Chuyển tiếp bên thứ ba hàng loạt",
+          "view": "xem",
+          "edit": "sửa",
+          "lock": "Khóa",
+          "unlock": "Mở khóa",
+          "automatic": "Tự động"
+        },
+        "dialog": {
+          "workOrderDetails": "ticket chi tiết",
+          "batchReject": "Hàng loạt Từ chối",
+          "tip": "Gợi ý",
+          "confirmLockUnlock": "Bạn có chắc muốn {action} không?",
+          "confirmForward": "Chuyển tiếp {count} phiếu công việc?",
+          "confirm": "Xác nhận",
+          "cancel": "hủy"
+        },
+        "messages": {
+          "pleaseEnterRefreshTime": "Vui lòng nhập thời gian làm mới",
+          "operationSuccessful": "Thao tác thành công",
+          "batchThirdPartyQuerySuccessful": "Hàng loạt third-party query thành công",
+          "batchForwardSuccessful": "Chuyển tiếp hàng loạt thành công"
+        },
+        "oneByOneWork": {
+          "member": "thành viên",
+          "reply": "Trả lời"
+        },
+        "workOrderDetail": {
+          "labels": {
+            "workOrderNumber": "Work Mã đơn",
+            "workOrderType": "ticket loại",
+            "submissionTime": "Thời gian gửi",
+            "workOrderStatus": "ticket trạng thái",
+            "operationTime": "Thời gian thao tác",
+            "operator": "Người thao tác",
+            "memberId": "thành viên id",
+            "thirdPartyForwardStatus": "bên thứ ba Chuyển tiếp Trạng thái",
+            "remark": "ghi chú",
+            "thirdPartyQueryResult": "bên thứ ba Truy vấn kết quả",
+            "thirdPartyForwardQuery": "bên thứ ba Chuyển tiếp Truy vấn",
+            "uploadImage": "tải lên hình ảnh",
+            "workOrderDetails": "ticket chi tiết"
+          },
+          "status": {
+            "systemProcessing": "Hệ thống đang xử lý",
+            "pending": "Đang chờ",
+            "processing": "Đang xử lý",
+            "rejected": "Bị từ chối",
+            "processed": "Đã xử lý",
+            "pendingReply": "Đang chờ Trả lời",
+            "replied": "Đã trả lời",
+            "failed": "thất bại"
+          },
+          "buttons": {
+            "end": "Kết thúc",
+            "submit": "Gửi",
+            "thirdPartyForward": "Chuyển tiếp bên thứ ba",
+            "thirdPartyPaymentQuery": "bên thứ ba thanh toán tra cứu",
+            "reject": "Từ chối",
+            "transferToArtificial": "Chuyển Đến thủ công",
+            "close": "tắt",
+            "cancel": "hủy"
+          },
+          "messages": {
+            "operationSuccessful": "Thao tác thành công",
+            "workOrderNumberRequired": "Bắt buộc nhập số phiếu công việc",
+            "forwardSuccessful": "Chuyển tiếp thành công",
+            "currentWorkOrderTypeNotSupported": "Hiện tại work đơn loại không hỗ trợ automatic đang xử lý",
+            "pleaseEnterRemark": "Vui lòng nhập ghi chú",
+            "remarkTooLong": "Ghi chú không được vượt quá 500 ký tự",
+            "remarkNoChineseAllowed": "Ghi chú Không thể contain Chinese ký tự"
+          },
+          "dialog": {
+            "tip": "Gợi ý",
+            "endConversationConfirm": "Kết thúc hội thoại?",
+            "processingCompleteConfirm": "Đang xử lý Hoàn tất Confirmation",
+            "markAsResolvedConfirm": "Bạn có chắc muốn đánh dấu phiếu {workOrderNo} là đã xử lý không?",
+            "confirm": "Xác nhận",
+            "cancel": "hủy",
+            "confirmBtn": "xác nhận"
+          },
+          "placeholders": {
+            "enterRemark": "Nhập ghi chú",
+            "thirdPartyQueryResult": "Kết quả truy vấn bên thứ ba"
+          }
+        }
+      }
+    },
+    "workDailyReport": {
+      "columns": {
+        "employeeName": "Employee Tên",
+        "totalWorkOrders": "Tổng cộng Work Đơn",
+        "processing": "Đang xử lý",
+        "processed": "Đã xử lý",
+        "rejected": "Bị từ chối",
+        "oneToOneWorkOrders": "One-to-One Work Đơn",
+        "totalValidConversations": "Tổng cộng Hợp lệ Conversations",
+        "totalValidConversationRate": "Tổng cộng Hợp lệ Conversation Tỷ lệ",
+        "totalMessages": "Tổng cộng Tin nhắn",
+        "avgConversationDuration": "Trung bình Conversation Thời lượng",
+        "avgFirstResponseDuration": "Trung bình Đầu tiên phản hồi Thời lượng",
+        "workOrderType": "ticket loại",
+        "total": "Tổng cộng",
+        "systemProcessing": "Hệ thống đang xử lý",
+        "pending": "Đang chờ"
+      },
+      "employeeStatistics": "Employee Thống kê",
+      "typeStatistics": "ticket loại thống kê",
+      "operationTime": "ngày"
+    },
+    "frontStyle": {
+      "tenantSwitch": "Chuyển thương nhân",
+      "index": {
+        "title": "Quản lý giao diện giao diện",
+        "currentSiteStyle": "Kiểu website hiện tại",
+        "applyStyleChange": "Áp dụng thay đổi giao diện",
+        "submitStyleModification": "Gửi yêu cầu sửa kiểu giao diện",
+        "previewSubmittedStyle": "Xem trước kiểu đã gửi",
+        "applyRevoke": "Áp dụng thu hồi",
+        "expectedEffectiveTime": "Thời gian dự kiến có hiệu lực",
+        "frontVersionSelection": "giao diện Phiên bản Selection",
+        "componentSelection": "Chọn component",
+        "preview": "Xem trước",
+        "homePage": "Trang chủ",
+        "actions": {
+          "view": "xem"
+        },
+        "dialog": {
+          "confirmSubmitStyleChange": "Bạn có chắc muốn gửi yêu cầu sửa giao diện không?",
+          "confirmRevokeStyleChange": "Bạn có chắc muốn thu hồi yêu cầu sửa giao diện không?",
+          "confirm": "Xác nhận",
+          "cancel": "hủy"
+        },
+        "messages": {
+          "submitSuccess": "Gửi thành công",
+          "operationSuccess": "Thao tác thành công"
+        }
+      },
+      "homeComponent": {
+        "titleBar": "Tiêu đề Bar (Cố định hàng đầu Hiển thị)",
+        "logo": "Biểu trưng",
+        "balance": "số dư",
+        "sidebar": "Thanh bên",
+        "sidebarPosition": "Vị trí cửa sổ bật lên thanh bên",
+        "sidebarMenu": "Trình đơn thanh bên",
+        "sidebarGrid": "Lưới thanh bên",
+        "headerRightIcons": "Đầu trang Right Icons (Tối đa 4)",
+        "selectHomeComponents": "Chọn Trang chủ Hiển thị Components (Kéo thả Sắp xếp)",
+        "gameMenuStyle": "Kiểu trình đơn trò chơi",
+        "bottomTabBar": "Bottom Tab Bar (Kéo thả Sắp xếp)",
+        "positions": {
+          "left": "Trái",
+          "right": "Phải"
+        },
+        "gameStyles": {
+          "sidebarLayout": "Bố cục thanh bên",
+          "navigationLayout": "Bố cục trình đơn điều hướng"
+        },
+        "sorting": "Sắp xếp",
+        "defaultIcon": "Mặc định Biểu tượng",
+        "selectedIcon": "Biểu tượng đã chọn",
+        "messages": {
+          "maxFourIcons": "Chọn Tại most 4 mục",
+          "homeAndPersonalRequired": "Không thể ẩn trang chủ và trung tâm cá nhân",
+          "minThreeTabs": "Giữ ít nhất 3 tab"
+        }
+      },
+      "data": {
+        "headerIcons": {
+          "rank": "Xếp hạng",
+          "message": "tin nhắn",
+          "recharge": "nạp tiền",
+          "withdraw": "rút tiền",
+          "download": "tải xuống",
+          "language": "ngôn ngữ"
+        },
+        "gridList": {
+          "message": "tin nhắn",
+          "download": "tải xuống"
+        },
+        "menuList": {
+          "rechargeRecord": "nạp tiền bản ghi",
+          "withdrawRecord": "rút tiền bản ghi"
+        },
+        "homeComponents": {
+          "swiper": "Băng chuyền",
+          "notice": "thông báo tin nhắn",
+          "game": "Trình đơn trò chơi",
+          "winning": "Winning Thông tin",
+          "ranking": "Xếp hạng",
+          "brand": "Độ tin cậy thương hiệu"
+        },
+        "tabs": {
+          "home": "Trang chủ",
+          "activity": "hoạt động",
+          "promotion": "Khuyến mãi",
+          "wallet": "Ví",
+          "personal": "Cá nhân"
+        },
+        "pageStyles": {
+          "recharge": "nạp tiền",
+          "withdraw": "rút tiền",
+          "activity": "hoạt động",
+          "model": "Thông báo Modal",
+          "avatar": "Ảnh đại diện",
+          "rechargeStyle1": "Kiểu nạp tiền 1",
+          "rechargeStyle2": "Kiểu nạp tiền 2",
+          "withdrawStyle1": "Kiểu rút tiền 1",
+          "withdrawStyle2": "Kiểu rút tiền 2",
+          "activityStyle1": "Kiểu hoạt động 1",
+          "activityStyle2": "Kiểu hoạt động 2",
+          "modelStyle1": "Kiểu modal thông báo 1",
+          "modelStyle2": "Kiểu modal thông báo 2",
+          "modelStyle3": "Kiểu modal thông báo 3",
+          "avatarGroup1": "Nhóm ảnh đại diện 1",
+          "avatarGroup2": "Nhóm ảnh đại diện 2",
+          "avatarGroup3": "Nhóm ảnh đại diện 3"
+        }
+      },
+      "title": "Quản lý giao diện giao diện",
+      "status": {
+        "draft": "Bản nháp",
+        "pending": "chờ duyệt",
+        "published": "Đã phát hành"
+      },
+      "actions": {
+        "saveDraft": "Lưu Bản nháp",
+        "publish": "Phát hành"
+      },
+      "layoutTree": {
+        "title": "Chọn bố cục",
+        "empty": "Không bố cục dữ liệu"
+      },
+      "preview": {
+        "title": "Xem trước",
+        "urlPlaceholder": "Nhập URL xem trước H5",
+        "load": "Tải",
+        "mock": "Mock Xem trước"
+      },
+      "config": {
+        "componentSelect": "Chọn component",
+        "headerBar": "Thanh đầu trang",
+        "fixedTop": "(Cố định ở trên)",
+        "balance": "số dư",
+        "sidebar": "Thanh bên",
+        "headerRightIcons": "Biểu tượng bên phải tiêu đề",
+        "maxFourIcons": "(Tối đa 4)",
+        "iconRank": "Xếp hạng",
+        "iconMessage": "tin nhắn",
+        "iconDeposit": "nạp tiền",
+        "iconWithdraw": "rút tiền",
+        "iconDownload": "tải xuống",
+        "iconLanguage": "ngôn ngữ",
+        "homeComponents": "Chọn Trang chủ Components",
+        "dragToSort": "(Kéo để sắp xếp)",
+        "gameMenuStyle": "Kiểu trình đơn trò chơi",
+        "sidebarLayout": "Bố cục thanh bên",
+        "navigationLayout": "Bố cục thanh điều hướng",
+        "tabBarTitle": "Thanh tab dưới",
+        "sort": "Sắp xếp",
+        "tabName": "tên",
+        "defaultIcon": "Mặc định Biểu tượng",
+        "activeIcon": "Đang hoạt động Biểu tượng",
+        "raised": "Nổi",
+        "addTabItem": "Thêm Tab Mục",
+        "seoTitle": "SEO cấu hình",
+        "seoTitlePlaceholder": "Nhập tiêu đề trang",
+        "seoKeywords": "Từ khóa",
+        "seoKeywordsPlaceholder": "Nhập từ khóas, phân tách Bởi commas",
+        "seoDescription": "Mô tả",
+        "seoDescriptionPlaceholder": "Nhập mô tả trang",
+        "seoFavicon": "Biểu tượng trang web",
+        "seoFaviconPlaceholder": "Vui lòng nhập favicon URL",
+        "seoScripts": "Tùy chỉnh Scripts",
+        "seoScriptsPlaceholder": "Nhập mã script tùy chỉnh"
+      },
+      "components": {
+        "banner": "Biểu ngữ",
+        "announcement": "thông báo tin nhắn",
+        "gameMenu": "Trình đơn trò chơi",
+        "jackpot": "Jackpot Thông tin",
+        "ranking": "Xếp hạng",
+        "brandTrust": "Niềm tin thương hiệu",
+        "quickEntry": "Lối vào nhanh",
+        "gameList": "trò chơi danh sách",
+        "hotGames": "trò chơi hot"
+      },
+      "footer": {
+        "currentStyle": "Hiện tại Kiểu:",
+        "view": "xem",
+        "applyStyle": "Áp dụng thay đổi giao diện:",
+        "submitModify": "Gửi Modification",
+        "previewSubmitted": "Xem trước Đã gửi",
+        "withdraw": "Rút tiền"
+      },
+      "dialog": {
+        "publishTitle": "Phát hành Confirmation",
+        "publishContent": "Bạn có chắc muốn phát hành cấu hình giao diện hiện tại không? Nó sẽ có hiệu lực ngay.",
+        "resetContent": "Bạn có chắc muốn đặt lại toàn bộ cấu hình không? Không thể hoàn tác thao tác này."
+      },
+      "messages": {
+        "loadFailed": "Tải cấu hình thất bại",
+        "saveDraftSuccess": "Lưu thành công",
+        "saveDraftFailed": "lưu thất bại",
+        "publishSuccess": "Đã phát hành thành công",
+        "publishFailed": "Không thể phát hành",
+        "resetSuccess": "Đã đặt lại cấu hình",
+        "viewCurrent": "Xem hiện tại kiểu",
+        "submitStyle": "Gửi kiểu modification",
+        "previewSubmitted": "Xem trước submitted kiểu",
+        "withdraw": "Rút tiền yêu cầu"
+      },
+      "seo": {
+        "title": "SEO cấu hình",
+        "pageTitle": "Trang Tiêu đề",
+        "pageTitlePlaceholder": "Nhập tiêu đề trang",
+        "keywords": "Từ khóa",
+        "keywordsPlaceholder": "Nhập từ khóas, phân tách Bởi commas",
+        "description": "Mô tả",
+        "descriptionPlaceholder": "Nhập mô tả trang",
+        "favicon": "Biểu tượng trang web",
+        "faviconPlaceholder": "Vui lòng nhập favicon URL",
+        "scripts": "Tùy chỉnh Scripts",
+        "scriptsPlaceholder": "Nhập mã script tùy chỉnh (ví dụ: phân tích)"
+      },
+      "tabbar": {
+        "editTitle": "sửa TabBar",
+        "name": "TabBar tên",
+        "namePlaceholder": "Vui lòng nhập TabBar tên",
+        "clientType": "Loại khách hàng",
+        "clientTypePlaceholder": "Chọn máy khách loại",
+        "background": "Nền",
+        "backgroundPlaceholder": "Nhập màu nền hoặc URL ảnh",
+        "previewImage": "Xem trước Hình ảnh",
+        "previewImagePlaceholder": "Nhập URL ảnh xem trước",
+        "newItem": "Mới Tab",
+        "noItems": "Không tab mục",
+        "addItem": "Thêm Tab Mục",
+        "backendName": "Tên backend",
+        "backendNamePlaceholder": "Nhập tên hậu đài",
+        "uniqueKey": "Khóa duy nhất",
+        "uniqueKeyPlaceholder": "Nhập khóa duy nhất",
+        "displayName": "Tên hiển thị ở frontend",
+        "displayNamePlaceholder": "Nhập tên hiển thị",
+        "langCode": "ngôn ngữ",
+        "jumpType": "Loại chuyển hướng",
+        "jumpTypePlaceholder": "Chọn chuyển hướng loại",
+        "jumpTarget": "Mục tiêu nhảy",
+        "jumpTargetPlaceholder": "Nhập mục tiêu (tuyến/ID trò chơi/URL)",
+        "specialType": "Loại đặc biệt",
+        "specialTypePlaceholder": "Chọn special loại",
+        "iconKey": "Biểu tượng Key",
+        "iconKeyPlaceholder": "Nhập khóa tài nguyên skin icon",
+        "activeIconKey": "Đang hoạt động Biểu tượng Key",
+        "activeIconKeyPlaceholder": "Nhập khóa tài nguyên skin icon đang hoạt động",
+        "sort": "Sắp xếp",
+        "visible": "Hiển thị"
+      },
+      "layoutTheme": {
+        "title": "Bố cục & chủ đề",
+        "layout": "Bố cục",
+        "theme": "Chủ đề",
+        "switchPreview": "Chuyển Đến xem trước"
+      },
+      "seoCard": {
+        "title": "SEO cấu hình",
+        "notPreviewable": "Không thể xem trước",
+        "seoTitle": "SEO Tiêu đề",
+        "seoTitlePlaceholder": "Nhập tiêu đề SEO",
+        "seoKeywords": "Từ khóa SEO",
+        "seoKeywordsPlaceholder": "Nhập từ khóa SEO",
+        "seoDescription": "SEO Mô tả",
+        "seoDescriptionPlaceholder": "Nhập mô tả SEO",
+        "favicon": "Biểu tượng trang web",
+        "faviconPlaceholder": "Nhập URL favicon",
+        "customScripts": "Tùy chỉnh Scripts",
+        "customScriptsPlaceholder": "Nhập script tùy chỉnh",
+        "promoImage": "Promo Hình ảnh",
+        "promoImageHint": "Hỗ trợ PNG, tối đa 500KB (tối đa 1000x1000, khuyến nghị 780x440)"
+      },
+      "siteSettings": {
+        "title": "Website Cài đặt",
+        "siteName": "Tên website",
+        "siteNamePlaceholder": "Nhập tên site",
+        "titleBarLogo": "Tiêu đề Bar Logo",
+        "siteLogo2": "Logo website 2",
+        "loginLogo": "Đăng nhập Trang Logo",
+        "pwaLargeIcon": "PWA Lớn Biểu tượng",
+        "pwaMediumIcon": "PWA Medium Biểu tượng",
+        "pwaSmallIcon": "PWA Small Biểu tượng",
+        "appSplash": "Màn hình khởi động APP",
+        "browserIcon": "Trình duyệt & Ứng dụng Biểu tượng",
+        "defaultLanguage": "Mặc định Ngôn ngữ",
+        "logoHint": "Hỗ trợ formats: png, svg, gif, json, webp. Tối đa kích thước: 2MB",
+        "pwaLargeHint": "Tải lên 512px × 512px image. Hỗ trợ: png, webp. Tối đa: 1MB",
+        "pwaMediumHint": "Tải lên 384px × 384px image. Hỗ trợ: png, webp. Tối đa: 1MB",
+        "pwaSmallHint": "Tải lên 192px × 192px image. Hỗ trợ: png, webp. Tối đa: 1MB",
+        "appSplashHint": "Tải lên 640px × 1136px image. Hỗ trợ: png, webp. Tối đa: 1MB",
+        "browserIconHint": "Tải lên 32px × 32px image. Hỗ trợ: png, svg, ico, webp. Tối đa: 10KB",
+        "langHindi": "Tiếng Hindi",
+        "langEnglish": "Tiếng Anh",
+        "langChinese": "Tiếng Trung",
+        "subSiteMaterial": "Website Cài đặt",
+        "subPwa": "PWA cài đặt",
+        "subRegister": "Trang đăng ký",
+        "subLogin": "Đăng nhập Trang",
+        "subAgreement": "Hướng dẫn thỏa thuận",
+        "subApp": "APP cài đặt",
+        "appName": "Tên ứng dụng",
+        "appNamePlaceholder": "Nhập tên ứng dụng",
+        "appIcon": "Ứng dụng Biểu tượng",
+        "appIconHint": "Tải lên app icon. Hỗ trợ: png, webp. Tối đa: 1MB",
+        "appLogo": "Ứng dụng Logo",
+        "appLogoHint": "Tải lên app logo. Hỗ trợ: png, webp. Tối đa: 1MB",
+        "splashImage": "Ảnh khởi động",
+        "splashImageHint": "Tải lên 640px × 1136px image. Hỗ trợ: png, webp. Tối đa: 1MB",
+        "agreementTypes": {
+          "privacy": "Chính sách riêng tư",
+          "risk": "Thỏa thuận rủi ro",
+          "guide": "Hướng dẫn người mới"
+        },
+        "agreement": {
+          "lastUpdateTime": "Thời gian cập nhật cuối",
+          "operator": "Người thao tác",
+          "edit": "sửa",
+          "save": "lưu",
+          "cancel": "hủy",
+          "placeholder": "Nhập nội dung thỏa thuận",
+          "saveSuccess": "Lưu thành công",
+          "contentRequired": "Nội dung Là bắt buộc"
+        },
+        "registerBgTitle": "Cấu hình hình ảnh trang đăng ký",
+        "registerBgDesc": "Cấu hình ảnh nền cho trang đăng ký, hỗ trợ nhiều định dạng ảnh",
+        "registerBgHint": "Hỗ trợ formats:.png,.webp. Tối đa kích thước: 1MB",
+        "loginBgTitle": "Đăng nhập Trang Hình ảnh",
+        "loginBgDesc": "Cấu hình ảnh nền cho trang đăng nhập, hỗ trợ nhiều định dạng ảnh",
+        "loginBgHint": "Hỗ trợ formats:.png,.webp. Tối đa kích thước: 1MB",
+        "pwaName": "Tên ứng dụng PWA",
+        "pwaNamePlaceholder": "Nhập tên ứng dụng PWA (hiển thị khi cài lên màn hình chính)",
+        "sectionBasic": "Thông tin cơ bản",
+        "sectionSiteAsset": "Logo website",
+        "sectionBrand": "Tài sản thương hiệu",
+        "sectionAppIcon": "Biểu tượng PWA"
+      },
+      "currentEdit": {
+        "title": "Hiện tại Editing",
+        "name": "tên:",
+        "jump": "Nhảy:",
+        "status": "trạng thái:",
+        "type": "loại:",
+        "enabled": "bật",
+        "disabled": "tắt",
+        "raised": "Nổi",
+        "normal": "Bình thường"
+      },
+      "tips": {
+        "title": "Gợi ý cấu hình",
+        "tabCount": "Tab số lượng:",
+        "dragToReorder": "Kéo tab để sắp xếp lại",
+        "homeFirst": "Trang chủ nên ở đầu",
+        "oneRaised": "Khuyến nghị chỉ một tab nổi",
+        "iconKeyMatch": "Biểu tượng key must match H5 Tài nguyên",
+        "maxTabs": "Tối đa 6 tab"
+      },
+      "workspace": {
+        "descriptions": {
+          "layout": "Quản lý bố cục web, bố cục di động và chủ đề đang dùng cho thương nhân hiện tại.",
+          "siteMaterial": "Quản lý tên site, ngôn ngữ mặc định, logo và tài sản icon PWA.",
+          "seo": "Quản lý tiêu đề cửa hàng, từ khóa, mô tả và script bổ sung.",
+          "appSettings": "Quản lý tên ứng dụng, icon, logo và ảnh splash.",
+          "login": "Quản lý ảnh nền trang đăng nhập và tài sản hiển thị liên quan.",
+          "register": "Quản lý ảnh nền trang đăng ký và tài sản hiển thị liên quan.",
+          "agreement": "Quản lý nội dung thỏa thuận. Thỏa thuận đa ngôn ngữ được chỉnh sửa và lưu trong panel."
+        },
+        "layoutWebTitle": "Bố cục web",
+        "layoutMobileTitle": "Bố cục di động",
+        "currentConfigured": "Đã cấu hình",
+        "unsetValue": "Chưa đặt",
+        "noLayoutOptions": "Không Bố cục available",
+        "noThemeOptions": "Không Chủ đề available",
+        "confirmDiscardChanges": "Bạn có thay đổi chưa lưu. Bạn có muốn tiếp tục không?",
+        "confirmTenantChange": "Chuyển thương nhân sẽ bỏ các thay đổi chưa lưu. Tiếp tục?",
+        "agreementSaveHint": "Vui lòng chỉnh sửa và lưu thỏa thuận trong panel",
+        "currentTenant": "Hiện tại thương nhân",
+        "synced": "Phần này đã được cập nhật",
+        "dirty": "Có thay đổi chưa lưu",
+        "agreementManaged": "Thỏa thuận được chỉnh sửa và lưu trong panel",
+        "previewTitle": "Storefront Xem trước",
+        "previewHint": "Iframe bên phải nhúng địa chỉ cửa hàng của thương nhân hiện tại.",
+        "scopeTitle": "Phạm vi hiện tại",
+        "scopeEmpty": "Vui lòng chọn một nhóm và thương nhân Đầu tiên",
+        "groupFieldLabel": "Nhóm",
+        "tenantFieldLabel": "thương nhân",
+        "groupSwitch": "Vui lòng chọn nhóm",
+        "tenantSwitch": "Vui lòng chọn thương nhân",
+        "tenantSwitchDisabled": "Vui lòng chọn nhóm Đầu tiên",
+        "tenantSwitchEmpty": "Không Thương nhân available Dưới hiện tại nhóm",
+        "tenantPending": "Thương nhân đang chờ",
+        "groupCount": "Có {count} nhóm khả dụng",
+        "tenantCount": "Có {count} thương nhân trong nhóm hiện tại",
+        "previewAddress": "Storefront Địa chỉ",
+        "previewOpenNewTab": "Mở Trong Mới khung",
+        "previewEmpty": "Vui lòng chọn một thương nhân trước loading storefront xem trước"
+      },
+      "errors": {
+        "tenantNotFound": "Vui lòng chọn một thương nhân Đầu tiên"
+      }
+    }
+  }
+}

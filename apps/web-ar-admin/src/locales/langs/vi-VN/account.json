@@ -1,0 +1,1308 @@
+{
+  "account": {
+    "user": {
+      "title": "thành viên danh sách",
+      "columns": {
+        "userId": "ID thành viên",
+        "account": "Tài khoản thành viên",
+        "nickName": "Biệt danh",
+        "vipLevel": "Cấp VIP",
+        "balance": "nền tảng số dư",
+        "parentId": "cấp trên ID",
+        "generalAgentId": "Tổng đại lý ID",
+        "userType": "tài khoản loại",
+        "state": "tài khoản trạng thái",
+        "isFuncation": "Giới hạn một phần chức năng",
+        "registerTime": "Thời gian đăng ký",
+        "packageName": "Kênh Nguồn",
+        "lastLoginTime": "Thời gian đăng nhập cuối",
+        "inviteCode": "Mã mời",
+        "remark": "ghi chú"
+      },
+      "form": {
+        "selectQueryId": "Chọn Truy vấn ID",
+        "userId": "ID thành viên",
+        "userIdPlaceholder": "Vui lòng nhập ID thành viên",
+        "parentId": "cấp trên ID",
+        "generalAgentId": "Tổng đại lý ID",
+        "account": "Tài khoản thành viên",
+        "accountPlaceholder": "Vui lòng nhập Tài khoản thành viên",
+        "nickName": "Biệt danh",
+        "nickNamePlaceholder": "Vui lòng nhập biệt danh",
+        "vipLevel": "Cấp VIP",
+        "vipLevelPlaceholder": "Vui lòng chọn Cấp VIP",
+        "inviteCode": "Mã mời",
+        "inviteCodePlaceholder": "Vui lòng nhập mã mời",
+        "userType": "tài khoản loại",
+        "userTypePlaceholder": "Vui lòng chọn tài khoản loại",
+        "state": "tài khoản trạng thái",
+        "statePlaceholder": "Vui lòng chọn tài khoản trạng thái",
+        "packageId": "Kênh Nguồn",
+        "packageIdPlaceholder": "Vui lòng chọn kênh nguồn",
+        "timeRange": "Khoảng thời gian",
+        "registerTime": "Thời gian đăng ký",
+        "lastLoginTime": "Thời gian đăng nhập cuối"
+      },
+      "status": {
+        "riskRegion": "Khu vực rủi ro",
+        "online": "Trực tuyến",
+        "offline": "Ngoại tuyến",
+        "yes": "có",
+        "no": "không",
+        "none": "Không có",
+        "official": "Official Kênh"
+      },
+      "actions": {
+        "viewDetails": "xem chi tiết",
+        "edit": "sửa",
+        "disable": "tắt",
+        "enable": "bật",
+        "resetPassword": "Đặt lại mật khẩu",
+        "addTag": "thêm nhãn",
+        "remark": "ghi chú",
+        "freeze": "Đóng băng"
+      },
+      "modals": {
+        "setRemark": "cài đặt ghi chú",
+        "warning": "Cảnh báo",
+        "confirmFreezeAccount": "Bạn có chắc muốn đóng băng tài khoản này không?",
+        "confirmUnlockVipLevel": "Bạn có chắc muốn mở khóa VIP cấp?",
+        "confirmUnlockRechargeLevel": "Bạn có chắc muốn mở khóa hội viên cấp nạp tiền?",
+        "setVipLevel": "Thiết lập Cấp VIP",
+        "setRechargeLevel": "Thiết lập cấp nạp tiền hội viên",
+        "editMemberAccount": "Sửa Tài khoản thành viên",
+        "editAccountStatus": "cài đặt tài khoản trạng thái",
+        "restrictedPermissions": "Giới hạn một phần chức năng",
+        "editMemberGroup": "Sửa Thành viên Nhóm",
+        "removeTag": "xóa nhãn",
+        "setTag": "cài đặt nhãn",
+        "editActualCoding": "Sửa Thực tế Số tiền cược",
+        "editLoginPassword": "Sửa Mật khẩu đăng nhập",
+        "editWithdrawPassword": "Sửa Rút tiền Mật khẩu",
+        "verifyChatRoom": "Sửa Quyền phòng chat",
+        "verifyPhone": "Xác minh Điện thoại",
+        "verifyEmail": "Xác minh Email",
+        "editPhone": "Sửa Điện thoại",
+        "editEmail": "Sửa Email",
+        "editRealName": "Sửa Tên thật"
+      },
+      "messages": {
+        "remarkUpdateSuccess": "Ghi chú cập nhật thành công",
+        "selectLevelRequired": "Vui lòng chọn một cấp!",
+        "vipLevelLockSuccess": "Cấp VIP đã khóa thành công!",
+        "rechargeLevelLockSuccess": "hội viên cấp nạp tiền đã khóa thành công!",
+        "accountUpdateSuccess": "Cập nhật tài khoản thành công",
+        "statusUpdateSuccess": "tài khoản trạng thái đã cập nhật thành công",
+        "selectStatusRequired": "Vui lòng chọn tài khoản trạng thái!",
+        "permissionUpdateSuccess": "Cập nhật giới hạn chức năng thành công",
+        "groupRemoveSuccess": "Xóa nhóm thành công",
+        "groupUpdateSuccess": "hội viên nhóm đã cập nhật thành công",
+        "selectTagRequired": "Vui lòng chọn nhãn",
+        "tagSetSuccess": "cài đặt nhãn thành công",
+        "codingUpdateSuccess": "số vòng cược đã cập nhật thành công",
+        "passwordLengthError": "Mật khẩu độ dài không được nhỏ hơn 6 ký tự",
+        "passwordUpdateSuccess": "Mật khẩu cập nhật thành công",
+        "googleVerifyUpdateSuccess": "Google xác minh cập nhật thành công",
+        "verifySuccess": "Xác minh thành công",
+        "updateSuccess": "Cập nhật thành công",
+        "nameUpdateSuccess": "Tên cập nhật thành công",
+        "chatroomPermissionUpdateSuccess": "Cập nhật quyền phòng chat thành công"
+      },
+      "placeholders": {
+        "inputId": "Vui lòng nhập ID",
+        "inputMemberAccount": "Vui lòng nhập Tài khoản thành viên",
+        "inputPassword": "Vui lòng nhập mật khẩu",
+        "inputActualCoding": "Vui lòng nhập Vòng cược",
+        "inputPhone": "Vui lòng nhập điện thoại",
+        "inputEmail": "Vui lòng nhập email",
+        "inputRealName": "Vui lòng nhập tên thật"
+      },
+      "buttons": {
+        "confirm": "xác nhận",
+        "cancel": "hủy"
+      },
+      "addUser": {
+        "title": "thêm người dùng",
+        "registerType": "Đăng ký Loại",
+        "loginType": "Đăng nhập Phương thức",
+        "phoneRegister": "Đăng ký bằng điện thoại",
+        "emailRegister": "Đăng ký bằng email",
+        "phone": "điện thoại",
+        "email": "Email",
+        "accountType": "tài khoản loại",
+        "accountTypePlaceholder": "Vui lòng chọn tài khoản loại",
+        "memberAccount": "Tài khoản thành viên",
+        "memberAccountPlaceholder": "Vui lòng nhập tài khoản hội viên",
+        "emailPlaceholder": "Vui lòng nhập địa chỉ email",
+        "memberPassword": "Thành viên Mật khẩu",
+        "password": "Mật khẩu",
+        "passwordPlaceholder": "Vui lòng nhập mật khẩu",
+        "memberPasswordPlaceholder": "Vui lòng nhập hội viên mật khẩu",
+        "parentId": "cấp trên ID",
+        "parentIdPlaceholder": "Vui lòng nhập cấp trên ID",
+        "vipLevel": "Cấp VIP",
+        "vipLevelPlaceholder": "Vui lòng chọn Cấp VIP",
+        "remark": "ghi chú",
+        "confirm": "xác nhận",
+        "cancel": "hủy",
+        "submit": "Gửi & Lưu",
+        "addUserButton": "Thêm Người dùng",
+        "maxUserLimit": "Hỗ trợ thêm hàng loạt tối đa 10 người dùng",
+        "minUserRequired": "Vui lòng thêm ít nhất một người dùng",
+        "createSuccess": "tạo thành công",
+        "createFailed": "người dùng tạo thất bại:",
+        "noData": "Không có dữ liệu",
+        "errorInfo": "Thông tin lỗi tại đây, tạm thời thay bằng văn bản"
+      },
+      "wallet": {
+        "createWallet": "Tạo Ví",
+        "editWallet": "Sửa Ví",
+        "realName": "tên",
+        "edit": "sửa",
+        "addWallet": "Thêm Ví",
+        "bankCardInfo": "Thành viên Thẻ ngân hàng Thông tin",
+        "cardNumber": "Số thẻ",
+        "bankInfo": "Ngân hàng Thông tin",
+        "phone": "điện thoại",
+        "email": "Email",
+        "electronicWallet": "Thành viên E-Ví",
+        "accountOrPhone": "tài khoản/điện thoại",
+        "usdtInfo": "Thành viên USDT Thông tin",
+        "usdtType": "USDT loại",
+        "usdtAddress": "USDT Địa chỉ",
+        "addressAlias": "Địa chỉ Bí danh",
+        "walletType": "Loại ví",
+        "account": "tài khoản",
+        "addWalletForm": {
+          "walletType": "Loại ví",
+          "bankName": "ngân hàng tên",
+          "electronicWallet": "Ví điện tử",
+          "walletCategory": "Loại ví",
+          "currencyType": "tiền tệ loại",
+          "bindBankCard": "Liên kết thẻ ngân hàng",
+          "realName": "Tên thật",
+          "cardNo": "Số thẻ",
+          "mobileNo": "Số di động",
+          "email": "Email",
+          "ifscCode": "Mã IFSC",
+          "accountOrMobile": "tài khoản/điện thoại",
+          "networkType": "Loại mạng",
+          "address": "Địa chỉ",
+          "aliasAddress": "Địa chỉ Bí danh",
+          "upiId": "UPI_ID",
+          "placeholders": {
+            "cardNo": "Vui lòng nhập số thẻ",
+            "mobileNo": "Vui lòng nhập số điện thoại",
+            "email": "Vui lòng nhập email",
+            "ifscCode": "Vui lòng nhập IFSC Mã",
+            "accountOrMobile": "Vui lòng nhập tài khoản/điện thoại",
+            "address": "Vui lòng nhập địa chỉ",
+            "aliasAddress": "Vui lòng nhập bí danh địa chỉ",
+            "upiId": "Vui lòng nhập UPI_ID"
+          },
+          "messages": {
+            "editSuccess": "sửa Thao tác thành công",
+            "addSuccess": "thêm Thao tác thành công"
+          },
+          "buttons": {
+            "cancel": "hủy",
+            "save": "lưu"
+          }
+        }
+      },
+      "sameIP": {
+        "title": "cùng IP",
+        "columns": {
+          "userId": "ID thành viên",
+          "vipLevel": "Cấp VIP",
+          "balance": "số dư",
+          "parentId": "cấp trên ID",
+          "generalAgentId": "Tổng đại lý ID",
+          "userType": "tài khoản loại",
+          "channelName": "Nguồn Kênh",
+          "lastLoginTime": "Thời gian đăng nhập cuối",
+          "remark": "ghi chú",
+          "registerTime": "Thời gian đăng ký"
+        },
+        "status": {
+          "none": "Không có"
+        }
+      },
+      "detail": {
+        "title": "người dùng chi tiết ({userId})",
+        "tabs": {
+          "basicInfo": "Thông tin cơ bản",
+          "walletInfo": "Ví Thông tin",
+          "accountChange": "Biến động tài khoản",
+          "betInfo": "Betting Thông tin",
+          "riskInfo": "Thông tin rủi ro",
+          "userValue": "Người dùng Giá trị"
+        }
+      },
+      "accountChange": {
+        "columns": {
+          "orderNo": "Mã đơn",
+          "type": "Loại thay đổi",
+          "beforeAmount": "Số tiền trước thay đổi",
+          "amount": "Số tiền thay đổi",
+          "backAmount": "Số tiền sau thay đổi",
+          "createTime": "Thời gian thay đổi",
+          "remark": "ghi chú"
+        },
+        "form": {
+          "financialType": "Loại thay đổi",
+          "financialTypePlaceholder": "Vui lòng chọn loại thay đổi"
+        },
+        "checkbox": {
+          "onlySearchFromLastWithdrawal": "Chỉ tra cứu từ lần rút gần nhất đến hiện tại"
+        }
+      },
+      "userValue": {
+        "columns": {
+          "category": "Danh mục",
+          "userCount": "Số người dùng theo cấp",
+          "rechargeCount": "Nạp tiền Người dùng",
+          "rechargeAmount": "Tổng cộng Số tiền nạp",
+          "withdrawCount": "Rút tiền Người dùng",
+          "withdrawAmount": "Tổng cộng Số tiền rút",
+          "diffAmount": "Chênh lệch nạp-rút"
+        },
+        "summary": {
+          "total": "Tổng cộng"
+        }
+      },
+      "userRisk": {
+        "title": "Thông tin liên kết rủi ro",
+        "messages": {
+          "noRelatedAccount": "Không có tài khoản liên kết"
+        },
+        "modal": {
+          "title": "Thiết bị Tài khoản liên kết Danh sách",
+          "title2": "Danh sách tài khoản liên kết"
+        },
+        "columns": {
+          "userId": "ID thành viên",
+          "totalRecharge": "Tổng cộng Thành viên Nạp tiền",
+          "totalWithdraw": "Tổng cộng Thành viên Rút tiền",
+          "walletBalance": "thành viên số dư",
+          "registerTime": "Thời gian đăng ký",
+          "lastLoginTime": "Thời gian đăng nhập cuối"
+        },
+        "relatedInfo": "Thông tin liên kết:",
+        "relatedAccountCount": "Tài khoản liên kết Số lượng",
+        "viewRelatedAccounts": "Xem Liên kết Tài khoảns",
+        "exportFileName": "Thiết bị Tài khoản liên kết Báo cáo",
+        "riskTypes": {
+          "bindDevice": "đã liên kết thiết bị",
+          "bindFingerprint": "đã liên kết trình duyệt Dấu vân tay",
+          "lastLoginDevice": "Cuối cùng Đăng nhập Thiết bị",
+          "lastLoginFingerprint": "Cuối cùng Đăng nhập Trình duyệt Dấu vân tay",
+          "loginIP": "đăng nhập IP",
+          "registerIP": "IP đăng ký",
+          "bankAccount": "Tài khoản ngân hàng",
+          "usdtAccount": "USDT tài khoản"
+        }
+      },
+      "info": {
+        "basicInfo": {
+          "title": "Tài khoản Thông tin cơ bản",
+          "memberAccount": "Tài khoản thành viên",
+          "memberId": "ID thành viên",
+          "parentId": "cấp trên ID",
+          "generalAgentId": "Tổng đại lý ID",
+          "memberNickname": "Thành viên Biệt danh",
+          "vipLevel": "Cấp VIP",
+          "rechargeLevel": "Nạp tiền Cấp",
+          "accountStatus": "tài khoản trạng thái",
+          "memberGroup": "thành viên nhóm",
+          "memberTags": "thành viên nhãn",
+          "autoTags": "nền tảng nhãn tự động",
+          "remark": "ghi chú",
+          "none": "Không có",
+          "actions": {
+            "view": "xem",
+            "edit": "sửa",
+            "modify": "Chỉnh sửa",
+            "remove": "Xóa",
+            "add": "thêm",
+            "set": "cài đặt",
+            "lockable": "Có thể khóa",
+            "needUnlock": "Cần mở khóa"
+          },
+          "confirmMessages": {
+            "removeGroup": "Bạn có chắc muốn xóa nhóm này không?"
+          }
+        },
+        "fundInfo": {
+          "title": "Tài khoản Quỹ Thông tin",
+          "platformBalance": "nền tảng số dư",
+          "arGameBalance": "ArGame số dư",
+          "safeBoxBalance": "Số dư két an toàn",
+          "freezeAmount": "Rút tiền Đã đóng băng Số tiền"
+        },
+        "todayActivity": {
+          "title": "Thông tin hoạt động hôm nay",
+          "betAmount": "Số tiền cược",
+          "betAmountTooltip": "Tổng số tiền cược hôm nay của hội viên",
+          "prizeAmount": "số tiền thưởng",
+          "prizeAmountTooltip": "Tổng tiền thưởng hôm nay của hội viên",
+          "codingAmount": "Vòng cược",
+          "codingAmountTooltip": "Tổng vòng cược hôm nay của hội viên (số tiền cược xổ số + số tiền hợp lệ của trò chơi bên thứ ba)",
+          "activityReward": "Thưởng hoạt động",
+          "activityRewardTooltip": "Tổng thưởng hoạt động hôm nay của hội viên",
+          "todayRecharge": "Nạp tiền hôm nay",
+          "todayRechargeTooltip": "Tổng số tiền nạp hôm nay của hội viên",
+          "todayWithdraw": "Rút tiền hôm nay",
+          "todayWithdrawTooltip": "Tổng số tiền rút hôm nay của hội viên",
+          "totalCoding": "Tổng cộng Số tiền cược",
+          "totalCodingTooltip": "Số vòng cược phát sinh kể từ lần rút tiền gần nhất của hội viên",
+          "actualCoding": "Thực tế Số tiền cược",
+          "actualCodingTooltip": "Số vòng cược dùng để kiểm tra rút tiền; nếu thấp hơn yêu cầu thì sẽ chặn rút tiền",
+          "needCoding": "Bắt buộc Số tiền cược",
+          "needCodingTooltip": "Số vòng cược bắt buộc để hội viên rút tiền"
+        },
+        "summaryData": {
+          "title": "Dữ liệu tổng quan tài khoản",
+          "totalBet": "Tổng Bets",
+          "totalBetTooltip": "Tổng số tiền cược lũy kế kể từ khi hội viên đăng ký",
+          "totalPrize": "Tổng Prizes",
+          "totalPrizeTooltip": "Tổng số tiền thưởng lũy kế kể từ khi hội viên đăng ký",
+          "totalCoding": "Tổng vòng cược",
+          "totalCodingTooltip": "Tổng cược hợp lệ của hội viên",
+          "totalRecharge": "Tổng cộng Nạp tiền",
+          "totalRechargeTooltip": "Tổng số tiền nạp lũy kế kể từ khi hội viên đăng ký",
+          "totalRechargeCount": "Tổng cộng Số lần nạp",
+          "totalRechargeCountTooltip": "Tổng số lần nạp lũy kế kể từ khi hội viên đăng ký",
+          "totalWithdraw": "Tổng cộng Rút tiền",
+          "totalWithdrawTooltip": "Tổng số tiền rút lũy kế kể từ khi hội viên đăng ký",
+          "totalWithdrawCount": "Tổng cộng Số lần rút",
+          "totalWithdrawCountTooltip": "Tổng số lần rút lũy kế kể từ khi hội viên đăng ký",
+          "totalActivityReward": "Tổng thưởng hoạt động",
+          "totalActivityRewardTooltip": "Tổng thưởng hoạt động số tiền đã nhận kể từ đăng ký hội viên",
+          "totalCommission": "Tổng cộng Hoa hồng Earned",
+          "totalCommissionTooltip": "Tổng số tiền hoa hồng kiếm được kể từ khi hội viên đăng ký"
+        },
+        "securityInfo": {
+          "title": "Tài khoản Bảo mật Thông tin",
+          "loginPassword": "Mật khẩu đăng nhập",
+          "withdrawPassword": "Rút tiền Mật khẩu",
+          "googleAuth": "Xác thực Google",
+          "enabled": "Đã bật",
+          "disabled": "Đã tắt",
+          "enable": "bật",
+          "disable": "tắt",
+          "bindPhone": "Đã liên kết điện thoại",
+          "bindEmail": "Đã liên kết Email",
+          "notBound": "Chưa liên kết",
+          "actions": {
+            "view": "xem",
+            "verify": "Xác minh",
+            "modify": "Chỉnh sửa"
+          },
+          "confirmMessages": {
+            "googleAuth": "Bạn có chắc muốn {action} Google Authentication?"
+          }
+        },
+        "registerLogin": {
+          "title": "Thông tin đăng ký và đăng nhập",
+          "registerTime": "Thời gian đăng ký",
+          "registerIP": "IP đăng ký",
+          "channelSource": "Kênh Nguồn",
+          "registerDomain": "Tên miền đăng ký",
+          "registerDevice": "Đăng ký Thiết bị số",
+          "registerFingerprint": "Dấu vân tay trình duyệt đăng ký",
+          "lastLoginTime": "Thời gian đăng nhập cuối",
+          "lastLogoutTime": "Thời gian đăng xuất cuối",
+          "lastLoginIP": "IP đăng nhập cuối",
+          "lastLoginDomain": "Cuối cùng Đăng nhập Tên miền",
+          "lastLoginDevice": "Cuối cùng Đăng nhập Thiết bị",
+          "lastLoginFingerprint": "Cuối cùng Đăng nhập Trình duyệt Dấu vân tay"
+        }
+      }
+    },
+    "inlineUser": {
+      "title": "trực tuyến thành viên",
+      "columns": {
+        "userId": "ID thành viên",
+        "account": "Tài khoản thành viên",
+        "nickName": "Biệt danh",
+        "vipLevel": "Cấp VIP",
+        "walletBalance": "số dư",
+        "isOnline": "trực tuyến trạng thái",
+        "registerTime": "Thời gian đăng ký",
+        "lastLoginTime": "Thời gian đăng nhập cuối"
+      },
+      "form": {
+        "userId": "ID thành viên",
+        "userIdPlaceholder": "Vui lòng nhập ID thành viên",
+        "account": "Tài khoản thành viên",
+        "accountPlaceholder": "Vui lòng nhập Tài khoản thành viên",
+        "nickName": "Biệt danh",
+        "nickNamePlaceholder": "Vui lòng nhập biệt danh"
+      },
+      "status": {
+        "online": "Trực tuyến",
+        "offline": "Ngoại tuyến"
+      }
+    },
+    "memberTag": {
+      "title": "nền tảng nhãn tự động",
+      "pageTitle": "thành viên nhãn quản lý",
+      "menual": {
+        "title": "nhãn thủ công"
+      },
+      "basic": {
+        "tag": "Nhãn cơ bản chỉ tham gia tính toán điều kiện thuộc tính cơ bản",
+        "title": "Cơ bản nhãn",
+        "condition": "Thuộc tính điều kiện",
+        "conditionPlaceholder": "Vui lòng chọn thuộc tính điều kiện",
+        "conditionMinValueRangeError": "Giá trị tối thiểu của điều kiện không được nhỏ hơn {min}, và giá trị tối đa không được lớn hơn {max}",
+        "noZeroError": "Điều kiện giá trị không được nhỏ hơn {min}",
+        "addTags": "thêm nhãn",
+        "editTags": "sửa nhãn",
+        "tagName": "nhãn tên",
+        "conditionProperty": "Thuộc tính điều kiện",
+        "conditionMinValue": "Giá trị tối thiểu",
+        "conditionMaxValue": "Giá trị tối đa",
+        "tagNamePlaceholder": "Vui lòng nhập tên nhãn",
+        "conditionPropertyPlaceholder": "Vui lòng chọn thuộc tính điều kiện",
+        "conditionMinValuePlaceholder": "Vui lòng nhập giá trị tối thiểu",
+        "conditionMaxValuePlaceholder": "Vui lòng nhập tối đa giá trị",
+        "columns": {
+          "tagId": "nhãn ID",
+          "tagName": "nhãn tên",
+          "conditionProperty": "Thuộc tính điều kiện",
+          "conditionRange": "Phạm vi điều kiện",
+          "lastUpdateTime": "Thời gian cập nhật cuối",
+          "lastOperator": "Cuối cùng Người thao tác",
+          "state": "trạng thái"
+        }
+      },
+      "assemble": {
+        "tag": "Nhãn tổng hợp dùng để kết hợp nhiều nhãn cơ bản thành quy tắc lọc người dùng phức tạp",
+        "title": "Nhãn tổng hợp",
+        "basic": "Nhãn cơ bản",
+        "basicPlaceholder": "Vui lòng chọn nhãn cơ bản",
+        "compositePlaceholder": "Vui lòng chọn nhãn tổng hợp",
+        "addTags": "thêm nhãn",
+        "editTags": "sửa nhãn",
+        "rules": "Quy tắc kết hợp",
+        "checkDetails": "xem chi tiết",
+        "description": "Chỉ được chọn một trong kênh nguồn hoặc nhóm đại lý. Không chọn nghĩa là tất cả. Hỗ trợ chọn nhiều mục.",
+        "tips": "Hướng dẫn quy tắc kết hợp",
+        "tipsRule1": "Phải cấu hình ít nhất một nhóm điều kiện",
+        "tipsRule2": "Các nhãn trong cùng nhóm là HOẶC (bất kỳ điều kiện nào thỏa mãn)",
+        "tipsRule3": "Các nhóm khác nhau là VÀ (tất cả phải thỏa mãn)",
+        "tipsRule4": "Ví dụ: nhóm 1 (nạp 200+ hoặc nạp 500+) và nhóm 2 (VIP3 trở lên) = người dùng có nạp trên 200 và VIP3 trở lên",
+        "conditionGroup": "Nhóm điều kiện",
+        "minChoiceOne": "Chọn ít nhất một nhãn cơ bản",
+        "conditionGroupPlaceholder": "Vui lòng chọn nhãn cơ bản (HOẶC trong nhóm)",
+        "conditionGroupLimit": "thêm điều kiện nhóm (tối đa {0} nhóm)",
+        "preview": "Xem trước quy tắc kết hợp",
+        "conditionGroupNum": "Tổng số người dùng trúng",
+        "detailMemberIds": "ID thành viên",
+        "detailMemberVIP": "Cấp VIP",
+        "configFilterCondition": "Vui lòng cấu hình điều kiện lọc",
+        "detailMemberTotalRecharge": "Tổng cộng Số lần nạp",
+        "detailMemberTotalRechargeAmount": "Tổng cộng Số tiền nạp",
+        "detailMemberTotalWithdraw": "Tổng cộng Số lần rút",
+        "detailMemberTotalWithdrawAmount": "Tổng cộng Số tiền rút",
+        "detailMemberActivityAmount": "Tổng cộng Hoạt động Số tiền",
+        "registerTime": "Thời gian đăng ký",
+        "loginTime": "Thời gian đăng nhập",
+        "export": "xuất",
+        "exportWithPhone": "Xuất kèm số điện thoại",
+        "tagName": "nhãn tên",
+        "conditionProperty": "Thuộc tính điều kiện",
+        "conditionMinValue": "Giá trị tối thiểu",
+        "conditionMaxValue": "Giá trị tối đa",
+        "tagNamePlaceholder": "Vui lòng nhập tên nhãn",
+        "conditionPropertyPlaceholder": "Vui lòng chọn thuộc tính điều kiện",
+        "conditionMinValuePlaceholder": "Vui lòng nhập giá trị tối thiểu",
+        "conditionMaxValuePlaceholder": "Vui lòng nhập tối đa giá trị",
+        "userId": "người dùng ID",
+        "userPlaceholder": "Vui lòng nhập người dùng ID",
+        "combinePlaceholder": "Vui lòng chọn nhãn tổng hợp",
+        "columns": {
+          "tagId": "nhãn ID",
+          "tagName": "nhãn tên",
+          "group": "Proxy Nhóm",
+          "conditionProperty": "Thuộc tính điều kiện",
+          "conditionRange": "Phạm vi điều kiện",
+          "lastUpdateTime": "Thời gian cập nhật cuối",
+          "lastOperator": "Cuối cùng Người thao tác",
+          "state": "trạng thái"
+        }
+      },
+      "manage": {
+        "title": "nhãn quản lý",
+        "createAutoTag": "tạo nhãn tự động",
+        "columns": {
+          "tagId": "nhãn ID",
+          "tagName": "nhãn tên",
+          "tagType": "nhãn loại",
+          "tagPriority": "nhãn Ưu tiên",
+          "triggerFrequency": "Tần suất kích hoạt",
+          "tagValidDay": "nhãn hợp lệ ngày",
+          "state": "trạng thái",
+          "createTime": "Thời gian tạo",
+          "lastUpdateTime": "Thời gian cập nhật cuối"
+        },
+        "form": {
+          "tagName": "nhãn tên",
+          "tagNamePlaceholder": "Vui lòng nhập nhãn tên",
+          "tagType": "nhãn loại",
+          "tagTypePlaceholder": "Vui lòng chọn nhãn loại",
+          "state": "trạng thái"
+        },
+        "status": {
+          "enable": "bật",
+          "disable": "tắt",
+          "permanent": "Vĩnh viễn",
+          "unknown": "Không xác định"
+        },
+        "actions": {
+          "preview": "Xem trước",
+          "distributeRecord": "phân bố Bản ghi",
+          "delete": "xóa",
+          "edit": "sửa",
+          "create": "tạo nhãn tự động mới"
+        },
+        "modal": {
+          "tagPreview": "nhãn Xem trước"
+        }
+      },
+      "distribute": {
+        "title": "nhãn phân bố",
+        "stats": {
+          "totalTagCount": "Tổng số lượt gán nhãn",
+          "validUserCount": "hợp lệ hội viên số lượng với nhãn",
+          "totalUserRate": "hợp lệ hội viên tỷ lệ với nhãn",
+          "triggerCondition": "Điều kiện kích hoạt"
+        },
+        "columns": {
+          "userId": "ID thành viên",
+          "autoTagName": "nhãn tên",
+          "createTime": "Thời gian gán",
+          "state": "Trạng thái gán",
+          "isValid": "Hợp lệ",
+          "expiredTime": "Thời gian hết hạn",
+          "permanent": "Vĩnh viễn"
+        },
+        "form": {
+          "autoTagId": "nhãn tên",
+          "autoTagIdPlaceholder": "Vui lòng chọn nhãn tên",
+          "userId": "ID thành viên",
+          "userIdPlaceholder": "Vui lòng nhập ID thành viên",
+          "isValid": "Trạng thái gán",
+          "state": "Hợp lệ Trạng thái",
+          "time": "Thời gian gán"
+        },
+        "status": {
+          "all": "tất cả",
+          "success": "thành công",
+          "failed": "thất bại",
+          "valid": "Hợp lệ",
+          "invalid": "Không hợp lệ"
+        },
+        "messages": {
+          "selectTagWarning": "Vui lòng chọn nhãn tên"
+        }
+      },
+      "implement": {
+        "title": "Bản ghi thực thi",
+        "columns": {
+          "autoTagId": "ID thực thi",
+          "autoTagName": "nhãn Thông tin",
+          "autoTagType": "nhãn loại",
+          "triggerFrequency": "Tần suất kích hoạt",
+          "executeDate": "Thời gian thực thi",
+          "calcUserCount": "Tổng số người dùng được kích hoạt",
+          "matchUserCount": "Người dùng đã khớp",
+          "addUserCount": "Người dùng mới được thêm",
+          "expireUserCount": "Người dùng đã hết hạn",
+          "hitRate": "Trúng Tỷ lệ",
+          "executeState": "Trạng thái thực thi",
+          "executeUsedTime": "Thời lượng thực thi"
+        },
+        "form": {
+          "autoTagName": "nhãn tên",
+          "autoTagNamePlaceholder": "Vui lòng nhập nhãn tên",
+          "autoTagType": "nhãn loại",
+          "autoTagTypePlaceholder": "Vui lòng chọn loại kích hoạt",
+          "executeState": "Trạng thái thực thi",
+          "executeStatePlaceholder": "Vui lòng chọn trạng thái thực thi",
+          "time": "Thời gian thực thi"
+        },
+        "status": {
+          "all": "tất cả",
+          "success": "thành công",
+          "failed": "thất bại",
+          "unknown": "Không xác định"
+        },
+        "actions": {
+          "detail": "chi tiết",
+          "distributeRecord": "phân bố Bản ghi"
+        },
+        "modal": {
+          "executeDetail": "Chi tiết thực thi"
+        }
+      },
+      "implementDetail": {
+        "executeLog": "Nhật ký thực thi",
+        "viewDistributeRecord": "Xem phân bố Bản ghi"
+      },
+      "analyze": {
+        "title": "nhãn phân tích",
+        "form": {
+          "selectTagsPlaceholder": "Chọn nhãn để phân tích",
+          "analyzeButton": "phân tích",
+          "cycleTimes": {
+            "last7Days": "Cuối cùng 7 ngày",
+            "last15Days": "Cuối cùng 15 ngày",
+            "last30Days": "Cuối cùng 30 ngày",
+            "last60Days": "Cuối cùng 60 ngày",
+            "last90Days": "Cuối cùng 90 ngày"
+          }
+        },
+        "charts": {
+          "hitRateComparison": "nhãn Trúng tỷ lệ so sánh",
+          "matchTrend": "nhãn Khớp số lượng Xu hướng",
+          "analysisData": "nhãn phân tích dữ liệu",
+          "hitRate": "Trúng Tỷ lệ",
+          "matchCount": "Khớp Số lượng"
+        },
+        "columns": {
+          "autoTagName": "nhãn tên",
+          "totalMatchCount": "Tổng số người dùng được kích hoạt",
+          "totalTriggerUserCount": "nhãn Khớp số lượng",
+          "hitRate": "nhãn Trúng tỷ lệ",
+          "matchRate": "Trúng Tỷ lệ Xu hướng",
+          "validRate": "Tỷ lệ hiệu lực nhãn"
+        },
+        "messages": {
+          "selectTagsWarning": "Vui lòng chọn nhãn để phân tích",
+          "maxSelectionWarning": "Chọn tối đa 5 mục"
+        }
+      },
+      "viewTag": {
+        "triggerCondition": "Điều kiện kích hoạt",
+        "close": "tắt"
+      },
+      "gamerang": {
+        "selectGameCategory": "Vui lòng chọn danh mục trò chơi",
+        "selectGameVendor": "Vui lòng chọn nhà cung cấp trò chơi (tùy chọn)",
+        "allGames": "tất cả trò chơi",
+        "allGamesSelected": "Đã chọn tất cả trò chơi, không cần thêm khoảng",
+        "maxGameRanges": "Có thể thêm tối đa {max} khoảng trò chơi"
+      },
+      "publicData": {
+        "triggerFrequency": {
+          "daily": "Kích hoạt hằng ngày",
+          "weekly": "Kích hoạt hằng tuần"
+        },
+        "withdrawState": {
+          "pass": "Đã phê duyệt",
+          "reject": "Bị từ chối"
+        },
+        "rechargeType": {
+          "all": "Tất cả Nạp tiền",
+          "first": "Nạp đầu",
+          "repeat": "Nạp lại"
+        },
+        "withdrawType": {
+          "all": "Tất cả Rút tiền",
+          "first": "Đầu tiên Rút tiền",
+          "repeat": "Rút lại"
+        },
+        "activityType": {
+          "any": "Bất kỳ Hoạt động",
+          "daily": "Hằng ngày Hoạt động",
+          "cycle": "chu kỳ Hoạt động",
+          "special": "Hoạt động đặc biệt"
+        },
+        "activityStatus": {
+          "all": "Tất cả Trạng thái",
+          "participated": "Đã tham gia",
+          "completed": "Hoàn tất",
+          "participate": "Tham gia",
+          "complete": "Hoàn tất"
+        },
+        "inviteStatus": {
+          "any": "Bất kỳ",
+          "registered": "Đã đăng ký",
+          "recharged": "Đã nạp tiền",
+          "betted": "Đã cược",
+          "bankCardBound": "thẻ ngân hàng đã liên kết"
+        },
+        "accountType": {
+          "mobile": "điện thoại tài khoản",
+          "email": "email tài khoản"
+        },
+        "conditionType": {
+          "recharge": "Tổng cộng Nạp tiền",
+          "withdraw": "Tổng cộng Rút tiền",
+          "validBet": "Cược hợp lệ",
+          "loss": "Tổng lỗ",
+          "vipLevel": "Cấp VIP",
+          "register": "Thời gian đăng ký",
+          "dateRange": "Khoảng ngày"
+        },
+        "comparison": {
+          "greaterEqual": "Lớn hơn hoặc bằng",
+          "lessEqual": "Nhỏ hơn hoặc bằng",
+          "contains": "Chứa",
+          "notContains": "Không chứa",
+          "between": "Trong khoảng",
+          "before": "Trước",
+          "after": "Sau"
+        },
+        "messages": {
+          "registerUser": "đã đăng ký Người dùng",
+          "registeredWith": "Người dùng đã đăng ký với {accountType}",
+          "registeredVia": "Người dùng đã đăng ký qua {channel}",
+          "registeredBetween": "Người dùng đã đăng ký {time}",
+          "registeredViaBetween": "Người dùng đã đăng ký {time} qua {channel} với {accountType}",
+          "timePeriod": "từ {start} đến {end}",
+          "loginConditionInvalid": "Điều kiện kích hoạt đăng nhập không hợp lệ, vui lòng kiểm tra cấu hình",
+          "loginWithinDays": "Đăng nhập trong vòng {days} ngày",
+          "loginDays": "{days} ngày",
+          "loginTimes": "{times} lần",
+          "loginAndTimes": "và đăng nhập {times} lần",
+          "betConditionInvalid": "số tiền cược điều kiện kích hoạt không hợp lệ, vui lòng kiểm tra cấu hình",
+          "betAmountReached": "số tiền đạt {amount}",
+          "withinDays": "trong vòng {days} ngày",
+          "validBetText": "Cược hợp lệ",
+          "inGames": "Trong {games}",
+          "lossConditionInvalid": "thua lỗ điều kiện kích hoạt không hợp lệ, vui lòng kiểm tra cấu hình",
+          "lossAmountReached": "số tiền thua lỗ đạt {amount}",
+          "lossRateReached": "thua lỗ tỷ lệ đạt {rate}%",
+          "and": "và",
+          "userLevelConditionInvalid": "người dùng cấp điều kiện kích hoạt không hợp lệ, vui lòng kiểm tra cấu hình",
+          "vipLevelText": "Cấp VIP là {levels}",
+          "keepDays": "và duy trì hơn {days} ngày",
+          "withdrawConditionInvalid": "rút tiền điều kiện kích hoạt không hợp lệ, vui lòng kiểm tra cấu hình",
+          "withdrawTimes": "Rút tiền {times} lần",
+          "totalAmountReached": ", tổng số tiền đạt {amount}",
+          "auditStatus": "và xét duyệt {status}",
+          "withdrawAmountReached": "số tiền rút đạt {amount} trong vòng {days} ngày",
+          "rechargeConditionInvalid": "nạp tiền điều kiện kích hoạt không hợp lệ, vui lòng kiểm tra cấu hình",
+          "rechargeTimes": "Nạp tiền {times} lần",
+          "rechargeAmountReached": "số tiền nạp đạt {amount} trong vòng {days} ngày",
+          "via": "Qua {channels}",
+          "inviteConditionInvalid": "Mời bạn bè điều kiện kích hoạt không hợp lệ, vui lòng kiểm tra cấu hình",
+          "invite": "Mời {count}",
+          "friend": "bạn bè",
+          "inviteeNeedRecharge": ", người được mời cần hoàn tất tối thiểu {amount} nạp tiền trong vòng {days} ngày",
+          "inviteeNeedRechargeMin": "và người được mời cần hoàn tất tối thiểu {amount} nạp tiền",
+          "vipLevelAbove": "{level} trở lên Thành viên",
+          "conditionGroup": "Nhóm điều kiện {index}",
+          "or": "hoặc",
+          "amountBetween": "{min}≤ {type} ≤{max}",
+          "amountLessEqual": "{type} ≤ {amount}",
+          "amountGreaterEqual": "{type} ≥ {amount}",
+          "vipLevelGreaterEqual": "VIP cấp lớn hơn hoặc bằng {level}",
+          "vipLevelLessEqual": "VIP cấp nhỏ hơn hoặc bằng {level}",
+          "vipLevelContains": "VIP cấp chứa {levels}",
+          "vipLevelNotContains": "VIP cấp không chứa {levels}",
+          "registerTimeBetween": "Thời gian đăng ký từ {start} đến {end}",
+          "registerTimeAfter": "Thời gian đăng ký sau {time}",
+          "registerTimeBefore": "Thời gian đăng ký trước {time}",
+          "timeRange": "Khoảng thời gian: {days} ngày gần đây",
+          "separator": "、",
+          "vipLevelIs": "Cấp VIP là {levels}",
+          "loginTriggerConditionInvalid": "Điều kiện kích hoạt đăng nhập không hợp lệ, vui lòng kiểm tra cấu hình",
+          "loginDaysAndTimes": "{loginDayRange} {loginDayNum} và đăng nhập {loginCount}",
+          "days": "{days} ngày",
+          "times": "{times} lần",
+          "inviteCount": "mời {count} người",
+          "validBet": "Cược hợp lệ",
+          "amountReached": "số tiền đạt {amount}"
+        }
+      }
+    },
+    "verifyCode": {
+      "title": "mã xác minh bản ghi",
+      "columns": {
+        "account": "tài khoản",
+        "type": "Mục đích",
+        "code": "mã xác minh",
+        "createTime": "Thời gian tạo"
+      },
+      "form": {
+        "account": "tài khoản",
+        "accountPlaceholder": "Vui lòng nhập tài khoản",
+        "type": "loại",
+        "typePlaceholder": "Vui lòng chọn tra cứu loại",
+        "createTime": "Thời gian tạo"
+      },
+      "types": {
+        "sms": "SMS",
+        "email": "Email"
+      }
+    },
+    "vip": {
+      "title": "thành viên VIP quản lý",
+      "tabs": {
+        "userStats": "VIP người dùng thống kê",
+        "basicConfig": "Cấu hình cơ bản VIP",
+        "levelConfig": "Cấp VIP cài đặt",
+        "logRecord": "VIP nhật ký bản ghi"
+      },
+      "columns": {
+        "level": "Cấp",
+        "name": "tên",
+        "privileges": "Đặc quyền",
+        "requirements": "Yêu cầu"
+      },
+      "userCount": {
+        "name": "tên",
+        "count": "Số lượng"
+      },
+      "config": {
+        "title": "Cấp VIP cấu hình",
+        "editSuccess": "sửa Cấp VIP cấu hình thành công",
+        "sections": {
+          "upgrade": "Nâng cấp",
+          "relegation": "Giữ hạng",
+          "monthlyReward": "Thưởng hằng tháng",
+          "weeklyReward": "Thưởng hằng tuần",
+          "profit": "Quyền lợi",
+          "washRatio": "Mã washing ratio (%)"
+        },
+        "fields": {
+          "upgradeRecharge": "Upgrade Nạp tiền:",
+          "upgradeBetCode": "Upgrade Số tiền cược:",
+          "upgradeRewards": "Nâng cấp Thưởng:",
+          "monthRelegationRecharge": "Hằng tháng Relegation Nạp tiền:",
+          "monthRelegationBetCode": "Hằng tháng Relegation Vòng cược:",
+          "monthRewardRecharge": "Hằng tháng Thưởng Nạp tiền:",
+          "monthRewardBetCode": "Hằng tháng thưởng Vòng cược:",
+          "monthReward": "Hằng tháng Thưởng:",
+          "weekRewardRecharge": "Hằng tuần Thưởng Nạp tiền:",
+          "weekRewardBetCode": "Hằng tuần thưởng Vòng cược:",
+          "weekReward": "Hằng tuần Thưởng:",
+          "dayWithdrawAmount": "Hằng ngày Số tiền rút:",
+          "dayWithdrawCount": "Hằng ngày Số lần rút:",
+          "dayWithdrawNoFeeCount": "Hằng ngày Miễn phí Số lần rút:"
+        },
+        "buttons": {
+          "cancel": "hủy",
+          "save": "lưu"
+        }
+      },
+      "basicConfig": {
+        "operationTime": "Thời gian thao tác",
+        "operator": "Người thao tác",
+        "configValue": "Cấu hình Giá trị (Old -> Mới)",
+        "operationSuccess": "Thao tác thành công",
+        "enableVipFunction": "Bật VIP Function",
+        "yes": "có",
+        "no": "không",
+        "vipDescription": "Khi bật, hội viên có thể nâng cấp VIP dựa trên số tiền cược để nhận quyền lợi tương ứng",
+        "maxVipLevel": "Nền tảng tối đa Cấp VIP",
+        "confirm": "Xác nhận",
+        "cancel": "hủy",
+        "maxVipLevelDescription": "Thiết lập tối đa VIP cấp được hỗ trợ bởi nền tảng, tối đa cấp 20",
+        "vipRewardCodingMultiple": "Hệ số vòng cược thưởng VIP",
+        "vipRewardCodingDescription": "Hệ số vòng cược bắt buộc khi hội viên nhận thưởng VIP"
+      },
+      "log": {
+        "type": "loại",
+        "memberId": "ID thành viên",
+        "timeRange": "Khoảng thời gian",
+        "columns": {
+          "time": "thời gian",
+          "memberId": "ID thành viên",
+          "type": "loại",
+          "recordDetails": "bản ghi chi tiết",
+          "rewardAmount": "Số tiền thưởng"
+        },
+        "recordDetailsText": "Hội viên đã nhận VIP {vipLevel} {rewardType} số tiền nạp: {depositAmount} Số tiền cược: {betAmount}"
+      },
+      "levelConfig": {
+        "title": "Cấp VIP cấu hình",
+        "editModalTitle": "sửa Cấp VIP cấu hình",
+        "columns": {
+          "vipLevel": "Cấp VIP",
+          "upgrade": "Nâng cấp",
+          "upgradeRecharge": "Upgrade Nạp tiền",
+          "upgradeBetCode": "Upgrade Số tiền cược",
+          "upgradeRewards": "Thưởng nâng cấp",
+          "relegation": "Giữ hạng",
+          "monthRelegationRecharge": "Hằng tháng Nạp tiền",
+          "monthRelegationBetCode": "Hằng tháng Số tiền cược",
+          "monthlyReward": "Thưởng hằng tháng",
+          "monthRewardRecharge": "Nạp tiền tháng hiện tại",
+          "monthRewardBetCode": "Số tiền cược tháng hiện tại",
+          "monthReward": "Thưởng hằng tháng",
+          "weeklyReward": "Thưởng hằng tuần",
+          "weekRewardRecharge": "Nạp tiền tuần hiện tại",
+          "weekRewardBetCode": "Số tiền cược tuần hiện tại",
+          "weekReward": "Thưởng hằng tuần",
+          "privileges": "Quyền lợi",
+          "dayWithdrawAmount": "Hằng ngày Số tiền rút",
+          "dayWithdrawCount": "Hằng ngày Số lần rút",
+          "dayWithdrawNoFeeCount": "Hằng ngày Miễn phí Số lần rút"
+        },
+        "description": "Khi số tiền rút hằng ngày, số lần rút hằng ngày và số lần rút miễn phí hằng ngày được đặt là -1, nghĩa là không giới hạn"
+      }
+    },
+    "group": {
+      "title": "Người dùng Nhóm Management",
+      "columns": {
+        "id": "ID",
+        "groupName": "nhóm tên",
+        "tagName": "nhãn tên",
+        "description": "Nhóm Mô tả",
+        "memberCount": "Thành viên Số lượng",
+        "updateTime": "Thời gian cập nhật",
+        "lastOperator": "Cuối cùng Người thao tác"
+      },
+      "actions": {
+        "groupPermission": "Nhóm Quyền",
+        "editTag": "sửa nhãn",
+        "delete": "xóa"
+      },
+      "buttons": {
+        "createGroup": "Thêm Thành viên Nhóm"
+      },
+      "modal": {
+        "editGroup": "Sửa Thành viên Nhóm",
+        "addGroup": "thêm thành viên nhóm",
+        "editPermission": "Sửa Thành viên Nhóm Quyền"
+      },
+      "form": {
+        "groupName": "nhóm tên:",
+        "associatedTag": "Liên kết nhãn:",
+        "groupDescription": "Nhóm Mô tả:",
+        "selectTagPlaceholder": "Vui lòng chọn nhãn liên kết",
+        "nameRequired": "Vui lòng nhập nhóm tên",
+        "submitSuccess": "{action} thành viên nhóm thành công",
+        "permissionUpdateSuccess": "Sửa quyền nhóm hội viên thành công"
+      }
+    },
+    "tag": {
+      "title": "nhãn quản lý",
+      "columns": {
+        "id": "ID",
+        "tagName": "nhãn tên",
+        "tagEffect": "nhãn hiệu lực",
+        "description": "nhãn mô tả",
+        "memberCount": "thành viên số lượng",
+        "createTime": "Thời gian tạo"
+      },
+      "form": {
+        "tagName": "nhãn tên",
+        "tagNamePlaceholder": "Vui lòng nhập nhãn tên",
+        "tagColor": "nhãn Color",
+        "description": "Mô tả"
+      },
+      "actions": {
+        "edit": "sửa",
+        "delete": "xóa",
+        "viewMembers": "xem thành viên"
+      },
+      "buttons": {
+        "createTag": "tạo nhãn"
+      },
+      "modal": {
+        "editTag": "sửa nhãn",
+        "addTag": "thêm nhãn"
+      },
+      "validation": {
+        "typeRequired": "Vui lòng chọn nhãn loại",
+        "nameRequired": "Vui lòng nhập nhãn tên",
+        "nameFormat": "Vui lòng nhập 8 ký tự tiếng Anh hoặc 4 ký tự tiếng Trung"
+      },
+      "messages": {
+        "editSuccess": "{action} nhãn thành công"
+      }
+    },
+    "addTag": {
+      "sections": {
+        "basicInfo": "Thông tin cơ bản của nhãn",
+        "triggerConditions": "Điều kiện kích hoạt",
+        "triggerSettings": "Cài đặt kích hoạt"
+      },
+      "basicForm": {
+        "tagName": "nhãn tên",
+        "tagNamePlaceholder": "Vui lòng nhập nhãn tên",
+        "description": "nhãn mô tả",
+        "descriptionPlaceholder": "Vui lòng nhập nhãn mô tả",
+        "tagType": "nhãn loại",
+        "tagTypePlaceholder": "Vui lòng chọn nhãn loại",
+        "status": "nhãn trạng thái",
+        "enable": "bật",
+        "disable": "Tắt"
+      },
+      "triggerConditions": {
+        "register": {
+          "timeRange": "Khoảng thời gian",
+          "accountType": "tài khoản loại",
+          "accountTypeNote": "Không chọn nghĩa là áp dụng cho tất cả loại tài khoản",
+          "registerChannel": "Đăng ký Kênh",
+          "registerChannelPlaceholder": "Vui lòng chọn đăng ký kênh"
+        },
+        "loginDay": {
+          "loginDays": "Đăng nhập ngày",
+          "loginDaysNote": "Số ngày đăng nhập tích lũy trong khoảng thời gian",
+          "loginCount": "đăng nhập số lần",
+          "loginCountNote": "Số lần đăng nhập tích lũy trong khoảng thời gian",
+          "timeRange": "Khoảng thời gian"
+        },
+        "betAmount": {
+          "betAmount": "Số tiền cược",
+          "timeRange": "Khoảng thời gian",
+          "timeRangeNote": "Khoảng thời gian dùng để tính điều kiện kích hoạt",
+          "betType": "cược loại",
+          "betTypePlaceholder": "Vui lòng chọn cược loại",
+          "gameRange": "Phạm vi trò chơi"
+        },
+        "loseAmount": {
+          "loseAmount": "Số tiền thua",
+          "timeRange": "Khoảng thời gian",
+          "timeRangeNote": "Khoảng thời gian dùng để tính điều kiện kích hoạt",
+          "gameCategory": "Danh mục trò chơi",
+          "loseRate": "Tỷ lệ thua",
+          "loseRateNote": "thua lỗ số tiền/số tiền cược, 0 nghĩa là không giới hạn"
+        },
+        "userLevel": {
+          "userLevel": "Cấp thành viên",
+          "userLevelPlaceholder": "Vui lòng chọn Cấp thành viên",
+          "levelKeepTime": "Thời gian duy trì cấp",
+          "levelKeepTimeNote": "0 nghĩa là không giới hạn thời gian"
+        },
+        "withdraw": {
+          "withdrawType": "rút tiền loại",
+          "withdrawTypePlaceholder": "Vui lòng chọn rút tiền loại",
+          "withdrawAmount": "Số tiền rút",
+          "withdrawCount": "rút tiền số lần",
+          "withdrawCountNote": "Số lần rút tiền tích lũy trong khoảng thời gian",
+          "timeRange": "Khoảng thời gian",
+          "withdrawChannel": "Rút tiền Kênh",
+          "withdrawChannelPlaceholder": "Vui lòng chọn rút tiền kênh",
+          "withdrawChannelNote": "Không chọn nghĩa là áp dụng cho tất cả kênh",
+          "auditStatus": "duyệt trạng thái",
+          "auditStatusPlaceholder": "Vui lòng chọn duyệt trạng thái",
+          "auditStatusNote": "Không chọn nghĩa là áp dụng cho tất cả trạng thái (Đã duyệt + Từ chối)"
+        },
+        "recharge": {
+          "rechargeType": "nạp tiền loại",
+          "rechargeTypePlaceholder": "Vui lòng chọn nạp tiền loại",
+          "rechargeAmount": "Số tiền nạp",
+          "rechargeCount": "nạp tiền số lần",
+          "rechargeCountNote": "Số lần nạp tích lũy trong khoảng thời gian",
+          "timeRange": "Khoảng thời gian",
+          "rechargeChannel": "Nạp tiền Kênh",
+          "rechargeChannelPlaceholder": "Vui lòng chọn nạp tiền kênh",
+          "rechargeChannelNote": "Không chọn nghĩa là áp dụng cho tất cả kênh"
+        },
+        "activity": {
+          "activityType": "hoạt động loại",
+          "activityTypePlaceholder": "Vui lòng chọn hoạt động loại",
+          "participationStatus": "Trạng thái tham gia",
+          "participationStatusPlaceholder": "Vui lòng chọn trạng thái tham gia",
+          "participationCount": "Số lần tham gia",
+          "participationCountNote": "Số lần tham gia hoạt động trong khoảng thời gian",
+          "timeRange": "Khoảng thời gian"
+        },
+        "invite": {
+          "inviteUserCount": "Số người dùng được mời",
+          "inviteUserCountNote": "Số người dùng được mời thành công",
+          "invitedUserStatus": "Trạng thái người được mời",
+          "invitedUserStatusPlaceholder": "Vui lòng chọn trạng thái người được mời",
+          "invitedUserStatusNote": "Điều kiện trạng thái mà người được mời phải đạt",
+          "rechargeRequirement": "Nạp tiền Yêu cầu",
+          "rechargeRequirementNote": "Người được mời có cần hoàn tất nạp đầu hay không",
+          "minRechargeAmount": "Số tiền nạp tối thiểu",
+          "minRechargeAmountNote": "Yêu cầu số tiền nạp đầu tối thiểu cho người được mời",
+          "validPeriod": "Thời hạn hiệu lực",
+          "validPeriodNote": "Người dùng được mời cần hoàn tất điều kiện trong vòng thời hạn hiệu lực",
+          "statisticsPeriod": "Kỳ thống kê",
+          "statisticsPeriodNote": "Khoảng thời gian thống kê lời mời",
+          "inviteLevelRequirement": "Yêu cầu cấp lời mời",
+          "inviteLevelRequirementNote": "Có yêu cầu cấp hội viên đối với người mời hay không",
+          "inviterMinLevel": "Cấp tối thiểu của người mời",
+          "inviterMinLevelPlaceholder": "Vui lòng chọn Cấp thành viên",
+          "inviterMinLevelNote": "Cấp hội viên tối thiểu bắt buộc đối với người mời"
+        },
+        "mixed": {
+          "subConditionList": "Danh sách điều kiện con",
+          "conditionGroupNote": "Quan hệ giữa các nhóm điều kiện là HOẶC, quan hệ trong mỗi nhóm điều kiện là VÀ",
+          "conditionGroup": "Nhóm điều kiện",
+          "groupRelation": "Quan hệ trong nhóm này: VÀ",
+          "deleteGroup": "xóa",
+          "addCondition": "Thêm điều kiện",
+          "addConditionGroup": "Thêm nhóm điều kiện",
+          "selectPlaceholder": "Vui lòng chọn",
+          "rechargeTotal": "Tổng cộng Nạp tiền",
+          "withdrawTotal": "Tổng cộng Rút tiền",
+          "validBet": "Cược hợp lệ",
+          "lossTotal": "Tổng lỗ",
+          "recentDays": "Gần đây",
+          "recentDaysLabel": "ngày"
+        }
+      },
+      "triggerSettings": {
+        "triggerFrequency": "Tần suất kích hoạt",
+        "triggerFrequencyNote": "Nền tảng sẽ xử lý hàng loạt dữ liệu hội viên theo tần suất đã đặt: hằng ngày (1 ngày) hoặc hằng tuần (7 ngày)",
+        "tagValidType": "Loại hiệu lực nhãn",
+        "tagValidTypePermanent": "Vĩnh viễn",
+        "tagValidTypeDays": "Hợp lệ ngày",
+        "tagValidTypeNote": "Thiết lập thời lượng tồn tại của nhãn trong hồ sơ hội viên",
+        "tagOverrideRule": "nhãn Quy tắc ghi đè",
+        "priorityOverride": "Ghi đè ưu tiên",
+        "keepWhenMatch": "Giữ khi khớp",
+        "tagOverrideRuleNote": "Cách xử lý khi hội viên đồng thời đáp ứng nhiều điều kiện kích hoạt",
+        "tagPriority": "nhãn Ưu tiên",
+        "tagPriorityNote": "Cao hơn số nghĩa là ưu tiên cao hơn, 1-10, cao hơn giá trị nghĩa là ưu tiên cao hơn",
+        "priorityLevels": {
+          "low": "Ưu tiên thấp",
+          "normal": "Bình thường Ưu tiên",
+          "medium": "Ưu tiên trung bình",
+          "high": "Ưu tiên cao"
+        }
+      },
+      "validation": {
+        "tagNameRequired": "Vui lòng nhập nhãn tên",
+        "tagTypeRequired": "Vui lòng chọn nhãn loại",
+        "triggerFrequencyRequired": "Vui lòng chọn tần suất kích hoạt",
+        "tagValidTypeRequired": "Vui lòng chọn nhãn validity loại"
+      },
+      "buttons": {
+        "cancel": "hủy",
+        "save": "lưu"
+      },
+      "units": {
+        "days": "ngày",
+        "percent": "%"
+      }
+    },
+    "memberLoginLog": {
+      "form": {
+        "memberId": "ID thành viên",
+        "memberIdPlaceholder": "Vui lòng nhập ID thành viên",
+        "ip": "IP",
+        "ipPlaceholder": "Vui lòng nhập IP",
+        "time": "thời gian"
+      },
+      "columns": {
+        "loginId": "đăng nhập ID",
+        "memberId": "ID thành viên",
+        "action": "Thao tác",
+        "deviceType": "Đăng nhập Thiết bị",
+        "deviceNo": "Thiết bị số",
+        "browserFingerprint": "Dấu vân tay trình duyệt",
+        "loginTime": "Thời gian đăng nhập",
+        "ip": "IP",
+        "status": "trạng thái"
+      },
+      "actions": {
+        "login": "Đăng nhập",
+        "logout": "Đăng xuất",
+        "recharge": "nạp tiền",
+        "withdraw": "rút tiền",
+        "forgotPassword": "Forgot Mật khẩu",
+        "unknown": "Không xác định"
+      },
+      "devices": {
+        "h5": "H5",
+        "android": "Android",
+        "ios": "IOS",
+        "pc": "PC",
+        "unknown": "Không xác định"
+      },
+      "status": {
+        "success": "thành công",
+        "failed": "thất bại"
+      }
+    },
+    "common": {
+      "add": "Thêm",
+      "edit": "sửa",
+      "delete": "xóa",
+      "save": "lưu",
+      "cancel": "hủy",
+      "confirm": "xác nhận",
+      "search": "tìm kiếm",
+      "reset": "đặt lại",
+      "export": "xuất",
+      "import": "nhập",
+      "refresh": "Làm mới",
+      "loading": "Đang tải...",
+      "noData": "Không có dữ liệu",
+      "operation": "thao tác",
+      "status": "trạng thái",
+      "createTime": "Thời gian tạo",
+      "updateTime": "Thời gian cập nhật",
+      "remark": "ghi chú",
+      "today": "Hôm nay",
+      "yesterday": "Hôm qua",
+      "thisWeek": "Tuần này",
+      "lastWeek": "Tuần trước",
+      "thisMonth": "Tháng này",
+      "lastMonth": "Tháng trước",
+      "all": "tất cả",
+      "pleaseSelect": "Vui lòng chọn",
+      "pleaseInput": "Vui lòng nhập",
+      "success": "thành công",
+      "failed": "thất bại",
+      "warning": "Cảnh báo",
+      "info": "Thông tin",
+      "unknown": "Không xác định"
+    },
+    "blacklist": {
+      "title": "thành viên hoạt động danh sách đen quản lý",
+      "tabs": {
+        "userActivity": "thành viên hoạt động danh sách đen",
+        "blackListDeleteLog": "danh sách đen xóa bản ghi",
+        "rewardLimit": "thưởng giới hạn bản ghi"
+      },
+      "blacklist": {
+        "form": {
+          "memberId": "ID thành viên",
+          "memberIdPlaceholder": "Vui lòng nhập ID thành viên",
+          "activityType": "Hoạt động Loại",
+          "activityTypePlaceholder": "Vui lòng chọn loại hoạt động",
+          "addBlackList": "thêm danh sách đen",
+          "batchAdd": "Thêm hàng loạt",
+          "batchDelete": "Xóa hàng loạt",
+          "createOne": "thêm danh sách đen",
+          "editOne": "sửa danh sách đen",
+          "actionTime": "kích hoạt thời gian"
+        },
+        "columns": {
+          "memberId": "ID thành viên",
+          "activityType": "Loại hoạt động bị cấm",
+          "addTime": "Thời gian tạo",
+          "oprationUser": "Người thao tác",
+          "remark": "ghi chú",
+          "delTime": "xóa thời gian",
+          "delUser": "Người xóa",
+          "delReason": "xóa lý do",
+          "oldAddTime": "Thời gian thêm ban đầu",
+          "oldOprationUser": "Người thao tác ban đầu",
+          "oldReason": "Ghi chú ban đầu"
+        },
+        "addDialog": {
+          "idlist": "ID thành viên danh sách",
+          "activityType": "hoạt động loại",
+          "remark": "ghi chú",
+          "idListPlaceholder": "Vui lòng nhập ID thành viên, mỗi dòng một mục, tối đa 100 mục",
+          "activityTypePlaceholder": "Vui lòng chọn hoạt động loại",
+          "remarkPlaceholder": "Vui lòng nhập ghi chú, tối đa 200 ký tự",
+          "removeReason": "xóa lý do",
+          "removeReasonPlaceholder": "Vui lòng nhập xóa lý do, tối đa 200 ký tự",
+          "removeConfirm": "Bạn có chắc muốn xóa \"{ activityType }\" hoạt động danh sách đen với hội viên ID \"{ userId }\"?",
+          "removePlaceholder": "Vui lòng nhập xóa lý do, tối đa 200 ký tự",
+          "deleteTitle": "Xác nhận xóa",
+          "batchAddBlackList": "Hàng loạt Thêm Danh sách đen",
+          "batchDeleteTitle": "Xóa hàng loạt Danh sách đen",
+          "idsMustNumber": "ID thành viên phải là 7 chữ số",
+          "maxCount": "Có thể thêm tối đa 100 ID hội viên mỗi lần"
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,4316 @@
+{
+  "operations": {
+    "cloudflare": {
+      "index": {
+        "title": "cloudflare管理",
+        "tabs": {
+          "domainReport": "域名报表",
+          "domainWAF": "域名WAF管理"
+        }
+      },
+      "domainReport": {
+        "columns": {
+          "domain": "域名",
+          "visitorNum": "独立访问者数量",
+          "date": "日期"
+        },
+        "form": {
+          "domain": "域名",
+          "date": "日期",
+          "domainPlaceholder": "请选择"
+        },
+        "validation": {
+          "domainRequired": "请输入域名",
+          "dateRequired": "请选择日期"
+        },
+        "messages": {
+          "selectDomain": "请选择域名"
+        },
+        "details": {
+          "columns": {
+            "domain1": "域名/IP(1)",
+            "domain2": "域名/IP(2)",
+            "remark": "备注",
+            "status": "状态",
+            "executedAt": "执行时间"
+          },
+          "status": {
+            "success": "成功",
+            "failed": "失败"
+          }
+        }
+      },
+      "domainWAF": {
+        "columns": {
+          "name": "名称",
+          "action": "采取措施",
+          "ruleType": "规则类型",
+          "enabled": "是否启用"
+        },
+        "form": {
+          "domain": "域名",
+          "domainPlaceholder": "请选择",
+          "ruleName": "规则名称",
+          "limitRule": "限制规则",
+          "action": "采取措施",
+          "logging": "记录匹配的请求",
+          "loggingTip": "禁用后,匹配的请求不会出现在\"安全性\"概览下",
+          "skipComponents": "跳过的WAF组件",
+          "position": "放置位置",
+          "afterRule": "选择在此之后将触发哪个规则:",
+          "conditionTip": "条件组之间的关系为OR，每个条件组内部的关系为AND",
+          "conditionGroup": "条件组 {index}",
+          "conditionRelation": "该组内条件关系: AND",
+          "field": "字段",
+          "operator": "运算符",
+          "value": "值",
+          "placeholder": "请选择",
+          "selectOrInput": "请选择或者输入",
+          "inputExample": "请输入(例如: /content )"
+        },
+        "validation": {
+          "domainRequired": "请选择域名",
+          "positionRequired": "放置位置不能为空",
+          "descriptionRequired": "规则名称不能为空",
+          "actionRequired": "采取措施不能为空",
+          "fieldRequired": "第{group}组条件第{row}行的字段不能为空",
+          "operatorRequired": "第{group}组条件第{row}行的运算符不能为空",
+          "valueRequired": "第{group}组条件第{row}行的值不能为空"
+        },
+        "actions": {
+          "add": "新增",
+          "edit": "编辑",
+          "delete": "删除",
+          "deleteGroup": "删除组",
+          "addCondition": "添加条件",
+          "addConditionGroup": "添加条件组",
+          "cancel": "取消",
+          "save": "保存"
+        },
+        "status": {
+          "enable": "启用",
+          "disable": "禁用"
+        },
+        "dialog": {
+          "addRule": "添加规则",
+          "editRule": "编辑规则"
+        },
+        "messages": {
+          "selectDomain": "请选择域名进行查询"
+        }
+      },
+      "useCloudFlare": {
+        "state": {
+          "initializing": "初始化",
+          "pending": "等待",
+          "active": "激活",
+          "moved": "移除"
+        },
+        "clearState": {
+          "clearing": "清理中",
+          "success": "清理成功",
+          "failed": "清理失败"
+        },
+        "model": {
+          "off": "关闭",
+          "flexible": "灵活",
+          "full": "完全",
+          "strict": "完全(严格)"
+        },
+        "ttl": {
+          "auto": "自动",
+          "1min": "1分钟",
+          "2min": "2分钟",
+          "5min": "5分钟",
+          "10min": "10分钟",
+          "15min": "15分钟",
+          "30min": "30分钟",
+          "1hour": "1小时",
+          "2hour": "2小时",
+          "5hour": "5小时",
+          "12hour": "12小时",
+          "1day": "1天"
+        }
+      },
+      "useRule": {
+        "position": {
+          "first": "第一个",
+          "last": "最后一个",
+          "custom": "自定义"
+        }
+      }
+    },
+    "imageCrop": {
+      "title": "图片裁剪",
+      "settingsTitle": "裁剪配置",
+      "workspaceTitle": "裁剪工作区",
+      "resultTitle": "裁剪结果",
+      "sourceTitle": "原图信息",
+      "sourceName": "文件名称",
+      "sourceFormat": "文件格式",
+      "sourceSize": "文件大小",
+      "sourceWidth": "原图宽度",
+      "sourceHeight": "原图高度",
+      "adjustTitle": "调整操作",
+      "cropDataTitle": "裁剪数据",
+      "resultPreviewTitle": "结果预览",
+      "aspectRatio": "裁剪比例",
+      "aspectRatioPlaceholder": "请选择裁剪比例",
+      "customRatio": "自定义比例",
+      "outputWidth": "输出宽度",
+      "outputHeight": "输出高度",
+      "exportFormat": "导出格式",
+      "exportFormatPlaceholder": "请选择导出格式",
+      "exportFormatOriginal": "保持原格式",
+      "exportFormatPng": "PNG",
+      "exportFormatJpeg": "JPEG",
+      "exportFormatWebp": "WebP",
+      "exportQuality": "导出质量",
+      "exportQualityHint": "仅 JPEG / WebP 生效",
+      "quickTemplatesTitle": "运营快捷模板",
+      "quickTemplatesHint": "尺寸来自当前项目常用配置，点击即可一键套用到裁剪参数。",
+      "configTitle": "裁剪与导出参数",
+      "quickCategoryBanner": "Banner",
+      "quickCategoryGame": "游戏图",
+      "quickCategoryAnnouncement": "公告图",
+      "quickPresetHomePromoBanner": "首页宣传图",
+      "quickPresetActivityBanner": "活动横幅图",
+      "quickPresetActivityTopBanner": "活动顶部图",
+      "quickPresetGameHorizontalCover": "游戏横版封面",
+      "quickPresetGameCard": "游戏卡片图",
+      "quickPresetGameSquareIcon": "游戏方形图标",
+      "quickPresetAnnouncementThumbnail": "站内信缩略图",
+      "quickPresetAnnouncementCard": "公告卡片横图",
+      "quickPresetAnnouncementPoster": "公告弹窗竖图",
+      "previewSize": "预览宽度",
+      "previewSizePlaceholder": "请选择预览宽度",
+      "uploadImage": "上传图片",
+      "selectImage": "选择图片",
+      "cropTitle": "图片裁剪",
+      "imageUrl": "图片地址",
+      "resultSize": "结果大小",
+      "generateResult": "生成结果",
+      "downloadResult": "下载结果",
+      "clearResult": "清空结果",
+      "zoom": "缩放",
+      "zoomIn": "放大",
+      "zoomOut": "缩小",
+      "rotateLeft": "左转90°",
+      "rotateRight": "右转90°",
+      "rotateFineStep": "微调角度(°)",
+      "rotateFineLeft": "左转 -{step}°",
+      "rotateFineRight": "右转 +{step}°",
+      "flipHorizontal": "水平翻转",
+      "flipVertical": "垂直翻转",
+      "dragMode": "拖拽模式",
+      "dragModeFree": "自由拖拽",
+      "dragModeLocked": "固定画面",
+      "cropX": "裁剪X",
+      "cropY": "裁剪Y",
+      "cropWidth": "裁剪宽度",
+      "cropHeight": "裁剪高度",
+      "rotateValue": "旋转角度",
+      "flipXValue": "水平翻转",
+      "flipYValue": "垂直翻转",
+      "resetCropper": "重置画面",
+      "clearOperationData": "清空操作数据",
+      "historyTitle": "历史记录",
+      "historySourceTab": "原图",
+      "historyExportTab": "压缩结果",
+      "historyUse": "使用",
+      "historyLocateSource": "定位原图",
+      "historyDownload": "下载",
+      "historyRemove": "删除",
+      "historyClear": "清空",
+      "historySourceLabel": "原图来源",
+      "historySourceMissing": "未找到关联原图记录。",
+      "historyEmpty": "暂无历史记录",
+      "historyBlobMissing": "历史文件已被清理，请重新生成。",
+      "historyQualityValue": "质量 {quality}",
+      "workspaceEmpty": "请选择一张图片开始裁剪",
+      "empty": "请先上传并裁剪图片",
+      "tip": "先选择图片，再在工作区调整画面，点击生成结果后可预览并下载。"
+    },
+    "eventTrackManage": {
+      "index": {
+        "title": "三方埋点",
+        "tabs": {
+          "services": "服务端埋点记录明细",
+          "facebook": "Facebook像素归因",
+          "adjust": "Adjust配置",
+          "appsflyer": "appsflyer配置",
+          "googleAnalytics": "Google Analytics",
+          "googleAds": "Google Ads"
+        }
+      },
+      "adjust": {
+        "index": {
+          "title": "Adjust管理",
+          "recentModifications": "启用Adjust像素近3次修改",
+          "channelName": "渠道名称",
+          "appToken": "App Token",
+          "createTime": "创建时间",
+          "remark": "备注",
+          "actionsColumn": "操作",
+          "addApp": "新增应用",
+          "tokenConfig": "Token配置",
+          "adjustAppConfig": "Adjust应用配置",
+          "eventTokenConfig": "事件Token配置",
+          "eventToken": "事件token",
+          "triggerMode": "触发方式",
+          "serverParams": "服务器参数",
+          "customParams": "自定义参数",
+          "noEventConfig": "暂无事件配置",
+          "addConfigTitle": "新增Adjust配置",
+          "editConfigTitle": "编辑Adjust配置",
+          "addSuccess": "新增成功",
+          "editSuccess": "编辑成功",
+          "messages": {
+            "getKeyFailed": "未获取到Adjust的配置key",
+            "getKeyError": "获取Adjust配置key失败",
+            "getEventListFailed": "获取事件列表失败",
+            "updateFailed": "更新失败",
+            "adjustPixelEnabled": "Adjust像素已启用",
+            "adjustPixelDisabled": "Adjust像素已禁用",
+            "loadDataFailed": "加载数据失败"
+          },
+          "dialog": {
+            "tip": "提示",
+            "confirmClose": "是否确认关闭Adjust？",
+            "confirmEnable": "是否确认",
+            "confirm": "确认",
+            "cancel": "取消"
+          },
+          "switch": {
+            "enableAdjust": "启用Adjust",
+            "viewHistory": "点击查看历史修改记录",
+            "on": "开启",
+            "off": "关闭"
+          },
+          "triggerModes": {
+            "clientOnly": "纯客户端",
+            "serverOnly": "服务器传值",
+            "clientAndServer": "客户端+服务器"
+          },
+          "actions": {
+            "delete": "删除",
+            "edit": "编辑",
+            "modify": "修改",
+            "view": "查看"
+          }
+        },
+        "configModal": {
+          "form": {
+            "appToken": "App Token",
+            "channelName": "渠道名称",
+            "remark": "备注",
+            "appTokenPlaceholder": "请输入Adjust App Token",
+            "channelNamePlaceholder": "请输入渠道名称",
+            "remarkPlaceholder": "请输入备注信息"
+          },
+          "validation": {
+            "appTokenRequired": "请输入appToken",
+            "channelNameRequired": "请输入渠道名称",
+            "channelNameFormat": "请输入正确的渠道名称(字母、数字、空格、-、_)"
+          },
+          "messages": {
+            "submitSuccess": "提交成功",
+            "submitFailed": "提交失败"
+          },
+          "actions": {
+            "cancel": "取消",
+            "save": "保存"
+          }
+        },
+        "addConfigModal": {
+          "form": {
+            "packageName": "包名",
+            "packageNamePlaceholder": "请输入包名",
+            "bundleId": "包名/Bundle ID",
+            "platformType": "平台类型",
+            "platformTypePlaceholder": "请选择平台类型",
+            "apiUrl": "API URL",
+            "apiUrlFeedback": "Adjust事件上报URL，默认：https://s2s.adjust.com",
+            "status": "状态",
+            "statusOn": "开启",
+            "statusOff": "关闭",
+            "tip": "提示",
+            "tipText": "请使用当前包名前往adjust后台配置，获取appToken"
+          },
+          "validation": {
+            "channelExists": "渠道名已存在，请修改",
+            "packageNameInvalid": "包名格式不正确，请修改",
+            "bundleIdRequired": "请输入包名"
+          },
+          "messages": {
+            "copySuccess": "复制成功"
+          },
+          "actions": {
+            "nextStep": "下一步",
+            "prevStep": "上一步",
+            "save": "保存",
+            "copy": "复制"
+          }
+        },
+        "eventToken": {
+          "form": {
+            "eventTokenPlaceholder": "请输入事件token"
+          },
+          "validation": {
+            "notEmpty": "不能为空"
+          },
+          "messages": {
+            "updateSuccess": "更新事件成功",
+            "updateFailed": "更新事件失败",
+            "getTokenListFailed": "获取事件token失败"
+          },
+          "actions": {
+            "cancel": "取消",
+            "save": "保存"
+          }
+        },
+        "triggerModes": {
+          "clientOnly": "纯客户端",
+          "serverOnly": "服务器传值",
+          "clientAndServer": "客户端+服务器"
+        }
+      },
+      "appsflyer": {
+        "index": {
+          "title": "AppsFlyer管理",
+          "recentModifications": "启用AppsFlyer近3次修改",
+          "appName": "应用名称",
+          "platform": "平台",
+          "status": "状态",
+          "createTime": "创建时间",
+          "remark": "备注",
+          "actionsColumn": "操作",
+          "addConfig": "新增配置",
+          "editConfig": "编辑配置",
+          "addAppsflyerConfig": "新增AppsFlyer配置",
+          "editAppsflyerConfig": "编辑AppsFlyer配置",
+          "eventConfig": "事件配置",
+          "triggerMethod": "触发方式",
+          "serverParams": "服务器参数",
+          "customParams": "自定义参数",
+          "noEventConfig": "暂无事件配置",
+          "platforms": {
+            "web": "Web",
+            "ios": "iOS",
+            "android": "Android",
+            "unknown": "未知"
+          },
+          "messages": {
+            "getKeyFailed": "未获取到AppsFlyer的配置key",
+            "getKeyError": "获取AppsFlyer配置key失败",
+            "updateFailed": "更新失败",
+            "appsflyerPixelEnabled": "AppsFlyer像素已启用",
+            "appsflyerPixelDisabled": "AppsFlyer像素已禁用",
+            "statusUpdateFailed": "状态更新失败",
+            "statusUpdateSuccess": "状态{action}成功",
+            "deleteFailed": "删除失败",
+            "deleteSuccess": "删除成功",
+            "getEventListFailed": "获取事件列表失败",
+            "loadDataFailed": "加载数据失败",
+            "addSuccess": "新增成功",
+            "editSuccess": "编辑成功"
+          },
+          "dialog": {
+            "tip": "提示",
+            "confirmClose": "是否确认关闭AppsFlyer？",
+            "confirmEnable": "是否确认",
+            "confirmStatus": "是否确认{action}",
+            "confirm": "确认",
+            "cancel": "取消"
+          },
+          "actions": {
+            "enable": "启用",
+            "disable": "禁用",
+            "delete": "删除",
+            "edit": "编辑"
+          }
+        },
+        "configModal": {
+          "form": {
+            "appName": "应用名称",
+            "appNamePlaceholder": "请输入应用名称",
+            "devKey": "Dev Key",
+            "devKeyPlaceholder": "请输入AppsFlyer Dev Key",
+            "devKeyFeedback": "AppsFlyer应用的开发者密钥",
+            "s2sToken": "S2S token",
+            "s2sTokenPlaceholder": "请输入AppsFlyer S2S token",
+            "s2sTokenFeedback": "AppsFlyer应用的S2S token",
+            "appId": "app ID",
+            "appIdPlaceholder": "请输入应用商店ID或报名",
+            "appIdFeedback": "iOS为App Store ID，Android为包名",
+            "platformType": "平台类型",
+            "platformTypePlaceholder": "请选择平台类型",
+            "apiUrl": "API URL",
+            "apiUrlPlaceholder": "https://events.appsflyer.com",
+            "apiUrlFeedback": "AppsFlyer事件上报URL，默认：https://events.appsflyer.com",
+            "status": "状态",
+            "statusOn": "开启",
+            "statusOff": "关闭",
+            "remark": "备注",
+            "remarkPlaceholder": "请输入备注信息"
+          },
+          "validation": {
+            "appNameRequired": "请输入应用名称",
+            "devKeyRequired": "请输入AppsFlyer Dev Key",
+            "s2sTokenRequired": "请输入AppsFlyer S2S token",
+            "appIdRequired": "请输入应用商店ID或报名",
+            "platformTypeRequired": "请选择平台类型",
+            "apiUrlRequired": "请输入API URL"
+          },
+          "messages": {
+            "submitSuccess": "提交成功",
+            "submitFailed": "提交失败"
+          },
+          "actions": {
+            "cancel": "取消",
+            "save": "保存"
+          }
+        }
+      },
+      "facebook": {
+        "index": {
+          "title": "Facebook像素ID配置",
+          "recentModifications": "启用Facebook像素近3次修改",
+          "pixelId": "像素ID",
+          "packageName": "渠道名称",
+          "accessToken": "Access Token",
+          "createTime": "创建时间",
+          "remark": "备注",
+          "actionsColumn": "操作",
+          "addPixelId": "新增像素ID",
+          "editConfig": "编辑facebook配置",
+          "addConfig": "新增facebook配置",
+          "eventConfig": "事件配置",
+          "noEventConfig": "暂无事件配置",
+          "triggerMethod": "触发方式",
+          "serverParams": "服务器参数",
+          "customParams": "自定义参数",
+          "batchAdd": "批量添加",
+          "batchAddTitle": "批量添加Facebook配置",
+          "messages": {
+            "getKeyFailed": "未获取到Facebook的配置key",
+            "getKeyError": "获取Facebook配置key失败",
+            "updateFailed": "更新失败",
+            "facebookPixelEnabled": "Facebook像素已启用",
+            "facebookPixelDisabled": "Facebook像素已禁用",
+            "loadDataFailed": "加载数据失败",
+            "getEventListFailed": "获取事件列表失败",
+            "addSuccess": "新增成功",
+            "editSuccess": "编辑成功"
+          },
+          "dialog": {
+            "tip": "提示",
+            "confirmClose": "关闭Facebook像素？",
+            "confirmEnable": "是否确认",
+            "confirm": "确认",
+            "cancel": "取消"
+          },
+          "switch": {
+            "enableFacebook": "启用Facebook像素",
+            "viewHistory": "点击查看历史修改记录",
+            "on": "开启",
+            "off": "关闭"
+          },
+          "triggerModes": {
+            "clientOnly": "纯客户端",
+            "serverOnly": "服务器传值",
+            "clientAndServer": "客户端+服务器"
+          },
+          "actions": {
+            "enable": "启用",
+            "disable": "禁用",
+            "delete": "删除",
+            "edit": "编辑"
+          }
+        },
+        "configModal": {
+          "form": {
+            "pixelId": "像素ID",
+            "pixelIdPlaceholder": "请输入Facebook像素ID",
+            "packageName": "渠道名称",
+            "packageNamePlaceholder": "请输入渠道名称",
+            "accessToken": "Access Token",
+            "accessTokenPlaceholder": "请输入Facebook Access Token",
+            "accessTokenFeedback": "用于Facebook API调用的访问令牌",
+            "remark": "备注",
+            "remarkPlaceholder": "请输入备注信息"
+          },
+          "validation": {
+            "pixelIdRequired": "请输入Facebook像素ID",
+            "packageNameRequired": "请输入渠道名称",
+            "packageNameFormat": "请输入正确的渠道名称(字母、数字、空格、-、_)",
+            "accessTokenRequired": "请输入Facebook Access Token"
+          },
+          "messages": {
+            "submitSuccess": "提交成功",
+            "submitFailed": "提交失败"
+          },
+          "actions": {
+            "cancel": "取消",
+            "save": "保存"
+          }
+        },
+        "addBatches": {
+          "title": "批量添加Facebook配置",
+          "form": {
+            "batchInputLabel": "FBID + 制表空格符 + Token + 制表空格符 + Name（多条数据用换行分割）",
+            "batchInputPlaceholder": "多条数据用换行分割"
+          },
+          "validation": {
+            "configListRequired": "请输入批量添加内容"
+          },
+          "messages": {
+            "addSuccess": "新增成功",
+            "editSuccess": "修改成功"
+          },
+          "actions": {
+            "cancel": "取消",
+            "preview": "预览",
+            "save": "保存"
+          },
+          "preview": {
+            "title": "批量模板预览",
+            "pixelIdColumn": "像素ID",
+            "accessTokenColumn": "AccessToken",
+            "packageNameColumn": "渠道名称"
+          }
+        }
+      },
+      "googleAds": {
+        "index": {
+          "title": "Google Ads管理",
+          "recentModifications": "启用Google Ads近3次修改",
+          "accountName": "账户名称",
+          "customerId": "客户ID",
+          "conversionId": "转化ID",
+          "conversionLabel": "转化标签",
+          "platform": "平台",
+          "status": "状态",
+          "createTime": "创建时间",
+          "remark": "备注",
+          "actionsColumn": "操作",
+          "addAccount": "新增账户",
+          "conversionConfig": "转化配置",
+          "eventConfig": "事件配置",
+          "noEventConfig": "暂无事件配置",
+          "triggerMethod": "触发方式",
+          "serverParams": "服务器参数",
+          "customParams": "自定义参数",
+          "editAccountTitle": "编辑Google Ads账户",
+          "addAccountTitle": "新增Google Ads账户",
+          "addSuccess": "新增成功",
+          "editSuccess": "编辑成功",
+          "messages": {
+            "getKeyFailed": "未获取到Google Ads的配置key",
+            "getKeyError": "获取Google Ads配置key失败",
+            "updateFailed": "更新失败",
+            "statusUpdateFailed": "状态更新失败",
+            "statusUpdateSuccess": "状态{action}成功",
+            "googleAdsEnabled": "Google Ads已启用",
+            "googleAdsDisabled": "Google Ads已禁用",
+            "loadDataFailed": "加载数据失败",
+            "deleteFailed": "删除失败",
+            "deleteSuccess": "删除成功",
+            "getEventListFailed": "获取事件列表失败"
+          },
+          "dialog": {
+            "tip": "提示",
+            "confirmClose": "是否确认关闭Google Ads？",
+            "confirmStatus": "是否确认{action}",
+            "confirm": "确认",
+            "cancel": "取消"
+          },
+          "switch": {
+            "enableGoogleAds": "启用Google Ads",
+            "viewHistory": "点击查看历史修改记录",
+            "on": "开启",
+            "off": "关闭"
+          },
+          "triggerModes": {
+            "clientOnly": "纯客户端",
+            "serverOnly": "服务器传值",
+            "clientAndServer": "客户端+服务器"
+          },
+          "actions": {
+            "enable": "启用",
+            "disable": "禁用",
+            "delete": "删除",
+            "edit": "编辑"
+          }
+        },
+        "configModal": {
+          "form": {
+            "accountName": "账户名称",
+            "accountNamePlaceholder": "请输入账户名称",
+            "customerId": "客户ID",
+            "customerIdPlaceholder": "请输入客户ID",
+            "conversionId": "转化ID",
+            "conversionIdPlaceholder": "请输入conversion跟踪ID",
+            "conversionLabel": "转化标签",
+            "conversionLabelPlaceholder": "请输入转化标签",
+            "apiUrl": "API URL",
+            "apiUrlPlaceholder": "https://www.google.com/pagead/conversion",
+            "apiUrlFeedback": "Google Ads事件上报URL，默认：https://www.google.com/pagead/conversion，也可以使用 GTM Server 容器自己部署服务器地址",
+            "platformType": "应用类型",
+            "platformTypePlaceholder": "请选择平台类型",
+            "status": "状态",
+            "statusOn": "开启",
+            "statusOff": "关闭",
+            "remark": "备注",
+            "remarkPlaceholder": "请输入备注信息"
+          },
+          "validation": {
+            "accountNameRequired": "请输入账户名称",
+            "customerIdRequired": "请输入Google Ads客户ID",
+            "conversionIdRequired": "请输入conversion跟踪ID",
+            "conversionLabelRequired": "请输入转化标签",
+            "apiUrlRequired": "请输入API URL",
+            "platformTypeRequired": "请选择应用类型"
+          },
+          "messages": {
+            "submitSuccess": "提交成功",
+            "submitFailed": "提交失败"
+          },
+          "actions": {
+            "cancel": "取消",
+            "save": "保存"
+          }
+        }
+      },
+      "googleAnalytics": {
+        "index": {
+          "title": "Google Analytics 4管理",
+          "recentModifications": "启用 Google Analytics 4近3次修改",
+          "projectName": "项目名称",
+          "measurementId": "测量ID",
+          "apiKey": "API密钥",
+          "apiUrl": "API URL",
+          "dataStreamName": "数据流名称",
+          "platform": "平台",
+          "status": "状态",
+          "createTime": "创建时间",
+          "remark": "备注",
+          "actionsColumn": "操作",
+          "addGoogleAnalytics": "新增GoogleAnalytics",
+          "editGoogleAnalytics": "编辑GoogleAnalytics",
+          "googleAnalyticsConfig": "GoogleAnalytics",
+          "eventConfig": "事件配置",
+          "noEventConfig": "暂无事件配置",
+          "triggerMethod": "触发方式",
+          "serverParams": "服务器参数",
+          "customParams": "自定义参数",
+          "addSuccess": "新增成功",
+          "editSuccess": "编辑成功",
+          "platforms": {
+            "web": "Web",
+            "ios": "iOS",
+            "android": "Android",
+            "unknown": "未知"
+          },
+          "messages": {
+            "getKeyFailed": "未获取到 Google Analytics 4的配置key",
+            "getKeyError": "获取 Google Analytics 4key失败",
+            "updateFailed": "更新失败",
+            "statusUpdateFailed": "状态更新失败",
+            "statusUpdateSuccess": "状态{action}成功",
+            "googleAnalyticsEnabled": "Google Analytics 4已启用",
+            "googleAnalyticsDisabled": "Google Analytics 4已禁用",
+            "loadDataFailed": "加载数据失败",
+            "deleteFailed": "删除失败",
+            "deleteSuccess": "删除成功",
+            "getEventListFailed": "获取事件列表失败"
+          },
+          "dialog": {
+            "tip": "提示",
+            "confirmClose": "是否确认关闭 Google Analytics 4",
+            "confirmStatus": "是否确认{action}",
+            "confirm": "确认",
+            "cancel": "取消"
+          },
+          "switch": {
+            "enableGoogleAnalytics": "启用 Google Analytics 4",
+            "viewHistory": "点击查看历史修改记录",
+            "on": "开启",
+            "off": "关闭"
+          },
+          "triggerModes": {
+            "clientOnly": "纯客户端",
+            "serverOnly": "服务器传值",
+            "clientAndServer": "客户端+服务器"
+          },
+          "actions": {
+            "enable": "启用",
+            "disable": "禁用",
+            "delete": "删除",
+            "edit": "编辑"
+          }
+        },
+        "configModal": {
+          "form": {
+            "projectName": "项目名称",
+            "projectNamePlaceholder": "请输入项目名称",
+            "measurementId": "测量ID",
+            "measurementIdPlaceholder": "请输入测量ID",
+            "measurementIdFeedback": "格式：G-XXXXXXXXXX",
+            "apiKey": "API密钥",
+            "apiKeyPlaceholder": "请输入API密钥",
+            "apiUrl": "API URL",
+            "apiUrlPlaceholder": "https://www.google-analytics.com",
+            "apiUrlFeedback": "GA4事件上报URL，默认：https://www.google-analytics.com",
+            "dataStreamName": "数据流名称",
+            "dataStreamNamePlaceholder": "请输入数据流名称",
+            "platformType": "平台类型",
+            "platformTypePlaceholder": "请选择平台类型",
+            "status": "状态",
+            "statusOn": "开启",
+            "statusOff": "关闭",
+            "remark": "备注",
+            "remarkPlaceholder": "请输入备注信息"
+          },
+          "validation": {
+            "projectNameRequired": "请输入项目名称",
+            "measurementIdRequired": "请输入测量ID（G-XXXXXXXXXX）",
+            "apiKeyRequired": "请输入API密钥",
+            "dataStreamNameRequired": "请输入数据流名称"
+          },
+          "messages": {
+            "submitSuccess": "提交成功",
+            "submitFailed": "提交失败"
+          },
+          "actions": {
+            "cancel": "取消",
+            "save": "保存"
+          }
+        }
+      },
+      "services": {
+        "index": {
+          "title": "埋点记录",
+          "columns": {
+            "time": "时间",
+            "memberId": "会员ID",
+            "platformType": "埋点平台类型",
+            "eventId": "埋点识别ID",
+            "keyword": "埋点关键字",
+            "orderNo": "订单号",
+            "status": "状态"
+          },
+          "form": {
+            "memberId": "会员ID",
+            "memberIdPlaceholder": "请输入会员ID",
+            "platformType": "埋点平台类型",
+            "platformTypePlaceholder": "请选择埋点平台类型",
+            "eventId": "埋点识别ID",
+            "eventIdPlaceholder": "请输入埋点识别ID",
+            "keyword": "埋点关键字",
+            "keywordPlaceholder": "请输入埋点关键字",
+            "orderNo": "订单号",
+            "orderNoPlaceholder": "请输入订单号",
+            "status": "状态",
+            "statusPlaceholder": "请选择状态",
+            "timeRange": "时间范围",
+            "startTime": "开始时间",
+            "endTime": "结束时间"
+          },
+          "status": {
+            "success": "成功",
+            "failed": "失败",
+            "pending": "待处理",
+            "processing": "处理中"
+          },
+          "actions": {
+            "export": "导出",
+            "search": "搜索",
+            "reset": "重置",
+            "query": "查询"
+          },
+          "messages": {
+            "loadDataFailed": "加载数据失败",
+            "exportSuccess": "导出成功",
+            "exportFailed": "导出失败",
+            "noData": "暂无数据"
+          }
+        }
+      },
+      "logModal": {
+        "columns": {
+          "updateTime": "操作时间",
+          "operatorName": "操作人",
+          "updateContent": "配置值(旧值->新值)"
+        },
+        "messages": {
+          "loadDataFailed": "加载数据失败"
+        }
+      }
+    },
+    "maintenance": {
+      "index": {
+        "title": "维护管理",
+        "buttons": {
+          "search": "查询",
+          "reset": "重置",
+          "add": "新增维护"
+        },
+        "form": {
+          "maintenanceTime": "维护时间",
+          "startTime": "维护开始时间",
+          "endTime": "维护结束时间",
+          "status": "状态",
+          "placeholders": {
+            "selectStatus": "请选择状态",
+            "selectStartTime": "请选择开始时间",
+            "selectEndTime": "请选择结束时间"
+          }
+        },
+        "columns": {
+          "status": "状态",
+          "maintenanceAnnouncement": "维护公告",
+          "modifier": "修改人",
+          "lastModified": "最后修改时间",
+          "actions": "操作"
+        },
+        "status": {
+          "enabled": "启用",
+          "disabled": "禁用"
+        },
+        "actions": {
+          "edit": "编辑"
+        },
+        "dialog": {
+          "setMaintenanceStatus": "设置维护状态状态",
+          "maintenanceContent": "维护内容",
+          "editMaintenance": "编辑维护",
+          "addMaintenance": "新增维护"
+        },
+        "messages": {
+          "modifySuccess": "修改成功",
+          "confirmStatusChange": "您确定{action}该条维护吗?"
+        }
+      },
+      "editMaintenance": {
+        "form": {
+          "startTime": "维护开始时间",
+          "endTime": "维护结束时间",
+          "content": "维护内容"
+        },
+        "buttons": {
+          "cancel": "取消",
+          "save": "保存"
+        },
+        "validation": {
+          "startTimeRequired": "开始时间不能为空",
+          "endTimeRequired": "结束时间不能为空",
+          "timesCannotBeSame": "开始时间和结束时间不能相同",
+          "endTimeCannotBeEarlier": "结束时间不能小于开始时间",
+          "contentRequired": "请输入维护内容"
+        },
+        "messages": {
+          "editSuccess": "修改成功",
+          "addSuccess": "添加成功"
+        }
+      }
+    },
+    "materials": {
+      "index": {
+        "title": "下载推广",
+        "tabs": {
+          "shareMaterials": "推广分享素材",
+          "downPage": "下载页面管理",
+          "rechargePageAd": "充值页面广告"
+        }
+      },
+      "shareMaterials": {
+        "languageNotice": "不同语言下的使用的素需要材分别上传：",
+        "uploadLimit": "已上传 {count}/5",
+        "buttons": {
+          "uploadMaterial": "上传素材",
+          "edit": "编辑",
+          "enable": "启用",
+          "disable": "停用",
+          "delete": "删除"
+        },
+        "status": {
+          "active": "启动中",
+          "inactive": "已停用"
+        },
+        "actions": {
+          "enable": "启用",
+          "disable": "停用"
+        },
+        "uploadTime": "上传时间",
+        "clickPreview": "点击预览",
+        "dialog": {
+          "editMaterial": "编辑素材",
+          "uploadMaterial": "上传素材",
+          "previewMaterial": "预览素材",
+          "deleteWarning": "警告",
+          "deleteContent": "删除后不可恢复，确定要删除该素材吗？",
+          "statusWarning": "提示",
+          "statusContent": "你确定要{action}该素材吗？",
+          "confirm": "确定",
+          "cancel": "取消"
+        },
+        "messages": {
+          "noData": "暂无数据"
+        },
+        "rewardConfig": {
+          "title": "推广奖励配置",
+          "websiteTitle": "推广展示官网",
+          "websiteLabel": "官网地址",
+          "websitePlaceholder": "请输入官网地址",
+          "websiteTip": "设置推广展示的官网链接",
+          "rewardSwitch": "奖励开关",
+          "rewardType": "支持赠送类型",
+          "rewardDelay": "领奖延迟时间",
+          "rewardDelayUnit": "秒",
+          "rewardRequirement": "领取要求",
+          "allUserTitle": "全部用户（优先级低）",
+          "bindPhoneUserTitle": "绑定手机用户（优先级中）",
+          "rechargeUserTitle": "充值用户（优先级高）",
+          "status": "状态",
+          "userType": "用户类型",
+          "allUser": "全部用户",
+          "bindPhoneUser": "绑定手机用户",
+          "rechargeUser": "充值用户",
+          "receiveTimes": "领取次数:",
+          "canReceive": "可领取:",
+          "canReceiveUnit": "次",
+          "rewardAmount": "赠送金额:",
+          "rewardAmountUnit": "元",
+          "rewardMultiple": "流水倍数:",
+          "rewardMultipleUnit": "倍",
+          "rechargeAmountGreater": "充值金额大于:",
+          "selectPlaceholder": "请选择",
+          "inputPlaceholder": "请输入",
+          "agentShare": "代理分享",
+          "inviteWheelShare": "邀请转盘分享",
+          "daily": "每天",
+          "weekly": "每自然周",
+          "monthly": "每自然月",
+          "lifetime": "终生",
+          "cancel": "取消",
+          "save": "保存"
+        },
+        "targetConfig": " 目标展示配置",
+        "rechargeTimes": "会员充值次数",
+        "times": "次"
+      },
+      "downPage": {
+        "languageNotice": "不同语言下的使用的素需要材分别上传：",
+        "uploadStatus": "已上传 {current}/{total}",
+        "platformStatus": "安卓：{android}/5，IOS：{ios}/5",
+        "platform": "平台",
+        "platformUnknown": "未知",
+        "platformTypes": {
+          "android": "安卓平台",
+          "ios": "IOS平台"
+        },
+        "uploadTime": "上传时间",
+        "clickPreview": "点击预览",
+        "noData": "暂无数据",
+        "config": {
+          "downloadConfig": "下载地址配置",
+          "androidDownload": "安卓下载地址",
+          "androidDownloadDesc": "设置安卓APP的下载链接",
+          "iosDownload": "IOS下载地址",
+          "iosDownloadDesc": "设置iOS APP的下载链接",
+          "androidShellDownload": "安卓加壳包下载",
+          "androidShellDownloadDesc": "设置安卓加壳包的下载链接",
+          "iosShellDownload": "IOS加壳包下载",
+          "iosShellDownloadDesc": "设置iOS加壳包的下载链接",
+          "IsRechargeForceDownload": "充值强制下载"
+        },
+        "table": {
+          "operationTime": "操作时间",
+          "operator": "操作人",
+          "configValue": "配置值（旧值->新值）"
+        },
+        "buttons": {
+          "uploadMaterial": "上传素材",
+          "edit": "编辑",
+          "enable": "启用",
+          "disable": "停用",
+          "delete": "删除"
+        },
+        "status": {
+          "active": "启动中",
+          "inactive": "已停用"
+        },
+        "actions": {
+          "enable": "启用",
+          "disable": "停用"
+        },
+        "dialog": {
+          "editMaterial": "编辑素材",
+          "uploadMaterial": "上传素材",
+          "previewMaterial": "预览素材",
+          "editConfig": "编辑{name}",
+          "deleteWarning": "警告",
+          "deleteContent": "删除后不可恢复，确定要删除该素材吗？",
+          "statusWarning": "提示",
+          "statusContent": "你确定要{action}该素材吗？",
+          "confirm": "确定",
+          "cancel": "取消"
+        }
+      },
+      "addMaterial": {
+        "materialImage": "素材图片",
+        "qrCodePosition": "二维码位置",
+        "isEnabled": "是否启用",
+        "platformType": "平台类型",
+        "cancel": "取消",
+        "save": "保存",
+        "validation": {
+          "imageRequired": "请上传图片",
+          "platformRequired": "请选择平台类型"
+        },
+        "updatePosition": "更新位置："
+      },
+      "previewMaterial": {
+        "withQrCode": "带二维码效果",
+        "originalImage": "原图",
+        "qrCodeArea": "模仿二维码区域",
+        "previewImage": "预览图",
+        "cancel": "取消"
+      }
+    },
+    "firebase": {
+      "config": {
+        "title": "Firebase推送配置",
+        "addConfig": "新增配置",
+        "editConfig": "编辑Firebase配置",
+        "columns": {
+          "projectName": "项目名称",
+          "projectId": "项目ID",
+          "platformType": "平台类型",
+          "status": "状态",
+          "createTime": "创建时间"
+        },
+        "platformTypes": {
+          "web": "Web",
+          "ios": "iOS",
+          "android": "Android",
+          "unknown": "未知"
+        },
+        "messages": {
+          "statusUpdateFailed": "状态更新失败",
+          "statusUpdateSuccess": "状态{status}成功",
+          "enabled": "启用",
+          "disabled": "禁用",
+          "deleteFailed": "删除失败",
+          "deleteSuccess": "删除成功",
+          "editSuccess": "编辑成功",
+          "addSuccess": "新增成功",
+          "loadDataFailed": "加载数据失败"
+        }
+      },
+      "push": {
+        "title": "Firebase推送管理",
+        "pageTitle": "Firebase推送记录",
+        "addPush": "添加推送",
+        "columns": {
+          "id": "ID",
+          "title": "推送标题",
+          "target": "推送目标",
+          "content": "推送内容",
+          "sendCount": "发送数量",
+          "successCount": "成功数量",
+          "receivedTotal": "送达数量",
+          "receivedRate": "送达率",
+          "clickTotal": "点击数量",
+          "clickRate": "点击率",
+          "status": "状态",
+          "createTime": "创建时间",
+          "sendTime": "发送时间",
+          "firebaseProject": "Firebase项目"
+        },
+        "targetTypes": {
+          "selected": "已选"
+        },
+        "buttons": {
+          "download": "下载",
+          "sendNow": "立即发送",
+          "detail": "查看详情",
+          "delete": "删除",
+          "addPush": "新增推送"
+        },
+        "search": {
+          "pushStatus": "推送状态",
+          "pushStatusPlaceholder": "请选择推送状态",
+          "all": "全部",
+          "createTime": "创建时间",
+          "createTimePlaceholder": "请选择创建时间"
+        },
+        "messages": {
+          "downloadFailed": "下载失败，请稍后再试",
+          "operationSuccess": "操作成功",
+          "operationFailed": "操作失败",
+          "sendFailed": "发送推送消息失败"
+        }
+      },
+      "template": {
+        "formatDescription": "模板格式说明：",
+        "rule1": "每行一个会员ID",
+        "rule2": "仅支持纯文本格式",
+        "rule3": "不支持会员ID以外的其他数据",
+        "example": "示例：",
+        "close": "关闭",
+        "downloadTemplate": "下载模板"
+      },
+      "modal": {
+        "form": {
+          "projectName": "项目名称",
+          "projectId": "项目ID",
+          "platformType": "平台类型",
+          "serverKey": "服务端密钥",
+          "status": "状态",
+          "pushTitle": "推送标题",
+          "pushContent": "推送内容",
+          "targetType": "推送目标",
+          "sendTime": "发送时间",
+          "apiKey": "API密钥",
+          "authDomain": "认证域名",
+          "measurementId": "测量ID",
+          "measurementApiSecret": "测量协议API密钥",
+          "appId": "应用ID",
+          "storageBucket": "存储桶",
+          "msgSenderId": "消息发送者ID",
+          "serviceAccountKey": "服务账号密钥",
+          "remark": "备注",
+          "msgSenderIdFormat": "通常格式为: 纯数字，应用ID 1：后面的数字",
+          "uploadServiceKey": "上传服务账号密钥",
+          "serviceKeyDescription": "请上传从Firebase控制台下载的服务账号密钥JSON文件，用于服务器端推送验证获取路径：Firebase控制台 > 项目设置 > 服务账号 > 生成新的私钥",
+          "statusDescription": "禁用后，将不能选择此项目发送推送",
+          "firebaseProject": "firebase项目",
+          "pushTarget": "推送目标",
+          "memberIds": "会员ID",
+          "uploadMemberIds": "上传会员ID",
+          "uploadFile": "上传文件",
+          "uploadMemberIdsDescription": "请上传包含会员ID的文本文件",
+          "viewTemplateDescription": "查看模板说明",
+          "autoTag": "平台自动标签",
+          "group": "分组",
+          "vipLevel": "VIP等级",
+          "channel": "渠道",
+          "sourceChannel": "来源渠道",
+          "pushIcon": "推送图标",
+          "iconSizeRecommendation": "支持JPG/PNG格式的图片 (建议尺寸: 96 x 96)",
+          "clickAction": "点击行为",
+          "targetLink": "目标链接",
+          "openPage": "打开页面",
+          "scheduledSendTime": "定时发送时间",
+          "pushPriority": "推送优先级",
+          "survivalTime": "生存时间",
+          "survivalTimeDescription": "秒（0表示立即过期，最大28天）",
+          "batchTemplateDescription": "批量模板说明",
+          "failCount": "失败数量",
+          "successRate": "成功率",
+          "pushContentDetail": "推送内容"
+        },
+        "validation": {
+          "projectNameRequired": "请输入项目名称",
+          "projectIdRequired": "请输入Firebase项目ID",
+          "platformTypeRequired": "请选择平台类型",
+          "serverKeyRequired": "请输入服务端密钥",
+          "pushTitleRequired": "请输入推送标题",
+          "pushContentRequired": "请输入推送内容",
+          "targetTypeRequired": "请选择推送目标",
+          "apiKeyRequired": "请输入API密钥",
+          "authDomainRequired": "请输入认证域名",
+          "appIdRequired": "请输入应用ID",
+          "measurementIdRequired": "请输入测量ID",
+          "measurementApiSecretRequired": "请输入测量协议API密钥",
+          "storageBucketRequired": "请输入存储桶",
+          "msgSenderIdRequired": "请输入消息发送者ID",
+          "serviceAccountKeyRequired": "请上传服务账号密钥",
+          "remarkRequired": "请输入备注信息",
+          "firebaseProjectRequired": "请选择firebase项目",
+          "titleRequired": "请输入标题",
+          "contentRequired": "请输入内容",
+          "pushTargetRequired": "请选择推送目标",
+          "memberIdsRequired": "请输入会员ID,多个用逗号分隔",
+          "clickActionRequired": "请选择点击行为",
+          "targetLinkRequired": "请输入目标链接",
+          "openPageRequired": "请选择打开页面",
+          "sendTimeRequired": "请选择发送时间",
+          "scheduledSendTimeRequired": "请选择定时发送时间",
+          "pushPriorityRequired": "请选择推送优先级",
+          "survivalTimeRequired": "请输入生存时间(秒)"
+        },
+        "buttons": {
+          "cancel": "取消",
+          "save": "保存",
+          "submit": "提交"
+        },
+        "messages": {
+          "saveSuccess": "保存成功",
+          "saveFailed": "保存失败",
+          "submitSuccess": "提交成功",
+          "submitFailed": "提交失败",
+          "addSuccess": "新增成功",
+          "editSuccess": "编辑成功",
+          "fileReadFailed": "文件读取失败，请重新选择文件",
+          "uploadJsonFile": "请上传json文件",
+          "fileContentEmpty": "文件内容不能为空",
+          "getAutoTagListFailed": "获取自动标签下拉列表失败",
+          "getFirebaseProjectListFailed": "获取firebase项目列表失败",
+          "initDataFailed": "初始化数据失败",
+          "getDetailFailed": "获取推送详情失败"
+        },
+        "viewDetail": "查看推送详情",
+        "addDetail": "添加推送详情",
+        "addPush": "新建Firebase推送",
+        "confirmTitle": "提示",
+        "sendConfirm": "确定要立即发送这条推送消息吗？",
+        "cancel": "取消",
+        "confirm": "确定"
+      }
+    },
+    "engageLab": {
+      "platformType": {
+        "web": "Web(PWA)",
+        "app": "App"
+      },
+      "config": {
+        "title": "极光推送配置",
+        "addConfig": "新增配置",
+        "editConfig": "编辑配置",
+        "preview": "预览",
+        "fold": "收起",
+        "columns": {
+          "pushend": "推送端口",
+          "placeholderKey": "请输入Key",
+          "Key": "Key",
+          "masterSecret": "Master Secret",
+          "placeholderMasterSecret": "请输入Master Secret",
+          "appName": "APP包名",
+          "placeholderAppName": "请输入APP包名",
+          "validAppName": "请输入规范的APP包名，eg: com.xxx.app",
+          "gs": "GoogleService",
+          "chooseFile": "选择文件",
+          "placeholderGs": "请选择GoogleService",
+          "status": "状态",
+          "edit": "编辑"
+        }
+      },
+      "push": {
+        "title": "极光推送",
+        "addPush": "新增推送",
+        "editPush": "编辑推送",
+        "record": "推送记录",
+        "pending": "推送中",
+        "success": "推送成功",
+        "failed": "推送失败",
+        "columns": {
+          "pushTime": "推送时间",
+          "pushPlatform": "推送平台",
+          "pushTitle": "推送标题",
+          "pushContent": "推送内容",
+          "jumpLink": "跳转界面",
+          "pushState": "推送状态",
+          "placeholderJumpLink": "请选择跳转界面,按照其他模块的界面跳转规则下拉选择",
+          "pushImage": "推送图片",
+          "imageAdvice": "支持JPG/PNG格式的图片 (建议尺寸: 96 x 96)"
+        }
+      }
+    },
+    "messageManage": {
+      "index": {
+        "title": "消息管理",
+        "tabs": {
+          "generalMessage": "通用消息",
+          "customPopup": "定制化弹窗",
+          "siteMessage": "站内信",
+          "siteMessageRecord": "站内信领取记录",
+          "firebaseMessage": "Firebase消息",
+          "externalMessage": "站外信"
+        }
+      },
+      "messageList": {
+        "columns": {
+          "id": "ID",
+          "messageType": "消息类型",
+          "image": "图片",
+          "title": "标题",
+          "contentOrUrl": "内容/跳转连接",
+          "sort": "排序",
+          "lastUpdateTime": "最后更新时间",
+          "lastUpdateUser": "操作人",
+          "status": "状态",
+          "targetObject": "展示对象"
+        },
+        "typeMap": {
+          "scrollMessage": "滚动消息",
+          "beforeLoginPopup": "登录前弹窗",
+          "afterLoginPopup": "登录后弹窗",
+          "carousel": "轮播图",
+          "customCarousel": "定制版面轮播图"
+        },
+        "form": {
+          "messageType": "消息类型",
+          "messageTypePlaceholder": "请选择消息类型",
+          "statusPlaceholder": "请选择启用状态"
+        },
+        "buttons": {
+          "add": "新增",
+          "enable": "启用",
+          "disable": "禁用"
+        },
+        "modal": {
+          "addTitle": "新增消息",
+          "editTitle": "修改消息",
+          "deleteTitle": "提示",
+          "deleteConfirm": "你确定要删除吗？",
+          "deletePositive": "确定",
+          "deleteNegative": "取消"
+        },
+        "unknownTag": "未知标签",
+        "times": "次",
+        "batchImport": "批量导入",
+        "download": "下载",
+        "selected": "已选：",
+        "batchImportFileName": "批量导入文件.txt",
+        "downloadFailed": "下载失败，请稍后再试"
+      },
+      "addMessage": {
+        "typeMap": {
+          "scrollMessage": "滚动消息",
+          "beforeLoginPopup": "登录前弹窗",
+          "afterLoginPopup": "登录后弹窗",
+          "carousel": "轮播图",
+          "customCarousel": "定制版面轮播图"
+        },
+        "form": {
+          "messageType": "消息类型",
+          "messageTypePlaceholder": "请选择消息类型",
+          "sort": "排序(数字越大排序越靠前)",
+          "image": "图片",
+          "carousel": "轮播图",
+          "title": "标题",
+          "content": "内容",
+          "buttonText": "按钮文本",
+          "buttonTextTip": "该文本将显示在轮播图下方的按钮上",
+          "jumpType": "跳转类型",
+          "jumpUrl": "跳转链接",
+          "jumpUrlTip": "请输入完整的URL地址，如：https://www.example.com",
+          "jumpPage": "跳转页面",
+          "popupTitle": "弹窗标题",
+          "gameVendor": "游戏厂商",
+          "subGame": "子游戏",
+          "customerCustomPopup": "工单类型",
+          "orderTypePlaceholder": "请选择工单类型"
+        },
+        "validation": {
+          "contentRequired": "请填写内容",
+          "sortRequired": "请输入排序",
+          "sortPattern": "排序必须是从0开始的正整数",
+          "imageRequired": "请上传图片",
+          "buttonTextRequired": "请输入按钮文本",
+          "popupIdRequired": "请选择弹窗标题",
+          "vendorCodeRequired": "请选择游戏厂商",
+          "jumpTypeRequired": "请选择跳转类型",
+          "pageTypeRequired": "请选择跳转页面",
+          "jumpUrlRequired": "请输入跳转链接",
+          "jumpUrlPattern": "请输入有效的URL地址"
+        },
+        "buttons": {
+          "cancel": "取消",
+          "save": "保存"
+        },
+        "messages": {
+          "addSuccess": "添加成功",
+          "editSuccess": "编辑成功"
+        }
+      },
+      "addOrUpdatePopup": {
+        "form": {
+          "title": "标题",
+          "sort": "排序",
+          "popupCoverImage": "弹窗封面图片",
+          "time": "时间",
+          "longTermValid": "长期有效",
+          "fixedTime": "固定时间",
+          "timeRange": "时间范围",
+          "isForcePopup": "是否强弹",
+          "yes": "是",
+          "no": "否",
+          "jumpType": "跳转类型",
+          "jumpTypePlaceholder": "请选择跳转类型",
+          "jumpLink": "跳转链接",
+          "jumpPage": "界面选择",
+          "jumpPagePlaceholder": "请选择跳转界面",
+          "popupTarget": "弹窗对象",
+          "popupTargetPlaceholder": "请选择跳转对象",
+          "platformAutoTag": "平台自动标签",
+          "platformAutoTagPlaceholder": "请选择标签，可多选",
+          "group": "分组",
+          "groupPlaceholder": "请选择分组,可多选",
+          "vipLevel": "VIP等级",
+          "vipLevelPlaceholder": "请选择VIP等级,可多选",
+          "sourceChannel": "来源渠道",
+          "sourceChannelPlaceholder": "请选择来源渠道,可多选",
+          "memberId": "会员ID",
+          "memberIdPlaceholder": "请输入会员ID,多个用逗号分隔或者换行分隔每行一个",
+          "uploadMemberId": "上传会员ID",
+          "selectFile": "选择文件",
+          "uploadMemberIdTip": "请上传包含会员ID的文本文件",
+          "templateDescription": "查看模板说明",
+          "popupFrequency": "弹窗频率",
+          "popupFrequencyPlaceholder": "请选择弹窗频率"
+        },
+        "validation": {
+          "titleRequired": "请输入标题",
+          "sortRequired": "请输入排序",
+          "timeRangeRequired": "请选择时间范围",
+          "jumpTypeRequired": "请选择跳转类型",
+          "jumpLinkRequired": "请输入跳转链接",
+          "jumpPageRequired": "请选择跳转页面",
+          "popupTargetRequired": "请选择弹窗对象",
+          "popupFrequencyRequired": "请选择弹窗频率",
+          "jumpPageOrderRequired": "请选择工单类型"
+        },
+        "buttons": {
+          "cancel": "取消",
+          "save": "保存"
+        },
+        "messages": {
+          "addSuccess": "添加成功",
+          "editSuccess": "修改成功",
+          "fileReadFailed": "文件读取失败，请重新选择文件",
+          "uploadTxtFile": "请上传txt文件",
+          "fileSizeLimit": "文件大小不能超过5MB",
+          "fileContentEmpty": "文件内容不能为空",
+          "fileReadError": "文件读取失败"
+        },
+        "templateModal": {
+          "title": "模板说明",
+          "description": "请上传包含会员ID的文本文件，文件格式为txt，每行一个会员ID",
+          "example": "示例："
+        }
+      },
+      "siteMessage": {
+        "columns": {
+          "id": "ID",
+          "siteMsgDescription": "站内信说明",
+          "siteMsgTitle": "站内信标题",
+          "content": "内容",
+          "duration": "持续时间",
+          "sendTime": "发送时间",
+          "jumpType": "跳转类型",
+          "receiveTarget": "接收对象",
+          "hasReward": "是否有奖励",
+          "isEnabled": "是否启用",
+          "status": "状态",
+          "operator": "操作人"
+        },
+        "duration": {
+          "longTerm": "长期有效"
+        },
+        "reward": {
+          "yes": "是",
+          "no": "否"
+        },
+        "status": {
+          "normal": "正常",
+          "revoked": "已撤回",
+          "enabled": "启用",
+          "disabled": "禁用"
+        },
+        "receiveTarget": {
+          "batchImport": "批量导入",
+          "download": "下载",
+          "selected": "已选："
+        },
+        "modal": {
+          "contentTitle": "内容",
+          "unknownTag": "未知标签"
+        },
+        "form": {
+          "siteMsgDescription": "站内信说明",
+          "siteMsgDescriptionPlaceholder": "请输入站内信说明",
+          "operator": "操作人",
+          "operatorPlaceholder": "请输入操作人"
+        },
+        "actions": {
+          "revoke": "撤回",
+          "view": "查看",
+          "edit": "编辑",
+          "addSiteMsg": "添加站内信",
+          "viewSiteMsg": "查看站内信",
+          "editSiteMsg": "编辑站内信"
+        },
+        "revoke": {
+          "confirmTitle": "撤回确认",
+          "confirmContent": "确定要撤回站内信 \"{name}\" 吗？撤回后该站内信将被禁用且无法再次启用。",
+          "confirmButton": "确定撤回",
+          "cancelButton": "取消",
+          "processing": "撤回中...",
+          "success": "撤回站内信成功",
+          "failed": "撤回失败，请稍后再试"
+        },
+        "download": {
+          "batchImportFileName": "批量导入文件.txt",
+          "downloadFailedError": "下载失败，请稍后再试"
+        }
+      },
+      "outSitMessage": {
+        "columns": {
+          "id": "ID",
+          "emailDescription": "邮件说明",
+          "emailSubject": "邮件主题",
+          "emailContent": "邮件内容",
+          "receiveTarget": "接收对象",
+          "emailServiceProvider": "邮件服务商",
+          "sendTime": "发送时间",
+          "sendStatus": "发送状态",
+          "sendCount": "发送数量",
+          "successCount": "成功数量"
+        },
+        "receiveTarget": {
+          "batchImport": "批量导入",
+          "download": "下载",
+          "selected": "已选："
+        },
+        "sendStatus": {
+          "pending": "待发送",
+          "sending": "发送中",
+          "success": "发送成功",
+          "failed": "发送失败"
+        },
+        "modal": {
+          "contentTitle": "邮件内容"
+        },
+        "form": {
+          "emailDescription": "邮件说明",
+          "emailDescriptionPlaceholder": "请输入邮件说明",
+          "sendStatus": "发送状态",
+          "sendStatusPlaceholder": "请选择发送状态"
+        },
+        "actions": {
+          "view": "查看",
+          "send": "发送",
+          "addOutSitMessage": "添加站外信",
+          "viewOutSitMessage": "查看站外信",
+          "configEmailProvider": "配置邮件服务商"
+        },
+        "send": {
+          "confirmTitle": "发送站外信",
+          "confirmContent": "确定发送此站外信吗？",
+          "confirmButton": "确定",
+          "cancelButton": "取消",
+          "success": "发送成功"
+        },
+        "download": {
+          "batchImportFileName": "批量导入文件.txt",
+          "downloadFailedError": "下载失败，请稍后再试"
+        },
+        "unknown": {
+          "tag": "未知标签"
+        }
+      },
+      "promptSetting": {
+        "columns": {
+          "id": "ID",
+          "popupTitle": "弹窗标题",
+          "popupCoverImage": "弹窗封面图片",
+          "time": "时间",
+          "sort": "排序",
+          "isForcePopup": "是否强弹",
+          "jumpType": "跳转类型",
+          "popupTarget": "弹窗对象",
+          "popupFrequency": "弹窗频率",
+          "isEnabled": "是否启用"
+        },
+        "time": {
+          "longTerm": "长期有效"
+        },
+        "forcePopup": {
+          "yes": "是",
+          "no": "否"
+        },
+        "popupTarget": {
+          "batchImport": "批量导入",
+          "download": "下载",
+          "selected": "已选："
+        },
+        "status": {
+          "enabled": "启用",
+          "disabled": "禁用"
+        },
+        "modal": {
+          "popupCoverTitle": "弹窗封面图片",
+          "noImage": "无图片"
+        },
+        "form": {
+          "popupTitle": "弹窗标题",
+          "popupTitlePlaceholder": "请输入弹窗标题"
+        },
+        "actions": {
+          "edit": "编辑",
+          "addPrompt": "添加弹窗",
+          "editPrompt": "修改弹窗"
+        },
+        "download": {
+          "batchImportFileName": "批量导入文件.txt",
+          "downloadFailedError": "下载失败，请稍后再试"
+        },
+        "unknown": {
+          "tag": "未知标签"
+        }
+      },
+      "addOutSitMessage": {
+        "form": {
+          "emailDescription": "邮件说明",
+          "emailSubject": "邮件主题",
+          "emailContent": "邮件内容",
+          "emailContentPlaceholder": "请输入内容",
+          "emailServiceProvider": "邮件服务商",
+          "emailServiceProviderPlaceholder": "请选择邮件服务商",
+          "receiveTarget": "接收对象",
+          "receiveTargetPlaceholder": "请选择跳转对象",
+          "platformAutoTag": "平台自动标签",
+          "platformAutoTagPlaceholder": "请选择标签，可多选",
+          "group": "分组",
+          "groupPlaceholder": "请选择分组,可多选",
+          "vipLevel": "VIP等级",
+          "vipLevelPlaceholder": "请选择VIP等级,可多选",
+          "channel": "渠道",
+          "channelPlaceholder": "请选择注册渠道,可多选",
+          "memberId": "会员ID:",
+          "memberIdPlaceholder": "请输入会员ID,多个用逗号分隔或者换行分隔每行一个",
+          "uploadMemberId": "上传会员ID",
+          "selectFile": "选择文件"
+        },
+        "validation": {
+          "emailDescriptionRequired": "请输入邮件说明",
+          "timeRequired": "请选择时间",
+          "receiveTargetRequired": "请选择弹窗对象",
+          "emailServiceProviderRequired": "请选择邮件服务商",
+          "emailSubjectRequired": "请输入邮件主题",
+          "emailContentRequired": "请输入邮件内容"
+        },
+        "messages": {
+          "addSuccess": "添加成功",
+          "fileReadFailure": "文件读取失败，请重新选择文件",
+          "uploadTxtFileOnly": "请上传txt文件",
+          "fileSizeExceeded": "文件大小不能超过5MB",
+          "fileContentEmpty": "文件内容不能为空",
+          "fileReadError": "文件读取失败"
+        },
+        "upload": {
+          "templateTitle": "模板说明",
+          "templateDescription": "请上传包含会员ID的文本文件，文件格式为txt，每行一个会员ID",
+          "example": "示例：",
+          "uploadDescription": "请上传包含会员ID的文本文件",
+          "viewTemplate": "查看模板说明"
+        },
+        "sendTime": {
+          "label": "发送时间",
+          "immediately": "立即发送",
+          "scheduled": "定时发送",
+          "placeholder": "请选择发送时间"
+        },
+        "buttons": {
+          "cancel": "取消",
+          "confirm": "确定"
+        }
+      },
+      "addSitMessage": {
+        "form": {
+          "labels": {
+            "description": "站内信说明",
+            "content": "站内信内容",
+            "validTime": "时间:",
+            "duration": "持续时间:",
+            "sendType": "发送类型",
+            "sendDuration": "持续时间:",
+            "jumpType": "跳转类型",
+            "jumpLink": "跳转链接",
+            "pageSelection": "界面选择",
+            "jumpButtonText": "跳转按钮文案",
+            "targetType": "接收对象",
+            "autoTags": "平台自动标签",
+            "groups": "分组",
+            "vipLevel": "VIP等级",
+            "channel": "渠道",
+            "sourceChannel": "来源渠道",
+            "memberIds": "会员ID:",
+            "uploadMemberIds": "上传会员ID",
+            "hasReward": "是否有奖励",
+            "rewardType": "奖励类型",
+            "freeReward": "免费奖励",
+            "paidReward": "付费奖励",
+            "rewardAmount": "奖励金额:",
+            "codingMultiple": "金额打码倍数:",
+            "coupons": "优惠券:",
+            "paidRewardLabel": "付费奖励:",
+            "rechargeCount": "付费次数:",
+            "rechargeAmountMin": "充值金额>=",
+            "expireType": "奖励过期类型",
+            "noLimit": "无限制",
+            "expireAfterHours": "发送N小时后过期",
+            "specificDateTime": "指定日期时间",
+            "expireAfterSendTime": "发送时间后过期",
+            "hoursAfterExpire": "小时后过期",
+            "expireDateTime": "过期时间",
+            "titleForLanguage": "{language}标题",
+            "contentForLanguage": "{language} 内容",
+            "thumbnailForLanguage": "{language} 缩略图（非必填 640*120）"
+          },
+          "placeholders": {
+            "messageTitle": "请输入标题",
+            "contentForLanguage": "请输入{language}内容",
+            "selectJumpType": "请选择跳转类型",
+            "selectJumpPage": "请选择跳转界面",
+            "jumpButtonText": "请输入跳转按钮文案(非必填)",
+            "selectTargetType": "请选择跳转对象",
+            "selectTags": "请选择标签，可多选",
+            "selectGroups": "请选择分组,可多选",
+            "selectVipLevel": "请选择VIP等级,可多选",
+            "selectRegisterChannel": "请选择注册渠道,可多选",
+            "selectSourceChannel": "请选择来源渠道,可多选",
+            "memberIds": "请输入会员ID,多个用逗号分隔或者换行分隔每行一个",
+            "selectCoupons": "请选择优惠券"
+          },
+          "options": {
+            "longTerm": "长期有效",
+            "fixedTime": "固定时间",
+            "immediately": "立即发送",
+            "scheduled": "定时发送",
+            "yes": "是",
+            "no": "否",
+            "unlimited": "无限制",
+            "expireAfterHours": "发送N小时后过期",
+            "specificDateTime": "指定日期时间"
+          },
+          "upload": {
+            "templateTitle": "模板说明",
+            "templateDescription": "请上传包含会员ID的文本文件，文件格式为txt，每行一个会员ID",
+            "example": "示例：",
+            "uploadDescription": "请上传包含会员ID的文本文件",
+            "viewTemplate": "查看模板说明",
+            "selectFile": "选择文件"
+          },
+          "description": "站内信说明",
+          "content": "站内信内容",
+          "title": "标题",
+          "titlePlaceholder": "请输入标题",
+          "contentPlaceholder": "请输入{language}内容",
+          "thumbnail": "缩略图（非必填 640*120）",
+          "time": "时间:",
+          "longTerm": "长期有效",
+          "fixedTime": "固定时间",
+          "duration": "持续时间:",
+          "sendType": "发送类型",
+          "immediately": "立即发送",
+          "scheduled": "定时发送",
+          "jumpType": "跳转类型",
+          "jumpTypePlaceholder": "请选择跳转类型",
+          "jumpLink": "跳转链接",
+          "pageSelection": "界面选择",
+          "pageSelectionPlaceholder": "请选择跳转界面",
+          "receiveTarget": "接收对象",
+          "receiveTargetPlaceholder": "请选择跳转对象",
+          "platformAutoTag": "平台自动标签",
+          "platformAutoTagPlaceholder": "请选择标签，可多选",
+          "group": "分组",
+          "groupPlaceholder": "请选择分组,可多选",
+          "vipLevel": "VIP等级",
+          "vipLevelPlaceholder": "请选择VIP等级,可多选",
+          "regChannel": "注册渠道",
+          "regChannelPlaceholder": "请选择注册渠道,可多选",
+          "memberId": "会员ID:",
+          "memberIdPlaceholder": "请输入会员ID,多个用逗号分隔或者换行分隔每行一个",
+          "uploadMemberId": "上传会员ID",
+          "selectFile": "选择文件",
+          "jumpButtonText": "跳转按钮文字",
+          "jumpButtonTextPlaceholder": "请输入跳转按钮文字",
+          "rewardWater": "奖励打码量",
+          "rewardWaterPlaceholder": "请输入打码量倍数",
+          "freeRewardWater": "免费奖励打码量",
+          "freeRewardWaterPlaceholder": "请输入打码量倍数",
+          "rewardAmount": "奖励金额",
+          "rewardAmountPlaceholder": "请输入奖励金额"
+        },
+        "validation": {
+          "titleRequired": "请输入标题",
+          "timeRangeRequired": "请选择时间范围",
+          "timeRequired": "请选择时间",
+          "jumpTypeRequired": "请选择跳转类型",
+          "jumpLinkRequired": "请输入跳转链接",
+          "jumpPageRequired": "请选择跳转页面",
+          "receiveTargetRequired": "请选择弹窗对象",
+          "rewardWaterRequired": "请输入打码量倍数",
+          "freeRewardWaterRequired": "请输入打码量倍数",
+          "rewardAmountRequired": "请输入奖励金额",
+          "selectRewardType": "请至少选择一种奖励类型",
+          "selectAtLeastOneRewardType": "请至少选择一种奖励类型"
+        },
+        "messages": {
+          "addSuccess": "添加成功",
+          "fileReadFailure": "文件读取失败，请重新选择文件",
+          "uploadTxtFileOnly": "请上传txt文件",
+          "fileSizeExceeded": "文件大小不能超过5MB",
+          "fileContentEmpty": "文件内容不能为空",
+          "fileReadError": "文件读取失败"
+        },
+        "upload": {
+          "templateTitle": "模板说明",
+          "templateDescription": "请上传包含会员ID的文本文件，文件格式为txt，每行一个会员ID",
+          "example": "示例：",
+          "uploadDescription": "请上传包含会员ID的文本文件",
+          "viewTemplate": "查看模板说明",
+          "selectFile": "选择文件"
+        },
+        "buttons": {
+          "cancel": "取消",
+          "save": "保存"
+        }
+      },
+      "editSitMessage": {
+        "messages": {
+          "editSuccess": "编辑成功"
+        }
+      },
+      "sitMessageRecord": {
+        "columns": {
+          "memberId": "会员ID",
+          "messageId": "站内信ID",
+          "messageTitle": "站内信标题",
+          "rewardType": "奖励类型",
+          "rewardContent": "奖励内容",
+          "amount": "金额",
+          "coupons": "优惠券",
+          "pieces": "张",
+          "claimTime": "领取时间",
+          "status": "状态"
+        },
+        "form": {
+          "memberId": "会员ID",
+          "memberIdPlaceholder": "请输入会员ID",
+          "messageId": "站内信ID",
+          "messageIdPlaceholder": "请输入站内信ID",
+          "status": "状态",
+          "statusPlaceholder": "请选择状态",
+          "statusOptions": {
+            "unclaimed": "未领取",
+            "claimed": "已领取"
+          },
+          "claimTime": "领取时间",
+          "claimTimePlaceholder": "请选择时间"
+        },
+        "buttons": {
+          "export": "导出"
+        },
+        "export": {
+          "fileName": "站内信领取记录"
+        }
+      }
+    },
+    "registerManage": {
+      "index": {
+        "title": "注册管理",
+        "tabs": {
+          "registerManage": "注册管理",
+          "domainManage": "域名管理",
+          "channelSourceManage": "渠道来源管理",
+          "packageTransferConfig": "分包转移配置",
+          "smsConfig": "短信商配置",
+          "emailConfig": "邮箱配置",
+          "landingPageManage": "落地页管理"
+        }
+      },
+      "components": {
+        "smsConfig": {
+          "config": {
+            "sendAccountSMSCount": "单账号每日下发短信限制",
+            "sendIPSMSCount": "同IP每日下发短信限制",
+            "smsCodeExpiredTime": "验证码有效时长（分钟）"
+          },
+          "scenarios": {
+            "memberRegister": "会员注册",
+            "addWithdrawMethod": "新增提现方式",
+            "forgotPassword": "忘记密码",
+            "memberGoogleVerify": "会员绑定谷歌验证"
+          },
+          "columns": {
+            "operationTime": "操作时间",
+            "operator": "操作人",
+            "configValue": "配置值（旧值->新值）",
+            "smsProviderName": "短信商名",
+            "template": "模板",
+            "requestUrl": "请求地址"
+          },
+          "status": {
+            "enable": "启用",
+            "disable": "禁用"
+          },
+          "messages": {
+            "operationSuccess": "操作成功"
+          },
+          "modal": {
+            "editSmsProvider": "编辑短信商",
+            "addSmsProvider": "新增短信商"
+          },
+          "buttons": {
+            "cancel": "取消",
+            "save": "保存",
+            "add": "新增"
+          },
+          "smsVerificationScenarios": "使用短信验证场景",
+          "addTemplateNote": "新增的时候会同时增加所有语言的模板"
+        },
+        "emailConfig": {
+          "config": {
+            "sendAccountEmailCount": "单账号每日下发邮件限制",
+            "sendIPEmailCount": "同IP每日下发邮件限制",
+            "emailCodeExpiredTime": "验证码有效时长（分钟）"
+          },
+          "scenarios": {
+            "memberRegister": "会员注册",
+            "addWithdrawMethod": "新增提现方式",
+            "forgotPassword": "忘记密码",
+            "memberGoogleVerify": "会员绑定谷歌验证"
+          },
+          "columns": {
+            "operationTime": "操作时间",
+            "operator": "操作人",
+            "configValue": "配置值（旧值->新值）",
+            "icon": "图标",
+            "code": "编码",
+            "name": "名称",
+            "account": "账号",
+            "title": "标题",
+            "content": "正文",
+            "contentDetail": "正文富文本，点击看详情"
+          },
+          "status": {
+            "enable": "启用",
+            "disable": "禁用"
+          },
+          "messages": {
+            "operationSuccess": "操作成功"
+          },
+          "modal": {
+            "editEmailConfig": "编辑邮箱配置",
+            "addEmailConfig": "新增邮箱配置",
+            "emailContent": "邮箱配置正文"
+          },
+          "emailVerificationScenarios": "使用邮箱验证场景"
+        },
+        "register": {
+          "config": {
+            "registerMobile": {
+              "name": "开启手机注册",
+              "desc": "开启后可以使用手机注册",
+              "link": "手机短信设置"
+            },
+            "registerEmail": {
+              "name": "开启邮箱注册",
+              "desc": "开启后可以使用邮箱注册",
+              "link": "邮箱设置"
+            },
+            "isOpenRegisterCaptcha": {
+              "name": "开启注册图片验证码",
+              "desc": "开启后注册需要图形验证码"
+            },
+            "isInvitecode": {
+              "name": "邀请码是否必填",
+              "desc": "开启后注册必须要有邀请码"
+            },
+            "registerPrivacyChecked": {
+              "name": "注册隐私协议默认勾选",
+              "desc": "开启后默认勾选了注册隐私协议"
+            },
+            "isEnableGuestLogin": {
+              "name": "开启游客登录",
+              "desc": "开启后允许游客身份登录系统"
+            },
+            "registerCount": {
+              "name": "同IP注册数量",
+              "desc": "一个IP最多能注册多少个账号"
+            },
+            "sameBrowserRegistCount": {
+              "name": "同浏览器指纹注册数量",
+              "desc": "一个浏览器指纹最多能注册多少个账号"
+            },
+            "sameDeviceRegistCount": {
+              "name": "同设备注册数量",
+              "desc": "一个设备最多能注册多少个账号"
+            }
+          },
+          "columns": {
+            "operationTime": "操作时间",
+            "operator": "操作人",
+            "configValue": "配置值（旧值->新值）"
+          },
+          "status": {
+            "yes": "是",
+            "no": "否"
+          },
+          "buttons": {
+            "cancel": "取消",
+            "save": "保存",
+            "add": "添加",
+            "delete": "删除",
+            "savePhoneNumbers": "保存可注册手机号"
+          },
+          "messages": {
+            "noConfigFile": "未获取配置文件",
+            "operationSuccess": "操作成功"
+          },
+          "phone": {
+            "supportImage": "支持图片格式（.png、.webp），图片大小不能超过1MB",
+            "noImage": "暂无图片",
+            "imageTitle": "注册页面图片配置",
+            "imageSubTitle": "配置注册页面显示的背景图，支持多种图片格式",
+            "title": "可注册手机号（默认添加了主营国家的号码（字典里需要添加））",
+            "description": "【区号+手机区号长度不能小于10位数,不包含区号里面的+号字符, 手机区号格式：必须以+开头,格式为+x和+xx或+xxx(如:+1,+66,+666), 区号2位,手机号码8-13位,区号3位,手机号码7-13位,区号1位,手机号码9-13位 】"
+          },
+          "form": {
+            "areaCode": "区号",
+            "phoneLength": "手机号长度"
+          },
+          "validation": {
+            "areaCodeRequired": "请输入区号",
+            "areaCodeFormat": "必须以+开头后面跟着 1 - 3 位数字",
+            "phoneLengthRequired": "请输入手机号长度",
+            "phoneLengthFormat": "手机号长度格式不正确"
+          }
+        },
+        "channel": {
+          "form": {
+            "domainUrl": "域名地址",
+            "domainUrlPlaceholder": "请输入域名地址"
+          },
+          "buttons": {
+            "add": "添加",
+            "edit": "编辑"
+          },
+          "columns": {
+            "channelName": "渠道名",
+            "channelType": "渠道分类",
+            "status": "状态",
+            "domainUrl": "域名地址",
+            "remark": "备注",
+            "createTime": "创建时间",
+            "lastUpdateTime": "最后更新时间",
+            "operator": "操作人"
+          },
+          "types": {
+            "agentPromotion": "代理推广",
+            "adPromotion": "投流推广",
+            "registerDomain": "注册域名",
+            "antiBlockDomain": "防封域名"
+          },
+          "status": {
+            "enable": "启用",
+            "disable": "禁用"
+          },
+          "modal": {
+            "editChannel": "编辑渠道",
+            "addChannel": "新增渠道"
+          },
+          "seoConfig": {
+            "title": "SEO配置"
+          },
+          "seo": {
+            "seoTit": "网站名称:",
+            "seoDesc": "网站简介:",
+            "seoImage": "宣传图:",
+            "uploadHelpText": "支持PNG格式的图片，500KB以内，(尺寸1000*1000以内: 推荐尺寸780*440)",
+            "placeholders": {
+              "siteNamePlaceholder": "请输入网站名称",
+              "siteDescPlaceholder": "请输入网站简介"
+            },
+            "buttons": {
+              "cancel": "取消",
+              "saveConfig": "保存配置"
+            },
+            "validation": {
+              "siteNameRequired": "请输入网站名称",
+              "siteNameLength": "网站名称长度应为1-100个字符",
+              "siteDescRequired": "请输入网站简介",
+              "siteDescLength": "网站简介长度应为1-500个字符"
+            },
+            "messages": {
+              "saveSuccess": "保存配置成功！",
+              "validationFailed": "表单验证失败:",
+              "getInfoFailed": "获取信息失败:"
+            }
+          }
+        },
+        "addChannel": {
+          "form": {
+            "channelName": "渠道名:",
+            "channelType": "渠道分类:",
+            "domainUrl": "域名地址:",
+            "remark": "备注:",
+            "selectPlaceholder": "请选择"
+          },
+          "channelTypes": {
+            "agentPromotion": "代理推广",
+            "adPromotion": "投流推广",
+            "registerDomain": "注册域名",
+            "antiBlockDomain": "防封域名"
+          },
+          "validation": {
+            "channelNameRequired": "请输入渠道名",
+            "channelTypeRequired": "请选择渠道",
+            "domainRequired": "请输入域名地址",
+            "invalidDomain": "请输入有效的域名地址"
+          },
+          "buttons": {
+            "cancel": "取消",
+            "save": "保存"
+          },
+          "messages": {
+            "operationSuccess": "操作成功"
+          }
+        },
+        "addEmailTemplate": {
+          "form": {
+            "emailTemplate": "邮箱模板:",
+            "selectPlaceholder": "请选择",
+            "emailName": "邮箱名称:",
+            "emailAccount": "邮箱账号:",
+            "emailPassword": "邮箱密码:",
+            "smtpServer": "邮箱服务器:",
+            "smtpPort": "邮箱端口:",
+            "emailTitle": "邮件标题:",
+            "icon": "图标:"
+          },
+          "validation": {
+            "emailLogoRequired": "请上传模板LOGO",
+            "nameRequired": "请输入模板名称",
+            "emailCodeRequired": "请选择邮箱模板",
+            "accountRequired": "请输入邮箱账号",
+            "passwordRequired": "请输入邮箱密码",
+            "smtpServerRequired": "请输入邮箱服务器",
+            "smtpPortRequired": "请输入邮箱端口",
+            "emailTitleRequired": "请输入邮件标题"
+          },
+          "buttons": {
+            "cancel": "取消",
+            "save": "保存"
+          },
+          "messages": {
+            "operationSuccess": "操作成功"
+          }
+        },
+        "addPackage": {
+          "form": {
+            "packageName": "分包名称:",
+            "remark": "备注:"
+          },
+          "validation": {
+            "packageNameRequired": "请输入分包名"
+          },
+          "buttons": {
+            "cancel": "取消",
+            "save": "保存"
+          },
+          "messages": {
+            "operationSuccess": "操作成功"
+          }
+        },
+        "addPackageConfig": {
+          "form": {
+            "configType": "更包类型:",
+            "configTypePlaceholder": "请选择更包类型",
+            "sourceIdentity": "包名:",
+            "sourceIdentityPlaceholder": "请选择包名",
+            "targetIdentity": "目标包名:",
+            "targetIdentityPlaceholder": "请选择包名",
+            "popupImage": "弹窗图片:",
+            "targetType": "更包群体:",
+            "jumpUrl": "跳转链接:",
+            "hasReward": "是否有奖励:",
+            "rewardPopupImage": "奖励弹窗图片:",
+            "rewardMode": "奖励用户配置:",
+            "bonusAmount": "彩金:",
+            "bonusAmountPlaceholder": "请输入彩金",
+            "bonusMultiplier": "打码量:",
+            "bonusMultiplierPlaceholder": "请输入打码量",
+            "vipConfig": "VIP等级配置:",
+            "rechargeConfig": "充值区间配置:",
+            "selectPlaceholder": "请选择",
+            "no": "否",
+            "yes": "是"
+          },
+          "validation": {
+            "invalidDomain": "请输入有效的域名地址",
+            "configTypeRequired": "请选择更包类型",
+            "sourceIdentityRequired": "请选择包名",
+            "targetIdentityRequired": "请选择包名",
+            "groupTypeRequired": "请选择更包群体",
+            "popupImageRequired": "请上传图片",
+            "rewardPopupImageRequired": "请上传图片",
+            "jumpUrlRequired": "请输入跳转链接"
+          },
+          "buttons": {
+            "addVipLevel": "新增VIP等级",
+            "addRechargeConfig": "新增充值区间配置",
+            "delete": "删除",
+            "cancel": "取消",
+            "save": "保存"
+          },
+          "table": {
+            "vipLevel": "VIP等级",
+            "bonusAmount": "彩金",
+            "bonusMultiplier": "打码量",
+            "operation": "操作",
+            "minRecharge": "充值金额>=",
+            "maxRecharge": "充值金额<"
+          },
+          "messages": {
+            "samePackageError": "包名与目标包名不能相同",
+            "operationSuccess": "操作成功"
+          }
+        },
+        "addPageConfig": {
+          "form": {
+            "channelName": "渠道名称",
+            "landingPageStyle": "落地页样式",
+            "adGroup": "代投组",
+            "pwaPackage": "PWA包"
+          },
+          "validation": {
+            "landingPageRequired": "请选择落地页样式"
+          },
+          "buttons": {
+            "cancel": "取消",
+            "save": "保存"
+          },
+          "messages": {
+            "operationSuccess": "操作成功"
+          }
+        },
+        "addPwa": {
+          "form": {
+            "domain": "域名"
+          },
+          "validation": {
+            "domainRequired": "请选择域名"
+          },
+          "buttons": {
+            "cancel": "取消",
+            "save": "保存"
+          },
+          "messages": {
+            "operationSuccess": "操作成功"
+          }
+        },
+        "addSmsTemplate": {
+          "form": {
+            "smsProvider": "短信商:",
+            "apiKey": "APIKey:",
+            "apiSecret": "APISecret:",
+            "apiId": "APIID:",
+            "requestUrl": "请求地址:",
+            "selectPlaceholder": "请选择"
+          },
+          "validation": {
+            "smsProviderRequired": "请选择短信商",
+            "apiKeyRequired": "请输入APIKey",
+            "apiSecretRequired": "请输入APISecret",
+            "apiIdRequired": "请输入APIID",
+            "requestUrlRequired": "请输入请求地址"
+          },
+          "buttons": {
+            "cancel": "取消",
+            "save": "保存"
+          },
+          "messages": {
+            "operationSuccess": "操作成功"
+          }
+        },
+        "groupSetting": {
+          "form": {
+            "addGroupTitle": "添加代投组",
+            "existingGroupsTitle": "现有代投组",
+            "groupNamePlaceholder": "请输入代投组名称"
+          },
+          "validation": {
+            "groupNameRequired": "请输入代投组"
+          },
+          "dialog": {
+            "deleteTitle": "删除代投组",
+            "deleteConfirm": "确定删除该代投组吗？",
+            "confirm": "确认",
+            "cancel": "取消"
+          },
+          "buttons": {
+            "add": "添加",
+            "delete": "删除",
+            "close": "关闭"
+          }
+        },
+        "packageManage": {
+          "form": {
+            "channelName": "渠道名称",
+            "channelType": "渠道类型",
+            "landingPageStyle": "落地页样式",
+            "landingPageStatus": "落地页状态",
+            "adGroup": "代投组",
+            "landingPageDomain": "落地页域名",
+            "channelNamePlaceholder": "请输入渠道名称",
+            "channelTypePlaceholder": "请选择渠道类型",
+            "landingPageStylePlaceholder": "请选择落地页样式",
+            "landingPageStatusPlaceholder": "请选择落地页状态",
+            "adGroupPlaceholder": "请选择代投组",
+            "landingPageDomainPlaceholder": "请输入落地页域名",
+            "default": "默认"
+          },
+          "columns": {
+            "channelName": "渠道名称",
+            "channelType": "渠道类型",
+            "landingPageDomain": "落地页域名",
+            "landingPageStyle": "落地页样式",
+            "adGroup": "代投组",
+            "landingPageStatus": "落地页状态",
+            "createTime": "创建时间",
+            "default": "默认"
+          },
+          "actions": {
+            "getDownloadUrl": "获取下载地址",
+            "repackage": "重新打包",
+            "configLandingPage": "落地页配置",
+            "publishLandingPage": "发布落地页"
+          },
+          "buttons": {
+            "groupSetting": "代投组设置"
+          },
+          "dialog": {
+            "configTitle": "落地页配置",
+            "publishTitle": "发布确认",
+            "groupSettingTitle": "代投组设置"
+          },
+          "messages": {
+            "getDownloadUrlSuccess": "获取 {channelName} 的下载地址",
+            "getDownloadUrlFailed": "获取下载地址失败",
+            "packaging": "正在打包中，请稍候...",
+            "packagingSuccess": "请求打包 {channelName} 成功",
+            "packagingFailed": "请求打包 {channelName} 失败",
+            "publishFailed": "发布失败"
+          }
+        },
+        "packageTransfConf": {
+          "form": {
+            "packageName": "包名",
+            "packageNamePlaceholder": "请输入包名"
+          },
+          "columns": {
+            "sequence": "序号",
+            "packageName": "包名",
+            "targetPackageName": "目标包名",
+            "transferType": "转移类型",
+            "popupImage": "弹窗图片",
+            "jumpUrl": "跳转链接",
+            "notTransferUser": "未换包用户",
+            "transferUserCount": "已转移人数",
+            "createTime": "创建时间",
+            "updateTime": "更新时间",
+            "operator": "操作人"
+          },
+          "transferTypes": {
+            "forced": "强制转移配置",
+            "nonForced": "非强制转移配置"
+          },
+          "buttons": {
+            "add": "添加",
+            "download": "下载"
+          },
+          "actions": {
+            "edit": "编辑",
+            "delete": "删除"
+          },
+          "dialog": {
+            "addTitle": "新增包名",
+            "editTitle": "编辑包名",
+            "popupImageTitle": "弹窗图片",
+            "tip": "提示",
+            "deleteConfirm": "你确定要删除吗？",
+            "confirm": "确定",
+            "cancel": "取消"
+          },
+          "common": {
+            "noImage": "无图片"
+          },
+          "messages": {
+            "dataTooBig": "数据量过大，请前往下载中心下载",
+            "downloadFailed": "下载失败"
+          }
+        },
+        "pageConfig": {
+          "usePWA": {
+            "no": "不使用",
+            "yes": "使用"
+          },
+          "packageState": {
+            "unpublished": "未发布",
+            "publishing": "部署中",
+            "published": "已发布",
+            "failed": "发布失败"
+          },
+          "messages": {
+            "getLandingPageStylesFailed": "获取落地页样式失败",
+            "getAdGroupFailed": "获取代投组失败",
+            "addAdGroupSuccess": "添加代投组 {name} 成功",
+            "addAdGroupFailed": "添加代投组 {name} 失败",
+            "deleteAdGroupSuccess": "删除代投组 {name} 成功",
+            "deleteAdGroupFailed": "删除代投组 {name} 失败"
+          }
+        },
+        "publishPage": {
+          "confirmPublish": "确定要发布以下渠道的落地页吗？",
+          "channelName": "渠道名称",
+          "currentDomain": "当前域名",
+          "autoGenerateDomain": "系统将自动生成落地页域名",
+          "redeployWarning": "此操作将重新部署落地页",
+          "cancel": "取消",
+          "re": "重新",
+          "confirmPublishButton": "确认{prefix}发布",
+          "methods": {
+            "keepCurrentDomain": "保持当前域名",
+            "useNewDomain": "更换新域名"
+          },
+          "messages": {
+            "publishSuccess": "发布成功"
+          }
+        },
+        "pwa": {
+          "form": {
+            "domain": "域名",
+            "domainPlaceholder": "请输入域名",
+            "status": "状态",
+            "statusPlaceholder": "请选择状态"
+          },
+          "columns": {
+            "domain": "域名",
+            "status": "状态",
+            "createTime": "创建时间"
+          },
+          "status": {
+            "disabled": "已禁用",
+            "active": "已激活"
+          },
+          "buttons": {
+            "add": "新增"
+          },
+          "actions": {
+            "activate": "激活",
+            "deactivate": "取消激活",
+            "delete": "删除"
+          },
+          "dialog": {
+            "confirmActivate": "确认激活",
+            "confirmDeactivate": "确认取消激活",
+            "confirmActivateMessage": "确定要激活域名",
+            "confirmDeactivateMessage": "确定要取消激活域名",
+            "addTitle": "添加PWA域名",
+            "confirmDelete": "确认删除",
+            "confirmDeleteMessage": "确定要删除域名",
+            "confirm": "确认",
+            "cancel": "取消",
+            "questionMark": "吗？"
+          },
+          "messages": {
+            "operationSuccess": "操作成功"
+          }
+        },
+        "relatedChannel": {
+          "columns": {
+            "channelName": "渠道名",
+            "channelType": "渠道分类",
+            "domainAddress": "域名地址",
+            "actions": "操作"
+          },
+          "actions": {
+            "add": "添加"
+          },
+          "cards": {
+            "assignedChannels": "已分配渠道",
+            "availableChannels": "可用渠道"
+          },
+          "search": {
+            "placeholder": "搜索渠道名或域名"
+          },
+          "dialog": {
+            "confirmAddChannel": "确认添加渠道",
+            "addChannelText": "您将要添加渠道:",
+            "domain": "域名:",
+            "warningText": "请注意:一旦添加后，域名不可移除，是否确认该域名给此包使用?",
+            "confirmAdd": "确认添加",
+            "cancel": "取消"
+          },
+          "messages": {
+            "addSuccess": "添加成功",
+            "addFailed": "添加失败"
+          }
+        }
+      },
+      "landingPage": {
+        "copylink": "拷贝链接",
+        "types": {
+          "mall": "仿商城",
+          "photo": "一图流"
+        },
+        "columns": {
+          "pageName": "页面名称",
+          "pageType": "页面类型",
+          "status": "状态",
+          "pageUrl": "页面链接",
+          "createTime": "创建时间",
+          "operation": "操作"
+        },
+        "form": {
+          "pageName": "页面名称",
+          "pageNamePlaceholder": "请输入页面名称",
+          "pageType": "页面类型",
+          "pageTypePlaceholder": "请选择页面类型"
+        },
+        "buttons": {
+          "search": "搜索",
+          "reset": "重置",
+          "addPage": "新增页面",
+          "confirm": "确认",
+          "cancel": "取消",
+          "edit": "编辑",
+          "delete": "删除"
+        },
+        "empty": {
+          "description": "暂无数据"
+        },
+        "modal": {
+          "deleteLandingPage": "删除落地页",
+          "deleteConfirm": "是否删除落地页",
+          "editSuccess": "编辑成功",
+          "addSuccess": "新增成功",
+          "preview": "实时预览",
+          "edit": "编辑",
+          "add": "新增",
+          "landingPage": "落地页",
+          "form": {
+            "pageName": "落地页样式",
+            "pageNamePlaceholder": "请输入落地页样式",
+            "landingType": "落地页类型",
+            "appName": "APP名称",
+            "appNamePlaceholder": "请输入APP名称",
+            "domain": "域名",
+            "domainPlaceholder": "请输入域名",
+            "peopleNum": "人数",
+            "peopleNumPlaceholder": "请输入人数",
+            "rating": "评分",
+            "ratingPlaceholder": "请输入评分",
+            "icon": "图标",
+            "carouselImgs": "轮播图片",
+            "maxImages": "最多上传5张图片",
+            "description": "文字描述",
+            "topImg": "顶部固定栏",
+            "contentImg": "内容图片"
+          },
+          "validation": {
+            "pageNameRequired": "请输入落地页样式",
+            "landingTypeRequired": "请选择落地页类型",
+            "appNameRequired": "请输入APP名称",
+            "domainRequired": "请输入域名",
+            "peopleNumRequired": "请输入人数",
+            "ratingRequired": "请输入评分",
+            "appIcoRequired": "请上传图标",
+            "carouselImgsRequired": "请上传轮播图片",
+            "richTextRequired": "请输入文字描述",
+            "topImgRequired": "请上传顶部固定栏图片",
+            "contentImgRequired": "请上传内容图片"
+          }
+        },
+        "preview": {
+          "defaultPageName": "落地页预览",
+          "defaultAppName": "APP名称",
+          "topFixedBar": "顶部固定栏",
+          "contentArea": "内容区域",
+          "landingPageStyle": "落地页样式",
+          "selectType": "请选择类型"
+        },
+        "messages": {
+          "deleteSuccess": "删除成功",
+          "deleteError": "删除失败",
+          "statusUpdateSuccess": "状态更新成功",
+          "statusUpdateError": "状态更新失败",
+          "loadListError": "获取列表失败"
+        }
+      }
+    },
+    "riskManage": {
+      "title": "风控管理",
+      "tabs": {
+        "blacklistMember": "黑名单会员",
+        "blacklistIP": "黑名单IP",
+        "blacklistPhone": "黑名单手机号",
+        "blacklistDevice": "黑名单设备号",
+        "blacklistAccount": "黑名单提现账号"
+      },
+      "account": {
+        "form": {
+          "withdrawAccount": "提现账号",
+          "createTime": "创建时间",
+          "accountPlaceholder": "请输入提现账号",
+          "blacklistAccount": "黑名单提现账号:",
+          "batchAccountList": "提现账号列表:",
+          "batchAccountPlaceholder": "请输入提现账号,多个提现账号用回车换行分割"
+        },
+        "columns": {
+          "blacklistAccount": "黑名单提现账号",
+          "createTime": "创建时间",
+          "creator": "操作人"
+        },
+        "buttons": {
+          "export": "导出",
+          "batchImport": "批量导入黑名单提现账号",
+          "add": "添加",
+          "batchDelete": "批量删除",
+          "cancel": "取消",
+          "save": "保存"
+        },
+        "dialog": {
+          "batchImportTitle": "批量导入黑名单提现账号",
+          "addTitle": "添加黑名单提现账号",
+          "editTitle": "编辑黑名单提现账号",
+          "tip": "提示",
+          "deleteConfirm": "你确定要删除吗？",
+          "deleteAccountTitle": "删除黑名单提现账号确认",
+          "deleteAccountConfirm": "确定要删除该提现账号吗？",
+          "confirm": "确定",
+          "cancel": "取消"
+        },
+        "export": {
+          "fileName": "黑名单提现账号"
+        },
+        "validation": {
+          "accountRequired": "请输入提现账号"
+        },
+        "messages": {
+          "operationSuccess": "操作成功"
+        }
+      },
+      "device": {
+        "form": {
+          "blacklistDevice": "黑名单设备号:",
+          "createTime": "创建时间",
+          "devicePlaceholder": "请输入设备号",
+          "batchDeviceList": "设备号列表:",
+          "batchDevicePlaceholder": "请输入设备号,多个设备号用回车换行分割"
+        },
+        "columns": {
+          "blacklistDevice": "黑名单设备号",
+          "createTime": "创建时间",
+          "creator": "操作人"
+        },
+        "buttons": {
+          "export": "导出",
+          "batchImport": "批量导入黑名单设备号",
+          "add": "添加",
+          "batchDelete": "批量删除",
+          "cancel": "取消",
+          "save": "保存"
+        },
+        "dialog": {
+          "batchImportTitle": "批量导入黑名单设备号",
+          "addTitle": "添加黑名单设备号",
+          "editTitle": "编辑黑名单设备号",
+          "tip": "提示",
+          "deleteConfirm": "你确定要删除吗？",
+          "deleteDeviceTitle": "删除黑名单设备号确认",
+          "deleteDeviceConfirm": "确定要删除该设备号吗？",
+          "confirm": "确定",
+          "cancel": "取消"
+        },
+        "export": {
+          "fileName": "黑名单设备号"
+        },
+        "validation": {
+          "deviceRequired": "请输入设备号"
+        },
+        "messages": {
+          "operationSuccess": "操作成功"
+        }
+      },
+      "ip": {
+        "form": {
+          "blacklistIP": "IP:",
+          "createTime": "创建时间",
+          "ipPlaceholder": "请输入IP",
+          "batchIPList": "IP列表:",
+          "batchIPPlaceholder": "请输入IP,多个IP用回车换行分割"
+        },
+        "columns": {
+          "blacklistIP": "黑名单IP",
+          "createTime": "创建时间",
+          "creator": "操作人"
+        },
+        "buttons": {
+          "export": "导出",
+          "batchImport": "批量导入黑名单IP",
+          "add": "添加",
+          "batchDelete": "批量删除",
+          "cancel": "取消",
+          "save": "保存"
+        },
+        "dialog": {
+          "batchImportTitle": "批量导入黑名单IP",
+          "addTitle": "添加黑名单IP",
+          "editTitle": "编辑黑名单IP",
+          "tip": "提示",
+          "deleteConfirm": "你确定要删除吗？",
+          "deleteIPTitle": "删除黑名单IP确认",
+          "deleteIPConfirm": "确定要删除该IP吗？",
+          "confirm": "确定",
+          "cancel": "取消"
+        },
+        "export": {
+          "fileName": "黑名单IP"
+        },
+        "validation": {
+          "ipRequired": "请输入IP"
+        },
+        "messages": {
+          "operationSuccess": "操作成功"
+        }
+      },
+      "tel": {
+        "form": {
+          "blacklistPhone": "黑名单手机号:",
+          "phoneList": "手机号列表:",
+          "createTime": "创建时间",
+          "phonePlaceholder": "请输入手机号",
+          "batchPhonePlaceholder": "请输入手机号,多个手机号用回车换行分割"
+        },
+        "columns": {
+          "blacklistPhone": "黑名单手机号",
+          "createTime": "创建时间",
+          "creator": "操作人"
+        },
+        "buttons": {
+          "export": "导出",
+          "batchImport": "批量导入黑名单手机号",
+          "add": "添加",
+          "batchDelete": "批量删除",
+          "cancel": "取消",
+          "save": "保存"
+        },
+        "dialog": {
+          "batchImportTitle": "批量导入黑名单手机号",
+          "deleteConfirm": "你确定要删除吗？",
+          "deletePhoneTitle": "删除黑名单手机号确认",
+          "deletePhoneConfirm": "确定要删除该手机号吗？"
+        },
+        "export": {
+          "fileName": "黑名单手机号"
+        },
+        "validation": {
+          "phoneRequired": "请输入手机号"
+        },
+        "blacklistPhone": "黑名单手机号"
+      },
+      "member": {
+        "form": {
+          "memberId": "会员ID",
+          "freezeCategory": "冻结分类",
+          "freezeCategoryReason": "冻结分类原因",
+          "remarkReason": "备注操作原因",
+          "selectAll": "全选",
+          "remarkPlaceholder": "请输入备注",
+          "memberIdList": "会员ID列表",
+          "batchMemberIdPlaceholder": "请输入会员ID,多个会员ID用回车换行分割",
+          "mobile": "手机号",
+          "device": "设备号",
+          "registerIP": "注册IP",
+          "loginIP": "登录IP",
+          "status": "状态",
+          "statusPlaceholder": "请选择状态",
+          "statusActive": "流转",
+          "statusRelieved": "解除",
+          "blacklistMobile": "黑名单手机号",
+          "blacklistDevice": "黑名单设备号",
+          "blacklistRegisterIP": "黑名单注册IP",
+          "blacklistLoginIP": "黑名单登录IP",
+          "createTime": "创建时间",
+          "memberIdPlaceholder": "请输入会员ID",
+          "mobilePlaceholder": "请输入手机号",
+          "devicePlaceholder": "请输入设备号",
+          "registerIPPlaceholder": "请输入注册IP",
+          "loginIPPlaceholder": "请输入登录IP",
+          "blacklistMember": "黑名单会员:",
+          "batchMemberList": "会员ID列表:",
+          "batchMemberPlaceholder": "请输入会员ID,多个会员ID用回车换行分割"
+        },
+        "columns": {
+          "memberId": "会员ID",
+          "status": "状态",
+          "statusActive": "流转",
+          "statusRelieved": "解除",
+          "freezeCategoryReason": "冻结分类原因",
+          "remarkReason": "备注操作原因",
+          "blacklistWithdrawAccount": "黑名单提现账号",
+          "blacklistMobile": "黑名单手机号",
+          "blacklistDevice": "黑名单设备号",
+          "blacklistRegisterIP": "黑名单注册IP",
+          "blacklistLoginIP": "黑名单登录IP",
+          "mobile": "手机号",
+          "device": "设备号",
+          "registerIP": "注册IP",
+          "loginIP": "登录IP",
+          "createTime": "创建时间",
+          "creator": "操作人"
+        },
+        "status": {
+          "active": "流转",
+          "relieved": "解除"
+        },
+        "buttons": {
+          "export": "导出",
+          "batchImport": "批量导入黑名单会员",
+          "add": "添加",
+          "batchRelieve": "批量解除",
+          "cancel": "取消",
+          "save": "保存"
+        },
+        "actions": {
+          "relieve": "解除",
+          "reactivate": "激活",
+          "restore": "还原"
+        },
+        "dialog": {
+          "batchImportTitle": "批量导入黑名单会员",
+          "addTitle": "添加黑名单会员",
+          "editTitle": "编辑黑名单会员"
+        },
+        "export": {
+          "fileName": "黑名单会员"
+        },
+        "validation": {
+          "memberIdRequired": "请输入会员ID",
+          "freezeCategoryRequired": "请选择冻结分类"
+        },
+        "messages": {
+          "operationSuccess": "操作成功"
+        },
+        "confirmRelieve": "你确定要解除吗？",
+        "confirmTitle": "黑名单确认",
+        "confirmContent": "确定要",
+        "memberBlacklistStatus": "该会员的黑名单状态吗？",
+        "blacklistMember": "黑名单会员"
+      }
+    },
+    "site": {
+      "notice": {
+        "columns": {
+          "typeCode": "编码",
+          "title": "标题",
+          "content": "内容"
+        },
+        "form": {
+          "title": "标题:",
+          "content": "内容:",
+          "titleRequired": "请输入标题",
+          "contentRequired": "请输入内容"
+        },
+        "editNotice": "编辑通知"
+      },
+      "settings": {
+        "operationTime": "操作时间",
+        "operator": "操作人",
+        "configValue": "配置值（旧值->新值）",
+        "siteName": "站点名称",
+        "headerLogo": "标题栏Logo",
+        "siteLogo2": "站点logo2",
+        "loginPageLogo": "登录页logo",
+        "pwaBigImg": "PWA大图",
+        "pwaSmallImg": "PWA小图",
+        "pwaStartImg": "APP启动页",
+        "webIco": "浏览器与下载App icon",
+        "defaultLanguage": "前台默认语言",
+        "logoDesc": "支持的图片格式(png, svg, gif, json, webp),图片大小不能超过2M",
+        "pwaBigImgDesc": "提示请上传 512px * 512px 大小的图片，支持的图片格式(png, webp)，图片大小不能超过1M",
+        "pwaSmallImgDesc": "提示请上传 192px * 192px 大小的图片，支持的图片格式(png, webp)，图片大小不能超过1M",
+        "pwaStartImgDesc": "提示请上传 640px * 1136px 大小的图片，支持的图片格式(png, webp)，图片大小不能超过1M",
+        "webIcoDesc": "请上传 32px * 32px 大小的图片,支持的图片格式(png, svg, ico, webp),图片大小不能超过10kb",
+        "amountGreaterEqual": "金额≥",
+        "enableLoginCaptcha": "开启登录图片验证码",
+        "enableLoginCaptchaDesc": "开启登录需要图形验证码",
+        "allowNoRechargeGame": "允许未充值进入游戏",
+        "allowNoRechargeGameDesc": "开启后允许未完成首充的用户进行游戏",
+        "homeWinDisplay": "首页中奖信息展示",
+        "homeWinDisplayDesc": "金额大于多少的首页会推送信息",
+        "loginErrorCount": "登录允许密码错误次数",
+        "loginErrorCountDesc": "超过次数会变成临时冻结，需要修改密码，或者后台修改状态",
+        "lowestRechargeAmount": "最低可参与游戏累计充值金额",
+        "lowestRechargeAmountDesc": "累计充值金额不小于此金额才能参与游戏",
+        "confirmLanguageChange": "确认修改语言设置",
+        "confirmLanguageChangeContent": "确定要将前台默认语言从 ",
+        "tgUrl": "官方TG频道链接",
+        "changeTo": " 修改为 ",
+        "questionMark": " 吗？",
+        "languageChangeWarning": "修改后将影响所有新访问用户的默认语言设置。",
+        "updateSuccess": "修改成功"
+      },
+      "protocol": {
+        "privacyProtocol": "隐私协议",
+        "riskProtocol": "风险协议",
+        "userGuide": "新手指南"
+      },
+      "itemManual": {
+        "lastUpdateTime": "最后更新时间",
+        "operator": "操作人",
+        "edit": "编辑",
+        "cancel": "取消",
+        "save": "保存",
+        "updateSuccess": "修改成功！",
+        "contentRequired": "内容不能为空!"
+      },
+      "firstPagePop": {
+        "popname": "浮窗名称",
+        "popnamePlaceholder": "请输入浮窗名称",
+        "status": "状态",
+        "statusPlaceholder": "请选择状态",
+        "popupid": "浮窗ID",
+        "popupname": "浮窗名称",
+        "minIcon": "图标",
+        "target": "展示目标",
+        "first": "优先级",
+        "firstPlaceholder": "请输入优先级",
+        "uploadIcon": "图标",
+        "uploadTips": "请上传 1 : 1 大小的图片，支持的图片格式(png, webp)，图片大小不能超过3M",
+        "uploadIconError": "请上传 1 : 1 大小的图片",
+        "uploadSizeError": "请上传不超过3MB的图片",
+        "uploadPlaceholder": "请上传图标",
+        "updateTime": "更新时间",
+        "validTimeType": "生效时间",
+        "time": "指定时间",
+        "validTimeTypePlaceholder": "请选择生效时间",
+        "timeRange": "请选择时间范围",
+        "langtime": "长期生效",
+        "timeRanges": "指定生效时间",
+        "updator": "更新人",
+        "newPopup": "新增浮窗",
+        "editPopup": "编辑浮窗",
+        "popupTarget": "展示目标",
+        "popupTargetPlaceholder": "请选择展示目标",
+        "unknownTag": "未知标签",
+        "times": "次",
+        "batchImportFileName": "批量导入文件.txt",
+        "downloadFailed": "下载失败，请稍后再试",
+        "batchImport": "批量导入",
+        "download": "下载",
+        "selected": "已选：",
+        "statusOptions": {
+          "enabled": "开启",
+          "disabled": "关闭"
+        }
+      },
+      "index": {
+        "title": "站点设置",
+        "siteSettings": "站点设置",
+        "autoNotice": "自动通知",
+        "frontProtocolManual": "前台协议手册",
+        "firstPagePop": "首页浮窗设置"
+      }
+    },
+    "takePackage": {
+      "components": {
+        "addOrEdit": {
+          "validation": {
+            "appNameRequired": "请输入应用名称",
+            "appTypeRequired": "请选择应用类型",
+            "packageTypeRequired": "请选择包类型",
+            "channelPackageIdRequired": "请选择渠道来源",
+            "domainUrlRequired": "请选择绑定域名",
+            "appIcoRequired": "请上传应用图标",
+            "loadingImgRequired": "请上传启动页图片"
+          },
+          "messages": {
+            "updateSuccess": "修改成功",
+            "addSuccess": "添加成功"
+          },
+          "sections": {
+            "basicInfo": "基础信息",
+            "packageTypeConfig": "包类型配置",
+            "inviteCodeConfig": "邀请码配置",
+            "analyticsConfig": "第三方埋点配置",
+            "appAppearance": "应用外观"
+          },
+          "labels": {
+            "appName": "应用名称",
+            "appType": "应用类型",
+            "packageName": "包名",
+            "packageType": "包类型",
+            "domainUrl": "绑定域名",
+            "inviteCode": "邀请码",
+            "analyticsService": "埋点服务",
+            "channelSource": "渠道来源",
+            "appIcon": "应用图标",
+            "loadingImage": "启动页图片"
+          },
+          "placeholders": {
+            "appName": "请输入应用名称",
+            "packageName": "请输入包名",
+            "inviteCode": "请输入邀请码(可选)",
+            "channelSource": "请选择渠道来源"
+          },
+          "tips": {
+            "packageNameGenerated": "包名由系统根据应用名称自动生成",
+            "packageTypeTip": "原生包无需域名，加壳包需要绑定域名",
+            "inviteCodeTip": "留空则不使用邀请码",
+            "analyticsTip": "只能选择一种埋点服务",
+            "channelTip": "选择对应的{channelTip}渠道配置",
+            "appIconTip": "建议尺寸：512x512px，支持png格式",
+            "loadingImageTip": "建议尺寸：1080x1920px，支持png/jpg格式"
+          },
+          "options": {
+            "notUse": "不使用"
+          },
+          "buttons": {
+            "cancel": "取消",
+            "save": "保存"
+          },
+          "channelTips": {
+            "facebook": "Facebook像素",
+            "adjust": "Adjust追踪"
+          }
+        },
+        "detail": {
+          "labels": {
+            "appName": "应用名称",
+            "appType": "应用类型",
+            "status": "状态",
+            "packageName": "包名",
+            "domainUrl": "绑定域名",
+            "inviteCode": "邀请码",
+            "createTime": "创建时间",
+            "finishTime": "完成时间",
+            "analyticsService": "埋点服务",
+            "channelSource": "渠道来源"
+          },
+          "sections": {
+            "analyticsConfig": "第三方埋点配置"
+          },
+          "options": {
+            "notUse": "不使用"
+          }
+        }
+      },
+      "index": {
+        "buildStatus": {
+          "waiting": "待打包",
+          "building": "打包中",
+          "success": "打包成功",
+          "failed": "打包失败"
+        },
+        "buildTypes": {
+          "android": "Android APK",
+          "ios": "iOS IPA"
+        },
+        "packageTypes": {
+          "shell": "加壳包",
+          "native": "原生包"
+        }
+      },
+      "page": {
+        "title": "应用打包管理",
+        "labels": {
+          "buildStatus": "打包状态",
+          "channelSource": "渠道来源",
+          "appType": "应用类型",
+          "timeRange": "时间范围"
+        },
+        "placeholders": {
+          "buildStatus": "请选择打包状态",
+          "selectBuildStatus": "请选择打包状态",
+          "channelSource": "请选择渠道来源",
+          "selectChannelSource": "请选择渠道来源",
+          "appType": "请选择应用类型",
+          "selectAppType": "请选择应用类型",
+          "selectTimeRange": "请选择时间范围"
+        },
+        "columns": {
+          "appName": "应用名称",
+          "appType": "应用类型",
+          "packageType": "打包类型",
+          "packageName": "包名",
+          "analyticsService": "统计渠道",
+          "channelSource": "渠道来源",
+          "domainUrl": "域名",
+          "inviteCode": "邀请码",
+          "buildStatus": "打包状态",
+          "createTime": "创建时间",
+          "actions": "操作"
+        },
+        "dialogs": {
+          "editPackage": "编辑打包",
+          "createPackage": "新建打包",
+          "packageDetail": "打包详情"
+        },
+        "buttons": {
+          "createPackage": "新建打包",
+          "rebuild": "重新打包",
+          "download": "下载",
+          "viewDetails": "查看详情",
+          "edit": "编辑",
+          "delete": "删除"
+        },
+        "messages": {
+          "buildFailed": "打包失败",
+          "downloadFailed": "下载失败",
+          "downloadFailedTryLater": "下载失败，请稍后再试",
+          "rebuildSuccess": "重新打包 {packageName} 成功",
+          "buildingInProgress": "正在打包中，请稍候..."
+        },
+        "options": {
+          "all": "全部",
+          "notUse": "未使用"
+        }
+      }
+    },
+    "workOrder": {
+      "tabs": {
+        "pendingList": "待处理列表",
+        "workOrderList": "工单列表",
+        "supplementRecord": "补单记录",
+        "supplementStats": "补单统计",
+        "faqType": "FAQ类型管理",
+        "faqSub": "FAQ子问题",
+        "forwardRecord": "三方转发查询记录",
+        "forwardConfig": "三方转发查询配置",
+        "telegramConfig": "Telegram配置",
+        "homeConfig": "首页配置",
+        "workOrderConfig": "工单配置",
+        "workOrderDaily": "工单日报"
+      },
+      "columns": {
+        "workOrderNumber": "工单号",
+        "workOrderType": "工单类型",
+        "workOrderName": "工单名称",
+        "vipLevel": "VIP等级",
+        "memberId": "会员ID",
+        "status": "状态",
+        "thirdPartyName": "三方名称",
+        "thirdPartyMappingCode": "三方映射码",
+        "thirdPartyChannelId": "三方通道ID",
+        "orderAmount": "订单金额",
+        "reminderCount": "催单次数",
+        "attachmentType": "附件类型",
+        "submitTime": "提交时间",
+        "operationTime": "操作时间",
+        "operator": "操作人",
+        "remark": "备注"
+      },
+      "fileTypes": {
+        "image": "图片",
+        "video": "视频",
+        "pdf": "PDF",
+        "other": "其他"
+      },
+      "useWorkOrder": {
+        "states": {
+          "all": "全部",
+          "systemProcessing": "系统处理中",
+          "pending": "待处理",
+          "processing": "处理中",
+          "rejected": "已驳回",
+          "completed": "已处理"
+        },
+        "form": {
+          "memberId": "会员ID",
+          "memberIdPlaceholder": "请输入会员ID/账号",
+          "workOrderNumber": "工单号",
+          "workOrderNumberPlaceholder": "精准查询工单号",
+          "thirdPartyName": "三方名称",
+          "thirdPartyNamePlaceholder": "请选择三方名称",
+          "status": "状态",
+          "statusPlaceholder": "请选择状态",
+          "channelSource": "渠道来源",
+          "channelSourcePlaceholder": "请选择渠道来源",
+          "attachmentType": "附件类型",
+          "attachmentTypePlaceholder": "请选择附件类型",
+          "vipLevel": "vip等级",
+          "vipLevelPlaceholder": "请选择vip等级",
+          "amountRange": "金额区间",
+          "minAmount": "最小金额",
+          "maxAmount": "最大金额",
+          "workOrderName": "工单名称",
+          "workOrderNamePlaceholder": "请输入工单名称",
+          "workOrderType": "工单类型",
+          "workOrderTypePlaceholder": "请选择工单类型",
+          "operator": "操作人",
+          "operatorPlaceholder": "请输入操作人",
+          "timeType": "请选择时间类型",
+          "submitTime": "提交时间",
+          "operationTime": "操作时间",
+          "endTimePlaceholder": "请选择结束时间"
+        },
+        "attachmentOptions": {
+          "image": "图片",
+          "video": "视频",
+          "pdf": "PDF"
+        },
+        "messages": {
+          "querySuccess": "查询成功",
+          "exportSuccess": "导出成功"
+        }
+      },
+      "faqSub": {
+        "columns": {
+          "faqType": "FAQ类型",
+          "questionTitle": "问题标题",
+          "questionContent": "问题内容",
+          "sort": "排序",
+          "status": "状态",
+          "lastUpdateTime": "最后更新时间",
+          "lastUpdateUser": "操作人"
+        },
+        "form": {
+          "questionTitle": "问题标题",
+          "questionTitlePlaceholder": "请输入问题标题",
+          "faqType": "FAQ类型",
+          "faqTypePlaceholder": "请选择类型",
+          "status": "状态",
+          "statusPlaceholder": "请选择状态"
+        },
+        "dialog": {
+          "questionContent": "问题内容",
+          "edit": "编辑",
+          "add": "新增"
+        },
+        "messages": {
+          "deleteSuccess": "删除成功!",
+          "operationSuccess": "操作成功"
+        },
+        "buttons": {
+          "addQuestion": "新增问题"
+        },
+        "addEdit": {
+          "faqType": "FAQ类型",
+          "faqTypePlaceholder": "请选择你的FAQ类型",
+          "questionContent": "问题内容",
+          "title": "标题",
+          "titlePlaceholder": "请输入标题",
+          "content": "内容",
+          "contentPlaceholder": "请输入{language}内容",
+          "status": "状态",
+          "sort": "排序",
+          "sortPlaceholder": "请输入排序值",
+          "validation": {
+            "faqTypeRequired": "请选择类型",
+            "sortRequired": "请输入排序值"
+          }
+        }
+      },
+      "faqType": {
+        "columns": {
+          "moduleName": "FAQ类型",
+          "sort": "排序",
+          "state": "开启状态",
+          "lastUpdateTime": "最后修改时间",
+          "lastUpdateUser": "操作人"
+        },
+        "form": {
+          "moduleNameLabel": "FAQ类型名称",
+          "moduleNamePlaceholder": "请输入FAQ类型名称",
+          "status": "状态",
+          "statusPlaceholder": "请选择类型"
+        },
+        "status": {
+          "enable": "启用",
+          "disable": "禁用"
+        },
+        "dialog": {
+          "add": "新增FAQ类型",
+          "edit": "编辑FAQ类型"
+        },
+        "buttons": {
+          "addType": "新增类型",
+          "edit": "编辑",
+          "delete": "删除",
+          "cancel": "取消",
+          "save": "保存"
+        },
+        "messages": {
+          "deleteSuccess": "删除成功!",
+          "operationSuccess": "操作成功"
+        },
+        "addEdit": {
+          "nameLabel": "{language}名称",
+          "namePlaceholder": "请输入FAQ类型名称（{language}）",
+          "nameRequired": "请输入{language}名称",
+          "sort": "排序",
+          "sortPlaceholder": "请输入排序",
+          "status": "状态",
+          "validation": {
+            "statusRequired": "请选择状态",
+            "sortRequired": "请输入排序"
+          }
+        }
+      },
+      "forwardConfig": {
+        "columns": {
+          "channelName": "充值通道名称",
+          "channelId": "通道Id",
+          "apiId": "appild",
+          "chatId": "群ID",
+          "state": "开启状态",
+          "lastUpdateTime": "最后修改时间",
+          "lastUpdateUser": "最后修改人"
+        },
+        "form": {
+          "channelIdLabel": "三方通道Id",
+          "channelIdPlaceholder": "请输入三方通道Id"
+        },
+        "status": {
+          "enable": "启用",
+          "disable": "禁用"
+        },
+        "dialog": {
+          "add": "新增配置",
+          "edit": "编辑配置",
+          "autoConfig": "自动配置"
+        },
+        "buttons": {
+          "addConfig": "新增配置",
+          "edit": "编辑",
+          "autoConfig": "自动配置",
+          "addRule": "新增规则",
+          "delete": "删除",
+          "cancel": "取消",
+          "save": "保存"
+        },
+        "messages": {
+          "operationSuccess": "操作成功",
+          "allFieldsRequired": "请确保所有字段都已填写"
+        },
+        "addEdit": {
+          "channelId": "通道ID:",
+          "channelIdPlaceholder": "请选择",
+          "channelName": "通道名称:",
+          "apiId": "apild",
+          "apiIdPlaceholder": "请选择apild",
+          "chatId": "群ID",
+          "chatIdPlaceholder": "请输入群ID",
+          "validation": {
+            "channelIdRequired": "请输入通道ID",
+            "apiIdRequired": "请选择adild",
+            "chatIdRequired": "请输入群ID"
+          }
+        },
+        "autoConfig": {
+          "title": "{channelName} - 自动处理配置",
+          "ruleTitle": "规则{index}",
+          "replyContent": "三方回复内容",
+          "replyContentPlaceholder": "三方回复内容",
+          "autoProcess": "自动处理",
+          "autoProcessPlaceholder": "自动处理",
+          "memberRemark": "答复会员备注",
+          "memberRemarkPlaceholder": "请输入答复会员备注",
+          "options": {
+            "reject": "驳回",
+            "approve": "通过",
+            "pending": "待处理"
+          }
+        }
+      },
+      "forwardRecord": {
+        "columns": {
+          "workOrderNo": "工单号",
+          "payTypeName": "三方名称",
+          "rechargeOrderNo": "充值订单号",
+          "queryOperator": "查询操作人",
+          "queryTime": "查询时间",
+          "queryResult": "查询结果",
+          "replyContent": "回复内容",
+          "replyTime": "回复时间"
+        },
+        "form": {
+          "payTypeName": "三方名称",
+          "payTypeNamePlaceholder": "请输入三方名称",
+          "orderNumber": "充值订单号",
+          "orderNumberPlaceholder": "请输入充值订单号",
+          "workOrderId": "工单号",
+          "workOrderIdPlaceholder": "请输入工单号",
+          "dateRange": "日期范围"
+        },
+        "status": {
+          "replied": "已回复",
+          "pending": "待回复",
+          "failed": "失败"
+        },
+        "shortcuts": {
+          "today": "今天",
+          "yesterday": "昨天",
+          "thisWeek": "本周",
+          "lastWeek": "上周",
+          "thisMonth": "本月",
+          "lastMonth": "上月"
+        },
+        "dialog": {
+          "replyDetails": "回复详情",
+          "close": "关闭"
+        },
+        "details": {
+          "workOrderNo": "工单号:",
+          "rechargeOrderNo": "充值订单号:",
+          "payTypeName": "三方名称:",
+          "queryTime": "查询时间:",
+          "queryResult": "查询结果:",
+          "replyTime": "回复时间:",
+          "replyContent": "回复内容"
+        }
+      },
+      "homeConfig": {
+        "faq": {
+          "label": "是否启用FAQ",
+          "enableText": "开启",
+          "disableText": "关闭",
+          "description": "开启后首页会显示FAQ功能模块"
+        },
+        "content": {
+          "lastUpdateTime": "最后更新时间",
+          "lastUpdateBy": "操作人",
+          "bannerTitle": "Banner图片",
+          "textTitle": "首页文本内容",
+          "textPlaceholder": "请输入首页Kind Tips显示内容，不输入则展示默认内容"
+        },
+        "buttons": {
+          "cancel": "取消",
+          "save": "保存",
+          "edit": "编辑"
+        },
+        "messages": {
+          "operationSuccess": "操作成功"
+        },
+        "dialog": {
+          "confirmTitle": "确认操作",
+          "faqCloseConfirm": "确定要关闭是否启用FAQ吗？",
+          "confirm": "确定",
+          "cancel": "取消"
+        }
+      },
+      "supplementRecord": {
+        "form": {
+          "thirdPartyName": "三方名称",
+          "thirdPartyNamePlaceholder": "请输入三方名称",
+          "thirdPartyChannelId": "三方通道ID",
+          "thirdPartyChannelIdPlaceholder": "请输入三方通道ID",
+          "rechargeOrderNo": "充值订单号",
+          "rechargeOrderNoPlaceholder": "请输入充值订单号",
+          "workOrderNumber": "工单号",
+          "workOrderNumberPlaceholder": "请输入工单号",
+          "utr": "UTR",
+          "utrPlaceholder": "请输入UTR",
+          "supplementResult": "补单结果",
+          "supplementResultPlaceholder": "请选择补单结果",
+          "dateRange": "日期范围"
+        },
+        "columns": {
+          "workOrderNumber": "工单号",
+          "thirdPartyName": "三方名称",
+          "thirdPartyChannelId": "三方通道ID",
+          "rechargeOrderNo": "充值订单号",
+          "orderAmount": "订单金额",
+          "utr": "UTR",
+          "latestSupplementResult": "补单最新结果",
+          "latestSupplementUpdateTime": "补单最新更新时间",
+          "totalSupplementCount": "累计补单次数"
+        },
+        "detailColumns": {
+          "serialNumber": "序号",
+          "initiateTime": "发起时间",
+          "queryResponseResult": "查询响应结果",
+          "thirdPartyResponseResult": "三方响应结果",
+          "supplementResult": "补单结果",
+          "supplementResponseResult": "补单响应结果"
+        },
+        "status": {
+          "success": "成功",
+          "failed": "失败"
+        },
+        "options": {
+          "failed": "失败",
+          "success": "成功"
+        },
+        "dialog": {
+          "supplementDetail": "补单明细"
+        },
+        "actions": {
+          "operation": "操作",
+          "detail": "明细"
+        },
+        "messages": {
+          "operationSuccess": "操作成功"
+        }
+      },
+      "supplementStats": {
+        "form": {
+          "thirdPartyName": "三方名称",
+          "thirdPartyNamePlaceholder": "请输入三方名称",
+          "dateRange": "日期范围"
+        },
+        "columns": {
+          "thirdPartyName": "三方名称",
+          "thirdPartyChannelId": "三方通道ID",
+          "unpaidOrderCount": "存款未到账工单数量",
+          "submitQueryCount": "提交查询数量",
+          "querySuccessCount": "查询成功数量",
+          "supplementSuccessCount": "补单成功数",
+          "supplementFailCount": "补单失败数",
+          "firstSuccessRate": "首补成功率",
+          "secondSuccessRate": "二补成功率",
+          "thirdSuccessRate": "三补成功率",
+          "totalSubmitSuccessRate": "总提交成功率",
+          "actualSuccessRate": "实际成功率"
+        }
+      },
+      "telegramConfig": {
+        "form": {
+          "accountStatus": "账号状态",
+          "accountStatusPlaceholder": "请选择状态",
+          "apiIdPlaceholder": "请输入apiId",
+          "apiHashPlaceholder": "请输入apiHash",
+          "phoneNumber": "电话号码",
+          "phoneNumberPlaceholder": "请输入电话号码",
+          "firstName": "名称",
+          "firstNamePlaceholder": "请输入名称",
+          "lastName": "姓氏",
+          "lastNamePlaceholder": "请输入姓氏",
+          "password": "密码(二次验证)",
+          "passwordPlaceholder": "请输入密码",
+          "selectApiIdPlaceholder": "请选择apild"
+        },
+        "columns": {
+          "loginStatus": "登录状态",
+          "lastUpdateTime": "最后修改时间",
+          "lastUpdateMan": "最后修改人"
+        },
+        "actions": {
+          "edit": "编辑",
+          "login": "登录",
+          "logout": "登出",
+          "verify": "验证",
+          "delete": "删除",
+          "deleteSession": "删除会话",
+          "cancelLogin": "取消登录",
+          "addConfig": "新增配置",
+          "cancel": "取消",
+          "save": "保存"
+        },
+        "status": {
+          "notLoggedIn": "未登录",
+          "waitingVerification": "等待验证",
+          "loggedIn": "已登录",
+          "loggedOut": "登出",
+          "waitingLogin": "等待登录",
+          "verification": "验证",
+          "login": "登录",
+          "exitLogin": "退出登录"
+        },
+        "messages": {
+          "operationSuccess": "操作成功",
+          "loginConfirm": "登录确认",
+          "logoutConfirm": "登出确认",
+          "loginConfirmText": "你确定登录吗?",
+          "logoutConfirmText": "你确定登出吗?",
+          "confirm": "确定",
+          "cancel": "取消",
+          "logoutSuccess": "登出成功",
+          "logoutFailed": "登出失败",
+          "loginTriggered": "已触发登录，请输入验证码",
+          "loginFailed": "登录失败",
+          "deleteSuccess": "删除成功",
+          "deleteSessionSuccess": "删除会话成功",
+          "cancelLoginSuccess": "取消登录成功",
+          "verifySuccess": "验证成功",
+          "enterVerifyCode": "请输入验证码",
+          "enterFiveDigitCode": "请输入5位数验证码"
+        },
+        "dialog": {
+          "editConfig": "编辑配置",
+          "verifyCode": "验证码"
+        },
+        "validation": {
+          "apiIdRequired": "请输入apiId",
+          "firstNameRequired": "First name",
+          "lastNameRequired": "Last name",
+          "apiHashRequired": "请输入apiHash",
+          "phoneNumberRequired": "请输入电话号码",
+          "passwordRequired": "请输入密码",
+          "fiveDigitCodeRequired": "请输入5位数验证码"
+        }
+      },
+      "workOrderConfig": {
+        "form": {
+          "workOrderTypeName": "工单类型名称",
+          "workOrderTypePlaceholder": "请选择工单类型",
+          "workOrderLimitType": "工单限制类型",
+          "workOrderLimitTypePlaceholder": "请选择类型",
+          "loggedIn": "已登录",
+          "notLoggedIn": "未登录"
+        },
+        "columns": {
+          "workOrderTypeName": "工单类型名称",
+          "workOrderLimitType": "工单限制类型",
+          "sort": "排序",
+          "status": "状态",
+          "lastUpdateTime": "最后更新时间",
+          "operator": "操作人",
+          "enabled": "启用",
+          "disabled": "禁用"
+        },
+        "actions": {
+          "edit": "编辑",
+          "autoReply": "自动回复",
+          "paramConfig": "参数设置",
+          "tutorial": "教程",
+          "autoForward": "自动转发",
+          "quickReply": "快捷回复",
+          "addConfig": "新增配置"
+        },
+        "dialog": {
+          "editWorkOrderType": "编辑工单类型",
+          "paramConfig": "参数设置",
+          "quickReply": "快捷回复",
+          "tutorialConfig": "教程配置",
+          "autoReplyConfig": "自动回复配置",
+          "autoForward": "自动转发",
+          "autoForwardStatus": "自动转发状态"
+        },
+        "messages": {
+          "operationSuccess": "操作成功"
+        },
+        "paramsConfig": {
+          "autoQueryTotalCount": "自动查询总次数",
+          "autoQueryFrequency": "自动查询频率",
+          "orderLowerLimit": "订单下限时间",
+          "orderUpperLimit": "订单上限时间",
+          "times": "次",
+          "minutes": "分钟",
+          "hours": "小时"
+        },
+        "autoReply": {
+          "enableAutoReply": "启用自动回复",
+          "replyContent": "回复内容",
+          "delayTime": "延迟时间(秒)",
+          "placeholders": {
+            "enterReplyContent": "请输入回复内容",
+            "enterDelayTime": "请输入延迟时间"
+          },
+          "validation": {
+            "replyContentRequired": "请输入回复内容",
+            "contentRequired": "请输入内容",
+            "delayTimeRequired": "请输入延迟时间"
+          }
+        },
+        "courseConfig": {
+          "tutorialContent": "教程内容",
+          "placeholders": {
+            "enterContent": "请输入{code}内容"
+          }
+        },
+        "editDetail": {
+          "labels": {
+            "workOrderType": "工单类型",
+            "sort": "排序",
+            "icon": "ICON",
+            "dailyLimit": "工单每人日限制",
+            "limitType": "限制类型",
+            "status": "状态",
+            "displayName": "显示名称",
+            "projectName": "项目名称",
+            "formConfig": "表单配置",
+            "fillType": "填写类型",
+            "linkName": "链接{index}名称",
+            "linkAddress": "链接{index}地址"
+          },
+          "placeholders": {
+            "selectWorkOrderType": "请选择工单类型",
+            "enterSort": "请输入",
+            "enterInput": "请输入",
+            "selectFormConfig": "请选择表单配置"
+          },
+          "options": {
+            "notLoggedIn": "未登录",
+            "loggedIn": "已登录",
+            "disabled": "禁用",
+            "enabled": "启用",
+            "required": "必填",
+            "optional": "选填"
+          },
+          "sections": {
+            "externalLinkConfig": "外部链接配置",
+            "formConfigItems": "表单配置项"
+          },
+          "buttons": {
+            "addItem": "添加项目",
+            "deleteItem": "删除项目",
+            "cancel": "取消",
+            "save": "保存"
+          },
+          "validation": {
+            "selectWorkOrderType": "请选择工单类型",
+            "enterSort": "请输入排序",
+            "enterExternalLink": "请输入外部链接"
+          },
+          "messages": {
+            "selectWorkOrderTypeFirst": "请先选择工单类型"
+          }
+        },
+        "editReply": {
+          "labels": {
+            "quickTab": "快捷{index}",
+            "quickDisplay": "快捷显示",
+            "status": "状态",
+            "content": "内容"
+          },
+          "placeholders": {
+            "enterTitle": "请输入",
+            "enterContent": "请输入内容"
+          },
+          "options": {
+            "disabled": "禁用",
+            "enabled": "启用"
+          },
+          "buttons": {
+            "cancel": "取消",
+            "save": "保存"
+          },
+          "validation": {
+            "titleRequired": "请输入标题",
+            "titleCannotBeEmpty": "快捷{index}标题不能为空",
+            "contentCannotBeEmpty": "快捷{index}内容不能为空",
+            "contentCannotContainChinese": "快捷{index}内容不能包含中文"
+          }
+        }
+      },
+      "workOrderList": {
+        "labels": {
+          "systemProcessing": "系统处理中",
+          "pending": "待处理",
+          "operation": "操作",
+          "refreshCountdown": "刷新倒计时：{count}s",
+          "secondsRefresh": "秒刷新"
+        },
+        "buttons": {
+          "reset": "重置",
+          "batchReject": "批量驳回",
+          "batchThirdPartyQuery": "批量三方查询",
+          "batchThirdPartyForward": "批量三方转发",
+          "view": "查看",
+          "edit": "编辑",
+          "lock": "锁定",
+          "unlock": "解锁",
+          "automatic": "自动"
+        },
+        "dialog": {
+          "workOrderDetails": "工单详情",
+          "batchReject": "批量驳回",
+          "tip": "提示",
+          "confirmLockUnlock": "你确定{action}吗",
+          "confirmForward": "是否转发{count}条工单？",
+          "confirm": "确定",
+          "cancel": "取消"
+        },
+        "messages": {
+          "pleaseEnterRefreshTime": "请输入刷新时间",
+          "operationSuccessful": "操作成功",
+          "batchThirdPartyQuerySuccessful": "批量三方查询成功",
+          "batchForwardSuccessful": "批量转发成功"
+        },
+        "oneByOneWork": {
+          "member": "会员",
+          "reply": "回复"
+        },
+        "workOrderDetail": {
+          "labels": {
+            "workOrderNumber": "工单号",
+            "workOrderType": "工单类型",
+            "submissionTime": "提交时间",
+            "workOrderStatus": "工单状态",
+            "operationTime": "操作时间",
+            "operator": "操作人",
+            "memberId": "会员id",
+            "thirdPartyForwardStatus": "三方转发状态",
+            "remark": "备注",
+            "thirdPartyQueryResult": "三方查询结果",
+            "thirdPartyForwardQuery": "三方转发查询",
+            "uploadImage": "上传图片",
+            "workOrderDetails": "工单详情"
+          },
+          "status": {
+            "systemProcessing": "系统处理中",
+            "pending": "待处理",
+            "processing": "处理中",
+            "rejected": "已驳回",
+            "processed": "已处理",
+            "pendingReply": "待回复",
+            "replied": "已回复",
+            "failed": "失败"
+          },
+          "buttons": {
+            "end": "结束",
+            "submit": "提交",
+            "thirdPartyForward": "代收三方转发",
+            "thirdPartyPaymentQuery": "三方支付查询",
+            "reject": "驳回",
+            "transferToArtificial": "转人工",
+            "close": "关闭",
+            "cancel": "取消"
+          },
+          "messages": {
+            "operationSuccessful": "操作成功",
+            "workOrderNumberRequired": "工单号不能为空",
+            "forwardSuccessful": "转发成功",
+            "currentWorkOrderTypeNotSupported": "当前工单类型不支持自动处理",
+            "pleaseEnterRemark": "请输入备注",
+            "remarkTooLong": "备注不能超过500个字符",
+            "remarkNoChineseAllowed": "备注不能包含中文字符"
+          },
+          "dialog": {
+            "tip": "提示",
+            "endConversationConfirm": "是否结束对话？",
+            "processingCompleteConfirm": "处理完成确认",
+            "markAsResolvedConfirm": "确定要将工单 {workOrderNo} 标记为已解决吗？",
+            "confirm": "确定",
+            "cancel": "取消",
+            "confirmBtn": "确认"
+          },
+          "placeholders": {
+            "enterRemark": "输入备注",
+            "thirdPartyQueryResult": "三方查询结果"
+          }
+        }
+      }
+    },
+    "workDailyReport": {
+      "columns": {
+        "employeeName": "员工姓名",
+        "totalWorkOrders": "总工单数",
+        "processing": "处理中",
+        "processed": "已处理",
+        "rejected": "已驳回",
+        "oneToOneWorkOrders": "一对一客服工单数",
+        "totalValidConversations": "总有效对话数",
+        "totalValidConversationRate": "总有效对话率",
+        "totalMessages": "总消息数",
+        "avgConversationDuration": "平均对话时长",
+        "avgFirstResponseDuration": "平均首次响应时长",
+        "workOrderType": "工单类型",
+        "total": "总计",
+        "systemProcessing": "系统处理中",
+        "pending": "待处理"
+      },
+      "employeeStatistics": "工单员工统计",
+      "typeStatistics": "工单类型统计",
+      "operationTime": "日期"
+    },
+    "frontStyle": {
+      "tenantSwitch": "切换租户",
+      "index": {
+        "title": "前端样式管理",
+        "currentSiteStyle": "本站点当前样式",
+        "applyStyleChange": "申请调整样式",
+        "submitStyleModification": "提交样式修改",
+        "previewSubmittedStyle": "预览已提交样式",
+        "applyRevoke": "申请撤回",
+        "expectedEffectiveTime": "预计生效时间",
+        "frontVersionSelection": "前端版型选择",
+        "componentSelection": "组件选择",
+        "preview": "预览",
+        "homePage": "首页",
+        "actions": {
+          "view": "查看"
+        },
+        "dialog": {
+          "confirmSubmitStyleChange": "是否提交样式修改申请？",
+          "confirmRevokeStyleChange": "是否撤回样式修改申请？",
+          "confirm": "确定",
+          "cancel": "取消"
+        },
+        "messages": {
+          "submitSuccess": "提交成功",
+          "operationSuccess": "操作成功"
+        }
+      },
+      "homeComponent": {
+        "titleBar": "标题栏 (固定顶部显示)",
+        "logo": "Logo",
+        "balance": "余额",
+        "sidebar": "侧边栏",
+        "sidebarPosition": "侧边栏弹出位置",
+        "sidebarMenu": "侧边栏menu",
+        "sidebarGrid": "侧边栏grid",
+        "headerRightIcons": "标题栏右侧图标（最多4个）",
+        "selectHomeComponents": "选择首页展示组件（可拖动排序）",
+        "gameMenuStyle": "游戏菜单样式",
+        "bottomTabBar": "底部tab栏 (可拖动排序)",
+        "positions": {
+          "left": "左侧",
+          "right": "右侧"
+        },
+        "gameStyles": {
+          "sidebarLayout": "侧边栏布局",
+          "navigationLayout": "导航菜单栏布局"
+        },
+        "sorting": "排序",
+        "defaultIcon": "默认图标",
+        "selectedIcon": "选中图标",
+        "messages": {
+          "maxFourIcons": "最多选择4个",
+          "homeAndPersonalRequired": "首页和个人中心不可隐藏",
+          "minThreeTabs": "至少保留3个tab"
+        }
+      },
+      "data": {
+        "headerIcons": {
+          "rank": "排行榜",
+          "message": "消息",
+          "recharge": "充值",
+          "withdraw": "提现",
+          "download": "下载",
+          "language": "语言"
+        },
+        "gridList": {
+          "message": "消息",
+          "download": "下载"
+        },
+        "menuList": {
+          "rechargeRecord": "充值记录",
+          "withdrawRecord": "提现记录"
+        },
+        "homeComponents": {
+          "swiper": "轮播图",
+          "notice": "公告消息",
+          "game": "游戏菜单",
+          "winning": "中奖信息",
+          "ranking": "排行榜",
+          "brand": "品牌公信力"
+        },
+        "tabs": {
+          "home": "首页",
+          "activity": "活动",
+          "promotion": "推广",
+          "wallet": "钱包",
+          "personal": "个人中心"
+        },
+        "pageStyles": {
+          "recharge": "充值",
+          "withdraw": "提现",
+          "activity": "活动",
+          "model": "公告弹窗",
+          "avatar": "头像",
+          "rechargeStyle1": "充值样式一",
+          "rechargeStyle2": "充值样式二",
+          "withdrawStyle1": "提现样式一",
+          "withdrawStyle2": "提现样式二",
+          "activityStyle1": "活动样式一",
+          "activityStyle2": "活动样式二",
+          "modelStyle1": "公告弹窗样式一",
+          "modelStyle2": "公告弹窗样式二",
+          "modelStyle3": "公告弹窗样式三",
+          "avatarGroup1": "头像组一",
+          "avatarGroup2": "头像组二",
+          "avatarGroup3": "头像组三"
+        }
+      },
+      "title": "前端样式管理",
+      "status": {
+        "draft": "草稿",
+        "pending": "待审核",
+        "published": "已发布"
+      },
+      "actions": {
+        "saveDraft": "保存草稿",
+        "publish": "发布"
+      },
+      "layoutTree": {
+        "title": "前端版型选择",
+        "empty": "暂无版型数据"
+      },
+      "preview": {
+        "title": "预览",
+        "urlPlaceholder": "输入H5预览地址",
+        "load": "加载",
+        "mock": "模拟预览"
+      },
+      "config": {
+        "componentSelect": "组件选择",
+        "headerBar": "标题栏",
+        "fixedTop": "(固定顶部显示)",
+        "balance": "余额",
+        "sidebar": "侧边栏",
+        "headerRightIcons": "标题栏右侧图标",
+        "maxFourIcons": "(最多4个)",
+        "iconRank": "排行榜",
+        "iconMessage": "消息",
+        "iconDeposit": "充值",
+        "iconWithdraw": "提现",
+        "iconDownload": "下载",
+        "iconLanguage": "语言",
+        "homeComponents": "选择首页展示组件",
+        "dragToSort": "(可拖动排序)",
+        "gameMenuStyle": "游戏菜单样式",
+        "sidebarLayout": "侧边栏布局",
+        "navigationLayout": "导航菜单栏布局",
+        "tabBarTitle": "底部Tab栏",
+        "sort": "排序",
+        "tabName": "名称",
+        "defaultIcon": "默认图标",
+        "activeIcon": "选中图标",
+        "raised": "凸起",
+        "addTabItem": "添加Tab项",
+        "seoTitle": "SEO配置",
+        "seoTitlePlaceholder": "请输入页面标题",
+        "seoKeywords": "关键词",
+        "seoKeywordsPlaceholder": "请输入关键词，用逗号分隔",
+        "seoDescription": "描述",
+        "seoDescriptionPlaceholder": "请输入页面描述",
+        "seoFavicon": "网站图标",
+        "seoFaviconPlaceholder": "请输入favicon URL",
+        "seoScripts": "自定义脚本",
+        "seoScriptsPlaceholder": "请输入自定义脚本代码"
+      },
+      "components": {
+        "banner": "轮播图",
+        "announcement": "公告消息",
+        "gameMenu": "游戏菜单",
+        "jackpot": "中奖信息",
+        "ranking": "排行榜",
+        "brandTrust": "品牌公信力",
+        "quickEntry": "快捷入口",
+        "gameList": "游戏列表",
+        "hotGames": "热门游戏"
+      },
+      "footer": {
+        "currentStyle": "本站当前样式:",
+        "view": "查看",
+        "applyStyle": "申请调整样式:",
+        "submitModify": "提交样式修改",
+        "previewSubmitted": "预览已提交样式",
+        "withdraw": "申请撤回"
+      },
+      "dialog": {
+        "publishTitle": "发布确认",
+        "publishContent": "确定要发布当前样式配置吗？发布后将立即生效。",
+        "resetContent": "确定要重置所有配置吗？此操作不可撤销。"
+      },
+      "messages": {
+        "loadFailed": "加载配置失败",
+        "saveDraftSuccess": "保存成功",
+        "saveDraftFailed": "保存失败",
+        "publishSuccess": "发布成功",
+        "publishFailed": "发布失败",
+        "resetSuccess": "配置已重置",
+        "viewCurrent": "查看当前样式",
+        "submitStyle": "提交样式修改",
+        "previewSubmitted": "预览已提交的样式",
+        "withdraw": "申请撤回"
+      },
+      "seo": {
+        "title": "SEO配置",
+        "pageTitle": "页面标题",
+        "pageTitlePlaceholder": "请输入页面标题",
+        "keywords": "关键词",
+        "keywordsPlaceholder": "请输入关键词，用逗号分隔",
+        "description": "描述",
+        "descriptionPlaceholder": "请输入页面描述",
+        "favicon": "网站图标",
+        "faviconPlaceholder": "请输入favicon URL",
+        "scripts": "自定义脚本",
+        "scriptsPlaceholder": "请输入自定义脚本代码（如统计代码等）"
+      },
+      "tabbar": {
+        "editTitle": "编辑TabBar",
+        "name": "TabBar名称",
+        "namePlaceholder": "请输入TabBar名称",
+        "clientType": "客户端类型",
+        "clientTypePlaceholder": "请选择客户端类型",
+        "background": "背景",
+        "backgroundPlaceholder": "请输入背景颜色或图片URL",
+        "previewImage": "效果预览图",
+        "previewImagePlaceholder": "请输入预览图URL",
+        "newItem": "新标签",
+        "noItems": "暂无Tab项",
+        "addItem": "添加Tab项",
+        "backendName": "后台名称",
+        "backendNamePlaceholder": "请输入后台名称",
+        "uniqueKey": "唯一标识",
+        "uniqueKeyPlaceholder": "请输入唯一标识",
+        "displayName": "前台名称",
+        "displayNamePlaceholder": "请输入显示名称",
+        "langCode": "语言",
+        "jumpType": "跳转类型",
+        "jumpTypePlaceholder": "请选择跳转类型",
+        "jumpTarget": "跳转目标",
+        "jumpTargetPlaceholder": "请输入跳转目标（路由名/游戏ID/URL）",
+        "specialType": "特殊类型",
+        "specialTypePlaceholder": "请选择特殊类型",
+        "iconKey": "图标Key",
+        "iconKeyPlaceholder": "请输入图标皮肤资源Key",
+        "activeIconKey": "激活图标Key",
+        "activeIconKeyPlaceholder": "请输入激活状态图标皮肤资源Key",
+        "sort": "排序",
+        "visible": "是否显示"
+      },
+      "layoutTheme": {
+        "title": "版型与主题",
+        "layout": "版型",
+        "theme": "主题",
+        "switchPreview": "切换查看预览"
+      },
+      "seoCard": {
+        "title": "SEO配置",
+        "notPreviewable": "不可预览",
+        "seoTitle": "SEO标题",
+        "seoTitlePlaceholder": "请输入SEO标题",
+        "seoKeywords": "SEO关键词",
+        "seoKeywordsPlaceholder": "请输入SEO关键词",
+        "seoDescription": "SEO描述",
+        "seoDescriptionPlaceholder": "请输入SEO描述",
+        "favicon": "Favicon",
+        "faviconPlaceholder": "请输入Favicon地址",
+        "customScripts": "自定义脚本",
+        "customScriptsPlaceholder": "请输入自定义脚本",
+        "promoImage": "宣传图",
+        "promoImageHint": "支持PNG格式的图片，500KB以内，(尺寸1000*1000以内: 推荐尺寸780*440)"
+      },
+      "siteSettings": {
+        "title": "站点设置",
+        "siteName": "站点名称",
+        "siteNamePlaceholder": "请输入站点名称",
+        "titleBarLogo": "标题栏Logo",
+        "siteLogo2": "站点logo2",
+        "loginLogo": "登录页logo",
+        "pwaLargeIcon": "PWA大图",
+        "pwaMediumIcon": "PWA中图",
+        "pwaSmallIcon": "PWA小图",
+        "appSplash": "APP启动页",
+        "browserIcon": "浏览器与下载App icon",
+        "defaultLanguage": "前台默认语言",
+        "logoHint": "支持的图片格式(png, svg, gif, json, webp)，图片大小不超过2M",
+        "pwaLargeHint": "请上传 512px × 512px 大小的图片，支持的图片格式(png, webp)，图片大小不超过1M",
+        "pwaMediumHint": "请上传 384px × 384px 大小的图片，支持的图片格式(png, webp)，图片大小不超过1M",
+        "pwaSmallHint": "请上传 192px × 192px 大小的图片，支持的图片格式(png, webp)，图片大小不超过1M",
+        "appSplashHint": "请上传 640px × 1136px 大小的图片，支持的图片格式(png, webp)，图片大小不超过1M",
+        "browserIconHint": "请上传 32px × 32px 大小的图片，支持的图片格式(png, svg, ico, webp)，图片大小不超过10KB",
+        "langHindi": "印地语",
+        "langEnglish": "英语",
+        "langChinese": "中文",
+        "subSiteMaterial": "站点设置",
+        "subPwa": "PWA设置",
+        "subRegister": "注册页配置",
+        "subLogin": "登录页配置",
+        "subAgreement": "协议手册",
+        "subApp": "APP设置",
+        "appName": "应用名称",
+        "appNamePlaceholder": "请输入应用名称",
+        "appIcon": "应用图标",
+        "appIconHint": "请上传应用图标，支持格式(png, webp)，大小不超过1MB",
+        "appLogo": "应用Logo",
+        "appLogoHint": "请上传应用Logo，支持格式(png, webp)，大小不超过1MB",
+        "splashImage": "启动图",
+        "splashImageHint": "请上传 640px × 1136px 大小的图片，支持格式(png, webp)，大小不超过1MB",
+        "agreementTypes": {
+          "privacy": "隐私协议",
+          "risk": "风险协议",
+          "guide": "新手指南"
+        },
+        "agreement": {
+          "lastUpdateTime": "最后更新时间",
+          "operator": "操作人",
+          "edit": "编辑",
+          "save": "保存",
+          "cancel": "取消",
+          "placeholder": "请输入协议内容",
+          "saveSuccess": "保存成功",
+          "contentRequired": "内容不能为空"
+        },
+        "registerBgTitle": "注册页面图片配置",
+        "registerBgDesc": "配置注册页面显示的背景图，支持多种图片格式",
+        "registerBgHint": "支持图片格式（.png、.webp），图片大小不能超过1MB",
+        "loginBgTitle": "登录页面图片配置",
+        "loginBgDesc": "配置登录页面显示的背景图，支持多种图片格式",
+        "loginBgHint": "支持图片格式（.png、.webp），图片大小不能超过1MB",
+        "pwaName": "PWA应用名称",
+        "pwaNamePlaceholder": "请输入PWA应用名称（安装到桌面时显示）",
+        "sectionBasic": "基本信息",
+        "sectionSiteAsset": "站点Logo",
+        "sectionBrand": "品牌素材",
+        "sectionAppIcon": "PWA图标"
+      },
+      "currentEdit": {
+        "title": "当前编辑",
+        "name": "名称:",
+        "jump": "跳转:",
+        "status": "状态:",
+        "type": "类型:",
+        "enabled": "开启",
+        "disabled": "关闭",
+        "raised": "凸起",
+        "normal": "普通"
+      },
+      "tips": {
+        "title": "配置提示",
+        "tabCount": "Tab 数量:",
+        "dragToReorder": "可拖动标签调整顺序",
+        "homeFirst": "首页建议放在第一位",
+        "oneRaised": "凸起类型建议只设1个",
+        "iconKeyMatch": "图标Key需与H5资源对应",
+        "maxTabs": "最多添加 6 个 Tab 项"
+      },
+      "workspace": {
+        "descriptions": {
+          "layout": "维护 Web 与移动端版型，以及当前租户使用的主题。",
+          "siteMaterial": "维护站点名称、默认语言、Logo 与 PWA 图标资源。",
+          "seo": "维护前台站点的标题、关键词、描述与附加脚本。",
+          "appSettings": "维护 App 名称、图标、Logo 与启动图资源。",
+          "login": "维护登录页背景图与登录页展示素材。",
+          "register": "维护注册页背景图与注册页展示素材。",
+          "agreement": "维护协议内容，多语言协议在面板内编辑并单独保存。"
+        },
+        "layoutWebTitle": "Web版型",
+        "layoutMobileTitle": "移动端版型",
+        "currentConfigured": "已配置",
+        "unsetValue": "未设置",
+        "noLayoutOptions": "暂无可用版型",
+        "noThemeOptions": "暂无可用主题",
+        "confirmDiscardChanges": "当前有未保存修改，确认继续操作吗？",
+        "confirmTenantChange": "切换租户会丢失当前未保存修改，确认切换吗？",
+        "agreementSaveHint": "协议页请在面板内编辑并保存",
+        "currentTenant": "当前租户",
+        "synced": "当前模块已同步",
+        "dirty": "存在未保存修改",
+        "agreementManaged": "协议页在面板内编辑并保存",
+        "previewTitle": "前台预览",
+        "previewHint": "右侧 iframe 会嵌入前台地址，便于核对当前租户配置。",
+        "scopeTitle": "当前切换范围",
+        "scopeEmpty": "请先选择集团与商户",
+        "groupFieldLabel": "集团",
+        "tenantFieldLabel": "商户",
+        "groupSwitch": "请选择集团",
+        "tenantSwitch": "请选择商户",
+        "tenantSwitchDisabled": "请先选择集团",
+        "tenantSwitchEmpty": "当前集团下暂无商户",
+        "tenantPending": "待选择商户",
+        "groupCount": "共 {count} 个集团",
+        "tenantCount": "当前集团下共 {count} 个商户",
+        "previewAddress": "前台地址",
+        "previewOpenNewTab": "新窗口打开",
+        "previewEmpty": "请先选择租户后再加载前台预览"
+      },
+      "errors": {
+        "tenantNotFound": "请先选择租户"
+      }
+    }
+  }
+}

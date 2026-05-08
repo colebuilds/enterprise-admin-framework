@@ -1,0 +1,57 @@
+{
+  "dashboard": {
+    "welcome": {
+      "eyebrow": "Workspace",
+      "title": "Quick Workspace",
+      "description": "Shows shortcut access to the pages the current account can open directly.",
+      "shortcutCount": "Available Shortcuts",
+      "shortcutsTitle": "Shortcuts",
+      "shortcutsDescription": "Built from the same route and permission scope as the top header menu, then expanded into all directly accessible child pages for the current account.",
+      "emptyTitle": "No shortcuts available",
+      "emptyDescription": "This account has no directly accessible pages. Contact an administrator to grant access."
+    },
+    "console": {
+      "cards": {
+        "visits": {
+          "title": "Visits",
+          "tag": "Day",
+          "dayCompare": "Day-over-day",
+          "weekCompare": "Week-over-week",
+          "total": "Total Visits:"
+        },
+        "sales": {
+          "title": "Sales",
+          "tag": "Week",
+          "total": "Total Sales:"
+        },
+        "orders": {
+          "title": "Orders",
+          "tag": "Week",
+          "dayCompare": "Day-over-day",
+          "weekCompare": "Week-over-week",
+          "conversionRate": "Conversion Rate:"
+        },
+        "volume": {
+          "title": "Volume",
+          "tag": "Month",
+          "monthCompare": "Month-over-month",
+          "total": "Total Volume:"
+        }
+      },
+      "icons": {
+        "user": "Users",
+        "analysis": "Analysis",
+        "product": "Products",
+        "order": "Orders",
+        "ticket": "Tickets",
+        "message": "Messages",
+        "tag": "Tags",
+        "config": "Settings"
+      },
+      "tabs": {
+        "fluxTrend": "Traffic Trend",
+        "visitAmount": "Visit Amount"
+      }
+    }
+  }
+}

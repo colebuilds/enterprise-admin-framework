@@ -1,0 +1,25 @@
+{
+  "productNav": {
+    "title": "产品与服务",
+    "searchPlaceholder": "搜索功能...",
+    "searchResults": "搜索结果",
+    "noResults": "未找到相关功能",
+    "quickNav": "快捷导航",
+    "game": "游戏管理",
+    "member": "会员管理",
+    "report": "财务报表",
+    "operations": "运营管理",
+    "tenant": "商户管理",
+    "system": "系统设置",
+    "memberDetail": {
+      "tabs": {
+        "info": "基本信息",
+        "wallet": "钱包信息",
+        "accountChange": "账变信息",
+        "bet": "投注信息",
+        "risk": "风控信息",
+        "value": "用户价值"
+      }
+    }
+  }
+}

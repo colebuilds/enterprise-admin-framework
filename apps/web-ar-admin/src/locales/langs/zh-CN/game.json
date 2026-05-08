@@ -1,0 +1,663 @@
+{
+  "game": {
+    "platform": {
+      "title": "游戏厂商管理",
+      "searchForm": {
+        "categoryType": "游戏大类",
+        "categoryTypePlaceholder": "请选择游戏大类",
+        "state": "开启状态",
+        "search": {
+          "categoryLabel": "游戏大类",
+          "orderNoLabel": "游戏单号",
+          "orderNoPlaceholder": "游戏单号",
+          "memberIdLabel": "会员ID",
+          "memberIdPlaceholder": "请输入会员ID",
+          "vendorLabel": "游戏厂商",
+          "vendorPlaceholder": "请选择游戏厂商"
+        },
+        "statePlaceholder": "请选择状态",
+        "isMaintenance": "维护状态",
+        "maintenancePlaceholder": "请选择状态",
+        "normal": "正常",
+        "maintenance": "维护"
+      },
+      "columns": {
+        "state": "状态",
+        "isMaintenance": "维护状态",
+        "vendorMapping": "厂商映射",
+        "vendorCode": "游戏厂商编码",
+        "vendorName": "游戏厂商名称",
+        "displayName": "前台显示名称",
+        "imgUrl": "图标",
+        "vendorLogoUrl": "厂商LOGO",
+        "selectedVendorLogoUrl": "厂商LOGO选中",
+        "categoryType": "游戏大类",
+        "customCategoryList": "展示分类",
+        "sort": "排序号",
+        "lastUpdateTime": "最后更新时间",
+        "lastUpdateMan": "操作人",
+        "mapTip": "开启映射后厂商不会再前台独立展示"
+      },
+      "actions": {
+        "edit": "编辑",
+        "subGameManagement": "子游戏管理",
+        "fetchBet": "补采注单",
+        "syncSubGame": "同步子游戏",
+        "syncTenant": "同步商户",
+        "syncGameVendor": "同步游戏厂商",
+        "enable": "启用",
+        "disable": "禁用",
+        "maintenance": "维护",
+        "cancel": "取消",
+        "save": "保存"
+      },
+      "modal": {
+        "editTitle": "编辑游戏厂商",
+        "fetchBetTitle": "补采【{gameType}】注单",
+        "addBatchClass": "批量添加分类",
+        "deleteBatchClass": "批量删除分类",
+        "addBatchSort": "批量设置排序",
+        "syncTenantTitle": "同步商户游戏",
+        "syncGameVendorTitle": "同步游戏厂商提示",
+        "syncGameVendorConfirm": "确定同步所有游戏厂商吗？",
+        "syncSubGameTitle": "同步子游戏提示",
+        "syncSubGameConfirm": "确定同步 {vendorName} 子游戏吗？"
+      },
+      "syncTenant": {
+        "syncType": "同步类型",
+        "allTenants": "全部商户",
+        "selectTenants": "选择商户",
+        "tenants": "商户",
+        "selectTenantRequired": "请选择商户",
+        "syncTypeRequired": "请选择同步类型",
+        "syncSuccess": "游戏同步成功"
+      },
+      "edit": {
+        "vendorName": "游戏厂商名称",
+        "displayCategory": "展示分类",
+        "displayCategoryPlaceholder": "请选择展示分类",
+        "displayName": "前台显示名称",
+        "displayNamePlaceholder": "请输入名称",
+        "sort": "排序",
+        "icon": "图标",
+        "vendorLogo": "厂商LOGO",
+        "selectedVendorLogo": "厂商LOGO选中",
+        "validation": {
+          "iconRequired": "请上传游戏图片",
+          "selectedLogoRequired": "请上传厂商LOGO选中图片",
+          "vendorLogoRequired": "请上传厂商LOGO",
+          "sortRequired": "请输入排序",
+          "displayCategoryRequired": "请选择展示分类",
+          "validImageRequired": "请上传有效图片"
+        },
+        "messages": {
+          "editSuccess": "修改成功",
+          "createSuccess": "创建成功"
+        }
+      },
+      "fetchBet": {
+        "timeRange": "时间范围",
+        "timeRangeError": "请选择时间范围",
+        "submitSuccess": "补采注单任务已提交，请稍后查看结果"
+      }
+    },
+    "category": {
+      "title": "游戏展示分类管理",
+      "columns": {
+        "categoryName": "游戏分类名称",
+        "imgUrl": "图标",
+        "smallImgUrl": "小图标",
+        "selectedImgUrl": "选中图标",
+        "sort": "游戏分类排序",
+        "state": "开启状态",
+        "lastUpdateTime": "最后更新时间",
+        "lastUpdateMan": "最后操作人"
+      },
+      "actions": {
+        "edit": "编辑",
+        "showLanguage": "显示多语言",
+        "categoryDescription": "分类描述",
+        "add": "添加游戏展示分类",
+        "enable": "启用",
+        "disable": "禁用",
+        "cancel": "取消",
+        "save": "保存"
+      },
+      "modal": {
+        "editTitle": "编辑游戏分类",
+        "addTitle": "新增游戏分类",
+        "languageTitle": "编辑多语言",
+        "descriptionTitle": "编辑分类描述"
+      },
+      "edit": {
+        "categoryName": "分类名称",
+        "categoryNamePlaceholder": "请输入分类名称",
+        "sort": "分类排序",
+        "icon": "图标",
+        "smallIcon": "小图标",
+        "selectedIcon": "小图标选中",
+        "validation": {
+          "categoryNameRequired": "请输入分类名称",
+          "sortRequired": "请输入分类排序",
+          "sortMinValue": "分类排序不能小于0",
+          "iconRequired": "请上传游戏大类图片",
+          "selectedIconRequired": "请上传选中图片图标",
+          "smallIconRequired": "请上传图标",
+          "validImageRequired": "请上传有效图片"
+        },
+        "messages": {
+          "editSuccess": "修改成功",
+          "createSuccess": "创建成功"
+        }
+      }
+    },
+    "mapping": {
+      "title": "配置映射关系",
+      "editTitle": "编辑映射关系",
+      "currentGame": "当前游戏",
+      "targetVendor": "目标厂商",
+      "targetVendorPlaceholder": "请选择目标厂商",
+      "targetGame": "目标游戏",
+      "targetGamePlaceholder": "请选择目标游戏",
+      "tips": {
+        "tip1": "一个目标游戏只能被使用一次",
+        "tip2": "配置后目标游戏将被锁定",
+        "tip3": "取消映射后才可再次使用"
+      },
+      "validation": {
+        "vendorRequired": "请选择目标厂商",
+        "gameRequired": "请选择目标游戏"
+      },
+      "messages": {
+        "configSuccess": "配置成功",
+        "updateSuccess": "更新成功",
+        "cancelConfirm": "确定要取消该游戏的映射关系吗？",
+        "cancelSuccess": "取消映射成功"
+      },
+      "actions": {
+        "config": "配置映射",
+        "edit": "编辑映射",
+        "cancel": "取消映射"
+      }
+    },
+    "hotGameConfig": {
+      "title": "热门游戏",
+      "pageTitle": "热门游戏管理",
+      "addButton": "添加热门游戏",
+      "editDescription": "编辑分类描述",
+      "columns": {
+        "vendor": "游戏厂商",
+        "gameName": "游戏名称",
+        "gameImage": "游戏图片",
+        "sort": "排序",
+        "status": "开启状态",
+        "lastUpdateTime": "最后更新时间",
+        "lastUpdateUser": "最后操作人"
+      },
+      "actions": {
+        "edit": "编辑",
+        "gameDescription": "游戏描述"
+      },
+      "edit": {
+        "vendor": "游戏厂商",
+        "vendorPlaceholder": "请选择游戏厂商",
+        "subGame": "子游戏",
+        "subGamePlaceholder": "请选择子游戏",
+        "gameImage": "游戏图片",
+        "sort": "排序",
+        "validation": {
+          "vendorRequired": "请选择厂商",
+          "sortRequired": "请输入分类排序",
+          "sortMin": "分类排序不能小于0",
+          "imageRequired": "请上传游戏大类图片",
+          "gameIdRequired": "请选择子游戏"
+        }
+      },
+      "describe": {
+        "title": "标题",
+        "description": "描述"
+      }
+    },
+    "thirdBalance": {
+      "title": "游戏余额回收",
+      "batchRecoverText": "批量回收",
+      "memberIdRequired": "请输入会员ID",
+      "recoverSuccess": "回收成功",
+      "batchRecoverSuccess": "批量回收成功",
+      "columns": {
+        "memberId": "会员ID",
+        "vendor": "游戏厂商",
+        "balance": "余额"
+      },
+      "actions": {
+        "balanceRecover": "余额回收"
+      },
+      "modal": {
+        "batchRecoverTitle": "批量余额回收",
+        "warningTitle": "警告",
+        "recoverConfirm": "确定要回收{account} {vendorCode}的余额吗？"
+      },
+      "search": {
+        "memberIdLabel": "会员ID",
+        "memberIdPlaceholder": "请输入会员ID"
+      },
+      "batchRecover": {
+        "userIdLabel": "用户ID",
+        "userIdPlaceholder": "请输入用户ID 空格或者逗号隔开",
+        "vendorLabel": "游戏厂商",
+        "validation": {
+          "vendorRequired": "请选择游戏厂商",
+          "userIdRequired": "请输入用户ID 空格或者逗号隔开",
+          "maxUsersLimit": "最多支持100个用户回收",
+          "numberOnly": "必须是数字"
+        }
+      }
+    },
+    "betRecord": {
+      "title": "游戏投注订单",
+      "tabs": {
+        "lottery": "彩票投注订单",
+        "live": "视讯投注订单",
+        "sports": "体育投注订单",
+        "electronic": "电子投注订单",
+        "chess": "棋牌投注订单"
+      },
+      "lotteryTabs": {
+        "wingoLabel": "Win Go",
+        "k3Label": "K3",
+        "fiveDLabel": "5D",
+        "trxWingoLabel": "TRX Win Go",
+        "xosoLabel": "XOSO",
+        "wingoSub": "Win Go彩种",
+        "k3Sub": "K3彩种",
+        "fiveDSub": "5D彩种",
+        "trxWingoSub": "TRX Wingo彩种",
+        "xosoSub": "XOSO 越南彩",
+        "newLottery": "新彩种",
+        "newLotterySub": "MOTO Video"
+      },
+      "xosoRegion": {
+        "north75": "北部75秒",
+        "central75": "中部75秒",
+        "south45": "南部45秒"
+      },
+      "exportButton": "导出",
+      "summary": {
+        "betAmount": "投注金额",
+        "validAmount": "有效投注",
+        "winAmount": "派奖金额",
+        "winLose": "盈亏",
+        "feeAmount": "税收"
+      },
+      "columns": {
+        "orderNo": "游戏订单号",
+        "memberId": "会员ID",
+        "vendor": "游戏厂商",
+        "gameName": "游戏名称",
+        "issueNumber": "期号",
+        "betType": "投注类型",
+        "betContent": "投注内容",
+        "betAmount": "投注金额",
+        "validAmount": "有效投注",
+        "winAmount": "派奖金额",
+        "winLose": "盈亏",
+        "feeAmount": "税收",
+        "status": "状态",
+        "userType": "用户类型",
+        "followOrderNo": "跟单策略单号",
+        "betTime": "投注时间",
+        "settlementTime": "结算时间",
+        "createTime": "创建时间",
+        "updateTime": "更新时间",
+        "remark": "备注-版本号",
+        "roundNumber": "局号"
+      },
+      "userTypes": {
+        "formal": "正式会员",
+        "test": "测试会员"
+      },
+      "search": {
+        "categoryLabel": "游戏大类",
+        "categoryPlaceholder": "请选择游戏大类",
+        "gameType": "游戏类型",
+        "gameTypePlaceholder": "请选择游戏类型",
+        "orderNoLabel": "游戏单号",
+        "orderNoPlaceholder": "游戏单号",
+        "memberIdLabel": "会员ID",
+        "memberIdPlaceholder": "请输入会员ID",
+        "vendorLabel": "游戏厂商",
+        "vendorPlaceholder": "请选择游戏厂商",
+        "subGameLabel": "子游戏",
+        "subGamePlaceholder": "请选择子游戏",
+        "issueNumberLabel": "期号",
+        "issueNumberPlaceholder": "彩票期号",
+        "orderStateLabel": "注单状态",
+        "orderStatePlaceholder": "选择状态",
+        "userTypeLabel": "用户类型",
+        "userTypePlaceholder": "选择用户类型",
+        "roundLabel": "局号",
+        "roundPlaceholder": "游戏局号",
+        "timeLabel": "时间",
+        "timeTypePlaceholder": "请选择时间类型",
+        "timePlaceholder": "请选择结束时间",
+        "betTimeLabel": "投注时间",
+        "settleTimeLabel": "结算时间",
+        "betAmountLabel": "投注金额",
+        "minAmountPlaceholder": "最小金额",
+        "maxAmountPlaceholder": "最大金额",
+        "winLoseAmountLabel": "盈亏金额",
+        "followOrderLabel": "跟单策略号",
+        "followOrderPlaceholder": "跟单策略单号",
+        "userTypes": {
+          "formal": "正式会员",
+          "test": "测试会员"
+        },
+        "timeTypes": {
+          "betTime": "投注时间",
+          "settleTime": "结算时间"
+        },
+        "validation": {
+          "timeRequired": "请选择查询时间",
+          "timeRangeRequired": "请选择查询时间",
+          "endTimeLimit": "结束时间不能大于",
+          "maxDays15": "请选择15天内时间进行查询",
+          "maxDays31": "请选择31天内时间进行查询"
+        },
+        "tips": {
+          "memberIdQuery": "按会员ID：限制任意31天查询（起止日期最大31天）",
+          "orderQuery": "按游戏单号查询：不限制时间",
+          "emptyQuery": "会员ID/游戏单号均为空：此时时间范围限定15天（起止日期最大15天））"
+        }
+      },
+      "status": {
+        "unsettled": "未结算",
+        "settled": "已结算",
+        "cancelled": "已取消",
+        "refunded": "已退款",
+        "voided": "已作废",
+        "earlySettled": "提前结算",
+        "resettled": "重新结算"
+      },
+      "winLose": {
+        "lose": "输",
+        "win": "赢",
+        "tie": "和",
+        "halfLose": "半输",
+        "halfWin": "半赢"
+      },
+      "modal": {
+        "detailTitle": "注单详情"
+      },
+      "export": {
+        "fileName": "游戏投注订单"
+      },
+      "info": {
+        "memberSection": {
+          "title": "会员信息",
+          "memberId": "会员ID",
+          "currency": "币种",
+          "betIP": "投注IP"
+        },
+        "gameSection": {
+          "title": "游戏信息",
+          "orderNo": "注单号",
+          "gameCategory": "游戏大类",
+          "vendor": "游戏厂商",
+          "gameName": "游戏名称",
+          "gameCode": "游戏编码",
+          "betAmount": "投注金额",
+          "validAmount": "有效投注金额",
+          "feeAmount": "手续费",
+          "winAmount": "中奖金额",
+          "winLoseAmount": "输赢金额",
+          "status": "状态",
+          "betTime": "投注时间",
+          "settlementTime": "结算时间",
+          "createTime": "创建时间",
+          "updateTime": "更新时间"
+        },
+        "sportsSection": {
+          "title": "体育投注信息",
+          "leagueInfo": "联赛信息",
+          "teamInfo": "队伍信息",
+          "betContent": "投注内容",
+          "odds": "赔率",
+          "handicapType": "盘口类型",
+          "winLoseType": "输赢类型",
+          "result": "赛果",
+          "remark": "备注-版本号"
+        },
+        "liveSection": {
+          "title": "视讯投注信息",
+          "tableNo": "桌号",
+          "roundIssue": "局号/期号",
+          "betContent": "投注内容",
+          "drawResult": "开奖结果",
+          "remark": "备注-版本号"
+        },
+        "cardSection": {
+          "title": "棋牌投注信息",
+          "tableNo": "桌号",
+          "roundIssue": "局号/期号",
+          "betContent": "投注内容",
+          "drawResult": "开奖结果"
+        },
+        "lotterySection": {
+          "title": "彩票投注信息",
+          "issueNumber": "期号",
+          "odds": "赔率",
+          "betMultiple": "投注倍数",
+          "playType": "玩法类型",
+          "betContent": "投注内容",
+          "drawResult": "开奖结果"
+        }
+      }
+    },
+    "subgame": {
+      "title": "子游戏管理",
+      "addButton": "新增游戏",
+      "batchEnableButton": "批量启用",
+      "batchDisableButton": "批量禁用",
+      "search": {
+        "gameNameLabel": "游戏名称",
+        "gameNamePlaceholder": "游戏名称",
+        "gameIdLabel": "游戏ID/Code",
+        "gameIdPlaceholder": "游戏ID或游戏编码",
+        "categoryLabel": "游戏大类",
+        "categoryPlaceholder": "请选择游戏大类",
+        "vendorLabel": "游戏厂商",
+        "vendorPlaceholder": "请选择游戏厂商",
+        "stateLabel": "游戏状态",
+        "statePlaceholder": "请选择状态",
+        "mappingRoleLabel": "映射角色",
+        "mappingRolePlaceholder": "请选择映射角色"
+      },
+      "columns": {
+        "gameId": "游戏ID",
+        "gameName": "游戏名称",
+        "gameCode": "游戏编码",
+        "vendor": "厂商",
+        "category": "游戏大类",
+        "gameImage": "游戏图片",
+        "displayCategory": "展示分类",
+        "mappingRole": "映射角色",
+        "mappingRelation": "映射关系",
+        "maxMultiple": "最大倍数",
+        "maxBetAmount": "最大投注率",
+        "sort": "排序",
+        "state": "状态",
+        "createTime": "创建时间",
+        "updateTime": "最后更新时间",
+        "operator": "操作人",
+        "clicks": "点击量"
+      },
+      "mappingRole": {
+        "normal": "普通",
+        "source": "映射源",
+        "target": "映射目标"
+      },
+      "status": {
+        "enabled": "启用",
+        "disabled": "禁用"
+      },
+      "actions": {
+        "edit": "编辑",
+        "switch": "开关",
+        "batchEnable": "一键开启",
+        "batchDisable": "一键关闭"
+      },
+      "messages": {
+        "batchOperationConfirm": "确定要{action}选中的游戏吗？",
+        "noSelectionWarning": "请先选择要操作的数据",
+        "operationSuccess": "操作成功",
+        "batchOperationSuccess": "批量操作成功",
+        "switchSuccess": "切换成功",
+        "batchEnableTitle": "批量开启游戏",
+        "batchDisableTitle": "批量关闭游戏",
+        "batchEnableConfirm": "是否开启游戏",
+        "batchDisableConfirm": "是否关闭游戏"
+      },
+      "edit": {
+        "title": "游戏编辑",
+        "gameNameCn": "游戏中文名称",
+        "gameNameEn": "游戏英文名称",
+        "sort": "排序",
+        "gameImage": "游戏图片",
+        "displayCategory": "展示分类",
+        "validation": {
+          "gameNameCnRequired": "请输入游戏中文名称",
+          "gameNameEnRequired": "请输入游戏英文名称",
+          "imageRequired": "请上传游戏图片",
+          "validImageRequired": "请上传有效图片",
+          "sortRequired": "请输入排序值",
+          "sortMinValue": "排序值不能小于0",
+          "displayCategoryRequired": "请选择展示分类"
+        },
+        "messages": {
+          "editSuccess": "修改成功",
+          "createSuccess": "创建成功"
+        }
+      }
+    },
+    "transfer": {
+      "title": "游戏转账记录",
+      "columns": {
+        "memberId": "会员ID",
+        "platformOrderNo": "平台订单号",
+        "transferAmount": "转账金额",
+        "currency": "币种",
+        "triggerVendor": "触发上分游戏厂商",
+        "payType": "账变类型",
+        "transactionStatus": "交易状态",
+        "remark": "备注",
+        "transactionTime": "交易时间"
+      },
+      "payTypes": {
+        "transferIn": "转入(上分)",
+        "transferOut": "转出(下分)"
+      },
+      "transactionStatus": {
+        "processing": "处理中",
+        "success": "成功",
+        "failed": "失败"
+      },
+      "search": {
+        "platformOrderNo": "平台订单号",
+        "platformOrderNoPlaceholder": "请输入平台订单号",
+        "memberId": "会员ID",
+        "memberIdPlaceholder": "请输入会员ID",
+        "triggerVendor": "触发上分游戏厂商",
+        "vendorPlaceholder": "请选择游戏厂商",
+        "transferType": "转账类型",
+        "transferTypePlaceholder": "请选择账变类型",
+        "transactionStatus": "交易状态",
+        "transactionStatusPlaceholder": "请选择账变类型",
+        "time": "时间",
+        "today": "今天",
+        "yesterday": "昨天",
+        "thisWeek": "本周",
+        "lastWeek": "上周",
+        "thisMonth": "本月",
+        "lastMonth": "上月"
+      },
+      "validation": {
+        "selectTime": "请选择查询时间",
+        "endTimeLimit": "结束时间不能大于",
+        "selectWithin15Days": "请选择15天内时间进行查询",
+        "selectWithin31Days": "请选择31天内范围进行查询"
+      },
+      "tips": {
+        "memberIdQuery": "按会员ID：限制任意31天查询（起止日期最大31天）",
+        "orderQuery": "按平台订单号查询: 不限制时间",
+        "emptyQuery": "会员ID/平台订单号均为空：此时时间范围限定15天（起止日期最大15天）"
+      }
+    },
+    "types": {
+      "0": "电子游戏",
+      "1": "真人视讯",
+      "2": "体育竞技",
+      "3": "彩票",
+      "4": "棋牌"
+    },
+    "status": {
+      "0": "禁用",
+      "1": "启用",
+      "2": "维护中"
+    },
+    "lottery": {
+      "Num": "数字",
+      "Color": "颜色",
+      "Green": "绿色",
+      "Red": "红色",
+      "Violet": "紫色",
+      "BigSmall": "大小",
+      "OddEven": "单双",
+      "Small": "小",
+      "Big": "大",
+      "Even": "偶数",
+      "Odd": "奇数",
+      "SumNum": "和值",
+      "SumBigSmall": "和值大小",
+      "SumOddEven": "和值单双",
+      "NumSame2": "二同号单选",
+      "NumSame2Mult": "二同号复选",
+      "NumSame3": "三同号单选",
+      "NumSame3All": "三同号通选",
+      "NumDiff3": "三不同号",
+      "NumNear3All": "三连号通选",
+      "NumDiff2": "二不同号",
+      "FirstNum": "第一位数字",
+      "FirstBigSmall": "第一位大小",
+      "FirstOddEven": "第一位单双",
+      "SecondNum": "第二位数字",
+      "SecondBigSmall": "第二位大小",
+      "SecondOddEven": "第二位单双",
+      "ThirdNum": "第三位数字",
+      "ThirdBigSmall": "第三位大小",
+      "ThirdOddEven": "第三位单双",
+      "FourthNum": "第四位数字",
+      "FourthBigSmall": "第四位大小",
+      "FourthOddEven": "第四位单双",
+      "FifthNum": "第五位数字",
+      "FifthBigSmall": "第五位大小",
+      "FifthOddEven": "第五位单双",
+      "D5_SumBigSmall": "和值大小",
+      "D5_SumOddEven": "和值单双"
+    },
+    "financial": {
+      "TransIn": "商户转入(上分)",
+      "TransOut": "商户转出(下分)",
+      "TransReturn": "商户转账退回",
+      "GameBet": "下注",
+      "GameEnd": "结算",
+      "GameTransIn": "游戏上分",
+      "GameTransOut": "游戏下分",
+      "GameReduce": "游戏扣款",
+      "GamePlus": "游戏补款",
+      "GameActivityPlus": "游戏活动奖励",
+      "GameReturn": "游戏退款",
+      "GameCombineEnd": "合并结算",
+      "GameCancel": "游戏撤销"
+    }
+  }
+}

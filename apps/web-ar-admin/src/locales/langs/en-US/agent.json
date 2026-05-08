@@ -1,0 +1,1110 @@
+{
+  "agent": {
+    "agentList": {
+      "title": "Agent List",
+      "columns": {
+        "userId": "User ID",
+        "parentId": "Parent ID",
+        "generalAgentId": "General Agent ID",
+        "hierarchy": "Absolute Level",
+        "firstChildCount": "Direct Downlines (Count)",
+        "childCount": "All Downlines (Count)",
+        "balance": "Balance",
+        "registerTime": "Register Time",
+        "lastLoginTime": "Last Login Time",
+        "rebateState": "Rebate Collection",
+        "summary": {
+          "totalRatio": "Total Ratio",
+          "exceedMaxRatio": "Exceeded maximum ratio 100%, please readjust the ratio",
+          "rankType": "Rank Type",
+          "rankSuffix": " Ranking"
+        },
+        "rebateMode": "Rebate Mode",
+        "rebateLevel": "Special Rebate Level",
+        "rebateSetTime": "Special Rebate Set Time"
+      },
+      "form": {
+        "userIdPlaceholder": "Please enter User ID",
+        "queryRebateAgent": "Query Rebate Agent Line",
+        "relativeLevel": "Relative Level",
+        "absoluteLevel": "Absolute Level",
+        "levelPlaceholder": "Please select level",
+        "includeSelfAndParent": "List self and all parents",
+        "rebateMode": "Rebate Mode",
+        "rebateModePlaceholder": "Please select rebate mode"
+      },
+      "actions": {
+        "removeAgent": "Remove Agent Relationship",
+        "bindInvite": "Bind Invite Code",
+        "specialRebate": "Special Rebate Settings",
+        "export": "Export"
+      },
+      "status": {
+        "enable": "Enable",
+        "disable": "Disable",
+        "none": "None"
+      },
+      "messages": {
+        "enterUserId": "Please enter User ID",
+        "enterInviteCode": "Please enter invite code first",
+        "bindSuccess": "Invite code binding successful",
+        "removeConfirm": "Confirm to remove agent relationship?",
+        "removeSuccess": "Agent relationship removed successfully",
+        "updateSuccess": "Update successful",
+        "exportFailed": "Export failed"
+      },
+      "dialog": {
+        "bindInviteTitle": "Bind Invite Code",
+        "inviteCode": "Invite Code",
+        "inviteCodePlaceholder": "Please enter invite code",
+        "specialRebateTitle": "Special Rebate Settings",
+        "memberIdLabel": "Member ID",
+        "rebateModeLabel": "Rebate Mode",
+        "rebateLevelLabel": "Rebate Level",
+        "confirm": "Confirm",
+        "cancel": "Cancel",
+        "save": "Save",
+        "tip": "Tip"
+      },
+      "export": {
+        "fileName": "Agent List"
+      },
+      "levels": {
+        "level1": "Level 1",
+        "level2": "Level 2",
+        "level3": "Level 3",
+        "level4": "Level 4",
+        "level5": "Level 5",
+        "level6": "Level 6"
+      }
+    },
+    "agentReport": {
+      "title": "Agent Report",
+      "columns": {
+        "userId": "User ID",
+        "parentId": "Parent ID",
+        "generalAgentId": "General Agent ID",
+        "hierarchy": "Absolute Level",
+        "betAmount": "Bet Amount",
+        "winAmount": "Win Amount",
+        "platformWinLoss": "Platform Win/Loss",
+        "activityRewards": "Activity",
+        "recharges": "Deposit",
+        "rechargesAmount": "Amount",
+        "rechargesCount": "Count",
+        "withdraw": "Withdraw",
+        "withdrawAmount": "Amount",
+        "withdrawCount": "Count"
+      },
+      "form": {
+        "selectQueryId": "Select Query ID",
+        "userId": "User ID",
+        "parentId": "Parent ID",
+        "generalAgentId": "General Agent ID",
+        "userIdPlaceholder": "Please enter User ID",
+        "queryAgentLine": "Query entire agent line",
+        "relativeLevel": "Relative Level",
+        "absoluteLevel": "Absolute Level",
+        "levelPlaceholder": "Please select level",
+        "timeRange": "Time Range",
+        "day": "Day",
+        "month": "Month"
+      },
+      "actions": {
+        "export": "Export"
+      },
+      "status": {
+        "none": "None",
+        "total": "Total"
+      },
+      "messages": {
+        "enterUserId": "Please enter User ID",
+        "exportFailed": "Export failed"
+      },
+      "export": {
+        "fileName": "Agent Report"
+      },
+      "levels": {
+        "level1": "Level 1",
+        "level2": "Level 2",
+        "level3": "Level 3",
+        "level4": "Level 4",
+        "level5": "Level 5",
+        "level6": "Level 6"
+      }
+    },
+    "changeLine": {
+      "title": "Agent Transfer Records",
+      "columns": {
+        "userId": "User ID",
+        "oldParentId": "Old Parent ID",
+        "oldHierarchy": "Old Level",
+        "newParentId": "New Parent ID",
+        "newHierarchy": "New Level",
+        "teamUserCount": "Team User Count at Transfer",
+        "transferBeginTime": "Transfer Begin Time",
+        "transferEndTime": "Transfer End Time",
+        "state": "Status"
+      },
+      "form": {
+        "userId": "User ID",
+        "userIdPlaceholder": "Please enter User ID",
+        "selectTime": "Please select time",
+        "transferBeginTime": "Transfer Begin Time",
+        "transferEndTime": "Transfer End Time"
+      },
+      "actions": {
+        "export": "Export"
+      },
+      "status": {
+        "success": "Success",
+        "processing": "Processing",
+        "failed": "Failed"
+      },
+      "export": {
+        "fileName": "Agent Transfer Records"
+      }
+    },
+    "newagent": {
+      "title": "New Agent",
+      "tabs": {
+        "inviteManage": "Invite Management",
+        "teamManage": "Team Management",
+        "rewardManage": "Reward Management",
+        "rebateData": "Rebate Data",
+        "rankAudit": "Rank Audit",
+        "rankManage": "Rank Management",
+        "agentConfig": "Level 3 Agent Config",
+        "rules": "Agent Rules Config"
+      },
+      "invite": {
+        "columns": {
+          "inviterId": "Inviter ID",
+          "inviterUserId": "Inviter User ID",
+          "inviteCode": "Invite Code",
+          "teamLevel": "Team Level",
+          "totalRewardAmount": "Total Reward Amount",
+          "inviteRewardAmount": "Invite Success Reward Amount",
+          "inviteRewardUserCount": "Success Reward User Count",
+          "inviteTaskRewardAmount": "Invite Task Reward Amount",
+          "agentL1": "Level 1 Agent",
+          "agentL2": "Level 2 Agent",
+          "agentL3": "Level 3 Agent",
+          "agentDetail1": "Level 1 Agent",
+          "agentDetail2": "Level 2 Agent",
+          "agentDetail3": "Level 3 Agent",
+          "inviteRegisterCount": "Invited Register Count",
+          "inviteRegisterUserCount": "Invited Register User Count",
+          "inviteFirstRechargeCount": "Invited First Deposit Count",
+          "inviteTopRechargeUserCount": "Invited First Deposit User Count",
+          "validInviteCount": "Valid Invite Count",
+          "inviteUserCount": "Valid Invite User Count",
+          "rechargeAmount": "Deposit Amount",
+          "rechargeCommission": "Deposit Commission",
+          "rechargeCommissionAmount": "Deposit Commission Amount",
+          "withdrawAmount": "Withdraw Amount",
+          "betCommission": "Bet Commission",
+          "betCommissionAmount": "Bet Commission Amount",
+          "validBetAmount": "Valid Bet Amount",
+          "betAmount": "Valid Bet Amount"
+        },
+        "form": {
+          "inviterId": "Inviter ID",
+          "inviteCode": "Invite Code",
+          "registerTime": "Register Time",
+          "inviterIdPlaceholder": "Please enter Inviter ID",
+          "inviteCodePlaceholder": "Please enter Invite Code",
+          "today": "Today",
+          "yesterday": "Yesterday",
+          "thisWeek": "This Week",
+          "lastWeek": "Last Week",
+          "thisMonth": "This Month",
+          "lastMonth": "Last Month"
+        },
+        "messages": {
+          "pleaseEnterInviterIdOrCode": "Please enter Inviter ID or Invite Code"
+        },
+        "actions": {
+          "export": "Export",
+          "exportFileName": "Invite Management"
+        }
+      },
+      "team": {
+        "columns": {
+          "memberId": "Member ID",
+          "userId": "User ID",
+          "agentLevel": "Agent Level",
+          "teamLevel": "Agent Level",
+          "teamMemberCount": "Team Member Count",
+          "childCount": "Team Count",
+          "directSubordinates": "Direct Downlines",
+          "teamTotalRecharge": "Team Total Deposit",
+          "teamValidBet": "Team Valid Bet",
+          "teamProfitLoss": "Team Profit Loss",
+          "rechargeAmount": "Deposit Amount",
+          "withdrawAmount": "Withdraw Amount",
+          "betAmount": "Bet Amount",
+          "cumulativeCommission": "Cumulative Commission",
+          "agentCommissionAmount": "Agent Commission Amount",
+          "status": "Status",
+          "registerTime": "Register Time",
+          "lastLoginTime": "Last Login Time"
+        },
+        "form": {
+          "memberId": "Member ID",
+          "memberIdPlaceholder": "Please enter Member ID",
+          "agentLevel": "Agent Level",
+          "agentLevelPlaceholder": "Please select Agent Level",
+          "memberStatus": "Member Status",
+          "memberStatusPlaceholder": "Please select Member Status",
+          "registerTime": "Register Time"
+        },
+        "actions": {
+          "export": "Export",
+          "exportFileName": "Team Management"
+        },
+        "status": {
+          "unknown": "Unknown"
+        },
+        "levels": {
+          "l0": "L0",
+          "l1": "L1",
+          "l2": "L2",
+          "l3": "L3",
+          "unknown": "Unknown"
+        }
+      },
+      "reward": {
+        "columns": {
+          "issueTime": "Issue Time",
+          "memberId": "Member ID",
+          "rewardType": "Reward Type",
+          "rewardAmount": "Reward Amount"
+        },
+        "form": {
+          "memberId": "Member ID",
+          "memberIdPlaceholder": "Please enter Member ID",
+          "rewardType": "Reward Type",
+          "rewardTypePlaceholder": "Please select reward type",
+          "issueTime": "Issue Time"
+        },
+        "actions": {
+          "export": "Export",
+          "exportFileName": "Reward Management"
+        }
+      },
+      "rebateData": {
+        "title": "Agent Rebate Data",
+        "columns": {
+          "date": "Date",
+          "memberId": "Member ID",
+          "rebateLevel": "Rebate Level",
+          "directSubordinateRecharge": "Direct Downline Deposit",
+          "directSubordinateBet": "Direct Downline Bet",
+          "level2SubordinateBet": "Level 2 Downline Bet",
+          "level3SubordinateBet": "Level 3 Downline Bet",
+          "peopleCount": "People Count",
+          "amount": "Amount",
+          "validBet": "Valid Bet",
+          "rebate": "Rebate",
+          "totalPeopleCount": "Total People Count",
+          "totalValidBet": "Total Valid Bet",
+          "totalRebate": "Total Rebate"
+        },
+        "form": {
+          "memberId": "Member ID",
+          "memberIdPlaceholder": "Please enter Member ID",
+          "queryFullAgentLine": "Query Full Agent Line",
+          "relativeLevel": "Relative Level",
+          "absoluteLevel": "Absolute Level",
+          "levelPlaceholder": "Please select level",
+          "rebateLevel": "Rebate Level",
+          "rebateLevelPlaceholder": "Please select rebate level",
+          "reportDate": "Report Date",
+          "datePickerPlaceholder": "Please select date",
+          "teamCountMin": "Team Count >=",
+          "teamCountPlaceholder": "Please enter team count",
+          "teamRechargeMin": "Team Deposit Amount >=",
+          "teamRechargePlaceholder": "Team Deposit Amount",
+          "directSubordinateRechargeAmount": "Direct Downline Deposit Amount >=",
+          "rechargeAmountPlaceholder": "Deposit Amount",
+          "filterCondition": "Filter Condition >=",
+          "filterTypePlaceholder": "Please select trigger type",
+          "directSubordinateBet": "Direct Downline Bet",
+          "level2SubordinateBet": "Level 2 Downline Bet",
+          "level3SubordinateBet": "Level 3 Downline Bet",
+          "minValuePlaceholder": "Min Value"
+        },
+        "messages": {
+          "pleaseEnterMemberId": "Please enter Member ID",
+          "pleaseSelectUser": "Please select a user to query"
+        },
+        "levels": {
+          "level1": "Level 1",
+          "level2": "Level 2",
+          "level3": "Level 3",
+          "level4": "Level 4",
+          "level5": "Level 5",
+          "level6": "Level 6"
+        },
+        "actions": {
+          "export": "Export",
+          "exportFileName": "Rebate Data Details"
+        }
+      },
+      "rebateDataDetail": {
+        "pageTitle": "Agent {userId} Rebate Data Details",
+        "columns": {
+          "relativeLevel": "Relative Level",
+          "rechargeAmount": "Deposit Amount",
+          "rechargeCommission": "Deposit Commission",
+          "betCommission": "Bet Commission",
+          "totalCommission": "Total Commission"
+        },
+        "form": {
+          "date": "Date",
+          "relativeLevel": "Relative Level",
+          "relativeLevelPlaceholder": "Please select relative level",
+          "level1": "Level 1",
+          "level2": "Level 2",
+          "level3": "Level 3"
+        },
+        "actions": {
+          "export": "Export",
+          "exportFileName": "Rebate Data Details"
+        }
+      },
+      "rankAudit": {
+        "columns": {
+          "auditId": "Audit ID",
+          "memberId": "Member ID",
+          "userId": "User ID",
+          "rankType": "Rank Type",
+          "auditStatus": "Audit Status",
+          "createTime": "Create Time",
+          "directMemberId": "Direct Member ID",
+          "memberRegisterTime": "Member Register Time",
+          "dataStatisticsTime": "Data Statistics Time",
+          "gameVendor": "Game Provider",
+          "subGame": "Game",
+          "betAmount": "Bet Amount",
+          "winAmount": "Win Amount",
+          "validBet": "Valid Bet",
+          "time": "Time",
+          "rank": "Rank",
+          "newDirectValidBet": "New Direct Valid Bet",
+          "rewardAmount": "Reward Amount",
+          "applyTime": "Apply Time",
+          "status": "Status",
+          "operator": "Operator",
+          "operationTime": "Operation Time"
+        },
+        "form": {
+          "memberId": "Member ID",
+          "memberIdPlaceholder": "Please enter Member ID",
+          "userId": "User ID",
+          "userIdPlaceholder": "Please enter User ID",
+          "auditStatus": "Audit Status",
+          "auditStatusPlaceholder": "Please select Audit Status",
+          "rankTime": "Rank Time",
+          "auditResult": "Audit Result",
+          "rejectReason": "Reject Reason"
+        },
+        "actions": {
+          "audit": "Audit"
+        },
+        "modals": {
+          "auditTitle": "Audit Operation"
+        },
+        "status": {
+          "approved": "Approved",
+          "rejected": "Rejected"
+        },
+        "details": {
+          "memberId": "Member ID",
+          "memberRegisterTime": "Member Register Time",
+          "periodRange": "Period Range",
+          "currentRank": "Current Rank",
+          "newDirectValidBet": "New Direct Valid Bet",
+          "rewardAmount": "Reward Amount",
+          "applyTime": "Apply Time"
+        },
+        "tabs": {
+          "auditOperation": "Audit Operation",
+          "directMemberTransactionRecord": "Direct Member Transaction Record",
+          "rewardRecord": "Reward Record"
+        },
+        "messages": {
+          "auditSuccess": "Audit successful",
+          "pleaseEnterRejectReason": "Please enter reject reason"
+        }
+      },
+      "rankManage": {
+        "pool": {
+          "currentPoolAmount": "Current Pool Amount",
+          "add": "Add",
+          "reduce": "Reduce",
+          "operationRecord": "Operation Record",
+          "addPoolAmount": "Add Pool Amount",
+          "reducePoolAmount": "Reduce Pool Amount",
+          "columns": {
+            "operationType": "Operation Type",
+            "amount": "Operation Amount",
+            "afterAmount": "Amount After Operation",
+            "remark": "Operation Description",
+            "creator": "Operator",
+            "createTime": "Operation Time"
+          },
+          "operationTypes": {
+            "add": "Add",
+            "reduce": "Reduce"
+          }
+        },
+        "amount": {
+          "operationAmount": "Operation Amount",
+          "operationRemark": "Operation Description",
+          "operationAmountPlaceholder": "Please enter operation amount",
+          "operationRemarkPlaceholder": "Please enter operation description",
+          "cancel": "Cancel",
+          "save": "Save",
+          "operationSuccess": "Operation successful"
+        },
+        "queryModal": {
+          "memberFlowRecord": "Direct Member Flow Record",
+          "rewardRecord": "Reward Record",
+          "memberId": "Member ID",
+          "rankType": "Rank Type",
+          "periodRange": "Period Range",
+          "currentRank": "Current Rank",
+          "newDirectValidBet": "New Direct Valid Bet",
+          "rewardAmount": "Reward Amount",
+          "cancel": "Cancel",
+          "columns": {
+            "directMemberId": "Direct Member ID",
+            "memberRegisterTime": "Member Register Time",
+            "dataStatisticsTime": "Data Statistics Time",
+            "gameVendor": "Game Provider",
+            "subGame": "Game",
+            "betAmount": "Bet Amount",
+            "winAmount": "Win Amount",
+            "validBet": "Valid Bet",
+            "time": "Time",
+            "rankType": "Rank Type",
+            "rank": "Rank",
+            "rewardAmount": "Reward Amount",
+            "status": "Status"
+          }
+        },
+        "form": {
+          "memberId": "Member ID",
+          "memberIdPlaceholder": "Please enter Member ID",
+          "rankPeriod": "Rank Period",
+          "currentPeriod": "Current Period",
+          "previousPeriod": "Previous Period"
+        },
+        "columns": {
+          "memberId": "Member ID",
+          "rankType": "Rank Type",
+          "periodRange": "Period Range",
+          "rank": "Rank",
+          "validBetAmount": "Valid Bet Amount",
+          "bonusAmount": "Bonus Amount",
+          "updateTime": "Update Time"
+        },
+        "modals": {
+          "poolOperation": "Pool Operation",
+          "memberRankDetails": "Member Rank Details"
+        },
+        "actions": {
+          "poolOperation": "Pool Operation",
+          "details": "Details"
+        }
+      },
+      "components": {
+        "addInv": {
+          "form": {
+            "validInviteCount": "Valid Invite Count",
+            "rewardAmount": "Reward Amount"
+          },
+          "messages": {
+            "enterValidInviteCount": "Please enter valid invite count",
+            "enterRewardAmount": "Please enter reward amount",
+            "saveSuccess": "Save successful",
+            "saveFailed": "Save failed, please try again later"
+          }
+        },
+        "inviteeDetail": {
+          "title": "Invitee Details",
+          "columns": {
+            "inviteeId": "Invitee ID",
+            "inviteCode": "Invite Code",
+            "registerTime": "Register Time",
+            "registerIp": "Register IP",
+            "firstRechargeTime": "First Deposit Time",
+            "isValidInvite": "Is Valid Invite",
+            "totalRechargeAmount": "Total Deposit Amount",
+            "totalWithdrawAmount": "Total Withdraw Amount",
+            "totalBalance": "Total Balance",
+            "parentAgentId": "Parent Agent ID",
+            "parentAgentIdL2": "Parent Agent ID L2",
+            "parentAgentIdL3": "Parent Agent ID L3"
+          },
+          "form": {
+            "inviteeId": "Invitee ID",
+            "inviteeIdPlaceholder": "Please enter invitee ID",
+            "agentId": "Agent ID",
+            "agentIdPlaceholder": "Please enter agent ID",
+            "inviteCode": "Invite Code",
+            "inviteCodePlaceholder": "Please enter invite code",
+            "date": "Date"
+          },
+          "actions": {
+            "export": "Export",
+            "exportFileName": "Invitee Details"
+          },
+          "messages": {
+            "pleaseEnterIdToQuery": "Please enter invitee ID or agent ID to query"
+          }
+        },
+        "editlvConfig": {
+          "levelConditions": "Level Conditions",
+          "teamTotalMembers": "Team Total Members",
+          "teamTotalValidBet": "Team Total Valid Bet",
+          "subordinateRechargeCommissionRate": "Downline Deposit Commission Rate (%)",
+          "subordinateBetCommissionRate": "Downline Bet Commission Rate (%)",
+          "directSubordinate": "Direct Downline",
+          "level2Subordinate": "Level 2 Downline",
+          "level3Subordinate": "Level 3 Downline",
+          "messages": {
+            "saveSuccess": "Save successful",
+            "saveFailed": "Save failed, please try again later"
+          }
+        },
+        "rank": {
+          "title": "Agent Ranking Reward Configuration (Daily New Registered Member Flow)",
+          "columns": {
+            "effectiveDate": "Effective Date",
+            "rankType": "Rank Type",
+            "prizePoolRatio": "Prize Pool Ratio % (Internal Rules)",
+            "prizePoolRatioShow": "Prize Pool Ratio % (External Display)",
+            "minValidBetAmount": "Minimum Valid Bet Amount for Ranking",
+            "initialGoldPool": "Initial Gold Pool",
+            "maxRank": "Effective and Ranking Display",
+            "state": "Status",
+            "actions": "Actions"
+          },
+          "rankTypes": {
+            "daily": "Daily",
+            "weekly": "Weekly",
+            "monthly": "Monthly"
+          },
+          "actions": {
+            "edit": "Edit",
+            "distribute": "Prize Distribution"
+          },
+          "dialog": {
+            "title": "Notice",
+            "confirm": "Confirm",
+            "cancel": "Cancel"
+          },
+          "modals": {
+            "editConfig": "Edit Reward Configuration",
+            "distributeConfig": "Prize Distribution Settings"
+          },
+          "messages": {
+            "confirmOpen": "Are you sure to enable {rankType} ranking? It will take effect the next day after enabling.",
+            "confirmClose": "Are you sure to disable {rankType} ranking?",
+            "operationSuccess": "Operation successful",
+            "operationFailed": "Operation failed",
+            "getRankListFailed": "Failed to get ranking list"
+          }
+        },
+        "rankDistributeModal": {
+          "table": {
+            "title": "Ranking Real-time Ratio",
+            "columns": {
+              "index": "Index",
+              "startRank": "Start Rank",
+              "endRank": "End Rank",
+              "rankRatio": "Win Prize Ratio (%)",
+              "actions": "Actions"
+            }
+          },
+          "buttons": {
+            "batchImport": "Batch Import Ranking Prize Ratio Configuration",
+            "exportConfig": "Export Ranking Prize Ratio Configuration",
+            "downloadTemplate": "Download Template",
+            "cancel": "Cancel",
+            "save": "Save"
+          },
+          "summary": {
+            "totalRatio": "Total Ratio",
+            "exceedMaxRatio": "Exceeded maximum ratio of 100%, please readjust ratio",
+            "rankType": "Rank Type",
+            "rankSuffix": " Ranking"
+          },
+          "export": {
+            "fileName": "Ranking Real-time Ratio Configuration"
+          },
+          "messages": {
+            "importSuccess": "Import successful",
+            "importFailed": "Import failed",
+            "updateSuccess": "Update successful"
+          }
+        },
+        "rankEditModal": {
+          "form": {
+            "rankType": "Rank Type",
+            "prizePoolRatio": "Prize Pool Ratio % (Internal Rules)",
+            "prizePoolRatioShow": "Prize Pool Ratio % (External Display)",
+            "minValidBetAmount": "Minimum Valid Bet Amount for Ranking",
+            "initialGoldPool": "Initial Gold Pool",
+            "maxRank": "Effective and Ranking Display"
+          },
+          "validation": {
+            "prizePoolRatioRequired": "Prize pool ratio cannot be empty",
+            "minValidBetAmountRequired": "Minimum valid bet amount for ranking cannot be empty",
+            "initialGoldPoolRequired": "Initial gold pool cannot be empty",
+            "maxRankRequired": "Effective and ranking cannot be empty"
+          },
+          "buttons": {
+            "cancel": "Cancel",
+            "confirm": "Confirm"
+          },
+          "messages": {
+            "editSuccess": "Edit successful"
+          }
+        }
+      },
+      "config3": {
+        "buttons": {
+          "cancel": "Cancel",
+          "confirm": "Confirm",
+          "save": "Save",
+          "edit": "Edit",
+          "delete": "Delete"
+        },
+        "messages": {
+          "operationSuccess": "Operation successful",
+          "saveSuccess": "Save successful",
+          "deleteSuccess": "Delete successful"
+        },
+        "externalLink": {
+          "title": "External Link Configuration",
+          "sort": "Sort",
+          "icon": "External Link Icon",
+          "enabled": "Enable",
+          "buttonText": "Button Text",
+          "jumpUrl": "Jump URL",
+          "buttonTextPlaceholder": "Please enter button text (optional)",
+          "jumpUrlPlaceholder": "Please enter jump URL",
+          "uploadImageWarning": "Please upload external link image",
+          "jumpUrlWarning": "Please enter jump URL"
+        },
+        "operationLog": {
+          "operationTime": "Operation Time",
+          "operator": "Operator",
+          "configValue": "Config Value (Old -> New)"
+        },
+        "switch": {
+          "enable": "Enable",
+          "disable": "Disable"
+        },
+        "dialog": {
+          "confirmOperation": "Confirm Operation",
+          "confirmMessage": "Are you sure to {action} {name}?"
+        },
+        "configItems": {
+          "agentL3InviteRechargeAmount": {
+            "name": "Agent Valid Invite Deposit Amount",
+            "desc": "Members must deposit this amount to count as valid invite (must be met simultaneously with valid bet)"
+          },
+          "agentL3InviteBetAmount": {
+            "name": "Agent Valid Invite Bet Amount",
+            "desc": "Members must have valid bet of this amount to count as valid invite (must be met simultaneously with valid deposit)"
+          },
+          "agentL3InviteTotalLimitCount": {
+            "name": "Valid Invite Reward Total Limit Count",
+            "desc": "Maximum total valid invite reward count per agent"
+          },
+          "agentL3InviteDayLimitCount": {
+            "name": "Valid Invite Daily Limit Count",
+            "desc": "Maximum daily valid invite reward count per agent"
+          },
+          "agentL3InviteRewardAmount": {
+            "name": "Inviter Reward Amount",
+            "desc": "Reward amount for inviter per valid invite completion"
+          },
+          "agentL3InvitedRewardAmount": {
+            "name": "Invitee Reward Amount",
+            "desc": "Reward amount for invitee after completing valid invite requirements"
+          },
+          "agentL3InviteWashCode": {
+            "name": "Agent Reward Wash Code Multiplier",
+            "desc": "Set 0 for no wash code requirement"
+          },
+          "agentL3AutoApproveRankReward": {
+            "name": "Agent Rank Auto Approve Switch",
+            "desc": "When enabled, rank rewards will be automatically approved without manual review"
+          }
+        },
+        "agentLevel": {
+          "agentLevel": "Agent Level",
+          "levelConditions": "Level Conditions",
+          "teamTotalMembers": "Team Total Members",
+          "teamTotalValidBet": "Team Total Valid Bet",
+          "subordinateRechargeCommissionRate": "Downline Deposit Commission Rate (%)",
+          "subordinateBetCommissionRate": "Downline Bet Commission Rate (%)",
+          "directSubordinate": "Direct Downline",
+          "level2Subordinate": "Level 2 Downline",
+          "level3Subordinate": "Level 3 Downline",
+          "actions": "Actions"
+        },
+        "inviteReward": {
+          "title": "Invite Task Quantity Reward",
+          "validInviteCount": "Valid Invite Count",
+          "rewardAmount": "Reward Amount",
+          "actions": "Actions"
+        },
+        "delete": {
+          "confirmTitle": "Confirm Delete",
+          "confirmMessage": "Are you sure to delete this step reward?"
+        },
+        "modals": {
+          "editVipLevel": "Edit VIP Level Settings",
+          "addStepReward": "Add Step Reward"
+        }
+      },
+      "rules": {
+        "lastUpdateTime": "Last Update Time",
+        "operator": "Operator",
+        "buttons": {
+          "cancelEdit": "Cancel Edit",
+          "save": "Save",
+          "edit": "Edit",
+          "cancel": "Cancel",
+          "editShareContent": "Edit Share Content"
+        },
+        "shareContent": {
+          "title": "Share Content Editing",
+          "inviteShareText": "Invite Share Text",
+          "optionalFields": "Optional Fields",
+          "placeholder": "Please enter",
+          "previewEffect": "Preview Effect",
+          "inviteCode": "Invite Code",
+          "inviteLink": "Invite Link"
+        }
+      }
+    },
+    "rebateData": {
+      "title": "Rebate Data",
+      "form": {
+        "userId": "User ID",
+        "userIdPlaceholder": "Please enter User ID",
+        "memberId": "Member ID",
+        "memberIdPlaceholder": "Please enter Member ID",
+        "queryFullAgentLine": "Query Full Agent Line",
+        "relativeLevel": "Relative Level",
+        "absoluteLevel": "Absolute Level",
+        "levelPlaceholder": "Please select level",
+        "account": "Member Account",
+        "accountPlaceholder": "Please enter Member Account",
+        "rebateLevel": "Rebate Level",
+        "rebateLevelPlaceholder": "Please select Rebate Level",
+        "generalAgent": "General Agent",
+        "generalAgentPlaceholder": "Please select General Agent",
+        "date": "Date",
+        "datePlaceholder": "Please select date",
+        "reportDate": "Report Date",
+        "datePickerPlaceholder": "Please select date",
+        "teamCountMin": "Minimum Team Count",
+        "teamCountPlaceholder": "Please enter team count",
+        "teamRechargeMin": "Minimum Team Deposit",
+        "teamRechargePlaceholder": "Please enter team deposit amount",
+        "hierarchy": "Hierarchy",
+        "hierarchyPlaceholder": "Please select hierarchy"
+      },
+      "levels": {
+        "level1": "Level 1",
+        "level2": "Level 2",
+        "level3": "Level 3",
+        "level4": "Level 4",
+        "level5": "Level 5",
+        "level6": "Level 6"
+      },
+      "columns": {
+        "date": "Date",
+        "memberId": "Member ID",
+        "memberAccount": "Member Account",
+        "memberLevel": "Member Level",
+        "memberBetAmount": "Member Bet Amount",
+        "memberLossAmount": "Member Loss Amount",
+        "rebateRate": "Rebate Rate",
+        "rebateAmount": "Rebate Amount",
+        "rebateTime": "Rebate Time",
+        "teamRechargeCount": "Team Deposit Count",
+        "teamRechargeAmount": "Team Deposit Amount",
+        "teamValidBet": "Team Valid Bet",
+        "rebateLevel": "Rebate Level",
+        "lottery": "Lottery",
+        "electronic": "Electronic",
+        "video": "Video",
+        "sports": "Sports",
+        "chessCard": "Chess Card",
+        "validBet": "Valid Bet",
+        "calculatedRebateAmount": "Calculated Rebate Amount",
+        "issuedRebateAmount": "Issued Rebate Amount",
+        "issueTime": "Issue Time"
+      },
+      "summary": {
+        "totalRebateAmount": "Total Rebate Amount",
+        "totalBetAmount": "Total Bet Amount",
+        "totalLossAmount": "Total Loss Amount"
+      },
+      "messages": {
+        "selectGeneralAgent": "Please select General Agent first",
+        "pleaseEnterMemberId": "Please enter Member ID",
+        "pleaseSelectUser": "Please select user first"
+      },
+      "more": {
+        "title": "Rebate Information",
+        "backRebateTab": "Turnover Rebate",
+        "levelRebateTab": "Level Rebate Report"
+      },
+      "components": {
+        "backRebate": {
+          "form": {
+            "date": "Date",
+            "relativeLevel": "Relative Level"
+          },
+          "levels": {
+            "level1": "Level 1",
+            "level2": "Level 2",
+            "level3": "Level 3",
+            "level4": "Level 4",
+            "level5": "Level 5",
+            "level6": "Level 6"
+          },
+          "columns": {
+            "memberId": "Member ID",
+            "lotteryValidBet": "Lottery Valid Bet",
+            "electronicValidBet": "Electronic Valid Bet",
+            "videoValidBet": "Video Valid Bet",
+            "sportsValidBet": "Sports Valid Bet",
+            "chessCardValidBet": "Chess Card Valid Bet",
+            "availableCommission": "Available Commission"
+          },
+          "messages": {
+            "selectDate": "Please select date"
+          }
+        },
+        "levelRebate": {
+          "form": {
+            "date": "Date"
+          },
+          "columns": {
+            "level": "Level",
+            "rechargeCount": "Deposit Count",
+            "rechargeAmount": "Deposit Amount",
+            "lotteryBetRebate": "Lottery (Valid Bet | Rebate Amount)",
+            "electronicBetRebate": "Electronic (Valid Bet | Rebate Amount)",
+            "videoBetRebate": "Video (Valid Bet | Rebate Amount)",
+            "sportsBetRebate": "Sports (Valid Bet | Rebate Amount)",
+            "chessCardBetRebate": "Chess Card (Valid Bet | Rebate Amount)"
+          },
+          "messages": {
+            "selectDate": "Please select date"
+          }
+        }
+      }
+    },
+    "rebateLevel": {
+      "title": "Rebate Level Configuration",
+      "tabs": {
+        "levelConfig": "Level Configuration",
+        "rateConfig": "Rate Configuration",
+        "rebateConfig": "Rebate Level Configuration",
+        "rebateRateConfig": "Rebate Rate Configuration"
+      },
+      "rebateLevel": {
+        "history": {
+          "operationTime": "Operation Time",
+          "operator": "Operator",
+          "configValue": "Config Value"
+        },
+        "columns": {
+          "rebateLevel": "Rebate Level",
+          "childrenRechargeCount": "Team Daily Deposit Count",
+          "childrenRechargeAmount": "Team Daily Deposit Amount",
+          "childrenLotteryAmount": "Team Daily Game Amount",
+          "rebateLevelPeoples": "People Reaching Rebate Level",
+          "rechargePeoples": "People Meeting Deposit Count",
+          "rechargeAmountPeoples": "People Meeting Deposit Amount",
+          "gameBetAmountPeoples": "People Meeting Game Amount",
+          "remark": "Remark",
+          "lastUpdateTime": "Last Update Time",
+          "lastUpdateMan": "Last Update Person",
+          "actions": "Actions"
+        },
+        "modals": {
+          "addTitle": "Add Rebate Level",
+          "editTitle": "Edit Rebate Level L{level}"
+        },
+        "settings": {
+          "frontPopupRebate": "Frontend Popup Rebate",
+          "needRechargeRebate": "Need Deposit Rebate",
+          "frontPopupRebateDesc": "Whether to show rebate popup in frontend",
+          "needRechargeRebateDesc": "Whether deposit is required to get rebate",
+          "enable": "Enable",
+          "disable": "Disable"
+        },
+        "actions": {
+          "add": "Add",
+          "edit": "Edit",
+          "delete": "Delete"
+        }
+      },
+      "levelConfig": {
+        "columns": {
+          "level": "Level",
+          "rechargeCount": "Deposit Count",
+          "rechargeAmount": "Deposit Amount",
+          "gameAmount": "Game Amount",
+          "description": "Description",
+          "actions": "Actions"
+        },
+        "form": {
+          "rechargeCountPlaceholder": "Please enter team daily deposit count",
+          "rechargeAmountPlaceholder": "Please enter team daily deposit amount",
+          "gameAmountPlaceholder": "Please enter team daily game amount",
+          "descriptionPlaceholder": "Please enter description"
+        },
+        "actions": {
+          "add": "Add",
+          "edit": "Edit",
+          "delete": "Delete",
+          "save": "Save",
+          "cancel": "Cancel"
+        },
+        "modal": {
+          "addTitle": "Add Rebate Level",
+          "editTitle": "Edit Rebate Level",
+          "deleteConfirm": "Are you sure to delete this level configuration?",
+          "levelSetting": "Level Setting"
+        },
+        "messages": {
+          "addSuccess": "Added successfully",
+          "updateSuccess": "Updated successfully",
+          "deleteSuccess": "Deleted successfully"
+        },
+        "validation": {
+          "level": "Please select level",
+          "rechargeCount": "Please enter team daily deposit count",
+          "rechargeAmount": "Please enter team daily deposit amount",
+          "gameAmount": "Please enter team daily game amount"
+        },
+        "status": {
+          "enable": "Enable",
+          "disable": "Disable"
+        },
+        "empty": "No data"
+      },
+      "rebateRate": {
+        "alert": {
+          "title": "Rebate Configuration Notice",
+          "content": "1. Currently rebate rates only calculate agent data within 6 levels<br/>2. Rates for each rebate level can be configured directly. If not configured or set to 0, that level will not enjoy rebate rates<br/>3. To achieve the corresponding level rate, you must meet all 3 conditions of the corresponding rebate level<br/>4. For the following rate configuration, the sum of current 1-6 level game categories cannot exceed 5%<br/>5. The unit for rate configuration below is \" % \"<br/>"
+        },
+        "card": {
+          "levelRate": "Level Rate"
+        },
+        "columns": {
+          "level": "Level",
+          "lottery": "Lottery",
+          "electronic": "Electronic",
+          "video": "Live Video",
+          "sports": "Sports",
+          "chessCard": "Chess & Card"
+        },
+        "actions": {
+          "edit": "Edit",
+          "save": "Save",
+          "cancel": "Cancel"
+        },
+        "messages": {
+          "updateSuccess": "Updated successfully"
+        },
+        "empty": "No data"
+      },
+      "editRebateLevel": {
+        "labels": {
+          "rechargeCount": "Team Daily Deposit Count:",
+          "rechargeAmount": "Team Daily Deposit Amount:",
+          "gameAmount": "Team Daily Game Amount:",
+          "description": "Description:"
+        },
+        "validation": {
+          "remark": "Please enter remark content",
+          "rechargeCount": "Please enter team daily deposit count",
+          "rechargeAmount": "Please enter team daily deposit amount",
+          "gameAmount": "Please enter team daily game amount"
+        },
+        "actions": {
+          "cancel": "Cancel",
+          "save": "Save"
+        },
+        "success": "Modified successfully"
+      }
+    },
+    "review": {
+      "title": "Agent Review",
+      "columns": {
+        "userId": "User ID",
+        "parentId": "Parent ID",
+        "directSubordinates": "Direct Downlines",
+        "agentLevel": "Agent Level",
+        "noRechargeDays": "No Deposit Days",
+        "yesterdayCommission": "Yesterday Commission",
+        "totalBetAmount": "Total Bet Amount",
+        "operator": "Operator",
+        "rebateStatus": "Rebate Status"
+      },
+      "form": {
+        "labels": {
+          "userId": "User ID",
+          "minDays": "Minimum Days",
+          "rebateState": "Rebate State"
+        },
+        "placeholders": {
+          "userId": "Please enter user ID",
+          "minDays": "Please enter minimum days",
+          "rebateState": "Please select rebate state"
+        }
+      },
+      "actions": {
+        "setRebateLevel": "Set Rebate Level"
+      },
+      "status": {
+        "enable": "Enable",
+        "disable": "Disable"
+      },
+      "switchDialog": {
+        "title": "Switch Status",
+        "enableMessage": "Confirm to enable rebate status?",
+        "disableMessage": "Confirm to disable rebate status?"
+      },
+      "editRebate": {
+        "title": "Set Rebate Level",
+        "labels": {
+          "userId": "User ID",
+          "rebateLevel": "Rebate Level",
+          "rebateMode": "Rebate Mode"
+        },
+        "buttons": {
+          "cancel": "Cancel",
+          "save": "Save"
+        },
+        "success": "Modified successfully"
+      }
+    }
+  }
+}

@@ -1,0 +1,1110 @@
+{
+  "agent": {
+    "agentList": {
+      "title": "đại lý danh sách",
+      "columns": {
+        "userId": "ID thành viên",
+        "parentId": "cấp trên ID",
+        "generalAgentId": "Tổng đại lý ID",
+        "hierarchy": "Cấp tuyệt đối",
+        "firstChildCount": "trực tiếp tuyến dưới (số lượng)",
+        "childCount": "tất cả tuyến dưới (số lượng)",
+        "balance": "số dư",
+        "registerTime": "Thời gian đăng ký",
+        "lastLoginTime": "Thời gian đăng nhập cuối",
+        "rebateState": "Hoàn trả Thu tiền",
+        "summary": {
+          "totalRatio": "Tổng cộng Tỷ lệ",
+          "exceedMaxRatio": "Đã vượt tỷ lệ tối đa 100%, vui lòng điều chỉnh lại tỷ lệ",
+          "rankType": "Loại xếp hạng",
+          "rankSuffix": "Xếp hạng"
+        },
+        "rebateMode": "Chế độ hoàn trả",
+        "rebateLevel": "Cấp hoàn trả đặc biệt",
+        "rebateSetTime": "Thời gian thiết lập hoàn trả đặc biệt"
+      },
+      "form": {
+        "userIdPlaceholder": "Vui lòng nhập ID thành viên",
+        "queryRebateAgent": "Truy vấn Hoàn trả Đại lý tuyến",
+        "relativeLevel": "Cấp tương đối",
+        "absoluteLevel": "Cấp tuyệt đối",
+        "levelPlaceholder": "Vui lòng chọn cấp",
+        "includeSelfAndParent": "Danh sách bản thân và tất cả cấp trên",
+        "rebateMode": "Chế độ hoàn trả",
+        "rebateModePlaceholder": "Vui lòng chọn chế độ hoàn trả"
+      },
+      "actions": {
+        "removeAgent": "Xóa quan hệ đại lý",
+        "bindInvite": "Liên kết mã mời",
+        "specialRebate": "Cài đặt hoàn trả đặc biệt",
+        "export": "xuất"
+      },
+      "status": {
+        "enable": "bật",
+        "disable": "tắt",
+        "none": "Không có"
+      },
+      "messages": {
+        "enterUserId": "Vui lòng nhập ID thành viên",
+        "enterInviteCode": "Vui lòng nhập mã mời đầu tiên",
+        "bindSuccess": "mã mời liên kết thành công",
+        "removeConfirm": "Xác nhận xóa quan hệ đại lý?",
+        "removeSuccess": "Xóa quan hệ đại lý thành công",
+        "updateSuccess": "Cập nhật thành công",
+        "exportFailed": "xuất thất bại"
+      },
+      "dialog": {
+        "bindInviteTitle": "Liên kết mã mời",
+        "inviteCode": "Mã mời",
+        "inviteCodePlaceholder": "Vui lòng nhập mã mời",
+        "specialRebateTitle": "Cài đặt hoàn trả đặc biệt",
+        "memberIdLabel": "ID thành viên",
+        "rebateModeLabel": "Chế độ hoàn trả",
+        "rebateLevelLabel": "Hoàn trả Cấp",
+        "confirm": "xác nhận",
+        "cancel": "hủy",
+        "save": "lưu",
+        "tip": "Gợi ý"
+      },
+      "export": {
+        "fileName": "đại lý danh sách"
+      },
+      "levels": {
+        "level1": "Cấp 1",
+        "level2": "Cấp 2",
+        "level3": "Cấp 3",
+        "level4": "Cấp 4",
+        "level5": "Cấp 5",
+        "level6": "Cấp 6"
+      }
+    },
+    "agentReport": {
+      "title": "đại lý báo cáo",
+      "columns": {
+        "userId": "ID thành viên",
+        "parentId": "cấp trên ID",
+        "generalAgentId": "Tổng đại lý ID",
+        "hierarchy": "Cấp tuyệt đối",
+        "betAmount": "Số tiền cược",
+        "winAmount": "Số tiền thắng",
+        "platformWinLoss": "Nền tảng Thắng/Thua",
+        "activityRewards": "hoạt động",
+        "recharges": "nạp tiền",
+        "rechargesAmount": "số tiền",
+        "rechargesCount": "số lần",
+        "withdraw": "rút tiền",
+        "withdrawAmount": "số tiền",
+        "withdrawCount": "số lần"
+      },
+      "form": {
+        "selectQueryId": "Chọn Truy vấn ID",
+        "userId": "ID thành viên",
+        "parentId": "cấp trên ID",
+        "generalAgentId": "Tổng đại lý ID",
+        "userIdPlaceholder": "Vui lòng nhập ID thành viên",
+        "queryAgentLine": "Truy vấn toàn tuyến đại lý",
+        "relativeLevel": "Cấp tương đối",
+        "absoluteLevel": "Cấp tuyệt đối",
+        "levelPlaceholder": "Vui lòng chọn cấp",
+        "timeRange": "Khoảng thời gian",
+        "day": "ngày",
+        "month": "tháng"
+      },
+      "actions": {
+        "export": "xuất"
+      },
+      "status": {
+        "none": "Không có",
+        "total": "Tổng cộng"
+      },
+      "messages": {
+        "enterUserId": "Vui lòng nhập ID thành viên",
+        "exportFailed": "xuất thất bại"
+      },
+      "export": {
+        "fileName": "đại lý báo cáo"
+      },
+      "levels": {
+        "level1": "Cấp 1",
+        "level2": "Cấp 2",
+        "level3": "Cấp 3",
+        "level4": "Cấp 4",
+        "level5": "Cấp 5",
+        "level6": "Cấp 6"
+      }
+    },
+    "changeLine": {
+      "title": "Đại lý Chuyển Bản ghi",
+      "columns": {
+        "userId": "ID thành viên",
+        "oldParentId": "Old Cấp trên ID",
+        "oldHierarchy": "Old Cấp",
+        "newParentId": "Mới Cấp trên ID",
+        "newHierarchy": "Mới Cấp",
+        "teamUserCount": "Số người dùng trong đội khi chuyển",
+        "transferBeginTime": "Thời gian bắt đầu chuyển",
+        "transferEndTime": "Thời gian kết thúc chuyển",
+        "state": "trạng thái"
+      },
+      "form": {
+        "userId": "ID thành viên",
+        "userIdPlaceholder": "Vui lòng nhập ID thành viên",
+        "selectTime": "Vui lòng chọn thời gian",
+        "transferBeginTime": "Thời gian bắt đầu chuyển",
+        "transferEndTime": "Thời gian kết thúc chuyển"
+      },
+      "actions": {
+        "export": "xuất"
+      },
+      "status": {
+        "success": "thành công",
+        "processing": "Đang xử lý",
+        "failed": "thất bại"
+      },
+      "export": {
+        "fileName": "Đại lý Chuyển Bản ghi"
+      }
+    },
+    "newagent": {
+      "title": "Mới Đại lý",
+      "tabs": {
+        "inviteManage": "Quản lý mời",
+        "teamManage": "đội nhóm quản lý",
+        "rewardManage": "Quản lý thưởng",
+        "rebateData": "hoa hồng dữ liệu",
+        "rankAudit": "Xếp hạng Kiểm duyệt",
+        "rankManage": "Quản lý xếp hạng",
+        "agentConfig": "Cấp 3 Đại lý Cấu hình",
+        "rules": "Đại lý Quy tắc Cấu hình"
+      },
+      "invite": {
+        "columns": {
+          "inviterId": "ID người mời",
+          "inviterUserId": "ID người mời",
+          "inviteCode": "Mã mời",
+          "teamLevel": "Cấp đội nhóm",
+          "totalRewardAmount": "Tổng tiền thưởng",
+          "inviteRewardAmount": "Tiền thưởng mời thành công",
+          "inviteRewardUserCount": "Số người dùng được thưởng thành công",
+          "inviteTaskRewardAmount": "Tiền thưởng nhiệm vụ mời",
+          "agentL1": "Cấp 1 Đại lý",
+          "agentL2": "Cấp 2 Đại lý",
+          "agentL3": "Cấp 3 Đại lý",
+          "agentDetail1": "Cấp 1 Đại lý",
+          "agentDetail2": "Cấp 2 Đại lý",
+          "agentDetail3": "Cấp 3 Đại lý",
+          "inviteRegisterCount": "Số lượt đăng ký được mời",
+          "inviteRegisterUserCount": "Số người dùng đăng ký được mời",
+          "inviteFirstRechargeCount": "Số lần nạp đầu của người được mời",
+          "inviteTopRechargeUserCount": "Số người được mời đã nạp đầu",
+          "validInviteCount": "Số lời mời hợp lệ",
+          "inviteUserCount": "Số người dùng mời hợp lệ",
+          "rechargeAmount": "Số tiền nạp",
+          "rechargeCommission": "nạp tiền hoa hồng",
+          "rechargeCommissionAmount": "nạp tiền hoa hồng",
+          "withdrawAmount": "Số tiền rút",
+          "betCommission": "cược hoa hồng",
+          "betCommissionAmount": "cược hoa hồng",
+          "validBetAmount": "Cược hợp lệ",
+          "betAmount": "Cược hợp lệ"
+        },
+        "form": {
+          "inviterId": "ID người mời",
+          "inviteCode": "Mã mời",
+          "registerTime": "Thời gian đăng ký",
+          "inviterIdPlaceholder": "Vui lòng nhập ID người mời",
+          "inviteCodePlaceholder": "Vui lòng nhập mã mời",
+          "today": "Hôm nay",
+          "yesterday": "Hôm qua",
+          "thisWeek": "Tuần này",
+          "lastWeek": "Tuần trước",
+          "thisMonth": "Tháng này",
+          "lastMonth": "Tháng trước"
+        },
+        "messages": {
+          "pleaseEnterInviterIdOrCode": "Vui lòng nhập ID người mời hoặc mã mời"
+        },
+        "actions": {
+          "export": "xuất",
+          "exportFileName": "Quản lý mời"
+        }
+      },
+      "team": {
+        "columns": {
+          "memberId": "ID thành viên",
+          "userId": "ID thành viên",
+          "agentLevel": "Đại lý Cấp",
+          "teamLevel": "Đại lý Cấp",
+          "teamMemberCount": "Số thành viên đội nhóm",
+          "childCount": "Số đội nhóm",
+          "directSubordinates": "trực tiếp tuyến dưới",
+          "teamTotalRecharge": "Tổng nạp của đội nhóm",
+          "teamValidBet": "Cược hợp lệ của đội nhóm",
+          "teamProfitLoss": "Lãi/lỗ của đội nhóm",
+          "rechargeAmount": "Số tiền nạp",
+          "withdrawAmount": "Số tiền rút",
+          "betAmount": "Số tiền cược",
+          "cumulativeCommission": "Hoa hồng lũy kế",
+          "agentCommissionAmount": "đại lý hoa hồng",
+          "status": "trạng thái",
+          "registerTime": "Thời gian đăng ký",
+          "lastLoginTime": "Thời gian đăng nhập cuối"
+        },
+        "form": {
+          "memberId": "ID thành viên",
+          "memberIdPlaceholder": "Vui lòng nhập ID thành viên",
+          "agentLevel": "Đại lý Cấp",
+          "agentLevelPlaceholder": "Vui lòng chọn Đại lý Cấp",
+          "memberStatus": "thành viên trạng thái",
+          "memberStatusPlaceholder": "Vui lòng chọn thành viên trạng thái",
+          "registerTime": "Thời gian đăng ký"
+        },
+        "actions": {
+          "export": "xuất",
+          "exportFileName": "đội nhóm quản lý"
+        },
+        "status": {
+          "unknown": "Không xác định"
+        },
+        "levels": {
+          "l0": "L0",
+          "l1": "L1",
+          "l2": "L2",
+          "l3": "L3",
+          "unknown": "Không xác định"
+        }
+      },
+      "reward": {
+        "columns": {
+          "issueTime": "Thời gian kỳ",
+          "memberId": "ID thành viên",
+          "rewardType": "Loại thưởng",
+          "rewardAmount": "Số tiền thưởng"
+        },
+        "form": {
+          "memberId": "ID thành viên",
+          "memberIdPlaceholder": "Vui lòng nhập ID thành viên",
+          "rewardType": "Loại thưởng",
+          "rewardTypePlaceholder": "Vui lòng chọn loại thưởng",
+          "issueTime": "Thời gian kỳ"
+        },
+        "actions": {
+          "export": "xuất",
+          "exportFileName": "Quản lý thưởng"
+        }
+      },
+      "rebateData": {
+        "title": "đại lý hoa hồng dữ liệu",
+        "columns": {
+          "date": "ngày",
+          "memberId": "ID thành viên",
+          "rebateLevel": "Hoàn trả Cấp",
+          "directSubordinateRecharge": "trực tiếp tuyến dưới nạp tiền",
+          "directSubordinateBet": "trực tiếp tuyến dưới cược",
+          "level2SubordinateBet": "Cược của tuyến dưới cấp 2",
+          "level3SubordinateBet": "Cược của tuyến dưới cấp 3",
+          "peopleCount": "Số người",
+          "amount": "số tiền",
+          "validBet": "Cược hợp lệ",
+          "rebate": "hoa hồng",
+          "totalPeopleCount": "Tổng số người",
+          "totalValidBet": "Tổng cược hợp lệ",
+          "totalRebate": "Tổng cộng Hoàn trả"
+        },
+        "form": {
+          "memberId": "ID thành viên",
+          "memberIdPlaceholder": "Vui lòng nhập ID thành viên",
+          "queryFullAgentLine": "Truy vấn toàn tuyến đại lý",
+          "relativeLevel": "Cấp tương đối",
+          "absoluteLevel": "Cấp tuyệt đối",
+          "levelPlaceholder": "Vui lòng chọn cấp",
+          "rebateLevel": "Hoàn trả Cấp",
+          "rebateLevelPlaceholder": "Vui lòng chọn cấp hoàn trả",
+          "reportDate": "ngày",
+          "datePickerPlaceholder": "Vui lòng chọn ngày",
+          "teamCountMin": "Số đội nhóm >=",
+          "teamCountPlaceholder": "Vui lòng nhập số đội nhóm",
+          "teamRechargeMin": "Số tiền nạp của đội nhóm >=",
+          "teamRechargePlaceholder": "Số tiền nạp của đội nhóm",
+          "directSubordinateRechargeAmount": "trực tiếp tuyến dưới Số tiền nạp >=",
+          "rechargeAmountPlaceholder": "Số tiền nạp",
+          "filterCondition": "Bộ lọc Điều kiện >=",
+          "filterTypePlaceholder": "Vui lòng chọn loại kích hoạt",
+          "directSubordinateBet": "trực tiếp tuyến dưới cược",
+          "level2SubordinateBet": "Cược của tuyến dưới cấp 2",
+          "level3SubordinateBet": "Cược của tuyến dưới cấp 3",
+          "minValuePlaceholder": "Tối thiểu Giá trị"
+        },
+        "messages": {
+          "pleaseEnterMemberId": "Vui lòng nhập ID thành viên",
+          "pleaseSelectUser": "Vui lòng chọn một người dùng để truy vấn"
+        },
+        "levels": {
+          "level1": "Cấp 1",
+          "level2": "Cấp 2",
+          "level3": "Cấp 3",
+          "level4": "Cấp 4",
+          "level5": "Cấp 5",
+          "level6": "Cấp 6"
+        },
+        "actions": {
+          "export": "xuất",
+          "exportFileName": "Hoàn trả Dữ liệu Chi tiết"
+        }
+      },
+      "rebateDataDetail": {
+        "pageTitle": "Đại lý {userId} Hoàn trả Dữ liệu Chi tiết",
+        "columns": {
+          "relativeLevel": "Cấp tương đối",
+          "rechargeAmount": "Số tiền nạp",
+          "rechargeCommission": "nạp tiền hoa hồng",
+          "betCommission": "cược hoa hồng",
+          "totalCommission": "Tổng cộng Hoa hồng"
+        },
+        "form": {
+          "date": "ngày",
+          "relativeLevel": "Cấp tương đối",
+          "relativeLevelPlaceholder": "Vui lòng chọn cấp tương đối",
+          "level1": "Cấp 1",
+          "level2": "Cấp 2",
+          "level3": "Cấp 3"
+        },
+        "actions": {
+          "export": "xuất",
+          "exportFileName": "Hoàn trả Dữ liệu Chi tiết"
+        }
+      },
+      "rankAudit": {
+        "columns": {
+          "auditId": "duyệt ID",
+          "memberId": "ID thành viên",
+          "userId": "ID thành viên",
+          "rankType": "Loại xếp hạng",
+          "auditStatus": "duyệt trạng thái",
+          "createTime": "Thời gian tạo",
+          "directMemberId": "trực tiếp ID thành viên",
+          "memberRegisterTime": "Thời gian đăng ký của thành viên",
+          "dataStatisticsTime": "dữ liệu thống kê thời gian",
+          "gameVendor": "Nhà cung cấp trò chơi",
+          "subGame": "trò chơi con",
+          "betAmount": "Số tiền cược",
+          "winAmount": "Số tiền thắng",
+          "validBet": "Cược hợp lệ",
+          "time": "thời gian",
+          "rank": "Hạng",
+          "newDirectValidBet": "thêm trực tiếp Cược hợp lệ",
+          "rewardAmount": "Số tiền thưởng",
+          "applyTime": "Áp dụng thời gian",
+          "status": "trạng thái",
+          "operator": "Người thao tác",
+          "operationTime": "Thời gian thao tác"
+        },
+        "form": {
+          "memberId": "ID thành viên",
+          "memberIdPlaceholder": "Vui lòng nhập ID thành viên",
+          "userId": "ID thành viên",
+          "userIdPlaceholder": "Vui lòng nhập ID thành viên",
+          "auditStatus": "duyệt trạng thái",
+          "auditStatusPlaceholder": "Vui lòng chọn duyệt trạng thái",
+          "rankTime": "Xếp hạng thời gian",
+          "auditResult": "Duyệt kết quả",
+          "rejectReason": "Lý do từ chối"
+        },
+        "actions": {
+          "audit": "duyệt"
+        },
+        "modals": {
+          "auditTitle": "duyệt thao tác"
+        },
+        "status": {
+          "approved": "thông qua",
+          "rejected": "từ chối"
+        },
+        "details": {
+          "memberId": "ID thành viên",
+          "memberRegisterTime": "Thời gian đăng ký của thành viên",
+          "periodRange": "Khoảng kỳ",
+          "currentRank": "Hiện tại Xếp hạng",
+          "newDirectValidBet": "thêm trực tiếp Cược hợp lệ",
+          "rewardAmount": "Số tiền thưởng",
+          "applyTime": "Áp dụng thời gian"
+        },
+        "tabs": {
+          "auditOperation": "duyệt thao tác",
+          "directMemberTransactionRecord": "Bản ghi giao dịch thành viên trực tiếp",
+          "rewardRecord": "Bản ghi thưởng"
+        },
+        "messages": {
+          "auditSuccess": "duyệt thành công",
+          "pleaseEnterRejectReason": "Vui lòng nhập lý do từ chối"
+        }
+      },
+      "rankManage": {
+        "pool": {
+          "currentPoolAmount": "Số tiền quỹ hiện tại",
+          "add": "Thêm",
+          "reduce": "Giảm",
+          "operationRecord": "thao tác bản ghi",
+          "addPoolAmount": "Thêm số tiền quỹ",
+          "reducePoolAmount": "Giảm số tiền quỹ",
+          "columns": {
+            "operationType": "thao tác loại",
+            "amount": "thao tác số tiền",
+            "afterAmount": "Số tiền Sau thao tác",
+            "remark": "Thao tác Mô tả",
+            "creator": "Người thao tác",
+            "createTime": "Thời gian thao tác"
+          },
+          "operationTypes": {
+            "add": "Thêm",
+            "reduce": "Giảm"
+          }
+        },
+        "amount": {
+          "operationAmount": "thao tác số tiền",
+          "operationRemark": "Thao tác Mô tả",
+          "operationAmountPlaceholder": "Vui lòng nhập thao tác số tiền",
+          "operationRemarkPlaceholder": "Vui lòng nhập thao tác mô tả",
+          "cancel": "hủy",
+          "save": "lưu",
+          "operationSuccess": "Thao tác thành công"
+        },
+        "queryModal": {
+          "memberFlowRecord": "Bản ghi dòng thành viên trực tiếp",
+          "rewardRecord": "Bản ghi thưởng",
+          "memberId": "ID thành viên",
+          "rankType": "Loại xếp hạng",
+          "periodRange": "Khoảng kỳ",
+          "currentRank": "Hiện tại Xếp hạng",
+          "newDirectValidBet": "thêm trực tiếp Cược hợp lệ",
+          "rewardAmount": "Số tiền thưởng",
+          "cancel": "hủy",
+          "columns": {
+            "directMemberId": "trực tiếp ID thành viên",
+            "memberRegisterTime": "Thời gian đăng ký của thành viên",
+            "dataStatisticsTime": "dữ liệu thống kê thời gian",
+            "gameVendor": "Nhà cung cấp trò chơi",
+            "subGame": "trò chơi con",
+            "betAmount": "Số tiền cược",
+            "winAmount": "Số tiền thắng",
+            "validBet": "Cược hợp lệ",
+            "time": "thời gian",
+            "rankType": "Loại xếp hạng",
+            "rank": "Hạng",
+            "rewardAmount": "Số tiền thưởng",
+            "status": "trạng thái"
+          }
+        },
+        "form": {
+          "memberId": "ID thành viên",
+          "memberIdPlaceholder": "Vui lòng nhập ID thành viên",
+          "rankPeriod": "Hạng Kỳ",
+          "currentPeriod": "Kỳ hiện tại",
+          "previousPeriod": "Kỳ trước"
+        },
+        "columns": {
+          "memberId": "ID thành viên",
+          "rankType": "Loại xếp hạng",
+          "periodRange": "Khoảng kỳ",
+          "rank": "Hạng",
+          "validBetAmount": "Cược hợp lệ",
+          "bonusAmount": "Số tiền thưởng",
+          "updateTime": "Thời gian cập nhật"
+        },
+        "modals": {
+          "poolOperation": "Thao tác quỹ",
+          "memberRankDetails": "Thành viên Xếp hạng Chi tiết"
+        },
+        "actions": {
+          "poolOperation": "Thao tác quỹ",
+          "details": "Chi tiết"
+        }
+      },
+      "components": {
+        "addInv": {
+          "form": {
+            "validInviteCount": "Số lời mời hợp lệ",
+            "rewardAmount": "Số tiền thưởng"
+          },
+          "messages": {
+            "enterValidInviteCount": "Vui lòng nhập số lời mời hợp lệ",
+            "enterRewardAmount": "Vui lòng nhập số tiền thưởng",
+            "saveSuccess": "Lưu thành công",
+            "saveFailed": "Lưu thất bại, vui lòng thử lại sau"
+          }
+        },
+        "inviteeDetail": {
+          "title": "người được mời Chi tiết",
+          "columns": {
+            "inviteeId": "ID người được mời",
+            "inviteCode": "Mã mời",
+            "registerTime": "Thời gian đăng ký",
+            "registerIp": "IP đăng ký",
+            "firstRechargeTime": "Thời gian nạp đầu",
+            "isValidInvite": "Lời mời hợp lệ",
+            "totalRechargeAmount": "Tổng tiền nạp",
+            "totalWithdrawAmount": "Tổng tiền rút",
+            "totalBalance": "Tổng số dư",
+            "parentAgentId": "Đại lý cấp trên ID",
+            "parentAgentIdL2": "Đại lý cấp trên ID L2",
+            "parentAgentIdL3": "Đại lý cấp trên ID L3"
+          },
+          "form": {
+            "inviteeId": "ID người được mời",
+            "inviteeIdPlaceholder": "Vui lòng nhập ID người được mời",
+            "agentId": "Đại lý ID",
+            "agentIdPlaceholder": "Vui lòng nhập đại lý ID",
+            "inviteCode": "Mã mời",
+            "inviteCodePlaceholder": "Vui lòng nhập mã mời",
+            "date": "ngày"
+          },
+          "actions": {
+            "export": "xuất",
+            "exportFileName": "người được mời Chi tiết"
+          },
+          "messages": {
+            "pleaseEnterIdToQuery": "Vui lòng nhập người được mời ID hoặc đại lý ID để truy vấn"
+          }
+        },
+        "editlvConfig": {
+          "levelConditions": "Điều kiện cấp",
+          "teamTotalMembers": "Tổng thành viên đội",
+          "teamTotalValidBet": "Tổng cược hợp lệ của đội nhóm",
+          "subordinateRechargeCommissionRate": "Tỷ lệ hoa hồng nạp tiền tuyến dưới (%)",
+          "subordinateBetCommissionRate": "Tỷ lệ hoa hồng cược tuyến dưới (%)",
+          "directSubordinate": "trực tiếp tuyến dưới",
+          "level2Subordinate": "Cấp 2 Tuyến dưới",
+          "level3Subordinate": "Cấp 3 Tuyến dưới",
+          "messages": {
+            "saveSuccess": "Lưu thành công",
+            "saveFailed": "Lưu thất bại, vui lòng thử lại sau"
+          }
+        },
+        "rank": {
+          "title": "Cấu hình thưởng xếp hạng đại lý (dòng thành viên mới đăng ký hằng ngày)",
+          "columns": {
+            "effectiveDate": "Hiệu lực ngày",
+            "rankType": "Loại xếp hạng",
+            "prizePoolRatio": "Tỷ lệ quỹ thưởng% (quy tắc nội bộ)",
+            "prizePoolRatioShow": "Tỷ lệ quỹ thưởng% (hiển thị bên ngoài)",
+            "minValidBetAmount": "Cược hợp lệ tối thiểu để xếp hạng",
+            "initialGoldPool": "Quỹ vàng ban đầu",
+            "maxRank": "Hiệu lực và xếp hạng hiển thị",
+            "state": "trạng thái",
+            "actions": "thao tác"
+          },
+          "rankTypes": {
+            "daily": "Hằng ngày",
+            "weekly": "Hằng tuần",
+            "monthly": "Hằng tháng"
+          },
+          "actions": {
+            "edit": "sửa",
+            "distribute": "Phân phối giải thưởng"
+          },
+          "dialog": {
+            "title": "Thông báo",
+            "confirm": "Xác nhận",
+            "cancel": "hủy"
+          },
+          "modals": {
+            "editConfig": "Sửa Thưởng Cấu hình",
+            "distributeConfig": "Phân phối giải thưởng cài đặt"
+          },
+          "messages": {
+            "confirmOpen": "Bạn có chắc muốn bật xếp hạng {rankType}? Tính năng sẽ có hiệu lực vào ngày tiếp theo sau khi bật.",
+            "confirmClose": "Bạn có chắc muốn tắt {rankType} xếp hạng?",
+            "operationSuccess": "Thao tác thành công",
+            "operationFailed": "Thao tác thất bại",
+            "getRankListFailed": "Không thể lấy danh sách xếp hạng"
+          }
+        },
+        "rankDistributeModal": {
+          "table": {
+            "title": "Tỷ lệ xếp hạng thời gian thực",
+            "columns": {
+              "index": "Chỉ mục",
+              "startRank": "Hạng bắt đầu",
+              "endRank": "Hạng kết thúc",
+              "rankRatio": "Tỷ lệ trúng thưởng (%)",
+              "actions": "thao tác"
+            }
+          },
+          "buttons": {
+            "batchImport": "Nhập hàng loạt cấu hình tỷ lệ thưởng xếp hạng",
+            "exportConfig": "Xuất cấu hình tỷ lệ thưởng xếp hạng",
+            "downloadTemplate": "Tải xuống mẫu",
+            "cancel": "hủy",
+            "save": "lưu"
+          },
+          "summary": {
+            "totalRatio": "Tổng cộng Tỷ lệ",
+            "exceedMaxRatio": "Đã vượt tỷ lệ tối đa 100%, vui lòng điều chỉnh lại tỷ lệ",
+            "rankType": "Loại xếp hạng",
+            "rankSuffix": "Xếp hạng"
+          },
+          "export": {
+            "fileName": "Cấu hình tỷ lệ xếp hạng thời gian thực"
+          },
+          "messages": {
+            "importSuccess": "nhập thành công",
+            "importFailed": "nhập thất bại",
+            "updateSuccess": "Cập nhật thành công"
+          }
+        },
+        "rankEditModal": {
+          "form": {
+            "rankType": "Loại xếp hạng",
+            "prizePoolRatio": "Tỷ lệ quỹ thưởng% (quy tắc nội bộ)",
+            "prizePoolRatioShow": "Tỷ lệ quỹ thưởng% (hiển thị bên ngoài)",
+            "minValidBetAmount": "Cược hợp lệ tối thiểu để xếp hạng",
+            "initialGoldPool": "Quỹ vàng ban đầu",
+            "maxRank": "Hiệu lực và xếp hạng hiển thị"
+          },
+          "validation": {
+            "prizePoolRatioRequired": "Tỷ lệ quỹ thưởng không được để trống",
+            "minValidBetAmountRequired": "Số tiền cược hợp lệ tối thiểu để xếp hạng không được để trống",
+            "initialGoldPoolRequired": "Ban đầu quỹ vàng không được để trống",
+            "maxRankRequired": "Hiệu lực và xếp hạng không được để trống"
+          },
+          "buttons": {
+            "cancel": "hủy",
+            "confirm": "xác nhận"
+          },
+          "messages": {
+            "editSuccess": "Sửa thành công"
+          }
+        }
+      },
+      "config3": {
+        "buttons": {
+          "cancel": "hủy",
+          "confirm": "Xác nhận",
+          "save": "lưu",
+          "edit": "sửa",
+          "delete": "xóa"
+        },
+        "messages": {
+          "operationSuccess": "Thao tác thành công",
+          "saveSuccess": "Lưu thành công",
+          "deleteSuccess": "Xóa thành công"
+        },
+        "externalLink": {
+          "title": "Cấu hình liên kết bên ngoài",
+          "sort": "Sắp xếp",
+          "icon": "Biểu tượng liên kết bên ngoài",
+          "enabled": "Có bật hay không",
+          "buttonText": "Nội dung nút",
+          "jumpUrl": "URL chuyển hướng",
+          "buttonTextPlaceholder": "Vui lòng nhập Nội dung nút (tùy chọn)",
+          "jumpUrlPlaceholder": "Vui lòng nhập URL chuyển hướng",
+          "uploadImageWarning": "Vui lòng tải lên hình ảnh liên kết ngoài",
+          "jumpUrlWarning": "Vui lòng nhập URL chuyển hướng"
+        },
+        "operationLog": {
+          "operationTime": "Thời gian thao tác",
+          "operator": "Người thao tác",
+          "configValue": "Cấu hình Giá trị (Old -> Mới)"
+        },
+        "switch": {
+          "enable": "bật",
+          "disable": "tắt"
+        },
+        "dialog": {
+          "confirmOperation": "xác nhận thao tác",
+          "confirmMessage": "Bạn có chắc muốn {action} {name}?"
+        },
+        "configItems": {
+          "agentL3InviteRechargeAmount": {
+            "name": "Đại lý Lời mời hợp lệ Số tiền nạp",
+            "desc": "Hội viên phải nạp số tiền này mới được tính là lời mời hợp lệ (đồng thời phải đạt cược hợp lệ)"
+          },
+          "agentL3InviteBetAmount": {
+            "name": "Đại lý Lời mời hợp lệ Số tiền cược",
+            "desc": "Hội viên phải có cược hợp lệ đạt số tiền này mới được tính là lời mời hợp lệ (đồng thời phải nạp hợp lệ)"
+          },
+          "agentL3InviteTotalLimitCount": {
+            "name": "Tổng giới hạn số thưởng lời mời hợp lệ",
+            "desc": "Tổng số thưởng lời mời hợp lệ tối đa cho mỗi đại lý"
+          },
+          "agentL3InviteDayLimitCount": {
+            "name": "Giới hạn số thưởng lời mời hợp lệ hằng ngày",
+            "desc": "Số thưởng lời mời hợp lệ hằng ngày tối đa cho mỗi đại lý"
+          },
+          "agentL3InviteRewardAmount": {
+            "name": "Số tiền thưởng cho người mời",
+            "desc": "Số tiền thưởng cho người mời sau mỗi lời mời hợp lệ hoàn tất"
+          },
+          "agentL3InvitedRewardAmount": {
+            "name": "Số tiền thưởng cho người được mời",
+            "desc": "Số tiền thưởng cho người được mời sau khi hoàn tất yêu cầu lời mời hợp lệ"
+          },
+          "agentL3InviteWashCode": {
+            "name": "Hệ số vòng cược thưởng đại lý",
+            "desc": "Đặt 0 nếu không yêu cầu vòng cược"
+          },
+          "agentL3AutoApproveRankReward": {
+            "name": "Công tắc tự động duyệt thưởng hạng đại lý",
+            "desc": "Khi đã bật, thưởng xếp hạng sẽ được tự động phê duyệt không có thủ công xét duyệt"
+          }
+        },
+        "agentLevel": {
+          "agentLevel": "Đại lý Cấp",
+          "levelConditions": "Điều kiện cấp",
+          "teamTotalMembers": "Tổng thành viên đội",
+          "teamTotalValidBet": "Tổng cược hợp lệ của đội nhóm",
+          "subordinateRechargeCommissionRate": "Tuyến dưới Nạp tiền Hoa hồng Tỷ lệ (%)",
+          "subordinateBetCommissionRate": "Tỷ lệ hoa hồng cược tuyến dưới (%)",
+          "directSubordinate": "trực tiếp tuyến dưới",
+          "level2Subordinate": "Cấp 2 Tuyến dưới",
+          "level3Subordinate": "Cấp 3 Tuyến dưới",
+          "actions": "thao tác"
+        },
+        "inviteReward": {
+          "title": "Thưởng số lượng nhiệm vụ mời",
+          "validInviteCount": "Số lời mời hợp lệ",
+          "rewardAmount": "Số tiền thưởng",
+          "actions": "thao tác"
+        },
+        "delete": {
+          "confirmTitle": "Xác nhận xóa",
+          "confirmMessage": "Bạn có chắc muốn xóa thưởng bước này?"
+        },
+        "modals": {
+          "editVipLevel": "sửa Cấp VIP cài đặt",
+          "addStepReward": "Thêm thưởng bước"
+        }
+      },
+      "rules": {
+        "lastUpdateTime": "Thời gian cập nhật cuối",
+        "operator": "Người thao tác",
+        "buttons": {
+          "cancelEdit": "hủy sửa",
+          "save": "lưu",
+          "edit": "sửa",
+          "cancel": "hủy",
+          "editShareContent": "Sửa nội dung chia sẻ"
+        },
+        "shareContent": {
+          "title": "Đang chỉnh sửa nội dung chia sẻ",
+          "inviteShareText": "Văn bản chia sẻ lời mời",
+          "optionalFields": "Tùy chọn Trường",
+          "placeholder": "Vui lòng nhập",
+          "previewEffect": "Xem trước hiệu lực",
+          "inviteCode": "Mã mời",
+          "inviteLink": "Liên kết mời"
+        }
+      }
+    },
+    "rebateData": {
+      "title": "hoa hồng dữ liệu",
+      "form": {
+        "userId": "ID thành viên",
+        "userIdPlaceholder": "Vui lòng nhập ID thành viên",
+        "memberId": "ID thành viên",
+        "memberIdPlaceholder": "Vui lòng nhập ID thành viên",
+        "queryFullAgentLine": "Truy vấn toàn tuyến đại lý",
+        "relativeLevel": "Cấp tương đối",
+        "absoluteLevel": "Cấp tuyệt đối",
+        "levelPlaceholder": "Vui lòng chọn cấp",
+        "account": "Tài khoản thành viên",
+        "accountPlaceholder": "Vui lòng nhập Tài khoản thành viên",
+        "rebateLevel": "Hoàn trả Cấp",
+        "rebateLevelPlaceholder": "Vui lòng chọn cấp hoàn trả",
+        "generalAgent": "Tổng đại lý",
+        "generalAgentPlaceholder": "Vui lòng chọn Tổng đại lý",
+        "date": "ngày",
+        "datePlaceholder": "Vui lòng chọn ngày",
+        "reportDate": "Báo cáo ngày",
+        "datePickerPlaceholder": "Vui lòng chọn ngày",
+        "teamCountMin": "Số đội nhóm tối thiểu",
+        "teamCountPlaceholder": "Vui lòng nhập số đội nhóm",
+        "teamRechargeMin": "Nạp tiền đội nhóm tối thiểu",
+        "teamRechargePlaceholder": "Vui lòng nhập số tiền nạp của đội nhóm",
+        "hierarchy": "cấp",
+        "hierarchyPlaceholder": "Vui lòng chọn cấp"
+      },
+      "levels": {
+        "level1": "Cấp 1",
+        "level2": "Cấp 2",
+        "level3": "Cấp 3",
+        "level4": "Cấp 4",
+        "level5": "Cấp 5",
+        "level6": "Cấp 6"
+      },
+      "columns": {
+        "date": "ngày",
+        "memberId": "ID thành viên",
+        "memberAccount": "Tài khoản thành viên",
+        "memberLevel": "Cấp thành viên",
+        "memberBetAmount": "Số tiền cược của thành viên",
+        "memberLossAmount": "Thành viên Số tiền thua",
+        "rebateRate": "Hoàn trả Tỷ lệ",
+        "rebateAmount": "hoa hồng số tiền",
+        "rebateTime": "hoa hồng thời gian",
+        "teamRechargeCount": "Số lần nạp của đội nhóm",
+        "teamRechargeAmount": "Số tiền nạp của đội nhóm",
+        "teamValidBet": "Cược hợp lệ của đội nhóm",
+        "rebateLevel": "Hoàn trả Cấp",
+        "lottery": "Xổ số",
+        "electronic": "Điện tử",
+        "video": "Video trực tiếp",
+        "sports": "Thể thao",
+        "chessCard": "Cờ bài",
+        "validBet": "Cược hợp lệ",
+        "calculatedRebateAmount": "Số tiền hoàn trả đã tính",
+        "issuedRebateAmount": "Số tiền hoàn trả đã phát",
+        "issueTime": "Thời gian kỳ"
+      },
+      "summary": {
+        "totalRebateAmount": "Tổng cộng Số tiền hoàn trả",
+        "totalBetAmount": "Tổng tiền cược",
+        "totalLossAmount": "Tổng cộng Số tiền thua"
+      },
+      "messages": {
+        "selectGeneralAgent": "Vui lòng chọn Tổng đại lý đầu tiên",
+        "pleaseEnterMemberId": "Vui lòng nhập ID thành viên",
+        "pleaseSelectUser": "Vui lòng chọn người dùng đầu tiên"
+      },
+      "more": {
+        "title": "Hoàn trả Thông tin",
+        "backRebateTab": "Turnover Hoàn trả",
+        "levelRebateTab": "cấp hoa hồng báo cáo"
+      },
+      "components": {
+        "backRebate": {
+          "form": {
+            "date": "ngày",
+            "relativeLevel": "Cấp tương đối"
+          },
+          "levels": {
+            "level1": "Cấp 1",
+            "level2": "Cấp 2",
+            "level3": "Cấp 3",
+            "level4": "Cấp 4",
+            "level5": "Cấp 5",
+            "level6": "Cấp 6"
+          },
+          "columns": {
+            "memberId": "ID thành viên",
+            "lotteryValidBet": "Xổ số Cược hợp lệ",
+            "electronicValidBet": "Điện tử Cược hợp lệ",
+            "videoValidBet": "Video Cược hợp lệ",
+            "sportsValidBet": "Thể thao Cược hợp lệ",
+            "chessCardValidBet": "Cờ bài Cược hợp lệ",
+            "availableCommission": "khả dụng Commission"
+          },
+          "messages": {
+            "selectDate": "Vui lòng chọn ngày"
+          }
+        },
+        "levelRebate": {
+          "form": {
+            "date": "ngày"
+          },
+          "columns": {
+            "level": "cấp",
+            "rechargeCount": "Số lần nạp",
+            "rechargeAmount": "Số tiền nạp",
+            "lotteryBetRebate": "Xổ số (Cược hợp lệ | Số tiền hoàn trả)",
+            "electronicBetRebate": "Điện tử (Cược hợp lệ | Số tiền hoàn trả)",
+            "videoBetRebate": "Video (Cược hợp lệ | Số tiền hoàn trả)",
+            "sportsBetRebate": "Thể thao (Cược hợp lệ | Số tiền hoàn trả)",
+            "chessCardBetRebate": "Cờ bài (Cược hợp lệ | Số tiền hoàn trả)"
+          },
+          "messages": {
+            "selectDate": "Vui lòng chọn ngày"
+          }
+        }
+      }
+    },
+    "rebateLevel": {
+      "title": "Hoàn trả Cấp Cấu hình",
+      "tabs": {
+        "levelConfig": "Cấp Cấu hình",
+        "rateConfig": "Tỷ lệ Cấu hình",
+        "rebateConfig": "Hoàn trả Cấp Cấu hình",
+        "rebateRateConfig": "Hoàn trả Tỷ lệ Cấu hình"
+      },
+      "rebateLevel": {
+        "history": {
+          "operationTime": "Thời gian thao tác",
+          "operator": "Người thao tác",
+          "configValue": "Cấu hình Giá trị"
+        },
+        "columns": {
+          "rebateLevel": "Hoàn trả Cấp",
+          "childrenRechargeCount": "Số lần nạp hằng ngày của đội nhóm",
+          "childrenRechargeAmount": "Số tiền nạp hằng ngày của đội nhóm",
+          "childrenLotteryAmount": "Số tiền trò chơi hằng ngày của đội nhóm",
+          "rebateLevelPeoples": "Số người đạt cấp hoàn trả",
+          "rechargePeoples": "Số người đạt số lần nạp",
+          "rechargeAmountPeoples": "Số người đạt số tiền nạp",
+          "gameBetAmountPeoples": "Số người đạt số tiền trò chơi",
+          "remark": "ghi chú",
+          "lastUpdateTime": "Thời gian cập nhật cuối",
+          "lastUpdateMan": "Người cập nhật cuối",
+          "actions": "thao tác"
+        },
+        "modals": {
+          "addTitle": "Thêm Hoàn trả Cấp",
+          "editTitle": "Sửa Hoàn trả Cấp L{level}"
+        },
+        "settings": {
+          "frontPopupRebate": "Hoàn trả cửa sổ bật lên ở giao diện",
+          "needRechargeRebate": "Cần nạp tiền để hoàn trả",
+          "frontPopupRebateDesc": "Có hiển thị cửa sổ bật lên hoàn trả ở giao diện hay không",
+          "needRechargeRebateDesc": "Có bắt buộc nạp tiền để nhận hoàn trả hay không",
+          "enable": "bật",
+          "disable": "tắt"
+        },
+        "actions": {
+          "add": "thêm",
+          "edit": "sửa",
+          "delete": "xóa"
+        }
+      },
+      "levelConfig": {
+        "columns": {
+          "level": "Cấp",
+          "rechargeCount": "Số lần nạp",
+          "rechargeAmount": "Số tiền nạp",
+          "gameAmount": "Số tiền trò chơi",
+          "description": "Mô tả",
+          "actions": "thao tác"
+        },
+        "form": {
+          "rechargeCountPlaceholder": "Vui lòng nhập số lần nạp hằng ngày của đội nhóm",
+          "rechargeAmountPlaceholder": "Vui lòng nhập số tiền nạp hằng ngày của đội nhóm",
+          "gameAmountPlaceholder": "Vui lòng nhập số tiền trò chơi hằng ngày của đội nhóm",
+          "descriptionPlaceholder": "Vui lòng nhập mô tả"
+        },
+        "actions": {
+          "add": "thêm",
+          "edit": "sửa",
+          "delete": "xóa",
+          "save": "lưu",
+          "cancel": "hủy"
+        },
+        "modal": {
+          "addTitle": "Thêm Hoàn trả Cấp",
+          "editTitle": "Sửa Hoàn trả Cấp",
+          "deleteConfirm": "Bạn có chắc muốn xóa cấu hình cấp này?",
+          "levelSetting": "Cài đặt cấp"
+        },
+        "messages": {
+          "addSuccess": "Thêm thành công",
+          "updateSuccess": "Cập nhật thành công",
+          "deleteSuccess": "Xóa thành công"
+        },
+        "validation": {
+          "level": "Vui lòng chọn cấp",
+          "rechargeCount": "Vui lòng nhập số lần nạp hằng ngày của đội nhóm",
+          "rechargeAmount": "Vui lòng nhập số tiền nạp hằng ngày của đội nhóm",
+          "gameAmount": "Vui lòng nhập số tiền trò chơi hằng ngày của đội nhóm"
+        },
+        "status": {
+          "enable": "bật",
+          "disable": "tắt"
+        },
+        "empty": "Không có dữ liệu"
+      },
+      "rebateRate": {
+        "alert": {
+          "title": "Thông báo cấu hình hoàn trả",
+          "content": "1. Hiện tại tỷ lệ hoàn trả chỉ tính dữ liệu đại lý trong 6 cấp<br/>2. Tỷ lệ của mỗi cấp hoàn trả có thể cấu hình trực tiếp. Nếu chưa cấu hình hoặc đặt 0, cấp đó sẽ không hưởng tỷ lệ hoàn trả<br/>3. Để đạt tỷ lệ cấp tương ứng, phải đáp ứng cả 3 điều kiện của cấp hoàn trả tương ứng<br/>4. Với cấu hình tỷ lệ bên dưới, tổng danh mục trò chơi cấp 1-6 hiện tại không được vượt quá 5%<br/>5. Đơn vị của cấu hình tỷ lệ bên dưới là \"% \"<br/>"
+        },
+        "card": {
+          "levelRate": "Tỷ lệ cấp"
+        },
+        "columns": {
+          "level": "Cấp",
+          "lottery": "Xổ số",
+          "electronic": "Điện tử",
+          "video": "Video trực tiếp",
+          "sports": "Thể thao",
+          "chessCard": "Cờ & bài"
+        },
+        "actions": {
+          "edit": "sửa",
+          "save": "lưu",
+          "cancel": "hủy"
+        },
+        "messages": {
+          "updateSuccess": "Cập nhật thành công"
+        },
+        "empty": "Không có dữ liệu"
+      },
+      "editRebateLevel": {
+        "labels": {
+          "rechargeCount": "Số lần nạp hằng ngày của đội nhóm:",
+          "rechargeAmount": "Số tiền nạp hằng ngày của đội nhóm:",
+          "gameAmount": "Số tiền trò chơi hằng ngày của đội nhóm:",
+          "description": "Mô tả:"
+        },
+        "validation": {
+          "remark": "Vui lòng nhập ghi chú nội dung",
+          "rechargeCount": "Vui lòng nhập số lần nạp hằng ngày của đội nhóm",
+          "rechargeAmount": "Vui lòng nhập số tiền nạp hằng ngày của đội nhóm",
+          "gameAmount": "Vui lòng nhập số tiền trò chơi hằng ngày của đội nhóm"
+        },
+        "actions": {
+          "cancel": "hủy",
+          "save": "lưu"
+        },
+        "success": "Sửa thành công"
+      }
+    },
+    "review": {
+      "title": "đại lý duyệt",
+      "columns": {
+        "userId": "ID thành viên",
+        "parentId": "cấp trên ID",
+        "directSubordinates": "trực tiếp tuyến dưới",
+        "agentLevel": "Đại lý Cấp",
+        "noRechargeDays": "Không Nạp tiền ngày",
+        "yesterdayCommission": "Hôm qua Hoa hồng",
+        "totalBetAmount": "Tổng tiền cược",
+        "operator": "thao tác",
+        "rebateStatus": "hoa hồng trạng thái"
+      },
+      "form": {
+        "labels": {
+          "userId": "ID thành viên",
+          "minDays": "Số ngày tối thiểu",
+          "rebateState": "hoa hồng trạng thái"
+        },
+        "placeholders": {
+          "userId": "Vui lòng nhập ID thành viên",
+          "minDays": "Vui lòng nhập số ngày tối thiểu",
+          "rebateState": "Vui lòng chọn hoa hồng trạng thái"
+        }
+      },
+      "actions": {
+        "setRebateLevel": "Thiết lập cấp hoàn trả"
+      },
+      "status": {
+        "enable": "bật",
+        "disable": "tắt"
+      },
+      "switchDialog": {
+        "title": "Chuyển Trạng thái",
+        "enableMessage": "Xác nhận bật trạng thái hoàn trả?",
+        "disableMessage": "Xác nhận tắt trạng thái hoàn trả?"
+      },
+      "editRebate": {
+        "title": "Thiết lập cấp hoàn trả",
+        "labels": {
+          "userId": "ID thành viên",
+          "rebateLevel": "Hoàn trả Cấp",
+          "rebateMode": "Chế độ hoàn trả"
+        },
+        "buttons": {
+          "cancel": "hủy",
+          "save": "lưu"
+        },
+        "success": "Sửa thành công"
+      }
+    }
+  }
+}

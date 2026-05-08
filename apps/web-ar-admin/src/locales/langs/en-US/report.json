@@ -1,0 +1,1349 @@
+{
+  "report": {
+    "dashboard": {
+      "title": "Dashboard",
+      "overview": "Overview",
+      "rechargeWithdrawTrend": "7-Day Deposit/Withdrawal Trend",
+      "betWinLoseTrend": "7-Day Bet/Profit Trend",
+      "memberLevelDistribution": "Member Level Distribution",
+      "gameTypeBetRatio": "Bet Share by Game Type",
+      "todayRanking": "Today's Ranking",
+      "timeStatistics": "Time-based Statistics",
+      "dataSummary": "Data Summary",
+      "welcome": "Welcome back, {name}!",
+      "overviewData": {
+        "todayNew": "Today's New",
+        "firstRecharge": "First Deposit",
+        "people": "People",
+        "loginMembers": "Logged-in Members",
+        "totalMembers": "Total Members",
+        "rechargeDifference": "Deposit-Withdrawal Difference",
+        "todayRecharge": "Today's Deposits",
+        "todayWithdraw": "Today's Withdrawals",
+        "todayBets": "Today's Bets",
+        "todayBettors": "Today's Bettors",
+        "todayOrders": "Today's Bet Orders",
+        "platformProfit": "Platform Profit/Loss",
+        "grossMargin": "Gross Margin",
+        "todayActivity": "Today's Promotion Bonus",
+        "participants": "Participants",
+        "totalBalance": "Total In-Platform Balance (Excluding Test)",
+        "inactiveBalance": "Total Balance of Members Inactive >30 Days",
+        "testAccountBalance": "Total Test Account Balance",
+        "activeBalance": "Active User Balance",
+        "activeBalanceDesc": "Total balance of active members logged in within 30 days"
+      }
+    },
+    "channelAlert": {
+      "title": "Collection/Payout Channel Alerts",
+      "stats": {
+        "total": "Total Alerts",
+        "pending": "Pending Alerts"
+      },
+      "fields": {
+        "tenant": "Merchant",
+        "sourceTenant": "Alert Source Merchant",
+        "channelName": "Channel Name",
+        "channelType": "Channel Type",
+        "mappingCode": "Third-party Code",
+        "thirdMerchantText": "Third-party name",
+        "merchantNickname": "Nickname",
+        "merchantNo": "Merchant No.",
+        "relatedTenants": "Related Merchants",
+        "warningType": "Alert Type",
+        "warningContent": "Alert Content",
+        "warningTime": "Alert Time",
+        "noticeChannel": "Notification Channel",
+        "currency": "Currency",
+        "configValue": "Configured Value",
+        "actualValue": "Actual Value",
+        "status": "Status",
+        "triggerThreshold": "Trigger Threshold",
+        "operateCount": "Records"
+      },
+      "noticeChannels": {
+        "siteMessage": "Site Message"
+      },
+      "placeholders": {
+        "selectTenant": "Select merchant",
+        "selectMappingCode": "Select third-party mapping code",
+        "selectThirdMerchant": "Select third-party merchant",
+        "selectChannelName": "Select channel name",
+        "selectChannelType": "Select channel type",
+        "selectWarningType": "Select alert type",
+        "selectStatus": "Select status",
+        "enterRemark": "Enter remark",
+        "enterThreshold": "Enter threshold"
+      },
+      "actions": {
+        "ruleConfig": "Alert Rule Config",
+        "handle": "Handle",
+        "ignore": "Ignore",
+        "batchHandle": "Batch Handle",
+        "batchIgnore": "Batch Ignore",
+        "confirmHandle": "Confirm Handle",
+        "confirmIgnore": "Confirm Ignore"
+      },
+      "dialogTitles": {
+        "detail": "Channel Alert Details",
+        "handle": "Handle Channel Alert",
+        "ignore": "Ignore Channel Alert",
+        "ruleConfig": "Alert Rule Config"
+      },
+      "messages": {
+        "noPendingSelected": "Select pending alert records",
+        "handleSuccess": "Handled successfully",
+        "ignoreSuccess": "Ignored successfully",
+        "ruleRequired": "The rule config for {name} is incomplete",
+        "ruleSaveSuccess": "Rules saved successfully"
+      },
+      "warningTypes": {
+        "placeOrderFailRate": "Collection Channel Failure Rate Alert",
+        "placeOrderFail": "Collection Channel Order Creation Failure Alert",
+        "withdrawBalanceLow": "Payout Channel Low Balance Alert",
+        "largeWithdraw": "Large Payout Alert"
+      },
+      "warningStatus": {
+        "pending": "Pending",
+        "handled": "Handled",
+        "ignored": "Ignored"
+      },
+      "channelTypes": {
+        "collect": "Collection",
+        "pay": "Payout"
+      },
+      "ruleText": {
+        "minutesWithAttempts": "minutes, total attempts ≥",
+        "failRateAtLeast": "and failure rate ≥",
+        "continuousFailAtLeast": "consecutive failures ≥",
+        "times": "times",
+        "balanceLessThan": "Balance <",
+        "singleAmountAtLeast": "Single amount ≥",
+        "configuredCurrencies": "{count} currencies configured ({action})",
+        "clickExpandEdit": "click to expand",
+        "clickCollapse": "click to collapse"
+      },
+      "ruleConfigHint": "Configure alert thresholds and notification methods. Changes take effect immediately."
+    },
+    "statistics": {
+      "title": "Statistics",
+      "refresh": "Refresh",
+      "tabs": {
+        "realtime": "24H Report",
+        "overview": "Data Overview",
+        "merchant": "Merchant Report",
+        "channel": "Channel Report",
+        "thirdPartyMerchantNo": "Third-party Merchant No. Report"
+      },
+      "common": {
+        "selectAll": "Select all",
+        "clearAll": "Clear all"
+      },
+      "metrics": {
+        "netDifference": "Deposit-Payout Difference",
+        "collectSuccessAmount": "Collection Success Amount",
+        "paySuccessAmount": "Payout Success Amount",
+        "successAmount": "Success Amount",
+        "collectSuccessCount": "Collection Success Count",
+        "paySuccessCount": "Payout Success Count",
+        "successCount": "Success Count",
+        "successRate": "Success Rate",
+        "collectSuccessRate": "Collection Success Rate",
+        "depositUsers": "Deposit Users",
+        "withdrawUsers": "Withdrawal Users",
+        "fee": "Fee"
+      },
+      "formulas": {
+        "netDifference": "Collection success amount - payout success amount",
+        "collectAmount": "Sum of all successful collection order amounts",
+        "collectUsers": "Unique users from successful collection orders",
+        "collectFee": "Sum of fees from successful collection orders",
+        "collectCount": "Number of successful collection orders",
+        "collectRate": "Successful collection orders ÷ total collection orders × 100%",
+        "payAmount": "Sum of all successful payout order amounts",
+        "payUsers": "Unique users from successful payout orders",
+        "payFee": "Sum of fees from successful payout orders",
+        "payCount": "Number of successful payout orders"
+      },
+      "units": {
+        "orders": "orders"
+      },
+      "metricTypes": {
+        "amount": "Amount",
+        "count": "Count",
+        "rate": "Success Rate",
+        "amountTrend": "Amount Trend",
+        "countTrend": "Count Trend",
+        "amountCompare": "Amount Compare",
+        "countCompare": "Count Compare"
+      },
+      "compare": {
+        "yesterday": "Yesterday",
+        "lastWeek": "Last Week",
+        "lastMonth": "Last Month"
+      },
+      "shortcuts": {
+        "today": "Today",
+        "yesterday": "Yesterday",
+        "last3d": "Last 3 days",
+        "last7d": "Last week",
+        "last15d": "Last 15 days",
+        "last30d": "Last month"
+      },
+      "realtime": {
+        "refreshFrequency": "Refresh frequency",
+        "autoRefreshPlaceholder": "Auto refresh",
+        "refreshedAt": "Refreshed at {time}",
+        "refreshOptions": {
+          "seconds30": "30s",
+          "minute1": "1 min",
+          "minutes5": "5 min"
+        },
+        "merchantTrendTitle": "Merchant 24H Trend",
+        "merchantTrendSubtitle": "Successful order trends by merchant in the last 24 hours",
+        "collectTrendTitle": "Collection 24H Trend",
+        "collectTrendSubtitle": "Aggregated successful collection trends for selected merchants",
+        "payTrendTitle": "Payout 24H Trend",
+        "payTrendSubtitle": "Aggregated successful payout trends for selected merchants",
+        "compareDisabledTip": "Select exactly one merchant above to compare",
+        "customComparePlaceholder": "Custom date",
+        "addCustomDate": "+"
+      },
+      "overview": {
+        "trendChartTitle": "Collection/Payout Success Trend",
+        "merchantCompareTitle": "Collection and Payout by Merchant",
+        "rateWarningLine": "95% threshold"
+      },
+      "fields": {
+        "currency": "Currency",
+        "group": "Group",
+        "tenant": "Merchant",
+        "timeRange": "Date",
+        "date": "Date",
+        "mappingCode": "Third-party Code",
+        "channelName": "Channel Name",
+        "channelType": "Channel Type",
+        "channelCurrency": "Channel Currency",
+        "thirdPartyNickname": "Third-party Merchant Nickname",
+        "thirdPartyMerchantNo": "Third-party Merchant No.",
+        "thirdPartyMerchantInfo": "Third-party Merchant Nickname/No.",
+        "collectChannelCount": "Collection Channels",
+        "collectSuccessAmount": "Collection Success Amount",
+        "collectSuccessCount": "Collection Success Count",
+        "collectSuccessRate": "Collection Success Rate",
+        "payChannelCount": "Payout Channels",
+        "paySuccessAmount": "Payout Success Amount",
+        "paySuccessCount": "Payout Success Count",
+        "successAmount": "Success Amount",
+        "successCount": "Success Count",
+        "successRate": "Success Rate",
+        "userCount": "Users",
+        "generatedChannels": "Channels with Data",
+        "generatedMerchants": "Merchants with Data",
+        "collectStats": "Collection Stats",
+        "payStats": "Payout Stats"
+      },
+      "placeholders": {
+        "selectCurrency": "Select currency",
+        "selectGroup": "Select group",
+        "selectTenant": "Select merchant",
+        "selectMappingCode": "Select third-party mapping code",
+        "selectChannelName": "Select channel name (multiple)",
+        "selectThirdPartyMerchantInfo": "Select third-party merchant nickname/no.",
+        "selectChannelType": "Select channel type"
+      },
+      "actions": {
+        "viewDetail": "View details",
+        "viewChannelDetail": "View channel details"
+      },
+      "dialogTitles": {
+        "merchantChannelDetail": "Merchant Channel Details",
+        "generatedChannelDetail": "Generated Channel Details",
+        "generatedMerchantDetail": "Generated Merchant Details"
+      },
+      "messages": {
+        "exportSubmitted": "Export task submitted",
+        "searchSubmitted": "Search refreshed",
+        "resetDone": "Filters reset"
+      },
+      "channelTypes": {
+        "collect": "Collection",
+        "pay": "Payout"
+      },
+      "channelTypeTabs": {
+        "collect": "Collection Channels",
+        "pay": "Payout Channels"
+      },
+      "options": {
+        "currentTenant": "Current Merchant",
+        "groups": {
+          "asiaPacific": "Asia Pacific Group",
+          "emea": "EMEA Group"
+        }
+      },
+      "form": {
+        "agentId": "Agent ID",
+        "agentIdPlaceholder": "Enter agent ID",
+        "channelSource": "Channel Source",
+        "channelSourcePlaceholder": "Select channel source",
+        "time": "Time",
+        "day": "Day",
+        "month": "Month",
+        "oneClickQuery": "One-click Query"
+      },
+      "dataSummary": {
+        "title": "Data Summary",
+        "newMembers": "New Members",
+        "rechargeAmount": "Deposit Amount",
+        "validBet": "Valid Bet",
+        "withdrawAmount": "Withdrawal Amount",
+        "profitLossAmount": "Profit/Loss Amount"
+      },
+      "rechargeWithdraw": {
+        "title": "First Deposit / First Withdrawal",
+        "firstRecharge": "First Deposit",
+        "secondRecharge": "Second Deposit",
+        "thirdRecharge": "Third Deposit",
+        "firstWithdraw": "First Withdrawal",
+        "secondWithdraw": "Second Withdrawal",
+        "thirdWithdraw": "Third Withdrawal",
+        "times": "Times",
+        "people": "People",
+        "amount": "Amount"
+      },
+      "device": {
+        "title": "Device",
+        "deviceType": "Device Type",
+        "loginUsers": "Logged-in Users",
+        "totalUsers": "Total Users"
+      },
+      "commission": {
+        "title": "Promotion Statistics",
+        "newPromotionUsers": "New Referred Users",
+        "newTotalAgents": "New Master Agents",
+        "commissionUsers": "Commission Recipients",
+        "commissionAmount": "Commission Amount Paid"
+      },
+      "rechargeState": {
+        "title": "Deposit Status",
+        "status": "Status",
+        "amount": "Amount",
+        "people": "People",
+        "times": "Times"
+      },
+      "withdrawState": {
+        "title": "Withdrawal Status",
+        "status": "Status",
+        "amount": "Amount",
+        "people": "People",
+        "times": "Times"
+      },
+      "rechargeChannel": {
+        "title": "Top 4 Deposit Channels",
+        "name": "Name",
+        "amount": "Amount",
+        "people": "People",
+        "times": "Times",
+        "details": "Details"
+      },
+      "withdrawChannel": {
+        "title": "Top 4 Withdrawal Channels",
+        "name": "Name",
+        "amount": "Amount",
+        "people": "People",
+        "times": "Times",
+        "details": "Details"
+      },
+      "platform": {
+        "title": "Top 4 Platforms",
+        "name": "Name",
+        "betAmount": "Bet Amount",
+        "people": "People",
+        "times": "Times",
+        "details": "Details"
+      },
+      "subgame": {
+        "title": "Top 4 Games",
+        "name": "Name",
+        "betAmount": "Bet Amount",
+        "people": "People",
+        "times": "Times",
+        "details": "Details"
+      },
+      "activity": {
+        "title": "Top 4 Activities",
+        "name": "Name",
+        "amount": "Amount",
+        "people": "People",
+        "times": "Times",
+        "details": "Details"
+      },
+      "components": {
+        "dataSummary": "Data Summary",
+        "rechargeWithdraw": "Deposit & Withdrawal Stats",
+        "device": "Device Stats",
+        "commission": "Commission Stats",
+        "rechargeState": "Deposit Status Stats",
+        "withdrawState": "Withdrawal Status Stats",
+        "rechargeChannel": "Deposit Channel Stats",
+        "withdrawChannel": "Withdrawal Channel Stats",
+        "platform": "Platform Stats",
+        "subgame": "Game Stats",
+        "activity": "Activity Stats"
+      }
+    },
+    "accountChanges": {
+      "title": "Account Changes",
+      "form": {
+        "memberIdLabel": "Member ID",
+        "agentIdLabel": "Agent ID",
+        "memberIdPlaceholder": "Enter member ID",
+        "orderNo": "Order No.",
+        "orderNoPlaceholder": "Enter order No.",
+        "accountChangeType": "Account Change Type",
+        "accountChangeTypePlaceholder": "Select account change type",
+        "time": "Time"
+      },
+      "table": {
+        "orderNo": "Order No.",
+        "memberId": "Member ID",
+        "accountChangeType": "Account Change Type",
+        "beforeAmount": "Amount Before Change",
+        "changeAmount": "Change Amount",
+        "afterAmount": "Amount After Change",
+        "changeTime": "Change Time",
+        "remark": "Remark"
+      },
+      "export": "Export",
+      "amount": "Amount"
+    },
+    "platformReport": {
+      "title": "Platform Report",
+      "tabs": {
+        "dailySummary": "Daily Summary Report",
+        "dailyActivities": "Daily Activity Report",
+        "dailyRecharge": "Daily Deposit Report",
+        "dailyWithdrawal": "Daily Withdrawal Report",
+        "dailyGameReport": "Daily Game Report",
+        "channelReport": "Channel Report",
+        "retentionReport": "Retention Report",
+        "rechargeWithdrawReport": "Deposit/Withdrawal Channel Report",
+        "paymentModeReport": "Payment Mode Report",
+        "depositWithdrawOrderStat": "Deposit/Withdrawal Order Statistics"
+      },
+      "form": {
+        "timeRange": "Time Range",
+        "day": "Day",
+        "month": "Month",
+        "game": "Game",
+        "allGames": "All Games",
+        "platform": "Platform",
+        "allPlatforms": "All Platforms",
+        "channel": "Channel",
+        "allChannels": "All Channels",
+        "rechargeChannel": "Deposit Channel:",
+        "rechargeChannelPlaceholder": "Select deposit channel",
+        "withdrawChannel": "Withdrawal Channel:",
+        "withdrawChannelPlaceholder": "Select withdrawal channel",
+        "firstWithdraw": "First Withdrawal",
+        "secondWithdraw": "Second Withdrawal",
+        "thirdWithdraw": "Third Withdrawal",
+        "firstRecharge": "First Deposit",
+        "secondRecharge": "Second Deposit",
+        "thirdRecharge": "Third Deposit",
+        "rechargeTypePlaceholder": "Select deposit type",
+        "exportWithMobile": "Export with Mobile Number"
+      },
+      "common": {
+        "export": "Export",
+        "exportFailed": "Export Failed",
+        "time": "Time",
+        "date": "Date",
+        "reportDate": "Report Date",
+        "dateRangeExceeded31Days": "Selected date range cannot exceed 31 days",
+        "noDataAvailable": "There is no data available for export at the moment"
+      },
+      "dailySummary": {
+        "columns": {
+          "time": "Time",
+          "registerCount": "Registrations",
+          "loginCount": "Logins",
+          "betUserCount": "Betting Users",
+          "betAmount": "Bet Amount",
+          "feeAmount": "Handling Fee",
+          "winAmount": "Payout Amount",
+          "activityAmount": "Promotion",
+          "rechargeAmount": "Successful Deposits",
+          "withdrawAmount": "Successful Withdrawals",
+          "platNetDeposit": "Platform Net Deposits",
+          "platWinLoseAmount": "Platform Profit/Loss",
+          "platNetProfit": "Platform Net Profit"
+        }
+      },
+      "dailyActivities": {
+        "columns": {
+          "time": "Time",
+          "activityType": "Activity Type",
+          "amount": "Amount",
+          "count": "Claim Count",
+          "participants": "Participants"
+        }
+      },
+      "dailyRecharge": {
+        "columns": {
+          "time": "Time",
+          "rechargeChannel": "Deposit Channel",
+          "channelType": "Channel Type",
+          "rechargeSuccessAmount": "Successful Deposit Amount",
+          "reverseDiscountAmount": "Reverse Bonus Amount",
+          "rechargeSuccessUserCount": "Successful Deposit Users",
+          "rechargeCount": "Deposit Times",
+          "rechargeSuccessCount": "Successful Deposit Times",
+          "rechargeFailCount": "Failed Deposit Times",
+          "rechargeAmount": "Deposit Amount",
+          "rechargeUserCount": "Deposit Users",
+          "discountAmount": "Bonus Amount",
+          "firstRechargeAmount": "First Deposit Amount",
+          "firstRechargeUserCount": "First Deposit Users"
+        }
+      },
+      "dailyWithdrawal": {
+        "columns": {
+          "time": "Time",
+          "withdrawChannel": "Withdrawal Channel",
+          "channelType": "Channel Type",
+          "withdrawSuccessAmount": "Successful Withdrawal Amount",
+          "withdrawSuccessUserCount": "Successful Withdrawal Users",
+          "withdrawCount": "Withdrawal Times",
+          "withdrawSuccessCount": "Successful Withdrawal Times",
+          "withdrawFailCount": "Failed Withdrawal Times",
+          "withdrawAmount": "Withdrawal Amount",
+          "withdrawUserCount": "Withdrawal Users"
+        }
+      },
+      "dailyGameReport": {
+        "form": {
+          "gameCategory": "Game Category:",
+          "gameCategoryPlaceholder": "Select game category",
+          "gameVendor": "Game Provider",
+          "gameVendorPlaceholder": "Select game provider",
+          "subGame": "Game",
+          "subGamePlaceholder": "Select game",
+          "isSummary": "Multi-day summary"
+        },
+        "columns": {
+          "time": "Time",
+          "gameCode": "Game Code",
+          "gameCategory": "Game Category",
+          "gameVendor": "Game Provider",
+          "gameName": "Game Name",
+          "betAmount": "Bet Amount",
+          "feeAmount": "Handling Fee",
+          "validAmount": "Valid Bet",
+          "winAmount": "Payout Amount",
+          "rtp": "RTP",
+          "winLoseAmount": "Platform Profit/Loss",
+          "betCount": "Game Times",
+          "userCount": "Game Users"
+        }
+      },
+      "channelReport": {
+        "form": {
+          "channel": "Channel",
+          "channelPlaceholder": "Select channel"
+        },
+        "columns": {
+          "channelName": "Channel Name",
+          "domainAddress": "Domain Address",
+          "code": "Code",
+          "timeRangeRegisterCount": "Registrations (Range)",
+          "registerCount": "Registrations",
+          "firstRechargeCount": "First Deposit Users",
+          "firstRechargeAmount": "First Deposit Amount",
+          "secondRechargeCount": "Second Deposit Users",
+          "secondRechargeAmount": "Second Deposit Amount",
+          "totalRechargeAmount": "Deposit Amount",
+          "totalWithdrawAmount": "Withdrawal Amount",
+          "todayRegisterCount": "Today Registrations",
+          "todayFirstRechargeCount": "Today First Deposit Users",
+          "todayFirstRechargeAmount": "Today First Deposit Amount",
+          "todaySecondRechargeCount": "Today Second Deposit Users",
+          "todaySecondRechargeAmount": "Today Second Deposit Amount",
+          "todayTotalRechargeAmount": "Today Deposit Amount",
+          "todayTotalWithdrawAmount": "Today Withdrawal Amount",
+          "timeRangeFirstRechargeCount": "Range First Deposit Users",
+          "timeRangeFirstRechargeAmount": "Range First Deposit Amount",
+          "timeRangeSecondRechargeCount": "Range Second Deposit Users",
+          "timeRangeSecondRechargeAmount": "Range Second Deposit Amount",
+          "timeRangeTotalRechargeAmount": "Range Deposit Amount",
+          "timeRangeTotalWithdrawAmount": "Range Withdrawal Amount"
+        }
+      },
+      "retentionReport": {
+        "tabs": {
+          "activeRetention": "Active Retention",
+          "rechargeRetention": "Deposit Retention",
+          "loginRetention": "Login Retention"
+        },
+        "form": {
+          "channelSource": "Channel Source",
+          "channelSourcePlaceholder": "Select channel source"
+        },
+        "columns": {
+          "date": "Date",
+          "dayAddRegisterUserCount": "New Registrations (Day)",
+          "dayLoginUserCount": "New Logins (Day)",
+          "isFirstRecharge": "New First Deposits (Day)",
+          "firstDayRetention": "Day 1 Retention",
+          "threeDayRetention": "Day 3 Retention",
+          "fiveDayRetention": "Day 5 Retention",
+          "sevenDayRetention": "Day 7 Retention",
+          "tenDayRetention": "Day 10 Retention",
+          "fourteenDayRetention": "Day 14 Retention",
+          "fifteenDayRetention": "Day 15 Retention",
+          "thirtyDayRetention": "Day 30 Retention",
+          "sixtyDayRetention": "Day 60 Retention",
+          "ninetyDayRetention": "Day 90 Retention",
+          "oneHundredTwentyDayRetention": "Day 120 Retention",
+          "oneHundredEightyDayRetention": "Day 180 Retention"
+        },
+        "common": {
+          "average": "Average"
+        },
+        "config": {
+          "title": "Retention Configuration",
+          "activeRetentionBetAmount": "Active retention bet threshold",
+          "description": "Only users whose daily bet >= this amount counted as retained (positive integer. After adjustment next day's sampling changes; historical data not modified)",
+          "operationTime": "Operation Time",
+          "operator": "Operator",
+          "configValue": "Config Value (Old -> New)"
+        }
+      },
+      "rechargeWithdrawReport": {
+        "tabs": {
+          "thirdPartyRecharge": "Third-party Deposit Channels",
+          "thirdPartyWithdraw": "Third-party Withdrawal Channels",
+          "thirdPartyRechargeHourly": "Third-party Deposit Channels (Hourly)",
+          "thirdPartyWithdrawHourly": "Third-party Withdrawal Channels (Hourly)"
+        },
+        "form": {
+          "channelId": "Channel ID",
+          "channelIdPlaceholder": "Enter channel ID",
+          "channelDisplayName": "Channel Display Name",
+          "channelDisplayNamePlaceholder": "Enter channel display name"
+        },
+        "columns": {
+          "channelName": "Channel Name",
+          "type": "Type",
+          "recharge": "Deposit",
+          "withdraw": "Withdrawal",
+          "orderCount": "Orders",
+          "successOrderCount": "Successful Orders",
+          "transactionAmount": "Transaction Amount",
+          "totalAmount": "Total Amount",
+          "totalCount": "Total Times",
+          "successAmount": "Successful Amount",
+          "successCount": "Successful Times",
+          "failAmount": "Failed Amount",
+          "failCount": "Failed Times",
+          "successRate": "Success Rate",
+          "indicator": "Indicator",
+          "weight": "Weight",
+          "submittedCount": "Submitted Count",
+          "successfulCount": "Submitted Successfully Count",
+          "successCounts": "Successful Count",
+          "totalCounts": "Total Count"
+        }
+      },
+      "paymentModeReport": {
+        "columns": {
+          "payMode": "Payment Mode",
+          "rechargeOrderCount": "Deposit Order Count",
+          "rechargeSuccessCount": "Deposit Success Count",
+          "rechargeSuccessRate": "Deposit Success Rate",
+          "rechargeSuccessAmount": "Deposit Success Amount",
+          "rechargeAmountRatio": "Deposit Amount Ratio"
+        },
+        "paymentModes": {
+          "totals": "Totals",
+          "unknown": "Unknown",
+          "awaken": "Awaken",
+          "native": "Native",
+          "scan": "Scan"
+        }
+      },
+      "depositWithdrawOrderStat": {
+        "columns": {
+          "operator": "Operator",
+          "multiDayTotalOrders": "Multi-day Total Orders",
+          "todayTotalOrders": "Today Total Orders",
+          "withdrawApprovedOrders": "Withdraw Approved Orders",
+          "withdrawRejectedOrders": "Withdraw Rejected Orders",
+          "withdrawSubmittedOrders": "Withdraw Submitted Orders",
+          "depositApprovedOrders": "Deposit Approved Orders",
+          "depositRejectedOrders": "Deposit Rejected Orders",
+          "operatorPlaceholder": "Enter operator",
+          "dateWarningTips": "Please select a date range within 7 days."
+        }
+      }
+    },
+    "userInfoReport": {
+      "title": "Member Report",
+      "tabs": {
+        "userRptTotal": "Member Summary",
+        "userGameTotal": "Member Games",
+        "userActivity": "Member Activities",
+        "userRechargeInfo": "First/Second/Third Deposit",
+        "userWithdraw": "First/Second/Third Withdrawal",
+        "userLogin": "Member Login",
+        "userDevice": "Member Devices",
+        "userRetain": "Member Retention Rate"
+      },
+      "form": {
+        "selectQueryId": "Select Query ID",
+        "memberIdType": "Member ID Type",
+        "memberId": "Member ID",
+        "agentId": "Agent ID",
+        "generalAgentId": "General Agent ID",
+        "memberIdPlaceholder": "Enter member ID",
+        "agentIdPlaceholder": "Enter agent ID",
+        "timeRange": "Time Range",
+        "withdrawType": "Withdrawal Type",
+        "withdrawTypePlaceholder": "Select withdrawal type",
+        "activityType": "Activity Type",
+        "activityTypePlaceholder": "Select activity type",
+        "gameCategory": "Game Category",
+        "gameCategoryPlaceholder": "Select game category",
+        "gameVendor": "Game Provider",
+        "gameVendorPlaceholder": "Select game provider",
+        "subGame": "Game",
+        "subGamePlaceholder": "Select game",
+        "channelSource": "Channel Source",
+        "channelSourcePlaceholder": "Select channel source",
+        "maxGameVendorSelection": "You can select up to 5 game providers",
+        "maxSubGameSelection": "You can select up to 5 games",
+        "day": "Day",
+        "month": "Month",
+        "exportWithMobile": "Export with mobile number",
+        "firstRecharge": "First Deposit",
+        "secondRecharge": "Second Deposit",
+        "thirdRecharge": "Third Deposit",
+        "firstWithdraw": "First Withdrawal",
+        "secondWithdraw": "Second Withdrawal",
+        "thirdWithdraw": "Third Withdrawal",
+        "rechargeTypePlaceholder": "Select deposit type",
+        "gameTypes": {
+          "lottery": "Lottery",
+          "electronic": "Electronic",
+          "video": "Live Video",
+          "sports": "Sports",
+          "chessCard": "Chess & Card"
+        }
+      },
+      "common": {
+        "export": "Export",
+        "exportFailed": "Export Failed",
+        "none": "None",
+        "completionTime": "Completion Time",
+        "loginTime": "Login Time",
+        "registrationTime": "Registration Time",
+        "date": "Date"
+      },
+      "userRptTotal": {
+        "columns": {
+          "memberId": "Member ID",
+          "parentId": "Parent ID",
+          "generalAgentId": "General Agent ID",
+          "rechargeAmount": "Deposit Amount",
+          "rechargeCount": "Deposit Times",
+          "withdrawAmount": "Withdrawal Amount",
+          "withdrawCount": "Withdrawal Times",
+          "activityAmount": "Activity",
+          "codingAmount": "Wagering Amount",
+          "memberWinLoss": "Member Profit/Loss"
+        }
+      },
+      "userGameTotal": {
+        "columns": {
+          "memberId": "Member ID",
+          "parentId": "Parent ID",
+          "generalAgentId": "General Agent ID",
+          "gameCategory": "Game Category",
+          "gameVendor": "Game Provider",
+          "gameName": "Game Name",
+          "betAmount": "Bet Amount",
+          "validAmount": "Valid Bet",
+          "winAmount": "Payout Amount",
+          "memberWinLoss": "Member Profit/Loss",
+          "betCount": "Game Rounds"
+        }
+      },
+      "userActivity": {
+        "columns": {
+          "memberId": "Member ID",
+          "parentId": "Parent ID",
+          "generalAgentId": "General Agent ID",
+          "activityType": "Activity Type",
+          "amount": "Amount",
+          "count": "Times",
+          "completionTime": "Completion Time",
+          "totalActivityAmount": "Total Activity Income"
+        }
+      },
+      "userRechargeInfo": {
+        "columns": {
+          "completionTime": "Completion Time",
+          "memberId": "Member ID",
+          "parentId": "Parent ID",
+          "generalAgentId": "General Agent ID",
+          "rechargeType": "Deposit Type",
+          "orderNo": "Order No.",
+          "rechargeAmount": "Deposit Amount",
+          "totalRecharge": "Total Deposit",
+          "totalWithdraw": "Total Withdrawal",
+          "totalRechargeDifference": "Total Deposit-Withdrawal Diff"
+        }
+      },
+      "userWithdraw": {
+        "columns": {
+          "completionTime": "Completion Time",
+          "memberId": "Member ID",
+          "parentId": "Parent ID",
+          "generalAgentId": "General Agent ID",
+          "withdrawType": "Withdrawal Type",
+          "orderNo": "Order No.",
+          "withdrawAmount": "Withdrawal Amount",
+          "totalRecharge": "Total Deposit",
+          "totalWithdraw": "Total Withdrawal",
+          "totalRechargeDifference": "Total Deposit-Withdrawal Diff"
+        }
+      },
+      "userLogin": {
+        "columns": {
+          "memberId": "Member ID",
+          "parentId": "Parent ID",
+          "generalAgentId": "General Agent ID",
+          "loginTime": "Login Time",
+          "ip": "IP",
+          "deviceType": "Device Type",
+          "loginAddress": "Login Address",
+          "loginIp": "Login IP",
+          "loginCount": "Login Times",
+          "lastUpdateTime": "Last Update Time"
+        },
+        "form": {
+          "ipPlaceholder": "Enter IP"
+        }
+      },
+      "userDevice": {
+        "columns": {
+          "memberId": "Member ID",
+          "parentId": "Parent ID",
+          "generalAgentId": "General Agent ID",
+          "registrationTime": "Registration Time",
+          "deviceType": "Device Type",
+          "deviceInfo": "Device Info",
+          "ip": "IP",
+          "android": "Android",
+          "ios": "iOS",
+          "pc": "PC",
+          "h5": "H5",
+          "unknown": "Unknown",
+          "total": "Total",
+          "memberCount": "Number of Members"
+        }
+      },
+      "userRetain": {
+        "tabs": {
+          "activeRetention": "Active Retention",
+          "rechargeRetention": "Deposit Retention",
+          "loginRetention": "Login Retention"
+        },
+        "columns": {
+          "memberId": "Member ID",
+          "parentId": "Parent ID",
+          "generalAgentId": "General Agent ID",
+          "channelSource": "Channel Source",
+          "registrationTime": "Registration Time",
+          "firstDayLogin": "Day 2 Login",
+          "threeDayLogin": "3-Day Login",
+          "sevenDayLogin": "7-Day Login",
+          "thirtyDayLogin": "30-Day Login",
+          "dailyNewRegistrations": "New Registrations Today",
+          "dailyNewLogins": "New Logins Today",
+          "dailyFirstRecharge": "New First Deposits Today",
+          "twoDayRetention": "Day 2 Retention",
+          "threeDayRetention": "3-Day Retention",
+          "fiveDayRetention": "5-Day Retention",
+          "sevenDayRetention": "7-Day Retention",
+          "tenDayRetention": "10-Day Retention",
+          "fourteenDayRetention": "14-Day Retention",
+          "fifteenDayRetention": "15-Day Retention",
+          "thirtyDayRetention": "30-Day Retention",
+          "sixtyDayRetention": "60-Day Retention",
+          "ninetyDayRetention": "90-Day Retention",
+          "oneHundredTwentyDayRetention": "120-Day Retention",
+          "oneHundredEightyDayRetention": "180-Day Retention"
+        },
+        "validation": {
+          "memberIdRequired": "Enter member ID"
+        }
+      }
+    },
+    "dataAnalysis": {
+      "title": "Data Analysis",
+      "tabs": {
+        "dataSummary": "Data Overview",
+        "subBagSummary": "Package Overview",
+        "firstCharge": "First Deposit Analysis",
+        "LtvAnalyze": "User LTV analysis",
+        "userChurn": "User Churn Analysis",
+        "dataExport": "Data Export Center",
+        "unchargedStatistics": "Uncharged Statistics"
+      },
+      "common": {
+        "export": "Export",
+        "exportFailed": "Export Failed",
+        "timeRange": "Time Range",
+        "dataDefinition": "Data Definition",
+        "calculationFormula": "Data Definition / Formula",
+        "indicatorName": "Indicator Name",
+        "formula": "Formula",
+        "confirm": "Confirm",
+        "today": "Today",
+        "yesterday": "Yesterday",
+        "thisWeek": "This Week",
+        "lastWeek": "Last Week",
+        "thisMonth": "This Month",
+        "lastMonth": "Last Month",
+        "date": "Date",
+        "userCount": "User Count",
+        "firstLtv": "First deposit user LTV",
+        "addLtv": "Add user LTV",
+        "firstLtvExport": "First deposit user LTV report",
+        "addLtvExport": "Add user LTV report",
+        "firstLtv2": "First Dep LTV (Dep/With)",
+        "addLtv2": "New User LTV (Dep/With)",
+        "firstLtvExport2": "First Dep LTV Report",
+        "addLtvExport2": "New User LTV Report",
+        "firstLtvTip1": "Avg Bet-Win-Bonus of 1st Dep Users in N Days",
+        "firstLtvTip2": "Avg Bet-Win-Bonus of New Users in N Days",
+        "firstLtvTip3": "Avg Dep-With of 1st Dep Users in N Days",
+        "firstLtvTip4": "Avg Dep-With of New Users in N Days",
+        "dayLtvTip5": "Sum of (Bet - Win - Bonus) of 1st Dep Users / Number of 1st Dep Users",
+        "dayLtvTip7": "Sum of (Bet - Win - Bonus) of New Users / Number of New Users",
+        "dayLtvTip6": "Sum of (Dep - With) of 1st Dep Users / Number of 1st Dep Users",
+        "dayLtvTip8": "Sum of (Dep - With) of New Users / Number of New Users"
+      },
+      "dataSummary": {
+        "title": "Data Overview",
+        "tips": {
+          "newRegisterDevice": "Number of new members today that are also new devices",
+          "newMember": "Number of new registered members today",
+          "effectiveNewRate": "New registered devices today / New members",
+          "dailyActiveMember": "Number of members who logged in today",
+          "oldMemberDailyActive": "Daily active members - New members",
+          "rechargeMember": "Number of members who deposited today",
+          "rechargeAmount": "Total amount deposited by all members today",
+          "withdrawAmount": "Total amount withdrawn by all members today",
+          "chargeWithdrawDiff": "Deposit Amount - Withdrawal Amount",
+          "excessRate": "(Deposit - Withdrawal) / Deposit",
+          "effectiveBet": "Total valid bet amount today",
+          "firstRechargeMember": "Number of members making their first deposit today",
+          "firstRechargeAmount": "Total first deposit amount today",
+          "firstRechargeExcessRate": "(First deposit member deposit - withdrawal) / First deposit amount",
+          "firstRechargeWithdrawProportion": "Number of first deposits and withdrawals / Number of first deposits",
+          "firstRechargePaymentRate": "First deposit members / New members",
+          "firstRechargeRepeatRate": "Members who re-deposit after first deposit / First deposit members",
+          "newARPU": "New member deposit amount / New members",
+          "newARPPU": "New member deposit amount / New depositing members",
+          "oldMemberRechargeCount": "Number of old members who deposited",
+          "oldMemberRechargeAmount": "Total deposit amount from old members",
+          "oldMemberPaymentRate": "Old member deposit count / Old member daily active",
+          "oldMemberARPU": "Old member deposit amount / Old member daily active",
+          "oldMemberARPPU": "Old member deposit amount / Old member deposit count",
+          "oldMemberWithdrawAmount": "Total withdrawal amount of old members",
+          "oldMemberWithdrawCount": "Number of old members who withdrew",
+          "oldMemberChargeWithdrawDiff": "Old member deposit amount - Old member withdrawal amount",
+          "oldMemberExcessRate": "(Old member deposit - withdrawal) / Old member deposit amount",
+          "paymentRate": "Depositing members / Daily active members",
+          "arpu": "Deposit amount / Daily active members",
+          "arppu": "Deposit amount / Depositing members",
+          "newMemberRechargeAmount": "Total deposit amount from today's new members",
+          "newMemberRechargeCount": "Number of today's new members who deposited",
+          "newMemberPaymentRate": "New depositing members / New members",
+          "withdrawMemberCount": "Number of Members Who Withdrew Today",
+          "totalBalance": "Total In-Platform Balance"
+        },
+        "columns": {
+          "date": "Date",
+          "newRegisterDeviceCount": "New Registered Devices",
+          "newMemberCount": "New Members",
+          "newMemberRechargeAmount": "New Member Deposit Amount",
+          "newMemberRechargeCount": "New Depositing Members",
+          "newMemberPaymentRate": "New Member Deposit Conversion Rate",
+          "effectiveNewRate": "Effective New Rate",
+          "dailyActiveMemberCount": "Daily Active Members",
+          "oldMemberDailyActive": "Old Member Daily Active",
+          "rechargeMemberCount": "Depositing Members",
+          "rechargeAmount": "Deposit Amount",
+          "withdrawMemberCount": "Withdrawing Members",
+          "withdrawAmount": "Withdrawal Amount",
+          "chargeWithdrawDiff": "Deposit-Withdrawal Diff",
+          "excessRate": "Surplus Rate",
+          "effectiveBetAmount": "Valid Bet",
+          "firstRechargeMemberCount": "First Deposit Members",
+          "firstRechargeAmount": "First Deposit Amount",
+          "firstRechargeExcessRate": "First Deposit Surplus Rate",
+          "firstRechargeWithdrawProportion": "First Deposit Withdrawal Ratio",
+          "firstRechargePaymentRate": "First Deposit Payment Rate",
+          "firstRechargeReChargeCount": "Members Re-deposit After First",
+          "firstRechargeRepeatRate": "First Deposit Repeat Rate",
+          "newARPU": "New ARPU",
+          "newARPPU": "New ARPPU",
+          "oldMemberRechargeCount": "Old Member Depositing Count",
+          "oldMemberRechargeAmount": "Old Member Deposit Amount",
+          "oldMemberPaymentRate": "Old Member Payment Rate",
+          "oldMemberARPU": "Old Member ARPU",
+          "oldMemberARPPU": "Old Member ARPPU",
+          "oldMemberWithdrawAmount": "Old Member Withdrawal Amount",
+          "oldMemberWithdrawCount": "Old Member Withdrawal Count",
+          "oldMemberChargeWithdrawDiff": "Old Member Deposit-Withdrawal Diff",
+          "oldMemberExcessRate": "Old Member Surplus Rate",
+          "paymentRate": "Payment Rate",
+          "arpu": "ARPU",
+          "arppu": "ARPPU",
+          "totalBalance": "Total In-Platform Balance"
+        }
+      },
+      "subBagSummary": {
+        "title": "Package Overview",
+        "form": {
+          "packageId": "Channel Source",
+          "packageIdPlaceholder": "Select channel package"
+        },
+        "tips": {
+          "packageName": "Mostly associated by FB PixelID; if none, grouped as Other",
+          "newRegisterDevice": "Number of new members today that are also new devices",
+          "newMember": "Number of new registered members today",
+          "effectiveNewRate": "New registered devices today / New members",
+          "dailyActiveMember": "Number of members who logged in today",
+          "oldMemberDailyActive": "Daily active members - New members",
+          "rechargeMember": "Number of members who deposited today",
+          "rechargeAmount": "Total amount deposited by all members today",
+          "withdrawAmount": "Total amount withdrawn by all members today",
+          "chargeWithdrawDiff": "Deposit Amount - Withdrawal Amount",
+          "excessRate": "(Deposit - Withdrawal) / Deposit",
+          "effectiveBet": "Total valid bet amount today",
+          "firstRechargeMember": "Number of members making their first deposit today",
+          "firstRechargeAmount": "Total first deposit amount today",
+          "firstRechargeExcessRate": "(First deposit member deposit - withdrawal) / First deposit amount",
+          "firstRechargeWithdrawProportion": "Number of first deposits and withdrawals / Number of first deposits",
+          "firstRechargePaymentRate": "First deposit members / New members",
+          "firstRechargeRepeatRate": "Members who re-deposit after first deposit / First deposit members",
+          "newARPU": "New member deposit amount / New members",
+          "newARPPU": "New member deposit amount / New depositing members",
+          "oldMemberRechargeCount": "Number of old members who deposited",
+          "oldMemberRechargeAmount": "Total deposit amount from old members",
+          "oldMemberPaymentRate": "Old member deposit count / Old member daily active",
+          "oldMemberARPU": "Old member deposit amount / Old member daily active",
+          "oldMemberARPPU": "Old member deposit amount / Old member deposit count",
+          "oldMemberWithdrawAmount": "Total withdrawal amount of old members",
+          "oldMemberWithdrawCount": "Number of old members who withdrew",
+          "oldMemberChargeWithdrawDiff": "Old member deposit amount - Old member withdrawal amount",
+          "oldMemberExcessRate": "(Old member deposit - withdrawal) / Old member deposit amount",
+          "paymentRate": "Depositing members / Daily active members",
+          "arpu": "Deposit amount / Daily active members",
+          "arppu": "Deposit amount / Depositing members",
+          "newMemberRechargeAmount": "Total deposit amount from new members",
+          "newMemberPaymentRate": "New depositing members / New members",
+          "newMemberRechargeCount": "Number of new members who deposited",
+          "withdrawMemberCount": "Number of Members Who Withdrew Today"
+        },
+        "columns": {
+          "packageName": "Package Name",
+          "date": "Date",
+          "newRegisterDeviceCount": "New Registered Devices",
+          "newMemberCount": "New Members",
+          "newMemberRechargeAmount": "New Member Deposit Amount",
+          "newMemberRechargeCount": "New Depositing Members",
+          "effectiveNewRate": "Effective New Rate",
+          "dailyActiveMemberCount": "Daily Active Members",
+          "oldMemberDailyActive": "Old Member Daily Active",
+          "rechargeMemberCount": "Depositing Members",
+          "rechargeAmount": "Deposit Amount",
+          "withdrawMemberCount": "Withdrawing Members",
+          "withdrawAmount": "Withdrawal Amount",
+          "chargeWithdrawDiff": "Deposit-Withdrawal Diff",
+          "excessRate": "Surplus Rate",
+          "effectiveBetAmount": "Valid Bet",
+          "firstRechargeMemberCount": "First Deposit Members",
+          "firstRechargeAmount": "First Deposit Amount",
+          "firstRechargeExcessRate": "First Deposit Surplus Rate",
+          "firstRechargeWithdrawProportion": "First Deposit Withdrawal Ratio",
+          "firstRechargePaymentRate": "First Deposit Payment Rate",
+          "firstRechargeReChargeCount": "Members Re-deposit After First",
+          "firstRechargeRepeatRate": "First Deposit Repeat Rate",
+          "newARPU": "New ARPU",
+          "newARPPU": "New ARPPU",
+          "oldMemberRechargeCount": "Old Member Depositing Count",
+          "oldMemberRechargeAmount": "Old Member Deposit Amount",
+          "oldMemberPaymentRate": "Old Member Payment Rate",
+          "oldMemberARPU": "Old Member ARPU",
+          "oldMemberARPPU": "Old Member ARPPU",
+          "oldMemberWithdrawAmount": "Old Member Withdrawal Amount",
+          "oldMemberWithdrawCount": "Old Member Withdrawal Count",
+          "oldMemberChargeWithdrawDiff": "Old Member Deposit-Withdrawal Diff",
+          "oldMemberExcessRate": "Old Member Surplus Rate",
+          "paymentRate": "Payment Rate",
+          "arpu": "ARPU",
+          "arppu": "ARPPU",
+          "newMemberPaymentRate": "New Member Paid Conversion Rate"
+        }
+      },
+      "firstCharge": {
+        "title": "First Deposit Analysis",
+        "form": {
+          "packageId": "Channel Source",
+          "packageIdPlaceholder": "Select channel source",
+          "adGroup": "Ad Group",
+          "adGroupPlaceholder": "Select ad group",
+          "selectType": "Select type",
+          "channelSource": "Channel Source",
+          "adGroupOption": "Ad Group"
+        },
+        "columns": {
+          "time": "Time",
+          "dayRegisterRechargeUserCount": "Same-day Registered First Deposits",
+          "dayRegisterNoRechargeUserCount": "Same-day Registered No First Deposit",
+          "dayFirstRechargeUserCount": "Same-day First Deposits",
+          "dayReRechargeUserCount": "Same-day Re-deposits",
+          "dayNoReRechargeUserCount": "Same-day No Re-deposit",
+          "nextDayRechargeUserCount": "Day 2 Re-deposits",
+          "nextDayNoRechargeUserCount": "Day 2 No Re-deposit",
+          "isretention2": "2-Day Re-deposit",
+          "isretention3": "3-Day Re-deposit",
+          "isretention4": "4-Day Re-deposit",
+          "isretention5": "5-Day Re-deposit",
+          "isretention6": "6-Day Re-deposit",
+          "isretention7": "7-Day Re-deposit",
+          "isretention10": "10-Day Re-deposit",
+          "isretention15": "15-Day Re-deposit",
+          "isretention20": "20-Day Re-deposit",
+          "isretention25": "25-Day Re-deposit",
+          "isretention30": "30-Day Re-deposit",
+          "isretention60": "60-Day Re-deposit",
+          "isretention90": "90-Day Re-deposit",
+          "isretention120": "120-Day Re-deposit",
+          "isretention180": "180-Day Re-deposit"
+        },
+        "common": {
+          "average": "Average",
+          "detail": "Details",
+          "export": "Export",
+          "exportFailed": "Export Failed",
+          "download": "Download",
+          "todayNoRechargeReport": "Same-day No Re-deposit Report",
+          "nextDayNoRechargeReport": "Day 2 No Re-deposit Report",
+          "getLandingPageStyleFailed": "Failed to get landing page style"
+        }
+      },
+      "userChurn": {
+        "title": "User Churn Analysis",
+        "form": {
+          "packageId": "Channel Source",
+          "packageIdPlaceholder": "Select channel source",
+          "unActiveDays": "Inactive Days",
+          "unActiveDaysPlaceholder": "Enter days",
+          "userVipLevel": "Member VIP Level",
+          "userVipLevelPlaceholder": "Select member VIP level",
+          "totalRechargeAmount": "Total Deposit Amount",
+          "totalWithdrawAmount": "Total Withdrawal Amount",
+          "minValue": "Min Value",
+          "maxValue": "Max Value",
+          "unActiveDaysText": "to"
+        },
+        "columns": {
+          "userId": "Member ID",
+          "packageName": "Channel Source",
+          "vipLevel": "Member VIP Level",
+          "totalRechargeAmount": "Total Deposit Amount",
+          "totalWithdrawAmount": "Total Withdrawal Amount",
+          "totalBalance": "Total Balance",
+          "lastLoginTime": "Last Login Time",
+          "registerTime": "Registration Time",
+          "mobileNo": "Mobile Number"
+        },
+        "common": {
+          "export": "Export",
+          "exportWithMobile": "Export with mobile number",
+          "exportFailed": "Export Failed",
+          "exportSuccess": "Export Successful",
+          "largeDataWaitMessage": "Data volume too large, please go to Download Center"
+        }
+      },
+      "dataExport": {
+        "title": "Data Export Center",
+        "exportTaskList": "Export Task List",
+        "memberDataExportApply": "Member Data Export Application",
+        "form": {
+          "createTime": "Create Time",
+          "exportStatus": "Export Status",
+          "exportStatusPlaceholder": "Select export status",
+          "creator": "Creator",
+          "lastLoginDate": "Last Login Date",
+          "registerDate": "Registration Date",
+          "totalRechargeAmount": "Total Deposit Amount",
+          "totalWithdrawAmount": "Total Withdrawal Amount",
+          "totalBalance": "Total Balance",
+          "memberVipLevel": "Member VIP Level",
+          "minValue": "Min Value",
+          "maxValue": "Max Value",
+          "to": "To"
+        },
+        "columns": {
+          "taskId": "Task ID",
+          "creator": "Creator",
+          "createTime": "Create Time",
+          "exportStatus": "Export Status",
+          "exportSummary": "Export Summary",
+          "action": "Action"
+        },
+        "actions": {
+          "download": "Download",
+          "viewPassword": "View Password",
+          "retry": "Retry",
+          "password": "Password",
+          "confirm": "Confirm"
+        },
+        "buttons": {
+          "export": "Export",
+          "exportWithMobile": "Export with mobile number"
+        },
+        "messages": {
+          "operationSuccess": "Operation Successful",
+          "exportApplicationSubmitted": "Export application submitted",
+          "exportSuccess": "Export Successful",
+          "operationFailed": "Operation Failed",
+          "exportFailed": "Export Failed"
+        },
+        "tips": {
+          "exportFieldsNote": "Note",
+          "exportFieldsDescription": "Export fields: Member ID, Channel, Member VIP Level, Total Deposit Amount, Total Withdrawal Amount, Total Balance, Last Login Time, Last Deposit Time, Last Withdrawal Time, Registration Time, Mobile Number (if enabled)"
+        }
+      },
+      "economyReport": {
+        "title": "Economic System Daily Report",
+        "actions": {
+          "dataDefinition": "Data Definition",
+          "dataDefinitionDescription": "Data Definition Description"
+        },
+        "columns": {
+          "activityAmount": "Total Distributed Amount",
+          "activityRate": "Distribution Ratio",
+          "activityCount": "Number of Recipients",
+          "activityAmountTotalToday": "Total Amount of Rewards Distributed for This Activity Today",
+          "activityAmountPerTotal": "Daily Activity Distribution Total",
+          "activityCountTotalToday": "Number of Recipients for This Activity Today",
+          "activityCountPerTotal": "Total Number of Activity Recipients",
+          "platformProfit": "Platform Profit and Loss",
+          "betAmount": "Bet Amount",
+          "winningAmount": "Winning Amount",
+          "allActivityAmountTotalToday": "Total Rewards Distributed for All Activities Today",
+          "rechargeTotalAmount": "Total Deposit Amount",
+          "allUserRechargeTotalAmount": "Total Deposit Amount of All Users Today",
+          "activityRechargeRatio": "Activity Bonus Ratio",
+          "balanceActivityAmount": "Remaining Amount",
+          "balanceActivityRatio": "Remaining Ratio",
+          "allUserBetAmountToday": "Total Bet Amount of All Users Today",
+          "activityBetRatio": "Platform Betting Ratio",
+          "rankingAmount": "Total Ranking Rewards Distributed",
+          "rankingAmountTotalToday": "Total Amount of Ranking Rewards Distributed Today",
+          "rankingAmountActivityRate": "Ranking Distribution Ratio",
+          "rankingCount": "Number of Ranking Recipients",
+          "rankingCountDescription": "Number of recipients of today's ranking rewards. Click the download button to download the detailed user list.",
+          "vipTotalAmount": "Total VIP Rewards Distributed",
+          "vipTotalAmountDescription": "Total amount of VIP rewards distributed today",
+          "vipTotalAmountRatio": "VIP Distribution Ratio",
+          "vipTotalAllAmount": "Total VIP Amount",
+          "vipTotalCount": "Number of VIP Recipients",
+          "vipTotalCountDescription": "Number of VIP recipients today. Click the download button to download the detailed user list.",
+          "oneDayoneData": "One Record Per Day"
+        }
+      },
+      "uncharged": {
+        "column": {
+          "samedayRegister": "Registered users on the same day",
+          "samedayLogin": "Users who log in on the same day",
+          "neverFirstRecharge": "First deposit prompt never shown",
+          "mindRecharge": "First deposit prompt shown, no deposit made",
+          "rechargedButNextUnRecharge": "After first deposit, second deposit prompt shown but no deposit made",
+          "firstRechargeNerveMindRecharge": "After first deposit, second deposit prompt never shown",
+          "secondRechargeNerveMindRecharge": "After second deposit, third deposit prompt shown but no deposit made",
+          "neverThirdRecharge": "After second deposit, third deposit prompt never shown",
+          "download": "Download({num})"
+        }
+      }
+    },
+    "userData": {
+      "title": "User Data",
+      "tabs": {
+        "userDataOverview": "Daily Data",
+        "userDataDetails": "Multi-day Data"
+      },
+      "schemas": {
+        "userId": "User ID",
+        "userIdPlaceholder": "Enter User ID",
+        "parentId": "Parent ID",
+        "parentIdPlaceholder": "Enter Parent ID",
+        "phone": "Phone",
+        "phonePlaceholder": "Enter Phone",
+        "packageId": "Channel",
+        "vipLevel": "VIP Level",
+        "reportDateStart": "Date",
+        "isRecharge": "Deposited",
+        "isRechargeAll": "All",
+        "isRechargeNo": "No",
+        "isRechargeYes": "Yes",
+        "time1": "First Deposit Time",
+        "time2": "Register Time",
+        "statisticType1Placeholder": "Select",
+        "quickQuery": "Quick Search",
+        "firstRechargeAmount": "First Deposit",
+        "rechargeAmount": "Daily Deposit",
+        "withdrawAmount": "Daily Withdraw",
+        "winLoseAmount": "Daily Win/Loss",
+        "betAmount": "Valid Bet",
+        "activityAmount": "Bonus",
+        "commissionAmount": "Commission",
+        "betCount": "Rounds",
+        "netAmount": "Net Amount",
+        "registerTime": "Register Date",
+        "firstRechargeDate": "First Deposit Date",
+        "statisticsStartTime": "Start Date",
+        "statisticsEndTime": "End Date",
+        "historyRechargeAmount": "Total Deposit",
+        "historyWithdrawAmount": "Total Withdraw",
+        "historyActivityAmount": "Total Bonus",
+        "lookInfo": "View",
+        "moreDays": "Compare Days",
+        "userReport": "Daily User Report",
+        "moreDayReport": "Multi-day Report",
+        "userMoreDayReport": "Multi-day User Report"
+      },
+      "summary": {
+        "recharge": "Deposit",
+        "withdraw": "Withdraw",
+        "winLose": "Win/Loss",
+        "bet": "Bet",
+        "activity": "Bonus",
+        "commission": "Commission",
+        "betCount": "Rounds",
+        "net": "Net"
+      },
+      "common": {
+        "export": "Export"
+      }
+    }
+  }
+}

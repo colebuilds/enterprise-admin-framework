@@ -1,0 +1,213 @@
+{
+  "components": {
+    "proCrudTable": {
+      "expand": "Perluas",
+      "collapse": "Ciutkan",
+      "selectCurrentPage": "Pilih semua on Page",
+      "batchAction": "Batch Operasi",
+      "selectedCount": "{count} item dipilih",
+      "totalCount": "Total {count}",
+      "action": "operasi"
+    },
+    "proAdvancedSearch": {
+      "title": "Filter lanjutan",
+      "panelTitle": "Pencarian lanjutan",
+      "quickEdit": "Edit cepat",
+      "cancelEdit": "batal edit",
+      "pinHint": "Pin fields to main cari area (max {max})",
+      "pinCount": "Dipilih {count}/{max}",
+      "cancel": "batal",
+      "clearAll": "Bersihkan",
+      "resetDefault": "atur ulang",
+      "apply": "Terapkan",
+      "saveConfig": "simpan konfigurasi",
+      "groupOther": "Lainnya"
+    },
+    "proSearchForm": {
+      "search": "cari",
+      "reset": "atur ulang",
+      "expand": "Perluas",
+      "collapse": "Ciutkan"
+    },
+    "proColumnSetting": {
+      "customColumns": "Kolom",
+      "columnDisplay": "Tampilan kolom",
+      "reset": "atur ulang"
+    },
+    "tenantCheckPanel": {
+      "selected": "Dipilih {count}/{total}",
+      "selectAll": "Pilih semua",
+      "clear": "Bersihkan",
+      "loading": "Memuat...",
+      "empty": "No tersedia merchants"
+    },
+    "aiAssistant": {
+      "openAssistant": "Buka AI Assistant",
+      "eyebrow": "AI",
+      "title": "Asisten pintar",
+      "input": {
+        "configUnavailable": "Konfigurasi asisten tidak tersedia",
+        "stopGenerating": "Hentikan pembuatan",
+        "overLimit": "Konten melebihi batas panjang",
+        "waitReply": "Silakan tunggu balasan",
+        "sendEnter": "Kirim (Enter)"
+      },
+      "panel": {
+        "newChat": "Chat baru",
+        "history": "Riwayat",
+        "undock": "Batalkan dock",
+        "dockRight": "Dock ke kanan",
+        "exitFullscreen": "Keluar layar penuh",
+        "fullscreen": "Layar penuh",
+        "close": "Tutup",
+        "loadingConfig": "Memuat konfigurasi asisten",
+        "loadingWelcome": "Mohon tunggu, konten sambutan akan tampil setelah konfigurasi dimuat.",
+        "emptyTitle": "Kirim pesan untuk memulai",
+        "emptyCopy": "Mendukung pencarian pengetahuan, tanya jawab proses, dan pemecahan masalah."
+      },
+      "session": {
+        "count": "{count} sesi",
+        "justNow": "Baru saja",
+        "minutesAgo": "{count} menit lalu",
+        "hoursAgo": "{count} jam lalu",
+        "noMessages": "Belum ada pesan",
+        "messages": "{count} pesan",
+        "deleteTitle": "Hapus sesi",
+        "deleteConfirm": "Anda yakin ingin menghapus sesi ini? Setelah dihapus tidak dapat dipulihkan.",
+        "current": "Saat ini",
+        "emptyDescription": "Sesi riwayat akan ditampilkan di sini",
+        "newChat": "Chat baru"
+      },
+      "message": {
+        "copiedToClipboard": "Disalin ke clipboard",
+        "waitingAnalyzing": "Menganalisis...",
+        "waitingThinking": "Berpikir...",
+        "loadFailed": "Gagal memuat pesan",
+        "recoveringLatestAnswer": "Koneksi tidak stabil. Memulihkan jawaban terbaru..."
+      },
+      "feedback": {
+        "thanks": "Terima kasih atas masukan Anda",
+        "thanksImprove": "Terima kasih atas masukan Anda. Kami akan terus meningkatkan layanan.",
+        "submitFailed": "Gagal mengirim masukan",
+        "correctedTo": "Dikoreksi menjadi \"{intent}\"",
+        "intentConfirmed": "Hasil pengenalan dikonfirmasi",
+        "intentRecorded": "Masalah pengenalan dicatat",
+        "invalidIntent": "Tipe intent tidak valid",
+        "recognitionResult": "Hasil pengenalan",
+        "helpfulQuestion": "Apakah jawaban ini membantu?",
+        "helpful": "Membantu",
+        "unhelpful": "Tidak membantu",
+        "liked": "Disukai",
+        "feedbackSent": "Masukan dikirim",
+        "correctIntent": "Koreksi intent",
+        "intentHint": "Jika hasil pengenalan tidak akurat, Anda dapat mengoreksi intent untuk membantu optimasi berikutnya."
+      },
+      "runtime": {
+        "title": "Eksekusi Tugas",
+        "currentStep": "Langkah Saat Ini",
+        "taskStatus": "Status Tugas",
+        "failedRetry": "Tugas analisis gagal. Silakan coba lagi nanti.",
+        "runningHint": "Sistem sedang menganalisis secara asinkron dan akan menulis hasil setelah selesai.",
+        "status": {
+          "queued": "Dalam antrean",
+          "running": "Menganalisis",
+          "answering": "Membuat jawaban",
+          "completed": "Selesai",
+          "failed": "Eksekusi gagal",
+          "cancelled": "Dibatalkan",
+          "retrying": "Mencoba ulang",
+          "processing": "Memproses"
+        }
+      },
+      "answer": {
+        "confidenceHigh": "Keyakinan tinggi",
+        "confidenceMedium": "Keyakinan sedang",
+        "confidenceLow": "Keyakinan rendah",
+        "supportSemanticCache": "Cache semantik",
+        "supportVectorCache": "Cache pencarian",
+        "supportKnowledge": "Pencarian pengetahuan",
+        "supportAnalysis": "Data analisis",
+        "supportFallback": "Catatan fallback",
+        "page": "Halaman: {page}",
+        "basis": "Dasar: {basis}",
+        "documentHits": "{count} dokumen cocok",
+        "fallbackHint": "Jawaban ini dibuat dari panduan fallback. Tambahkan detail halaman, fitur, atau metrik agar hasil lebih baik.",
+        "references": "Referensi"
+      },
+      "stream": {
+        "http": {
+          "badRequest": "Parameter permintaan tidak valid",
+          "unauthorized": "Login kedaluwarsa, silakan masuk lagi",
+          "forbidden": "Tidak memiliki izin akses",
+          "unavailable": "Layanan tidak tersedia",
+          "tooManyRequests": "Permintaan terlalu sering, silakan coba lagi nanti",
+          "internalError": "Kesalahan server internal",
+          "temporaryUnavailable": "Layanan sementara tidak tersedia",
+          "maintenance": "Layanan dalam pemeliharaan",
+          "timeout": "Permintaan habis waktu",
+          "requestFailed": "Permintaan gagal ({status})"
+        },
+        "errors": {
+          "rateLimit": "Layanan AI sedang sibuk, silakan coba lagi nanti",
+          "toolLoopExceeded": "Pertanyaan ini memerlukan terlalu banyak langkah analisis. Persempit cakupan lalu coba lagi",
+          "streamConflict": "Anda memiliki percakapan yang sedang berjalan, silakan coba lagi nanti",
+          "serviceUnavailable": "Layanan AI sementara tidak tersedia, silakan coba lagi nanti",
+          "timeout": "Respons AI habis waktu, silakan coba lagi nanti",
+          "internalError": "Asisten AI sementara tidak tersedia, silakan coba lagi nanti",
+          "timeoutNarrowScope": "Respons AI habis waktu. Persempit pertanyaan lalu coba lagi",
+          "networkFailed": "Koneksi jaringan gagal, periksa jaringan Anda",
+          "requestRetry": "Permintaan gagal, silakan coba lagi nanti"
+        }
+      },
+      "socket": {
+        "invalidConfig": "Konfigurasi push tugas tidak ada, tidak dapat berlangganan proses eksekusi.",
+        "unauthorized": "Login kedaluwarsa, silakan masuk lagi.",
+        "connectFailed": "Koneksi push tugas gagal.",
+        "taskFailed": "Eksekusi tugas gagal."
+      },
+      "welcome": {
+        "configLoadFailed": "Gagal memuat konfigurasi",
+        "unavailableRetry": "Konfigurasi halaman sambutan sementara tidak tersedia. Silakan coba lagi sebelum membuka asisten.",
+        "reload": "Muat ulang"
+      },
+      "clarify": {
+        "message": "Saya ingin bertanya tentang {intent}"
+      },
+      "escalate": {
+        "unavailable": "Dukungan langsung belum terhubung pada versi ini. Silakan hubungi layanan pelanggan secara langsung.",
+        "title": "Butuh bantuan manusia",
+        "copy": "Anda mungkin memerlukan bantuan yang lebih khusus. Disarankan menghubungi layanan pelanggan.",
+        "contact": "Hubungi layanan pelanggan"
+      }
+    },
+    "proDataTable": {
+      "densityDefault": "Bawaan",
+      "densityMiddle": "Sedang",
+      "densityCompact": "Ringkas"
+    },
+    "htmlCodeEditor": {
+      "editTitle": "Edit Kode HTML",
+      "completionHint": "Ctrl+Space pelengkapan kode",
+      "format": "Format",
+      "previewTitle": "Pratinjau Rich Text",
+      "realtimeRender": "Render langsung",
+      "formatSuccess": "Format selesai",
+      "formatFailed": "Format gagal, periksa struktur HTML"
+    },
+    "batchTemplateModal": {
+      "title": "Template Impor Massal",
+      "download": "Unduh Template"
+    },
+    "phonePreview": {
+      "expand": "Perluas Pratinjau",
+      "collapse": "Ciutkan Pratinjau"
+    },
+    "summaryTable": {
+      "amountLabel": "Jumlah:"
+    },
+    "proEditDataTable": {
+      "addRow": "Tambah baris",
+      "deleteConfirm": "Yakin ingin menghapus catatan ini?"
+    }
+  }
+}

@@ -1,0 +1,663 @@
+{
+  "game": {
+    "platform": {
+      "title": "Game Provider Management",
+      "searchForm": {
+        "categoryType": "Game Category",
+        "categoryTypePlaceholder": "Select game category",
+        "state": "Enable Status",
+        "search": {
+          "categoryLabel": "Game Category",
+          "orderNoLabel": "Game Order No.",
+          "orderNoPlaceholder": "Game Order No.",
+          "memberIdLabel": "Member ID",
+          "memberIdPlaceholder": "Enter Member ID",
+          "vendorLabel": "Game Provider",
+          "vendorPlaceholder": "Select Game Provider"
+        },
+        "statePlaceholder": "Select Status",
+        "isMaintenance": "Maintenance Status",
+        "maintenancePlaceholder": "Select Status",
+        "normal": "Normal",
+        "maintenance": "Maintenance"
+      },
+      "columns": {
+        "state": "Status",
+        "isMaintenance": "Maintenance Status",
+        "vendorMapping": "Vendor Mapping",
+        "vendorCode": "Vendor Code",
+        "vendorName": "Vendor Name",
+        "displayName": "Frontend Display Name",
+        "imgUrl": "Icon",
+        "vendorLogoUrl": "Vendor Logo",
+        "selectedVendorLogoUrl": "Vendor Logo (Active)",
+        "categoryType": "Game Category",
+        "customCategoryList": "Display Categories",
+        "sort": "Sort Order",
+        "lastUpdateTime": "Last Update Time",
+        "lastUpdateMan": "Operator",
+        "mapTip": "After enabling mapping, the vendor will no longer be displayed independently on the frontend"
+      },
+      "actions": {
+        "edit": "Edit",
+        "subGameManagement": "Game Management",
+        "syncSubGame": "Sync Games",
+        "syncTenant": "Sync Tenants",
+        "syncGameVendor": "Sync Game Providers",
+        "fetchBet": "Fetch Missing Bets",
+        "enable": "Enable",
+        "disable": "Disable",
+        "maintenance": "Maintenance",
+        "cancel": "Cancel",
+        "save": "Save"
+      },
+      "modal": {
+        "editTitle": "Edit Game Provider",
+        "fetchBetTitle": "Fetch Missing {gameType} Bets",
+        "addBatchClass": "Add categories in batches",
+        "deleteBatchClass": "Delete categories in batches",
+        "addBatchSort": "Batch setting sorting",
+        "syncTenantTitle": "Sync Tenant Games",
+        "syncGameVendorTitle": "Sync Game Providers Reminder",
+        "syncGameVendorConfirm": "Are you sure to sync all game providers?",
+        "syncSubGameTitle": "Sync Games Reminder",
+        "syncSubGameConfirm": "Are you sure to sync {vendorName} games?"
+      },
+      "syncTenant": {
+        "syncType": "Sync Type",
+        "allTenants": "All Tenants",
+        "selectTenants": "Select Tenants",
+        "tenants": "Tenants",
+        "selectTenantRequired": "Please select tenants",
+        "syncTypeRequired": "Please select sync type",
+        "syncSuccess": "Game sync successful"
+      },
+      "edit": {
+        "vendorName": "Vendor Name",
+        "displayCategory": "Display Categories",
+        "displayCategoryPlaceholder": "Select Display Categories",
+        "displayName": "Frontend Display Name",
+        "displayNamePlaceholder": "Enter Name",
+        "sort": "Sort",
+        "icon": "Icon",
+        "vendorLogo": "Vendor Logo",
+        "selectedVendorLogo": "Vendor Logo (Active)",
+        "validation": {
+          "iconRequired": "Please upload game image",
+          "selectedLogoRequired": "Please upload active vendor logo",
+          "vendorLogoRequired": "Please upload vendor logo",
+          "sortRequired": "Enter sort value",
+          "displayCategoryRequired": "Select display categories",
+          "validImageRequired": "Please upload a valid image"
+        },
+        "messages": {
+          "editSuccess": "Updated successfully",
+          "createSuccess": "Created successfully"
+        }
+      },
+      "fetchBet": {
+        "timeRange": "Time Range",
+        "timeRangeError": "Please select time range",
+        "submitSuccess": "Fetch missing bets task submitted. Please check results later."
+      }
+    },
+    "category": {
+      "title": "Game Display Category Management",
+      "columns": {
+        "categoryName": "Category Name",
+        "imgUrl": "Icon",
+        "smallImgUrl": "Small Icon",
+        "selectedImgUrl": "Active Icon",
+        "sort": "Category Sort",
+        "state": "Enable Status",
+        "lastUpdateTime": "Last Update Time",
+        "lastUpdateMan": "Last Operator"
+      },
+      "actions": {
+        "edit": "Edit",
+        "showLanguage": "Show Languages",
+        "categoryDescription": "Category Description",
+        "add": "Add Game Display Category",
+        "enable": "Enable",
+        "disable": "Disable",
+        "cancel": "Cancel",
+        "save": "Save"
+      },
+      "modal": {
+        "editTitle": "Edit Game Category",
+        "addTitle": "Add Game Category",
+        "languageTitle": "Edit Languages",
+        "descriptionTitle": "Edit Category Description"
+      },
+      "edit": {
+        "categoryName": "Category Name",
+        "categoryNamePlaceholder": "Enter category name",
+        "sort": "Category Sort",
+        "icon": "Icon",
+        "smallIcon": "Small Icon",
+        "selectedIcon": "Small Icon (Active)",
+        "validation": {
+          "categoryNameRequired": "Enter category name",
+          "sortRequired": "Enter category sort",
+          "sortMinValue": "Category sort cannot be less than 0",
+          "iconRequired": "Please upload game category image",
+          "selectedIconRequired": "Please upload active icon image",
+          "smallIconRequired": "Please upload icon",
+          "validImageRequired": "Please upload a valid image"
+        },
+        "messages": {
+          "editSuccess": "Updated successfully",
+          "createSuccess": "Created successfully"
+        }
+      }
+    },
+    "mapping": {
+      "title": "Configure Mapping",
+      "editTitle": "Edit Mapping",
+      "currentGame": "Current Game",
+      "targetVendor": "Target Vendor",
+      "targetVendorPlaceholder": "Select target vendor",
+      "targetGame": "Target Game",
+      "targetGamePlaceholder": "Select target game",
+      "tips": {
+        "tip1": "A target game can only be used once",
+        "tip2": "The target game will be locked after configuration",
+        "tip3": "Can only be reused after canceling the mapping"
+      },
+      "validation": {
+        "vendorRequired": "Please select target vendor",
+        "gameRequired": "Please select target game"
+      },
+      "messages": {
+        "configSuccess": "Configured successfully",
+        "updateSuccess": "Updated successfully",
+        "cancelConfirm": "Are you sure to cancel the mapping for this game?",
+        "cancelSuccess": "Mapping canceled successfully"
+      },
+      "actions": {
+        "config": "Configure Mapping",
+        "edit": "Edit Mapping",
+        "cancel": "Cancel Mapping"
+      }
+    },
+    "hotGameConfig": {
+      "title": "Popular Games",
+      "pageTitle": "Popular Games Management",
+      "addButton": "Add Popular Game",
+      "editDescription": "Edit Category Description",
+      "columns": {
+        "vendor": "Game Provider",
+        "gameName": "Game Name",
+        "gameImage": "Game Image",
+        "sort": "Sort",
+        "status": "Enable Status",
+        "lastUpdateTime": "Last Update Time",
+        "lastUpdateUser": "Last Operator"
+      },
+      "actions": {
+        "edit": "Edit",
+        "gameDescription": "Game Description"
+      },
+      "edit": {
+        "vendor": "Game Provider",
+        "vendorPlaceholder": "Select Game Provider",
+        "subGame": "Game",
+        "subGamePlaceholder": "Select Game",
+        "gameImage": "Game Image",
+        "sort": "Sort",
+        "validation": {
+          "vendorRequired": "Select vendor",
+          "sortRequired": "Enter category sort",
+          "sortMin": "Category sort cannot be less than 0",
+          "imageRequired": "Please upload game category image",
+          "gameIdRequired": "Select game"
+        }
+      },
+      "describe": {
+        "title": "Title",
+        "description": "Description"
+      }
+    },
+    "thirdBalance": {
+      "title": "Game Balance Recovery",
+      "batchRecoverText": "Batch Recover",
+      "memberIdRequired": "Enter Member ID",
+      "recoverSuccess": "Recovered successfully",
+      "batchRecoverSuccess": "Batch recovery successful",
+      "columns": {
+        "memberId": "Member ID",
+        "vendor": "Game Provider",
+        "balance": "Balance"
+      },
+      "actions": {
+        "balanceRecover": "Recover Balance"
+      },
+      "modal": {
+        "batchRecoverTitle": "Batch Balance Recovery",
+        "warningTitle": "Warning",
+        "recoverConfirm": "Are you sure to recover the balance of {account} {vendorCode}?"
+      },
+      "search": {
+        "memberIdLabel": "Member ID",
+        "memberIdPlaceholder": "Enter Member ID"
+      },
+      "batchRecover": {
+        "userIdLabel": "User ID",
+        "userIdPlaceholder": "Enter user IDs separated by space or comma",
+        "vendorLabel": "Game Provider",
+        "validation": {
+          "vendorRequired": "Select game provider",
+          "userIdRequired": "Enter user IDs separated by space or comma",
+          "maxUsersLimit": "Up to 100 users per recovery",
+          "numberOnly": "Must be numbers"
+        }
+      }
+    },
+    "betRecord": {
+      "title": "Game Bet Orders",
+      "tabs": {
+        "lottery": "Lottery Bet Orders",
+        "live": "Live Casino Bet Orders",
+        "sports": "Sports Bet Orders",
+        "electronic": "Electronic Bet Orders",
+        "chess": "Card Game Bet Orders"
+      },
+      "lotteryTabs": {
+        "wingoLabel": "Win Go",
+        "k3Label": "K3",
+        "fiveDLabel": "5D",
+        "trxWingoLabel": "TRX Win Go",
+        "xosoLabel": "XOSO",
+        "wingoSub": "Win Go Lottery",
+        "k3Sub": "K3 Lottery",
+        "fiveDSub": "5D Lottery",
+        "trxWingoSub": "TRX Wingo Lottery",
+        "xosoSub": "XOSO Vietnam Lottery",
+        "newLottery": "New Lottery",
+        "newLotterySub": "MOTO Video"
+      },
+      "xosoRegion": {
+        "north75": "North 75s",
+        "central75": "Central 75s",
+        "south45": "South 45s"
+      },
+      "exportButton": "Export",
+      "summary": {
+        "betAmount": "Bet Amount",
+        "validAmount": "Valid Bet",
+        "winAmount": "Payout Amount",
+        "winLose": "Profit/Loss",
+        "feeAmount": "Tax"
+      },
+      "columns": {
+        "orderNo": "Game Order No.",
+        "memberId": "Member ID",
+        "vendor": "Game Provider",
+        "gameName": "Game Name",
+        "issueNumber": "Issue No.",
+        "betType": "Bet Type",
+        "betContent": "Bet Content",
+        "betAmount": "Bet Amount",
+        "validAmount": "Valid Bet",
+        "winAmount": "Payout Amount",
+        "winLose": "Profit/Loss",
+        "feeAmount": "Tax",
+        "status": "Status",
+        "userType": "User Type",
+        "followOrderNo": "Follow Strategy Order No.",
+        "betTime": "Bet Time",
+        "settlementTime": "Settlement Time",
+        "createTime": "Created Time",
+        "updateTime": "Updated Time",
+        "remark": "Remark-Version",
+        "roundNumber": "Round No."
+      },
+      "userTypes": {
+        "formal": "Regular Member",
+        "test": "Test Member"
+      },
+      "search": {
+        "categoryLabel": "Game Category",
+        "categoryPlaceholder": "Select Game Category",
+        "gameType": "Game Type",
+        "gameTypePlaceholder": "Select Game Type",
+        "orderNoLabel": "Game Order No.",
+        "orderNoPlaceholder": "Game Order No.",
+        "memberIdLabel": "Member ID",
+        "memberIdPlaceholder": "Enter Member ID",
+        "vendorLabel": "Game Provider",
+        "vendorPlaceholder": "Select Game Provider",
+        "subGameLabel": "Game",
+        "subGamePlaceholder": "Select Game",
+        "issueNumberLabel": "Issue No.",
+        "issueNumberPlaceholder": "Lottery Issue No.",
+        "orderStateLabel": "Bet Status",
+        "orderStatePlaceholder": "Select Status",
+        "userTypeLabel": "User Type",
+        "userTypePlaceholder": "Select User Type",
+        "roundLabel": "Round No.",
+        "roundPlaceholder": "Game Round No.",
+        "timeLabel": "Time",
+        "timeTypePlaceholder": "Select Time Type",
+        "timePlaceholder": "Select End Time",
+        "betTimeLabel": "Bet Time",
+        "settleTimeLabel": "Settlement Time",
+        "betAmountLabel": "Bet Amount",
+        "minAmountPlaceholder": "Min Amount",
+        "maxAmountPlaceholder": "Max Amount",
+        "winLoseAmountLabel": "Profit/Loss Amount",
+        "followOrderLabel": "Follow Strategy No.",
+        "followOrderPlaceholder": "Follow Strategy Order No.",
+        "userTypes": {
+          "formal": "Regular Member",
+          "test": "Test Member"
+        },
+        "timeTypes": {
+          "betTime": "Bet Time",
+          "settleTime": "Settlement Time"
+        },
+        "validation": {
+          "timeRequired": "Please select query time",
+          "timeRangeRequired": "Please select query time",
+          "endTimeLimit": "End time cannot be greater than",
+          "maxDays15": "Select a time within 15 days",
+          "maxDays31": "Select a time within 31 days"
+        },
+        "tips": {
+          "memberIdQuery": "By Member ID: Limit any 31-day range (max span 31 days)",
+          "orderQuery": "By Game Order No.: No time limit",
+          "emptyQuery": "Both Member ID and Game Order No. empty: time range limited to 15 days (max span 15 days)"
+        }
+      },
+      "status": {
+        "unsettled": "Unsettled",
+        "settled": "Settled",
+        "cancelled": "Cancelled",
+        "refunded": "Refunded",
+        "voided": "Voided",
+        "earlySettled": "Early Settled",
+        "resettled": "Resettled"
+      },
+      "winLose": {
+        "lose": "Lose",
+        "win": "Win",
+        "tie": "Tie",
+        "halfLose": "Half Lose",
+        "halfWin": "Half Win"
+      },
+      "modal": {
+        "detailTitle": "Bet Detail"
+      },
+      "export": {
+        "fileName": "Game Bet Orders"
+      },
+      "info": {
+        "memberSection": {
+          "title": "Member Info",
+          "memberId": "Member ID",
+          "currency": "Currency",
+          "betIP": "Bet IP"
+        },
+        "gameSection": {
+          "title": "Game Info",
+          "orderNo": "Bet Order No.",
+          "gameCategory": "Game Category",
+          "vendor": "Game Provider",
+          "gameName": "Game Name",
+          "gameCode": "Game Code",
+          "betAmount": "Bet Amount",
+          "validAmount": "Valid Bet Amount",
+          "feeAmount": "Handling Fee",
+          "winAmount": "Winning Amount",
+          "winLoseAmount": "Win/Lose Amount",
+          "status": "Status",
+          "betTime": "Bet Time",
+          "settlementTime": "Settlement Time",
+          "createTime": "Created Time",
+          "updateTime": "Updated Time"
+        },
+        "sportsSection": {
+          "title": "Sports Bet Info",
+          "leagueInfo": "League Info",
+          "teamInfo": "Team Info",
+          "betContent": "Bet Content",
+          "odds": "Odds",
+          "handicapType": "Handicap Type",
+          "winLoseType": "Win/Lose Type",
+          "result": "Result",
+          "remark": "Remark-Version"
+        },
+        "liveSection": {
+          "title": "Live Casino Bet Info",
+          "tableNo": "Table No.",
+          "roundIssue": "Round/Issue No.",
+          "betContent": "Bet Content",
+          "drawResult": "Results",
+          "remark": "Remark-Version"
+        },
+        "cardSection": {
+          "title": "Card Game Bet Info",
+          "tableNo": "Table No.",
+          "roundIssue": "Round/Issue No.",
+          "betContent": "Bet Content",
+          "drawResult": "Results"
+        },
+        "lotterySection": {
+          "title": "Lottery Bet Info",
+          "issueNumber": "Issue No.",
+          "odds": "Odds",
+          "betMultiple": "Bet Multiple",
+          "playType": "Play Type",
+          "betContent": "Bet Content",
+          "drawResult": "Results"
+        }
+      }
+    },
+    "subgame": {
+      "title": "Game Management",
+      "addButton": "Add Game",
+      "batchEnableButton": "Batch Enable",
+      "batchDisableButton": "Batch Disable",
+      "search": {
+        "gameNameLabel": "Game Name",
+        "gameNamePlaceholder": "Game Name",
+        "gameIdLabel": "Game ID/Code",
+        "gameIdPlaceholder": "Game ID or Game Code",
+        "categoryLabel": "Game Category",
+        "categoryPlaceholder": "Select Game Category",
+        "vendorLabel": "Game Provider",
+        "vendorPlaceholder": "Select Game Provider",
+        "stateLabel": "Game Status",
+        "statePlaceholder": "Select Status",
+        "mappingRoleLabel": "Mapping Role",
+        "mappingRolePlaceholder": "Select Mapping Role"
+      },
+      "columns": {
+        "gameId": "Game ID",
+        "gameName": "Game Name",
+        "gameCode": "Game Code",
+        "vendor": "Vendor",
+        "category": "Game Category",
+        "gameImage": "Game Image",
+        "displayCategory": "Display Categories",
+        "mappingRole": "Mapping Role",
+        "mappingRelation": "Mapping Relation",
+        "maxMultiple": "Max Multiplier",
+        "maxBetAmount": "Max Bet Rate",
+        "sort": "Sort",
+        "state": "Status",
+        "createTime": "Created Time",
+        "updateTime": "Last Update Time",
+        "operator": "Operator",
+        "clicks": "Clicks"
+      },
+      "mappingRole": {
+        "normal": "Normal",
+        "source": "Mapping Source",
+        "target": "Mapping Target"
+      },
+      "status": {
+        "enabled": "Enabled",
+        "disabled": "Disabled"
+      },
+      "actions": {
+        "edit": "Edit",
+        "switch": "Switch",
+        "batchEnable": "One-click Enable",
+        "batchDisable": "One-click Disable"
+      },
+      "messages": {
+        "batchOperationConfirm": "Are you sure to {action} the selected games?",
+        "noSelectionWarning": "Please select data to operate",
+        "operationSuccess": "Operation successful",
+        "batchOperationSuccess": "Batch operation successful",
+        "switchSuccess": "Switch successful",
+        "batchEnableTitle": "Batch Enable Games",
+        "batchDisableTitle": "Batch Disable Games",
+        "batchEnableConfirm": "Enable games?",
+        "batchDisableConfirm": "Disable games?"
+      },
+      "edit": {
+        "title": "Game Edit",
+        "gameNameCn": "Game Name (Chinese)",
+        "gameNameEn": "Game Name (English)",
+        "sort": "Sort",
+        "gameImage": "Game Image",
+        "displayCategory": "Display Categories",
+        "validation": {
+          "gameNameCnRequired": "Enter Chinese game name",
+          "gameNameEnRequired": "Enter English game name",
+          "imageRequired": "Please upload game image",
+          "validImageRequired": "Please upload a valid image",
+          "sortRequired": "Enter sort value",
+          "sortMinValue": "Sort value cannot be less than 0",
+          "displayCategoryRequired": "Select display categories"
+        },
+        "messages": {
+          "editSuccess": "Updated successfully",
+          "createSuccess": "Created successfully"
+        }
+      }
+    },
+    "transfer": {
+      "title": "Game Transfer Records",
+      "columns": {
+        "memberId": "Member ID",
+        "platformOrderNo": "Platform Order No.",
+        "transferAmount": "Transfer Amount",
+        "currency": "Currency",
+        "triggerVendor": "Trigger Vendor for Credit",
+        "payType": "Transaction Type",
+        "transactionStatus": "Transaction Status",
+        "remark": "Remark",
+        "transactionTime": "Transaction Time"
+      },
+      "payTypes": {
+        "transferIn": "Transfer In (Credit)",
+        "transferOut": "Transfer Out (Debit)"
+      },
+      "transactionStatus": {
+        "processing": "Processing",
+        "success": "Success",
+        "failed": "Failed"
+      },
+      "search": {
+        "platformOrderNo": "Platform Order No.",
+        "platformOrderNoPlaceholder": "Enter platform order No.",
+        "memberId": "Member ID",
+        "memberIdPlaceholder": "Enter Member ID",
+        "triggerVendor": "Trigger Vendor for Credit",
+        "vendorPlaceholder": "Select Game Provider",
+        "transferType": "Transfer Type",
+        "transferTypePlaceholder": "Select Transaction Type",
+        "transactionStatus": "Transaction Status",
+        "transactionStatusPlaceholder": "Select Transaction Status",
+        "time": "Time",
+        "today": "Today",
+        "yesterday": "Yesterday",
+        "thisWeek": "This Week",
+        "lastWeek": "Last Week",
+        "thisMonth": "This Month",
+        "lastMonth": "Last Month"
+      },
+      "validation": {
+        "selectTime": "Please select query time",
+        "endTimeLimit": "End time cannot be greater than",
+        "selectWithin15Days": "Select a time within 15 days",
+        "selectWithin31Days": "Select a time within 31 days"
+      },
+      "tips": {
+        "memberIdQuery": "By Member ID: Limit any 31-day range (max span 31 days)",
+        "orderQuery": "By Platform Order No.: No time limit",
+        "emptyQuery": "Both Member ID and Platform Order No. empty: time range limited to 15 days (max span 15 days)"
+      }
+    },
+    "types": {
+      "0": "Electronic Games",
+      "1": "Live Casino",
+      "2": "Sports Betting",
+      "3": "Lottery",
+      "4": "Card Games"
+    },
+    "status": {
+      "0": "Disabled",
+      "1": "Enabled",
+      "2": "Under Maintenance"
+    },
+    "lottery": {
+      "Num": "Number",
+      "Color": "Color",
+      "Green": "Green",
+      "Red": "Red",
+      "Violet": "Violet",
+      "OddEven": "Odd/Even",
+      "BigSmall": "Big/Small",
+      "Small": "Small",
+      "Big": "Big",
+      "Even": "Even",
+      "Odd": "Odd",
+      "SumNum": "Sum",
+      "SumBigSmall": "Sum Big/Small",
+      "SumOddEven": "Sum Odd/Even",
+      "NumSame2": "Two Same Single",
+      "NumSame2Mult": "Two Same Multiple",
+      "NumSame3": "Three Same Single",
+      "NumSame3All": "Three Same All",
+      "NumDiff3": "Three Different",
+      "NumNear3All": "Three Consecutive All",
+      "NumDiff2": "Two Different",
+      "FirstNum": "First Digit",
+      "FirstBigSmall": "First Big/Small",
+      "FirstOddEven": "First Odd/Even",
+      "SecondNum": "Second Digit",
+      "SecondBigSmall": "Second Big/Small",
+      "SecondOddEven": "Second Odd/Even",
+      "ThirdNum": "Third Digit",
+      "ThirdBigSmall": "Third Big/Small",
+      "ThirdOddEven": "Third Odd/Even",
+      "FourthNum": "Fourth Digit",
+      "FourthBigSmall": "Fourth Big/Small",
+      "FourthOddEven": "Fourth Odd/Even",
+      "FifthNum": "Fifth Digit",
+      "FifthBigSmall": "Fifth Big/Small",
+      "FifthOddEven": "Fifth Odd/Even",
+      "D5_SumBigSmall": "Sum Big/Small",
+      "D5_SumOddEven": "Sum Odd/Even"
+    },
+    "financial": {
+      "TransIn": "Merchant Transfer In (Top Up)",
+      "TransOut": "Merchant Transfer Out (Withdraw)",
+      "TransReturn": "Merchant Transfer Return",
+      "GameBet": "Place Bet",
+      "GameEnd": "Settlement",
+      "GameTransIn": "Game Top Up",
+      "GameTransOut": "Game Withdraw",
+      "GameReduce": "Game Deduction",
+      "GamePlus": "Game Credit Adjustment",
+      "GameActivityPlus": "Game Activity Reward",
+      "GameReturn": "Game Refund",
+      "GameCombineEnd": "Combined Settlement",
+      "GameCancel": "Game Cancellation"
+    }
+  }
+}

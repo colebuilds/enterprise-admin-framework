@@ -1,0 +1,57 @@
+{
+  "dashboard": {
+    "welcome": {
+      "eyebrow": "Workspace",
+      "title": "Workspace cepat",
+      "description": "Shows shortcut access to the pages the saat ini akun Dapat open directly.",
+      "shortcutCount": "tersedia Pintasan",
+      "shortcutsTitle": "Pintasan",
+      "shortcutsDescription": "Built from the same route and izin scope as the top header menu, then expanded into all directly accessible child pages for the saat ini akun.",
+      "emptyTitle": "No Pintasan tersedia",
+      "emptyDescription": "This akun has no directly accessible pages. Contact an administrator to grant access."
+    },
+    "console": {
+      "cards": {
+        "visits": {
+          "title": "Kunjungan",
+          "tag": "hari",
+          "dayCompare": "hari-over-hari",
+          "weekCompare": "minggu-over-minggu",
+          "total": "Total Kunjungan:"
+        },
+        "sales": {
+          "title": "Penjualan",
+          "tag": "minggu",
+          "total": "Total Penjualan:"
+        },
+        "orders": {
+          "title": "Pesanan",
+          "tag": "minggu",
+          "dayCompare": "hari-over-hari",
+          "weekCompare": "minggu-over-minggu",
+          "conversionRate": "Conversion Tarif:"
+        },
+        "volume": {
+          "title": "Volume",
+          "tag": "bulan",
+          "monthCompare": "bulan-over-bulan",
+          "total": "Total Volume:"
+        }
+      },
+      "icons": {
+        "user": "pengguna",
+        "analysis": "analisis",
+        "product": "Produk",
+        "order": "pesanan",
+        "ticket": "Tiket",
+        "message": "pesan",
+        "tag": "tag",
+        "config": "konfigurasi"
+      },
+      "tabs": {
+        "fluxTrend": "Tren traffic",
+        "visitAmount": "Visit Jumlah"
+      }
+    }
+  }
+}

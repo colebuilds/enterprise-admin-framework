@@ -1,0 +1,4316 @@
+{
+  "operations": {
+    "cloudflare": {
+      "index": {
+        "title": "Cloudflare Management",
+        "tabs": {
+          "domainReport": "Domain Report",
+          "domainWAF": "Domain WAF Management"
+        }
+      },
+      "domainReport": {
+        "columns": {
+          "domain": "Domain",
+          "visitorNum": "Unique Visitors",
+          "date": "Date"
+        },
+        "form": {
+          "domain": "Domain",
+          "date": "Date",
+          "domainPlaceholder": "Please select"
+        },
+        "validation": {
+          "domainRequired": "Please enter domain",
+          "dateRequired": "Please select date"
+        },
+        "messages": {
+          "selectDomain": "Please select domain"
+        },
+        "details": {
+          "columns": {
+            "domain1": "Domain/IP(1)",
+            "domain2": "Domain/IP(2)",
+            "remark": "Remark",
+            "status": "Status",
+            "executedAt": "Executed At"
+          },
+          "status": {
+            "success": "Success",
+            "failed": "Failed"
+          }
+        }
+      },
+      "domainWAF": {
+        "columns": {
+          "name": "Name",
+          "action": "Action",
+          "ruleType": "Rule Type",
+          "enabled": "Enabled"
+        },
+        "form": {
+          "domain": "Domain",
+          "domainPlaceholder": "Please select",
+          "ruleName": "Rule Name",
+          "limitRule": "Limit Rule",
+          "action": "Action",
+          "logging": "Log Matching Requests",
+          "loggingTip": "When disabled, matching requests will not appear in the \"Security\" overview",
+          "skipComponents": "Skip WAF Components",
+          "position": "Position",
+          "afterRule": "Select which rule will trigger after this:",
+          "conditionTip": "The relationship between condition groups is OR, and the relationship within each condition group is AND",
+          "conditionGroup": "Condition Group {index}",
+          "conditionRelation": "Condition relationship within this group: AND",
+          "field": "Field",
+          "operator": "Operator",
+          "value": "Value",
+          "placeholder": "Please select",
+          "selectOrInput": "Please select or input",
+          "inputExample": "Please input (e.g: /content )"
+        },
+        "validation": {
+          "domainRequired": "Please select domain",
+          "positionRequired": "Position cannot be empty",
+          "descriptionRequired": "Rule name cannot be empty",
+          "actionRequired": "Action cannot be empty",
+          "fieldRequired": "Field in group {group} condition row {row} cannot be empty",
+          "operatorRequired": "Operator in group {group} condition row {row} cannot be empty",
+          "valueRequired": "Value in group {group} condition row {row} cannot be empty"
+        },
+        "actions": {
+          "add": "Add",
+          "edit": "Edit",
+          "delete": "Delete",
+          "deleteGroup": "Delete Group",
+          "addCondition": "Add Condition",
+          "addConditionGroup": "Add Condition Group",
+          "cancel": "Cancel",
+          "save": "Save"
+        },
+        "status": {
+          "enable": "Enable",
+          "disable": "Disable"
+        },
+        "dialog": {
+          "addRule": "Add Rule",
+          "editRule": "Edit Rule"
+        },
+        "messages": {
+          "selectDomain": "Please select domain to query"
+        }
+      },
+      "useCloudFlare": {
+        "state": {
+          "initializing": "Initializing",
+          "pending": "Pending",
+          "active": "Active",
+          "moved": "Moved"
+        },
+        "clearState": {
+          "clearing": "Clearing",
+          "success": "Clear Success",
+          "failed": "Clear Failed"
+        },
+        "model": {
+          "off": "Off",
+          "flexible": "Flexible",
+          "full": "Full",
+          "strict": "Full (Strict)"
+        },
+        "ttl": {
+          "auto": "Auto",
+          "1min": "1 Minute",
+          "2min": "2 Minutes",
+          "5min": "5 Minutes",
+          "10min": "10 Minutes",
+          "15min": "15 Minutes",
+          "30min": "30 Minutes",
+          "1hour": "1 Hour",
+          "2hour": "2 Hours",
+          "5hour": "5 Hours",
+          "12hour": "12 Hours",
+          "1day": "1 Day"
+        }
+      },
+      "useRule": {
+        "position": {
+          "first": "First",
+          "last": "Last",
+          "custom": "Custom"
+        }
+      }
+    },
+    "imageCrop": {
+      "title": "Image Crop",
+      "settingsTitle": "Crop Settings",
+      "workspaceTitle": "Crop Workspace",
+      "resultTitle": "Crop Result",
+      "sourceTitle": "Source Info",
+      "sourceName": "File Name",
+      "sourceFormat": "Format",
+      "sourceSize": "File Size",
+      "sourceWidth": "Source Width",
+      "sourceHeight": "Source Height",
+      "adjustTitle": "Adjustments",
+      "cropDataTitle": "Crop Data",
+      "resultPreviewTitle": "Result Preview",
+      "aspectRatio": "Aspect Ratio",
+      "aspectRatioPlaceholder": "Please select aspect ratio",
+      "customRatio": "Custom Ratio",
+      "outputWidth": "Output Width",
+      "outputHeight": "Output Height",
+      "exportFormat": "Export Format",
+      "exportFormatPlaceholder": "Please select export format",
+      "exportFormatOriginal": "Keep Source Format",
+      "exportFormatPng": "PNG",
+      "exportFormatJpeg": "JPEG",
+      "exportFormatWebp": "WebP",
+      "exportQuality": "Export Quality",
+      "exportQualityHint": "Only applies to JPEG / WebP",
+      "quickTemplatesTitle": "Ops Quick Presets",
+      "quickTemplatesHint": "Preset sizes are based on current project usage. Click one to apply instantly.",
+      "configTitle": "Crop & Export Settings",
+      "quickCategoryBanner": "Banner",
+      "quickCategoryGame": "Game Image",
+      "quickCategoryAnnouncement": "Announcement",
+      "quickPresetHomePromoBanner": "Home Promo Banner",
+      "quickPresetActivityBanner": "Activity Banner",
+      "quickPresetActivityTopBanner": "Activity Top Image",
+      "quickPresetGameHorizontalCover": "Game Horizontal Cover",
+      "quickPresetGameCard": "Game Card Image",
+      "quickPresetGameSquareIcon": "Game Square Icon",
+      "quickPresetAnnouncementThumbnail": "Message Thumbnail",
+      "quickPresetAnnouncementCard": "Announcement Card",
+      "quickPresetAnnouncementPoster": "Announcement Poster",
+      "previewSize": "Preview Width",
+      "previewSizePlaceholder": "Please select preview width",
+      "uploadImage": "Upload Image",
+      "selectImage": "Select Image",
+      "cropTitle": "Image Crop",
+      "imageUrl": "Image URL",
+      "resultSize": "Result Size",
+      "generateResult": "Generate Result",
+      "downloadResult": "Download Result",
+      "clearResult": "Clear Result",
+      "zoom": "Zoom",
+      "zoomIn": "Zoom In",
+      "zoomOut": "Zoom Out",
+      "rotateLeft": "Rotate Left 90°",
+      "rotateRight": "Rotate Right 90°",
+      "rotateFineStep": "Fine Rotation (°)",
+      "rotateFineLeft": "Rotate Left -{step}°",
+      "rotateFineRight": "Rotate Right +{step}°",
+      "flipHorizontal": "Flip Horizontal",
+      "flipVertical": "Flip Vertical",
+      "dragMode": "Drag Mode",
+      "dragModeFree": "Free Drag",
+      "dragModeLocked": "Lock View",
+      "cropX": "Crop X",
+      "cropY": "Crop Y",
+      "cropWidth": "Crop Width",
+      "cropHeight": "Crop Height",
+      "rotateValue": "Rotation",
+      "flipXValue": "Flip Horizontal",
+      "flipYValue": "Flip Vertical",
+      "resetCropper": "Reset View",
+      "clearOperationData": "Clear Operation Data",
+      "historyTitle": "History",
+      "historySourceTab": "Source",
+      "historyExportTab": "Compressed",
+      "historyUse": "Use",
+      "historyLocateSource": "Locate Source",
+      "historyDownload": "Download",
+      "historyRemove": "Remove",
+      "historyClear": "Clear",
+      "historySourceLabel": "Source",
+      "historySourceMissing": "Related source image was not found.",
+      "historyEmpty": "No history records",
+      "historyBlobMissing": "This history file was cleaned. Please generate again.",
+      "historyQualityValue": "Q {quality}",
+      "workspaceEmpty": "Please select an image to start cropping",
+      "empty": "Please upload and crop an image first",
+      "tip": "Select an image, adjust it in the workspace, then generate the result for preview and download."
+    },
+    "eventTrackManage": {
+      "index": {
+        "title": "Third-party Event Tracking",
+        "tabs": {
+          "services": "Server-side Event Records",
+          "facebook": "Facebook Pixel Attribution",
+          "adjust": "Adjust Configuration",
+          "appsflyer": "AppsFlyer Configuration",
+          "googleAnalytics": "Google Analytics",
+          "googleAds": "Google Ads"
+        }
+      },
+      "adjust": {
+        "index": {
+          "title": "Adjust Management",
+          "recentModifications": "Recent 3 modifications of Adjust pixel enabled",
+          "channelName": "Channel Name",
+          "appToken": "App Token",
+          "createTime": "Create Time",
+          "remark": "Remark",
+          "actionsColumn": "Actions",
+          "addApp": "Add Application",
+          "tokenConfig": "Token Configuration",
+          "adjustAppConfig": "Adjust App Configuration",
+          "eventTokenConfig": "Event Token Configuration",
+          "eventToken": "Event Token",
+          "triggerMode": "Trigger Mode",
+          "serverParams": "Server Parameters",
+          "customParams": "Custom Parameters",
+          "noEventConfig": "No event configuration",
+          "addConfigTitle": "Add Adjust Configuration",
+          "editConfigTitle": "Edit Adjust Configuration",
+          "addSuccess": "Add successful",
+          "editSuccess": "Edit successful",
+          "messages": {
+            "getKeyFailed": "Failed to get Adjust configuration key",
+            "getKeyError": "Failed to get Adjust configuration key",
+            "getEventListFailed": "Failed to get event list",
+            "updateFailed": "Update failed",
+            "adjustPixelEnabled": "Adjust pixel enabled",
+            "adjustPixelDisabled": "Adjust pixel disabled",
+            "loadDataFailed": "Failed to load data"
+          },
+          "dialog": {
+            "tip": "Tip",
+            "confirmClose": "Are you sure to close Adjust?",
+            "confirmEnable": "Are you sure to",
+            "confirm": "Confirm",
+            "cancel": "Cancel"
+          },
+          "switch": {
+            "enableAdjust": "Enable Adjust",
+            "viewHistory": "Click to view history records",
+            "on": "On",
+            "off": "Off"
+          },
+          "triggerModes": {
+            "clientOnly": "Client Only",
+            "serverOnly": "Server Pass Value",
+            "clientAndServer": "Client + Server"
+          },
+          "actions": {
+            "delete": "Delete",
+            "edit": "Edit",
+            "modify": "Modify",
+            "view": "View"
+          }
+        },
+        "configModal": {
+          "form": {
+            "appToken": "App Token",
+            "channelName": "Channel Name",
+            "remark": "Remark",
+            "appTokenPlaceholder": "Please enter Adjust App Token",
+            "channelNamePlaceholder": "Please enter channel name",
+            "remarkPlaceholder": "Please enter remark information"
+          },
+          "validation": {
+            "appTokenRequired": "Please enter app token",
+            "channelNameRequired": "Please enter channel name",
+            "channelNameFormat": "Please enter correct channel name (letters, numbers, spaces, -, _)"
+          },
+          "messages": {
+            "submitSuccess": "Submit successful",
+            "submitFailed": "Submit failed"
+          },
+          "actions": {
+            "cancel": "Cancel",
+            "save": "Save"
+          }
+        },
+        "addConfigModal": {
+          "form": {
+            "packageName": "Package Name",
+            "packageNamePlaceholder": "Please enter package name",
+            "bundleId": "Package Name/Bundle ID",
+            "platformType": "Platform Type",
+            "platformTypePlaceholder": "Please select platform type",
+            "apiUrl": "API URL",
+            "apiUrlFeedback": "Adjust event reporting URL, default: https://s2s.adjust.com",
+            "status": "Status",
+            "statusOn": "On",
+            "statusOff": "Off",
+            "tip": "Tip",
+            "tipText": "Please use the current package name to go to the adjust backend configuration and get the appToken"
+          },
+          "validation": {
+            "channelExists": "Channel name already exists, please modify",
+            "packageNameInvalid": "Package name format is incorrect, please modify",
+            "bundleIdRequired": "Please enter package name"
+          },
+          "messages": {
+            "copySuccess": "Copy successful"
+          },
+          "actions": {
+            "nextStep": "Next Step",
+            "prevStep": "Previous Step",
+            "save": "Save",
+            "copy": "Copy"
+          }
+        },
+        "eventToken": {
+          "form": {
+            "eventTokenPlaceholder": "Please enter event token"
+          },
+          "validation": {
+            "notEmpty": "cannot be empty"
+          },
+          "messages": {
+            "updateSuccess": "Update event successful",
+            "updateFailed": "Update event failed",
+            "getTokenListFailed": "Get event token list failed"
+          },
+          "actions": {
+            "cancel": "Cancel",
+            "save": "Save"
+          }
+        },
+        "triggerModes": {
+          "clientOnly": "Client Only",
+          "serverOnly": "Server Only",
+          "clientAndServer": "Client + Server"
+        }
+      },
+      "appsflyer": {
+        "index": {
+          "title": "AppsFlyer Management",
+          "recentModifications": "Recent 3 modifications of AppsFlyer pixel enabled",
+          "appName": "App Name",
+          "platform": "Platform",
+          "status": "Status",
+          "createTime": "Create Time",
+          "remark": "Remark",
+          "actionsColumn": "Actions",
+          "addConfig": "Add Configuration",
+          "editConfig": "Edit Configuration",
+          "addAppsflyerConfig": "Add AppsFlyer Configuration",
+          "editAppsflyerConfig": "Edit AppsFlyer Configuration",
+          "eventConfig": "Event Configuration",
+          "triggerMethod": "Trigger Method",
+          "serverParams": "Server Parameters",
+          "customParams": "Custom Parameters",
+          "noEventConfig": "No event configuration",
+          "platforms": {
+            "web": "Web",
+            "ios": "iOS",
+            "android": "Android",
+            "unknown": "Unknown"
+          },
+          "messages": {
+            "getKeyFailed": "Failed to get AppsFlyer configuration key",
+            "getKeyError": "Error getting AppsFlyer configuration key",
+            "updateFailed": "Update failed",
+            "appsflyerPixelEnabled": "AppsFlyer pixel enabled",
+            "appsflyerPixelDisabled": "AppsFlyer pixel disabled",
+            "statusUpdateFailed": "Status update failed",
+            "statusUpdateSuccess": "Status {action} successful",
+            "deleteFailed": "Delete failed",
+            "deleteSuccess": "Delete successful",
+            "getEventListFailed": "Failed to get event list",
+            "loadDataFailed": "Failed to load data",
+            "addSuccess": "Added successfully",
+            "editSuccess": "Edited successfully"
+          },
+          "dialog": {
+            "tip": "Tip",
+            "confirmClose": "Are you sure to close AppsFlyer?",
+            "confirmEnable": "Are you sure",
+            "confirmStatus": "Are you sure to {action}",
+            "confirm": "Confirm",
+            "cancel": "Cancel"
+          },
+          "actions": {
+            "enable": "Enable",
+            "disable": "Disable",
+            "delete": "Delete",
+            "edit": "Edit"
+          }
+        },
+        "configModal": {
+          "form": {
+            "appName": "App Name",
+            "appNamePlaceholder": "Please enter app name",
+            "devKey": "Dev Key",
+            "devKeyPlaceholder": "Please enter AppsFlyer Dev Key",
+            "devKeyFeedback": "AppsFlyer application developer key",
+            "s2sToken": "S2S token",
+            "s2sTokenPlaceholder": "Please enter AppsFlyer S2S token",
+            "s2sTokenFeedback": "AppsFlyer application S2S token",
+            "appId": "app ID",
+            "appIdPlaceholder": "Please enter App Store ID or package name",
+            "appIdFeedback": "iOS is App Store ID, Android is package name",
+            "platformType": "Platform Type",
+            "platformTypePlaceholder": "Please select platform type",
+            "apiUrl": "API URL",
+            "apiUrlPlaceholder": "https://events.appsflyer.com",
+            "apiUrlFeedback": "AppsFlyer event reporting URL, default: https://events.appsflyer.com",
+            "status": "Status",
+            "statusOn": "On",
+            "statusOff": "Off",
+            "remark": "Remark",
+            "remarkPlaceholder": "Please enter remark"
+          },
+          "validation": {
+            "appNameRequired": "Please enter app name",
+            "devKeyRequired": "Please enter AppsFlyer Dev Key",
+            "s2sTokenRequired": "Please enter AppsFlyer S2S token",
+            "appIdRequired": "Please enter App Store ID or package name",
+            "platformTypeRequired": "Please select platform type",
+            "apiUrlRequired": "Please enter API URL"
+          },
+          "messages": {
+            "submitSuccess": "Submit successful",
+            "submitFailed": "Submit failed"
+          },
+          "actions": {
+            "cancel": "Cancel",
+            "save": "Save"
+          }
+        }
+      },
+      "facebook": {
+        "index": {
+          "title": "Facebook Pixel ID Configuration",
+          "recentModifications": "Recent 3 modifications of Facebook pixel enabled",
+          "pixelId": "Pixel ID",
+          "packageName": "Channel Name",
+          "accessToken": "Access Token",
+          "createTime": "Create Time",
+          "remark": "Remark",
+          "actionsColumn": "Actions",
+          "addPixelId": "Add Pixel ID",
+          "editConfig": "Edit Facebook Configuration",
+          "addConfig": "Add Facebook Configuration",
+          "eventConfig": "Event Configuration",
+          "noEventConfig": "No event configuration",
+          "triggerMethod": "Trigger Method",
+          "serverParams": "Server Parameters",
+          "customParams": "Custom Parameters",
+          "batchAdd": "Batch Add",
+          "batchAddTitle": "Batch Add Facebook Configuration",
+          "messages": {
+            "getKeyFailed": "Failed to get Facebook configuration key",
+            "getKeyError": "Error getting Facebook configuration key",
+            "updateFailed": "Update failed",
+            "facebookPixelEnabled": "Facebook pixel enabled",
+            "facebookPixelDisabled": "Facebook pixel disabled",
+            "loadDataFailed": "Failed to load data",
+            "getEventListFailed": "Failed to get event list",
+            "addSuccess": "Add successful",
+            "editSuccess": "Edit successful"
+          },
+          "dialog": {
+            "tip": "Tip",
+            "confirmClose": "Close Facebook pixel?",
+            "confirmEnable": "Are you sure",
+            "confirm": "Confirm",
+            "cancel": "Cancel"
+          },
+          "switch": {
+            "enableFacebook": "Enable Facebook pixel",
+            "viewHistory": "Click to view modification history",
+            "on": "On",
+            "off": "Off"
+          },
+          "triggerModes": {
+            "clientOnly": "Client Only",
+            "serverOnly": "Server Only",
+            "clientAndServer": "Client + Server"
+          },
+          "actions": {
+            "enable": "Enable",
+            "disable": "Disable",
+            "delete": "Delete",
+            "edit": "Edit"
+          }
+        },
+        "configModal": {
+          "form": {
+            "pixelId": "Pixel ID",
+            "pixelIdPlaceholder": "Please enter Facebook pixel ID",
+            "packageName": "Channel Name",
+            "packageNamePlaceholder": "Please enter channel name",
+            "accessToken": "Access Token",
+            "accessTokenPlaceholder": "Please enter Facebook Access Token",
+            "accessTokenFeedback": "Access token for Facebook API calls",
+            "remark": "Remark",
+            "remarkPlaceholder": "Please enter remark"
+          },
+          "validation": {
+            "pixelIdRequired": "Please enter Facebook pixel ID",
+            "packageNameRequired": "Please enter channel name",
+            "packageNameFormat": "Please enter correct channel name (letters, numbers, spaces, -, _)",
+            "accessTokenRequired": "Please enter Facebook Access Token"
+          },
+          "messages": {
+            "submitSuccess": "Submit successful",
+            "submitFailed": "Submit failed"
+          },
+          "actions": {
+            "cancel": "Cancel",
+            "save": "Save"
+          }
+        },
+        "addBatches": {
+          "title": "Batch Add Facebook Configuration",
+          "form": {
+            "batchInputLabel": "FBID + Tab + Token + Tab + Name (Multiple data separated by line breaks)",
+            "batchInputPlaceholder": "Multiple data separated by line breaks"
+          },
+          "validation": {
+            "configListRequired": "Please enter batch add content"
+          },
+          "messages": {
+            "addSuccess": "Add successful",
+            "editSuccess": "Edit successful"
+          },
+          "actions": {
+            "cancel": "Cancel",
+            "preview": "Preview",
+            "save": "Save"
+          },
+          "preview": {
+            "title": "Batch Template Preview",
+            "pixelIdColumn": "Pixel ID",
+            "accessTokenColumn": "Access Token",
+            "packageNameColumn": "Channel Name"
+          }
+        }
+      },
+      "googleAds": {
+        "index": {
+          "title": "Google Ads Management",
+          "recentModifications": "Recent 3 Google Ads modifications",
+          "accountName": "Account Name",
+          "customerId": "Customer ID",
+          "conversionId": "Conversion ID",
+          "conversionLabel": "Conversion Label",
+          "platform": "Platform",
+          "status": "Status",
+          "createTime": "Create Time",
+          "remark": "Remark",
+          "actionsColumn": "Actions",
+          "addAccount": "Add Account",
+          "conversionConfig": "Conversion Configuration",
+          "eventConfig": "Event Configuration",
+          "noEventConfig": "No event configuration",
+          "triggerMethod": "Trigger Method",
+          "serverParams": "Server Parameters",
+          "customParams": "Custom Parameters",
+          "editAccountTitle": "Edit Google Ads Account",
+          "addAccountTitle": "Add Google Ads Account",
+          "addSuccess": "Add successful",
+          "editSuccess": "Edit successful",
+          "messages": {
+            "getKeyFailed": "Failed to get Google Ads configuration key",
+            "getKeyError": "Failed to get Google Ads configuration key",
+            "updateFailed": "Update failed",
+            "statusUpdateFailed": "Status update failed",
+            "statusUpdateSuccess": "Status {action} successful",
+            "googleAdsEnabled": "Google Ads enabled",
+            "googleAdsDisabled": "Google Ads disabled",
+            "loadDataFailed": "Failed to load data",
+            "deleteFailed": "Delete failed",
+            "deleteSuccess": "Delete successful",
+            "getEventListFailed": "Failed to get event list"
+          },
+          "dialog": {
+            "tip": "Tip",
+            "confirmClose": "Confirm to close Google Ads?",
+            "confirmStatus": "Confirm to {action}",
+            "confirm": "Confirm",
+            "cancel": "Cancel"
+          },
+          "switch": {
+            "enableGoogleAds": "Enable Google Ads",
+            "viewHistory": "Click to view modification history",
+            "on": "On",
+            "off": "Off"
+          },
+          "triggerModes": {
+            "clientOnly": "Client only",
+            "serverOnly": "Server only",
+            "clientAndServer": "Client + Server"
+          },
+          "actions": {
+            "enable": "Enable",
+            "disable": "Disable",
+            "delete": "Delete",
+            "edit": "Edit"
+          }
+        },
+        "configModal": {
+          "form": {
+            "accountName": "Account Name",
+            "accountNamePlaceholder": "Please enter account name",
+            "customerId": "Customer ID",
+            "customerIdPlaceholder": "Please enter customer ID",
+            "conversionId": "Conversion ID",
+            "conversionIdPlaceholder": "Please enter conversion tracking ID",
+            "conversionLabel": "Conversion Label",
+            "conversionLabelPlaceholder": "Please enter conversion label",
+            "apiUrl": "API URL",
+            "apiUrlPlaceholder": "https://www.google.com/pagead/conversion",
+            "apiUrlFeedback": "Google Ads event reporting URL, default: https://www.google.com/pagead/conversion, or use GTM Server container to deploy your own server address",
+            "platformType": "Platform Type",
+            "platformTypePlaceholder": "Please select platform type",
+            "status": "Status",
+            "statusOn": "On",
+            "statusOff": "Off",
+            "remark": "Remark",
+            "remarkPlaceholder": "Please enter remark"
+          },
+          "validation": {
+            "accountNameRequired": "Please enter account name",
+            "customerIdRequired": "Please enter Google Ads customer ID",
+            "conversionIdRequired": "Please enter conversion tracking ID",
+            "conversionLabelRequired": "Please enter conversion label",
+            "apiUrlRequired": "Please enter API URL",
+            "platformTypeRequired": "Please select platform type"
+          },
+          "messages": {
+            "submitSuccess": "Submit successful",
+            "submitFailed": "Submit failed"
+          },
+          "actions": {
+            "cancel": "Cancel",
+            "save": "Save"
+          }
+        }
+      },
+      "googleAnalytics": {
+        "index": {
+          "title": "Google Analytics 4 Management",
+          "recentModifications": "Recent 3 Google Analytics 4 modifications",
+          "projectName": "Project Name",
+          "measurementId": "Measurement ID",
+          "apiKey": "API Key",
+          "apiUrl": "API URL",
+          "dataStreamName": "Data Stream Name",
+          "platform": "Platform",
+          "status": "Status",
+          "createTime": "Create Time",
+          "remark": "Remark",
+          "actionsColumn": "Actions",
+          "addGoogleAnalytics": "Add GoogleAnalytics",
+          "editGoogleAnalytics": "Edit GoogleAnalytics",
+          "googleAnalyticsConfig": "GoogleAnalytics",
+          "eventConfig": "Event Configuration",
+          "noEventConfig": "No event configuration",
+          "triggerMethod": "Trigger Method",
+          "serverParams": "Server Parameters",
+          "customParams": "Custom Parameters",
+          "addSuccess": "Add successful",
+          "editSuccess": "Edit successful",
+          "platforms": {
+            "web": "Web",
+            "ios": "iOS",
+            "android": "Android",
+            "unknown": "Unknown"
+          },
+          "messages": {
+            "getKeyFailed": "Failed to get Google Analytics 4 configuration key",
+            "getKeyError": "Failed to get Google Analytics 4 key",
+            "updateFailed": "Update failed",
+            "statusUpdateFailed": "Status update failed",
+            "statusUpdateSuccess": "Status {action} successful",
+            "googleAnalyticsEnabled": "Google Analytics 4 enabled",
+            "googleAnalyticsDisabled": "Google Analytics 4 disabled",
+            "loadDataFailed": "Failed to load data",
+            "deleteFailed": "Delete failed",
+            "deleteSuccess": "Delete successful",
+            "getEventListFailed": "Failed to get event list"
+          },
+          "dialog": {
+            "tip": "Tip",
+            "confirmClose": "Confirm to close Google Analytics 4",
+            "confirmStatus": "Confirm to {action}",
+            "confirm": "Confirm",
+            "cancel": "Cancel"
+          },
+          "switch": {
+            "enableGoogleAnalytics": "Enable Google Analytics 4",
+            "viewHistory": "Click to view modification history",
+            "on": "On",
+            "off": "Off"
+          },
+          "triggerModes": {
+            "clientOnly": "Client only",
+            "serverOnly": "Server only",
+            "clientAndServer": "Client + Server"
+          },
+          "actions": {
+            "enable": "Enable",
+            "disable": "Disable",
+            "delete": "Delete",
+            "edit": "Edit"
+          }
+        },
+        "configModal": {
+          "form": {
+            "projectName": "Project Name",
+            "projectNamePlaceholder": "Please enter project name",
+            "measurementId": "Measurement ID",
+            "measurementIdPlaceholder": "Please enter measurement ID",
+            "measurementIdFeedback": "Format: G-XXXXXXXXXX",
+            "apiKey": "API Key",
+            "apiKeyPlaceholder": "Please enter API key",
+            "apiUrl": "API URL",
+            "apiUrlPlaceholder": "https://www.google-analytics.com",
+            "apiUrlFeedback": "GA4 event reporting URL, default: https://www.google-analytics.com",
+            "dataStreamName": "Data Stream Name",
+            "dataStreamNamePlaceholder": "Please enter data stream name",
+            "platformType": "Platform Type",
+            "platformTypePlaceholder": "Please select platform type",
+            "status": "Status",
+            "statusOn": "On",
+            "statusOff": "Off",
+            "remark": "Remark",
+            "remarkPlaceholder": "Please enter remark"
+          },
+          "validation": {
+            "projectNameRequired": "Please enter project name",
+            "measurementIdRequired": "Please enter measurement ID (G-XXXXXXXXXX)",
+            "apiKeyRequired": "Please enter API key",
+            "dataStreamNameRequired": "Please enter data stream name"
+          },
+          "messages": {
+            "submitSuccess": "Submit successful",
+            "submitFailed": "Submit failed"
+          },
+          "actions": {
+            "cancel": "Cancel",
+            "save": "Save"
+          }
+        }
+      },
+      "services": {
+        "index": {
+          "title": "Event Tracking Records",
+          "columns": {
+            "time": "Time",
+            "memberId": "Member ID",
+            "platformType": "Platform Type",
+            "eventId": "Event ID",
+            "keyword": "Keyword",
+            "orderNo": "Order No",
+            "status": "Status"
+          },
+          "form": {
+            "memberId": "Member ID",
+            "memberIdPlaceholder": "Please enter member ID",
+            "platformType": "Platform Type",
+            "platformTypePlaceholder": "Please select platform type",
+            "eventId": "Event ID",
+            "eventIdPlaceholder": "Please enter event ID",
+            "keyword": "Keyword",
+            "keywordPlaceholder": "Please enter keyword",
+            "orderNo": "Order No",
+            "orderNoPlaceholder": "Please enter order number",
+            "status": "Status",
+            "statusPlaceholder": "Please select status",
+            "timeRange": "Time Range",
+            "startTime": "Start Time",
+            "endTime": "End Time"
+          },
+          "status": {
+            "success": "Success",
+            "failed": "Failed",
+            "pending": "Pending",
+            "processing": "Processing"
+          },
+          "actions": {
+            "export": "Export",
+            "search": "Search",
+            "reset": "Reset",
+            "query": "Query"
+          },
+          "messages": {
+            "loadDataFailed": "Failed to load data",
+            "exportSuccess": "Export successful",
+            "exportFailed": "Export failed",
+            "noData": "No data available"
+          }
+        }
+      },
+      "logModal": {
+        "columns": {
+          "updateTime": "Update Time",
+          "operatorName": "Operator",
+          "updateContent": "Config Value (Old->New)"
+        },
+        "messages": {
+          "loadDataFailed": "Failed to load data"
+        }
+      }
+    },
+    "maintenance": {
+      "index": {
+        "title": "Maintenance Management",
+        "buttons": {
+          "search": "Search",
+          "reset": "Reset",
+          "add": "Add Maintenance"
+        },
+        "form": {
+          "maintenanceTime": "Maintenance Time",
+          "startTime": "Maintenance Start Time",
+          "endTime": "Maintenance End Time",
+          "status": "Status",
+          "placeholders": {
+            "selectStatus": "Please select status",
+            "selectStartTime": "Please select start time",
+            "selectEndTime": "Please select end time"
+          }
+        },
+        "columns": {
+          "status": "Status",
+          "maintenanceAnnouncement": "Maintenance Announcement",
+          "modifier": "Modifier",
+          "lastModified": "Last Modified",
+          "actions": "Actions"
+        },
+        "status": {
+          "enabled": "Enabled",
+          "disabled": "Disabled"
+        },
+        "actions": {
+          "edit": "Edit"
+        },
+        "dialog": {
+          "setMaintenanceStatus": "Set Maintenance Status",
+          "maintenanceContent": "Maintenance Content",
+          "editMaintenance": "Edit Maintenance",
+          "addMaintenance": "Add Maintenance"
+        },
+        "messages": {
+          "modifySuccess": "Modify Successfully",
+          "confirmStatusChange": "Are you sure to {action} this maintenance?"
+        }
+      },
+      "editMaintenance": {
+        "form": {
+          "startTime": "Maintenance Start Time",
+          "endTime": "Maintenance End Time",
+          "content": "Maintenance Content"
+        },
+        "buttons": {
+          "cancel": "Cancel",
+          "save": "Save"
+        },
+        "validation": {
+          "startTimeRequired": "Start time cannot be empty",
+          "endTimeRequired": "End time cannot be empty",
+          "timesCannotBeSame": "Start time and end time cannot be the same",
+          "endTimeCannotBeEarlier": "End time cannot be earlier than start time",
+          "contentRequired": "Please enter maintenance content"
+        },
+        "messages": {
+          "editSuccess": "Modify Successfully",
+          "addSuccess": "Add Successfully"
+        }
+      }
+    },
+    "materials": {
+      "index": {
+        "title": "Download Promotion",
+        "tabs": {
+          "shareMaterials": "Promotion Share Materials",
+          "downPage": "Download Page Management",
+          "rechargePageAd": "Deposit Page Ad"
+        }
+      },
+      "shareMaterials": {
+        "languageNotice": "Materials for different languages need to be uploaded separately:",
+        "uploadLimit": "Uploaded {count}/5",
+        "buttons": {
+          "uploadMaterial": "Upload Material",
+          "edit": "Edit",
+          "enable": "Enable",
+          "disable": "Disable",
+          "delete": "Delete"
+        },
+        "status": {
+          "active": "Active",
+          "inactive": "Inactive"
+        },
+        "actions": {
+          "enable": "enable",
+          "disable": "disable"
+        },
+        "uploadTime": "Upload Time",
+        "clickPreview": "Click to Preview",
+        "dialog": {
+          "editMaterial": "Edit Material",
+          "uploadMaterial": "Upload Material",
+          "previewMaterial": "Preview Material",
+          "deleteWarning": "Warning",
+          "deleteContent": "This action cannot be undone. Are you sure to delete this material?",
+          "statusWarning": "Tips",
+          "statusContent": "Are you sure to {action} this material?",
+          "confirm": "Confirm",
+          "cancel": "Cancel"
+        },
+        "messages": {
+          "noData": "No data available"
+        },
+        "rewardConfig": {
+          "title": "Promotion Reward Configuration",
+          "websiteTitle": "Promotion Display Website",
+          "websiteLabel": "Website URL",
+          "websitePlaceholder": "Enter website URL",
+          "websiteTip": "Set the website link displayed in promotions",
+          "rewardSwitch": "Reward Switch",
+          "rewardType": "Supported Reward Type",
+          "rewardDelay": "Reward Delay Time",
+          "rewardDelayUnit": "seconds",
+          "rewardRequirement": "Reward Requirement",
+          "allUserTitle": "All Users (Low Priority)",
+          "bindPhoneUserTitle": "Bind Phone Users (Medium Priority)",
+          "rechargeUserTitle": "Deposit Users (High Priority)",
+          "status": "Status",
+          "userType": "User Type",
+          "allUser": "All Users",
+          "bindPhoneUser": "Bind Phone Users",
+          "rechargeUser": "Deposit Users",
+          "receiveTimes": "Receive Times",
+          "canReceive": "Can Receive",
+          "canReceiveUnit": "times",
+          "rewardAmount": "Reward Amount",
+          "rewardAmountUnit": "yuan",
+          "rewardMultiple": "Wagering Multiple",
+          "rewardMultipleUnit": "times",
+          "rechargeAmountGreater": "Deposit Amount Greater Than",
+          "selectPlaceholder": "Please select",
+          "inputPlaceholder": "Please enter",
+          "agentShare": "Agent Share",
+          "inviteWheelShare": "Invite Wheel Share",
+          "daily": "Daily",
+          "weekly": "Every Calendar Week",
+          "monthly": "Every Calendar Month",
+          "lifetime": "Lifetime",
+          "cancel": "Cancel",
+          "save": "Save"
+        },
+        "targetConfig": "Target Display Config",
+        "rechargeTimes": "Member Deposit Count",
+        "times": "times"
+      },
+      "downPage": {
+        "languageNotice": "Materials for different languages need to be uploaded separately:",
+        "uploadStatus": "Uploaded {current}/{total}",
+        "platformStatus": "Android: {android}/5, iOS: {ios}/5",
+        "platform": "Platform",
+        "platformUnknown": "Unknown",
+        "platformTypes": {
+          "android": "Android Platform",
+          "ios": "iOS Platform"
+        },
+        "uploadTime": "Upload Time",
+        "clickPreview": "Click to Preview",
+        "noData": "No data available",
+        "config": {
+          "downloadConfig": "Download URL Configuration",
+          "androidDownload": "Android Download URL",
+          "androidDownloadDesc": "Set Android APP download link",
+          "iosDownload": "iOS Download URL",
+          "iosDownloadDesc": "Set iOS APP download link",
+          "androidShellDownload": "Android Shell Package Download",
+          "androidShellDownloadDesc": "Set Android shell package download link",
+          "iosShellDownload": "iOS Shell Package Download",
+          "iosShellDownloadDesc": "Set iOS shell package download link",
+          "IsRechargeForceDownload": "Deposit to force download"
+        },
+        "table": {
+          "operationTime": "Operation Time",
+          "operator": "Operator",
+          "configValue": "Config Value (Old->New)"
+        },
+        "buttons": {
+          "uploadMaterial": "Upload Material",
+          "edit": "Edit",
+          "enable": "Enable",
+          "disable": "Disable",
+          "delete": "Delete"
+        },
+        "status": {
+          "active": "Active",
+          "inactive": "Inactive"
+        },
+        "actions": {
+          "enable": "enable",
+          "disable": "disable"
+        },
+        "dialog": {
+          "editMaterial": "Edit Material",
+          "uploadMaterial": "Upload Material",
+          "previewMaterial": "Preview Material",
+          "editConfig": "Edit {name}",
+          "deleteWarning": "Warning",
+          "deleteContent": "This action cannot be undone. Are you sure to delete this material?",
+          "statusWarning": "Tips",
+          "statusContent": "Are you sure to {action} this material?",
+          "confirm": "Confirm",
+          "cancel": "Cancel"
+        }
+      },
+      "addMaterial": {
+        "materialImage": "Material Image",
+        "qrCodePosition": "QR Code Position",
+        "isEnabled": "Enable Status",
+        "platformType": "Platform Type",
+        "cancel": "Cancel",
+        "save": "Save",
+        "validation": {
+          "imageRequired": "Please upload image",
+          "platformRequired": "Please select platform type"
+        },
+        "updatePosition": "Position updated: "
+      },
+      "previewMaterial": {
+        "withQrCode": "With QR Code Effect",
+        "originalImage": "Original Image",
+        "qrCodeArea": "QR Code Area Simulation",
+        "previewImage": "Preview Image",
+        "cancel": "Cancel"
+      }
+    },
+    "firebase": {
+      "config": {
+        "title": "Firebase Push Configuration",
+        "addConfig": "Add Configuration",
+        "editConfig": "Edit Firebase Configuration",
+        "columns": {
+          "projectName": "Project Name",
+          "projectId": "Project ID",
+          "platformType": "Platform Type",
+          "status": "Status",
+          "createTime": "Create Time"
+        },
+        "platformTypes": {
+          "web": "Web",
+          "ios": "iOS",
+          "android": "Android",
+          "unknown": "Unknown"
+        },
+        "messages": {
+          "statusUpdateFailed": "Status update failed",
+          "statusUpdateSuccess": "Status {status} successfully",
+          "enabled": "enabled",
+          "disabled": "disabled",
+          "deleteFailed": "Delete failed",
+          "deleteSuccess": "Delete successfully",
+          "editSuccess": "Edit successfully",
+          "addSuccess": "Add successfully",
+          "loadDataFailed": "Load data failed"
+        }
+      },
+      "push": {
+        "title": "Firebase Push Management",
+        "pageTitle": "Firebase Push Records",
+        "addPush": "Add Push",
+        "columns": {
+          "id": "ID",
+          "title": "Push Title",
+          "target": "Push Target",
+          "content": "Push Content",
+          "sendCount": "Send Count",
+          "successCount": "Success Count",
+          "receivedTotal": "Received Total",
+          "receivedRate": "Received Rate",
+          "clickTotal": "Click Total",
+          "clickRate": "Click Rate",
+          "status": "Status",
+          "createTime": "Create Time",
+          "sendTime": "Send Time",
+          "firebaseProject": "Firebase Project"
+        },
+        "targetTypes": {
+          "selected": "Selected"
+        },
+        "buttons": {
+          "download": "Download",
+          "sendNow": "Send Now",
+          "detail": "View Details",
+          "delete": "Delete",
+          "addPush": "Add Push"
+        },
+        "search": {
+          "pushStatus": "Push Status",
+          "pushStatusPlaceholder": "Please select push status",
+          "all": "All",
+          "createTime": "Create Time",
+          "createTimePlaceholder": "Please select create time"
+        },
+        "messages": {
+          "downloadFailed": "Download failed, please try again later",
+          "operationSuccess": "Operation successful",
+          "operationFailed": "Operation failed",
+          "sendFailed": "Failed to send push message"
+        }
+      },
+      "template": {
+        "formatDescription": "Template Format Description:",
+        "rule1": "One member ID per line",
+        "rule2": "Only supports plain text format",
+        "rule3": "Does not support data other than member IDs",
+        "example": "Example:",
+        "close": "Close",
+        "downloadTemplate": "Download Template"
+      },
+      "modal": {
+        "form": {
+          "projectName": "Project Name",
+          "projectId": "Project ID",
+          "platformType": "Platform Type",
+          "serverKey": "Server Key",
+          "status": "Status",
+          "pushTitle": "Push Title",
+          "pushContent": "Push Content",
+          "targetType": "Push Target",
+          "sendTime": "Send Time",
+          "apiKey": "API Key",
+          "authDomain": "Auth Domain",
+          "measurementId": "Measurement ID",
+          "measurementApiSecret": "Measurement protocol API",
+          "appId": "App ID",
+          "storageBucket": "Storage Bucket",
+          "msgSenderId": "Message Sender ID",
+          "serviceAccountKey": "Service Account Key",
+          "remark": "Remark",
+          "msgSenderIdFormat": "Usually a pure numeric string (the digits after the initial '1:' in the App ID)",
+          "uploadServiceKey": "Upload Service Account Key",
+          "serviceKeyDescription": "Please upload the service account key JSON file downloaded from Firebase Console for server-side push verification. Path: Firebase Console > Project Settings > Service Accounts > Generate new private key",
+          "statusDescription": "When disabled, this project cannot be selected for push notifications",
+          "firebaseProject": "Firebase Project",
+          "pushTarget": "Push Target",
+          "memberIds": "Member IDs",
+          "uploadMemberIds": "Upload Member IDs",
+          "uploadFile": "Upload File",
+          "uploadMemberIdsDescription": "Please upload a text file containing member IDs",
+          "viewTemplateDescription": "View Template Description",
+          "autoTag": "Platform Auto Tag",
+          "group": "Group",
+          "vipLevel": "VIP Level",
+          "channel": "Channel",
+          "sourceChannel": "Source Channel",
+          "pushIcon": "Push Icon",
+          "iconSizeRecommendation": "Supports JPG/PNG format images (Recommended size: 96 x 96)",
+          "clickAction": "Click Action",
+          "targetLink": "Target Link",
+          "openPage": "Open Page",
+          "scheduledSendTime": "Scheduled Send Time",
+          "pushPriority": "Push Priority",
+          "survivalTime": "Survival Time",
+          "survivalTimeDescription": "Seconds (0 means immediate expiration, maximum 28 days)",
+          "batchTemplateDescription": "Batch Template Description",
+          "failCount": "Fail Count",
+          "successRate": "Success Rate",
+          "pushContentDetail": "Push Content"
+        },
+        "validation": {
+          "projectNameRequired": "Please enter project name",
+          "projectIdRequired": "Please enter Firebase project ID",
+          "platformTypeRequired": "Please select platform type",
+          "serverKeyRequired": "Please enter server key",
+          "pushTitleRequired": "Please enter push title",
+          "pushContentRequired": "Please enter push content",
+          "targetTypeRequired": "Please select push target",
+          "apiKeyRequired": "Please enter API key",
+          "authDomainRequired": "Please enter auth domain",
+          "appIdRequired": "Please enter app ID",
+          "measurementIdRequired": "Please enter measurement ID",
+          "measurementApiSecretRequired": "Please enter measurement protocol API secret",
+          "storageBucketRequired": "Please enter storage bucket",
+          "msgSenderIdRequired": "Please enter message sender ID",
+          "serviceAccountKeyRequired": "Please upload service account key",
+          "remarkRequired": "Please enter remark",
+          "firebaseProjectRequired": "Please select firebase project",
+          "titleRequired": "Please enter title",
+          "contentRequired": "Please enter content",
+          "pushTargetRequired": "Please select push target",
+          "memberIdsRequired": "Please enter member IDs, separated by commas",
+          "clickActionRequired": "Please select click action",
+          "targetLinkRequired": "Please enter target link",
+          "openPageRequired": "Please select page to open",
+          "sendTimeRequired": "Please select send time",
+          "scheduledSendTimeRequired": "Please select scheduled send time",
+          "pushPriorityRequired": "Please select push priority",
+          "survivalTimeRequired": "Please enter survival time (seconds)"
+        },
+        "buttons": {
+          "cancel": "Cancel",
+          "save": "Save",
+          "submit": "Submit"
+        },
+        "messages": {
+          "saveSuccess": "Save successfully",
+          "saveFailed": "Save failed",
+          "submitSuccess": "Submit successfully",
+          "submitFailed": "Submit failed",
+          "addSuccess": "Add successfully",
+          "editSuccess": "Edit successfully",
+          "fileReadFailed": "File read failed, please select file again",
+          "uploadJsonFile": "Please upload json file",
+          "fileContentEmpty": "File content cannot be empty",
+          "getAutoTagListFailed": "Failed to get auto tag list",
+          "getFirebaseProjectListFailed": "Failed to get firebase project list",
+          "initDataFailed": "Failed to initialize data",
+          "getDetailFailed": "Failed to get push details"
+        },
+        "viewDetail": "View Push Details",
+        "addDetail": "Add Push Details",
+        "addPush": "Create Firebase Push",
+        "confirmTitle": "Confirm",
+        "sendConfirm": "Are you sure you want to send this push message immediately?",
+        "cancel": "Cancel",
+        "confirm": "Confirm"
+      }
+    },
+    "engageLab": {
+      "platformType": {
+        "web": "Web (PWA)",
+        "app": "App"
+      },
+      "config": {
+        "title": "Jiguang Push Configuration",
+        "addConfig": "Add Configuration",
+        "editConfig": "Edit Configuration",
+        "preview": "Preview",
+        "fold": "Fold",
+        "columns": {
+          "pushend": "Push Endpoint",
+          "placeholderKey": "Please enter Key",
+          "Key": "Key",
+          "masterSecret": "Master Secret",
+          "placeholderMasterSecret": "Please enter Master Secret",
+          "appName": "APP Package Name",
+          "placeholderAppName": "Please enter APP package name",
+          "validAppName": "Please enter a valid APP package name, e.g.: com.xxx.app",
+          "gs": "GoogleService",
+          "chooseFile": "Choose File",
+          "placeholderGs": "Please select GoogleService",
+          "status": "Status",
+          "edit": "Edit"
+        }
+      },
+      "push": {
+        "title": "Jiguang Push",
+        "addPush": "Add Push",
+        "editPush": "Edit Push",
+        "record": "Push Records",
+        "pending": "Pending",
+        "success": "Push Success",
+        "failed": "Push Failed",
+        "columns": {
+          "pushTime": "Push Time",
+          "pushPlatform": "Push Platform",
+          "pushTitle": "Push Title",
+          "pushContent": "Push Content",
+          "jumpLink": "Jump Page",
+          "pushState": "Push State",
+          "placeholderJumpLink": "Please select jump page, follow the dropdown rules of other modules",
+          "pushImage": "Push Image",
+          "imageAdvice": "Supports JPG/PNG format images (recommended size: 96 x 96)"
+        }
+      }
+    },
+    "messageManage": {
+      "index": {
+        "title": "Message Management",
+        "tabs": {
+          "generalMessage": "General Message",
+          "customPopup": "Custom Popup",
+          "siteMessage": "Site Message",
+          "siteMessageRecord": "Site Message Records",
+          "firebaseMessage": "Firebase Message",
+          "externalMessage": "External Message"
+        }
+      },
+      "messageList": {
+        "columns": {
+          "id": "ID",
+          "messageType": "Message Type",
+          "image": "Image",
+          "title": "Title",
+          "contentOrUrl": "Content/Jump Link",
+          "sort": "Sort",
+          "lastUpdateTime": "Last Update Time",
+          "lastUpdateUser": "Operator",
+          "status": "Status",
+          "targetObject": "Display object"
+        },
+        "typeMap": {
+          "scrollMessage": "Scroll Message",
+          "beforeLoginPopup": "Before Login Popup",
+          "afterLoginPopup": "After Login Popup",
+          "carousel": "Carousel",
+          "customCarousel": "Custom Layout Carousel"
+        },
+        "form": {
+          "messageType": "Message Type",
+          "messageTypePlaceholder": "Please select message type",
+          "statusPlaceholder": "Please select status"
+        },
+        "buttons": {
+          "add": "Add",
+          "enable": "Enable",
+          "disable": "Disable"
+        },
+        "modal": {
+          "addTitle": "Add Message",
+          "editTitle": "Edit Message",
+          "deleteTitle": "Confirm",
+          "deleteConfirm": "Are you sure you want to delete?",
+          "deletePositive": "Confirm",
+          "deleteNegative": "Cancel"
+        },
+        "unknownTag": "Unknown tag",
+        "times": "Times",
+        "batchImport": "Batch Import",
+        "download": "Download",
+        "selected": "Selected:",
+        "batchImportFileName": "Batch Import File.txt",
+        "downloadFailed": "Download failed, please try again later"
+      },
+      "addMessage": {
+        "typeMap": {
+          "scrollMessage": "Scroll Message",
+          "beforeLoginPopup": "Before Login Popup",
+          "afterLoginPopup": "After Login Popup",
+          "carousel": "Carousel",
+          "customCarousel": "Custom Layout Carousel"
+        },
+        "form": {
+          "messageType": "Message Type",
+          "messageTypePlaceholder": "Please select message type",
+          "sort": "Sort (higher number means higher priority)",
+          "image": "Image",
+          "carousel": "Carousel",
+          "title": "Title",
+          "content": "Content",
+          "buttonText": "Button Text",
+          "buttonTextTip": "This text will be displayed on the button below the carousel",
+          "jumpType": "Jump Type",
+          "jumpUrl": "Jump URL",
+          "jumpUrlTip": "Please enter a complete URL, e.g., https://www.example.com",
+          "jumpPage": "Jump Page",
+          "popupTitle": "Popup Title",
+          "gameVendor": "Game Provider",
+          "subGame": "Game",
+          "customerCustomPopup": "Customer Popup Type",
+          "orderTypePlaceholder": "Select Order Type"
+        },
+        "validation": {
+          "contentRequired": "Please enter content",
+          "sortRequired": "Please enter sort order",
+          "sortPattern": "Sort must be a positive integer starting from 0",
+          "imageRequired": "Please upload image",
+          "buttonTextRequired": "Please enter button text",
+          "popupIdRequired": "Please select popup title",
+          "vendorCodeRequired": "Please select game provider",
+          "jumpTypeRequired": "Please select jump type",
+          "pageTypeRequired": "Please select jump page",
+          "jumpUrlRequired": "Please enter jump URL",
+          "jumpUrlPattern": "Please enter a valid URL"
+        },
+        "buttons": {
+          "cancel": "Cancel",
+          "save": "Save"
+        },
+        "messages": {
+          "addSuccess": "Add successfully",
+          "editSuccess": "Edit successfully"
+        }
+      },
+      "addOrUpdatePopup": {
+        "form": {
+          "title": "Title",
+          "sort": "Sort",
+          "popupCoverImage": "Popup Cover Image",
+          "time": "Time",
+          "longTermValid": "Long Term Valid",
+          "fixedTime": "Fixed Time",
+          "timeRange": "Time Range",
+          "isForcePopup": "Force Popup",
+          "yes": "Yes",
+          "no": "No",
+          "jumpType": "Jump Type",
+          "jumpTypePlaceholder": "Please select jump type",
+          "jumpLink": "Jump Link",
+          "jumpPage": "Page Selection",
+          "jumpPagePlaceholder": "Please select jump page",
+          "popupTarget": "Popup Target",
+          "popupTargetPlaceholder": "Please select target object",
+          "platformAutoTag": "Platform Auto Tag",
+          "platformAutoTagPlaceholder": "Please select tags, multiple selection allowed",
+          "group": "Group",
+          "groupPlaceholder": "Please select groups, multiple selection allowed",
+          "vipLevel": "VIP Level",
+          "vipLevelPlaceholder": "Please select VIP levels, multiple selection allowed",
+          "sourceChannel": "Source Channel",
+          "sourceChannelPlaceholder": "Please select source channels, multiple selection allowed",
+          "memberId": "Member ID",
+          "memberIdPlaceholder": "Please enter member IDs, separated by commas or line breaks",
+          "uploadMemberId": "Upload Member ID",
+          "selectFile": "Select File",
+          "uploadMemberIdTip": "Please upload a text file containing member IDs",
+          "templateDescription": "View Template Description",
+          "popupFrequency": "Popup Frequency",
+          "popupFrequencyPlaceholder": "Please select popup frequency"
+        },
+        "validation": {
+          "titleRequired": "Please enter title",
+          "sortRequired": "Please enter sort order",
+          "timeRangeRequired": "Please select time range",
+          "jumpTypeRequired": "Please select jump type",
+          "jumpLinkRequired": "Please enter jump link",
+          "jumpPageRequired": "Please select jump page",
+          "popupTargetRequired": "Please select popup target",
+          "popupFrequencyRequired": "Please select popup frequency",
+          "jumpPageOrderRequired": "Please select order type"
+        },
+        "buttons": {
+          "cancel": "Cancel",
+          "save": "Save"
+        },
+        "messages": {
+          "addSuccess": "Add successfully",
+          "editSuccess": "Edit successfully",
+          "fileReadFailed": "File read failed, please select file again",
+          "uploadTxtFile": "Please upload txt file",
+          "fileSizeLimit": "File size cannot exceed 5MB",
+          "fileContentEmpty": "File content cannot be empty",
+          "fileReadError": "File read failed"
+        },
+        "templateModal": {
+          "title": "Template Description",
+          "description": "Please upload a text file containing member IDs in txt format, one member ID per line",
+          "example": "Example:"
+        }
+      },
+      "siteMessage": {
+        "columns": {
+          "id": "ID",
+          "siteMsgDescription": "Site Message Description",
+          "siteMsgTitle": "Site Message Title",
+          "content": "Content",
+          "duration": "Duration",
+          "sendTime": "Send Time",
+          "jumpType": "Jump Type",
+          "receiveTarget": "Receive Target",
+          "hasReward": "Has Reward",
+          "isEnabled": "Is Enabled",
+          "status": "Status",
+          "operator": "Operator"
+        },
+        "duration": {
+          "longTerm": "Long Term Valid"
+        },
+        "reward": {
+          "yes": "Yes",
+          "no": "No"
+        },
+        "status": {
+          "normal": "Normal",
+          "revoked": "Revoked",
+          "enabled": "Enabled",
+          "disabled": "Disabled"
+        },
+        "receiveTarget": {
+          "batchImport": "Batch Import",
+          "download": "Download",
+          "selected": "Selected:"
+        },
+        "modal": {
+          "contentTitle": "Content",
+          "unknownTag": "Unknown Tag"
+        },
+        "form": {
+          "siteMsgDescription": "Site Message Description",
+          "siteMsgDescriptionPlaceholder": "Please enter site message description",
+          "operator": "Operator",
+          "operatorPlaceholder": "Please enter operator"
+        },
+        "actions": {
+          "revoke": "Revoke",
+          "view": "View",
+          "edit": "Edit",
+          "addSiteMsg": "Add Site Message",
+          "viewSiteMsg": "View Site Message",
+          "editSiteMsg": "Edit Site Message"
+        },
+        "revoke": {
+          "confirmTitle": "Revoke Confirmation",
+          "confirmContent": "Are you sure you want to revoke site message \"{name}\"? After revocation, this site message will be disabled and cannot be enabled again.",
+          "confirmButton": "Confirm Revoke",
+          "cancelButton": "Cancel",
+          "processing": "Revoking...",
+          "success": "Site message revoked successfully",
+          "failed": "Revoke failed, please try again later"
+        },
+        "download": {
+          "batchImportFileName": "Batch Import File.txt",
+          "downloadFailedError": "Download failed, please try again later"
+        }
+      },
+      "outSitMessage": {
+        "columns": {
+          "id": "ID",
+          "emailDescription": "Email Description",
+          "emailSubject": "Email Subject",
+          "emailContent": "Email Content",
+          "receiveTarget": "Receive Target",
+          "emailServiceProvider": "Email Service Provider",
+          "sendTime": "Send Time",
+          "sendStatus": "Send Status",
+          "sendCount": "Send Count",
+          "successCount": "Success Count"
+        },
+        "receiveTarget": {
+          "batchImport": "Batch Import",
+          "download": "Download",
+          "selected": "Selected:"
+        },
+        "sendStatus": {
+          "pending": "Pending",
+          "sending": "Sending",
+          "success": "Success",
+          "failed": "Failed"
+        },
+        "modal": {
+          "contentTitle": "Email Content"
+        },
+        "form": {
+          "emailDescription": "Email Description",
+          "emailDescriptionPlaceholder": "Please enter email description",
+          "sendStatus": "Send Status",
+          "sendStatusPlaceholder": "Please select send status"
+        },
+        "actions": {
+          "view": "View",
+          "send": "Send",
+          "addOutSitMessage": "Add Out-Site Message",
+          "viewOutSitMessage": "View Out-Site Message",
+          "configEmailProvider": "Config Email Provider"
+        },
+        "send": {
+          "confirmTitle": "Send Out-Site Message",
+          "confirmContent": "Are you sure you want to send this out-site message?",
+          "confirmButton": "Confirm",
+          "cancelButton": "Cancel",
+          "success": "Send successful"
+        },
+        "download": {
+          "batchImportFileName": "Batch Import File.txt",
+          "downloadFailedError": "Download failed, please try again later"
+        },
+        "unknown": {
+          "tag": "Unknown Tag"
+        }
+      },
+      "promptSetting": {
+        "columns": {
+          "id": "ID",
+          "popupTitle": "Popup Title",
+          "popupCoverImage": "Popup Cover Image",
+          "time": "Time",
+          "sort": "Sort",
+          "isForcePopup": "Force Popup",
+          "jumpType": "Jump Type",
+          "popupTarget": "Popup Target",
+          "popupFrequency": "Popup Frequency",
+          "isEnabled": "Is Enabled"
+        },
+        "time": {
+          "longTerm": "Long Term Valid"
+        },
+        "forcePopup": {
+          "yes": "Yes",
+          "no": "No"
+        },
+        "popupTarget": {
+          "batchImport": "Batch Import",
+          "download": "Download",
+          "selected": "Selected:"
+        },
+        "status": {
+          "enabled": "Enabled",
+          "disabled": "Disabled"
+        },
+        "modal": {
+          "popupCoverTitle": "Popup Cover Image",
+          "noImage": "No Image"
+        },
+        "form": {
+          "popupTitle": "Popup Title",
+          "popupTitlePlaceholder": "Please enter popup title"
+        },
+        "actions": {
+          "edit": "Edit",
+          "addPrompt": "Add Popup",
+          "editPrompt": "Edit Popup"
+        },
+        "download": {
+          "batchImportFileName": "Batch Import File.txt",
+          "downloadFailedError": "Download failed, please try again later"
+        },
+        "unknown": {
+          "tag": "Unknown Tag"
+        }
+      },
+      "addOutSitMessage": {
+        "form": {
+          "emailDescription": "Email Description",
+          "emailSubject": "Email Subject",
+          "emailContent": "Email Content",
+          "emailContentPlaceholder": "Please enter content",
+          "emailServiceProvider": "Email Service Provider",
+          "emailServiceProviderPlaceholder": "Please select email service provider",
+          "receiveTarget": "Receive Target",
+          "receiveTargetPlaceholder": "Please select target object",
+          "platformAutoTag": "Platform Auto Tag",
+          "platformAutoTagPlaceholder": "Please select tags, multiple selection allowed",
+          "group": "Group",
+          "groupPlaceholder": "Please select groups, multiple selection allowed",
+          "vipLevel": "VIP Level",
+          "vipLevelPlaceholder": "Please select VIP levels, multiple selection allowed",
+          "channel": "Channel",
+          "channelPlaceholder": "Please select registration channels, multiple selection allowed",
+          "memberId": "Member ID:",
+          "memberIdPlaceholder": "Please enter member IDs, separate multiple IDs with commas or line breaks",
+          "uploadMemberId": "Upload Member ID",
+          "selectFile": "Select File"
+        },
+        "validation": {
+          "emailDescriptionRequired": "Please enter email description",
+          "timeRequired": "Please select time",
+          "receiveTargetRequired": "Please select popup target",
+          "emailServiceProviderRequired": "Please select email service provider",
+          "emailSubjectRequired": "Please enter email subject",
+          "emailContentRequired": "Please enter email content"
+        },
+        "messages": {
+          "addSuccess": "Added successfully",
+          "fileReadFailure": "File reading failed, please select file again",
+          "uploadTxtFileOnly": "Please upload txt file only",
+          "fileSizeExceeded": "File size cannot exceed 5MB",
+          "fileContentEmpty": "File content cannot be empty",
+          "fileReadError": "File reading failed"
+        },
+        "upload": {
+          "templateTitle": "Template Description",
+          "templateDescription": "Please upload a text file containing member IDs, file format should be txt, one member ID per line",
+          "example": "Example:",
+          "uploadDescription": "Please upload a text file containing member IDs",
+          "viewTemplate": "View Template Description"
+        },
+        "sendTime": {
+          "label": "Send Time",
+          "immediately": "Send Immediately",
+          "scheduled": "Scheduled Send",
+          "placeholder": "Please select send time"
+        },
+        "buttons": {
+          "cancel": "Cancel",
+          "confirm": "Confirm"
+        }
+      },
+      "addSitMessage": {
+        "form": {
+          "labels": {
+            "description": "Site Message Description",
+            "content": "Site Message Content",
+            "validTime": "Time:",
+            "duration": "Duration:",
+            "sendType": "Send Type",
+            "sendDuration": "Duration:",
+            "jumpType": "Jump Type",
+            "jumpLink": "Jump Link",
+            "pageSelection": "Page Selection",
+            "jumpButtonText": "Jump Button Text",
+            "targetType": "Target Type",
+            "autoTags": "Platform Auto Tags",
+            "groups": "Groups",
+            "vipLevel": "VIP Level",
+            "channel": "Channel",
+            "sourceChannel": "Source Channel",
+            "memberIds": "Member IDs:",
+            "uploadMemberIds": "Upload Member IDs",
+            "hasReward": "Has Reward",
+            "rewardType": "Reward Type",
+            "freeReward": "Free Reward",
+            "paidReward": "Paid Reward",
+            "rewardAmount": "Reward Amount:",
+            "codingMultiple": "Wagering Multiple:",
+            "coupons": "Coupons:",
+            "paidRewardLabel": "Paid Reward:",
+            "rechargeCount": "Deposit Count:",
+            "rechargeAmountMin": "Deposit Amount >=",
+            "expireType": "Reward Expiry Type",
+            "noLimit": "No Limit",
+            "expireAfterHours": "Expire N Hours After Send",
+            "specificDateTime": "Specific Date Time",
+            "expireAfterSendTime": "Expire After Send Time",
+            "hoursAfterExpire": "hours after expire",
+            "expireDateTime": "Expire Date Time",
+            "titleForLanguage": "{language} Title",
+            "contentForLanguage": "{language} Content",
+            "thumbnailForLanguage": "{language} Thumbnail (Optional 640*120)"
+          },
+          "placeholders": {
+            "messageTitle": "Please enter title",
+            "contentForLanguage": "Please enter {language} content",
+            "selectJumpType": "Please select jump type",
+            "selectJumpPage": "Please select jump page",
+            "jumpButtonText": "Please enter jump button text (optional)",
+            "selectTargetType": "Please select target object",
+            "selectTags": "Please select tags, multiple selection allowed",
+            "selectGroups": "Please select groups, multiple selection allowed",
+            "selectVipLevel": "Please select VIP levels, multiple selection allowed",
+            "selectRegisterChannel": "Please select registration channels, multiple selection allowed",
+            "selectSourceChannel": "Please select source channels, multiple selection allowed",
+            "memberIds": "Please enter member IDs, separate multiple IDs with commas or line breaks",
+            "selectCoupons": "Please select coupons"
+          },
+          "options": {
+            "longTerm": "Long Term Validity",
+            "fixedTime": "Fixed Time",
+            "immediately": "Send Immediately",
+            "scheduled": "Scheduled Send",
+            "yes": "Yes",
+            "no": "No",
+            "unlimited": "Unlimited",
+            "expireAfterHours": "Expire N Hours After Send",
+            "specificDateTime": "Specific Date Time"
+          },
+          "upload": {
+            "templateTitle": "Template Description",
+            "templateDescription": "Please upload a text file containing member IDs, format: txt, one member ID per line",
+            "example": "Example:",
+            "uploadDescription": "Please upload a text file containing member IDs",
+            "viewTemplate": "View Template Description",
+            "selectFile": "Select File"
+          },
+          "description": "Site Message Description",
+          "content": "Site Message Content",
+          "title": "Title",
+          "titlePlaceholder": "Please enter title",
+          "contentPlaceholder": "Please enter {language} content",
+          "thumbnail": "Thumbnail (optional 640*120)",
+          "time": "Time:",
+          "longTerm": "Long Term Valid",
+          "fixedTime": "Fixed Time",
+          "duration": "Duration:",
+          "sendType": "Send Type",
+          "immediately": "Send Immediately",
+          "scheduled": "Scheduled Send",
+          "jumpType": "Jump Type",
+          "jumpTypePlaceholder": "Please select jump type",
+          "jumpLink": "Jump Link",
+          "pageSelection": "Page Selection",
+          "pageSelectionPlaceholder": "Please select jump page",
+          "receiveTarget": "Receive Target",
+          "receiveTargetPlaceholder": "Please select target object",
+          "platformAutoTag": "Platform Auto Tag",
+          "platformAutoTagPlaceholder": "Please select tags, multiple selection allowed",
+          "group": "Group",
+          "groupPlaceholder": "Please select groups, multiple selection allowed",
+          "vipLevel": "VIP Level",
+          "vipLevelPlaceholder": "Please select VIP levels, multiple selection allowed",
+          "regChannel": "Registration Channel",
+          "regChannelPlaceholder": "Please select registration channels, multiple selection allowed",
+          "memberId": "Member ID:",
+          "memberIdPlaceholder": "Please enter member IDs, separate multiple IDs with commas or line breaks",
+          "uploadMemberId": "Upload Member ID",
+          "selectFile": "Select File",
+          "jumpButtonText": "Jump Button Text",
+          "jumpButtonTextPlaceholder": "Please enter jump button text",
+          "rewardWater": "Reward Water",
+          "rewardWaterPlaceholder": "Please enter water multiple",
+          "freeRewardWater": "Free Reward Water",
+          "freeRewardWaterPlaceholder": "Please enter water multiple",
+          "rewardAmount": "Reward Amount",
+          "rewardAmountPlaceholder": "Please enter reward amount"
+        },
+        "validation": {
+          "titleRequired": "Please enter title",
+          "timeRangeRequired": "Please select time range",
+          "timeRequired": "Please select time",
+          "jumpTypeRequired": "Please select jump type",
+          "jumpLinkRequired": "Please enter jump link",
+          "jumpPageRequired": "Please select jump page",
+          "receiveTargetRequired": "Please select popup target",
+          "rewardWaterRequired": "Please enter water multiple",
+          "freeRewardWaterRequired": "Please enter water multiple",
+          "rewardAmountRequired": "Please enter reward amount",
+          "selectRewardType": "Please select at least one reward type",
+          "selectAtLeastOneRewardType": "Please select at least one reward type"
+        },
+        "messages": {
+          "addSuccess": "Added successfully",
+          "fileReadFailure": "File reading failed, please select file again",
+          "uploadTxtFileOnly": "Please upload txt file only",
+          "fileSizeExceeded": "File size cannot exceed 5MB",
+          "fileContentEmpty": "File content cannot be empty",
+          "fileReadError": "File reading failed"
+        },
+        "upload": {
+          "templateTitle": "Template Description",
+          "templateDescription": "Please upload a text file containing member IDs, file format should be txt, one member ID per line",
+          "example": "Example:",
+          "uploadDescription": "Please upload a text file containing member IDs",
+          "viewTemplate": "View Template Description",
+          "selectFile": "Select File"
+        },
+        "buttons": {
+          "cancel": "Cancel",
+          "save": "Save"
+        }
+      },
+      "editSitMessage": {
+        "messages": {
+          "editSuccess": "Edited successfully"
+        }
+      },
+      "sitMessageRecord": {
+        "columns": {
+          "memberId": "Member ID",
+          "messageId": "Message ID",
+          "messageTitle": "Message Title",
+          "rewardType": "Reward Type",
+          "rewardContent": "Reward Content",
+          "amount": "Amount",
+          "coupons": "Coupons",
+          "pieces": "pieces",
+          "claimTime": "Claim Time",
+          "status": "Status"
+        },
+        "form": {
+          "memberId": "Member ID",
+          "memberIdPlaceholder": "Please enter member ID",
+          "messageId": "Message ID",
+          "messageIdPlaceholder": "Please enter message ID",
+          "status": "Status",
+          "statusPlaceholder": "Please select status",
+          "statusOptions": {
+            "unclaimed": "Unclaimed",
+            "claimed": "Claimed"
+          },
+          "claimTime": "Claim Time",
+          "claimTimePlaceholder": "Please select time"
+        },
+        "buttons": {
+          "export": "Export"
+        },
+        "export": {
+          "fileName": "Site Message Claim Records"
+        }
+      }
+    },
+    "registerManage": {
+      "index": {
+        "title": "Registration Management",
+        "tabs": {
+          "registerManage": "Registration Management",
+          "domainManage": "Domain Management",
+          "channelSourceManage": "Channel Source Management",
+          "packageTransferConfig": "Package Transfer Configuration",
+          "smsConfig": "SMS Provider Configuration",
+          "emailConfig": "Email Configuration",
+          "landingPageManage": "Landing Page Management"
+        }
+      },
+      "components": {
+        "smsConfig": {
+          "config": {
+            "sendAccountSMSCount": "Daily SMS limit per account",
+            "sendIPSMSCount": "Daily SMS limit per IP",
+            "smsCodeExpiredTime": "Verification code validity (minutes)"
+          },
+          "scenarios": {
+            "memberRegister": "Member Registration",
+            "addWithdrawMethod": "Add Withdrawal Method",
+            "forgotPassword": "Forgot Password",
+            "memberGoogleVerify": "Member Google Verification"
+          },
+          "columns": {
+            "operationTime": "Operation Time",
+            "operator": "Operator",
+            "configValue": "Config Value (Old->New)",
+            "smsProviderName": "SMS Provider Name",
+            "template": "Template",
+            "requestUrl": "Request URL"
+          },
+          "status": {
+            "enable": "Enable",
+            "disable": "Disable"
+          },
+          "messages": {
+            "operationSuccess": "Operation successful"
+          },
+          "modal": {
+            "editSmsProvider": "Edit SMS Provider",
+            "addSmsProvider": "Add SMS Provider"
+          },
+          "buttons": {
+            "cancel": "Cancel",
+            "save": "Save",
+            "add": "Add"
+          },
+          "smsVerificationScenarios": "SMS Verification Scenarios",
+          "addTemplateNote": "Adding will create templates for all languages simultaneously"
+        },
+        "emailConfig": {
+          "config": {
+            "sendAccountEmailCount": "Daily email limit per account",
+            "sendIPEmailCount": "Daily email limit per IP",
+            "emailCodeExpiredTime": "Verification code validity (minutes)"
+          },
+          "scenarios": {
+            "memberRegister": "Member Registration",
+            "addWithdrawMethod": "Add Withdrawal Method",
+            "forgotPassword": "Forgot Password",
+            "memberGoogleVerify": "Member Google Verification"
+          },
+          "columns": {
+            "operationTime": "Operation Time",
+            "operator": "Operator",
+            "configValue": "Config Value (Old->New)",
+            "icon": "Icon",
+            "code": "Code",
+            "name": "Name",
+            "account": "Account",
+            "title": "Title",
+            "content": "Content",
+            "contentDetail": "Rich text content, click for details"
+          },
+          "status": {
+            "enable": "Enable",
+            "disable": "Disable"
+          },
+          "messages": {
+            "operationSuccess": "Operation successful"
+          },
+          "modal": {
+            "editEmailConfig": "Edit Email Configuration",
+            "addEmailConfig": "Add Email Configuration",
+            "emailContent": "Email Configuration Content"
+          },
+          "emailVerificationScenarios": "Email Verification Scenarios"
+        },
+        "register": {
+          "config": {
+            "registerMobile": {
+              "name": "Enable Mobile Registration",
+              "desc": "Allow registration using mobile phone",
+              "link": "SMS Configuration"
+            },
+            "registerEmail": {
+              "name": "Enable Email Registration",
+              "desc": "Allow registration using email",
+              "link": "Email Configuration"
+            },
+            "isOpenRegisterCaptcha": {
+              "name": "Enable Registration Captcha",
+              "desc": "Require captcha for registration"
+            },
+            "isInvitecode": {
+              "name": "Require Invitation Code",
+              "desc": "Make invitation code mandatory for registration"
+            },
+            "registerPrivacyChecked": {
+              "name": "Default Privacy Agreement Checked",
+              "desc": "Privacy agreement is checked by default during registration"
+            },
+            "isEnableGuestLogin": {
+              "name": "Enable Guest Login",
+              "desc": "Allow guest login to the system"
+            },
+            "registerCount": {
+              "name": "Registration Limit per IP",
+              "desc": "Maximum number of accounts that can be registered from one IP"
+            },
+            "sameBrowserRegistCount": {
+              "name": "Registration Limit per Browser Fingerprint",
+              "desc": "Maximum number of accounts that can be registered from one browser fingerprint"
+            },
+            "sameDeviceRegistCount": {
+              "name": "Registration Limit per Device",
+              "desc": "Maximum number of accounts that can be registered from one device"
+            }
+          },
+          "columns": {
+            "operationTime": "Operation Time",
+            "operator": "Operator",
+            "configValue": "Config Value (Old->New)"
+          },
+          "status": {
+            "yes": "Yes",
+            "no": "No"
+          },
+          "buttons": {
+            "cancel": "Cancel",
+            "save": "Save",
+            "add": "Add",
+            "delete": "Delete",
+            "savePhoneNumbers": "Save Phone Numbers"
+          },
+          "messages": {
+            "noConfigFile": "Configuration file not found",
+            "operationSuccess": "Operation successful"
+          },
+          "phone": {
+            "supportImage": "Supports image formats (.png,.webp), and the image size cannot exceed 1MB",
+            "noImage": "No image available",
+            "imageTitle": "Registration Page Image Configuration",
+            "imageSubTitle": "Configure the background image displayed on the registration page, supporting various image formats",
+            "title": "Registrable Phone Numbers (Default includes primary countries' numbers, must be added to dictionary)",
+            "description": "[Area code + phone number length cannot be less than 10 digits, not including the + sign in area code. Phone area code format: must start with +, format +x, +xx or +xxx (e.g.: +1, +66, +666). 2-digit area code, 8-13 digit phone number; 3-digit area code, 7-13 digit phone number; 1-digit area code, 9-13 digit phone number]"
+          },
+          "form": {
+            "areaCode": "Area Code",
+            "phoneLength": "Phone Number Length"
+          },
+          "validation": {
+            "areaCodeRequired": "Please enter area code",
+            "areaCodeFormat": "Must start with + followed by 1-3 digits",
+            "phoneLengthRequired": "Please enter phone number length",
+            "phoneLengthFormat": "Phone number length format is incorrect"
+          }
+        },
+        "channel": {
+          "form": {
+            "domainUrl": "Domain URL",
+            "domainUrlPlaceholder": "Please enter domain URL"
+          },
+          "buttons": {
+            "add": "Add",
+            "edit": "Edit"
+          },
+          "columns": {
+            "channelName": "Channel Name",
+            "channelType": "Channel Type",
+            "status": "Status",
+            "domainUrl": "Domain URL",
+            "remark": "Remark",
+            "createTime": "Create Time",
+            "lastUpdateTime": "Last Update Time",
+            "operator": "Operator"
+          },
+          "types": {
+            "agentPromotion": "Agent Promotion",
+            "adPromotion": "Ad Promotion",
+            "registerDomain": "Register Domain",
+            "antiBlockDomain": "Anti-block Domain"
+          },
+          "status": {
+            "enable": "Enable",
+            "disable": "Disable"
+          },
+          "modal": {
+            "editChannel": "Edit Channel",
+            "addChannel": "Add Channel"
+          },
+          "seoConfig": {
+            "title": "SEO configuration"
+          },
+          "seo": {
+            "seoTit": "Site Name:",
+            "seoDesc": "Site Description:",
+            "seoImage": "Promotional Image:",
+            "uploadHelpText": "Supports PNG format images, within 500KB, (size within 1000*1000: recommended size 780*440)",
+            "placeholders": {
+              "siteNamePlaceholder": "Please enter website name",
+              "siteDescPlaceholder": "Please enter website introduction"
+            },
+            "buttons": {
+              "cancel": "Cancel",
+              "saveConfig": "Save Configuration"
+            },
+            "validation": {
+              "siteNameRequired": "Please enter site name",
+              "siteNameLength": "Site name length should be 1-100 characters",
+              "siteDescRequired": "Please enter site description",
+              "siteDescLength": "Site description length should be 1-500 characters"
+            },
+            "messages": {
+              "saveSuccess": "Configuration saved successfully!",
+              "validationFailed": "Form validation failed:",
+              "getInfoFailed": "Failed to get information:"
+            }
+          }
+        },
+        "addChannel": {
+          "form": {
+            "channelName": "Channel Name:",
+            "channelType": "Channel Type:",
+            "domainUrl": "Domain URL:",
+            "remark": "Remark:",
+            "selectPlaceholder": "Please select"
+          },
+          "channelTypes": {
+            "agentPromotion": "Agent Promotion",
+            "adPromotion": "Ad Promotion",
+            "registerDomain": "Register Domain",
+            "antiBlockDomain": "Anti-block Domain"
+          },
+          "validation": {
+            "channelNameRequired": "Please enter channel name",
+            "channelTypeRequired": "Please select channel type",
+            "domainRequired": "Please enter domain URL",
+            "invalidDomain": "Please enter a valid domain URL"
+          },
+          "buttons": {
+            "cancel": "Cancel",
+            "save": "Save"
+          },
+          "messages": {
+            "operationSuccess": "Operation successful"
+          }
+        },
+        "addEmailTemplate": {
+          "form": {
+            "emailTemplate": "Email Template:",
+            "selectPlaceholder": "Please select",
+            "emailName": "Email Name:",
+            "emailAccount": "Email Account:",
+            "emailPassword": "Email Password:",
+            "smtpServer": "SMTP Server:",
+            "smtpPort": "SMTP Port:",
+            "emailTitle": "Email Title:",
+            "icon": "Icon:"
+          },
+          "validation": {
+            "emailLogoRequired": "Please upload template logo",
+            "nameRequired": "Please enter template name",
+            "emailCodeRequired": "Please select email template",
+            "accountRequired": "Please enter email account",
+            "passwordRequired": "Please enter email password",
+            "smtpServerRequired": "Please enter SMTP server",
+            "smtpPortRequired": "Please enter SMTP port",
+            "emailTitleRequired": "Please enter email title"
+          },
+          "buttons": {
+            "cancel": "Cancel",
+            "save": "Save"
+          },
+          "messages": {
+            "operationSuccess": "Operation successful"
+          }
+        },
+        "addPackage": {
+          "form": {
+            "packageName": "Package Name:",
+            "remark": "Remark:"
+          },
+          "validation": {
+            "packageNameRequired": "Please enter package name"
+          },
+          "buttons": {
+            "cancel": "Cancel",
+            "save": "Save"
+          },
+          "messages": {
+            "operationSuccess": "Operation successful"
+          }
+        },
+        "addPackageConfig": {
+          "form": {
+            "configType": "Package Type:",
+            "configTypePlaceholder": "Please select package type",
+            "sourceIdentity": "Package Name:",
+            "sourceIdentityPlaceholder": "Please select package name",
+            "targetIdentity": "Target Package Name:",
+            "targetIdentityPlaceholder": "Please select package name",
+            "popupImage": "Popup Image:",
+            "targetType": "Package Group:",
+            "jumpUrl": "Jump URL:",
+            "hasReward": "Has Reward:",
+            "rewardPopupImage": "Reward Popup Image:",
+            "rewardMode": "Reward User Configuration:",
+            "bonusAmount": "Bonus Amount:",
+            "bonusAmountPlaceholder": "Please enter bonus amount",
+            "bonusMultiplier": "Bonus Multiplier:",
+            "bonusMultiplierPlaceholder": "Please enter bonus multiplier",
+            "vipConfig": "VIP Level Configuration:",
+            "rechargeConfig": "Deposit Range Configuration:",
+            "selectPlaceholder": "Please select",
+            "no": "No",
+            "yes": "Yes"
+          },
+          "validation": {
+            "invalidDomain": "Please enter a valid domain address",
+            "configTypeRequired": "Please select package type",
+            "sourceIdentityRequired": "Please select package name",
+            "targetIdentityRequired": "Please select package name",
+            "groupTypeRequired": "Please select package group",
+            "popupImageRequired": "Please upload image",
+            "rewardPopupImageRequired": "Please upload image",
+            "jumpUrlRequired": "Please enter jump URL"
+          },
+          "buttons": {
+            "addVipLevel": "Add VIP Level",
+            "addRechargeConfig": "Add Deposit Configuration",
+            "delete": "Delete",
+            "cancel": "Cancel",
+            "save": "Save"
+          },
+          "table": {
+            "vipLevel": "VIP Level",
+            "bonusAmount": "Bonus Amount",
+            "bonusMultiplier": "Bonus Multiplier",
+            "operation": "Operation",
+            "minRecharge": "Deposit Amount>=",
+            "maxRecharge": "Deposit Amount<"
+          },
+          "messages": {
+            "samePackageError": "Package name and target package name cannot be the same",
+            "operationSuccess": "Operation successful"
+          }
+        },
+        "addPageConfig": {
+          "form": {
+            "channelName": "Channel Name",
+            "landingPageStyle": "Landing Page Style",
+            "adGroup": "Ad Group",
+            "pwaPackage": "PWA Package"
+          },
+          "validation": {
+            "landingPageRequired": "Please select landing page style"
+          },
+          "buttons": {
+            "cancel": "Cancel",
+            "save": "Save"
+          },
+          "messages": {
+            "operationSuccess": "Operation successful"
+          }
+        },
+        "addPwa": {
+          "form": {
+            "domain": "Domain"
+          },
+          "validation": {
+            "domainRequired": "Please select domain"
+          },
+          "buttons": {
+            "cancel": "Cancel",
+            "save": "Save"
+          },
+          "messages": {
+            "operationSuccess": "Operation successful"
+          }
+        },
+        "addSmsTemplate": {
+          "form": {
+            "smsProvider": "SMS Provider:",
+            "apiKey": "APIKey:",
+            "apiSecret": "APISecret:",
+            "apiId": "APIID:",
+            "requestUrl": "Request URL:",
+            "selectPlaceholder": "Please select"
+          },
+          "validation": {
+            "smsProviderRequired": "Please select SMS provider",
+            "apiKeyRequired": "Please enter APIKey",
+            "apiSecretRequired": "Please enter APISecret",
+            "apiIdRequired": "Please enter APIID",
+            "requestUrlRequired": "Please enter request URL"
+          },
+          "buttons": {
+            "cancel": "Cancel",
+            "save": "Save"
+          },
+          "messages": {
+            "operationSuccess": "Operation successful"
+          }
+        },
+        "groupSetting": {
+          "form": {
+            "addGroupTitle": "Add Ad Group",
+            "existingGroupsTitle": "Existing Ad Groups",
+            "groupNamePlaceholder": "Please enter ad group name"
+          },
+          "validation": {
+            "groupNameRequired": "Please enter ad group"
+          },
+          "dialog": {
+            "deleteTitle": "Delete Ad Group",
+            "deleteConfirm": "Are you sure to delete this ad group?",
+            "confirm": "Confirm",
+            "cancel": "Cancel"
+          },
+          "buttons": {
+            "add": "Add",
+            "delete": "Delete",
+            "close": "Close"
+          }
+        },
+        "packageManage": {
+          "form": {
+            "channelName": "Channel Name",
+            "channelType": "Channel Type",
+            "landingPageStyle": "Landing Page Style",
+            "landingPageStatus": "Landing Page Status",
+            "adGroup": "Ad Group",
+            "landingPageDomain": "Landing Page Domain",
+            "channelNamePlaceholder": "Please enter channel name",
+            "channelTypePlaceholder": "Please select channel type",
+            "landingPageStylePlaceholder": "Please select landing page style",
+            "landingPageStatusPlaceholder": "Please select landing page status",
+            "adGroupPlaceholder": "Please select ad group",
+            "landingPageDomainPlaceholder": "Please enter landing page domain",
+            "default": "Default"
+          },
+          "columns": {
+            "channelName": "Channel Name",
+            "channelType": "Channel Type",
+            "landingPageDomain": "Landing Page Domain",
+            "landingPageStyle": "Landing Page Style",
+            "adGroup": "Ad Group",
+            "landingPageStatus": "Landing Page Status",
+            "createTime": "Create Time",
+            "default": "Default"
+          },
+          "actions": {
+            "getDownloadUrl": "Get Download URL",
+            "repackage": "Repackage",
+            "configLandingPage": "Config Landing Page",
+            "publishLandingPage": "Publish Landing Page"
+          },
+          "buttons": {
+            "groupSetting": "Ad Group Setting"
+          },
+          "dialog": {
+            "configTitle": "Landing Page Configuration",
+            "publishTitle": "Publish Confirmation",
+            "groupSettingTitle": "Ad Group Setting"
+          },
+          "messages": {
+            "getDownloadUrlSuccess": "Get {channelName} download URL",
+            "getDownloadUrlFailed": "Failed to get download URL",
+            "packaging": "Packaging, please wait...",
+            "packagingSuccess": "Request packaging {channelName} successfully",
+            "packagingFailed": "Request packaging {channelName} failed",
+            "publishFailed": "Publish failed"
+          }
+        },
+        "packageTransfConf": {
+          "form": {
+            "packageName": "Package Name",
+            "packageNamePlaceholder": "Enter package name"
+          },
+          "columns": {
+            "sequence": "Sequence",
+            "packageName": "Package Name",
+            "targetPackageName": "Target Package Name",
+            "transferType": "Transfer Type",
+            "popupImage": "Popup Image",
+            "jumpUrl": "Jump URL",
+            "notTransferUser": "Not Transferred Users",
+            "transferUserCount": "Transferred Users",
+            "createTime": "Create Time",
+            "updateTime": "Update Time",
+            "operator": "Operator"
+          },
+          "transferTypes": {
+            "forced": "Forced Transfer Config",
+            "nonForced": "Non-forced Transfer Config"
+          },
+          "buttons": {
+            "add": "Add",
+            "download": "Download"
+          },
+          "actions": {
+            "edit": "Edit",
+            "delete": "Delete"
+          },
+          "dialog": {
+            "addTitle": "Add Package Name",
+            "editTitle": "Edit Package Name",
+            "popupImageTitle": "Popup Image",
+            "tip": "Tip",
+            "deleteConfirm": "Are you sure to delete?",
+            "confirm": "Confirm",
+            "cancel": "Cancel"
+          },
+          "common": {
+            "noImage": "No Image"
+          },
+          "messages": {
+            "dataTooBig": "Data is too large, please go to download center",
+            "downloadFailed": "Download failed"
+          }
+        },
+        "pageConfig": {
+          "usePWA": {
+            "no": "No Use PWA",
+            "yes": "Use PWA"
+          },
+          "packageState": {
+            "unpublished": "Unpublished",
+            "publishing": "Publishing",
+            "published": "Published",
+            "failed": "Failed"
+          },
+          "messages": {
+            "getLandingPageStylesFailed": "Failed to get landing page styles",
+            "getAdGroupFailed": "Failed to get ad group",
+            "addAdGroupSuccess": "Add ad group {name} successfully",
+            "addAdGroupFailed": "Add ad group {name} failed",
+            "deleteAdGroupSuccess": "Delete ad group {name} successfully",
+            "deleteAdGroupFailed": "Delete ad group {name} failed"
+          }
+        },
+        "publishPage": {
+          "confirmPublish": "Are you sure to publish the landing page for the following channel?",
+          "channelName": "Channel Name",
+          "currentDomain": "Current Domain",
+          "autoGenerateDomain": "System will automatically generate landing page domain",
+          "redeployWarning": "This operation will redeploy the landing page",
+          "cancel": "Cancel",
+          "re": "Re",
+          "confirmPublishButton": "Confirm {prefix}Publish",
+          "methods": {
+            "keepCurrentDomain": "Keep Current Domain",
+            "useNewDomain": "Use New Domain"
+          },
+          "messages": {
+            "publishSuccess": "Publish successfully"
+          }
+        },
+        "pwa": {
+          "form": {
+            "domain": "Domain",
+            "domainPlaceholder": "Please enter domain",
+            "status": "Status",
+            "statusPlaceholder": "Please select status"
+          },
+          "columns": {
+            "domain": "Domain",
+            "status": "Status",
+            "createTime": "Create Time"
+          },
+          "status": {
+            "disabled": "Disabled",
+            "active": "Active"
+          },
+          "buttons": {
+            "add": "Add"
+          },
+          "actions": {
+            "activate": "Activate",
+            "deactivate": "Deactivate",
+            "delete": "Delete"
+          },
+          "dialog": {
+            "confirmActivate": "Confirm Activate",
+            "confirmDeactivate": "Confirm Deactivate",
+            "confirmActivateMessage": "Are you sure to activate domain ",
+            "confirmDeactivateMessage": "Are you sure to deactivate domain ",
+            "addTitle": "Add PWA Domain",
+            "confirmDelete": "Confirm Delete",
+            "confirmDeleteMessage": "Are you sure to delete domain ",
+            "confirm": "Confirm",
+            "cancel": "Cancel",
+            "questionMark": "?"
+          },
+          "messages": {
+            "operationSuccess": "Operation successful"
+          }
+        },
+        "relatedChannel": {
+          "columns": {
+            "channelName": "Channel Name",
+            "channelType": "Channel Type",
+            "domainAddress": "Domain Address",
+            "actions": "Actions"
+          },
+          "actions": {
+            "add": "Add"
+          },
+          "cards": {
+            "assignedChannels": "Assigned Channels",
+            "availableChannels": "Available Channels"
+          },
+          "search": {
+            "placeholder": "Search channel name or domain"
+          },
+          "dialog": {
+            "confirmAddChannel": "Confirm Add Channel",
+            "addChannelText": "You are about to add channel:",
+            "domain": "Domain:",
+            "warningText": "Please note: once added, the domain cannot be removed. Are you sure to confirm this domain for this package?",
+            "confirmAdd": "Confirm Add",
+            "cancel": "Cancel"
+          },
+          "messages": {
+            "addSuccess": "Add successful",
+            "addFailed": "Add failed"
+          }
+        }
+      },
+      "landingPage": {
+        "copylink": "Copy Link",
+        "types": {
+          "mall": "Mall Style",
+          "photo": "Photo Style"
+        },
+        "columns": {
+          "pageName": "Page Name",
+          "pageType": "Page Type",
+          "status": "Status",
+          "pageUrl": "Page URL",
+          "createTime": "Create Time",
+          "operation": "Operation"
+        },
+        "form": {
+          "pageName": "Page Name",
+          "pageNamePlaceholder": "Please enter page name",
+          "pageType": "Page Type",
+          "pageTypePlaceholder": "Please select page type"
+        },
+        "buttons": {
+          "search": "Search",
+          "reset": "Reset",
+          "addPage": "Add Page",
+          "confirm": "Confirm",
+          "cancel": "Cancel",
+          "edit": "Edit",
+          "delete": "Delete"
+        },
+        "empty": {
+          "description": "No data"
+        },
+        "modal": {
+          "deleteLandingPage": "Delete Landing Page",
+          "deleteConfirm": "Are you sure to delete landing page",
+          "editSuccess": "Edit successful",
+          "addSuccess": "Add successful",
+          "preview": "Live Preview",
+          "edit": "Edit",
+          "add": "Add",
+          "landingPage": "Landing Page",
+          "form": {
+            "pageName": "Landing Page Style",
+            "pageNamePlaceholder": "Please enter landing page style",
+            "landingType": "Landing Page Type",
+            "appName": "App Name",
+            "appNamePlaceholder": "Please enter app name",
+            "domain": "Domain",
+            "domainPlaceholder": "Please enter domain",
+            "peopleNum": "Number of People",
+            "peopleNumPlaceholder": "Please enter number of people",
+            "rating": "Rating",
+            "ratingPlaceholder": "Please enter rating",
+            "icon": "Icon",
+            "carouselImgs": "Carousel Images",
+            "maxImages": "Upload up to 5 images",
+            "description": "Description Text",
+            "topImg": "Top Fixed Bar",
+            "contentImg": "Content Image"
+          },
+          "validation": {
+            "pageNameRequired": "Please enter landing page style",
+            "landingTypeRequired": "Please select landing page type",
+            "appNameRequired": "Please enter app name",
+            "domainRequired": "Please enter domain",
+            "peopleNumRequired": "Please enter number of people",
+            "ratingRequired": "Please enter rating",
+            "appIcoRequired": "Please upload icon",
+            "carouselImgsRequired": "Please upload carousel images",
+            "richTextRequired": "Please enter description text",
+            "topImgRequired": "Please upload top fixed bar image",
+            "contentImgRequired": "Please upload content image"
+          }
+        },
+        "preview": {
+          "defaultPageName": "Landing Page Preview",
+          "defaultAppName": "App Name",
+          "topFixedBar": "Top Fixed Bar",
+          "contentArea": "Content Area",
+          "landingPageStyle": "Landing Page Style",
+          "selectType": "Please select type"
+        },
+        "messages": {
+          "deleteSuccess": "Delete successful",
+          "deleteError": "Delete failed",
+          "statusUpdateSuccess": "Status updated successfully",
+          "statusUpdateError": "Status update failed",
+          "loadListError": "Failed to load list"
+        }
+      }
+    },
+    "riskManage": {
+      "title": "Risk Management",
+      "tabs": {
+        "blacklistMember": "Blacklist Members",
+        "blacklistIP": "Blacklist IPs",
+        "blacklistPhone": "Blacklist Phone Numbers",
+        "blacklistDevice": "Blacklist Devices",
+        "blacklistAccount": "Blacklist Withdraw Accounts"
+      },
+      "account": {
+        "form": {
+          "withdrawAccount": "Withdraw Account",
+          "createTime": "Create Time",
+          "accountPlaceholder": "Please enter withdraw account",
+          "blacklistAccount": "Blacklist Withdraw Account:",
+          "batchAccountList": "List of withdrawal accounts:",
+          "batchAccountPlaceholder": "Please enter withdraw accounts, separate multiple accounts with line breaks"
+        },
+        "columns": {
+          "blacklistAccount": "Blacklist Withdraw Account",
+          "createTime": "Create Time",
+          "creator": "Creator"
+        },
+        "buttons": {
+          "export": "Export",
+          "batchImport": "Batch Import Blacklist Withdraw Accounts",
+          "add": "Add",
+          "batchDelete": "Batch Delete",
+          "cancel": "Cancel",
+          "save": "Save"
+        },
+        "dialog": {
+          "batchImportTitle": "Batch Import Blacklist Withdraw Accounts",
+          "addTitle": "Add Blacklist Withdraw Account",
+          "editTitle": "Edit Blacklist Withdraw Account",
+          "tip": "Tip",
+          "deleteConfirm": "Are you sure to delete?",
+          "deleteAccountTitle": "Delete Blacklist Withdraw Account Confirmation",
+          "deleteAccountConfirm": "Are you sure to delete this withdraw account?",
+          "confirm": "Confirm",
+          "cancel": "Cancel"
+        },
+        "export": {
+          "fileName": "Blacklist Withdraw Account"
+        },
+        "validation": {
+          "accountRequired": "Please enter withdraw account"
+        },
+        "messages": {
+          "operationSuccess": "Operation successful"
+        }
+      },
+      "device": {
+        "form": {
+          "blacklistDevice": "Blacklist Device Number:",
+          "createTime": "Create Time",
+          "devicePlaceholder": "Please enter device number",
+          "batchDeviceList": "Device Number List:",
+          "batchDevicePlaceholder": "Please enter device numbers, separate multiple device numbers with line breaks"
+        },
+        "columns": {
+          "blacklistDevice": "Blacklist Device Number",
+          "createTime": "Create Time",
+          "creator": "Creator"
+        },
+        "buttons": {
+          "export": "Export",
+          "batchImport": "Batch Import Blacklist Device Numbers",
+          "add": "Add",
+          "batchDelete": "Batch Delete",
+          "cancel": "Cancel",
+          "save": "Save"
+        },
+        "dialog": {
+          "batchImportTitle": "Batch Import Blacklist Device Numbers",
+          "addTitle": "Add Blacklist Device Number",
+          "editTitle": "Edit Blacklist Device Number",
+          "tip": "Tip",
+          "deleteConfirm": "Are you sure to delete?",
+          "deleteDeviceTitle": "Delete Blacklist Device Number Confirmation",
+          "deleteDeviceConfirm": "Are you sure to delete this device number?",
+          "confirm": "Confirm",
+          "cancel": "Cancel"
+        },
+        "export": {
+          "fileName": "Blacklist Device Number"
+        },
+        "validation": {
+          "deviceRequired": "Please enter device number"
+        },
+        "messages": {
+          "operationSuccess": "Operation successful"
+        }
+      },
+      "ip": {
+        "form": {
+          "blacklistIP": "IP:",
+          "createTime": "Create Time",
+          "ipPlaceholder": "Please enter IP",
+          "batchIPList": "IP List:",
+          "batchIPPlaceholder": "Please enter IP addresses, separate multiple IPs with line breaks"
+        },
+        "columns": {
+          "blacklistIP": "Blacklist IP",
+          "createTime": "Create Time",
+          "creator": "Creator"
+        },
+        "buttons": {
+          "export": "Export",
+          "batchImport": "Batch Import Blacklist IPs",
+          "add": "Add",
+          "batchDelete": "Batch Delete",
+          "cancel": "Cancel",
+          "save": "Save"
+        },
+        "dialog": {
+          "batchImportTitle": "Batch Import Blacklist IPs",
+          "addTitle": "Add Blacklist IP",
+          "editTitle": "Edit Blacklist IP",
+          "tip": "Tip",
+          "deleteConfirm": "Are you sure to delete?",
+          "deleteIPTitle": "Delete Blacklist IP Confirmation",
+          "deleteIPConfirm": "Are you sure to delete this IP?",
+          "confirm": "Confirm",
+          "cancel": "Cancel"
+        },
+        "export": {
+          "fileName": "Blacklist IP"
+        },
+        "validation": {
+          "ipRequired": "Please enter IP"
+        },
+        "messages": {
+          "operationSuccess": "Operation successful"
+        }
+      },
+      "tel": {
+        "form": {
+          "blacklistPhone": "Blacklist Phone Number:",
+          "phoneList": "Phone Number List:",
+          "createTime": "Create Time",
+          "phonePlaceholder": "Please enter phone number",
+          "batchPhonePlaceholder": "Please enter phone numbers, separate multiple phone numbers with line breaks"
+        },
+        "columns": {
+          "blacklistPhone": "Blacklist Phone Number",
+          "createTime": "Create Time",
+          "creator": "Creator"
+        },
+        "buttons": {
+          "export": "Export",
+          "batchImport": "Batch Import Blacklist Phone Numbers",
+          "add": "Add",
+          "batchDelete": "Batch Delete",
+          "cancel": "Cancel",
+          "save": "Save"
+        },
+        "dialog": {
+          "batchImportTitle": "Batch Import Blacklist Phone Numbers",
+          "deleteConfirm": "Are you sure to delete?",
+          "deletePhoneTitle": "Delete Blacklist Phone Number Confirmation",
+          "deletePhoneConfirm": "Are you sure to delete this phone number?"
+        },
+        "export": {
+          "fileName": "Blacklist Phone Numbers"
+        },
+        "validation": {
+          "phoneRequired": "Please enter phone number"
+        },
+        "blacklistPhone": "Blacklist Phone Number"
+      },
+      "member": {
+        "form": {
+          "memberId": "Member ID",
+          "freezeCategory": "Freeze Category",
+          "freezeCategoryReason": "Freeze Category Reason",
+          "remarkReason": "Remark Operation Reason",
+          "selectAll": "Select All",
+          "remarkPlaceholder": "Please enter remark",
+          "memberIdList": "Member ID List",
+          "batchMemberIdPlaceholder": "Please enter member IDs, separate multiple member IDs with line breaks",
+          "mobile": "Mobile Number",
+          "device": "Device Number",
+          "registerIP": "Register IP",
+          "loginIP": "Login IP",
+          "status": "Status",
+          "statusPlaceholder": "Please select status",
+          "statusActive": "Active",
+          "statusRelieved": "Relieved",
+          "blacklistMobile": "Blacklist Mobile Number",
+          "blacklistDevice": "Blacklist Device Number",
+          "blacklistRegisterIP": "Blacklist Register IP",
+          "blacklistLoginIP": "Blacklist Login IP",
+          "createTime": "Create Time",
+          "memberIdPlaceholder": "Please enter member ID",
+          "mobilePlaceholder": "Please enter mobile number",
+          "devicePlaceholder": "Please enter device number",
+          "registerIPPlaceholder": "Please enter register IP",
+          "loginIPPlaceholder": "Please enter login IP",
+          "blacklistMember": "Blacklist Member:",
+          "batchMemberList": "Member ID List:",
+          "batchMemberPlaceholder": "Please enter member IDs, separate multiple member IDs with line breaks"
+        },
+        "columns": {
+          "memberId": "Member ID",
+          "status": "Status",
+          "statusActive": "Active",
+          "statusRelieved": "Relieved",
+          "freezeCategoryReason": "Freeze Category Reason",
+          "remarkReason": "Remark Operation Reason",
+          "blacklistWithdrawAccount": "Blacklist Withdraw Account",
+          "blacklistMobile": "Blacklist Mobile Number",
+          "blacklistDevice": "Blacklist Device Number",
+          "blacklistRegisterIP": "Blacklist Register IP",
+          "blacklistLoginIP": "Blacklist Login IP",
+          "mobile": "Mobile Number",
+          "device": "Device Number",
+          "registerIP": "Register IP",
+          "loginIP": "Login IP",
+          "createTime": "Create Time",
+          "creator": "Creator"
+        },
+        "status": {
+          "active": "Active",
+          "relieved": "Relieved"
+        },
+        "buttons": {
+          "export": "Export",
+          "batchImport": "Batch Import Blacklist Members",
+          "add": "Add",
+          "batchRelieve": "Batch Relieve",
+          "cancel": "Cancel",
+          "save": "Save"
+        },
+        "actions": {
+          "relieve": "Relieve",
+          "reactivate": "Reactivate",
+          "restore": "Restore"
+        },
+        "dialog": {
+          "batchImportTitle": "Batch Import Blacklist Members",
+          "addTitle": "Add Blacklist Member",
+          "editTitle": "Edit Blacklist Member"
+        },
+        "export": {
+          "fileName": "Blacklist Members"
+        },
+        "validation": {
+          "memberIdRequired": "Please enter member ID",
+          "freezeCategoryRequired": "Please select freeze category"
+        },
+        "messages": {
+          "operationSuccess": "Operation successful"
+        },
+        "confirmRelieve": "Are you sure to relieve?",
+        "confirmTitle": "Blacklist Confirmation",
+        "confirmContent": "Are you sure to ",
+        "memberBlacklistStatus": " this member's blacklist status?",
+        "blacklistMember": "Blacklist Member"
+      }
+    },
+    "site": {
+      "notice": {
+        "columns": {
+          "typeCode": "Type Code",
+          "title": "Title",
+          "content": "Content"
+        },
+        "form": {
+          "title": "Title:",
+          "content": "Content:",
+          "titleRequired": "Please enter title",
+          "contentRequired": "Please enter content"
+        },
+        "editNotice": "Edit Notice"
+      },
+      "settings": {
+        "operationTime": "Operation Time",
+        "operator": "Operator",
+        "configValue": "Config Value (Old->New)",
+        "siteName": "Site Name",
+        "headerLogo": "Header Logo",
+        "siteLogo2": "Site Logo 2",
+        "loginPageLogo": "Login Page Logo",
+        "pwaBigImg": "PWA Large Image",
+        "pwaSmallImg": "PWA Small Image",
+        "pwaStartImg": "APP Start Image",
+        "webIco": "Browser & Download App Icon",
+        "defaultLanguage": "Frontend Default Language",
+        "logoDesc": "Supported image formats (png, svg, gif, json, webp), image size cannot exceed 2M",
+        "pwaBigImgDesc": "Please upload 512px * 512px image, supported formats (png, webp), size cannot exceed 1M",
+        "pwaSmallImgDesc": "Please upload 192px * 192px image, supported formats (png, webp), size cannot exceed 1M",
+        "pwaStartImgDesc": "Please upload 640px * 1136px image, supported formats (png, webp), size cannot exceed 1M",
+        "webIcoDesc": "Please upload 32px * 32px image, supported formats (png, svg, ico, webp), size cannot exceed 10kb",
+        "amountGreaterEqual": "Amount ≥",
+        "enableLoginCaptcha": "Enable Login Captcha",
+        "enableLoginCaptchaDesc": "Enable image captcha for login",
+        "allowNoRechargeGame": "Allow No Deposit Game",
+        "allowNoRechargeGameDesc": "Allow users who haven't completed first deposit to play games",
+        "homeWinDisplay": "Homepage Winning Info Display",
+        "homeWinDisplayDesc": "Amount threshold for homepage winning information display",
+        "loginErrorCount": "Login Password Error Limit",
+        "loginErrorCountDesc": "Exceeding this limit will temporarily freeze account, requiring password change or admin intervention",
+        "lowestRechargeAmount": "Minimum Deposit Amount for Game Access",
+        "lowestRechargeAmountDesc": "Cumulative deposit amount must not be less than this amount to participate in games",
+        "confirmLanguageChange": "Confirm Language Change",
+        "confirmLanguageChangeContent": "Are you sure to change the frontend default language from ",
+        "tgUrl": "Official Telegram Channel Link",
+        "changeTo": " to ",
+        "questionMark": "?",
+        "languageChangeWarning": "This change will affect all new visiting users' default language settings.",
+        "updateSuccess": "Update successful"
+      },
+      "protocol": {
+        "privacyProtocol": "Privacy Protocol",
+        "riskProtocol": "Risk Protocol",
+        "userGuide": "User Guide"
+      },
+      "itemManual": {
+        "lastUpdateTime": "Last Update Time",
+        "operator": "Operator",
+        "edit": "Edit",
+        "cancel": "Cancel",
+        "save": "Save",
+        "updateSuccess": "Updated successfully!",
+        "contentRequired": "Content cannot be empty!"
+      },
+      "index": {
+        "title": "Site Settings",
+        "siteSettings": "Site Settings",
+        "autoNotice": "Auto Notice",
+        "frontProtocolManual": "Front Protocol Manual",
+        "firstPagePop": "Floating window Settings on the home page"
+      },
+      "firstPagePop": {
+        "popname": "Name of floating window",
+        "popnamePlaceholder": "Please enter the name of the floating window",
+        "status": "Status",
+        "statusPlaceholder": "Select Status",
+        "popupid": "Floating window ID",
+        "popupname": "Name of floating window",
+        "minIcon": "Icon",
+        "target": "Display the goal",
+        "first": "Priority",
+        "firstPlaceholder": "Enter Priority",
+        "uploadIcon": "Icon",
+        "uploadPlaceholder": "Upload Icon",
+        "uploadTips": "Please upload an image of size 1 : 1, supported formats (png, webp), size cannot exceed 3M",
+        "uploadIconError": "Please upload an image of size 1 : 1",
+        "uploadSizeError": "Please upload an image not exceeding 3MB",
+        "updateTime": "Update time",
+        "validTimeType": "Effective time",
+        "langtime": "Long-term effective",
+        "timeRanges": "Specified effective time",
+        "time": "Designated time",
+        "validTimeTypePlaceholder": "Please select the effective time",
+        "timeRange": "Please select the time range",
+        "updator": "Update person",
+        "newPopup": "New Float Window",
+        "editPopup": "Edit Float Window",
+        "popupTarget": "Display User",
+        "popupTargetPlaceholder": "Please select display target",
+        "unknownTag": "Unknown Tag",
+        "times": "times",
+        "batchImportFileName": "Batch import of files.txt",
+        "downloadFailed": "Download failed. Please try again later.",
+        "batchImport": "Batch import",
+        "download": "Download",
+        "selected": "Selected:",
+        "statusOptions": {
+          "enabled": "Enabled",
+          "disabled": "Disabled"
+        }
+      }
+    },
+    "takePackage": {
+      "components": {
+        "addOrEdit": {
+          "validation": {
+            "appNameRequired": "Please enter app name",
+            "appTypeRequired": "Please select app type",
+            "packageTypeRequired": "Please select package type",
+            "channelPackageIdRequired": "Please select channel source",
+            "domainUrlRequired": "Please select bind domain",
+            "appIcoRequired": "Please upload app icon",
+            "loadingImgRequired": "Please upload loading image"
+          },
+          "messages": {
+            "updateSuccess": "Update successful",
+            "addSuccess": "Add successful"
+          },
+          "sections": {
+            "basicInfo": "Basic Information",
+            "packageTypeConfig": "Package Type Configuration",
+            "inviteCodeConfig": "Invite Code Configuration",
+            "analyticsConfig": "Third-party Analytics Configuration",
+            "appAppearance": "App Appearance"
+          },
+          "labels": {
+            "appName": "App Name",
+            "appType": "App Type",
+            "packageName": "Package Name",
+            "packageType": "Package Type",
+            "domainUrl": "Bind Domain",
+            "inviteCode": "Invite Code",
+            "analyticsService": "Analytics Service",
+            "channelSource": "Channel Source",
+            "appIcon": "App Icon",
+            "loadingImage": "Loading Image"
+          },
+          "placeholders": {
+            "appName": "Please enter app name",
+            "packageName": "Please enter package name",
+            "inviteCode": "Please enter invite code (optional)",
+            "channelSource": "Please select channel source"
+          },
+          "tips": {
+            "packageNameGenerated": "Package name is automatically generated by the system based on app name",
+            "packageTypeTip": "Native packages do not require domains, shell packages need to bind domains",
+            "inviteCodeTip": "Leave empty to not use invite code",
+            "analyticsTip": "Only one analytics service can be selected",
+            "channelTip": "Select the corresponding {channelTip} channel configuration",
+            "appIconTip": "Recommended size: 512x512px, supports PNG format",
+            "loadingImageTip": "Recommended size: 1080x1920px, supports PNG/JPG format"
+          },
+          "options": {
+            "notUse": "Not Use"
+          },
+          "buttons": {
+            "cancel": "Cancel",
+            "save": "Save"
+          },
+          "channelTips": {
+            "facebook": "Facebook Pixel",
+            "adjust": "Adjust Tracking"
+          }
+        },
+        "detail": {
+          "labels": {
+            "appName": "App Name",
+            "appType": "App Type",
+            "status": "Status",
+            "packageName": "Package Name",
+            "domainUrl": "Bind Domain",
+            "inviteCode": "Invite Code",
+            "createTime": "Create Time",
+            "finishTime": "Finish Time",
+            "analyticsService": "Analytics Service",
+            "channelSource": "Channel Source"
+          },
+          "sections": {
+            "analyticsConfig": "Third-party Analytics Configuration"
+          },
+          "options": {
+            "notUse": "Not Use"
+          }
+        }
+      },
+      "index": {
+        "buildStatus": {
+          "waiting": "Waiting",
+          "building": "Building",
+          "success": "Success",
+          "failed": "Failed"
+        },
+        "buildTypes": {
+          "android": "Android APK",
+          "ios": "iOS IPA"
+        },
+        "packageTypes": {
+          "shell": "Shell Package",
+          "native": "Native Package"
+        }
+      },
+      "page": {
+        "title": "Application Package Management",
+        "labels": {
+          "buildStatus": "Build Status",
+          "channelSource": "Channel Source",
+          "appType": "App Type",
+          "timeRange": "Time Range"
+        },
+        "placeholders": {
+          "buildStatus": "Select Build Status",
+          "selectBuildStatus": "Select Build Status",
+          "channelSource": "Select Channel Source",
+          "selectChannelSource": "Select Channel Source",
+          "appType": "Select App Type",
+          "selectAppType": "Select App Type",
+          "selectTimeRange": "Select Time Range"
+        },
+        "columns": {
+          "appName": "App Name",
+          "appType": "App Type",
+          "packageType": "Package Type",
+          "packageName": "Package Name",
+          "analyticsService": "Analytics Service",
+          "channelSource": "Channel Source",
+          "domainUrl": "Domain",
+          "inviteCode": "Invite Code",
+          "buildStatus": "Build Status",
+          "createTime": "Create Time",
+          "actions": "Actions"
+        },
+        "dialogs": {
+          "editPackage": "Edit Package",
+          "createPackage": "Create Package",
+          "packageDetail": "Package Details"
+        },
+        "buttons": {
+          "createPackage": "Create Package",
+          "rebuild": "Rebuild",
+          "download": "Download",
+          "viewDetails": "View Details",
+          "edit": "Edit",
+          "delete": "Delete"
+        },
+        "messages": {
+          "buildFailed": "Build Failed",
+          "downloadFailed": "Download Failed",
+          "downloadFailedTryLater": "Download failed, please try again later",
+          "rebuildSuccess": "Rebuild {packageName} successfully",
+          "buildingInProgress": "Building in progress, please wait..."
+        },
+        "options": {
+          "all": "All",
+          "notUse": "Not Use"
+        }
+      }
+    },
+    "workOrder": {
+      "tabs": {
+        "pendingList": "Pending List",
+        "workOrderList": "Work Order List",
+        "supplementRecord": "Manual Credit Record",
+        "supplementStats": "Manual Credit Statistics",
+        "faqType": "FAQ Type Management",
+        "faqSub": "FAQ Sub Questions",
+        "forwardRecord": "Third-party Forward Query Record",
+        "forwardConfig": "Third-party Forward Query Config",
+        "telegramConfig": "Telegram Configuration",
+        "homeConfig": "Home Configuration",
+        "workOrderConfig": "Work Order Configuration",
+        "workOrderDaily": "Work Order Daily"
+      },
+      "columns": {
+        "workOrderNumber": "Work Order No.",
+        "workOrderType": "Work Order Type",
+        "workOrderName": "Work Order Name",
+        "vipLevel": "VIP Level",
+        "memberId": "Member ID",
+        "status": "Status",
+        "thirdPartyName": "Third Party Name",
+        "thirdPartyMappingCode": "Third Party Mapping Code",
+        "thirdPartyChannelId": "Third Party Channel ID",
+        "orderAmount": "Order Amount",
+        "reminderCount": "Reminder Count",
+        "attachmentType": "Attachment Type",
+        "submitTime": "Submit Time",
+        "operationTime": "Operation Time",
+        "operator": "Operator",
+        "remark": "Remark"
+      },
+      "fileTypes": {
+        "image": "Image",
+        "video": "Video",
+        "pdf": "PDF",
+        "other": "Other"
+      },
+      "useWorkOrder": {
+        "states": {
+          "all": "All",
+          "systemProcessing": "System Processing",
+          "pending": "Pending",
+          "processing": "Processing",
+          "rejected": "Rejected",
+          "completed": "Completed"
+        },
+        "form": {
+          "memberId": "Member ID",
+          "memberIdPlaceholder": "Please enter Member ID/Account",
+          "workOrderNumber": "Work Order No.",
+          "workOrderNumberPlaceholder": "Search work order number",
+          "thirdPartyName": "Third Party Name",
+          "thirdPartyNamePlaceholder": "Please select third party name",
+          "status": "Status",
+          "statusPlaceholder": "Please select status",
+          "channelSource": "Channel Source",
+          "channelSourcePlaceholder": "Please select channel source",
+          "attachmentType": "Attachment Type",
+          "attachmentTypePlaceholder": "Please select attachment type",
+          "vipLevel": "VIP Level",
+          "vipLevelPlaceholder": "Please select VIP level",
+          "amountRange": "Amount Range",
+          "minAmount": "Min Amount",
+          "maxAmount": "Max Amount",
+          "workOrderName": "Work Order Name",
+          "workOrderNamePlaceholder": "Please enter work order name",
+          "workOrderType": "Work Order Type",
+          "workOrderTypePlaceholder": "Please select work order type",
+          "operator": "Operator",
+          "operatorPlaceholder": "Please enter operator",
+          "timeType": "Please select time type",
+          "submitTime": "Submit Time",
+          "operationTime": "Operation Time",
+          "endTimePlaceholder": "Please select end time"
+        },
+        "attachmentOptions": {
+          "image": "Image",
+          "video": "Video",
+          "pdf": "PDF"
+        },
+        "messages": {
+          "querySuccess": "Query successful",
+          "exportSuccess": "Export successful"
+        }
+      },
+      "faqSub": {
+        "columns": {
+          "faqType": "FAQ Type",
+          "questionTitle": "Question Title",
+          "questionContent": "Question Content",
+          "sort": "Sort",
+          "status": "Status",
+          "lastUpdateTime": "Last Update Time",
+          "lastUpdateUser": "Operator"
+        },
+        "form": {
+          "questionTitle": "Question Title",
+          "questionTitlePlaceholder": "Please enter question title",
+          "faqType": "FAQ Type",
+          "faqTypePlaceholder": "Please select type",
+          "status": "Status",
+          "statusPlaceholder": "Please select status"
+        },
+        "dialog": {
+          "questionContent": "Question Content",
+          "edit": "Edit",
+          "add": "Add"
+        },
+        "messages": {
+          "deleteSuccess": "Delete successful!",
+          "operationSuccess": "Operation successful"
+        },
+        "buttons": {
+          "addQuestion": "Add Question"
+        },
+        "addEdit": {
+          "faqType": "FAQ Type",
+          "faqTypePlaceholder": "Please select your FAQ type",
+          "questionContent": "Question Content",
+          "title": "Title",
+          "titlePlaceholder": "Please enter title",
+          "content": "Content",
+          "contentPlaceholder": "Please enter {language} content",
+          "status": "Status",
+          "sort": "Sort",
+          "sortPlaceholder": "Please enter sort value",
+          "validation": {
+            "faqTypeRequired": "Please select type",
+            "sortRequired": "Please enter sort value"
+          }
+        }
+      },
+      "faqType": {
+        "columns": {
+          "moduleName": "FAQ Type",
+          "sort": "Sort",
+          "state": "Enable Status",
+          "lastUpdateTime": "Last Update Time",
+          "lastUpdateUser": "Operator"
+        },
+        "form": {
+          "moduleNameLabel": "FAQ Type Name",
+          "moduleNamePlaceholder": "Please enter FAQ type name",
+          "status": "Status",
+          "statusPlaceholder": "Please select type"
+        },
+        "status": {
+          "enable": "Enable",
+          "disable": "Disable"
+        },
+        "dialog": {
+          "add": "Add FAQ Type",
+          "edit": "Edit FAQ Type"
+        },
+        "buttons": {
+          "addType": "Add Type",
+          "edit": "Edit",
+          "delete": "Delete",
+          "cancel": "Cancel",
+          "save": "Save"
+        },
+        "messages": {
+          "deleteSuccess": "Delete successful!",
+          "operationSuccess": "Operation successful"
+        },
+        "addEdit": {
+          "nameLabel": "{language} Name",
+          "namePlaceholder": "Please enter FAQ type name ({language})",
+          "nameRequired": "Please enter {language} name",
+          "sort": "Sort",
+          "sortPlaceholder": "Please enter sort",
+          "status": "Status",
+          "validation": {
+            "statusRequired": "Please select status",
+            "sortRequired": "Please enter sort"
+          }
+        }
+      },
+      "forwardConfig": {
+        "columns": {
+          "channelName": "Deposit Channel Name",
+          "channelId": "Channel Id",
+          "apiId": "App Id",
+          "chatId": "Group ID",
+          "state": "Enable Status",
+          "lastUpdateTime": "Last Update Time",
+          "lastUpdateUser": "Last Update User"
+        },
+        "form": {
+          "channelIdLabel": "Third Party Channel Id",
+          "channelIdPlaceholder": "Please enter third party channel Id"
+        },
+        "status": {
+          "enable": "Enable",
+          "disable": "Disable"
+        },
+        "dialog": {
+          "add": "Add Configuration",
+          "edit": "Edit Configuration",
+          "autoConfig": "Auto Configuration"
+        },
+        "buttons": {
+          "addConfig": "Add Configuration",
+          "edit": "Edit",
+          "autoConfig": "Auto Configuration",
+          "addRule": "Add Rule",
+          "delete": "Delete",
+          "cancel": "Cancel",
+          "save": "Save"
+        },
+        "messages": {
+          "operationSuccess": "Operation successful",
+          "allFieldsRequired": "Please ensure all fields are filled"
+        },
+        "addEdit": {
+          "channelId": "Channel ID:",
+          "channelIdPlaceholder": "Please select",
+          "channelName": "Channel Name:",
+          "apiId": "App Id",
+          "apiIdPlaceholder": "Please select app id",
+          "chatId": "Group ID",
+          "chatIdPlaceholder": "Please enter group ID",
+          "validation": {
+            "channelIdRequired": "Please enter channel ID",
+            "apiIdRequired": "Please select app id",
+            "chatIdRequired": "Please enter group ID"
+          }
+        },
+        "autoConfig": {
+          "title": "{channelName} - Auto Process Configuration",
+          "ruleTitle": "Rule {index}",
+          "replyContent": "Third Party Reply Content",
+          "replyContentPlaceholder": "Third party reply content",
+          "autoProcess": "Auto Process",
+          "autoProcessPlaceholder": "Auto process",
+          "memberRemark": "Member Reply Remark",
+          "memberRemarkPlaceholder": "Please enter member reply remark",
+          "options": {
+            "reject": "Reject",
+            "approve": "Approve",
+            "pending": "Pending"
+          }
+        }
+      },
+      "forwardRecord": {
+        "columns": {
+          "workOrderNo": "Work Order No",
+          "payTypeName": "Third Party Name",
+          "rechargeOrderNo": "Deposit Order No",
+          "queryOperator": "Query Operator",
+          "queryTime": "Query Time",
+          "queryResult": "Query Result",
+          "replyContent": "Reply Content",
+          "replyTime": "Reply Time"
+        },
+        "form": {
+          "payTypeName": "Third Party Name",
+          "payTypeNamePlaceholder": "Please enter third party name",
+          "orderNumber": "Deposit Order No",
+          "orderNumberPlaceholder": "Please enter deposit order number",
+          "workOrderId": "Work Order No",
+          "workOrderIdPlaceholder": "Please enter work order number",
+          "dateRange": "Date Range"
+        },
+        "status": {
+          "replied": "Replied",
+          "pending": "Pending",
+          "failed": "Failed"
+        },
+        "shortcuts": {
+          "today": "Today",
+          "yesterday": "Yesterday",
+          "thisWeek": "This Week",
+          "lastWeek": "Last Week",
+          "thisMonth": "This Month",
+          "lastMonth": "Last Month"
+        },
+        "dialog": {
+          "replyDetails": "Reply Details",
+          "close": "Close"
+        },
+        "details": {
+          "workOrderNo": "Work Order No:",
+          "rechargeOrderNo": "Deposit Order No:",
+          "payTypeName": "Third Party Name:",
+          "queryTime": "Query Time:",
+          "queryResult": "Query Result:",
+          "replyTime": "Reply Time:",
+          "replyContent": "Reply Content"
+        }
+      },
+      "homeConfig": {
+        "faq": {
+          "label": "Enable FAQ",
+          "enableText": "On",
+          "disableText": "Off",
+          "description": "FAQ module will be displayed on the homepage when enabled"
+        },
+        "content": {
+          "lastUpdateTime": "Last Update Time",
+          "lastUpdateBy": "Operator",
+          "bannerTitle": "Banner Image",
+          "textTitle": "Homepage Text Content",
+          "textPlaceholder": "Please enter the content to be displayed in Homepage Kind Tips, default content will be shown if left empty"
+        },
+        "buttons": {
+          "cancel": "Cancel",
+          "save": "Save",
+          "edit": "Edit"
+        },
+        "messages": {
+          "operationSuccess": "Operation successful"
+        },
+        "dialog": {
+          "confirmTitle": "Confirm Operation",
+          "faqCloseConfirm": "Are you sure you want to disable the FAQ feature?",
+          "confirm": "Confirm",
+          "cancel": "Cancel"
+        }
+      },
+      "supplementRecord": {
+        "form": {
+          "thirdPartyName": "Third Party Name",
+          "thirdPartyNamePlaceholder": "Please enter third party name",
+          "thirdPartyChannelId": "Third Party Channel ID",
+          "thirdPartyChannelIdPlaceholder": "Please enter third party channel ID",
+          "rechargeOrderNo": "Deposit Order No.",
+          "rechargeOrderNoPlaceholder": "Please enter deposit order number",
+          "workOrderNumber": "Work Order No.",
+          "workOrderNumberPlaceholder": "Please enter work order number",
+          "utr": "UTR",
+          "utrPlaceholder": "Please enter UTR",
+          "supplementResult": "Manual Credit Result",
+          "supplementResultPlaceholder": "Please select manual credit result",
+          "dateRange": "Date Range"
+        },
+        "columns": {
+          "workOrderNumber": "Work Order No.",
+          "thirdPartyName": "Third Party Name",
+          "thirdPartyChannelId": "Third Party Channel ID",
+          "rechargeOrderNo": "Deposit Order No.",
+          "orderAmount": "Order Amount",
+          "utr": "UTR",
+          "latestSupplementResult": "Latest Manual Credit Result",
+          "latestSupplementUpdateTime": "Latest Manual Credit Update Time",
+          "totalSupplementCount": "Total Manual Credit Count"
+        },
+        "detailColumns": {
+          "serialNumber": "Serial No.",
+          "initiateTime": "Initiate Time",
+          "queryResponseResult": "Query Response Result",
+          "thirdPartyResponseResult": "Third Party Response Result",
+          "supplementResult": "Manual Credit Result",
+          "supplementResponseResult": "Manual Credit Response Result"
+        },
+        "status": {
+          "success": "Success",
+          "failed": "Failed"
+        },
+        "options": {
+          "failed": "Failed",
+          "success": "Success"
+        },
+        "dialog": {
+          "supplementDetail": "Manual Credit Detail"
+        },
+        "actions": {
+          "operation": "Operation",
+          "detail": "Detail"
+        },
+        "messages": {
+          "operationSuccess": "Operation successful"
+        }
+      },
+      "supplementStats": {
+        "form": {
+          "thirdPartyName": "Third Party Name",
+          "thirdPartyNamePlaceholder": "Please enter third party name",
+          "dateRange": "Date Range"
+        },
+        "columns": {
+          "thirdPartyName": "Third Party Name",
+          "thirdPartyChannelId": "Third Party Channel ID",
+          "unpaidOrderCount": "Deposit Unreached Work Order Count",
+          "submitQueryCount": "Submit Query Count",
+          "querySuccessCount": "Query Success Count",
+          "supplementSuccessCount": "Manual Credit Success Count",
+          "supplementFailCount": "Manual Credit Failure Count",
+          "firstSuccessRate": "First Manual Credit Success Rate",
+          "secondSuccessRate": "Second Manual Credit Success Rate",
+          "thirdSuccessRate": "Third Manual Credit Success Rate",
+          "totalSubmitSuccessRate": "Total Submit Success Rate",
+          "actualSuccessRate": "Actual Success Rate"
+        }
+      },
+      "telegramConfig": {
+        "form": {
+          "accountStatus": "Account Status",
+          "accountStatusPlaceholder": "Please select status",
+          "apiIdPlaceholder": "Please enter apiId",
+          "apiHashPlaceholder": "Please enter apiHash",
+          "phoneNumber": "Phone Number",
+          "phoneNumberPlaceholder": "Please enter phone number",
+          "firstName": "First Name",
+          "firstNamePlaceholder": "Please enter first name",
+          "lastName": "Last Name",
+          "lastNamePlaceholder": "Please enter last name",
+          "password": "Password (Two-factor Authentication)",
+          "passwordPlaceholder": "Please enter password",
+          "selectApiIdPlaceholder": "Please select apiId"
+        },
+        "columns": {
+          "loginStatus": "Login Status",
+          "lastUpdateTime": "Last Update Time",
+          "lastUpdateMan": "Last Updated By"
+        },
+        "actions": {
+          "edit": "Edit",
+          "login": "Login",
+          "logout": "Logout",
+          "verify": "Verify",
+          "delete": "Delete",
+          "deleteSession": "Delete Session",
+          "cancelLogin": "Cancel Login",
+          "addConfig": "Add Configuration",
+          "cancel": "Cancel",
+          "save": "Save"
+        },
+        "status": {
+          "notLoggedIn": "Not Logged In",
+          "waitingVerification": "Waiting for Verification",
+          "loggedIn": "Logged In",
+          "loggedOut": "Logged Out",
+          "waitingLogin": "Waiting for Login",
+          "verification": "Verification",
+          "login": "Login",
+          "exitLogin": "Exit Login"
+        },
+        "messages": {
+          "operationSuccess": "Operation Successful",
+          "loginConfirm": "Login Confirmation",
+          "logoutConfirm": "Logout Confirmation",
+          "loginConfirmText": "Are you sure you want to login?",
+          "logoutConfirmText": "Are you sure you want to logout?",
+          "confirm": "Confirm",
+          "cancel": "Cancel",
+          "logoutSuccess": "Logout Successful",
+          "logoutFailed": "Logout Failed",
+          "loginTriggered": "Login triggered, please enter verification code",
+          "loginFailed": "Login Failed",
+          "deleteSuccess": "Delete Successful",
+          "deleteSessionSuccess": "Delete Session Successful",
+          "cancelLoginSuccess": "Cancel Login Successful",
+          "verifySuccess": "Verification Successful",
+          "enterVerifyCode": "Please enter verification code",
+          "enterFiveDigitCode": "Please enter 5-digit verification code"
+        },
+        "dialog": {
+          "editConfig": "Edit Configuration",
+          "verifyCode": "Verification Code"
+        },
+        "validation": {
+          "apiIdRequired": "Please enter apiId",
+          "firstNameRequired": "First name is required",
+          "lastNameRequired": "Last name is required",
+          "apiHashRequired": "Please enter apiHash",
+          "phoneNumberRequired": "Please enter phone number",
+          "passwordRequired": "Please enter password",
+          "fiveDigitCodeRequired": "Please enter 5-digit verification code"
+        }
+      },
+      "workOrderConfig": {
+        "form": {
+          "workOrderTypeName": "Work Order Type Name",
+          "workOrderTypePlaceholder": "Please select work order type",
+          "workOrderLimitType": "Work Order Limit Type",
+          "workOrderLimitTypePlaceholder": "Please select type",
+          "loggedIn": "Logged In",
+          "notLoggedIn": "Not Logged In"
+        },
+        "columns": {
+          "workOrderTypeName": "Work Order Type Name",
+          "workOrderLimitType": "Work Order Limit Type",
+          "sort": "Sort",
+          "status": "Status",
+          "lastUpdateTime": "Last Update Time",
+          "operator": "Operator",
+          "enabled": "Enabled",
+          "disabled": "Disabled"
+        },
+        "actions": {
+          "edit": "Edit",
+          "autoReply": "Auto Reply",
+          "paramConfig": "Parameter Config",
+          "tutorial": "Tutorial",
+          "autoForward": "Auto Forward",
+          "quickReply": "Quick Reply",
+          "addConfig": "Add Configuration"
+        },
+        "dialog": {
+          "editWorkOrderType": "Edit Work Order Type",
+          "paramConfig": "Parameter Configuration",
+          "quickReply": "Quick Reply",
+          "tutorialConfig": "Tutorial Configuration",
+          "autoReplyConfig": "Auto Reply Configuration",
+          "autoForward": "Auto Forward",
+          "autoForwardStatus": "Auto Forward Status"
+        },
+        "messages": {
+          "operationSuccess": "Operation Successful"
+        },
+        "paramsConfig": {
+          "autoQueryTotalCount": "Auto Query Total Count",
+          "autoQueryFrequency": "Auto Query Frequency",
+          "orderLowerLimit": "Order Lower Limit Time",
+          "orderUpperLimit": "Order Upper Limit Time",
+          "times": "times",
+          "minutes": "minutes",
+          "hours": "hours"
+        },
+        "autoReply": {
+          "enableAutoReply": "Enable Auto Reply",
+          "replyContent": "Reply Content",
+          "delayTime": "Delay Time (seconds)",
+          "placeholders": {
+            "enterReplyContent": "Please enter reply content",
+            "enterDelayTime": "Please enter delay time"
+          },
+          "validation": {
+            "replyContentRequired": "Please enter reply content",
+            "contentRequired": "Please enter content",
+            "delayTimeRequired": "Please enter delay time"
+          }
+        },
+        "courseConfig": {
+          "tutorialContent": "Tutorial Content",
+          "placeholders": {
+            "enterContent": "Please enter {code} content"
+          }
+        },
+        "editDetail": {
+          "labels": {
+            "workOrderType": "Work Order Type",
+            "sort": "Sort",
+            "icon": "ICON",
+            "dailyLimit": "Daily Work Order Limit Per Person",
+            "limitType": "Limit Type",
+            "status": "Status",
+            "displayName": "Display Name",
+            "projectName": "Project Name",
+            "formConfig": "Form Configuration",
+            "fillType": "Fill Type",
+            "linkName": "Link {index} Name",
+            "linkAddress": "Link {index} Address"
+          },
+          "placeholders": {
+            "selectWorkOrderType": "Please select work order type",
+            "enterSort": "Please enter",
+            "enterInput": "Please enter",
+            "selectFormConfig": "Please select form configuration"
+          },
+          "options": {
+            "notLoggedIn": "Not Logged In",
+            "loggedIn": "Logged In",
+            "disabled": "Disabled",
+            "enabled": "Enabled",
+            "required": "Required",
+            "optional": "Optional"
+          },
+          "sections": {
+            "externalLinkConfig": "External Link Configuration",
+            "formConfigItems": "Form Configuration Items"
+          },
+          "buttons": {
+            "addItem": "Add Item",
+            "deleteItem": "Delete Item",
+            "cancel": "Cancel",
+            "save": "Save"
+          },
+          "validation": {
+            "selectWorkOrderType": "Please select work order type",
+            "enterSort": "Please enter sort",
+            "enterExternalLink": "Please enter external link"
+          },
+          "messages": {
+            "selectWorkOrderTypeFirst": "Please select work order type first"
+          }
+        },
+        "editReply": {
+          "labels": {
+            "quickTab": "Quick {index}",
+            "quickDisplay": "Quick Display",
+            "status": "Status",
+            "content": "Content"
+          },
+          "placeholders": {
+            "enterTitle": "Please enter",
+            "enterContent": "Please enter content"
+          },
+          "options": {
+            "disabled": "Disabled",
+            "enabled": "Enabled"
+          },
+          "buttons": {
+            "cancel": "Cancel",
+            "save": "Save"
+          },
+          "validation": {
+            "titleRequired": "Please enter title",
+            "titleCannotBeEmpty": "Quick {index} title cannot be empty",
+            "contentCannotBeEmpty": "Quick {index} content cannot be empty",
+            "contentCannotContainChinese": "Quick {index} content cannot contain Chinese"
+          }
+        }
+      },
+      "workOrderList": {
+        "labels": {
+          "systemProcessing": "System Processing",
+          "pending": "Pending",
+          "operation": "Operation",
+          "refreshCountdown": "Refresh countdown: {count}s",
+          "secondsRefresh": "seconds refresh"
+        },
+        "buttons": {
+          "reset": "Reset",
+          "batchReject": "Batch Reject",
+          "batchThirdPartyQuery": "Batch Third-party Query",
+          "batchThirdPartyForward": "Batch Third-party Forward",
+          "view": "View",
+          "edit": "Edit",
+          "lock": "Lock",
+          "unlock": "Unlock",
+          "automatic": "Auto"
+        },
+        "dialog": {
+          "workOrderDetails": "Work Order Details",
+          "batchReject": "Batch Reject",
+          "tip": "Tip",
+          "confirmLockUnlock": "Are you sure to {action}?",
+          "confirmForward": "Forward {count} work orders?",
+          "confirm": "Confirm",
+          "cancel": "Cancel"
+        },
+        "messages": {
+          "pleaseEnterRefreshTime": "Please enter refresh time",
+          "operationSuccessful": "Operation successful",
+          "batchThirdPartyQuerySuccessful": "Batch third-party query successful",
+          "batchForwardSuccessful": "Batch forward successful"
+        },
+        "oneByOneWork": {
+          "member": "Member",
+          "reply": "Reply"
+        },
+        "workOrderDetail": {
+          "labels": {
+            "workOrderNumber": "Work Order No.",
+            "workOrderType": "Work Order Type",
+            "submissionTime": "Submission Time",
+            "workOrderStatus": "Work Order Status",
+            "operationTime": "Operation Time",
+            "operator": "Operator",
+            "memberId": "Member ID",
+            "thirdPartyForwardStatus": "Third-party Forward Status",
+            "remark": "Remark",
+            "thirdPartyQueryResult": "Third-party Query Result",
+            "thirdPartyForwardQuery": "Third-party Forward Query",
+            "uploadImage": "Upload Image",
+            "workOrderDetails": "Work Order Details"
+          },
+          "status": {
+            "systemProcessing": "System Processing",
+            "pending": "Pending",
+            "processing": "Processing",
+            "rejected": "Rejected",
+            "processed": "Processed",
+            "pendingReply": "Pending Reply",
+            "replied": "Replied",
+            "failed": "Failed"
+          },
+          "buttons": {
+            "end": "End",
+            "submit": "Submit",
+            "thirdPartyForward": "Third-party Forward",
+            "thirdPartyPaymentQuery": "Third-party Payment Query",
+            "reject": "Reject",
+            "transferToArtificial": "Transfer to Manual",
+            "close": "Close",
+            "cancel": "Cancel"
+          },
+          "messages": {
+            "operationSuccessful": "Operation successful",
+            "workOrderNumberRequired": "Work order number is required",
+            "forwardSuccessful": "Forward successful",
+            "currentWorkOrderTypeNotSupported": "Current work order type does not support automatic processing",
+            "pleaseEnterRemark": "Please enter remark",
+            "remarkTooLong": "Remark cannot exceed 500 characters",
+            "remarkNoChineseAllowed": "Remark cannot contain Chinese characters"
+          },
+          "dialog": {
+            "tip": "Tip",
+            "endConversationConfirm": "End conversation?",
+            "processingCompleteConfirm": "Processing Complete Confirmation",
+            "markAsResolvedConfirm": "Are you sure to mark work order {workOrderNo} as resolved?",
+            "confirm": "Confirm",
+            "cancel": "Cancel",
+            "confirmBtn": "Confirm"
+          },
+          "placeholders": {
+            "enterRemark": "Enter remark",
+            "thirdPartyQueryResult": "Third-party query result"
+          }
+        }
+      }
+    },
+    "workDailyReport": {
+      "columns": {
+        "employeeName": "Employee Name",
+        "totalWorkOrders": "Total Work Orders",
+        "processing": "Processing",
+        "processed": "Processed",
+        "rejected": "Rejected",
+        "oneToOneWorkOrders": "One-to-One Work Orders",
+        "totalValidConversations": "Total Valid Conversations",
+        "totalValidConversationRate": "Total Valid Conversation Rate",
+        "totalMessages": "Total Messages",
+        "avgConversationDuration": "Average Conversation Duration",
+        "avgFirstResponseDuration": "Average First Response Duration",
+        "workOrderType": "Work Order Type",
+        "total": "Total",
+        "systemProcessing": "System Processing",
+        "pending": "Pending"
+      },
+      "employeeStatistics": "Employee Statistics",
+      "typeStatistics": "Type Statistics",
+      "operationTime": "Date"
+    },
+    "frontStyle": {
+      "tenantSwitch": "Switch Tenant",
+      "index": {
+        "title": "Frontend Style Management",
+        "currentSiteStyle": "Current Site Style",
+        "applyStyleChange": "Apply Style Change",
+        "submitStyleModification": "Submit Style Modification",
+        "previewSubmittedStyle": "Preview Submitted Style",
+        "applyRevoke": "Apply Revoke",
+        "expectedEffectiveTime": "Expected Effective Time",
+        "frontVersionSelection": "Frontend Version Selection",
+        "componentSelection": "Component Selection",
+        "preview": "Preview",
+        "homePage": "Home Page",
+        "actions": {
+          "view": "View"
+        },
+        "dialog": {
+          "confirmSubmitStyleChange": "Are you sure to submit style modification request?",
+          "confirmRevokeStyleChange": "Are you sure to revoke style modification request?",
+          "confirm": "Confirm",
+          "cancel": "Cancel"
+        },
+        "messages": {
+          "submitSuccess": "Submit successful",
+          "operationSuccess": "Operation successful"
+        }
+      },
+      "homeComponent": {
+        "titleBar": "Title Bar (Fixed Top Display)",
+        "logo": "Logo",
+        "balance": "Balance",
+        "sidebar": "Sidebar",
+        "sidebarPosition": "Sidebar Popup Position",
+        "sidebarMenu": "Sidebar Menu",
+        "sidebarGrid": "Sidebar Grid",
+        "headerRightIcons": "Header Right Icons (Max 4)",
+        "selectHomeComponents": "Select Home Display Components (Draggable Sort)",
+        "gameMenuStyle": "Game Menu Style",
+        "bottomTabBar": "Bottom Tab Bar (Draggable Sort)",
+        "positions": {
+          "left": "Left",
+          "right": "Right"
+        },
+        "gameStyles": {
+          "sidebarLayout": "Sidebar Layout",
+          "navigationLayout": "Navigation Menu Layout"
+        },
+        "sorting": "Sort",
+        "defaultIcon": "Default Icon",
+        "selectedIcon": "Selected Icon",
+        "messages": {
+          "maxFourIcons": "Select at most 4 items",
+          "homeAndPersonalRequired": "Home and Personal Center cannot be hidden",
+          "minThreeTabs": "Keep at least 3 tabs"
+        }
+      },
+      "data": {
+        "headerIcons": {
+          "rank": "Ranking",
+          "message": "Message",
+          "recharge": "Deposit",
+          "withdraw": "Withdraw",
+          "download": "Download",
+          "language": "Language"
+        },
+        "gridList": {
+          "message": "Message",
+          "download": "Download"
+        },
+        "menuList": {
+          "rechargeRecord": "Deposit Record",
+          "withdrawRecord": "Withdraw Record"
+        },
+        "homeComponents": {
+          "swiper": "Carousel",
+          "notice": "Notice",
+          "game": "Game Menu",
+          "winning": "Winning Info",
+          "ranking": "Ranking",
+          "brand": "Brand Credibility"
+        },
+        "tabs": {
+          "home": "Home",
+          "activity": "Activity",
+          "promotion": "Promotion",
+          "wallet": "Wallet",
+          "personal": "Personal"
+        },
+        "pageStyles": {
+          "recharge": "Deposit",
+          "withdraw": "Withdraw",
+          "activity": "Activity",
+          "model": "Notice Modal",
+          "avatar": "Avatar",
+          "rechargeStyle1": "Deposit Style 1",
+          "rechargeStyle2": "Deposit Style 2",
+          "withdrawStyle1": "Withdraw Style 1",
+          "withdrawStyle2": "Withdraw Style 2",
+          "activityStyle1": "Activity Style 1",
+          "activityStyle2": "Activity Style 2",
+          "modelStyle1": "Notice Modal Style 1",
+          "modelStyle2": "Notice Modal Style 2",
+          "modelStyle3": "Notice Modal Style 3",
+          "avatarGroup1": "Avatar Group 1",
+          "avatarGroup2": "Avatar Group 2",
+          "avatarGroup3": "Avatar Group 3"
+        }
+      },
+      "title": "Frontend Style Management",
+      "status": {
+        "draft": "Draft",
+        "pending": "Pending",
+        "published": "Published"
+      },
+      "actions": {
+        "saveDraft": "Save Draft",
+        "publish": "Publish"
+      },
+      "layoutTree": {
+        "title": "Layout Selection",
+        "empty": "No layout data"
+      },
+      "preview": {
+        "title": "Preview",
+        "urlPlaceholder": "Enter H5 preview URL",
+        "load": "Load",
+        "mock": "Mock Preview"
+      },
+      "config": {
+        "componentSelect": "Component Selection",
+        "headerBar": "Header Bar",
+        "fixedTop": "(Fixed at top)",
+        "balance": "Balance",
+        "sidebar": "Sidebar",
+        "headerRightIcons": "Header Right Icons",
+        "maxFourIcons": "(Max 4)",
+        "iconRank": "Ranking",
+        "iconMessage": "Message",
+        "iconDeposit": "Deposit",
+        "iconWithdraw": "Withdraw",
+        "iconDownload": "Download",
+        "iconLanguage": "Language",
+        "homeComponents": "Select Homepage Components",
+        "dragToSort": "(Drag to sort)",
+        "gameMenuStyle": "Game Menu Style",
+        "sidebarLayout": "Sidebar Layout",
+        "navigationLayout": "Navigation Bar Layout",
+        "tabBarTitle": "Bottom Tab Bar",
+        "sort": "Sort",
+        "tabName": "Name",
+        "defaultIcon": "Default Icon",
+        "activeIcon": "Active Icon",
+        "raised": "Raised",
+        "addTabItem": "Add Tab Item",
+        "seoTitle": "SEO Configuration",
+        "seoTitlePlaceholder": "Enter page title",
+        "seoKeywords": "Keywords",
+        "seoKeywordsPlaceholder": "Enter keywords, separated by commas",
+        "seoDescription": "Description",
+        "seoDescriptionPlaceholder": "Enter page description",
+        "seoFavicon": "Favicon",
+        "seoFaviconPlaceholder": "Enter favicon URL",
+        "seoScripts": "Custom Scripts",
+        "seoScriptsPlaceholder": "Enter custom script code"
+      },
+      "components": {
+        "banner": "Banner",
+        "announcement": "Announcement",
+        "gameMenu": "Game Menu",
+        "jackpot": "Jackpot Info",
+        "ranking": "Ranking",
+        "brandTrust": "Brand Trust",
+        "quickEntry": "Quick Entry",
+        "gameList": "Game List",
+        "hotGames": "Hot Games"
+      },
+      "footer": {
+        "currentStyle": "Current Style:",
+        "view": "View",
+        "applyStyle": "Apply Style Change:",
+        "submitModify": "Submit Modification",
+        "previewSubmitted": "Preview Submitted",
+        "withdraw": "Withdraw"
+      },
+      "dialog": {
+        "publishTitle": "Publish Confirmation",
+        "publishContent": "Are you sure you want to publish the current style configuration? It will take effect immediately.",
+        "resetContent": "Are you sure you want to reset all configurations? This action cannot be undone."
+      },
+      "messages": {
+        "loadFailed": "Failed to load configuration",
+        "saveDraftSuccess": "Saved successfully",
+        "saveDraftFailed": "Failed to save",
+        "publishSuccess": "Published successfully",
+        "publishFailed": "Failed to publish",
+        "resetSuccess": "Configuration reset",
+        "viewCurrent": "View current style",
+        "submitStyle": "Submit style modification",
+        "previewSubmitted": "Preview submitted style",
+        "withdraw": "Withdraw request"
+      },
+      "seo": {
+        "title": "SEO Configuration",
+        "pageTitle": "Page Title",
+        "pageTitlePlaceholder": "Enter page title",
+        "keywords": "Keywords",
+        "keywordsPlaceholder": "Enter keywords, separated by commas",
+        "description": "Description",
+        "descriptionPlaceholder": "Enter page description",
+        "favicon": "Favicon",
+        "faviconPlaceholder": "Enter favicon URL",
+        "scripts": "Custom Scripts",
+        "scriptsPlaceholder": "Enter custom script code (e.g. analytics)"
+      },
+      "tabbar": {
+        "editTitle": "Edit TabBar",
+        "name": "TabBar Name",
+        "namePlaceholder": "Enter TabBar name",
+        "clientType": "Client Type",
+        "clientTypePlaceholder": "Select client type",
+        "background": "Background",
+        "backgroundPlaceholder": "Enter background color or image URL",
+        "previewImage": "Preview Image",
+        "previewImagePlaceholder": "Enter preview image URL",
+        "newItem": "New Tab",
+        "noItems": "No tab items",
+        "addItem": "Add Tab Item",
+        "backendName": "Backend Name",
+        "backendNamePlaceholder": "Enter backend name",
+        "uniqueKey": "Unique Key",
+        "uniqueKeyPlaceholder": "Enter unique key",
+        "displayName": "Display Name",
+        "displayNamePlaceholder": "Enter display name",
+        "langCode": "Language",
+        "jumpType": "Jump Type",
+        "jumpTypePlaceholder": "Select jump type",
+        "jumpTarget": "Jump Target",
+        "jumpTargetPlaceholder": "Enter target (route/game ID/URL)",
+        "specialType": "Special Type",
+        "specialTypePlaceholder": "Select special type",
+        "iconKey": "Icon Key",
+        "iconKeyPlaceholder": "Enter icon skin resource key",
+        "activeIconKey": "Active Icon Key",
+        "activeIconKeyPlaceholder": "Enter active icon skin resource key",
+        "sort": "Sort",
+        "visible": "Visible"
+      },
+      "layoutTheme": {
+        "title": "Layout & Theme",
+        "layout": "Layout",
+        "theme": "Theme",
+        "switchPreview": "Switch to preview"
+      },
+      "seoCard": {
+        "title": "SEO Configuration",
+        "notPreviewable": "Not previewable",
+        "seoTitle": "SEO Title",
+        "seoTitlePlaceholder": "Enter SEO title",
+        "seoKeywords": "SEO Keywords",
+        "seoKeywordsPlaceholder": "Enter SEO keywords",
+        "seoDescription": "SEO Description",
+        "seoDescriptionPlaceholder": "Enter SEO description",
+        "favicon": "Favicon",
+        "faviconPlaceholder": "Enter favicon URL",
+        "customScripts": "Custom Scripts",
+        "customScriptsPlaceholder": "Enter custom scripts",
+        "promoImage": "Promo Image",
+        "promoImageHint": "Supports PNG format, max 500KB (max 1000x1000, recommended 780x440)"
+      },
+      "siteSettings": {
+        "title": "Site Settings",
+        "siteName": "Site Name",
+        "siteNamePlaceholder": "Enter site name",
+        "titleBarLogo": "Title Bar Logo",
+        "siteLogo2": "Site Logo 2",
+        "loginLogo": "Login Page Logo",
+        "pwaLargeIcon": "PWA Large Icon",
+        "pwaMediumIcon": "PWA Medium Icon",
+        "pwaSmallIcon": "PWA Small Icon",
+        "appSplash": "App Splash Screen",
+        "browserIcon": "Browser & App Icon",
+        "defaultLanguage": "Default Language",
+        "logoHint": "Supported formats: png, svg, gif, json, webp. Max size: 2MB",
+        "pwaLargeHint": "Upload 512px × 512px image. Supported: png, webp. Max: 1MB",
+        "pwaMediumHint": "Upload 384px × 384px image. Supported: png, webp. Max: 1MB",
+        "pwaSmallHint": "Upload 192px × 192px image. Supported: png, webp. Max: 1MB",
+        "appSplashHint": "Upload 640px × 1136px image. Supported: png, webp. Max: 1MB",
+        "browserIconHint": "Upload 32px × 32px image. Supported: png, svg, ico, webp. Max: 10KB",
+        "langHindi": "Hindi",
+        "langEnglish": "English",
+        "langChinese": "Chinese",
+        "subSiteMaterial": "Site Settings",
+        "subPwa": "PWA Settings",
+        "subRegister": "Register Page",
+        "subLogin": "Login Page",
+        "subAgreement": "Agreement Manual",
+        "subApp": "App Settings",
+        "appName": "App Name",
+        "appNamePlaceholder": "Enter app name",
+        "appIcon": "App Icon",
+        "appIconHint": "Upload app icon. Supported: png, webp. Max: 1MB",
+        "appLogo": "App Logo",
+        "appLogoHint": "Upload app logo. Supported: png, webp. Max: 1MB",
+        "splashImage": "Splash Image",
+        "splashImageHint": "Upload 640px × 1136px image. Supported: png, webp. Max: 1MB",
+        "agreementTypes": {
+          "privacy": "Privacy Policy",
+          "risk": "Risk Agreement",
+          "guide": "Beginner Guide"
+        },
+        "agreement": {
+          "lastUpdateTime": "Last Updated",
+          "operator": "Operator",
+          "edit": "Edit",
+          "save": "Save",
+          "cancel": "Cancel",
+          "placeholder": "Enter agreement content",
+          "saveSuccess": "Saved successfully",
+          "contentRequired": "Content is required"
+        },
+        "registerBgTitle": "Register Page Image",
+        "registerBgDesc": "Configure the background image for the registration page, supports multiple image formats",
+        "registerBgHint": "Supported formats: .png, .webp. Max size: 1MB",
+        "loginBgTitle": "Login Page Image",
+        "loginBgDesc": "Configure the background image for the login page, supports multiple image formats",
+        "loginBgHint": "Supported formats: .png, .webp. Max size: 1MB",
+        "pwaName": "PWA App Name",
+        "pwaNamePlaceholder": "Enter PWA app name (shown when installed on home screen)",
+        "sectionBasic": "Basic Info",
+        "sectionSiteAsset": "Site Logo",
+        "sectionBrand": "Brand Assets",
+        "sectionAppIcon": "PWA Icons"
+      },
+      "currentEdit": {
+        "title": "Current Editing",
+        "name": "Name:",
+        "jump": "Jump:",
+        "status": "Status:",
+        "type": "Type:",
+        "enabled": "Enabled",
+        "disabled": "Disabled",
+        "raised": "Raised",
+        "normal": "Normal"
+      },
+      "tips": {
+        "title": "Configuration Tips",
+        "tabCount": "Tab count:",
+        "dragToReorder": "Drag tabs to reorder",
+        "homeFirst": "Home should be first",
+        "oneRaised": "Only one raised tab recommended",
+        "iconKeyMatch": "Icon key must match H5 resources",
+        "maxTabs": "Maximum 6 tabs"
+      },
+      "workspace": {
+        "descriptions": {
+          "layout": "Manage the web layout, mobile layout, and theme used by the current tenant.",
+          "siteMaterial": "Manage site name, default language, logos, and PWA icon assets.",
+          "seo": "Manage the storefront title, keywords, description, and additional scripts.",
+          "appSettings": "Manage the app name, icon, logo, and splash image assets.",
+          "login": "Manage the login page background image and related display assets.",
+          "register": "Manage the register page background image and related display assets.",
+          "agreement": "Manage agreement content. Multilingual agreements are edited and saved inside the panel."
+        },
+        "layoutWebTitle": "Web Layout",
+        "layoutMobileTitle": "Mobile Layout",
+        "currentConfigured": "Configured",
+        "unsetValue": "Unset",
+        "noLayoutOptions": "No layouts available",
+        "noThemeOptions": "No themes available",
+        "confirmDiscardChanges": "You have unsaved changes. Do you want to continue?",
+        "confirmTenantChange": "Switching tenants will discard unsaved changes. Continue?",
+        "agreementSaveHint": "Please edit and save agreements inside the panel",
+        "currentTenant": "Current Tenant",
+        "synced": "This section is up to date",
+        "dirty": "There are unsaved changes",
+        "agreementManaged": "Agreements are edited and saved inside the panel",
+        "previewTitle": "Storefront Preview",
+        "previewHint": "The iframe on the right embeds the storefront address for the current tenant.",
+        "scopeTitle": "Current Scope",
+        "scopeEmpty": "Please select a group and tenant first",
+        "groupFieldLabel": "Group",
+        "tenantFieldLabel": "Tenant",
+        "groupSwitch": "Please select group",
+        "tenantSwitch": "Please select tenant",
+        "tenantSwitchDisabled": "Please select group first",
+        "tenantSwitchEmpty": "No tenants available under the current group",
+        "tenantPending": "Tenant pending",
+        "groupCount": "{count} groups available",
+        "tenantCount": "{count} tenants available in current group",
+        "previewAddress": "Storefront Address",
+        "previewOpenNewTab": "Open in New Window",
+        "previewEmpty": "Please select a tenant before loading the storefront preview"
+      },
+      "errors": {
+        "tenantNotFound": "Please select a tenant first"
+      }
+    }
+  }
+}

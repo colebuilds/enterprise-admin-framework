@@ -1,0 +1,25 @@
+{
+  "productNav": {
+    "title": "Products & Services",
+    "searchPlaceholder": "Search features...",
+    "searchResults": "Search Results",
+    "noResults": "No matching features found",
+    "quickNav": "Quick Navigation",
+    "game": "Game Management",
+    "member": "Member Management",
+    "report": "Financial Reports",
+    "operations": "Operations",
+    "tenant": "Tenant Management",
+    "system": "System Settings",
+    "memberDetail": {
+      "tabs": {
+        "info": "Basic Info",
+        "wallet": "Wallet Info",
+        "accountChange": "Account Changes",
+        "bet": "Betting Records",
+        "risk": "Risk Control",
+        "value": "User Value"
+      }
+    }
+  }
+}

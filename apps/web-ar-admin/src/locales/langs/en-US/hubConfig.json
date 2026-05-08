@@ -1,0 +1,395 @@
+{
+  "hub": {
+    "common": {
+      "tenantId": "Tenant ID",
+      "platform": "Platform",
+      "state": "State",
+      "platformOpts": {
+        "ios": "iOS",
+        "android": "Android",
+        "both": "All Platforms"
+      },
+      "stateOpts": {
+        "enabled": "Enabled",
+        "disabled": "Disabled"
+      }
+    },
+    "site": {
+      "title": "Site Management",
+      "domainTab": "Domain Management",
+      "seoTab": "SEO Config",
+      "overrideTab": "Override Config",
+      "domain": {
+        "domain": "Domain",
+        "domainPh": "Enter domain address",
+        "tenantIdPh": "Enter tenant ID",
+        "clientType": "Client Type",
+        "channel": "Channel",
+        "channelPh": "Enter channel code",
+        "layoutId": "Layout",
+        "selectLayout": "Select Layout",
+        "seoId": "SEO Config",
+        "seoIdPh": "Enter SEO config ID",
+        "add": "Add Domain",
+        "edit": "Edit Domain"
+      },
+      "seo": {
+        "title": "Page Title",
+        "tenantIdPh": "For tenant-level SEO",
+        "domainId": "Domain ID",
+        "domainIdPh": "For domain-level SEO",
+        "titlePh": "Enter page title",
+        "keywords": "Keywords",
+        "keywordsPh": "Enter keywords, separated by commas",
+        "description": "Description",
+        "descriptionPh": "Enter description",
+        "favicon": "Favicon",
+        "faviconPh": "Enter favicon URL",
+        "scripts": "Custom Scripts",
+        "scriptsPh": "Enter custom script code",
+        "add": "Add SEO Config",
+        "edit": "Edit SEO Config"
+      },
+      "override": {
+        "tenantIdPh": "Enter tenant ID",
+        "layoutId": "Layout",
+        "selectLayout": "Select Layout (Optional)",
+        "resourceType": "Resource Type",
+        "resourceKey": "Resource Key",
+        "resourceKeyPh": "e.g.: background, name, iconKey",
+        "value": "Override Value",
+        "valuePh": "JSON format",
+        "valueJsonErr": "Invalid JSON format",
+        "add": "Add Override",
+        "edit": "Edit Override",
+        "typeOpts": {
+          "tabbar": "TabBar Override",
+          "tabitem": "TabBar Item Override",
+          "navigation": "Navigation Override",
+          "style": "Style Override"
+        }
+      }
+    },
+    "tpl": {
+      "title": "Template Management",
+      "layout": {
+        "title": "Layout Management",
+        "name": "Layout Name",
+        "description": "Description",
+        "client": "Client Type",
+        "themeCount": "Themes",
+        "styleCount": "Styles",
+        "themeList": "Theme List",
+        "styleList": "Style List",
+        "add": "Add Layout",
+        "edit": "Edit Layout",
+        "clientOpts": {
+          "web": "Web",
+          "h5": "Mobile H5",
+          "ios": "iOS",
+          "android": "Android",
+          "app": "APP",
+          "public": "Public"
+        }
+      },
+      "theme": {
+        "title": "Theme Management",
+        "name": "Theme Name",
+        "code": "Theme Code",
+        "description": "Description",
+        "add": "Add Theme",
+        "edit": "Edit Theme"
+      },
+      "style": {
+        "title": "Style Management",
+        "name": "Style Name",
+        "description": "Description",
+        "type": "Style Type",
+        "layoutId": "Layout",
+        "add": "Add Style",
+        "edit": "Edit Style",
+        "selectLayout": "Select Layout",
+        "typeOpts": {
+          "electronic": "Electronic",
+          "light": "Light",
+          "dark": "Dark",
+          "classic": "Classic",
+          "modern": "Modern"
+        }
+      },
+      "nav": {
+        "title": "Navigation Management",
+        "name": "Navigation Name",
+        "nameZh": "Chinese Name",
+        "nameEn": "English Name",
+        "type": "Navigation Type",
+        "sort": "Sort",
+        "layoutId": "Layout",
+        "parentId": "Parent Navigation",
+        "parentIdTip": "For tree structure",
+        "sortTip": "Higher value comes first",
+        "childCount": "Children",
+        "childList": "Children List",
+        "game": "Game Data",
+        "gamePh": "JSON format",
+        "gameJsonErr": "Invalid JSON format",
+        "navItem": "Navigation",
+        "add": "Add Navigation",
+        "edit": "Edit Navigation",
+        "selectLayout": "Select Layout",
+        "selectParent": "Select Parent (Optional)",
+        "noParent": "No Parent",
+        "typeOpts": {
+          "category": "Category",
+          "game": "Game"
+        }
+      },
+      "tabbar": {
+        "title": "TabBar Management",
+        "name": "TabBar Name",
+        "client": "Client Type",
+        "background": "Background",
+        "backgroundPh": "Color value or image URL",
+        "layoutId": "Layout",
+        "itemCount": "Items",
+        "add": "Add TabBar",
+        "edit": "Edit TabBar",
+        "selectLayout": "Select Layout",
+        "manageItems": "Manage Items",
+        "items": "Items",
+        "item": {
+          "title": "TabBar Item Management",
+          "name": "Item Name",
+          "nameZh": "Chinese Name",
+          "nameEn": "English Name",
+          "key": "Unique Key",
+          "iconKey": "Default Icon Key",
+          "iconActiveKey": "Active Icon Key",
+          "type": "Jump Type",
+          "target": "Jump Target",
+          "targetPh": "Route name/Game ID/External URL",
+          "iconKeyPh": "e.g.: tab.home",
+          "iconActiveKeyPh": "e.g.: tab.home.active",
+          "special": "Special Type",
+          "sort": "Sort",
+          "visible": "Visible",
+          "add": "Add Item",
+          "edit": "Edit Item",
+          "typeOpts": {
+            "route": "Frontend Route",
+            "url": "External URL",
+            "game": "Game ID"
+          },
+          "specialOpts": {
+            "normal": "Normal",
+            "raised": "Raised Button"
+          }
+        }
+      },
+      "skin": {
+        "title": "Skin Management",
+        "name": "Skin Name",
+        "type": "Skin Type",
+        "key": "Resource Key",
+        "keyPh": "e.g.: logo.main, icon.home.active",
+        "url": "Resource URL",
+        "urlPh": "OSS/S3/CDN resource URL",
+        "themeId": "Theme",
+        "tenantIdPh": "Enter Tenant ID",
+        "layoutId": "Layout",
+        "meta": "Metadata",
+        "metaPh": "JSON metadata (optional)",
+        "metaJsonErr": "Invalid JSON format",
+        "preview": "Preview",
+        "add": "Add Skin",
+        "edit": "Edit Skin",
+        "selectTheme": "Select Theme",
+        "selectTenant": "Select Tenant",
+        "selectLayout": "Select Layout",
+        "typeOpts": {
+          "system": "System Resource",
+          "theme": "Theme Resource",
+          "tenant": "Tenant Resource",
+          "layout": "Layout Resource"
+        },
+        "viewResource": "View"
+      }
+    },
+    "app": {
+      "title": "App Management",
+      "pkg": {
+        "title": "Package Config",
+        "channelCode": "Channel Code",
+        "packageName": "Package Name",
+        "packageNamePh": "e.g.: com.example.app",
+        "appName": "App Name",
+        "appIcon": "App Icon",
+        "appIconPh": "Icon URL",
+        "splashImage": "Splash Image",
+        "splashImagePh": "Splash image URL",
+        "launchImage": "Launch Image",
+        "launchImagePh": "Launch image URL",
+        "appIconHelp": "PNG format, size 512x512, max 1MB",
+        "splashImageHelp": "PNG/JPG format, size 1080x2340, max 2MB",
+        "launchImageHelp": "PNG/JPG format, size 1080x2340, max 5MB",
+        "appIconSizeErr": "App icon size must be 512x512",
+        "splashImageSizeErr": "Splash image size must be 1080x2340",
+        "launchImageSizeErr": "Launch image size must be 1080x2340",
+        "packageNameFormatErr": "Package name suffix must start with lowercase letter and contain only lowercase letters, numbers and underscores",
+        "signConfig": "Sign Config",
+        "signConfigPh": "JSON sign config",
+        "buildConfig": "Build Config",
+        "buildConfigPh": "JSON build config",
+        "signConfigJsonErr": "Invalid JSON format for sign config",
+        "buildConfigJsonErr": "Invalid JSON format for build config",
+        "add": "Add Package Config",
+        "edit": "Edit Package Config",
+        "createJob": "Create Job",
+        "recreateJob": "Recreate",
+        "createJobConfirm": "Create a build job for this package config?",
+        "createJobSuccess": "Job created successfully",
+        "detail": "Package Details",
+        "viewJobs": "Details",
+        "jobListTitle": "Build Tasks",
+        "jobCount": "Jobs",
+        "jobUnit": "jobs",
+        "latestJob": "Job Status",
+        "timeAgo": {
+          "justNow": "Just now",
+          "minutesAgo": "{n}m ago",
+          "hoursAgo": "{n}h ago",
+          "daysAgo": "{n}d ago"
+        },
+        "jobStats": {
+          "total": "Total",
+          "pending": "Pending",
+          "running": "Running",
+          "completed": "Completed",
+          "failed": "Failed"
+        },
+        "noJobs": "No build tasks",
+        "createFirstJob": "Create first task"
+      },
+      "job": {
+        "title": "Job Monitor",
+        "overview": "Job Overview",
+        "successRate": "Success Rate",
+        "desc": {
+          "total": "Total jobs count, Success Rate = Completed / Total",
+          "pending": "Jobs waiting to execute, too many indicates insufficient runner capacity",
+          "running": "Currently executing jobs",
+          "completed": "Successfully completed jobs",
+          "failed": "Failed jobs that need attention",
+          "runner": "Online runners count, affects job processing capacity"
+        },
+        "noLogs": "No logs available",
+        "cancelConfirm": "Cancel this job?",
+        "retryConfirm": "Retry this job?",
+        "packageId": "Package Config",
+        "runnerId": "Runner",
+        "jobType": "Job Type",
+        "status": "Status",
+        "progress": "Progress",
+        "priority": "Priority",
+        "params": "Parameters",
+        "result": "Result",
+        "artifactUrl": "Artifact URL",
+        "download": "Download",
+        "startedAt": "Started At",
+        "finishedAt": "Finished At",
+        "duration": "Duration",
+        "viewLogs": "View Logs",
+        "cancel": "Cancel",
+        "retry": "Retry",
+        "statusOpts": {
+          "pending": "Pending",
+          "running": "Running",
+          "completed": "Completed",
+          "failed": "Failed",
+          "cancelled": "Cancelled"
+        },
+        "typeOpts": {
+          "build": "Build",
+          "upload": "Upload"
+        },
+        "log": {
+          "title": "Job Logs",
+          "logLevel": "Log Level",
+          "message": "Message",
+          "timestamp": "Timestamp",
+          "levelOpts": {
+            "info": "Info",
+            "warn": "Warning",
+            "error": "Error",
+            "debug": "Debug"
+          }
+        }
+      },
+      "ver": {
+        "title": "Version Management",
+        "versionId": "Version ID",
+        "versionCode": "Version Code",
+        "packageType": "Package Type",
+        "packageTypeOpts": {
+          "native": "Native",
+          "shell": "Shell",
+          "master": "Master",
+          "derived": "Derived"
+        },
+        "downloadUrl": "Download URL",
+        "updateType": "Update Type",
+        "minVersionCode": "Min Version Code",
+        "releaseNotes": "Release Notes",
+        "fileSize": "File Size",
+        "md5": "MD5",
+        "publishedAt": "Published At",
+        "add": "Add Version",
+        "edit": "Edit Version",
+        "publish": "Publish",
+        "unpublish": "Unpublish",
+        "updateTypeOpts": {
+          "optional": "Optional",
+          "force": "Force",
+          "silent": "Silent"
+        },
+        "stateOpts": {
+          "draft": "Draft",
+          "published": "Published",
+          "unpublished": "Unpublished"
+        },
+        "versionCodePh": "Version code, e.g.: 1.0.0",
+        "versionCodeFormatErr": "Invalid version format, should be x.x.x",
+        "uploadPkg": "Upload Package",
+        "selectPlatformFirst": "Please select platform first",
+        "minVersionCodePh": "Min compatible version",
+        "releaseNotesPh": "Release notes",
+        "fileSizePh": "File size (bytes)",
+        "md5Ph": "MD5 checksum",
+        "download": "Download",
+        "publishConfirm": "Publish this version? Other published versions will be unpublished.",
+        "unpublishConfirm": "Unpublish this version?",
+        "updatedBy": "Updated By"
+      }
+    },
+    "runner": {
+      "title": "Runner Management",
+      "runnerName": "Runner Name",
+      "description": "Description",
+      "tags": "Tags",
+      "maxConcurrent": "Max Concurrent",
+      "isOnline": "Online Status",
+      "token": "Token",
+      "ipAddress": "IP Address",
+      "version": "Version",
+      "lastHeartbeat": "Last Heartbeat",
+      "add": "Add Runner",
+      "edit": "Edit Runner",
+      "regenerateToken": "Regenerate Token",
+      "confirmRegenerate": "Regenerate token? Old token will be invalid.",
+      "online": "Online",
+      "offline": "Offline",
+      "running": "Running",
+      "currentJobs": "Current Jobs"
+    }
+  }
+}

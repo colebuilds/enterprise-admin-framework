@@ -1,0 +1,213 @@
+{
+  "components": {
+    "proCrudTable": {
+      "expand": "展开",
+      "collapse": "收起",
+      "selectCurrentPage": "全选当前页",
+      "batchAction": "批量操作",
+      "selectedCount": "已选择 {count} 条数据",
+      "totalCount": "共 {count} 条",
+      "action": "操作"
+    },
+    "proAdvancedSearch": {
+      "title": "高级筛选",
+      "panelTitle": "高级查询",
+      "quickEdit": "快捷编辑",
+      "cancelEdit": "取消编辑",
+      "pinHint": "勾选字段将钉到主搜索区（最多 {max} 个）",
+      "pinCount": "已选 {count}/{max}",
+      "cancel": "取消",
+      "clearAll": "清空",
+      "resetDefault": "重置",
+      "apply": "应用筛选",
+      "saveConfig": "保存配置",
+      "groupOther": "其他"
+    },
+    "proSearchForm": {
+      "search": "搜索",
+      "reset": "重置",
+      "expand": "展开",
+      "collapse": "收起"
+    },
+    "proColumnSetting": {
+      "customColumns": "自定义列",
+      "columnDisplay": "列展示",
+      "reset": "重置"
+    },
+    "tenantCheckPanel": {
+      "selected": "已选 {count}/{total}",
+      "selectAll": "全选",
+      "clear": "清空",
+      "loading": "正在加载...",
+      "empty": "暂无可选商户"
+    },
+    "aiAssistant": {
+      "openAssistant": "打开 AI 助理",
+      "eyebrow": "AI",
+      "title": "智能助理",
+      "input": {
+        "configUnavailable": "助手配置不可用",
+        "stopGenerating": "停止生成",
+        "overLimit": "内容超出长度限制",
+        "waitReply": "请等待回复",
+        "sendEnter": "发送 (Enter)"
+      },
+      "panel": {
+        "newChat": "新对话",
+        "history": "历史记录",
+        "undock": "取消吸附",
+        "dockRight": "吸附到右侧",
+        "exitFullscreen": "退出全屏",
+        "fullscreen": "全屏",
+        "close": "关闭",
+        "loadingConfig": "正在加载助手配置",
+        "loadingWelcome": "请稍候，欢迎内容会在配置返回后显示。",
+        "emptyTitle": "发送消息开始对话",
+        "emptyCopy": "支持知识检索、流程问答和问题排查。"
+      },
+      "session": {
+        "count": "{count} 条会话",
+        "justNow": "刚刚",
+        "minutesAgo": "{count} 分钟前",
+        "hoursAgo": "{count} 小时前",
+        "noMessages": "暂无消息",
+        "messages": "{count} 条消息",
+        "deleteTitle": "删除会话",
+        "deleteConfirm": "确定要删除此会话吗？删除后无法恢复。",
+        "current": "当前",
+        "emptyDescription": "历史会话会展示在这里",
+        "newChat": "新对话"
+      },
+      "message": {
+        "copiedToClipboard": "已复制到剪贴板",
+        "waitingAnalyzing": "分析中...",
+        "waitingThinking": "思考中...",
+        "loadFailed": "加载消息失败",
+        "recoveringLatestAnswer": "连接波动，正在恢复最新回答..."
+      },
+      "feedback": {
+        "thanks": "感谢您的反馈",
+        "thanksImprove": "感谢您的反馈，我们会继续改进",
+        "submitFailed": "反馈提交失败",
+        "correctedTo": "已纠正为「{intent}」",
+        "intentConfirmed": "已确认识别结果",
+        "intentRecorded": "已记录识别问题",
+        "invalidIntent": "意图类型无效",
+        "recognitionResult": "识别结果",
+        "helpfulQuestion": "这个回答有帮助吗？",
+        "helpful": "有帮助",
+        "unhelpful": "没有帮助",
+        "liked": "已点赞",
+        "feedbackSent": "已反馈",
+        "correctIntent": "纠正意图",
+        "intentHint": "如果问题在于识别结果不准确，可以补充纠正意图，方便后续优化。"
+      },
+      "runtime": {
+        "title": "任务执行",
+        "currentStep": "当前步骤",
+        "taskStatus": "任务状态",
+        "failedRetry": "分析任务执行失败，请稍后重试。",
+        "runningHint": "系统正在异步分析中，完成后会自动回写结果。",
+        "status": {
+          "queued": "已排队",
+          "running": "分析中",
+          "answering": "生成答案中",
+          "completed": "已完成",
+          "failed": "执行失败",
+          "cancelled": "已取消",
+          "retrying": "重试中",
+          "processing": "处理中"
+        }
+      },
+      "answer": {
+        "confidenceHigh": "高置信度",
+        "confidenceMedium": "中置信度",
+        "confidenceLow": "低置信度",
+        "supportSemanticCache": "语义缓存",
+        "supportVectorCache": "检索缓存",
+        "supportKnowledge": "知识检索",
+        "supportAnalysis": "分析数据",
+        "supportFallback": "兜底说明",
+        "page": "页面：{page}",
+        "basis": "依据：{basis}",
+        "documentHits": "命中 {count} 条资料",
+        "fallbackHint": "当前回答基于兜底说明生成，建议继续补充页面、功能或关键指标。",
+        "references": "参考资料"
+      },
+      "stream": {
+        "http": {
+          "badRequest": "请求参数错误",
+          "unauthorized": "登录已过期，请重新登录",
+          "forbidden": "无权限访问",
+          "unavailable": "服务不可用",
+          "tooManyRequests": "请求过于频繁，请稍后再试",
+          "internalError": "服务器内部错误",
+          "temporaryUnavailable": "服务暂时不可用",
+          "maintenance": "服务维护中",
+          "timeout": "请求超时",
+          "requestFailed": "请求失败 ({status})"
+        },
+        "errors": {
+          "rateLimit": "AI 服务当前较忙，请稍后重试",
+          "toolLoopExceeded": "当前问题分析步骤过多，请缩小范围后重试",
+          "streamConflict": "您有一个正在进行的对话，请稍后再试",
+          "serviceUnavailable": "AI 服务暂时不可用，请稍后重试",
+          "timeout": "AI 响应超时，请稍后重试",
+          "internalError": "AI 助手暂时不可用，请稍后重试",
+          "timeoutNarrowScope": "AI 响应超时，请缩小问题范围后重试",
+          "networkFailed": "网络连接失败，请检查网络",
+          "requestRetry": "请求失败，请稍后重试"
+        }
+      },
+      "socket": {
+        "invalidConfig": "任务推送配置缺失，无法订阅执行过程。",
+        "unauthorized": "登录已过期，请重新登录。",
+        "connectFailed": "任务推送连接失败。",
+        "taskFailed": "任务执行失败。"
+      },
+      "welcome": {
+        "configLoadFailed": "配置加载失败",
+        "unavailableRetry": "欢迎页配置暂时不可用，请重试后再打开助手。",
+        "reload": "重新加载"
+      },
+      "clarify": {
+        "message": "我想咨询{intent}"
+      },
+      "escalate": {
+        "unavailable": "当前版本暂未接入转人工入口，请直接联系人工客服处理。",
+        "title": "需要人工协助",
+        "copy": "检测到您可能需要更专业的帮助，建议联系人工客服。",
+        "contact": "联系人工客服"
+      }
+    },
+    "proDataTable": {
+      "densityDefault": "默认",
+      "densityMiddle": "中等",
+      "densityCompact": "紧凑"
+    },
+    "htmlCodeEditor": {
+      "editTitle": "编辑 HTML 代码",
+      "completionHint": "Ctrl+Space 代码提示",
+      "format": "格式化",
+      "previewTitle": "富文本预览",
+      "realtimeRender": "实时渲染",
+      "formatSuccess": "已完成格式化",
+      "formatFailed": "格式化失败，请检查 HTML 结构"
+    },
+    "batchTemplateModal": {
+      "title": "批量导入模板",
+      "download": "下载模板"
+    },
+    "phonePreview": {
+      "expand": "展开预览",
+      "collapse": "收起预览"
+    },
+    "summaryTable": {
+      "amountLabel": "金额："
+    },
+    "proEditDataTable": {
+      "addRow": "添加一行",
+      "deleteConfirm": "确定删除这条记录吗？"
+    }
+  }
+}

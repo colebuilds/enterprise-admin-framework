@@ -1,0 +1,395 @@
+{
+  "hub": {
+    "common": {
+      "tenantId": "ID merchant",
+      "platform": "Platform",
+      "state": "State",
+      "platformOpts": {
+        "ios": "iOS",
+        "android": "Android",
+        "both": "Semua Platforms"
+      },
+      "stateOpts": {
+        "enabled": "aktifkan",
+        "disabled": "nonaktifkan"
+      }
+    },
+    "site": {
+      "title": "Situs Management",
+      "domainTab": "domain manajemen",
+      "seoTab": "SEO konfigurasi",
+      "overrideTab": "Override Konfigurasi",
+      "domain": {
+        "domain": "Domain",
+        "domainPh": "Masukkan domain alamat",
+        "tenantIdPh": "Masukkan merchant ID",
+        "clientType": "Client Tipe",
+        "channel": "Kanal",
+        "channelPh": "Masukkan channel code",
+        "layoutId": "Tata letak",
+        "selectLayout": "Pilih Tata letak",
+        "seoId": "SEO Konfigurasi",
+        "seoIdPh": "Silakan masukkan SEO konfigurasi ID",
+        "add": "tambah domain",
+        "edit": "Edit Domain"
+      },
+      "seo": {
+        "title": "Page Judul",
+        "tenantIdPh": "For merchant-level SEO",
+        "domainId": "Domain ID",
+        "domainIdPh": "For Domain-level SEO",
+        "titlePh": "Masukkan page title",
+        "keywords": "Keywords",
+        "keywordsPh": "Masukkan kata kuncis, separated by commas",
+        "description": "Deskripsi",
+        "descriptionPh": "Masukkan deskripsi",
+        "favicon": "Favicon",
+        "faviconPh": "Masukkan favicon URL",
+        "scripts": "Kustom Scripts",
+        "scriptsPh": "Masukkan custom script code",
+        "add": "tambah SEO konfigurasi",
+        "edit": "edit SEO konfigurasi"
+      },
+      "override": {
+        "tenantIdPh": "Masukkan merchant ID",
+        "layoutId": "Tata letak",
+        "selectLayout": "Pilih Layout (opsional)",
+        "resourceType": "Resource jenis",
+        "resourceKey": "Kunci resource",
+        "resourceKeyPh": "e.g.: background, Nama, iconKey",
+        "value": "Override Nilai",
+        "valuePh": "Format JSON",
+        "valueJsonErr": "Tidak valid JSON format",
+        "add": "Tambah Override",
+        "edit": "Edit Timpa",
+        "typeOpts": {
+          "tabbar": "TabBar Timpa",
+          "tabitem": "TabBar Item Timpa",
+          "navigation": "Navigation Timpa",
+          "style": "Style Timpa"
+        }
+      }
+    },
+    "tpl": {
+      "title": "Template Manajemen",
+      "layout": {
+        "title": "Layout Manajemen",
+        "name": "Layout Nama",
+        "description": "Deskripsi",
+        "client": "Client Tipe",
+        "themeCount": "Themes",
+        "styleCount": "Styles",
+        "themeList": "Theme daftar",
+        "styleList": "Style Daftar",
+        "add": "tambah Layout",
+        "edit": "Edit Layout",
+        "clientOpts": {
+          "web": "Web",
+          "h5": "Mobile H5",
+          "ios": "iOS",
+          "android": "Android",
+          "app": "APP",
+          "public": "Public"
+        }
+      },
+      "theme": {
+        "title": "Theme Manajemen",
+        "name": "Theme Nama",
+        "code": "Theme Code",
+        "description": "Deskripsi",
+        "add": "tambah Theme",
+        "edit": "Edit Theme"
+      },
+      "style": {
+        "title": "Style Manajemen",
+        "name": "Style Nama",
+        "description": "Deskripsi",
+        "type": "Style Tipe",
+        "layoutId": "Tata letak",
+        "add": "Tambah Style",
+        "edit": "Edit Style",
+        "selectLayout": "Pilih Tata letak",
+        "typeOpts": {
+          "electronic": "Elektronik",
+          "light": "Terang",
+          "dark": "Gelap",
+          "classic": "Classic",
+          "modern": "Modern"
+        }
+      },
+      "nav": {
+        "title": "Navigation Manajemen",
+        "name": "Navigation Nama",
+        "nameZh": "Chinese Nama",
+        "nameEn": "English Nama",
+        "type": "Navigation Tipe",
+        "sort": "Urutan",
+        "layoutId": "Tata letak",
+        "parentId": "Induk Navigation",
+        "parentIdTip": "For tree Struktur",
+        "sortTip": "Higher value comes pertama",
+        "childCount": "Children",
+        "childList": "Children Daftar",
+        "game": "Game Data",
+        "gamePh": "Format JSON",
+        "gameJsonErr": "Tidak valid JSON format",
+        "navItem": "Navigation",
+        "add": "Tambah Navigation",
+        "edit": "Edit Navigation",
+        "selectLayout": "Pilih Tata letak",
+        "selectParent": "Pilih Induk (Opsional)",
+        "noParent": "Tidak Induk",
+        "typeOpts": {
+          "category": "kategori",
+          "game": "Game"
+        }
+      },
+      "tabbar": {
+        "title": "TabBar Manajemen",
+        "name": "TabBar Nama",
+        "client": "Client Tipe",
+        "background": "Background",
+        "backgroundPh": "Color value or gambar URL",
+        "layoutId": "Tata letak",
+        "itemCount": "Items",
+        "add": "Tambah TabBar",
+        "edit": "Edit TabBar",
+        "selectLayout": "Pilih Tata letak",
+        "manageItems": "Manage Items",
+        "items": "Items",
+        "item": {
+          "title": "TabBar Item Manajemen",
+          "name": "Item Nama",
+          "nameZh": "Chinese Nama",
+          "nameEn": "English Nama",
+          "key": "Unique Key",
+          "iconKey": "bawaan Ikon Key",
+          "iconActiveKey": "Aktif Ikon Key",
+          "type": "Jump Tipe",
+          "target": "Jump Target",
+          "targetPh": "Route name/ID game/External URL",
+          "iconKeyPh": "e.g.: tab.home",
+          "iconActiveKeyPh": "e.g.: tab.home.active",
+          "special": "Special Tipe",
+          "sort": "Urutan",
+          "visible": "Visible",
+          "add": "Tambah Item",
+          "edit": "Edit Item",
+          "typeOpts": {
+            "route": "Frontend Route",
+            "url": "External URL",
+            "game": "Game ID"
+          },
+          "specialOpts": {
+            "normal": "Normal",
+            "raised": "Raised Button"
+          }
+        }
+      },
+      "skin": {
+        "title": "Skin Manajemen",
+        "name": "Skin Nama",
+        "type": "Skin Tipe",
+        "key": "Kunci resource",
+        "keyPh": "e.g.: logo.main, icon.home.active",
+        "url": "Resource URL",
+        "urlPh": "OSS/S3/CDN resource URL",
+        "themeId": "Tema",
+        "tenantIdPh": "Masukkan ID merchant",
+        "layoutId": "Tata letak",
+        "meta": "Metadata",
+        "metaPh": "JSON metadata (opsional)",
+        "metaJsonErr": "Tidak valid JSON format",
+        "preview": "Pratinjau",
+        "add": "Tambah Skin",
+        "edit": "Edit Skin",
+        "selectTheme": "Pilih Tema",
+        "selectTenant": "Pilih Tenant",
+        "selectLayout": "Pilih Tata letak",
+        "typeOpts": {
+          "system": "System Resource",
+          "theme": "Theme Resource",
+          "tenant": "merchant Resource",
+          "layout": "Layout Resource"
+        },
+        "viewResource": "lihat"
+      }
+    },
+    "app": {
+      "title": "Aplikasi Management",
+      "pkg": {
+        "title": "Package Konfigurasi",
+        "channelCode": "Kanal Kode",
+        "packageName": "Package Nama",
+        "packageNamePh": "e.g.: com.example.app",
+        "appName": "Aplikasi Nama",
+        "appIcon": "Aplikasi Ikon",
+        "appIconPh": "Ikon URL",
+        "splashImage": "Splash Gambar",
+        "splashImagePh": "Splash gambar URL",
+        "launchImage": "Launch Gambar",
+        "launchImagePh": "Launch gambar URL",
+        "appIconHelp": "PNG format, size 512x512, max 1MB",
+        "splashImageHelp": "PNG/JPG format, size 1080x2340, max 2MB",
+        "launchImageHelp": "PNG/JPG format, size 1080x2340, max 5MB",
+        "appIconSizeErr": "Aplikasi icon size must be 512x512",
+        "splashImageSizeErr": "Splash gambar size must be 1080x2340",
+        "launchImageSizeErr": "Launch gambar size must be 1080x2340",
+        "packageNameFormatErr": "Package name suffix must start dengan lowercase letter and contain only lowercase letters, numbers and underscores",
+        "signConfig": "Sign Konfigurasi",
+        "signConfigPh": "JSON sign konfigurasi",
+        "buildConfig": "Build Konfigurasi",
+        "buildConfigPh": "JSON build konfigurasi",
+        "signConfigJsonErr": "Format JSON tidak valid untuk konfigurasi sign",
+        "buildConfigJsonErr": "Format JSON tidak valid untuk konfigurasi build",
+        "add": "Tambah Package Konfigurasi",
+        "edit": "Edit Package Konfigurasi",
+        "createJob": "buat tugas",
+        "recreateJob": "Recreate",
+        "createJobConfirm": "buat a build job for this package konfigurasi?",
+        "createJobSuccess": "tugas buat berhasil",
+        "detail": "Package Detail",
+        "viewJobs": "lihat detail",
+        "jobListTitle": "Build Tasks",
+        "jobCount": "Jobs",
+        "jobUnit": "jobs",
+        "latestJob": "Job Status",
+        "timeAgo": {
+          "justNow": "Just now",
+          "minutesAgo": "{n}m ago",
+          "hoursAgo": "{n}h ago",
+          "daysAgo": "{n}d ago"
+        },
+        "jobStats": {
+          "total": "Total",
+          "pending": "Tertunda",
+          "running": "Berjalan",
+          "completed": "Selesai",
+          "failed": "gagal"
+        },
+        "noJobs": "Tidak build tasks",
+        "createFirstJob": "Buat pertama task"
+      },
+      "job": {
+        "title": "Job Monitor",
+        "overview": "Job Ikhtisar",
+        "successRate": "Berhasil Tarif",
+        "desc": {
+          "total": "Total jobs count, Berhasil Tarif = Selesai/Total",
+          "pending": "Jobs waiting to execute, too many indicates insufficient runner capacity",
+          "running": "Currently executing jobs",
+          "completed": "berhasil completed jobs",
+          "failed": "Gagal jobs that need attention",
+          "runner": "Online runners jumlah, affects job processing capacity"
+        },
+        "noLogs": "Tidak ada log",
+        "cancelConfirm": "Batal this job?",
+        "retryConfirm": "Retry this job?",
+        "packageId": "Package Konfigurasi",
+        "runnerId": "Runner",
+        "jobType": "tugas tipe",
+        "status": "Status",
+        "progress": "Progres",
+        "priority": "Prioritas",
+        "params": "Parameters",
+        "result": "hasil",
+        "artifactUrl": "Artifact URL",
+        "download": "unduh",
+        "startedAt": "Waktu mulai",
+        "finishedAt": "Finished At",
+        "duration": "Durasi",
+        "viewLogs": "lihat log",
+        "cancel": "batal tugas",
+        "retry": "Retry",
+        "statusOpts": {
+          "pending": "Tertunda",
+          "running": "Berjalan",
+          "completed": "Selesai",
+          "failed": "gagal",
+          "cancelled": "Dibatalkan"
+        },
+        "typeOpts": {
+          "build": "Build",
+          "upload": "Unggah"
+        },
+        "log": {
+          "title": "tugas log",
+          "logLevel": "Log Level",
+          "message": "Pesan",
+          "timestamp": "Timestamp",
+          "levelOpts": {
+            "info": "Info",
+            "warn": "Peringatan",
+            "error": "Kesalahan",
+            "debug": "Debug"
+          }
+        }
+      },
+      "ver": {
+        "title": "Versi Management",
+        "versionId": "Versi ID",
+        "versionCode": "Versi Kode",
+        "packageType": "Package Tipe",
+        "packageTypeOpts": {
+          "native": "Native",
+          "shell": "Shell",
+          "master": "Master",
+          "derived": "Derived"
+        },
+        "downloadUrl": "Unduh URL",
+        "updateType": "perbarui tipe",
+        "minVersionCode": "Minimum Versi Kode",
+        "releaseNotes": "Release Notes",
+        "fileSize": "File Size",
+        "md5": "MD5",
+        "publishedAt": "Dipublikasikan At",
+        "add": "Tambah Versi",
+        "edit": "Edit Versi",
+        "publish": "Publikasikan",
+        "unpublish": "Batalkan publikasi",
+        "updateTypeOpts": {
+          "optional": "Opsional",
+          "force": "Force",
+          "silent": "Silent"
+        },
+        "stateOpts": {
+          "draft": "Draf",
+          "published": "Dipublikasikan",
+          "unpublished": "Unpublished"
+        },
+        "versionCodePh": "Versi code, e.g.: 1.0.0",
+        "versionCodeFormatErr": "Tidak valid version format, should be x.x.x",
+        "uploadPkg": "Unggah Package",
+        "selectPlatformFirst": "Silakan pilih platform pertama",
+        "minVersionCodePh": "Minimum compatible version",
+        "releaseNotesPh": "Release notes",
+        "fileSizePh": "File size (bytes)",
+        "md5Ph": "MD5 checksum",
+        "download": "unduh",
+        "publishConfirm": "Publikasikan this version? Other published versions will be unpublished.",
+        "unpublishConfirm": "Batalkan publikasi this version?",
+        "updatedBy": "Diperbarui oleh"
+      }
+    },
+    "runner": {
+      "title": "Runner Manajemen",
+      "runnerName": "Runner Nama",
+      "description": "Deskripsi",
+      "tags": "tag",
+      "maxConcurrent": "Maksimum Concurrent",
+      "isOnline": "Online Status",
+      "token": "Token",
+      "ipAddress": "IP Alamat",
+      "version": "Versi",
+      "lastHeartbeat": "Terakhir Heartbeat",
+      "add": "tambah Runner",
+      "edit": "Edit Runner",
+      "regenerateToken": "Buat ulang Token",
+      "confirmRegenerate": "Buat ulang token? Token lama akan tidak valid.",
+      "online": "Online",
+      "offline": "Offline",
+      "running": "Berjalan",
+      "currentJobs": "Saat ini Jobs"
+    }
+  }
+}

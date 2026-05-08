@@ -1,0 +1,1308 @@
+{
+  "account": {
+    "user": {
+      "title": "Member List",
+      "columns": {
+        "userId": "Member ID",
+        "account": "Member Account",
+        "nickName": "Nickname",
+        "vipLevel": "VIP Level",
+        "balance": "Platform Balance",
+        "parentId": "Parent ID",
+        "generalAgentId": "General Agent ID",
+        "userType": "Account Type",
+        "state": "Account Status",
+        "isFuncation": "Partial Function Restrictions",
+        "registerTime": "Registration Time",
+        "packageName": "Channel Source",
+        "lastLoginTime": "Last Login Time",
+        "inviteCode": "Invitation Code",
+        "remark": "Remarks"
+      },
+      "form": {
+        "selectQueryId": "Select Query ID",
+        "userId": "Member ID",
+        "userIdPlaceholder": "Please enter Member ID",
+        "parentId": "Parent ID",
+        "generalAgentId": "General Agent ID",
+        "account": "Member Account",
+        "accountPlaceholder": "Please enter member account",
+        "nickName": "Nickname",
+        "nickNamePlaceholder": "Please enter nickname",
+        "vipLevel": "VIP Level",
+        "vipLevelPlaceholder": "Please select VIP level",
+        "inviteCode": "InviteCode",
+        "inviteCodePlaceholder": "Please enter inviteCode",
+        "userType": "Account Type",
+        "userTypePlaceholder": "Please select account type",
+        "state": "Account Status",
+        "statePlaceholder": "Please select account status",
+        "packageId": "Channel Source",
+        "packageIdPlaceholder": "Please select channel source",
+        "timeRange": "Time Range",
+        "registerTime": "Registration Time",
+        "lastLoginTime": "Last Login Time"
+      },
+      "status": {
+        "riskRegion": "Risk Region",
+        "online": "Online",
+        "offline": "Offline",
+        "yes": "Yes",
+        "no": "No",
+        "none": "None",
+        "official": "Official Channel"
+      },
+      "actions": {
+        "viewDetails": "View Details",
+        "edit": "Edit",
+        "disable": "Disable",
+        "enable": "Enable",
+        "resetPassword": "Reset Password",
+        "addTag": "Add Tag",
+        "remark": "Remarks",
+        "freeze": "Freeze"
+      },
+      "modals": {
+        "setRemark": "Set Remarks",
+        "warning": "Warning",
+        "confirmFreezeAccount": "Are you sure you want to freeze this account?",
+        "confirmUnlockVipLevel": "Are you sure you want to unlock VIP level?",
+        "confirmUnlockRechargeLevel": "Are you sure you want to unlock member deposit level?",
+        "setVipLevel": "Set VIP Level",
+        "setRechargeLevel": "Set Member Deposit Level",
+        "editMemberAccount": "Edit Member Account",
+        "editAccountStatus": "Set Account Status",
+        "restrictedPermissions": "Partial Function Restrictions",
+        "editMemberGroup": "Edit Member Group",
+        "removeTag": "Remove Tag",
+        "setTag": "Set Tag",
+        "editActualCoding": "Edit Actual Wagering Amount",
+        "editLoginPassword": "Edit Login Password",
+        "editWithdrawPassword": "Edit Withdrawal Password",
+        "verifyChatRoom": "Edit Chatroom Permissions",
+        "verifyPhone": "Verify Phone",
+        "verifyEmail": "Verify Email",
+        "editPhone": "Edit Phone",
+        "editEmail": "Edit Email",
+        "editRealName": "Edit Real Name"
+      },
+      "messages": {
+        "remarkUpdateSuccess": "Remarks updated successfully",
+        "selectLevelRequired": "Please select a level!",
+        "vipLevelLockSuccess": "VIP level locked successfully!",
+        "rechargeLevelLockSuccess": "Member deposit level locked successfully!",
+        "accountUpdateSuccess": "Account updated successfully",
+        "statusUpdateSuccess": "Account status updated successfully",
+        "selectStatusRequired": "Please select account status!",
+        "permissionUpdateSuccess": "Function restrictions updated successfully",
+        "groupRemoveSuccess": "Group removed successfully",
+        "groupUpdateSuccess": "Member group updated successfully",
+        "selectTagRequired": "Please select a tag",
+        "tagSetSuccess": "Tag set successfully",
+        "codingUpdateSuccess": "Wagering amount updated successfully",
+        "passwordLengthError": "Password length cannot be less than 6 characters",
+        "passwordUpdateSuccess": "Password updated successfully",
+        "googleVerifyUpdateSuccess": "Google verification updated successfully",
+        "verifySuccess": "Verification successful",
+        "updateSuccess": "Updated successfully",
+        "nameUpdateSuccess": "Name updated successfully",
+        "chatroomPermissionUpdateSuccess": "Chatroom permissions updated successfully"
+      },
+      "placeholders": {
+        "inputId": "Please enter ID",
+        "inputMemberAccount": "Please enter member account",
+        "inputPassword": "Please enter password",
+        "inputActualCoding": "Please enter wagering amount",
+        "inputPhone": "Please enter phone number",
+        "inputEmail": "Please enter email",
+        "inputRealName": "Please enter real name"
+      },
+      "buttons": {
+        "confirm": "Confirm",
+        "cancel": "Cancel"
+      },
+      "addUser": {
+        "title": "Add User",
+        "registerType": "Registration Type",
+        "loginType": "Login Method",
+        "phoneRegister": "Phone Registration",
+        "emailRegister": "Email Registration",
+        "phone": "Phone",
+        "email": "Email",
+        "accountType": "Account Type",
+        "accountTypePlaceholder": "Please select account type",
+        "memberAccount": "Member Account",
+        "memberAccountPlaceholder": "Please enter member account",
+        "emailPlaceholder": "Please enter email address",
+        "memberPassword": "Member Password",
+        "password": "Password",
+        "passwordPlaceholder": "Please enter password",
+        "memberPasswordPlaceholder": "Please enter member password",
+        "parentId": "Parent ID",
+        "parentIdPlaceholder": "Please enter parent ID",
+        "vipLevel": "VIP Level",
+        "vipLevelPlaceholder": "Please select VIP level",
+        "remark": "Remarks",
+        "confirm": "Confirm",
+        "cancel": "Cancel",
+        "submit": "Submit & Save",
+        "addUserButton": "Add User",
+        "maxUserLimit": "Maximum support for bulk adding 10 users",
+        "minUserRequired": "Please add at least one user",
+        "createSuccess": "Created successfully",
+        "createFailed": "User creation failed: ",
+        "noData": "No data",
+        "errorInfo": "Error information here, temporarily replaced with text"
+      },
+      "wallet": {
+        "createWallet": "Create Wallet",
+        "editWallet": "Edit Wallet",
+        "realName": "Real Name",
+        "edit": "Edit",
+        "addWallet": "Add Wallet",
+        "bankCardInfo": "Member Bank Card Information",
+        "cardNumber": "Card Number",
+        "bankInfo": "Bank Information",
+        "phone": "Phone",
+        "email": "Email",
+        "electronicWallet": "Member E-Wallet",
+        "accountOrPhone": "Account/Phone",
+        "usdtInfo": "Member USDT Information",
+        "usdtType": "USDT Type",
+        "usdtAddress": "USDT Address",
+        "addressAlias": "Address Alias",
+        "walletType": "Wallet Type",
+        "account": "Account",
+        "addWalletForm": {
+          "walletType": "Wallet Type",
+          "bankName": "Bank Name",
+          "electronicWallet": "Electronic Wallet",
+          "walletCategory": "Wallet Type",
+          "currencyType": "Currency Type",
+          "bindBankCard": "Bind Bank Card",
+          "realName": "Real Name",
+          "cardNo": "Card Number",
+          "mobileNo": "Mobile Number",
+          "email": "Email",
+          "ifscCode": "IFSC CODE",
+          "accountOrMobile": "Account/Mobile",
+          "networkType": "Network Type",
+          "address": "Address",
+          "aliasAddress": "Address Alias",
+          "upiId": "UPI_ID",
+          "placeholders": {
+            "cardNo": "Please enter card number",
+            "mobileNo": "Please enter mobile number",
+            "email": "Please enter email",
+            "ifscCode": "Please enter IFSC Code",
+            "accountOrMobile": "Please enter account/mobile",
+            "address": "Please enter address",
+            "aliasAddress": "Please enter address alias",
+            "upiId": "Please enter UPI_ID"
+          },
+          "messages": {
+            "editSuccess": "Edit operation successful",
+            "addSuccess": "Add operation successful"
+          },
+          "buttons": {
+            "cancel": "Cancel",
+            "save": "Save"
+          }
+        }
+      },
+      "sameIP": {
+        "title": "Same IP",
+        "columns": {
+          "userId": "Member ID",
+          "vipLevel": "VIP Level",
+          "balance": "Balance",
+          "parentId": "Parent ID",
+          "generalAgentId": "General Agent ID",
+          "userType": "Account Type",
+          "channelName": "Source Channel",
+          "lastLoginTime": "Last Login Time",
+          "remark": "Remarks",
+          "registerTime": "Registration Time"
+        },
+        "status": {
+          "none": "None"
+        }
+      },
+      "detail": {
+        "title": "User Details ({userId})",
+        "tabs": {
+          "basicInfo": "Basic Information",
+          "walletInfo": "Wallet Information",
+          "accountChange": "Account Changes",
+          "betInfo": "Betting Information",
+          "riskInfo": "Risk Information",
+          "userValue": "User Value"
+        }
+      },
+      "accountChange": {
+        "columns": {
+          "orderNo": "Order Number",
+          "type": "Change Type",
+          "beforeAmount": "Amount Before Change",
+          "amount": "Change Amount",
+          "backAmount": "Amount After Change",
+          "createTime": "Change Time",
+          "remark": "Remarks"
+        },
+        "form": {
+          "financialType": "Change Type",
+          "financialTypePlaceholder": "Please select change type"
+        },
+        "checkbox": {
+          "onlySearchFromLastWithdrawal": "Only search from last withdrawal to present"
+        }
+      },
+      "userValue": {
+        "columns": {
+          "category": "Category",
+          "userCount": "User Count by Level",
+          "rechargeCount": "Deposit Users",
+          "rechargeAmount": "Total Deposit Amount",
+          "withdrawCount": "Withdrawal Users",
+          "withdrawAmount": "Total Withdrawal Amount",
+          "diffAmount": "Deposit-Withdrawal Difference"
+        },
+        "summary": {
+          "total": "Total"
+        }
+      },
+      "userRisk": {
+        "title": "Risk Associated Information",
+        "messages": {
+          "noRelatedAccount": "No associated accounts"
+        },
+        "modal": {
+          "title": "Device Associated Account List",
+          "title2": "List of associated accounts"
+        },
+        "columns": {
+          "userId": "Member ID",
+          "totalRecharge": "Total Member Deposit",
+          "totalWithdraw": "Total Member Withdrawal",
+          "walletBalance": "Member Balance",
+          "registerTime": "Registration Time",
+          "lastLoginTime": "Last Login Time"
+        },
+        "relatedInfo": "Associated Information:",
+        "relatedAccountCount": "Associated Account Count",
+        "viewRelatedAccounts": "View Associated Accounts",
+        "exportFileName": "Device Associated Account Report",
+        "riskTypes": {
+          "bindDevice": "Bound Device",
+          "bindFingerprint": "Bound Browser Fingerprint",
+          "lastLoginDevice": "Last Login Device",
+          "lastLoginFingerprint": "Last Login Browser Fingerprint",
+          "loginIP": "Login IP",
+          "registerIP": "Registration IP",
+          "bankAccount": "Bank Account",
+          "usdtAccount": "USDT Account"
+        }
+      },
+      "info": {
+        "basicInfo": {
+          "title": "Account Basic Information",
+          "memberAccount": "Member Account",
+          "memberId": "Member ID",
+          "parentId": "Parent ID",
+          "generalAgentId": "General Agent ID",
+          "memberNickname": "Member Nickname",
+          "vipLevel": "VIP Level",
+          "rechargeLevel": "Deposit Level",
+          "accountStatus": "Account Status",
+          "memberGroup": "Member Group",
+          "memberTags": "Member Tags",
+          "autoTags": "Platform Auto Tags",
+          "remark": "Remarks",
+          "none": "None",
+          "actions": {
+            "view": "View",
+            "edit": "Edit",
+            "modify": "Modify",
+            "remove": "Remove",
+            "add": "Add",
+            "set": "Set",
+            "lockable": "Lockable",
+            "needUnlock": "Need Unlock"
+          },
+          "confirmMessages": {
+            "removeGroup": "Are you sure you want to remove this group?"
+          }
+        },
+        "fundInfo": {
+          "title": "Account Fund Information",
+          "platformBalance": "Platform Balance",
+          "arGameBalance": "ArGame Balance",
+          "safeBoxBalance": "Safe Box Balance",
+          "freezeAmount": "Withdrawal Frozen Amount"
+        },
+        "todayActivity": {
+          "title": "Today's Activity Information",
+          "betAmount": "Bet Amount",
+          "betAmountTooltip": "Member's total bet amount for today",
+          "prizeAmount": "Prize Amount",
+          "prizeAmountTooltip": "Member's total prize amount for today",
+          "codingAmount": "Wagering Amount",
+          "codingAmountTooltip": "Member's total wagering amount for today (lottery bet amount + third-party game valid amount)",
+          "activityReward": "Activity Rewards",
+          "activityRewardTooltip": "Member's total activity rewards for today",
+          "todayRecharge": "Today's Deposit",
+          "todayRechargeTooltip": "Member's total deposit amount for today",
+          "todayWithdraw": "Today's Withdrawal",
+          "todayWithdrawTooltip": "Member's total withdrawal amount for today",
+          "totalCoding": "Total Wagering Amount",
+          "totalCodingTooltip": "Wagering amount generated since member's last withdrawal",
+          "actualCoding": "Actual Wagering Amount",
+          "actualCodingTooltip": "Wagering amount used for withdrawal checks; withdrawals are blocked if this is below the required wagering amount",
+          "needCoding": "Required Wagering Amount",
+          "needCodingTooltip": "Wagering amount required for member withdrawal"
+        },
+        "summaryData": {
+          "title": "Account Summary Data",
+          "totalBet": "Total Bets",
+          "totalBetTooltip": "Total accumulated bet amount since member registration",
+          "totalPrize": "Total Prizes",
+          "totalPrizeTooltip": "Total accumulated prize amount since member registration",
+          "totalCoding": "Total Wagering",
+          "totalCodingTooltip": "Member's total valid bets",
+          "totalRecharge": "Total Deposit",
+          "totalRechargeTooltip": "Total accumulated deposit amount since member registration",
+          "totalRechargeCount": "Total Deposit Count",
+          "totalRechargeCountTooltip": "Total accumulated deposit count since member registration",
+          "totalWithdraw": "Total Withdrawal",
+          "totalWithdrawTooltip": "Total accumulated withdrawal amount since member registration",
+          "totalWithdrawCount": "Total Withdrawal Count",
+          "totalWithdrawCountTooltip": "Total accumulated withdrawal count since member registration",
+          "totalActivityReward": "Total Activity Rewards",
+          "totalActivityRewardTooltip": "Total activity reward amount received since member registration",
+          "totalCommission": "Total Commission Earned",
+          "totalCommissionTooltip": "Total commission amount earned since member registration"
+        },
+        "securityInfo": {
+          "title": "Account Security Information",
+          "loginPassword": "Login Password",
+          "withdrawPassword": "Withdrawal Password",
+          "googleAuth": "Google Authentication",
+          "enabled": "Enabled",
+          "disabled": "Disabled",
+          "enable": "Enable",
+          "disable": "Disable",
+          "bindPhone": "Bound Phone",
+          "bindEmail": "Bound Email",
+          "notBound": "Not Bound",
+          "actions": {
+            "view": "View",
+            "verify": "Verify",
+            "modify": "Modify"
+          },
+          "confirmMessages": {
+            "googleAuth": "Are you sure you want to {action} Google Authentication?"
+          }
+        },
+        "registerLogin": {
+          "title": "Registration and Login Information",
+          "registerTime": "Registration Time",
+          "registerIP": "Registration IP",
+          "channelSource": "Channel Source",
+          "registerDomain": "Registration Domain",
+          "registerDevice": "Registration Device Number",
+          "registerFingerprint": "Registration Browser Fingerprint",
+          "lastLoginTime": "Last Login Time",
+          "lastLogoutTime": "Last Logout Time",
+          "lastLoginIP": "Last Login IP",
+          "lastLoginDomain": "Last Login Domain",
+          "lastLoginDevice": "Last Login Device",
+          "lastLoginFingerprint": "Last Login Browser Fingerprint"
+        }
+      }
+    },
+    "inlineUser": {
+      "title": "Online Members",
+      "columns": {
+        "userId": "Member ID",
+        "account": "Member Account",
+        "nickName": "Nickname",
+        "vipLevel": "VIP Level",
+        "walletBalance": "Balance",
+        "isOnline": "Online Status",
+        "registerTime": "Registration Time",
+        "lastLoginTime": "Last Login Time"
+      },
+      "form": {
+        "userId": "Member ID",
+        "userIdPlaceholder": "Please enter Member ID",
+        "account": "Member Account",
+        "accountPlaceholder": "Please enter member account",
+        "nickName": "Nickname",
+        "nickNamePlaceholder": "Please enter nickname"
+      },
+      "status": {
+        "online": "Online",
+        "offline": "Offline"
+      }
+    },
+    "memberTag": {
+      "title": "Platform Auto Tags",
+      "pageTitle": "Member Tag Management",
+      "menual": {
+        "title": "Manual Tags"
+      },
+      "basic": {
+        "tag": "Basic tags only participate in basic attribute condition calculation",
+        "title": "Basic Tag",
+        "condition": "Condition Attribute",
+        "conditionPlaceholder": "Please select condition attribute",
+        "conditionMinValueRangeError": "The minimum value of the condition cannot be less than {min}, and the maximum value cannot be greater than {max}",
+        "noZeroError": "Condition value cannot be less than {min}",
+        "addTags": "Add Tag",
+        "editTags": "Edit Tag",
+        "tagName": "Tag Name",
+        "conditionProperty": "Condition Attribute",
+        "conditionMinValue": "Minimum Value",
+        "conditionMaxValue": "Maximum Value",
+        "tagNamePlaceholder": "Please enter tag name",
+        "conditionPropertyPlaceholder": "Please select condition attribute",
+        "conditionMinValuePlaceholder": "Please enter minimum value",
+        "conditionMaxValuePlaceholder": "Please enter maximum value",
+        "columns": {
+          "tagId": "Tag ID",
+          "tagName": "Tag Name",
+          "conditionProperty": "Condition Attribute",
+          "conditionRange": "Condition Range",
+          "lastUpdateTime": "Last Update Time",
+          "lastOperator": "Last Operator",
+          "state": "Status"
+        }
+      },
+      "assemble": {
+        "tag": "Composite tags implement complex user filtering rules by combining multiple basic tags",
+        "title": "Composite Tag",
+        "basic": "Basic Tag",
+        "basicPlaceholder": "Please select basic tag",
+        "compositePlaceholder": "Please select composite tag",
+        "addTags": "Add Tag",
+        "editTags": "Edit Tag",
+        "rules": "Combination Rules",
+        "checkDetails": "Check Details",
+        "description": "Only one of Channel Source and Proxy Group can be selected. Not selecting means all. Multiple selections supported.",
+        "tips": "Combination Rule Instructions",
+        "tipsRule1": "At least one condition group must be configured",
+        "tipsRule2": "Tags within the same group are OR (any one satisfied)",
+        "tipsRule3": "Different groups are AND (all must be satisfied)",
+        "tipsRule4": "Example: Group 1 (Deposit 200+ OR Deposit 500+) AND Group 2 (VIP3 and above) = users with deposits above 200 and VIP3 or above",
+        "conditionGroup": "Condition Group",
+        "minChoiceOne": "Select at least one basic tag",
+        "conditionGroupPlaceholder": "Please select basic tag (OR within group)",
+        "conditionGroupLimit": "Add condition group (up to {0} groups)",
+        "preview": "Combination Rule Preview",
+        "conditionGroupNum": "Total Hit Users",
+        "detailMemberIds": "Member ID",
+        "detailMemberVIP": "VIP Level",
+        "configFilterCondition": "Please configure filter conditions",
+        "detailMemberTotalRecharge": "Total Deposit Count",
+        "detailMemberTotalRechargeAmount": "Total Deposit Amount",
+        "detailMemberTotalWithdraw": "Total Withdrawal Count",
+        "detailMemberTotalWithdrawAmount": "Total Withdrawal Amount",
+        "detailMemberActivityAmount": "Total Activity Amount",
+        "registerTime": "Registration Time",
+        "loginTime": "Login Time",
+        "export": "Export",
+        "exportWithPhone": "Export with Phone Number",
+        "tagName": "Tag Name",
+        "conditionProperty": "Condition Attribute",
+        "conditionMinValue": "Minimum Value",
+        "conditionMaxValue": "Maximum Value",
+        "tagNamePlaceholder": "Please enter tag name",
+        "conditionPropertyPlaceholder": "Please select condition attribute",
+        "conditionMinValuePlaceholder": "Please enter minimum value",
+        "conditionMaxValuePlaceholder": "Please enter maximum value",
+        "userId": "User ID",
+        "userPlaceholder": "Please enter User ID",
+        "combinePlaceholder": "Please select composite tag",
+        "columns": {
+          "tagId": "Tag ID",
+          "tagName": "Tag Name",
+          "group": "Proxy Group",
+          "conditionProperty": "Condition Attribute",
+          "conditionRange": "Condition Range",
+          "lastUpdateTime": "Last Update Time",
+          "lastOperator": "Last Operator",
+          "state": "Status"
+        }
+      },
+      "manage": {
+        "title": "Tag Management",
+        "createAutoTag": "Create Auto Tag",
+        "columns": {
+          "tagId": "Tag ID",
+          "tagName": "Tag Name",
+          "tagType": "Tag Type",
+          "tagPriority": "Tag Priority",
+          "triggerFrequency": "Trigger Frequency",
+          "tagValidDay": "Tag Valid Days",
+          "state": "Status",
+          "createTime": "Create Time",
+          "lastUpdateTime": "Last Update Time"
+        },
+        "form": {
+          "tagName": "Tag Name",
+          "tagNamePlaceholder": "Please enter tag name",
+          "tagType": "Tag Type",
+          "tagTypePlaceholder": "Please select tag type",
+          "state": "Status"
+        },
+        "status": {
+          "enable": "Enabled",
+          "disable": "Disabled",
+          "permanent": "Permanent",
+          "unknown": "Unknown"
+        },
+        "actions": {
+          "preview": "Preview",
+          "distributeRecord": "Distribution Record",
+          "delete": "Delete",
+          "edit": "Edit",
+          "create": "Create New Auto Tag"
+        },
+        "modal": {
+          "tagPreview": "Tag Preview"
+        }
+      },
+      "distribute": {
+        "title": "Tag Distribution",
+        "stats": {
+          "totalTagCount": "Total Tag Assignment Count",
+          "validUserCount": "Valid Member Count with Tags",
+          "totalUserRate": "Valid Member Rate with Tags",
+          "triggerCondition": "Trigger Condition"
+        },
+        "columns": {
+          "userId": "Member ID",
+          "autoTagName": "Tag Name",
+          "createTime": "Assignment Time",
+          "state": "Assignment Status",
+          "isValid": "Is Valid",
+          "expiredTime": "Expiration Time",
+          "permanent": "Permanent"
+        },
+        "form": {
+          "autoTagId": "Tag Name",
+          "autoTagIdPlaceholder": "Please select tag name",
+          "userId": "Member ID",
+          "userIdPlaceholder": "Please enter Member ID",
+          "isValid": "Assignment Status",
+          "state": "Valid Status",
+          "time": "Assignment Time"
+        },
+        "status": {
+          "all": "All",
+          "success": "Success",
+          "failed": "Failed",
+          "valid": "Valid",
+          "invalid": "Invalid"
+        },
+        "messages": {
+          "selectTagWarning": "Please select a tag name"
+        }
+      },
+      "implement": {
+        "title": "Execution Records",
+        "columns": {
+          "autoTagId": "Execution ID",
+          "autoTagName": "Tag Information",
+          "autoTagType": "Tag Type",
+          "triggerFrequency": "Trigger Frequency",
+          "executeDate": "Execution Time",
+          "calcUserCount": "Total Triggered Users",
+          "matchUserCount": "Matched Users",
+          "addUserCount": "New Users Added",
+          "expireUserCount": "Expired Users",
+          "hitRate": "Hit Rate",
+          "executeState": "Execution Status",
+          "executeUsedTime": "Execution Duration"
+        },
+        "form": {
+          "autoTagName": "Tag Name",
+          "autoTagNamePlaceholder": "Please enter tag name",
+          "autoTagType": "Tag Type",
+          "autoTagTypePlaceholder": "Please select trigger type",
+          "executeState": "Execution Status",
+          "executeStatePlaceholder": "Please select execution status",
+          "time": "Execution Time"
+        },
+        "status": {
+          "all": "All",
+          "success": "Success",
+          "failed": "Failed",
+          "unknown": "Unknown"
+        },
+        "actions": {
+          "detail": "Details",
+          "distributeRecord": "Distribution Record"
+        },
+        "modal": {
+          "executeDetail": "Execution Details"
+        }
+      },
+      "implementDetail": {
+        "executeLog": "Execution Log",
+        "viewDistributeRecord": "View Distribution Records"
+      },
+      "analyze": {
+        "title": "Tag Analysis",
+        "form": {
+          "selectTagsPlaceholder": "Select tags to analyze",
+          "analyzeButton": "Analyze",
+          "cycleTimes": {
+            "last7Days": "Last 7 Days",
+            "last15Days": "Last 15 Days",
+            "last30Days": "Last 30 Days",
+            "last60Days": "Last 60 Days",
+            "last90Days": "Last 90 Days"
+          }
+        },
+        "charts": {
+          "hitRateComparison": "Tag Hit Rate Comparison",
+          "matchTrend": "Tag Match Count Trend",
+          "analysisData": "Tag Analysis Data",
+          "hitRate": "Hit Rate",
+          "matchCount": "Match Count"
+        },
+        "columns": {
+          "autoTagName": "Tag Name",
+          "totalMatchCount": "Total Triggered Users",
+          "totalTriggerUserCount": "Tag Match Count",
+          "hitRate": "Tag Hit Rate",
+          "matchRate": "Hit Rate Trend",
+          "validRate": "Tag Validity Rate"
+        },
+        "messages": {
+          "selectTagsWarning": "Please select tags to analyze",
+          "maxSelectionWarning": "Maximum 5 items can be selected"
+        }
+      },
+      "viewTag": {
+        "triggerCondition": "Trigger Condition",
+        "close": "Close"
+      },
+      "gamerang": {
+        "selectGameCategory": "Please select game category",
+        "selectGameVendor": "Please select game provider (optional)",
+        "allGames": "All Games",
+        "allGamesSelected": "All games selected, no need to add more ranges",
+        "maxGameRanges": "Maximum {max} game ranges can be added"
+      },
+      "publicData": {
+        "triggerFrequency": {
+          "daily": "Daily Trigger",
+          "weekly": "Weekly Trigger"
+        },
+        "withdrawState": {
+          "pass": "Approved",
+          "reject": "Rejected"
+        },
+        "rechargeType": {
+          "all": "All Deposit",
+          "first": "First Deposit",
+          "repeat": "Repeat Deposit"
+        },
+        "withdrawType": {
+          "all": "All Withdrawal",
+          "first": "First Withdrawal",
+          "repeat": "Repeat Withdrawal"
+        },
+        "activityType": {
+          "any": "Any Activity",
+          "daily": "Daily Activity",
+          "cycle": "Cycle Activity",
+          "special": "Special Activity"
+        },
+        "activityStatus": {
+          "all": "All Status",
+          "participated": "Participated",
+          "completed": "Completed",
+          "participate": "Participate",
+          "complete": "Complete"
+        },
+        "inviteStatus": {
+          "any": "Any",
+          "registered": "Registered",
+          "recharged": "Deposited",
+          "betted": "Betted",
+          "bankCardBound": "Bank Card Bound"
+        },
+        "accountType": {
+          "mobile": "Mobile Account",
+          "email": "Email Account"
+        },
+        "conditionType": {
+          "recharge": "Total Deposit",
+          "withdraw": "Total Withdrawal",
+          "validBet": "Valid Bet",
+          "loss": "Total Loss",
+          "vipLevel": "VIP Level",
+          "register": "Register Time",
+          "dateRange": "Date Range"
+        },
+        "comparison": {
+          "greaterEqual": "Greater Equal",
+          "lessEqual": "Less Equal",
+          "contains": "Contains",
+          "notContains": "Not Contains",
+          "between": "Between",
+          "before": "Before",
+          "after": "After"
+        },
+        "messages": {
+          "registerUser": "Registered Users",
+          "registeredWith": "Users registered with {accountType}",
+          "registeredVia": "Users registered via {channel}",
+          "registeredBetween": "Users registered {time}",
+          "registeredViaBetween": "Users registered {time} via {channel} with {accountType}",
+          "timePeriod": "from {start} to {end}",
+          "loginConditionInvalid": "Login trigger condition is invalid, please check configuration",
+          "loginWithinDays": "Login within {days} days",
+          "loginDays": "{days} days",
+          "loginTimes": "{times} times",
+          "loginAndTimes": "and login {times} times",
+          "betConditionInvalid": "Bet amount trigger condition is invalid, please check configuration",
+          "betAmountReached": "Amount reached {amount}",
+          "withinDays": "Within {days} days",
+          "validBetText": "Valid Bet",
+          "inGames": "In {games}",
+          "lossConditionInvalid": "Loss trigger condition is invalid, please check configuration",
+          "lossAmountReached": "Loss amount reached {amount}",
+          "lossRateReached": "Loss rate reached {rate}%",
+          "and": "and",
+          "userLevelConditionInvalid": "User level trigger condition is invalid, please check configuration",
+          "vipLevelText": "VIP level is {levels}",
+          "keepDays": "and keep for more than {days} days",
+          "withdrawConditionInvalid": "Withdrawal trigger condition is invalid, please check configuration",
+          "withdrawTimes": "Withdraw {times} times",
+          "totalAmountReached": ", total amount reached {amount}",
+          "auditStatus": "and audit {status}",
+          "withdrawAmountReached": "Withdrawal amount reached {amount} within {days} days",
+          "rechargeConditionInvalid": "Deposit trigger condition is invalid, please check configuration",
+          "rechargeTimes": "Deposit {times} times",
+          "rechargeAmountReached": "Deposit amount reached {amount} within {days} days",
+          "via": "Via {channels}",
+          "inviteConditionInvalid": "Invite friends trigger condition is invalid, please check configuration",
+          "invite": "Invite {count}",
+          "friend": "friends",
+          "inviteeNeedRecharge": ", invitees need to complete minimum {amount} deposit within {days} days",
+          "inviteeNeedRechargeMin": "and invitees need to complete minimum {amount} deposit",
+          "vipLevelAbove": "{level} and above members",
+          "conditionGroup": "Condition Group {index}",
+          "or": "or",
+          "amountBetween": "{min}≤ {type} ≤{max}",
+          "amountLessEqual": "{type} ≤ {amount}",
+          "amountGreaterEqual": "{type} ≥ {amount}",
+          "vipLevelGreaterEqual": "VIP level greater than or equal to {level}",
+          "vipLevelLessEqual": "VIP level less than or equal to {level}",
+          "vipLevelContains": "VIP level contains {levels}",
+          "vipLevelNotContains": "VIP level does not contain {levels}",
+          "registerTimeBetween": "Registration time between {start} and {end}",
+          "registerTimeAfter": "Registration time after {time}",
+          "registerTimeBefore": "Registration time before {time}",
+          "timeRange": "Time range: recent {days} days",
+          "separator": ", ",
+          "vipLevelIs": "VIP level is {levels}",
+          "loginTriggerConditionInvalid": "Login trigger condition is invalid, please check configuration",
+          "loginDaysAndTimes": "{loginDayRange} {loginDayNum} and login {loginCount}",
+          "days": "{days} days",
+          "times": "{times} times",
+          "inviteCount": "invite {count} people",
+          "validBet": "Valid Bet",
+          "amountReached": "Amount reached {amount}"
+        }
+      }
+    },
+    "verifyCode": {
+      "title": "Verification Code Records",
+      "columns": {
+        "account": "Account",
+        "type": "Purpose",
+        "code": "Verification Code",
+        "createTime": "Create Time"
+      },
+      "form": {
+        "account": "Account",
+        "accountPlaceholder": "Please enter account",
+        "type": "Type",
+        "typePlaceholder": "Please select query type",
+        "createTime": "Create Time"
+      },
+      "types": {
+        "sms": "SMS",
+        "email": "Email"
+      }
+    },
+    "vip": {
+      "title": "Member VIP Management",
+      "tabs": {
+        "userStats": "VIP User Statistics",
+        "basicConfig": "VIP Basic Configuration",
+        "levelConfig": "VIP Level Settings",
+        "logRecord": "VIP Log Records"
+      },
+      "columns": {
+        "level": "Level",
+        "name": "Name",
+        "privileges": "Privileges",
+        "requirements": "Requirements"
+      },
+      "userCount": {
+        "name": "Name",
+        "count": "Count"
+      },
+      "config": {
+        "title": "VIP Level Configuration",
+        "editSuccess": "VIP level configuration edited successfully",
+        "sections": {
+          "upgrade": "Upgrade",
+          "relegation": "Relegation",
+          "monthlyReward": "Monthly Rewards",
+          "weeklyReward": "Weekly Rewards",
+          "profit": "Benefits",
+          "washRatio": "Code washing ratio (%)"
+        },
+        "fields": {
+          "upgradeRecharge": "Upgrade Deposit:",
+          "upgradeBetCode": "Upgrade Wagering Amount:",
+          "upgradeRewards": "Upgrade Rewards:",
+          "monthRelegationRecharge": "Monthly Relegation Deposit:",
+          "monthRelegationBetCode": "Monthly Relegation Wagering:",
+          "monthRewardRecharge": "Monthly Reward Deposit:",
+          "monthRewardBetCode": "Monthly Reward Wagering:",
+          "monthReward": "Monthly Reward:",
+          "weekRewardRecharge": "Weekly Reward Deposit:",
+          "weekRewardBetCode": "Weekly Reward Wagering:",
+          "weekReward": "Weekly Reward:",
+          "dayWithdrawAmount": "Daily Withdrawal Amount:",
+          "dayWithdrawCount": "Daily Withdrawal Count:",
+          "dayWithdrawNoFeeCount": "Daily Free Withdrawal Count:"
+        },
+        "buttons": {
+          "cancel": "Cancel",
+          "save": "Save"
+        }
+      },
+      "basicConfig": {
+        "operationTime": "Operation Time",
+        "operator": "Operator",
+        "configValue": "Configuration Value (Old -> New)",
+        "operationSuccess": "Operation Successful",
+        "enableVipFunction": "Enable VIP Function",
+        "yes": "Yes",
+        "no": "No",
+        "vipDescription": "When enabled, members can upgrade VIP levels based on betting amount to receive corresponding benefits",
+        "maxVipLevel": "Platform Maximum VIP Level",
+        "confirm": "Confirm",
+        "cancel": "Cancel",
+        "maxVipLevelDescription": "Set the maximum VIP level supported by the platform, up to level 20",
+        "vipRewardCodingMultiple": "VIP Reward Wagering Multiple",
+        "vipRewardCodingDescription": "Wagering amount multiple required when members receive VIP rewards"
+      },
+      "log": {
+        "type": "Type",
+        "memberId": "Member ID",
+        "timeRange": "Time Range",
+        "columns": {
+          "time": "Time",
+          "memberId": "Member ID",
+          "type": "Type",
+          "recordDetails": "Record Details",
+          "rewardAmount": "Reward Amount"
+        },
+        "recordDetailsText": "Member received VIP {vipLevel} {rewardType} Deposit Amount: {depositAmount} Betting Amount: {betAmount}"
+      },
+      "levelConfig": {
+        "title": "VIP Level Configuration",
+        "editModalTitle": "Edit VIP Level Configuration",
+        "columns": {
+          "vipLevel": "VIP Level",
+          "upgrade": "Upgrade",
+          "upgradeRecharge": "Upgrade Deposit",
+          "upgradeBetCode": "Upgrade Wagering Amount",
+          "upgradeRewards": "Upgrade Rewards",
+          "relegation": "Relegation",
+          "monthRelegationRecharge": "Monthly Deposit",
+          "monthRelegationBetCode": "Monthly Wagering Amount",
+          "monthlyReward": "Monthly Reward",
+          "monthRewardRecharge": "Current Month Deposit",
+          "monthRewardBetCode": "Current Month Wagering Amount",
+          "monthReward": "Monthly Reward",
+          "weeklyReward": "Weekly Reward",
+          "weekRewardRecharge": "Current Week Deposit",
+          "weekRewardBetCode": "Current Week Wagering Amount",
+          "weekReward": "Weekly Reward",
+          "privileges": "Benefits",
+          "dayWithdrawAmount": "Daily Withdrawal Amount",
+          "dayWithdrawCount": "Daily Withdrawal Count",
+          "dayWithdrawNoFeeCount": "Daily Free Withdrawal Count"
+        },
+        "description": "When daily withdrawal amount, daily withdrawal count, and daily free withdrawal count are set to -1, it means unlimited"
+      }
+    },
+    "group": {
+      "title": "User Group Management",
+      "columns": {
+        "id": "ID",
+        "groupName": "Group Name",
+        "tagName": "Tag Name",
+        "description": "Group Description",
+        "memberCount": "Member Count",
+        "updateTime": "Update Time",
+        "lastOperator": "Last Operator"
+      },
+      "actions": {
+        "groupPermission": "Group Permissions",
+        "editTag": "Edit Tag",
+        "delete": "Delete"
+      },
+      "buttons": {
+        "createGroup": "Add Member Group"
+      },
+      "modal": {
+        "editGroup": "Edit Member Group",
+        "addGroup": "Add Member Group",
+        "editPermission": "Edit Member Group Permissions"
+      },
+      "form": {
+        "groupName": "Group Name:",
+        "associatedTag": "Associated Tag:",
+        "groupDescription": "Group Description:",
+        "selectTagPlaceholder": "Please select associated tag",
+        "nameRequired": "Please enter group name",
+        "submitSuccess": "{action} member group successfully",
+        "permissionUpdateSuccess": "The modification of member group permissions has been successful"
+      }
+    },
+    "tag": {
+      "title": "Tag Management",
+      "columns": {
+        "id": "ID",
+        "tagName": "Tag Name",
+        "tagEffect": "Tag Effect",
+        "description": "Tag Description",
+        "memberCount": "Member Count",
+        "createTime": "Create Time"
+      },
+      "form": {
+        "tagName": "Tag Name",
+        "tagNamePlaceholder": "Please enter tag name",
+        "tagColor": "Tag Color",
+        "description": "Description"
+      },
+      "actions": {
+        "edit": "Edit",
+        "delete": "Delete",
+        "viewMembers": "View Members"
+      },
+      "buttons": {
+        "createTag": "Create Tag"
+      },
+      "modal": {
+        "editTag": "Edit Tag",
+        "addTag": "Add Tag"
+      },
+      "validation": {
+        "typeRequired": "Please select tag type",
+        "nameRequired": "Please enter tag name",
+        "nameFormat": "Please enter 8 English characters or 4 Chinese characters"
+      },
+      "messages": {
+        "editSuccess": "{action} tag successfully"
+      }
+    },
+    "addTag": {
+      "sections": {
+        "basicInfo": "Tag Basic Information",
+        "triggerConditions": "Trigger Conditions",
+        "triggerSettings": "Trigger Settings"
+      },
+      "basicForm": {
+        "tagName": "Tag Name",
+        "tagNamePlaceholder": "Please enter tag name",
+        "description": "Tag Description",
+        "descriptionPlaceholder": "Please enter tag description",
+        "tagType": "Tag Type",
+        "tagTypePlaceholder": "Please select tag type",
+        "status": "Tag Status",
+        "enable": "Enable",
+        "disable": "Disable"
+      },
+      "triggerConditions": {
+        "register": {
+          "timeRange": "Time Range",
+          "accountType": "Account Type",
+          "accountTypeNote": "Not selecting means applicable to all account types",
+          "registerChannel": "Registration Channel",
+          "registerChannelPlaceholder": "Please select registration channel"
+        },
+        "loginDay": {
+          "loginDays": "Login Days",
+          "loginDaysNote": "Accumulated login days within the time range",
+          "loginCount": "Login Count",
+          "loginCountNote": "Accumulated login count within the time range",
+          "timeRange": "Time Range"
+        },
+        "betAmount": {
+          "betAmount": "Bet Amount",
+          "timeRange": "Time Range",
+          "timeRangeNote": "Time range for trigger condition calculation",
+          "betType": "Bet Type",
+          "betTypePlaceholder": "Please select bet type",
+          "gameRange": "Game Range"
+        },
+        "loseAmount": {
+          "loseAmount": "Loss Amount",
+          "timeRange": "Time Range",
+          "timeRangeNote": "Time range for trigger condition calculation",
+          "gameCategory": "Game Category",
+          "loseRate": "Loss Rate",
+          "loseRateNote": "Loss amount/Bet amount, 0 means no limit"
+        },
+        "userLevel": {
+          "userLevel": "Member Level",
+          "userLevelPlaceholder": "Please select member level",
+          "levelKeepTime": "Level Maintenance Time",
+          "levelKeepTimeNote": "0 means unlimited time"
+        },
+        "withdraw": {
+          "withdrawType": "Withdrawal Type",
+          "withdrawTypePlaceholder": "Please select withdrawal type",
+          "withdrawAmount": "Withdrawal Amount",
+          "withdrawCount": "Withdrawal Count",
+          "withdrawCountNote": "Accumulated withdrawal count within the time range",
+          "timeRange": "Time Range",
+          "withdrawChannel": "Withdrawal Channel",
+          "withdrawChannelPlaceholder": "Please select withdrawal channel",
+          "withdrawChannelNote": "Not selecting means applicable to all channels",
+          "auditStatus": "Audit Status",
+          "auditStatusPlaceholder": "Please select audit status",
+          "auditStatusNote": "Not selecting means applicable to all statuses (Approved + Rejected)"
+        },
+        "recharge": {
+          "rechargeType": "Deposit Type",
+          "rechargeTypePlaceholder": "Please select deposit type",
+          "rechargeAmount": "Deposit Amount",
+          "rechargeCount": "Deposit Count",
+          "rechargeCountNote": "Accumulated deposit count within the time range",
+          "timeRange": "Time Range",
+          "rechargeChannel": "Deposit Channel",
+          "rechargeChannelPlaceholder": "Please select deposit channel",
+          "rechargeChannelNote": "Not selecting means applicable to all channels"
+        },
+        "activity": {
+          "activityType": "Activity Type",
+          "activityTypePlaceholder": "Please select activity type",
+          "participationStatus": "Participation Status",
+          "participationStatusPlaceholder": "Please select participation status",
+          "participationCount": "Participation Count",
+          "participationCountNote": "Number of times participated in activities within the time range",
+          "timeRange": "Time Range"
+        },
+        "invite": {
+          "inviteUserCount": "Invited User Count",
+          "inviteUserCountNote": "Number of successfully invited users",
+          "invitedUserStatus": "Invitee Status",
+          "invitedUserStatusPlaceholder": "Please select invitee status",
+          "invitedUserStatusNote": "Status condition required for invited users to reach",
+          "rechargeRequirement": "Deposit Requirement",
+          "rechargeRequirementNote": "Whether invited users must complete their first deposit",
+          "minRechargeAmount": "Minimum Deposit Amount",
+          "minRechargeAmountNote": "Minimum first deposit amount requirement for invited users",
+          "validPeriod": "Valid Period",
+          "validPeriodNote": "Invited users need to complete conditions within the valid period",
+          "statisticsPeriod": "Statistics Period",
+          "statisticsPeriodNote": "Time range for invitation statistics",
+          "inviteLevelRequirement": "Invitation Level Requirement",
+          "inviteLevelRequirementNote": "Whether there are member level requirements for inviters",
+          "inviterMinLevel": "Inviter Minimum Level",
+          "inviterMinLevelPlaceholder": "Please select member level",
+          "inviterMinLevelNote": "Minimum member level required for inviters"
+        },
+        "mixed": {
+          "subConditionList": "Sub-condition List",
+          "conditionGroupNote": "Relationship between condition groups is OR, relationship within each condition group is AND",
+          "conditionGroup": "Condition Group",
+          "groupRelation": "Relationship within this group: AND",
+          "deleteGroup": "Delete",
+          "addCondition": "Add Condition",
+          "addConditionGroup": "Add Condition Group",
+          "selectPlaceholder": "Please select",
+          "rechargeTotal": "Total Deposit",
+          "withdrawTotal": "Total Withdrawal",
+          "validBet": "Valid Bet",
+          "lossTotal": "Total Loss",
+          "recentDays": "Recent",
+          "recentDaysLabel": "days"
+        }
+      },
+      "triggerSettings": {
+        "triggerFrequency": "Trigger Frequency",
+        "triggerFrequencyNote": "Platform trigger will batch process member data by daily (1 day), weekly (7 days) login according to set frequency",
+        "tagValidType": "Tag Validity Type",
+        "tagValidTypePermanent": "Permanent",
+        "tagValidTypeDays": "Valid Days",
+        "tagValidTypeNote": "Set the duration of tag existence in member records",
+        "tagOverrideRule": "Tag Override Rule",
+        "priorityOverride": "Priority Override",
+        "keepWhenMatch": "Keep When Matching",
+        "tagOverrideRuleNote": "How to handle when members meet multiple trigger conditions simultaneously",
+        "tagPriority": "Tag Priority",
+        "tagPriorityNote": "Higher number means higher priority, 1-10, higher value means higher priority",
+        "priorityLevels": {
+          "low": "Low Priority",
+          "normal": "Normal Priority",
+          "medium": "Medium Priority",
+          "high": "High Priority"
+        }
+      },
+      "validation": {
+        "tagNameRequired": "Please enter tag name",
+        "tagTypeRequired": "Please select tag type",
+        "triggerFrequencyRequired": "Please select trigger frequency",
+        "tagValidTypeRequired": "Please select tag validity type"
+      },
+      "buttons": {
+        "cancel": "Cancel",
+        "save": "Save"
+      },
+      "units": {
+        "days": "days",
+        "percent": "%"
+      }
+    },
+    "memberLoginLog": {
+      "form": {
+        "memberId": "Member ID",
+        "memberIdPlaceholder": "Please enter member ID",
+        "ip": "IP",
+        "ipPlaceholder": "Please enter IP",
+        "time": "Time"
+      },
+      "columns": {
+        "loginId": "Login ID",
+        "memberId": "Member ID",
+        "action": "Action",
+        "deviceType": "Login Device",
+        "deviceNo": "Device Number",
+        "browserFingerprint": "Browser Fingerprint",
+        "loginTime": "Login Time",
+        "ip": "IP",
+        "status": "Status"
+      },
+      "actions": {
+        "login": "Login",
+        "logout": "Logout",
+        "recharge": "Deposit",
+        "withdraw": "Withdraw",
+        "forgotPassword": "Forgot Password",
+        "unknown": "Unknown"
+      },
+      "devices": {
+        "h5": "H5",
+        "android": "Android",
+        "ios": "IOS",
+        "pc": "PC",
+        "unknown": "Unknown"
+      },
+      "status": {
+        "success": "Success",
+        "failed": "Failed"
+      }
+    },
+    "common": {
+      "add": "Add",
+      "edit": "Edit",
+      "delete": "Delete",
+      "save": "Save",
+      "cancel": "Cancel",
+      "confirm": "Confirm",
+      "search": "Search",
+      "reset": "Reset",
+      "export": "Export",
+      "import": "Import",
+      "refresh": "Refresh",
+      "loading": "Loading...",
+      "noData": "No Data",
+      "operation": "Operation",
+      "status": "Status",
+      "createTime": "Create Time",
+      "updateTime": "Update Time",
+      "remark": "Remarks",
+      "today": "Today",
+      "yesterday": "Yesterday",
+      "thisWeek": "This Week",
+      "lastWeek": "Last Week",
+      "thisMonth": "This Month",
+      "lastMonth": "Last Month",
+      "all": "All",
+      "pleaseSelect": "Please Select",
+      "pleaseInput": "Please Input",
+      "success": "Success",
+      "failed": "Failed",
+      "warning": "Warning",
+      "info": "Information",
+      "unknown": "Unknown"
+    },
+    "blacklist": {
+      "title": "Blacklist management of member activities",
+      "tabs": {
+        "userActivity": "Member Activity Blacklist",
+        "blackListDeleteLog": "Blacklist deletion record",
+        "rewardLimit": "Reward limit record"
+      },
+      "blacklist": {
+        "form": {
+          "memberId": "Member ID",
+          "memberIdPlaceholder": "Please enter Member ID",
+          "activityType": "Activity Type",
+          "activityTypePlaceholder": "Please select activity type",
+          "addBlackList": "New addition Blacklist",
+          "batchAdd": "Batch Addition",
+          "batchDelete": "Batch Deletion",
+          "createOne": "New Addition Blacklist",
+          "editOne": "Edit Blacklist",
+          "actionTime": "Trigger time"
+        },
+        "columns": {
+          "memberId": "Member ID",
+          "activityType": "Prohibited types of activities",
+          "addTime": "Create Time",
+          "oprationUser": "Operator",
+          "remark": "Remarks",
+          "delTime": "Delete Time",
+          "delUser": "Deleted by",
+          "delReason": "Delete Reason",
+          "oldAddTime": "Original Addition Time",
+          "oldOprationUser": "Original Operator",
+          "oldReason": "Original Remarks"
+        },
+        "addDialog": {
+          "idlist": "Member ID List",
+          "activityType": "Activity Type",
+          "remark": "Remarks",
+          "idListPlaceholder": "Please enter Member ID, one per line, up to 100 entries",
+          "activityTypePlaceholder": "Please select activity type",
+          "remarkPlaceholder": "Please enter remarks, up to 200 characters",
+          "removeReason": "Delete Reason",
+          "removeReasonPlaceholder": "Please enter delete reason, up to 200 characters",
+          "removeConfirm": "Are you sure you want to remove the \"{ activityType }\" activity blacklist with the member ID \"{ userId }\"?",
+          "removePlaceholder": "Please enter delete reason, up to 200 characters",
+          "deleteTitle": "Delete Record",
+          "batchAddBlackList": "Batch Add Blacklist",
+          "batchDeleteTitle": "Batch Delete Blacklist",
+          "idsMustNumber": "Member ID must be 7 chats numeric",
+          "maxCount": "You can add up to 100 member IDs at a time"
+        }
+      }
+    }
+  }
+}

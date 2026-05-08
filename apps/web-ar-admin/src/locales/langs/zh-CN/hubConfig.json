@@ -1,0 +1,395 @@
+{
+  "hub": {
+    "common": {
+      "tenantId": "商户ID",
+      "platform": "平台",
+      "state": "状态",
+      "platformOpts": {
+        "ios": "iOS",
+        "android": "Android",
+        "both": "全平台"
+      },
+      "stateOpts": {
+        "enabled": "启用",
+        "disabled": "禁用"
+      }
+    },
+    "site": {
+      "title": "站点管理",
+      "domainTab": "域名管理",
+      "seoTab": "SEO配置",
+      "overrideTab": "覆盖配置",
+      "domain": {
+        "domain": "域名地址",
+        "domainPh": "请输入域名地址",
+        "tenantIdPh": "请输入租户ID",
+        "clientType": "客户端类型",
+        "channel": "渠道标识",
+        "channelPh": "请输入渠道标识",
+        "layoutId": "关联版型",
+        "selectLayout": "请选择版型",
+        "seoId": "关联SEO配置",
+        "seoIdPh": "请输入SEO配置ID",
+        "add": "新增域名",
+        "edit": "编辑域名"
+      },
+      "seo": {
+        "title": "页面标题",
+        "tenantIdPh": "租户级别SEO",
+        "domainId": "域名ID",
+        "domainIdPh": "域名级别SEO",
+        "titlePh": "请输入页面标题",
+        "keywords": "关键词",
+        "keywordsPh": "请输入关键词，多个用逗号分隔",
+        "description": "描述信息",
+        "descriptionPh": "请输入描述信息",
+        "favicon": "网站图标",
+        "faviconPh": "请输入图标URL",
+        "scripts": "自定义脚本",
+        "scriptsPh": "请输入自定义脚本代码",
+        "add": "新增SEO配置",
+        "edit": "编辑SEO配置"
+      },
+      "override": {
+        "tenantIdPh": "请输入租户ID",
+        "layoutId": "关联版型",
+        "selectLayout": "请选择版型（可选）",
+        "resourceType": "覆盖类型",
+        "resourceKey": "资源键",
+        "resourceKeyPh": "如: background, name, iconKey",
+        "value": "覆盖值",
+        "valuePh": "JSON 格式",
+        "valueJsonErr": "覆盖值 JSON 格式错误",
+        "add": "新增覆盖配置",
+        "edit": "编辑覆盖配置",
+        "typeOpts": {
+          "tabbar": "TabBar覆盖",
+          "tabitem": "TabBar项覆盖",
+          "navigation": "导航覆盖",
+          "style": "风格覆盖"
+        }
+      }
+    },
+    "tpl": {
+      "title": "模板管理",
+      "layout": {
+        "title": "版型管理",
+        "name": "版型名称",
+        "description": "版型描述",
+        "client": "客户端类型",
+        "themeCount": "主题数",
+        "styleCount": "风格数",
+        "themeList": "主题列表",
+        "styleList": "风格列表",
+        "add": "新增版型",
+        "edit": "编辑版型",
+        "clientOpts": {
+          "web": "PC端",
+          "h5": "移动端H5",
+          "ios": "iOS",
+          "android": "Android",
+          "app": "通用APP",
+          "public": "公共"
+        }
+      },
+      "theme": {
+        "title": "主题管理",
+        "name": "主题名称",
+        "code": "主题编码",
+        "description": "主题描述",
+        "add": "新增主题",
+        "edit": "编辑主题"
+      },
+      "style": {
+        "title": "风格管理",
+        "name": "风格名称",
+        "description": "风格描述",
+        "type": "风格类型",
+        "layoutId": "所属版型",
+        "add": "新增风格",
+        "edit": "编辑风格",
+        "selectLayout": "请选择版型",
+        "typeOpts": {
+          "electronic": "电子风格",
+          "light": "亮色风格",
+          "dark": "暗色风格",
+          "classic": "经典风格",
+          "modern": "现代风格"
+        }
+      },
+      "nav": {
+        "title": "导航管理",
+        "name": "导航名称",
+        "nameZh": "中文名称",
+        "nameEn": "英文名称",
+        "type": "导航类型",
+        "sort": "排序",
+        "layoutId": "所属版型",
+        "parentId": "父级导航",
+        "parentIdTip": "用于树形结构",
+        "sortTip": "值越大越靠前",
+        "childCount": "子导航数",
+        "childList": "子导航列表",
+        "game": "游戏数据",
+        "gamePh": "JSON 格式",
+        "gameJsonErr": "游戏数据 JSON 格式错误",
+        "navItem": "导航",
+        "add": "新增导航",
+        "edit": "编辑导航",
+        "selectLayout": "请选择版型",
+        "selectParent": "请选择父级（可选）",
+        "noParent": "无父级",
+        "typeOpts": {
+          "category": "分类",
+          "game": "游戏"
+        }
+      },
+      "tabbar": {
+        "title": "标签栏管理",
+        "name": "标签栏名称",
+        "client": "客户端类型",
+        "background": "背景",
+        "backgroundPh": "颜色值或图片URL",
+        "layoutId": "所属版型",
+        "itemCount": "项目数",
+        "add": "新增标签栏",
+        "edit": "编辑标签栏",
+        "selectLayout": "请选择版型",
+        "manageItems": "管理项目",
+        "items": "标签项",
+        "item": {
+          "title": "标签项管理",
+          "name": "标签名称",
+          "nameZh": "中文名称",
+          "nameEn": "英文名称",
+          "key": "唯一标识",
+          "iconKey": "默认图标Key",
+          "iconActiveKey": "激活图标Key",
+          "type": "跳转类型",
+          "target": "跳转目标",
+          "targetPh": "路由名/游戏ID/外链URL",
+          "iconKeyPh": "如: tab.home",
+          "iconActiveKeyPh": "如: tab.home.active",
+          "special": "特殊类型",
+          "sort": "排序",
+          "visible": "是否可见",
+          "add": "新增标签项",
+          "edit": "编辑标签项",
+          "typeOpts": {
+            "route": "前端路由",
+            "url": "外链",
+            "game": "游戏ID"
+          },
+          "specialOpts": {
+            "normal": "普通",
+            "raised": "凸起按钮"
+          }
+        }
+      },
+      "skin": {
+        "title": "皮肤管理",
+        "name": "皮肤名称",
+        "type": "皮肤类型",
+        "key": "资源键",
+        "keyPh": "如: logo.main, icon.home.active",
+        "url": "资源地址",
+        "urlPh": "OSS/S3/CDN 资源地址",
+        "themeId": "关联主题",
+        "tenantIdPh": "请输入商户ID",
+        "layoutId": "关联版型",
+        "meta": "元数据",
+        "metaPh": "JSON 格式元数据（可选）",
+        "metaJsonErr": "元数据 JSON 格式错误",
+        "preview": "预览",
+        "add": "新增皮肤",
+        "edit": "编辑皮肤",
+        "selectTheme": "请选择主题",
+        "selectTenant": "请选择租户",
+        "selectLayout": "请选择版型",
+        "typeOpts": {
+          "system": "公共资源",
+          "theme": "主题级资源",
+          "tenant": "商户定制资源",
+          "layout": "版型定制资源"
+        },
+        "viewResource": "查看"
+      }
+    },
+    "app": {
+      "title": "应用管理",
+      "pkg": {
+        "title": "打包配置",
+        "channelCode": "渠道标识",
+        "packageName": "包名",
+        "packageNamePh": "如: com.example.app",
+        "appName": "应用名称",
+        "appIcon": "应用图标",
+        "appIconPh": "图标URL",
+        "splashImage": "启动图",
+        "splashImagePh": "启动图URL",
+        "launchImage": "引导图",
+        "launchImagePh": "引导图URL",
+        "appIconHelp": "PNG 格式，尺寸 512x512，最大 1MB",
+        "splashImageHelp": "PNG/JPG 格式，尺寸 1080x2340，最大 2MB",
+        "launchImageHelp": "PNG/JPG 格式，尺寸 1080x2340，最大 5MB",
+        "appIconSizeErr": "应用图标尺寸必须为 512x512",
+        "splashImageSizeErr": "启动图尺寸必须为 1080x2340",
+        "launchImageSizeErr": "引导图尺寸必须为 1080x2340",
+        "packageNameFormatErr": "包名后缀必须以小写字母开头，只能包含小写字母、数字和下划线",
+        "signConfig": "签名配置",
+        "signConfigPh": "JSON 格式签名配置",
+        "buildConfig": "打包配置",
+        "buildConfigPh": "JSON 格式打包配置",
+        "signConfigJsonErr": "签名配置 JSON 格式错误",
+        "buildConfigJsonErr": "打包配置 JSON 格式错误",
+        "add": "新增打包配置",
+        "edit": "编辑打包配置",
+        "createJob": "创建任务",
+        "recreateJob": "重新创建",
+        "createJobConfirm": "确定要为此打包配置创建构建任务吗？",
+        "createJobSuccess": "任务创建成功",
+        "detail": "渠道包详情",
+        "viewJobs": "查看详情",
+        "jobListTitle": "构建任务",
+        "jobCount": "任务数",
+        "jobUnit": "个任务",
+        "latestJob": "任务状态",
+        "timeAgo": {
+          "justNow": "刚刚",
+          "minutesAgo": "{n}分钟前",
+          "hoursAgo": "{n}小时前",
+          "daysAgo": "{n}天前"
+        },
+        "jobStats": {
+          "total": "总计",
+          "pending": "等待中",
+          "running": "运行中",
+          "completed": "已完成",
+          "failed": "失败"
+        },
+        "noJobs": "暂无构建任务",
+        "createFirstJob": "创建第一个任务"
+      },
+      "job": {
+        "title": "任务监控",
+        "overview": "任务概览",
+        "successRate": "成功率",
+        "desc": {
+          "total": "所有任务总数，成功率 = 已完成 / 总数",
+          "pending": "等待执行的任务，过多表示执行器处理能力不足",
+          "running": "正在执行的任务数量",
+          "completed": "执行成功的任务数量",
+          "failed": "执行失败的任务，需要关注并处理",
+          "runner": "在线执行器数量，影响任务处理能力"
+        },
+        "noLogs": "暂无日志",
+        "cancelConfirm": "确定要取消此任务吗？",
+        "retryConfirm": "确定要重试此任务吗？",
+        "packageId": "打包配置",
+        "runnerId": "执行器",
+        "jobType": "任务类型",
+        "status": "状态",
+        "progress": "进度",
+        "priority": "优先级",
+        "params": "任务参数",
+        "result": "执行结果",
+        "artifactUrl": "产物地址",
+        "download": "下载",
+        "startedAt": "开始时间",
+        "finishedAt": "完成时间",
+        "duration": "耗时",
+        "viewLogs": "查看日志",
+        "cancel": "取消任务",
+        "retry": "重试任务",
+        "statusOpts": {
+          "pending": "等待中",
+          "running": "运行中",
+          "completed": "已完成",
+          "failed": "失败",
+          "cancelled": "已取消"
+        },
+        "typeOpts": {
+          "build": "打包构建",
+          "upload": "上传发布"
+        },
+        "log": {
+          "title": "任务日志",
+          "logLevel": "日志级别",
+          "message": "日志内容",
+          "timestamp": "时间戳",
+          "levelOpts": {
+            "info": "信息",
+            "warn": "警告",
+            "error": "错误",
+            "debug": "调试"
+          }
+        }
+      },
+      "ver": {
+        "title": "版本管理",
+        "versionId": "版本ID",
+        "versionCode": "版本号",
+        "packageType": "包类型",
+        "packageTypeOpts": {
+          "native": "原生包",
+          "shell": "套壳包",
+          "master": "母包",
+          "derived": "派生包"
+        },
+        "downloadUrl": "下载地址",
+        "updateType": "更新类型",
+        "minVersionCode": "最低兼容版本",
+        "releaseNotes": "更新说明",
+        "fileSize": "文件大小",
+        "md5": "MD5校验",
+        "publishedAt": "发布时间",
+        "add": "新增版本",
+        "edit": "编辑版本",
+        "publish": "发布",
+        "unpublish": "下架",
+        "updateTypeOpts": {
+          "optional": "可选更新",
+          "force": "强制更新",
+          "silent": "静默更新"
+        },
+        "stateOpts": {
+          "draft": "草稿",
+          "published": "已发布",
+          "unpublished": "已下架"
+        },
+        "versionCodePh": "版本号，如: 1.0.0",
+        "versionCodeFormatErr": "版本号格式错误，应为 x.x.x",
+        "uploadPkg": "上传安装包",
+        "selectPlatformFirst": "请先选择平台",
+        "minVersionCodePh": "最低兼容版本",
+        "releaseNotesPh": "更新说明",
+        "fileSizePh": "文件大小（字节）",
+        "md5Ph": "MD5校验码",
+        "download": "下载",
+        "publishConfirm": "确定要发布此版本吗？发布后同商户同平台的其他已发布版本将自动下架。",
+        "unpublishConfirm": "确定要下架此版本吗？",
+        "updatedBy": "更新人"
+      }
+    },
+    "runner": {
+      "title": "执行器管理",
+      "runnerName": "执行器名称",
+      "description": "描述",
+      "tags": "标签",
+      "maxConcurrent": "最大并发数",
+      "isOnline": "在线状态",
+      "token": "Token",
+      "ipAddress": "IP地址",
+      "version": "版本号",
+      "lastHeartbeat": "最后心跳",
+      "add": "新增Runner",
+      "edit": "编辑Runner",
+      "regenerateToken": "重新生成Token",
+      "confirmRegenerate": "确定要重新生成Token吗？原Token将失效",
+      "online": "在线",
+      "offline": "离线",
+      "running": "运行中",
+      "currentJobs": "当前任务数"
+    }
+  }
+}

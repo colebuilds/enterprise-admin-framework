@@ -1,0 +1,213 @@
+{
+  "components": {
+    "proCrudTable": {
+      "expand": "Expand",
+      "collapse": "Collapse",
+      "selectCurrentPage": "Select All on Page",
+      "batchAction": "Batch Actions",
+      "selectedCount": "{count} items selected",
+      "totalCount": "Total {count}",
+      "action": "Action"
+    },
+    "proAdvancedSearch": {
+      "title": "Advanced Filter",
+      "panelTitle": "Advanced Search",
+      "quickEdit": "Quick Edit",
+      "cancelEdit": "Cancel Edit",
+      "pinHint": "Pin fields to main search area (max {max})",
+      "pinCount": "Selected {count}/{max}",
+      "cancel": "Cancel",
+      "clearAll": "Clear",
+      "resetDefault": "Reset",
+      "apply": "Apply",
+      "saveConfig": "Save Config",
+      "groupOther": "Other"
+    },
+    "proSearchForm": {
+      "search": "Search",
+      "reset": "Reset",
+      "expand": "Expand",
+      "collapse": "Collapse"
+    },
+    "proColumnSetting": {
+      "customColumns": "Columns",
+      "columnDisplay": "Column Display",
+      "reset": "Reset"
+    },
+    "tenantCheckPanel": {
+      "selected": "Selected {count}/{total}",
+      "selectAll": "Select All",
+      "clear": "Clear",
+      "loading": "Loading...",
+      "empty": "No available merchants"
+    },
+    "aiAssistant": {
+      "openAssistant": "Open AI Assistant",
+      "eyebrow": "AI",
+      "title": "Smart Assistant",
+      "input": {
+        "configUnavailable": "Assistant configuration unavailable",
+        "stopGenerating": "Stop generating",
+        "overLimit": "Content exceeds length limit",
+        "waitReply": "Please wait for the reply",
+        "sendEnter": "Send (Enter)"
+      },
+      "panel": {
+        "newChat": "New chat",
+        "history": "History",
+        "undock": "Undock",
+        "dockRight": "Dock to right",
+        "exitFullscreen": "Exit fullscreen",
+        "fullscreen": "Fullscreen",
+        "close": "Close",
+        "loadingConfig": "Loading assistant configuration",
+        "loadingWelcome": "Please wait. Welcome content will appear after configuration loads.",
+        "emptyTitle": "Send a message to start",
+        "emptyCopy": "Supports knowledge retrieval, workflow Q&A, and troubleshooting."
+      },
+      "session": {
+        "count": "{count} sessions",
+        "justNow": "Just now",
+        "minutesAgo": "{count} minutes ago",
+        "hoursAgo": "{count} hours ago",
+        "noMessages": "No messages",
+        "messages": "{count} messages",
+        "deleteTitle": "Delete session",
+        "deleteConfirm": "Are you sure you want to delete this session? This cannot be undone.",
+        "current": "Current",
+        "emptyDescription": "Historical sessions will appear here",
+        "newChat": "New chat"
+      },
+      "message": {
+        "copiedToClipboard": "Copied to clipboard",
+        "waitingAnalyzing": "Analyzing...",
+        "waitingThinking": "Thinking...",
+        "loadFailed": "Failed to load messages",
+        "recoveringLatestAnswer": "Connection is unstable. Restoring the latest answer..."
+      },
+      "feedback": {
+        "thanks": "Thanks for your feedback",
+        "thanksImprove": "Thanks for your feedback. We will keep improving.",
+        "submitFailed": "Failed to submit feedback",
+        "correctedTo": "Corrected to \"{intent}\"",
+        "intentConfirmed": "Recognition result confirmed",
+        "intentRecorded": "Recognition issue recorded",
+        "invalidIntent": "Invalid intent type",
+        "recognitionResult": "Recognition result",
+        "helpfulQuestion": "Was this answer helpful?",
+        "helpful": "Helpful",
+        "unhelpful": "Not helpful",
+        "liked": "Liked",
+        "feedbackSent": "Feedback sent",
+        "correctIntent": "Correct intent",
+        "intentHint": "If the recognition result is inaccurate, you can correct the intent to help future optimization."
+      },
+      "runtime": {
+        "title": "Task Execution",
+        "currentStep": "Current Step",
+        "taskStatus": "Task Status",
+        "failedRetry": "Analysis task failed. Please try again later.",
+        "runningHint": "The system is analyzing asynchronously and will write back the result when complete.",
+        "status": {
+          "queued": "Queued",
+          "running": "Analyzing",
+          "answering": "Generating answer",
+          "completed": "Completed",
+          "failed": "Execution failed",
+          "cancelled": "Cancelled",
+          "retrying": "Retrying",
+          "processing": "Processing"
+        }
+      },
+      "answer": {
+        "confidenceHigh": "High confidence",
+        "confidenceMedium": "Medium confidence",
+        "confidenceLow": "Low confidence",
+        "supportSemanticCache": "Semantic cache",
+        "supportVectorCache": "Retrieval cache",
+        "supportKnowledge": "Knowledge retrieval",
+        "supportAnalysis": "Analysis data",
+        "supportFallback": "Fallback note",
+        "page": "Page: {page}",
+        "basis": "Basis: {basis}",
+        "documentHits": "{count} documents matched",
+        "fallbackHint": "This answer was generated from fallback guidance. Add more page, feature, or metric details for better results.",
+        "references": "References"
+      },
+      "stream": {
+        "http": {
+          "badRequest": "Invalid request parameters",
+          "unauthorized": "Login expired. Please log in again",
+          "forbidden": "No access permission",
+          "unavailable": "Service unavailable",
+          "tooManyRequests": "Too many requests. Please try again later",
+          "internalError": "Internal server error",
+          "temporaryUnavailable": "Service temporarily unavailable",
+          "maintenance": "Service under maintenance",
+          "timeout": "Request timed out",
+          "requestFailed": "Request failed ({status})"
+        },
+        "errors": {
+          "rateLimit": "The AI service is busy. Please try again later",
+          "toolLoopExceeded": "This question requires too many analysis steps. Please narrow the scope and try again",
+          "streamConflict": "You have an ongoing conversation. Please try again later",
+          "serviceUnavailable": "The AI service is temporarily unavailable. Please try again later",
+          "timeout": "AI response timed out. Please try again later",
+          "internalError": "The AI assistant is temporarily unavailable. Please try again later",
+          "timeoutNarrowScope": "AI response timed out. Please narrow the question and try again",
+          "networkFailed": "Network connection failed. Please check your network",
+          "requestRetry": "Request failed. Please try again later"
+        }
+      },
+      "socket": {
+        "invalidConfig": "Task push configuration is missing. Unable to subscribe to execution progress.",
+        "unauthorized": "Login expired. Please log in again.",
+        "connectFailed": "Task push connection failed.",
+        "taskFailed": "Task execution failed."
+      },
+      "welcome": {
+        "configLoadFailed": "Failed to load configuration",
+        "unavailableRetry": "Welcome page configuration is temporarily unavailable. Please retry before opening the assistant again.",
+        "reload": "Reload"
+      },
+      "clarify": {
+        "message": "I need help with {intent}"
+      },
+      "escalate": {
+        "unavailable": "Live support is not connected in the current version. Please contact customer service directly.",
+        "title": "Human assistance needed",
+        "copy": "You may need more specialized help. We recommend contacting customer service.",
+        "contact": "Contact customer service"
+      }
+    },
+    "proDataTable": {
+      "densityDefault": "Default",
+      "densityMiddle": "Middle",
+      "densityCompact": "Compact"
+    },
+    "htmlCodeEditor": {
+      "editTitle": "Edit HTML Code",
+      "completionHint": "Ctrl+Space code completion",
+      "format": "Format",
+      "previewTitle": "Rich Text Preview",
+      "realtimeRender": "Live Render",
+      "formatSuccess": "Formatting completed",
+      "formatFailed": "Format failed. Please check the HTML structure."
+    },
+    "batchTemplateModal": {
+      "title": "Batch Import Template",
+      "download": "Download Template"
+    },
+    "phonePreview": {
+      "expand": "Expand Preview",
+      "collapse": "Collapse Preview"
+    },
+    "summaryTable": {
+      "amountLabel": "Amount:"
+    },
+    "proEditDataTable": {
+      "addRow": "Add row",
+      "deleteConfirm": "Are you sure you want to delete this record?"
+    }
+  }
+}

@@ -1,0 +1,1110 @@
+{
+  "agent": {
+    "agentList": {
+      "title": "代理列表",
+      "columns": {
+        "userId": "会员ID",
+        "parentId": "上级ID",
+        "generalAgentId": "总代ID",
+        "hierarchy": "绝对层级",
+        "firstChildCount": "直属下级(数量)",
+        "childCount": "全部下级(数量)",
+        "balance": "余额",
+        "registerTime": "注册时间",
+        "lastLoginTime": "最后登录时间",
+        "rebateState": "领取返佣",
+        "summary": {
+          "totalRatio": "总比例",
+          "exceedMaxRatio": "已超过最大比例 100%，请重新调整比例",
+          "rankType": "排行榜类型",
+          "rankSuffix": "排行榜"
+        },
+        "rebateMode": "返佣模式",
+        "rebateLevel": "特殊返佣等级",
+        "rebateSetTime": "特殊返佣设置时间"
+      },
+      "form": {
+        "userIdPlaceholder": "请输入会员ID",
+        "queryRebateAgent": "查询返佣代理线",
+        "relativeLevel": "相对层级",
+        "absoluteLevel": "绝对层级",
+        "levelPlaceholder": "请选择层级",
+        "includeSelfAndParent": "列出自身及全部上级",
+        "rebateMode": "返佣模式",
+        "rebateModePlaceholder": "请选择返佣模式"
+      },
+      "actions": {
+        "removeAgent": "解除代理关系",
+        "bindInvite": "绑定邀请码",
+        "specialRebate": "特殊返佣设置",
+        "export": "导出"
+      },
+      "status": {
+        "enable": "启用",
+        "disable": "禁用",
+        "none": "无"
+      },
+      "messages": {
+        "enterUserId": "请输入会员ID",
+        "enterInviteCode": "请先输入邀请码",
+        "bindSuccess": "邀请码绑定成功",
+        "removeConfirm": "确认解除代理关系吗？",
+        "removeSuccess": "解除代理关系成功",
+        "updateSuccess": "修改成功",
+        "exportFailed": "导出失败"
+      },
+      "dialog": {
+        "bindInviteTitle": "绑定邀请码",
+        "inviteCode": "邀请码",
+        "inviteCodePlaceholder": "请输入邀请码",
+        "specialRebateTitle": "特殊设置返佣",
+        "memberIdLabel": "会员ID",
+        "rebateModeLabel": "返佣模式",
+        "rebateLevelLabel": "返佣等级",
+        "confirm": "确认",
+        "cancel": "取消",
+        "save": "保存",
+        "tip": "提示"
+      },
+      "export": {
+        "fileName": "代理列表"
+      },
+      "levels": {
+        "level1": "一级",
+        "level2": "二级",
+        "level3": "三级",
+        "level4": "四级",
+        "level5": "五级",
+        "level6": "六级"
+      }
+    },
+    "agentReport": {
+      "title": "代理报表",
+      "columns": {
+        "userId": "会员ID",
+        "parentId": "上级ID",
+        "generalAgentId": "总代ID",
+        "hierarchy": "绝对层级",
+        "betAmount": "投注金额",
+        "winAmount": "派奖金额",
+        "platformWinLoss": "平台盈亏",
+        "activityRewards": "活动",
+        "recharges": "充值",
+        "rechargesAmount": "金额",
+        "rechargesCount": "次数",
+        "withdraw": "提现",
+        "withdrawAmount": "金额",
+        "withdrawCount": "次数"
+      },
+      "form": {
+        "selectQueryId": "选择查询ID",
+        "userId": "会员ID",
+        "parentId": "上级ID",
+        "generalAgentId": "总代ID",
+        "userIdPlaceholder": "请输入会员ID",
+        "queryAgentLine": "查询整条代理线",
+        "relativeLevel": "相对层级",
+        "absoluteLevel": "绝对层级",
+        "levelPlaceholder": "请选择层级",
+        "timeRange": "时间范围",
+        "day": "日",
+        "month": "月"
+      },
+      "actions": {
+        "export": "导出"
+      },
+      "status": {
+        "none": "无",
+        "total": "总计"
+      },
+      "messages": {
+        "enterUserId": "请输入会员ID",
+        "exportFailed": "导出失败"
+      },
+      "export": {
+        "fileName": "代理报表"
+      },
+      "levels": {
+        "level1": "一级",
+        "level2": "二级",
+        "level3": "三级",
+        "level4": "四级",
+        "level5": "五级",
+        "level6": "六级"
+      }
+    },
+    "changeLine": {
+      "title": "代理转线记录",
+      "columns": {
+        "userId": "会员ID",
+        "oldParentId": "原上级ID",
+        "oldHierarchy": "原层级",
+        "newParentId": "新上级ID",
+        "newHierarchy": "新层级",
+        "teamUserCount": "转线时下级总数量",
+        "transferBeginTime": "转线发起时间",
+        "transferEndTime": "转线完成时间",
+        "state": "状态"
+      },
+      "form": {
+        "userId": "会员ID",
+        "userIdPlaceholder": "请输入会员ID",
+        "selectTime": "请选择时间",
+        "transferBeginTime": "转线发起时间",
+        "transferEndTime": "转线完成时间"
+      },
+      "actions": {
+        "export": "导出"
+      },
+      "status": {
+        "success": "成功",
+        "processing": "处理中",
+        "failed": "失败"
+      },
+      "export": {
+        "fileName": "代理转线记录"
+      }
+    },
+    "newagent": {
+      "title": "新版代理",
+      "tabs": {
+        "inviteManage": "邀请管理",
+        "teamManage": "团队管理",
+        "rewardManage": "奖励管理",
+        "rebateData": "返佣数据",
+        "rankAudit": "排行榜审核",
+        "rankManage": "排行榜管理",
+        "agentConfig": "三级代理配置",
+        "rules": "代理规则配置"
+      },
+      "invite": {
+        "columns": {
+          "inviterId": "邀请人ID",
+          "inviterUserId": "邀请人ID",
+          "inviteCode": "邀请码",
+          "teamLevel": "团队等级",
+          "totalRewardAmount": "总奖金",
+          "inviteRewardAmount": "邀请成功奖金",
+          "inviteRewardUserCount": "成功奖金人数",
+          "inviteTaskRewardAmount": "邀请任务奖金",
+          "agentL1": "一级代理",
+          "agentL2": "二级代理",
+          "agentL3": "三级代理",
+          "agentDetail1": "一级代理",
+          "agentDetail2": "二级代理",
+          "agentDetail3": "三级代理",
+          "inviteRegisterCount": "受邀注册人数",
+          "inviteRegisterUserCount": "受邀注册人数",
+          "inviteFirstRechargeCount": "受邀首充人数",
+          "inviteTopRechargeUserCount": "受邀首充人数",
+          "validInviteCount": "有效邀请人数",
+          "inviteUserCount": "有效邀请人数",
+          "rechargeAmount": "充值金额",
+          "rechargeCommission": "充值返佣",
+          "rechargeCommissionAmount": "充值返佣",
+          "withdrawAmount": "提现金额",
+          "betCommission": "投注返佣",
+          "betCommissionAmount": "投注返佣",
+          "validBetAmount": "有效投注",
+          "betAmount": "有效投注"
+        },
+        "form": {
+          "inviterId": "邀请人ID",
+          "inviteCode": "邀请码",
+          "registerTime": "注册时间",
+          "inviterIdPlaceholder": "请输入邀请人ID",
+          "inviteCodePlaceholder": "请输入邀请码",
+          "today": "今天",
+          "yesterday": "昨天",
+          "thisWeek": "本周",
+          "lastWeek": "上周",
+          "thisMonth": "本月",
+          "lastMonth": "上月"
+        },
+        "messages": {
+          "pleaseEnterInviterIdOrCode": "请输入邀请人ID或邀请码"
+        },
+        "actions": {
+          "export": "导出",
+          "exportFileName": "邀请管理"
+        }
+      },
+      "team": {
+        "columns": {
+          "memberId": "会员ID",
+          "userId": "会员ID",
+          "agentLevel": "代理等级",
+          "teamLevel": "代理等级",
+          "teamMemberCount": "团队人数",
+          "childCount": "团队人数",
+          "directSubordinates": "直属下级",
+          "teamTotalRecharge": "团队总充值",
+          "teamValidBet": "团队有效投注",
+          "teamProfitLoss": "团队盈亏",
+          "rechargeAmount": "充值金额",
+          "withdrawAmount": "提现金额",
+          "betAmount": "投注金额",
+          "cumulativeCommission": "累计佣金",
+          "agentCommissionAmount": "代理佣金",
+          "status": "状态",
+          "registerTime": "注册时间",
+          "lastLoginTime": "最后登录时间"
+        },
+        "form": {
+          "memberId": "会员ID",
+          "memberIdPlaceholder": "请输入会员ID",
+          "agentLevel": "代理等级",
+          "agentLevelPlaceholder": "请选择代理等级",
+          "memberStatus": "会员状态",
+          "memberStatusPlaceholder": "请选择会员状态",
+          "registerTime": "注册时间"
+        },
+        "actions": {
+          "export": "导出",
+          "exportFileName": "团队管理"
+        },
+        "status": {
+          "unknown": "未知"
+        },
+        "levels": {
+          "l0": "L0",
+          "l1": "L1",
+          "l2": "L2",
+          "l3": "L3",
+          "unknown": "未知"
+        }
+      },
+      "reward": {
+        "columns": {
+          "issueTime": "发放时间",
+          "memberId": "会员ID",
+          "rewardType": "奖励类型",
+          "rewardAmount": "奖励金额"
+        },
+        "form": {
+          "memberId": "会员ID",
+          "memberIdPlaceholder": "请输入会员ID",
+          "rewardType": "奖励类型",
+          "rewardTypePlaceholder": "请选择奖励类型",
+          "issueTime": "发放时间"
+        },
+        "actions": {
+          "export": "导出",
+          "exportFileName": "奖励管理"
+        }
+      },
+      "rebateData": {
+        "title": "代理返佣数据",
+        "columns": {
+          "date": "日期",
+          "memberId": "会员ID",
+          "rebateLevel": "返佣等级",
+          "directSubordinateRecharge": "直属下级充值",
+          "directSubordinateBet": "直属下级投注",
+          "level2SubordinateBet": "2级下级投注",
+          "level3SubordinateBet": "3级下级投注",
+          "peopleCount": "人数",
+          "amount": "金额",
+          "validBet": "有效投注",
+          "rebate": "返佣",
+          "totalPeopleCount": "总人数",
+          "totalValidBet": "总有效投注",
+          "totalRebate": "总返佣"
+        },
+        "form": {
+          "memberId": "会员ID",
+          "memberIdPlaceholder": "请输入会员ID",
+          "queryFullAgentLine": "查询整条代理线",
+          "relativeLevel": "相对层级",
+          "absoluteLevel": "绝对层级",
+          "levelPlaceholder": "请选择层级",
+          "rebateLevel": "返佣等级",
+          "rebateLevelPlaceholder": "请选择返佣等级",
+          "reportDate": "日期",
+          "datePickerPlaceholder": "请选择日期",
+          "teamCountMin": "团队人数>=",
+          "teamCountPlaceholder": "请填写团队人数",
+          "teamRechargeMin": "团队充值金额>=",
+          "teamRechargePlaceholder": "团队充值金额",
+          "directSubordinateRechargeAmount": "直属下级充值金额 >=",
+          "rechargeAmountPlaceholder": "充值金额",
+          "filterCondition": "筛选条件 >=",
+          "filterTypePlaceholder": "请选择触发类型",
+          "directSubordinateBet": "直属下级投注",
+          "level2SubordinateBet": "2级下级投注",
+          "level3SubordinateBet": "3级下级投注",
+          "minValuePlaceholder": "最小值"
+        },
+        "messages": {
+          "pleaseEnterMemberId": "请输入会员ID",
+          "pleaseSelectUser": "请选择输入查询用户"
+        },
+        "levels": {
+          "level1": "一级",
+          "level2": "二级",
+          "level3": "三级",
+          "level4": "四级",
+          "level5": "五级",
+          "level6": "六级"
+        },
+        "actions": {
+          "export": "导出",
+          "exportFileName": "返佣数据明细"
+        }
+      },
+      "rebateDataDetail": {
+        "pageTitle": "代理{userId}返佣数据明细",
+        "columns": {
+          "relativeLevel": "相对层级",
+          "rechargeAmount": "充值金额",
+          "rechargeCommission": "充值返佣",
+          "betCommission": "投注返佣",
+          "totalCommission": "总返佣"
+        },
+        "form": {
+          "date": "日期",
+          "relativeLevel": "相对层级",
+          "relativeLevelPlaceholder": "请选择相对层级",
+          "level1": "1级",
+          "level2": "2级",
+          "level3": "3级"
+        },
+        "actions": {
+          "export": "导出",
+          "exportFileName": "返佣数据明细"
+        }
+      },
+      "rankAudit": {
+        "columns": {
+          "auditId": "审核ID",
+          "memberId": "会员ID",
+          "userId": "会员ID",
+          "rankType": "排行榜类型",
+          "auditStatus": "审核状态",
+          "createTime": "创建时间",
+          "directMemberId": "直属会员ID",
+          "memberRegisterTime": "会员注册时间",
+          "dataStatisticsTime": "数据统计时间",
+          "gameVendor": "游戏厂商",
+          "subGame": "子游戏",
+          "betAmount": "投注金额",
+          "winAmount": "派奖金额",
+          "validBet": "有效投注",
+          "time": "时间",
+          "rank": "排名",
+          "newDirectValidBet": "新增直属有效投注",
+          "rewardAmount": "奖励金额",
+          "applyTime": "申请时间",
+          "status": "状态",
+          "operator": "操作人",
+          "operationTime": "操作时间"
+        },
+        "form": {
+          "memberId": "会员ID",
+          "memberIdPlaceholder": "请输入会员ID",
+          "userId": "会员ID",
+          "userIdPlaceholder": "请输入会员ID",
+          "auditStatus": "审核状态",
+          "auditStatusPlaceholder": "请选择审核状态",
+          "rankTime": "排名时间",
+          "auditResult": "审核结果",
+          "rejectReason": "拒绝原因"
+        },
+        "actions": {
+          "audit": "审核"
+        },
+        "modals": {
+          "auditTitle": "审核操作"
+        },
+        "status": {
+          "approved": "通过",
+          "rejected": "拒绝"
+        },
+        "details": {
+          "memberId": "会员ID",
+          "memberRegisterTime": "会员注册时间",
+          "periodRange": "期数范围",
+          "currentRank": "当前排名",
+          "newDirectValidBet": "新增直属有效投注",
+          "rewardAmount": "奖励金额",
+          "applyTime": "申请时间"
+        },
+        "tabs": {
+          "auditOperation": "审核操作",
+          "directMemberTransactionRecord": "直属会员流水记录",
+          "rewardRecord": "奖励记录"
+        },
+        "messages": {
+          "auditSuccess": "审核成功",
+          "pleaseEnterRejectReason": "请输入拒绝原因"
+        }
+      },
+      "rankManage": {
+        "pool": {
+          "currentPoolAmount": "当前奖池金额",
+          "add": "增加",
+          "reduce": "减少",
+          "operationRecord": "操作记录",
+          "addPoolAmount": "增加奖池金额",
+          "reducePoolAmount": "减少奖池金额",
+          "columns": {
+            "operationType": "操作类型",
+            "amount": "操作金额",
+            "afterAmount": "操作后金额",
+            "remark": "操作说明",
+            "creator": "操作人",
+            "createTime": "操作时间"
+          },
+          "operationTypes": {
+            "add": "增加",
+            "reduce": "减少"
+          }
+        },
+        "amount": {
+          "operationAmount": "操作金额",
+          "operationRemark": "操作说明",
+          "operationAmountPlaceholder": "请输入操作金额",
+          "operationRemarkPlaceholder": "请输入操作说明",
+          "cancel": "取消",
+          "save": "保存",
+          "operationSuccess": "操作成功"
+        },
+        "queryModal": {
+          "memberFlowRecord": "直属会员流水记录",
+          "rewardRecord": "奖励记录",
+          "memberId": "会员ID",
+          "rankType": "榜单类型",
+          "periodRange": "期数范围",
+          "currentRank": "当前排名",
+          "newDirectValidBet": "新增直属有效投注",
+          "rewardAmount": "奖励金额",
+          "cancel": "取消",
+          "columns": {
+            "directMemberId": "直属会员ID",
+            "memberRegisterTime": "会员注册时间",
+            "dataStatisticsTime": "数据统计时间",
+            "gameVendor": "游戏厂商",
+            "subGame": "子游戏",
+            "betAmount": "投注金额",
+            "winAmount": "派奖金额",
+            "validBet": "有效投注",
+            "time": "时间",
+            "rankType": "榜单类型",
+            "rank": "排名",
+            "rewardAmount": "奖励金额",
+            "status": "状态"
+          }
+        },
+        "form": {
+          "memberId": "会员ID",
+          "memberIdPlaceholder": "请输入会员ID",
+          "rankPeriod": "排行期数",
+          "currentPeriod": "本期",
+          "previousPeriod": "往期"
+        },
+        "columns": {
+          "memberId": "会员ID",
+          "rankType": "榜单类型",
+          "periodRange": "期数范围",
+          "rank": "排名",
+          "validBetAmount": "有效投注金额",
+          "bonusAmount": "奖励金额",
+          "updateTime": "更新时间"
+        },
+        "modals": {
+          "poolOperation": "奖池操作",
+          "memberRankDetails": "会员排行明细"
+        },
+        "actions": {
+          "poolOperation": "奖池操作",
+          "details": "明细"
+        }
+      },
+      "components": {
+        "addInv": {
+          "form": {
+            "validInviteCount": "有效邀请人数",
+            "rewardAmount": "奖励金额"
+          },
+          "messages": {
+            "enterValidInviteCount": "请输入有效邀请人数",
+            "enterRewardAmount": "请输入奖励金额",
+            "saveSuccess": "保存成功",
+            "saveFailed": "保存失败，请稍后再试"
+          }
+        },
+        "inviteeDetail": {
+          "title": "受邀人明细",
+          "columns": {
+            "inviteeId": "受邀人ID",
+            "inviteCode": "邀请码",
+            "registerTime": "注册时间",
+            "registerIp": "注册IP",
+            "firstRechargeTime": "首充时间",
+            "isValidInvite": "是否有效邀请",
+            "totalRechargeAmount": "总充值金额",
+            "totalWithdrawAmount": "总提现金额",
+            "totalBalance": "钱包总余额",
+            "parentAgentId": "上级代理ID",
+            "parentAgentIdL2": "上2级代理ID",
+            "parentAgentIdL3": "上3级代理ID"
+          },
+          "form": {
+            "inviteeId": "受邀人ID",
+            "inviteeIdPlaceholder": "请输入受邀人ID",
+            "agentId": "代理人ID",
+            "agentIdPlaceholder": "请输入代理人ID",
+            "inviteCode": "邀请码",
+            "inviteCodePlaceholder": "请输入邀请码",
+            "date": "日期"
+          },
+          "actions": {
+            "export": "导出",
+            "exportFileName": "受邀人明细"
+          },
+          "messages": {
+            "pleaseEnterIdToQuery": "请输入受邀人ID或代理人ID进行查询"
+          }
+        },
+        "editlvConfig": {
+          "levelConditions": "等级条件",
+          "teamTotalMembers": "团队总人数",
+          "teamTotalValidBet": "团队总有效投注",
+          "subordinateRechargeCommissionRate": "下级充值返佣比例(%)",
+          "subordinateBetCommissionRate": "下级投注返佣比例(%)",
+          "directSubordinate": "直属下级",
+          "level2Subordinate": "2级下级",
+          "level3Subordinate": "3级下级",
+          "messages": {
+            "saveSuccess": "保存成功",
+            "saveFailed": "保存失败，请稍后再试"
+          }
+        },
+        "rank": {
+          "title": "代理排行榜奖励配置（当日新注册会员流水）",
+          "columns": {
+            "effectiveDate": "生效时间",
+            "rankType": "榜单类型",
+            "prizePoolRatio": "奖池比例%（内部规则）",
+            "prizePoolRatioShow": "奖池比例%（对外展示）",
+            "minValidBetAmount": "上榜最低有效投注",
+            "initialGoldPool": "初始奖金池",
+            "maxRank": "生效及排名展示",
+            "state": "状态",
+            "actions": "操作"
+          },
+          "rankTypes": {
+            "daily": "日榜",
+            "weekly": "周榜",
+            "monthly": "月榜"
+          },
+          "actions": {
+            "edit": "编辑",
+            "distribute": "奖金分配"
+          },
+          "dialog": {
+            "title": "提示",
+            "confirm": "确定",
+            "cancel": "取消"
+          },
+          "modals": {
+            "editConfig": "编辑奖励配置",
+            "distributeConfig": "奖金分配设置"
+          },
+          "messages": {
+            "confirmOpen": "确定要开启{rankType}排行榜吗？ 开启后将在次日生效。",
+            "confirmClose": "确定要关闭{rankType}排行榜吗？",
+            "operationSuccess": "操作成功",
+            "operationFailed": "操作失败",
+            "getRankListFailed": "获取排行榜列表失败"
+          }
+        },
+        "rankDistributeModal": {
+          "table": {
+            "title": "排名实时比例",
+            "columns": {
+              "index": "序号",
+              "startRank": "开始名次",
+              "endRank": "结束名次",
+              "rankRatio": "赢奖比例(%)",
+              "actions": "操作"
+            }
+          },
+          "buttons": {
+            "batchImport": "批量导入排名赢奖比例配置",
+            "exportConfig": "导出排名赢奖比例配置",
+            "downloadTemplate": "模板下载",
+            "cancel": "取消",
+            "save": "保存"
+          },
+          "summary": {
+            "totalRatio": "总比例",
+            "exceedMaxRatio": "已超过最大比例100%，请重新调整比例",
+            "rankType": "榜单类型",
+            "rankSuffix": "榜"
+          },
+          "export": {
+            "fileName": "排名实时比例配置"
+          },
+          "messages": {
+            "importSuccess": "导入成功",
+            "importFailed": "导入失败",
+            "updateSuccess": "更新成功"
+          }
+        },
+        "rankEditModal": {
+          "form": {
+            "rankType": "榜单类型",
+            "prizePoolRatio": "奖池比例%（内部规则）",
+            "prizePoolRatioShow": "奖池比例%（对外展示）",
+            "minValidBetAmount": "上榜最低有效投注",
+            "initialGoldPool": "初始奖金池",
+            "maxRank": "生效及排名展示"
+          },
+          "validation": {
+            "prizePoolRatioRequired": "奖池比例不能为空",
+            "minValidBetAmountRequired": "上榜最低有效投注不能为空",
+            "initialGoldPoolRequired": "初始奖金池不能为空",
+            "maxRankRequired": "生效及排名不能为空"
+          },
+          "buttons": {
+            "cancel": "取消",
+            "confirm": "确认"
+          },
+          "messages": {
+            "editSuccess": "编辑成功"
+          }
+        }
+      },
+      "config3": {
+        "buttons": {
+          "cancel": "取消",
+          "confirm": "确定",
+          "save": "保存",
+          "edit": "编辑",
+          "delete": "删除"
+        },
+        "messages": {
+          "operationSuccess": "操作成功",
+          "saveSuccess": "保存成功",
+          "deleteSuccess": "删除成功"
+        },
+        "externalLink": {
+          "title": "外链配置",
+          "sort": "排序",
+          "icon": "外链图标",
+          "enabled": "是否启用",
+          "buttonText": "按钮文字",
+          "jumpUrl": "跳转链接",
+          "buttonTextPlaceholder": "请输入按钮文字(非必填)",
+          "jumpUrlPlaceholder": "请填写跳转链接",
+          "uploadImageWarning": "请上传外链图片",
+          "jumpUrlWarning": "请填写跳转链接"
+        },
+        "operationLog": {
+          "operationTime": "操作时间",
+          "operator": "操作人",
+          "configValue": "配置值（旧值->新值）"
+        },
+        "switch": {
+          "enable": "开启",
+          "disable": "关闭"
+        },
+        "dialog": {
+          "confirmOperation": "确认操作",
+          "confirmMessage": "确定要{action}{name}吗？"
+        },
+        "configItems": {
+          "agentL3InviteRechargeAmount": {
+            "name": "代理有效邀请充值金额",
+            "desc": "会员充值达到此金额才计算为有效邀请（和有效投注需要同时满足）"
+          },
+          "agentL3InviteBetAmount": {
+            "name": "代理有效邀请投注金额",
+            "desc": "会员有效投注达到此金额才计算为有效邀请（和有效充值需要同时满足）"
+          },
+          "agentL3InviteTotalLimitCount": {
+            "name": "有效邀请奖励次数总上限",
+            "desc": "每个代理最多获得的有效邀请奖励次数总上限"
+          },
+          "agentL3InviteDayLimitCount": {
+            "name": "有效邀请次数每日上限",
+            "desc": "每个代理每天最多获得的有效邀请奖励次数"
+          },
+          "agentL3InviteRewardAmount": {
+            "name": "邀请人奖金",
+            "desc": "每达成一次有效邀请，邀请人获得的奖金"
+          },
+          "agentL3InvitedRewardAmount": {
+            "name": "被邀请人金额",
+            "desc": "被邀请会员完成有效邀请限制后获得的奖励金额"
+          },
+          "agentL3InviteWashCode": {
+            "name": "代理奖励打码量倍数",
+            "desc": "设置0代表不需要打码量"
+          },
+          "agentL3AutoApproveRankReward": {
+            "name": "代理排行榜自动审核开关",
+            "desc": "开启后，排行榜奖励将自动审核通过，无需人工审核"
+          }
+        },
+        "agentLevel": {
+          "agentLevel": "代理等级",
+          "levelConditions": "等级条件",
+          "teamTotalMembers": "团队总人数",
+          "teamTotalValidBet": "团队总有效投注",
+          "subordinateRechargeCommissionRate": "下级充值返佣比例(%)",
+          "subordinateBetCommissionRate": "下级投注返佣比例(%)",
+          "directSubordinate": "直属下级",
+          "level2Subordinate": "2级下级",
+          "level3Subordinate": "3级下级",
+          "actions": "操作"
+        },
+        "inviteReward": {
+          "title": "邀请任务数量奖励",
+          "validInviteCount": "有效邀请人数",
+          "rewardAmount": "奖励金额",
+          "actions": "操作"
+        },
+        "delete": {
+          "confirmTitle": "确认删除",
+          "confirmMessage": "确定要删除此阶梯奖励吗?"
+        },
+        "modals": {
+          "editVipLevel": "编辑VIP等级设置",
+          "addStepReward": "新增阶梯奖励"
+        }
+      },
+      "rules": {
+        "lastUpdateTime": "最后更新时间",
+        "operator": "操作人",
+        "buttons": {
+          "cancelEdit": "取消编辑",
+          "save": "保存",
+          "edit": "编辑",
+          "cancel": "取消",
+          "editShareContent": "编辑分享文案"
+        },
+        "shareContent": {
+          "title": "分享文案编辑",
+          "inviteShareText": "邀请分享文案",
+          "optionalFields": "可选字段",
+          "placeholder": "请输入",
+          "previewEffect": "预览效果",
+          "inviteCode": "邀请码",
+          "inviteLink": "邀请链接"
+        }
+      }
+    },
+    "rebateData": {
+      "title": "返佣数据",
+      "form": {
+        "userId": "会员ID",
+        "userIdPlaceholder": "请输入会员ID",
+        "memberId": "会员ID",
+        "memberIdPlaceholder": "请输入会员ID",
+        "queryFullAgentLine": "查询完整代理线",
+        "relativeLevel": "相对层级",
+        "absoluteLevel": "绝对层级",
+        "levelPlaceholder": "请选择层级",
+        "account": "会员账号",
+        "accountPlaceholder": "请输入会员账号",
+        "rebateLevel": "返佣等级",
+        "rebateLevelPlaceholder": "请选择返佣等级",
+        "generalAgent": "总代理",
+        "generalAgentPlaceholder": "请选择总代理",
+        "date": "日期",
+        "datePlaceholder": "请选择日期",
+        "reportDate": "报告日期",
+        "datePickerPlaceholder": "请选择日期",
+        "teamCountMin": "团队人数最小值",
+        "teamCountPlaceholder": "请输入团队人数",
+        "teamRechargeMin": "团队充值最小值",
+        "teamRechargePlaceholder": "请输入团队充值金额",
+        "hierarchy": "层级",
+        "hierarchyPlaceholder": "请选择层级"
+      },
+      "levels": {
+        "level1": "1级",
+        "level2": "2级",
+        "level3": "3级",
+        "level4": "4级",
+        "level5": "5级",
+        "level6": "6级"
+      },
+      "columns": {
+        "date": "日期",
+        "memberId": "会员ID",
+        "memberAccount": "会员账号",
+        "memberLevel": "会员等级",
+        "memberBetAmount": "会员投注金额",
+        "memberLossAmount": "会员亏损金额",
+        "rebateRate": "返佣比例",
+        "rebateAmount": "返佣金额",
+        "rebateTime": "返佣时间",
+        "teamRechargeCount": "团队充值人数",
+        "teamRechargeAmount": "团队充值金额",
+        "teamValidBet": "团队有效投注",
+        "rebateLevel": "返佣等级",
+        "lottery": "彩票",
+        "electronic": "电子",
+        "video": "视讯",
+        "sports": "体育",
+        "chessCard": "棋牌",
+        "validBet": "有效投注",
+        "calculatedRebateAmount": "计算返佣金额",
+        "issuedRebateAmount": "派发返佣金额",
+        "issueTime": "派发时间"
+      },
+      "summary": {
+        "totalRebateAmount": "返佣金额总计",
+        "totalBetAmount": "投注金额总计",
+        "totalLossAmount": "亏损金额总计"
+      },
+      "messages": {
+        "selectGeneralAgent": "请先选择总代理",
+        "pleaseEnterMemberId": "请输入会员ID",
+        "pleaseSelectUser": "请先选择用户"
+      },
+      "more": {
+        "title": "返佣信息",
+        "backRebateTab": "流水返佣",
+        "levelRebateTab": "层级返佣报表"
+      },
+      "components": {
+        "backRebate": {
+          "form": {
+            "date": "日期",
+            "relativeLevel": "相对层级"
+          },
+          "levels": {
+            "level1": "一级",
+            "level2": "二级",
+            "level3": "三级",
+            "level4": "四级",
+            "level5": "五级",
+            "level6": "六级"
+          },
+          "columns": {
+            "memberId": "会员ID",
+            "lotteryValidBet": "彩票有效投注",
+            "electronicValidBet": "电子有效投注",
+            "videoValidBet": "视讯有效投注",
+            "sportsValidBet": "体育有效投注",
+            "chessCardValidBet": "棋牌有效投注",
+            "availableCommission": "可得佣金"
+          },
+          "messages": {
+            "selectDate": "请选择日期"
+          }
+        },
+        "levelRebate": {
+          "form": {
+            "date": "日期"
+          },
+          "columns": {
+            "level": "层级",
+            "rechargeCount": "充值人数",
+            "rechargeAmount": "充值金额",
+            "lotteryBetRebate": "彩票（有效投注|返佣金额)",
+            "electronicBetRebate": "电子（有效投注|返佣金额)",
+            "videoBetRebate": "视讯（有效投注|返佣金额）",
+            "sportsBetRebate": "体育（有效投注|返佣金额）",
+            "chessCardBetRebate": "棋牌（有效投注|返佣金额)"
+          },
+          "messages": {
+            "selectDate": "请选择日期"
+          }
+        }
+      }
+    },
+    "rebateLevel": {
+      "title": "返佣等级配置",
+      "tabs": {
+        "levelConfig": "等级配置",
+        "rateConfig": "费率配置",
+        "rebateConfig": "返佣等级配置",
+        "rebateRateConfig": "返佣费率配置"
+      },
+      "rebateLevel": {
+        "history": {
+          "operationTime": "操作时间",
+          "operator": "操作人",
+          "configValue": "配置值"
+        },
+        "columns": {
+          "rebateLevel": "返佣等级",
+          "childrenRechargeCount": "团队当日充值人数",
+          "childrenRechargeAmount": "团队当日充值金额",
+          "childrenLotteryAmount": "团队当日游戏金额",
+          "rebateLevelPeoples": "达到返佣等级人数",
+          "rechargePeoples": "充值人数达标人数",
+          "rechargeAmountPeoples": "充值金额达标人数",
+          "gameBetAmountPeoples": "游戏金额达标人数",
+          "remark": "备注",
+          "lastUpdateTime": "最后更新时间",
+          "lastUpdateMan": "最后更新人",
+          "actions": "操作"
+        },
+        "modals": {
+          "addTitle": "新增返佣等级",
+          "editTitle": "编辑返佣等级 L{level}"
+        },
+        "settings": {
+          "frontPopupRebate": "前台弹窗返佣",
+          "needRechargeRebate": "需要充值返佣",
+          "frontPopupRebateDesc": "前台是否弹窗提醒返佣",
+          "needRechargeRebateDesc": "是否需要充值才能获得返佣",
+          "enable": "启用",
+          "disable": "禁用"
+        },
+        "actions": {
+          "add": "新增",
+          "edit": "编辑",
+          "delete": "删除"
+        }
+      },
+      "levelConfig": {
+        "columns": {
+          "level": "等级",
+          "rechargeCount": "充值人数",
+          "rechargeAmount": "充值金额",
+          "gameAmount": "游戏金额",
+          "description": "内容描述",
+          "actions": "操作"
+        },
+        "form": {
+          "rechargeCountPlaceholder": "请输入团队当日充值人数",
+          "rechargeAmountPlaceholder": "请输入团队当日充值金额",
+          "gameAmountPlaceholder": "请输入团队当日游戏金额",
+          "descriptionPlaceholder": "请输入内容描述"
+        },
+        "actions": {
+          "add": "新增",
+          "edit": "编辑",
+          "delete": "删除",
+          "save": "保存",
+          "cancel": "取消"
+        },
+        "modal": {
+          "addTitle": "新增返佣等级",
+          "editTitle": "编辑返佣等级",
+          "deleteConfirm": "确认删除该等级配置吗？",
+          "levelSetting": "等级设置"
+        },
+        "messages": {
+          "addSuccess": "新增成功",
+          "updateSuccess": "修改成功",
+          "deleteSuccess": "删除成功"
+        },
+        "validation": {
+          "level": "请选择等级",
+          "rechargeCount": "请输入团队当日充值人数",
+          "rechargeAmount": "请输入团队当日充值金额",
+          "gameAmount": "请输入团队当日游戏金额"
+        },
+        "status": {
+          "enable": "启用",
+          "disable": "禁用"
+        },
+        "empty": "暂无数据"
+      },
+      "rebateRate": {
+        "alert": {
+          "title": "返佣配置提醒",
+          "content": "1，目前返佣费率只计算6级以内的代理数据<br/>2，每个返佣等级内的费率都可以直接配置，如若不配置，或者是配置为0，则该层级不享受返佣费率<br/>3，要达到对应等级的费率，需要同时达到对应的返佣等级的3个条件才可以享受相应的费率<br/>4，以下费率配置，所配置的当前1-6级游戏大类之和不能大于5%<br/>5，下方费率配置的时候单位就是\" % \"<br/>"
+        },
+        "card": {
+          "levelRate": "级费率"
+        },
+        "columns": {
+          "level": "等级",
+          "lottery": "彩票",
+          "electronic": "电子",
+          "video": "真人",
+          "sports": "体育",
+          "chessCard": "棋牌"
+        },
+        "actions": {
+          "edit": "编辑",
+          "save": "保存",
+          "cancel": "取消"
+        },
+        "messages": {
+          "updateSuccess": "更新成功"
+        },
+        "empty": "暂无数据"
+      },
+      "editRebateLevel": {
+        "labels": {
+          "rechargeCount": "团队当日充值人数:",
+          "rechargeAmount": "团队当日充值金额:",
+          "gameAmount": "团队当日游戏金额:",
+          "description": "内容描述:"
+        },
+        "validation": {
+          "remark": "请输入备注内容",
+          "rechargeCount": "请输入团队当日充值人数",
+          "rechargeAmount": "请输入团队当日充值金额",
+          "gameAmount": "请输入团队当日游戏金额"
+        },
+        "actions": {
+          "cancel": "取消",
+          "save": "保存"
+        },
+        "success": "修改成功"
+      }
+    },
+    "review": {
+      "title": "代理审核",
+      "columns": {
+        "userId": "会员ID",
+        "parentId": "上级ID",
+        "directSubordinates": "直属下级",
+        "agentLevel": "代理等级",
+        "noRechargeDays": "未充值天数",
+        "yesterdayCommission": "昨日佣金",
+        "totalBetAmount": "总投注金额",
+        "operator": "操作",
+        "rebateStatus": "返佣状态"
+      },
+      "form": {
+        "labels": {
+          "userId": "会员ID",
+          "minDays": "最少天数",
+          "rebateState": "返佣状态"
+        },
+        "placeholders": {
+          "userId": "请输入会员ID",
+          "minDays": "请输入最少天数",
+          "rebateState": "请选择返佣状态"
+        }
+      },
+      "actions": {
+        "setRebateLevel": "设置返佣等级"
+      },
+      "status": {
+        "enable": "启用",
+        "disable": "禁用"
+      },
+      "switchDialog": {
+        "title": "切换状态",
+        "enableMessage": "确认启用返佣状态吗？",
+        "disableMessage": "确认禁用返佣状态吗？"
+      },
+      "editRebate": {
+        "title": "设置返佣等级",
+        "labels": {
+          "userId": "会员ID",
+          "rebateLevel": "返佣等级",
+          "rebateMode": "返佣模式"
+        },
+        "buttons": {
+          "cancel": "取消",
+          "save": "保存"
+        },
+        "success": "修改成功"
+      }
+    }
+  }
+}

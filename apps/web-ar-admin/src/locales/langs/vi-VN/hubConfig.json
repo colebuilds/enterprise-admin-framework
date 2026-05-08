@@ -1,0 +1,395 @@
+{
+  "hub": {
+    "common": {
+      "tenantId": "ID thương nhân",
+      "platform": "nền tảng",
+      "state": "trạng thái",
+      "platformOpts": {
+        "ios": "iOS",
+        "android": "Android",
+        "both": "Tất cả Platforms"
+      },
+      "stateOpts": {
+        "enabled": "bật",
+        "disabled": "tắt"
+      }
+    },
+    "site": {
+      "title": "Quản lý website",
+      "domainTab": "tên miền quản lý",
+      "seoTab": "SEO cấu hình",
+      "overrideTab": "Cấu hình ghi đè",
+      "domain": {
+        "domain": "Tên miền",
+        "domainPh": "Nhập tên miền địa chỉ",
+        "tenantIdPh": "Nhập thương nhân ID",
+        "clientType": "Loại khách hàng",
+        "channel": "Kênh",
+        "channelPh": "Nhập kênh mã",
+        "layoutId": "Bố cục",
+        "selectLayout": "Chọn Bố cục",
+        "seoId": "Cấu hình SEO",
+        "seoIdPh": "Vui lòng nhập SEO cấu hình ID",
+        "add": "thêm tên miền",
+        "edit": "sửa tên miền"
+      },
+      "seo": {
+        "title": "Trang Tiêu đề",
+        "tenantIdPh": "Cho thương nhân-cấp SEO",
+        "domainId": "tên miền ID",
+        "domainIdPh": "Cho domain-cấp SEO",
+        "titlePh": "Nhập trang title",
+        "keywords": "Từ khóa",
+        "keywordsPh": "Nhập từ khóas, phân tách Bởi commas",
+        "description": "Mô tả",
+        "descriptionPh": "Nhập mô tả",
+        "favicon": "Biểu tượng trang web",
+        "faviconPh": "Nhập favicon URL",
+        "scripts": "Tùy chỉnh Scripts",
+        "scriptsPh": "Nhập custom script mã",
+        "add": "thêm SEO cấu hình",
+        "edit": "sửa SEO cấu hình"
+      },
+      "override": {
+        "tenantIdPh": "Nhập thương nhân ID",
+        "layoutId": "Bố cục",
+        "selectLayout": "Chọn bố cục (không bắt buộc)",
+        "resourceType": "tài nguyên loại",
+        "resourceKey": "Khóa tài nguyên",
+        "resourceKeyPh": "VD: background, name, iconKey",
+        "value": "Override Giá trị",
+        "valuePh": "JSON định dạng",
+        "valueJsonErr": "Không hợp lệ JSON format",
+        "add": "Thêm Override",
+        "edit": "Sửa Override",
+        "typeOpts": {
+          "tabbar": "TabBar Ghi đè",
+          "tabitem": "TabBar Mục Ghi đè",
+          "navigation": "Điều hướng Ghi đè",
+          "style": "Kiểu Ghi đè"
+        }
+      }
+    },
+    "tpl": {
+      "title": "Quản lý mẫu",
+      "layout": {
+        "title": "bố cục Quản lý",
+        "name": "Tên bố cục",
+        "description": "Mô tả",
+        "client": "Loại khách hàng",
+        "themeCount": "Chủ đề",
+        "styleCount": "Kiểu giao diện",
+        "themeList": "chủ đề danh sách",
+        "styleList": "Kiểu Danh sách",
+        "add": "thêm bố cục",
+        "edit": "chỉnh sửa bố cục",
+        "clientOpts": {
+          "web": "Bản web",
+          "h5": "H5 di động",
+          "ios": "iOS",
+          "android": "Android",
+          "app": "APP",
+          "public": "Công khai"
+        }
+      },
+      "theme": {
+        "title": "chủ đề Quản lý",
+        "name": "Tên chủ đề",
+        "code": "Mã chủ đề",
+        "description": "Mô tả",
+        "add": "thêm chủ đề",
+        "edit": "chỉnh sửa chủ đề"
+      },
+      "style": {
+        "title": "Kiểu Quản lý",
+        "name": "Tên phong cách",
+        "description": "Mô tả",
+        "type": "Loại phong cách",
+        "layoutId": "Bố cục",
+        "add": "Thêm Kiểu",
+        "edit": "Sửa Kiểu",
+        "selectLayout": "Chọn Bố cục",
+        "typeOpts": {
+          "electronic": "Điện tử",
+          "light": "Sáng",
+          "dark": "Tối",
+          "classic": "Cổ điển",
+          "modern": "Hiện đại"
+        }
+      },
+      "nav": {
+        "title": "Điều hướng Quản lý",
+        "name": "Tên điều hướng",
+        "nameZh": "Tên tiếng Trung",
+        "nameEn": "Tên tiếng Anh",
+        "type": "Loại điều hướng",
+        "sort": "Sắp xếp",
+        "layoutId": "Bố cục",
+        "parentId": "Cấp trên Điều hướng",
+        "parentIdTip": "Cho tree Cấu trúc",
+        "sortTip": "Cao hơn giá trị comes đầu tiên",
+        "childCount": "Mục con",
+        "childList": "Children Danh sách",
+        "game": "trò chơi dữ liệu",
+        "gamePh": "JSON định dạng",
+        "gameJsonErr": "Không hợp lệ JSON format",
+        "navItem": "Điều hướng",
+        "add": "Thêm Điều hướng",
+        "edit": "Sửa Điều hướng",
+        "selectLayout": "Chọn Bố cục",
+        "selectParent": "Chọn Cấp trên (Tùy chọn)",
+        "noParent": "Không Cấp trên",
+        "typeOpts": {
+          "category": "danh mục",
+          "game": "Trò chơi"
+        }
+      },
+      "tabbar": {
+        "title": "TabBar Quản lý",
+        "name": "Tên TabBar",
+        "client": "Loại khách hàng",
+        "background": "Nền",
+        "backgroundPh": "Color giá trị hoặc hình ảnh URL",
+        "layoutId": "Bố cục",
+        "itemCount": "Mục",
+        "add": "Thêm TabBar",
+        "edit": "Sửa TabBar",
+        "selectLayout": "Chọn Bố cục",
+        "manageItems": "Quản lý mục",
+        "items": "Mục",
+        "item": {
+          "title": "TabBar Mục Quản lý",
+          "name": "nhãn tên",
+          "nameZh": "Tên tiếng Trung",
+          "nameEn": "Tên tiếng Anh",
+          "key": "Khóa duy nhất",
+          "iconKey": "Mặc định Biểu tượng Key",
+          "iconActiveKey": "Đang hoạt động Biểu tượng Key",
+          "type": "Loại chuyển hướng",
+          "target": "Chuyển hướng đích",
+          "targetPh": "Tên route/ID trò chơi/URL ngoài",
+          "iconKeyPh": "VD: tab.home",
+          "iconActiveKeyPh": "VD: tab.home.active",
+          "special": "Loại đặc biệt",
+          "sort": "Sắp xếp",
+          "visible": "Hiển thị",
+          "add": "Thêm Mục",
+          "edit": "Sửa Mục",
+          "typeOpts": {
+            "route": "Tuyến giao diện",
+            "url": "URL ngoài",
+            "game": "Trò chơi ID"
+          },
+          "specialOpts": {
+            "normal": "Bình thường",
+            "raised": "Nút nổi"
+          }
+        }
+      },
+      "skin": {
+        "title": "Quản lý skin",
+        "name": "Tên skin",
+        "type": "Loại skin",
+        "key": "Khóa tài nguyên",
+        "keyPh": "VD: logo.main, icon.home.active",
+        "url": "URL tài nguyên",
+        "urlPh": "URL tài nguyên OSS/S3/CDN",
+        "themeId": "Chủ đề",
+        "tenantIdPh": "Nhập ID thương nhân",
+        "layoutId": "Bố cục",
+        "meta": "Siêu dữ liệu",
+        "metaPh": "JSON metadata (không bắt buộc)",
+        "metaJsonErr": "Không hợp lệ JSON format",
+        "preview": "Xem trước",
+        "add": "Thêm skin",
+        "edit": "Sửa skin",
+        "selectTheme": "Chọn Chủ đề",
+        "selectTenant": "Chọn thương nhân",
+        "selectLayout": "Chọn Bố cục",
+        "typeOpts": {
+          "system": "Tài nguyên hệ thống",
+          "theme": "Tài nguyên chủ đề",
+          "tenant": "thương nhân tài nguyên",
+          "layout": "Tài nguyên bố cục"
+        },
+        "viewResource": "xem"
+      }
+    },
+    "app": {
+      "title": "Quản lý ứng dụng",
+      "pkg": {
+        "title": "Cấu hình đóng gói",
+        "channelCode": "Mã kênh",
+        "packageName": "Tên gói",
+        "packageNamePh": "VD: com.example.app",
+        "appName": "Tên ứng dụng",
+        "appIcon": "Biểu tượng ứng dụng",
+        "appIconPh": "URL biểu tượng",
+        "splashImage": "Ảnh splash",
+        "splashImagePh": "URL ảnh splash",
+        "launchImage": "Ảnh khởi động",
+        "launchImagePh": "URL ảnh khởi động",
+        "appIconHelp": "Định dạng PNG, kích thước 512x512, tối đa 1MB",
+        "splashImageHelp": "Định dạng PNG/JPG, kích thước 1080x2340, tối đa 2MB",
+        "launchImageHelp": "Định dạng PNG/JPG, kích thước 1080x2340, tối đa 5MB",
+        "appIconSizeErr": "Kích thước biểu tượng ứng dụng phải là 512x512",
+        "splashImageSizeErr": "Kích thước ảnh splash phải là 1080x2340",
+        "launchImageSizeErr": "Kích thước ảnh khởi động phải là 1080x2340",
+        "packageNameFormatErr": "Hậu tố tên gói phải bắt đầu bằng chữ cái thường và chỉ chứa chữ cái thường, số và dấu gạch dưới",
+        "signConfig": "Cấu hình chữ ký",
+        "signConfigPh": "Cấu hình chữ ký JSON",
+        "buildConfig": "Cấu hình build",
+        "buildConfigPh": "Cấu hình đóng gói JSON",
+        "signConfigJsonErr": "Định dạng JSON không hợp lệ cho cấu hình ký",
+        "buildConfigJsonErr": "Định dạng JSON không hợp lệ cho cấu hình đóng gói",
+        "add": "Thêm cấu hình đóng gói",
+        "edit": "Sửa cấu hình đóng gói",
+        "createJob": "Tạo tác vụ",
+        "recreateJob": "Tạo lại",
+        "createJobConfirm": "Tạo tác vụ đóng gói cho cấu hình gói này?",
+        "createJobSuccess": "Tạo tác vụ thành công",
+        "detail": "Chi tiết gói",
+        "viewJobs": "Xem chi tiết",
+        "jobListTitle": "Tác vụ đóng gói",
+        "jobCount": "Số tác vụ",
+        "jobUnit": "tác vụ",
+        "latestJob": "Trạng thái tác vụ",
+        "timeAgo": {
+          "justNow": "Vừa xong",
+          "minutesAgo": "{n} phút trước",
+          "hoursAgo": "{n} giờ trước",
+          "daysAgo": "{n} ngày trước"
+        },
+        "jobStats": {
+          "total": "Tổng cộng",
+          "pending": "Đang chờ",
+          "running": "Đang chạy",
+          "completed": "Hoàn tất",
+          "failed": "Thất bại"
+        },
+        "noJobs": "Không có tác vụ đóng gói",
+        "createFirstJob": "Tạo tác vụ đầu tiên"
+      },
+      "job": {
+        "title": "Giám sát tác vụ",
+        "overview": "Tổng quan tác vụ",
+        "successRate": "Tỷ lệ thành công",
+        "desc": {
+          "total": "Tổng số tác vụ, tỷ lệ thành công = Hoàn tất / Tổng cộng",
+          "pending": "Tác vụ đang chờ thực thi; nếu quá nhiều nghĩa là trình chạy không đủ năng lực",
+          "running": "Tác vụ đang thực thi",
+          "completed": "Tác vụ đã hoàn tất thành công",
+          "failed": "Tác vụ thất bại cần chú ý",
+          "runner": "Số trình chạy trực tuyến, ảnh hưởng đến năng lực xử lý tác vụ"
+        },
+        "noLogs": "Không có nhật ký",
+        "cancelConfirm": "Hủy tác vụ này?",
+        "retryConfirm": "Thử lại tác vụ này?",
+        "packageId": "Cấu hình đóng gói",
+        "runnerId": "Trình chạy",
+        "jobType": "Loại tác vụ",
+        "status": "Trạng thái",
+        "progress": "Tiến độ",
+        "priority": "Ưu tiên",
+        "params": "Tham số",
+        "result": "Kết quả",
+        "artifactUrl": "URL artifact",
+        "download": "Tải xuống",
+        "startedAt": "Thời gian bắt đầu",
+        "finishedAt": "Hoàn tất lúc",
+        "duration": "Thời lượng",
+        "viewLogs": "xem nhật ký",
+        "cancel": "Hủy tác vụ",
+        "retry": "Thử lại",
+        "statusOpts": {
+          "pending": "Đang chờ",
+          "running": "Đang chạy",
+          "completed": "Hoàn tất",
+          "failed": "Thất bại",
+          "cancelled": "Đã hủy"
+        },
+        "typeOpts": {
+          "build": "Xây dựng",
+          "upload": "Tải lên"
+        },
+        "log": {
+          "title": "Nhật ký tác vụ",
+          "logLevel": "Cấp nhật ký",
+          "message": "Thông báo",
+          "timestamp": "Dấu thời gian",
+          "levelOpts": {
+            "info": "Thông tin",
+            "warn": "Cảnh báo",
+            "error": "Lỗi",
+            "debug": "Gỡ lỗi"
+          }
+        }
+      },
+      "ver": {
+        "title": "Quản lý phiên bản",
+        "versionId": "Phiên bản ID",
+        "versionCode": "Mã phiên bản",
+        "packageType": "Loại gói",
+        "packageTypeOpts": {
+          "native": "Gốc",
+          "shell": "Gói shell",
+          "master": "Chính",
+          "derived": "Dẫn xuất"
+        },
+        "downloadUrl": "Tải xuống URL",
+        "updateType": "Loại cập nhật",
+        "minVersionCode": "Mã phiên bản tối thiểu",
+        "releaseNotes": "Ghi chú phát hành",
+        "fileSize": "Kích thước tệp",
+        "md5": "MD5",
+        "publishedAt": "Thời gian phát hành",
+        "add": "Thêm phiên bản",
+        "edit": "Sửa phiên bản",
+        "publish": "Phát hành",
+        "unpublish": "Hủy phát hành",
+        "updateTypeOpts": {
+          "optional": "Tùy chọn",
+          "force": "Bắt buộc",
+          "silent": "Im lặng"
+        },
+        "stateOpts": {
+          "draft": "Bản nháp",
+          "published": "Đã phát hành",
+          "unpublished": "Chưa phát hành"
+        },
+        "versionCodePh": "Mã phiên bản, ví dụ: 1.0.0",
+        "versionCodeFormatErr": "Định dạng phiên bản không hợp lệ, phải là x.x.x",
+        "uploadPkg": "Tải lên gói",
+        "selectPlatformFirst": "Vui lòng chọn nền tảng trước",
+        "minVersionCodePh": "Phiên bản tương thích tối thiểu",
+        "releaseNotesPh": "Ghi chú phát hành",
+        "fileSizePh": "Kích thước tệp (bytes)",
+        "md5Ph": "Checksum MD5",
+        "download": "tải xuống",
+        "publishConfirm": "Phát hành phiên bản này? Các phiên bản đã phát hành khác sẽ bị hủy phát hành.",
+        "unpublishConfirm": "Hủy phát hành phiên bản này?",
+        "updatedBy": "Người cập nhật"
+      }
+    },
+    "runner": {
+      "title": "Trình chạy Quản lý",
+      "runnerName": "Trình chạy Tên",
+      "description": "Mô tả",
+      "tags": "nhãn",
+      "maxConcurrent": "Tối đa Concurrent",
+      "isOnline": "trực tuyến trạng thái",
+      "token": "Mã token",
+      "ipAddress": "IP Địa chỉ",
+      "version": "Phiên bản",
+      "lastHeartbeat": "Cuối cùng Heartbeat",
+      "add": "thêm Trình chạy",
+      "edit": "sửa Trình chạy",
+      "regenerateToken": "Tạo lại Token",
+      "confirmRegenerate": "Tạo lại token? Token cũ sẽ không còn hiệu lực.",
+      "online": "Trực tuyến",
+      "offline": "Ngoại tuyến",
+      "running": "Đang chạy",
+      "currentJobs": "Hiện tại Tác vụ"
+    }
+  }
+}

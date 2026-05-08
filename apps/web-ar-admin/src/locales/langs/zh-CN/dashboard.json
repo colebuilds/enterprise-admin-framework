@@ -1,0 +1,57 @@
+{
+  "dashboard": {
+    "welcome": {
+      "eyebrow": "Workspace",
+      "title": "快捷工作台",
+      "description": "根据当前账号权限，展示可直接进入的常用页面快捷入口。",
+      "shortcutCount": "可用快捷入口",
+      "shortcutsTitle": "快捷入口",
+      "shortcutsDescription": "与顶部菜单保持同一套路由与权限口径，展开展示当前账号可直接进入的所有子页面。",
+      "emptyTitle": "暂无可用快捷入口",
+      "emptyDescription": "当前账号没有可直接进入的页面权限，请联系管理员配置。"
+    },
+    "console": {
+      "cards": {
+        "visits": {
+          "title": "访问量",
+          "tag": "日",
+          "dayCompare": "日同比",
+          "weekCompare": "周同比",
+          "total": "总访问量："
+        },
+        "sales": {
+          "title": "销售额",
+          "tag": "周",
+          "total": "总销售额："
+        },
+        "orders": {
+          "title": "订单量",
+          "tag": "周",
+          "dayCompare": "日同比",
+          "weekCompare": "周同比",
+          "conversionRate": "转化率："
+        },
+        "volume": {
+          "title": "成交额",
+          "tag": "月",
+          "monthCompare": "月同比",
+          "total": "总成交额："
+        }
+      },
+      "icons": {
+        "user": "用户",
+        "analysis": "分析",
+        "product": "商品",
+        "order": "订单",
+        "ticket": "票据",
+        "message": "消息",
+        "tag": "标签",
+        "config": "配置"
+      },
+      "tabs": {
+        "fluxTrend": "流量趋势",
+        "visitAmount": "访问量"
+      }
+    }
+  }
+}

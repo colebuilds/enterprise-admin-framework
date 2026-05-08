@@ -1,0 +1,1308 @@
+{
+  "account": {
+    "user": {
+      "title": "会员列表",
+      "columns": {
+        "userId": "会员ID",
+        "account": "会员账号",
+        "nickName": "会员昵称",
+        "vipLevel": "VIP等级",
+        "balance": "平台余额",
+        "parentId": "上级ID",
+        "generalAgentId": "总代ID",
+        "userType": "账号类型",
+        "state": "账号状态",
+        "isFuncation": "部分功能受限",
+        "registerTime": "注册时间",
+        "packageName": "渠道来源",
+        "lastLoginTime": "最后登录时间",
+        "inviteCode": "邀请码",
+        "remark": "备注"
+      },
+      "form": {
+        "selectQueryId": "选择查询ID",
+        "userId": "会员ID",
+        "userIdPlaceholder": "请输入会员ID",
+        "parentId": "上级ID",
+        "generalAgentId": "总代ID",
+        "account": "会员账号",
+        "accountPlaceholder": "请输入会员账号",
+        "nickName": "会员昵称",
+        "nickNamePlaceholder": "请输入会员昵称",
+        "vipLevel": "VIP等级",
+        "vipLevelPlaceholder": "请选择VIP等级",
+        "inviteCode": "邀请码",
+        "inviteCodePlaceholder": "请输入邀请码",
+        "userType": "账号类型",
+        "userTypePlaceholder": "请选择账号类型",
+        "state": "账号状态",
+        "statePlaceholder": "请选择账号状态",
+        "packageId": "渠道来源",
+        "packageIdPlaceholder": "请选择渠道来源",
+        "timeRange": "时间范围",
+        "registerTime": "注册时间",
+        "lastLoginTime": "最后登录时间"
+      },
+      "status": {
+        "riskRegion": "风险地区",
+        "online": "在线",
+        "offline": "离线",
+        "yes": "是",
+        "no": "否",
+        "none": "无",
+        "official": "官方渠道"
+      },
+      "actions": {
+        "viewDetails": "查看详情",
+        "edit": "编辑",
+        "disable": "禁用",
+        "enable": "启用",
+        "resetPassword": "重置密码",
+        "addTag": "添加标签",
+        "remark": "备注",
+        "freeze": "冻结"
+      },
+      "modals": {
+        "setRemark": "设置备注",
+        "warning": "警告",
+        "confirmFreezeAccount": "你确定冻结账号吗",
+        "confirmUnlockVipLevel": "你确定要解锁vip等级吗?",
+        "confirmUnlockRechargeLevel": "你确定要解锁会员充值等级吗?",
+        "setVipLevel": "设置vip等级",
+        "setRechargeLevel": "设置会员充值等级",
+        "editMemberAccount": "修改会员账号",
+        "editAccountStatus": "设置账号状态",
+        "restrictedPermissions": "部分功能受限",
+        "editMemberGroup": "修改会员分组",
+        "removeTag": "移除标签",
+        "setTag": "设置标签",
+        "editActualCoding": "修改打码量",
+        "editLoginPassword": "修改登录密码",
+        "editWithdrawPassword": "修改提现密码",
+        "verifyChatRoom": "修改聊天室权限",
+        "verifyPhone": "效验手机",
+        "verifyEmail": "效验邮箱",
+        "editPhone": "修改手机",
+        "editEmail": "修改邮箱",
+        "editRealName": "修改真实姓名"
+      },
+      "messages": {
+        "remarkUpdateSuccess": "修改备注成功",
+        "selectLevelRequired": "请选择等级!",
+        "vipLevelLockSuccess": "锁定vip等级成功!",
+        "rechargeLevelLockSuccess": "锁定会员充值等级成功!",
+        "accountUpdateSuccess": "修改账号成功",
+        "statusUpdateSuccess": "修改账号状态成功",
+        "selectStatusRequired": "请选择账号状态!",
+        "permissionUpdateSuccess": "修改功能受限成功",
+        "groupRemoveSuccess": "移除分组成功",
+        "groupUpdateSuccess": "修改会员分组成功",
+        "selectTagRequired": "请选择标签",
+        "tagSetSuccess": "设置标签成功",
+        "codingUpdateSuccess": "修改打码量成功",
+        "passwordLengthError": "密码长度不能小于6位",
+        "passwordUpdateSuccess": "修改密码成功",
+        "googleVerifyUpdateSuccess": "修改谷歌验证成功",
+        "verifySuccess": "效验成功",
+        "updateSuccess": "修改成功",
+        "nameUpdateSuccess": "修改姓名成功",
+        "chatroomPermissionUpdateSuccess": "修改聊天室权限成功"
+      },
+      "placeholders": {
+        "inputId": "请输入ID",
+        "inputMemberAccount": "请输入会员账号",
+        "inputPassword": "请输入密码",
+        "inputActualCoding": "请输入打码量",
+        "inputPhone": "请输入手机",
+        "inputEmail": "请输入邮箱",
+        "inputRealName": "请输入真实姓名"
+      },
+      "buttons": {
+        "confirm": "确认",
+        "cancel": "取消"
+      },
+      "addUser": {
+        "title": "新增用户",
+        "registerType": "注册类型",
+        "loginType": "登录方式",
+        "phoneRegister": "手机注册",
+        "emailRegister": "邮箱注册",
+        "phone": "手机",
+        "email": "邮箱",
+        "accountType": "账号类型",
+        "accountTypePlaceholder": "请选择账号类型",
+        "memberAccount": "会员账号",
+        "memberAccountPlaceholder": "请填写会员账号",
+        "emailPlaceholder": "请输入邮箱地址",
+        "memberPassword": "会员密码",
+        "password": "密码",
+        "passwordPlaceholder": "请输入密码",
+        "memberPasswordPlaceholder": "请输入会员密码",
+        "parentId": "上级ID",
+        "parentIdPlaceholder": "请输入上级ID",
+        "vipLevel": "VIP等级",
+        "vipLevelPlaceholder": "请选择VIP等级",
+        "remark": "备注",
+        "confirm": "确认",
+        "cancel": "取消",
+        "submit": "提交保存",
+        "addUserButton": "增加用户",
+        "maxUserLimit": "最大支持批量添加10用户",
+        "minUserRequired": "请至少添加一个用户",
+        "createSuccess": "创建成功",
+        "createFailed": "用户创建失败: ",
+        "noData": "暂无数据",
+        "errorInfo": "这里是错误信息，暂时用文字代替"
+      },
+      "wallet": {
+        "createWallet": "新建钱包",
+        "editWallet": "编辑钱包",
+        "realName": "姓名",
+        "edit": "编辑",
+        "addWallet": "新增钱包",
+        "bankCardInfo": "会员银行卡信息",
+        "cardNumber": "卡号",
+        "bankInfo": "银行信息",
+        "phone": "手机",
+        "email": "邮箱",
+        "electronicWallet": "会员电子钱包",
+        "accountOrPhone": "账号/手机",
+        "usdtInfo": "会员USDT信息",
+        "usdtType": "USDT类型",
+        "usdtAddress": "USDT地址",
+        "addressAlias": "地址别称",
+        "walletType": "钱包类型",
+        "account": "账号",
+        "addWalletForm": {
+          "walletType": "钱包类型",
+          "bankName": "银行名称",
+          "electronicWallet": "电子钱包",
+          "walletCategory": "钱包类型",
+          "currencyType": "货币类型",
+          "bindBankCard": "绑定银行卡",
+          "realName": "真实姓名",
+          "cardNo": "卡号",
+          "mobileNo": "手机号码",
+          "email": "邮箱",
+          "ifscCode": "IFSCCODE",
+          "accountOrMobile": "账号/手机",
+          "networkType": "网络类型",
+          "address": "地址",
+          "aliasAddress": "地址别称",
+          "upiId": "UPI_ID",
+          "placeholders": {
+            "cardNo": "请输入卡号",
+            "mobileNo": "请输入手机号码",
+            "email": "请输入邮箱",
+            "ifscCode": "请输入IFSC Code",
+            "accountOrMobile": "请输入账号/手机",
+            "address": "请输入地址",
+            "aliasAddress": "请输入地址别称",
+            "upiId": "请输入UPI_ID"
+          },
+          "messages": {
+            "editSuccess": "编辑操作成功",
+            "addSuccess": "新增操作成功"
+          },
+          "buttons": {
+            "cancel": "取消",
+            "save": "保存"
+          }
+        }
+      },
+      "sameIP": {
+        "title": "相同IP",
+        "columns": {
+          "userId": "会员ID",
+          "vipLevel": "VIP等级",
+          "balance": "余额",
+          "parentId": "上级ID",
+          "generalAgentId": "总代ID",
+          "userType": "账号类型",
+          "channelName": "来源渠道",
+          "lastLoginTime": "最后登录时间",
+          "remark": "备注",
+          "registerTime": "注册时间"
+        },
+        "status": {
+          "none": "无"
+        }
+      },
+      "detail": {
+        "title": "用户详情 ({userId})",
+        "tabs": {
+          "basicInfo": "基本信息",
+          "walletInfo": "钱包信息",
+          "accountChange": "账变信息",
+          "betInfo": "投注信息",
+          "riskInfo": "风控信息",
+          "userValue": "用户价值"
+        }
+      },
+      "accountChange": {
+        "columns": {
+          "orderNo": "订单号",
+          "type": "账变类型",
+          "beforeAmount": "账变前金额",
+          "amount": "账变金额",
+          "backAmount": "账变后金额",
+          "createTime": "账变时间",
+          "remark": "备注"
+        },
+        "form": {
+          "financialType": "账变类型",
+          "financialTypePlaceholder": "请选择账变类型"
+        },
+        "checkbox": {
+          "onlySearchFromLastWithdrawal": "仅查询上次提现至今"
+        }
+      },
+      "userValue": {
+        "columns": {
+          "category": "类别",
+          "userCount": "各级人数",
+          "rechargeCount": "充值人数",
+          "rechargeAmount": "充值总额",
+          "withdrawCount": "提现人数",
+          "withdrawAmount": "提现总额",
+          "diffAmount": "充提差"
+        },
+        "summary": {
+          "total": "总计"
+        }
+      },
+      "userRisk": {
+        "title": "风控关联信息",
+        "messages": {
+          "noRelatedAccount": "暂无关联账户"
+        },
+        "modal": {
+          "title": "设备关联账户列表",
+          "title2": "关联账户列表"
+        },
+        "columns": {
+          "userId": "会员ID",
+          "totalRecharge": "会员总充值",
+          "totalWithdraw": "会员总提现",
+          "walletBalance": "会员余额",
+          "registerTime": "注册时间",
+          "lastLoginTime": "最后登录时间"
+        },
+        "relatedInfo": "关联信息 :",
+        "relatedAccountCount": "关联账户数",
+        "viewRelatedAccounts": "查看关联账户",
+        "exportFileName": "设备关联账户报表",
+        "riskTypes": {
+          "bindDevice": "绑定设备",
+          "bindFingerprint": "绑定浏览器指纹",
+          "lastLoginDevice": "最后登录设备",
+          "lastLoginFingerprint": "最后登录浏览器指纹",
+          "loginIP": "登录IP",
+          "registerIP": "注册IP",
+          "bankAccount": "银行卡账号",
+          "usdtAccount": "USDT账号"
+        }
+      },
+      "info": {
+        "basicInfo": {
+          "title": "账户基本信息",
+          "memberAccount": "会员账号",
+          "memberId": "会员ID",
+          "parentId": "上级ID",
+          "generalAgentId": "总代ID",
+          "memberNickname": "会员昵称",
+          "vipLevel": "VIP等级",
+          "rechargeLevel": "充值等级",
+          "accountStatus": "账号状态",
+          "memberGroup": "会员分组",
+          "memberTags": "会员标签",
+          "autoTags": "平台自动标签",
+          "remark": "备注",
+          "none": "无",
+          "actions": {
+            "view": "查看",
+            "edit": "编辑",
+            "modify": "修改",
+            "remove": "移除",
+            "add": "新增",
+            "set": "设置",
+            "lockable": "可锁定",
+            "needUnlock": "需解锁"
+          },
+          "confirmMessages": {
+            "removeGroup": "你确定移除此分组吗？"
+          }
+        },
+        "fundInfo": {
+          "title": "账号资金信息",
+          "platformBalance": "平台余额",
+          "arGameBalance": "ArGame余额",
+          "safeBoxBalance": "保险箱余额",
+          "freezeAmount": "提现冻结金额"
+        },
+        "todayActivity": {
+          "title": "今日活跃信息",
+          "betAmount": "投注金额",
+          "betAmountTooltip": "会员今日的投注金额汇总",
+          "prizeAmount": "派奖金额",
+          "prizeAmountTooltip": "会员今日的派奖金额汇总",
+          "codingAmount": "打码量",
+          "codingAmountTooltip": "会员今日的打码量汇总（彩票投注金额+三方游戏有效金额）",
+          "activityReward": "活动奖励",
+          "activityRewardTooltip": "会员今日的活动汇总金额",
+          "todayRecharge": "今日充值",
+          "todayRechargeTooltip": "会员今日的充值金额汇总",
+          "todayWithdraw": "今日提现",
+          "todayWithdrawTooltip": "会员今日的提现金额汇总",
+          "totalCoding": "累计打码量",
+          "totalCodingTooltip": "会员上一次提款后产生的打码量",
+          "actualCoding": "实际打码量",
+          "actualCodingTooltip": "会员提款判断用的打码量（该数字小于需要打码量即无法提款",
+          "needCoding": "需要打码量",
+          "needCodingTooltip": "会员提款需要的打码量"
+        },
+        "summaryData": {
+          "title": "账号汇总数据",
+          "totalBet": "总投注",
+          "totalBetTooltip": "会员建号至今总累计投注金额",
+          "totalPrize": "总派奖",
+          "totalPrizeTooltip": "会员建号至今总累计派奖金额",
+          "totalCoding": "总打码",
+          "totalCodingTooltip": "会员总有效投注",
+          "totalRecharge": "总充值",
+          "totalRechargeTooltip": "会员建号至今总累计充值金额",
+          "totalRechargeCount": "总充值次数",
+          "totalRechargeCountTooltip": "会员建号至今总累计充值次数",
+          "totalWithdraw": "总提现",
+          "totalWithdrawTooltip": "会员建号至今总累计提现金额",
+          "totalWithdrawCount": "总提现次数",
+          "totalWithdrawCountTooltip": "会员建号至今总累计提现次数",
+          "totalActivityReward": "总活动奖励",
+          "totalActivityRewardTooltip": "会员建号至今总领取活动奖励金额",
+          "totalCommission": "总获得佣金",
+          "totalCommissionTooltip": "会员建号至今总获取佣金金额"
+        },
+        "securityInfo": {
+          "title": "账号安全信息",
+          "loginPassword": "登录密码",
+          "withdrawPassword": "提现密码",
+          "googleAuth": "谷歌验证",
+          "enabled": "已开启",
+          "disabled": "未开启",
+          "enable": "开启",
+          "disable": "关闭",
+          "bindPhone": "绑定手机",
+          "bindEmail": "绑定邮箱",
+          "notBound": "未绑定",
+          "actions": {
+            "view": "查看",
+            "verify": "校验",
+            "modify": "修改"
+          },
+          "confirmMessages": {
+            "googleAuth": "你确定移{action}谷歌验证吗？"
+          }
+        },
+        "registerLogin": {
+          "title": "注册登录信息",
+          "registerTime": "注册时间",
+          "registerIP": "注册IP",
+          "channelSource": "渠道来源",
+          "registerDomain": "注册域名",
+          "registerDevice": "注册设备号",
+          "registerFingerprint": "注册浏览器指纹",
+          "lastLoginTime": "最后登入时间",
+          "lastLogoutTime": "最后登出时间",
+          "lastLoginIP": "最后登录IP",
+          "lastLoginDomain": "最后登录域名",
+          "lastLoginDevice": "最后登录设备",
+          "lastLoginFingerprint": "最后登录浏览器指纹"
+        }
+      }
+    },
+    "inlineUser": {
+      "title": "在线会员",
+      "columns": {
+        "userId": "会员ID",
+        "account": "会员账号",
+        "nickName": "会员昵称",
+        "vipLevel": "VIP等级",
+        "walletBalance": "余额",
+        "isOnline": "在线状态",
+        "registerTime": "注册时间",
+        "lastLoginTime": "最后登录时间"
+      },
+      "form": {
+        "userId": "会员ID",
+        "userIdPlaceholder": "请输入会员ID",
+        "account": "会员账号",
+        "accountPlaceholder": "请输入会员账号",
+        "nickName": "会员昵称",
+        "nickNamePlaceholder": "请输入会员昵称"
+      },
+      "status": {
+        "online": "在线",
+        "offline": "离线"
+      }
+    },
+    "memberTag": {
+      "title": "平台自动标签",
+      "pageTitle": "会员标签管理",
+      "menual": {
+        "title": "手动标签"
+      },
+      "basic": {
+        "tag": "基础标签仅参与条件属性基础计算",
+        "title": "基础标签",
+        "condition": "条件属性",
+        "conditionPlaceholder": "请选择条件属性",
+        "conditionMinValueRangeError": "条件最小值不能小于{min},最大值不能大于{max}",
+        "noZeroError": "条件值不能小于{min}",
+        "addTags": "新增标签",
+        "editTags": "编辑标签",
+        "tagName": "标签名字",
+        "conditionProperty": "条件属性",
+        "conditionMinValue": "条件最小值",
+        "conditionMaxValue": "条件最大值",
+        "tagNamePlaceholder": "请输入标签名字",
+        "conditionPropertyPlaceholder": "请选择条件属性",
+        "conditionMinValuePlaceholder": "请输入条件最小值",
+        "conditionMaxValuePlaceholder": "请输入条件最大值",
+        "columns": {
+          "tagId": "标签ID",
+          "tagName": "标签名称",
+          "conditionProperty": "条件属性",
+          "conditionRange": "条件范围",
+          "lastUpdateTime": "最后更新时间",
+          "lastOperator": "最后操作人",
+          "state": "状态"
+        }
+      },
+      "assemble": {
+        "tag": "组合标签通过组合多个基础标签来实现复杂的用户筛选规则",
+        "title": "组合标签",
+        "basic": "基础标签",
+        "basicPlaceholder": "请选择基础标签",
+        "compositePlaceholder": "请选择组合标签",
+        "addTags": "新增标签",
+        "editTags": "编辑标签",
+        "rules": "组合规则",
+        "checkDetails": "查看详情",
+        "description": "渠道来源和代投组只能选择其中一个，不选表示全部，支持多选",
+        "tips": "组合规则说明",
+        "tipsRule1": "至少配置一个条件组",
+        "tipsRule2": "同一组内的标签为OR关系(满足任一即可)",
+        "tipsRule3": "不同组之间为 AND 关系（必须全部满足）",
+        "tipsRule4": "例如：组1(充值200+ OR 充值500+) AND 组2(VIP3以上) = 充值200以上且VIP3以上的用户",
+        "conditionGroup": "条件组",
+        "minChoiceOne": "至少选择一个基础标签",
+        "conditionGroupPlaceholder": "请选择基础标签(同组内为OR关系)",
+        "conditionGroupLimit": "添加条件组（最多{max}组）",
+        "preview": "组合规则预览",
+        "conditionGroupNum": "命中总人数",
+        "detailMemberIds": "会员ID",
+        "detailMemberVIP": "VIP等级",
+        "configFilterCondition": "请配置筛选条件",
+        "detailMemberTotalRecharge": "总充值次数",
+        "detailMemberTotalRechargeAmount": "充值总金额",
+        "detailMemberTotalWithdraw": "总提现次数",
+        "detailMemberTotalWithdrawAmount": "提现总金额",
+        "detailMemberActivityAmount": "活动总金额",
+        "registerTime": "注册时间",
+        "loginTime": "登录时间",
+        "export": "导出",
+        "exportWithPhone": "带手机号码导出",
+        "tagName": "标签名字",
+        "conditionProperty": "条件属性",
+        "conditionMinValue": "条件最小值",
+        "conditionMaxValue": "条件最大值",
+        "tagNamePlaceholder": "请输入标签名字",
+        "conditionPropertyPlaceholder": "请选择条件属性",
+        "conditionMinValuePlaceholder": "请输入条件最小值",
+        "conditionMaxValuePlaceholder": "请输入条件最大值",
+        "userId": "用户ID",
+        "userPlaceholder": "请输入用户ID",
+        "combinePlaceholder": "请选择组合标签",
+        "columns": {
+          "tagId": "标签ID",
+          "tagName": "标签名称",
+          "group": "代投组",
+          "conditionProperty": "条件属性",
+          "conditionRange": "条件范围",
+          "lastUpdateTime": "最后更新时间",
+          "lastOperator": "最后操作人",
+          "state": "状态"
+        }
+      },
+      "manage": {
+        "title": "标签管理",
+        "createAutoTag": "创建自动标签",
+        "columns": {
+          "tagId": "标签ID",
+          "tagName": "标签名称",
+          "tagType": "标签类型",
+          "tagPriority": "标签优先级",
+          "triggerFrequency": "触发频率",
+          "tagValidDay": "标签有效天数",
+          "state": "状态",
+          "createTime": "创建时间",
+          "lastUpdateTime": "最后更新时间"
+        },
+        "form": {
+          "tagName": "标签名称",
+          "tagNamePlaceholder": "请输入标签名称",
+          "tagType": "标签类型",
+          "tagTypePlaceholder": "请选择标签类型",
+          "state": "状态"
+        },
+        "status": {
+          "enable": "启用",
+          "disable": "禁用",
+          "permanent": "永久有效",
+          "unknown": "未知"
+        },
+        "actions": {
+          "preview": "预览",
+          "distributeRecord": "分配记录",
+          "delete": "删除",
+          "edit": "编辑",
+          "create": "创建新自动标签"
+        },
+        "modal": {
+          "tagPreview": "标签预览"
+        }
+      },
+      "distribute": {
+        "title": "标签分发",
+        "stats": {
+          "totalTagCount": "总标签分配次数",
+          "validUserCount": "标签有效会员数",
+          "totalUserRate": "标签有效会员比例",
+          "triggerCondition": "触发条件"
+        },
+        "columns": {
+          "userId": "会员ID",
+          "autoTagName": "标签名称",
+          "createTime": "分配时间",
+          "state": "分配状态",
+          "isValid": "是否有效",
+          "expiredTime": "失效时间",
+          "permanent": "永久有效"
+        },
+        "form": {
+          "autoTagId": "标签名称",
+          "autoTagIdPlaceholder": "请选择标签名称",
+          "userId": "会员ID",
+          "userIdPlaceholder": "请输入会员ID",
+          "isValid": "分配状态",
+          "state": "有效状态",
+          "time": "分配时间"
+        },
+        "status": {
+          "all": "全部",
+          "success": "成功",
+          "failed": "失败",
+          "valid": "有效",
+          "invalid": "已失效"
+        },
+        "messages": {
+          "selectTagWarning": "请选择标签名称"
+        }
+      },
+      "implement": {
+        "title": "执行记录",
+        "columns": {
+          "autoTagId": "执行ID",
+          "autoTagName": "标签信息",
+          "autoTagType": "标签类型",
+          "triggerFrequency": "触发频率",
+          "executeDate": "执行时间",
+          "calcUserCount": "总触发人数",
+          "matchUserCount": "匹配人数",
+          "addUserCount": "新增人数",
+          "expireUserCount": "失效人数",
+          "hitRate": "命中率",
+          "executeState": "执行状态",
+          "executeUsedTime": "执行耗时"
+        },
+        "form": {
+          "autoTagName": "标签名称",
+          "autoTagNamePlaceholder": "请输入标签名称",
+          "autoTagType": "标签类型",
+          "autoTagTypePlaceholder": "请选择触发类型",
+          "executeState": "执行状态",
+          "executeStatePlaceholder": "请选择执行状态",
+          "time": "执行时间"
+        },
+        "status": {
+          "all": "全部",
+          "success": "成功",
+          "failed": "失败",
+          "unknown": "未知"
+        },
+        "actions": {
+          "detail": "详情",
+          "distributeRecord": "分配记录"
+        },
+        "modal": {
+          "executeDetail": "执行详情"
+        }
+      },
+      "implementDetail": {
+        "executeLog": "执行日志",
+        "viewDistributeRecord": "查看分配记录"
+      },
+      "analyze": {
+        "title": "标签分析",
+        "form": {
+          "selectTagsPlaceholder": "选择要分析的标签",
+          "analyzeButton": "分析",
+          "cycleTimes": {
+            "last7Days": "最近7天",
+            "last15Days": "最近15天",
+            "last30Days": "最近30天",
+            "last60Days": "最近60天",
+            "last90Days": "最近90天"
+          }
+        },
+        "charts": {
+          "hitRateComparison": "标签命中率比较",
+          "matchTrend": "标签匹配数趋势",
+          "analysisData": "标签分析数据",
+          "hitRate": "命中率",
+          "matchCount": "匹配数"
+        },
+        "columns": {
+          "autoTagName": "标签名称",
+          "totalMatchCount": "总触发人数",
+          "totalTriggerUserCount": "标签匹配数",
+          "hitRate": "标签命中率",
+          "matchRate": "命中率趋势",
+          "validRate": "标签有效率"
+        },
+        "messages": {
+          "selectTagsWarning": "请选择要分析的标签",
+          "maxSelectionWarning": "最多只能选择 5 项"
+        }
+      },
+      "viewTag": {
+        "triggerCondition": "触发条件",
+        "close": "关闭"
+      },
+      "gamerang": {
+        "selectGameCategory": "请选择游戏类别",
+        "selectGameVendor": "请选择游戏厂商（可选）",
+        "allGames": "全部游戏",
+        "allGamesSelected": "已选择全部游戏，无需添加更多范围",
+        "maxGameRanges": "最多添加 {max} 组游戏范围"
+      },
+      "publicData": {
+        "triggerFrequency": {
+          "daily": "每日触发",
+          "weekly": "每周触发"
+        },
+        "withdrawState": {
+          "pass": "已通过",
+          "reject": "已拒绝"
+        },
+        "rechargeType": {
+          "all": "所有充值",
+          "first": "首次充值",
+          "repeat": "重复充值"
+        },
+        "withdrawType": {
+          "all": "所有提现",
+          "first": "首次提现",
+          "repeat": "重复提现"
+        },
+        "activityType": {
+          "any": "任意活动",
+          "daily": "每日活动",
+          "cycle": "周期活动",
+          "special": "特殊活动"
+        },
+        "activityStatus": {
+          "all": "所有状态",
+          "participated": "已参与",
+          "completed": "已完成",
+          "participate": "参与",
+          "complete": "完成"
+        },
+        "inviteStatus": {
+          "any": "任意",
+          "registered": "已注册",
+          "recharged": "已充值",
+          "betted": "已投注",
+          "bankCardBound": "已绑定银行卡"
+        },
+        "accountType": {
+          "mobile": "手机账号",
+          "email": "邮箱账号"
+        },
+        "conditionType": {
+          "recharge": "充值总额",
+          "withdraw": "提现总额",
+          "validBet": "有效投注",
+          "loss": "亏损总额",
+          "vipLevel": "vip等级",
+          "register": "注册时间",
+          "dateRange": "时间范围"
+        },
+        "comparison": {
+          "greaterEqual": "大于等于",
+          "lessEqual": "小于等于",
+          "contains": "包含",
+          "notContains": "不包含",
+          "between": "介于",
+          "before": "早于",
+          "after": "晚于"
+        },
+        "messages": {
+          "registerUser": "注册用户",
+          "registeredWith": "{accountType}注册的用户",
+          "registeredVia": "通过{channel}注册的用户",
+          "registeredBetween": "{time}注册的用户",
+          "registeredViaBetween": "{time}通过{channel}注册的{accountType}用户",
+          "timePeriod": "{start}至{end}期间",
+          "loginConditionInvalid": "登录触发条件未生效,请检查配置",
+          "loginWithinDays": "{days}天内登录",
+          "loginDays": "{days}天",
+          "loginTimes": "{times}次",
+          "loginAndTimes": "且登录{times}次",
+          "betConditionInvalid": "投注金额触发条件未生效,请检查配置",
+          "betAmountReached": "金额达到{amount}",
+          "withinDays": "{days}天内",
+          "validBetText": "有效投注",
+          "inGames": "在{games}中",
+          "lossConditionInvalid": "亏损触发条件未生效,请检查配置",
+          "lossAmountReached": "亏损金额达到{amount}",
+          "lossRateReached": "亏损率达到{rate}%",
+          "and": "且",
+          "userLevelConditionInvalid": "会员等级触发条件未生效,请检查配置",
+          "vipLevelText": "VIP等级为{levels}",
+          "keepDays": "且保持{days}天以上",
+          "withdrawConditionInvalid": "提现触发条件未生效,请检查配置",
+          "withdrawTimes": "提现{times}次",
+          "totalAmountReached": "，总金额达到{amount}",
+          "auditStatus": "且审核{status}",
+          "withdrawAmountReached": "{days}天内提现金额达到{amount}",
+          "rechargeConditionInvalid": "充值触发条件未生效,请检查配置",
+          "rechargeTimes": "充值{times}次",
+          "rechargeAmountReached": "{days}天内充值金额达到{amount}",
+          "via": "通过{channels}",
+          "inviteConditionInvalid": "邀请好友触发条件未生效,请检查配置",
+          "invite": "邀请{count}位",
+          "friend": "好友",
+          "inviteeNeedRecharge": "，被邀请人需在{days}天内完成最低{amount}充值",
+          "inviteeNeedRechargeMin": "且被邀请人需完成最低{amount}充值",
+          "vipLevelAbove": "{level}以上会员",
+          "conditionGroup": "条件组{index}",
+          "or": "或",
+          "amountBetween": "{min}≤ {type} ≤{max}",
+          "amountLessEqual": "{type} ≤ {amount}",
+          "amountGreaterEqual": "{type} ≥ {amount}",
+          "vipLevelGreaterEqual": "VIP等级大于等于{level}",
+          "vipLevelLessEqual": "VIP等级小于等于{level}",
+          "vipLevelContains": "VIP等级包含{levels}",
+          "vipLevelNotContains": "VIP等级不包含{levels}",
+          "registerTimeBetween": "注册时间在{start}至{end}之间",
+          "registerTimeAfter": "注册时间晚于{time}",
+          "registerTimeBefore": "注册时间早于{time}",
+          "timeRange": "时间范围:最近{days}天",
+          "separator": "、",
+          "vipLevelIs": "VIP等级为{levels}",
+          "loginTriggerConditionInvalid": "登录触发条件未生效,请检查配置",
+          "loginDaysAndTimes": "{loginDayRange} {loginDayNum}且登录{loginCount}",
+          "days": "{days}天",
+          "times": "{times}次",
+          "inviteCount": "邀请{count}位",
+          "validBet": "有效投注",
+          "amountReached": "金额达到{amount}"
+        }
+      }
+    },
+    "verifyCode": {
+      "title": "验证码记录",
+      "columns": {
+        "account": "账号",
+        "type": "用途",
+        "code": "验证码",
+        "createTime": "创建时间"
+      },
+      "form": {
+        "account": "账号",
+        "accountPlaceholder": "请输入账号",
+        "type": "类型",
+        "typePlaceholder": "请选择查询类型",
+        "createTime": "创建时间"
+      },
+      "types": {
+        "sms": "短信",
+        "email": "邮箱"
+      }
+    },
+    "vip": {
+      "title": "会员VIP管理",
+      "tabs": {
+        "userStats": "VIP用户统计",
+        "basicConfig": "VIP基础配置",
+        "levelConfig": "VIP等级设置",
+        "logRecord": "VIP日志记录"
+      },
+      "columns": {
+        "level": "等级",
+        "name": "名称",
+        "privileges": "特权",
+        "requirements": "要求"
+      },
+      "userCount": {
+        "name": "名称",
+        "count": "人数"
+      },
+      "config": {
+        "title": "VIP等级配置",
+        "editSuccess": "编辑VIP等级配置成功",
+        "sections": {
+          "upgrade": "升级",
+          "relegation": "保级",
+          "monthlyReward": "月奖励",
+          "weeklyReward": "周奖励",
+          "profit": "收益",
+          "washRatio": "洗码比例(%)"
+        },
+        "fields": {
+          "upgradeRecharge": "升级充值:",
+          "upgradeBetCode": "升级打码量:",
+          "upgradeRewards": "升级奖励:",
+          "monthRelegationRecharge": "保级月充值:",
+          "monthRelegationBetCode": "保级月打码:",
+          "monthRewardRecharge": "月领奖充值:",
+          "monthRewardBetCode": "月领奖打码:",
+          "monthReward": "月奖励:",
+          "weekRewardRecharge": "周领奖充值:",
+          "weekRewardBetCode": "周领奖打码:",
+          "weekReward": "周奖励:",
+          "dayWithdrawAmount": "日提现金额:",
+          "dayWithdrawCount": "日提现次数:",
+          "dayWithdrawNoFeeCount": "日提现免手续费次数:"
+        },
+        "buttons": {
+          "cancel": "取消",
+          "save": "保存"
+        }
+      },
+      "basicConfig": {
+        "operationTime": "操作时间",
+        "operator": "操作人",
+        "configValue": "配置值（旧值->新值）",
+        "operationSuccess": "操作成功",
+        "enableVipFunction": "是否启用VIP功能",
+        "yes": "是",
+        "no": "否",
+        "vipDescription": "开启后，会员可以根据投注额升级VIP等级获得相应的权益",
+        "maxVipLevel": "平台最高VIP等级",
+        "confirm": "确定",
+        "cancel": "取消",
+        "maxVipLevelDescription": "设置平台支持的最高VIP等级，最高支持20级",
+        "vipRewardCodingMultiple": "VIP奖励打码倍数",
+        "vipRewardCodingDescription": "会员获得VIP奖励时需要完成的打码量倍数"
+      },
+      "log": {
+        "type": "类型",
+        "memberId": "会员ID",
+        "timeRange": "时间范围",
+        "columns": {
+          "time": "时间",
+          "memberId": "会员ID",
+          "type": "类型",
+          "recordDetails": "记录详情",
+          "rewardAmount": "奖励金额"
+        },
+        "recordDetailsText": "会员获得VIP {vipLevel} {rewardType} 充值金额：{rechargeAmount} 打码量：{betAmount}"
+      },
+      "levelConfig": {
+        "title": "VIP等级配置",
+        "editModalTitle": "编辑VIP等级配置",
+        "columns": {
+          "vipLevel": "VIP等级",
+          "upgrade": "升级",
+          "upgradeRecharge": "升级充值",
+          "upgradeBetCode": "升级打码量",
+          "upgradeRewards": "升级奖励",
+          "relegation": "保级",
+          "monthRelegationRecharge": "月充值",
+          "monthRelegationBetCode": "月打码量",
+          "monthlyReward": "月奖励",
+          "monthRewardRecharge": "当月充值",
+          "monthRewardBetCode": "当月打码量",
+          "monthReward": "月奖励",
+          "weeklyReward": "周奖励",
+          "weekRewardRecharge": "当周充值",
+          "weekRewardBetCode": "当周打码量",
+          "weekReward": "周奖励",
+          "privileges": "权益",
+          "dayWithdrawAmount": "日提现金额",
+          "dayWithdrawCount": "日提现次数",
+          "dayWithdrawNoFeeCount": "日提现免手续费次数"
+        },
+        "description": "日提现金额，日提现次数，日免手续费次数为-1时，表示不限制"
+      }
+    },
+    "group": {
+      "title": "用户组管理",
+      "columns": {
+        "id": "ID",
+        "groupName": "分组名称",
+        "tagName": "标签名称",
+        "description": "分组描述",
+        "memberCount": "分组人数",
+        "updateTime": "更新时间",
+        "lastOperator": "最后操作人"
+      },
+      "actions": {
+        "groupPermission": "分组权限",
+        "editTag": "编辑标签",
+        "delete": "删除"
+      },
+      "buttons": {
+        "createGroup": "添加会员分组"
+      },
+      "modal": {
+        "editGroup": "修改会员分组",
+        "addGroup": "新增会员分组",
+        "editPermission": "修改会员分组权限"
+      },
+      "form": {
+        "groupName": "分组名称:",
+        "associatedTag": "关联标签:",
+        "groupDescription": "分组描述:",
+        "selectTagPlaceholder": "请选择关联标签",
+        "nameRequired": "请输入分组名称",
+        "submitSuccess": "{action}会员分组成功",
+        "permissionUpdateSuccess": "会员分组权限修改成功"
+      }
+    },
+    "tag": {
+      "title": "标签管理",
+      "columns": {
+        "id": "ID",
+        "tagName": "标签名称",
+        "tagEffect": "标签效果",
+        "description": "标签描述",
+        "memberCount": "会员数量",
+        "createTime": "创建时间"
+      },
+      "form": {
+        "tagName": "标签名称",
+        "tagNamePlaceholder": "请输入标签名称",
+        "tagColor": "标签底色",
+        "description": "描述"
+      },
+      "actions": {
+        "edit": "编辑",
+        "delete": "删除",
+        "viewMembers": "查看会员"
+      },
+      "buttons": {
+        "createTag": "创建标签"
+      },
+      "modal": {
+        "editTag": "编辑标签",
+        "addTag": "新增标签"
+      },
+      "validation": {
+        "typeRequired": "请选择标签类型",
+        "nameRequired": "请输入标签名称",
+        "nameFormat": "请输入8个英文字符或4个中文字符"
+      },
+      "messages": {
+        "editSuccess": "{action}标签成功"
+      }
+    },
+    "addTag": {
+      "sections": {
+        "basicInfo": "标签基本信息",
+        "triggerConditions": "触发条件",
+        "triggerSettings": "触发设置"
+      },
+      "basicForm": {
+        "tagName": "标签名称",
+        "tagNamePlaceholder": "请输入标签名称",
+        "description": "标签描述",
+        "descriptionPlaceholder": "请输入标签描述",
+        "tagType": "标签类型",
+        "tagTypePlaceholder": "请选择标签类型",
+        "status": "标签状态",
+        "enable": "启用",
+        "disable": "停用"
+      },
+      "triggerConditions": {
+        "register": {
+          "timeRange": "时间范围",
+          "accountType": "账号类型",
+          "accountTypeNote": "不选择表示适用所有账号类型",
+          "registerChannel": "注册渠道",
+          "registerChannelPlaceholder": "请选择注册渠道"
+        },
+        "loginDay": {
+          "loginDays": "登录天数",
+          "loginDaysNote": "在时间范围内累计登录天数",
+          "loginCount": "登录次数",
+          "loginCountNote": "在时间范围内累计登录次数",
+          "timeRange": "时间范围"
+        },
+        "betAmount": {
+          "betAmount": "投注金额",
+          "timeRange": "时间范围",
+          "timeRangeNote": "触发条件计算的时间范围",
+          "betType": "投注类型",
+          "betTypePlaceholder": "请选择投注类型",
+          "gameRange": "游戏范围"
+        },
+        "loseAmount": {
+          "loseAmount": "亏损金额",
+          "timeRange": "时间范围",
+          "timeRangeNote": "触发条件计算的时间范围",
+          "gameCategory": "游戏类别",
+          "loseRate": "亏损占比",
+          "loseRateNote": "亏损金额/投注金额，0表示不限制"
+        },
+        "userLevel": {
+          "userLevel": "会员等级",
+          "userLevelPlaceholder": "请选择会员等级",
+          "levelKeepTime": "等级保持时间",
+          "levelKeepTimeNote": "0表示不限制时间"
+        },
+        "withdraw": {
+          "withdrawType": "提现类型",
+          "withdrawTypePlaceholder": "请选择提现类型",
+          "withdrawAmount": "提现金额",
+          "withdrawCount": "提现次数",
+          "withdrawCountNote": "在时间范围内累计提现次数",
+          "timeRange": "时间范围",
+          "withdrawChannel": "提现渠道",
+          "withdrawChannelPlaceholder": "请选择提现渠道",
+          "withdrawChannelNote": "不选择表示适用所有渠道",
+          "auditStatus": "审核状态",
+          "auditStatusPlaceholder": "请选择审核状态",
+          "auditStatusNote": "不选择表示适用所有状态（已通过+已拒绝）"
+        },
+        "recharge": {
+          "rechargeType": "充值类型",
+          "rechargeTypePlaceholder": "请选择充值类型",
+          "rechargeAmount": "充值金额",
+          "rechargeCount": "充值次数",
+          "rechargeCountNote": "在时间范围内累计充值次数",
+          "timeRange": "时间范围",
+          "rechargeChannel": "充值渠道",
+          "rechargeChannelPlaceholder": "请选择充值渠道",
+          "rechargeChannelNote": "不选择表示适用所有渠道"
+        },
+        "activity": {
+          "activityType": "活动类型",
+          "activityTypePlaceholder": "请选择活动类型",
+          "participationStatus": "参与状态",
+          "participationStatusPlaceholder": "请选择参与状态",
+          "participationCount": "参与次数",
+          "participationCountNote": "在时间范围内参与活动的次数",
+          "timeRange": "时间范围"
+        },
+        "invite": {
+          "inviteUserCount": "邀请用户数量",
+          "inviteUserCountNote": "成功邀请的用户数量",
+          "invitedUserStatus": "被邀请人状态",
+          "invitedUserStatusPlaceholder": "请选择被邀请人状态",
+          "invitedUserStatusNote": "要求被邀请用户达到的状态条件",
+          "rechargeRequirement": "充值要求",
+          "rechargeRequirementNote": "是否要求被邀请人必须完成首充",
+          "minRechargeAmount": "最低充值金额",
+          "minRechargeAmountNote": "被邀请人首充最低金额要求",
+          "validPeriod": "有效期",
+          "validPeriodNote": "被邀请用户需在有效期内完成条件",
+          "statisticsPeriod": "统计周期",
+          "statisticsPeriodNote": "邀请统计的时间范围",
+          "inviteLevelRequirement": "邀请等级要求",
+          "inviteLevelRequirementNote": "是否对邀请人有会员等级要求",
+          "inviterMinLevel": "邀请人最低等级",
+          "inviterMinLevelPlaceholder": "请选择会员等级",
+          "inviterMinLevelNote": "邀请人需达到的最低会员等级"
+        },
+        "mixed": {
+          "subConditionList": "子条件列表",
+          "conditionGroupNote": "条件组之间的关系为OR，每个条件组内部的关系为AND",
+          "conditionGroup": "条件组",
+          "groupRelation": "该组内条件关系: AND",
+          "deleteGroup": "删除",
+          "addCondition": "添加条件",
+          "addConditionGroup": "添加条件组",
+          "selectPlaceholder": "请选择",
+          "rechargeTotal": "充值总额",
+          "withdrawTotal": "提现总额",
+          "validBet": "有效投注",
+          "lossTotal": "亏损总额",
+          "recentDays": "最近",
+          "recentDaysLabel": "天"
+        }
+      },
+      "triggerSettings": {
+        "triggerFrequency": "触发频率",
+        "triggerFrequencyNote": "平台触发器将按设定频率批量处理按日（1天）、周（7天）登录会员数据",
+        "tagValidType": "标签有效期",
+        "tagValidTypePermanent": "永久有效",
+        "tagValidTypeDays": "有效天数",
+        "tagValidTypeNote": "设置标签在会员记录中的存续时间",
+        "tagOverrideRule": "标签覆盖规则",
+        "priorityOverride": "优先级覆盖",
+        "keepWhenMatch": "符合条件时保留",
+        "tagOverrideRuleNote": "当会员同时满足多个触发器条件时的处理方式",
+        "tagPriority": "标签优先级",
+        "tagPriorityNote": "数字越大优先级越高，1-10，值越大代表优先级越高",
+        "priorityLevels": {
+          "low": "低优先级",
+          "normal": "正常优先级",
+          "medium": "中等优先级",
+          "high": "高优先级"
+        }
+      },
+      "validation": {
+        "tagNameRequired": "请输入标签名称",
+        "tagTypeRequired": "请选择标签类型",
+        "triggerFrequencyRequired": "请选择触发频率",
+        "tagValidTypeRequired": "请选择标签有效期"
+      },
+      "buttons": {
+        "cancel": "取消",
+        "save": "保存"
+      },
+      "units": {
+        "days": "天",
+        "percent": "%"
+      }
+    },
+    "memberLoginLog": {
+      "form": {
+        "memberId": "会员ID",
+        "memberIdPlaceholder": "请输入会员ID",
+        "ip": "IP",
+        "ipPlaceholder": "请输入IP",
+        "time": "时间"
+      },
+      "columns": {
+        "loginId": "登录ID",
+        "memberId": "会员ID",
+        "action": "行为",
+        "deviceType": "登录设备",
+        "deviceNo": "设备号",
+        "browserFingerprint": "浏览器指纹",
+        "loginTime": "登录时间",
+        "ip": "IP",
+        "status": "状态"
+      },
+      "actions": {
+        "login": "登入",
+        "logout": "登出",
+        "recharge": "充值",
+        "withdraw": "提现",
+        "forgotPassword": "忘记密码",
+        "unknown": "未知"
+      },
+      "devices": {
+        "h5": "H5",
+        "android": "Android",
+        "ios": "IOS",
+        "pc": "PC",
+        "unknown": "未知"
+      },
+      "status": {
+        "success": "成功",
+        "failed": "失败"
+      }
+    },
+    "common": {
+      "add": "添加",
+      "edit": "编辑",
+      "delete": "删除",
+      "save": "保存",
+      "cancel": "取消",
+      "confirm": "确认",
+      "search": "搜索",
+      "reset": "重置",
+      "export": "导出",
+      "import": "导入",
+      "refresh": "刷新",
+      "loading": "加载中...",
+      "noData": "暂无数据",
+      "operation": "操作",
+      "status": "状态",
+      "createTime": "创建时间",
+      "updateTime": "更新时间",
+      "remark": "备注",
+      "today": "今天",
+      "yesterday": "昨天",
+      "thisWeek": "本周",
+      "lastWeek": "上周",
+      "thisMonth": "本月",
+      "lastMonth": "上月",
+      "all": "全部",
+      "pleaseSelect": "请选择",
+      "pleaseInput": "请输入",
+      "success": "成功",
+      "failed": "失败",
+      "warning": "警告",
+      "info": "信息",
+      "unknown": "未知"
+    },
+    "blacklist": {
+      "title": "会员活动黑名单管理",
+      "tabs": {
+        "userActivity": "会员活动黑名单",
+        "blackListDeleteLog": "黑名单删除记录",
+        "rewardLimit": "奖励限制记录"
+      },
+      "blacklist": {
+        "form": {
+          "memberId": "会员ID",
+          "memberIdPlaceholder": "请输入会员ID",
+          "activityType": "活动禁止类型",
+          "activityTypePlaceholder": "请选择活动禁止类型",
+          "addBlackList": "新增黑名单",
+          "batchAdd": "批量添加",
+          "batchDelete": "批量删除",
+          "createOne": "新增黑名单",
+          "editOne": "编辑黑名单",
+          "actionTime": "触发时间"
+        },
+        "columns": {
+          "memberId": "会员ID",
+          "activityType": "活动禁止类型",
+          "addTime": "添加时间",
+          "oprationUser": "操作人",
+          "remark": "备注",
+          "delTime": "删除时间",
+          "delUser": "删除操作人",
+          "delReason": "删除原因",
+          "oldAddTime": "原添加时间",
+          "oldOprationUser": "原操作人",
+          "oldReason": "原备注"
+        },
+        "addDialog": {
+          "idlist": "会员ID列表",
+          "activityType": "活动类型",
+          "remark": "备注",
+          "idListPlaceholder": "请输入会员ID，每行一个，最多100个",
+          "activityTypePlaceholder": "请选择活动类型",
+          "remarkPlaceholder": "请输入备注，最多200个字符",
+          "removeReason": "删除原因",
+          "removeReasonPlaceholder": "请输入删除原因，最多200个字符",
+          "removeConfirm": "您确定要删除会员ID为\"{ userId }\"的\"{ activityType }\"活动黑名单吗？",
+          "removePlaceholder": "请输入删除原因，最多200个字符",
+          "deleteTitle": "确认删除",
+          "batchAddBlackList": "批量添加黑名单",
+          "batchDeleteTitle": "批量删除黑名单",
+          "idsMustNumber": "用户ID必须为7位数字",
+          "maxCount": "一次最多可以添加100个会员ID"
+        }
+      }
+    }
+  }
+}

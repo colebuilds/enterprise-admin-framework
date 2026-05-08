@@ -1,0 +1,25 @@
+{
+  "productNav": {
+    "title": "Produk & Services",
+    "searchPlaceholder": "Cari features...",
+    "searchResults": "cari Results",
+    "noResults": "Tidak cocok features found",
+    "quickNav": "Quick Navigation",
+    "game": "game manajemen",
+    "member": "anggota manajemen",
+    "report": "keuangan laporan",
+    "operations": "operasional manajemen",
+    "tenant": "merchant Management",
+    "system": "sistem pengaturan",
+    "memberDetail": {
+      "tabs": {
+        "info": "Info dasar",
+        "wallet": "Dompet Info",
+        "accountChange": "Perubahan akun",
+        "bet": "Betting Catatan",
+        "risk": "Kontrol risiko",
+        "value": "Pengguna Nilai"
+      }
+    }
+  }
+}

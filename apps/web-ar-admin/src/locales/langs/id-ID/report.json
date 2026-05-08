@@ -1,0 +1,1266 @@
+{
+  "report": {
+    "dashboard": {
+      "title": "Dasbor",
+      "overview": "Ikhtisar",
+      "rechargeWithdrawTrend": "7-hari deposit/penarikan Trend",
+      "betWinLoseTrend": "7-hari Bet/profit Trend",
+      "memberLevelDistribution": "Level anggota Distribution",
+      "gameTypeBetRatio": "Bet Share by Game jenis",
+      "todayRanking": "Hari ini's Peringkat",
+      "timeStatistics": "Time-based Statistik",
+      "dataSummary": "Data Ringkasan",
+      "welcome": "Welcome back, {name}!",
+      "overviewData": {
+        "todayNew": "Hari ini's Baru",
+        "firstRecharge": "Deposit pertama",
+        "people": "Orang",
+        "loginMembers": "login anggota",
+        "totalMembers": "Total Anggota",
+        "rechargeDifference": "deposit-penarikan Difference",
+        "todayRecharge": "Today's Deposits",
+        "todayWithdraw": "Today's penarikan",
+        "todayBets": "Today's Taruhan",
+        "todayBettors": "Hari ini's Bettors",
+        "todayOrders": "Today's Bet Order",
+        "platformProfit": "Laba/Rugi platform",
+        "grossMargin": "Gross Margin",
+        "todayActivity": "Today's Promotion Bonus",
+        "participants": "Peserta",
+        "totalBalance": "Total In-Platform Saldo (Excluding Test)",
+        "inactiveBalance": "Total Balance of anggota Inactive >30 hari",
+        "testAccountBalance": "Total Test Akun Saldo",
+        "activeBalance": "Aktif Pengguna Saldo",
+        "activeBalanceDesc": "Total balance of active anggota logged in dalam 30 hari"
+      }
+    },
+    "channelAlert": {
+      "title": "Peringatan Kanal Deposit/Payout",
+      "stats": {
+        "total": "Total Peringatan",
+        "pending": "Peringatan Tertunda"
+      },
+      "fields": {
+        "tenant": "Merchant",
+        "sourceTenant": "Merchant Sumber Peringatan",
+        "channelName": "Nama Kanal",
+        "channelType": "Jenis Kanal",
+        "mappingCode": "Kode Mapping Pihak Ketiga",
+        "thirdMerchantText": "Nickname/No. Merchant Pihak Ketiga",
+        "merchantNickname": "Nickname",
+        "merchantNo": "No. Merchant",
+        "relatedTenants": "Merchant Terkait",
+        "warningType": "Jenis Peringatan",
+        "warningContent": "Isi Peringatan",
+        "warningTime": "Waktu Peringatan",
+        "noticeChannel": "Kanal Notifikasi",
+        "currency": "Mata Uang",
+        "configValue": "Nilai Konfigurasi",
+        "actualValue": "Nilai Aktual",
+        "status": "Status",
+        "triggerThreshold": "Ambang Pemicu",
+        "operateCount": "Jumlah Rekaman"
+      },
+      "noticeChannels": {
+        "siteMessage": "Pesan Internal"
+      },
+      "placeholders": {
+        "selectTenant": "Pilih merchant",
+        "selectMappingCode": "Pilih kode mapping pihak ketiga",
+        "selectThirdMerchant": "Pilih merchant pihak ketiga",
+        "selectChannelName": "Pilih nama kanal",
+        "selectChannelType": "Pilih jenis kanal",
+        "selectWarningType": "Pilih jenis peringatan",
+        "selectStatus": "Pilih status",
+        "enterRemark": "Masukkan catatan",
+        "enterThreshold": "Masukkan ambang"
+      },
+      "actions": {
+        "ruleConfig": "Konfigurasi Aturan Peringatan",
+        "handle": "Tangani",
+        "ignore": "Abaikan",
+        "batchHandle": "Tangani Massal",
+        "batchIgnore": "Abaikan Massal",
+        "confirmHandle": "Konfirmasi Tangani",
+        "confirmIgnore": "Konfirmasi Abaikan"
+      },
+      "dialogTitles": {
+        "detail": "Detail Peringatan Kanal",
+        "handle": "Tangani Peringatan Kanal",
+        "ignore": "Abaikan Peringatan Kanal",
+        "ruleConfig": "Konfigurasi Aturan Peringatan"
+      },
+      "messages": {
+        "noPendingSelected": "Pilih rekaman peringatan yang masih tertunda",
+        "handleSuccess": "Berhasil ditangani",
+        "ignoreSuccess": "Berhasil diabaikan",
+        "ruleRequired": "Konfigurasi aturan untuk {name} belum lengkap",
+        "ruleSaveSuccess": "Aturan berhasil disimpan"
+      },
+      "warningTypes": {
+        "placeOrderFailRate": "Peringatan Rasio Gagal Kanal Deposit",
+        "placeOrderFail": "Peringatan Gagal Membuat Order Deposit",
+        "withdrawBalanceLow": "Peringatan Saldo Kanal Payout Rendah",
+        "largeWithdraw": "Peringatan Payout Besar"
+      },
+      "warningStatus": {
+        "pending": "Tertunda",
+        "handled": "Ditangani",
+        "ignored": "Diabaikan"
+      },
+      "channelTypes": {
+        "collect": "Deposit",
+        "pay": "Payout"
+      },
+      "ruleText": {
+        "minutesWithAttempts": "menit, total percobaan ≥",
+        "failRateAtLeast": "dan rasio gagal ≥",
+        "continuousFailAtLeast": "kegagalan berturut-turut ≥",
+        "times": "kali",
+        "balanceLessThan": "Saldo <",
+        "singleAmountAtLeast": "Satu transaksi ≥",
+        "configuredCurrencies": "{count} mata uang dikonfigurasi ({action})",
+        "clickExpandEdit": "klik untuk buka edit",
+        "clickCollapse": "klik untuk tutup"
+      },
+      "ruleConfigHint": "Konfigurasikan ambang pemicu dan metode notifikasi untuk setiap jenis peringatan. Perubahan berlaku segera."
+    },
+    "statistics": {
+      "title": "data statistik",
+      "refresh": "Segarkan",
+      "tabs": {
+        "merchant": "Merchant Report",
+        "channel": "kanal laporan",
+        "thirdPartyMerchantNo": "Third-party Merchant No. Report"
+      },
+      "fields": {
+        "currency": "mata uang",
+        "group": "Grup",
+        "tenant": "Merchant",
+        "timeRange": "tanggal",
+        "date": "tanggal",
+        "mappingCode": "Third-party Mapping Kode",
+        "channelName": "kanal nama",
+        "channelType": "kanal tipe",
+        "channelCurrency": "kanal mata uang",
+        "thirdPartyNickname": "Third-party Merchant Nickname",
+        "thirdPartyMerchantNo": "Third-party Merchant No.",
+        "thirdPartyMerchantInfo": "Third-party Merchant Nickname/No.",
+        "collectChannelCount": "Collection Kanal",
+        "collectSuccessAmount": "Collection Berhasil Jumlah",
+        "collectSuccessCount": "Collection Berhasil Jumlah",
+        "collectSuccessRate": "Collection Berhasil Tarif",
+        "payChannelCount": "Pembayaran keluar Kanal",
+        "paySuccessAmount": "Pembayaran keluar Berhasil Jumlah",
+        "paySuccessCount": "Pembayaran keluar Berhasil Jumlah",
+        "successAmount": "berhasil jumlah",
+        "successCount": "Berhasil Jumlah",
+        "successRate": "Berhasil Tarif",
+        "userCount": "Pengguna",
+        "generatedChannels": "Kanal dengan Data",
+        "generatedMerchants": "Merchants dengan data",
+        "collectStats": "Collection Stats",
+        "payStats": "Pembayaran keluar Stats"
+      },
+      "placeholders": {
+        "selectCurrency": "Silakan pilih mata uang",
+        "selectGroup": "Pilih grup",
+        "selectTenant": "Pilih merchant",
+        "selectMappingCode": "Pilih third-party mapping code",
+        "selectChannelName": "Pilih kanal name (Kelipatan)",
+        "selectThirdPartyMerchantInfo": "Pilih third-party merchant nickname/no.",
+        "selectChannelType": "Silakan pilih kanal tipe"
+      },
+      "actions": {
+        "viewDetail": "lihat detail",
+        "viewChannelDetail": "View channel detail"
+      },
+      "dialogTitles": {
+        "merchantChannelDetail": "merchant channel detail",
+        "generatedChannelDetail": "Generated Kanal Detail",
+        "generatedMerchantDetail": "Generated merchant detail"
+      },
+      "messages": {
+        "exportSubmitted": "ekspor task Dikirim"
+      },
+      "channelTypes": {
+        "collect": "Collection",
+        "pay": "Pembayaran keluar"
+      },
+      "channelTypeTabs": {
+        "collect": "Collection Kanal",
+        "pay": "Pembayaran keluar Kanal"
+      },
+      "options": {
+        "currentTenant": "Current Merchant",
+        "groups": {
+          "asiaPacific": "Asia Pacific Grup",
+          "emea": "EMEA Grup"
+        }
+      },
+      "form": {
+        "agentId": "agen ID",
+        "agentIdPlaceholder": "Silakan masukkan agen ID",
+        "channelSource": "Kanal Sumber",
+        "channelSourcePlaceholder": "Pilih kanal sumber",
+        "time": "waktu",
+        "day": "hari",
+        "month": "bulan",
+        "oneClickQuery": "One-click Kueri"
+      },
+      "dataSummary": {
+        "title": "Data Ringkasan",
+        "newMembers": "tambah anggota",
+        "rechargeAmount": "jumlah deposit",
+        "validBet": "Taruhan valid",
+        "withdrawAmount": "Jumlah penarikan",
+        "profitLossAmount": "profit/rugi jumlah"
+      },
+      "rechargeWithdraw": {
+        "title": "Deposit pertama/First penarikan",
+        "firstRecharge": "Deposit pertama",
+        "secondRecharge": "Second Deposit",
+        "thirdRecharge": "Third Deposit",
+        "firstWithdraw": "Pertama Penarikan",
+        "secondWithdraw": "Second Penarikan",
+        "thirdWithdraw": "Third Penarikan",
+        "times": "jumlah",
+        "people": "Orang",
+        "amount": "jumlah"
+      },
+      "device": {
+        "title": "Perangkat",
+        "deviceType": "Perangkat Tipe",
+        "loginUsers": "login pengguna",
+        "totalUsers": "Total Pengguna"
+      },
+      "commission": {
+        "title": "Promosi Statistik",
+        "newPromotionUsers": "Baru Referred Pengguna",
+        "newTotalAgents": "Baru Master Agents",
+        "commissionUsers": "Komisi Recipients",
+        "commissionAmount": "Jumlah komisi Dibayar"
+      },
+      "rechargeState": {
+        "title": "Deposit Status",
+        "status": "Status",
+        "amount": "jumlah",
+        "people": "Orang",
+        "times": "jumlah"
+      },
+      "withdrawState": {
+        "title": "penarikan Status",
+        "status": "Status",
+        "amount": "jumlah",
+        "people": "Orang",
+        "times": "jumlah"
+      },
+      "rechargeChannel": {
+        "title": "Top 4 Deposit Channels",
+        "name": "nama",
+        "amount": "jumlah",
+        "people": "Orang",
+        "times": "jumlah",
+        "details": "detail"
+      },
+      "withdrawChannel": {
+        "title": "Top 4 Penarikan Kanal",
+        "name": "nama",
+        "amount": "jumlah",
+        "people": "Orang",
+        "times": "jumlah",
+        "details": "detail"
+      },
+      "platform": {
+        "title": "Top 4 Platforms",
+        "name": "nama",
+        "betAmount": "Jumlah taruhan",
+        "people": "Orang",
+        "times": "jumlah",
+        "details": "detail"
+      },
+      "subgame": {
+        "title": "Top 4 Games",
+        "name": "nama",
+        "betAmount": "Jumlah taruhan",
+        "people": "Orang",
+        "times": "jumlah",
+        "details": "detail"
+      },
+      "activity": {
+        "title": "Top 4 aktivitas",
+        "name": "nama",
+        "amount": "jumlah",
+        "people": "Orang",
+        "times": "jumlah",
+        "details": "detail"
+      },
+      "components": {
+        "dataSummary": "Data Ringkasan",
+        "rechargeWithdraw": "deposit & penarikan Stats",
+        "device": "Perangkat Stats",
+        "commission": "komisi statistik",
+        "rechargeState": "Deposit Status Stats",
+        "withdrawState": "penarikan Status Stats",
+        "rechargeChannel": "Deposit Channel Stats",
+        "withdrawChannel": "Penarikan Kanal Stats",
+        "platform": "platform statistik",
+        "subgame": "sub-game statistik",
+        "activity": "aktivitas statistik"
+      }
+    },
+    "accountChanges": {
+      "title": "Perubahan akun",
+      "form": {
+        "memberIdLabel": "anggota Id",
+        "agentIdLabel": "agen Id",
+        "memberIdPlaceholder": "Silakan masukkan anggota id",
+        "orderNo": "No. pesanan",
+        "orderNoPlaceholder": "Silakan masukkan No. pesanan",
+        "accountChangeType": "Akun Change Tipe",
+        "accountChangeTypePlaceholder": "Pilih akun change jenis",
+        "time": "waktu"
+      },
+      "table": {
+        "orderNo": "No. pesanan",
+        "memberId": "ID anggota",
+        "accountChangeType": "Akun Change Tipe",
+        "beforeAmount": "Jumlah sebelum perubahan",
+        "changeAmount": "Change Jumlah",
+        "afterAmount": "Jumlah setelah perubahan",
+        "changeTime": "Waktu perubahan",
+        "remark": "catatan"
+      },
+      "export": "ekspor",
+      "amount": "jumlah"
+    },
+    "platformReport": {
+      "title": "platform laporan",
+      "tabs": {
+        "dailySummary": "Daily Ringkasan Laporan",
+        "dailyActivities": "Daily Aktivitas Laporan",
+        "dailyRecharge": "Harian Deposit Report",
+        "dailyWithdrawal": "Daily Penarikan Laporan",
+        "dailyGameReport": "Daily Game Laporan",
+        "channelReport": "Kanal Laporan",
+        "retentionReport": "Retention Laporan",
+        "rechargeWithdrawReport": "deposit/penarikan channel Report",
+        "paymentModeReport": "Pembayaran Mode Laporan",
+        "depositWithdrawOrderStat": "deposit/penarikan Order Statistics"
+      },
+      "form": {
+        "timeRange": "Rentang waktu",
+        "day": "hari",
+        "month": "bulan",
+        "game": "Game",
+        "allGames": "semua game",
+        "platform": "Platform",
+        "allPlatforms": "semua platform",
+        "channel": "Kanal",
+        "allChannels": "Semua Kanal",
+        "rechargeChannel": "Deposit Channel:",
+        "rechargeChannelPlaceholder": "Pilih deposit channel",
+        "withdrawChannel": "penarikan kanal：",
+        "withdrawChannelPlaceholder": "Silakan pilih penarikan kanal",
+        "firstWithdraw": "Pertama Penarikan",
+        "secondWithdraw": "Second Penarikan",
+        "thirdWithdraw": "Third Penarikan",
+        "firstRecharge": "Deposit pertama",
+        "secondRecharge": "Second Deposit",
+        "thirdRecharge": "Third Deposit",
+        "rechargeTypePlaceholder": "Pilih deposit jenis",
+        "exportWithMobile": "Ekspor dengan Nomor ponsel"
+      },
+      "common": {
+        "export": "ekspor",
+        "exportFailed": "ekspor gagal",
+        "time": "waktu",
+        "date": "tanggal",
+        "reportDate": "laporan tanggal",
+        "dateRangeExceeded31Days": "dipilih tanggal range tidak boleh melebihi 31 hari",
+        "noDataAvailable": "There is no data tersedia for ekspor at the moment"
+      },
+      "dailySummary": {
+        "columns": {
+          "time": "waktu",
+          "registerCount": "Pendaftaran",
+          "loginCount": "Login",
+          "betUserCount": "Betting Pengguna",
+          "betAmount": "Jumlah taruhan",
+          "feeAmount": "Handling Biaya",
+          "winAmount": "pembayaran hadiah jumlah",
+          "activityAmount": "aktivitas",
+          "rechargeAmount": "berhasil Deposits",
+          "withdrawAmount": "penarikan berhasil",
+          "platNetDeposit": "Platform Net Deposits",
+          "platWinLoseAmount": "Laba/Rugi platform",
+          "platNetProfit": "Platform Net Profit"
+        }
+      },
+      "dailyActivities": {
+        "columns": {
+          "time": "waktu",
+          "activityType": "aktivitas tipe",
+          "amount": "jumlah",
+          "count": "Claim Jumlah",
+          "participants": "Peserta"
+        }
+      },
+      "dailyRecharge": {
+        "columns": {
+          "time": "waktu",
+          "rechargeChannel": "Deposit Channel",
+          "channelType": "kanal tipe",
+          "rechargeSuccessAmount": "berhasil jumlah deposit",
+          "reverseDiscountAmount": "Reverse bonus jumlah",
+          "rechargeSuccessUserCount": "berhasil deposit Pengguna",
+          "rechargeCount": "Deposit Times",
+          "rechargeSuccessCount": "berhasil deposit Times",
+          "rechargeFailCount": "gagal deposit Times",
+          "rechargeAmount": "jumlah deposit",
+          "rechargeUserCount": "deposit Pengguna",
+          "discountAmount": "promosi jumlah",
+          "firstRechargeAmount": "First jumlah deposit",
+          "firstRechargeUserCount": "Deposit pertama Pengguna"
+        }
+      },
+      "dailyWithdrawal": {
+        "columns": {
+          "time": "waktu",
+          "withdrawChannel": "penarikan kanal",
+          "channelType": "kanal tipe",
+          "withdrawSuccessAmount": "penarikan berhasil jumlah",
+          "withdrawSuccessUserCount": "Berhasil Penarikan Pengguna",
+          "withdrawCount": "penarikan jumlah",
+          "withdrawSuccessCount": "penarikan berhasil jumlah",
+          "withdrawFailCount": "penarikan gagal jumlah",
+          "withdrawAmount": "Jumlah penarikan",
+          "withdrawUserCount": "Penarikan Pengguna"
+        }
+      },
+      "dailyGameReport": {
+        "form": {
+          "gameCategory": "Kategori game:",
+          "gameCategoryPlaceholder": "Pilih game kategori",
+          "gameVendor": "Provider game",
+          "gameVendorPlaceholder": "Silakan pilih Provider game",
+          "subGame": "sub-game",
+          "subGamePlaceholder": "Silakan pilih sub-game",
+          "isSummary": "Multi-hari Ringkasan"
+        },
+        "columns": {
+          "time": "waktu",
+          "gameCode": "Kode game",
+          "gameCategory": "Kategori game",
+          "gameVendor": "Provider game",
+          "gameName": "Nama game",
+          "betAmount": "Jumlah taruhan",
+          "feeAmount": "Handling Biaya",
+          "validAmount": "Taruhan valid",
+          "winAmount": "pembayaran hadiah jumlah",
+          "rtp": "RTP",
+          "winLoseAmount": "Laba/Rugi platform",
+          "betCount": "game jumlah",
+          "userCount": "Game Pengguna"
+        }
+      },
+      "channelReport": {
+        "form": {
+          "channel": "Kanal",
+          "channelPlaceholder": "Pilih kanal"
+        },
+        "columns": {
+          "channelName": "Kanal Nama",
+          "domainAddress": "Domain Alamat",
+          "code": "Kode",
+          "timeRangeRegisterCount": "Pendaftaran (Rentang)",
+          "registerCount": "Pendaftaran",
+          "firstRechargeCount": "Deposit pertama Pengguna",
+          "firstRechargeAmount": "First jumlah deposit",
+          "secondRechargeCount": "Second deposit Pengguna",
+          "secondRechargeAmount": "Second jumlah deposit",
+          "totalRechargeAmount": "jumlah deposit",
+          "totalWithdrawAmount": "Jumlah penarikan",
+          "todayRegisterCount": "Hari ini Pendaftaran",
+          "todayFirstRechargeCount": "Today Deposit pertama Pengguna",
+          "todayFirstRechargeAmount": "Today First jumlah deposit",
+          "todaySecondRechargeCount": "Today Second deposit Pengguna",
+          "todaySecondRechargeAmount": "Today Second jumlah deposit",
+          "todayTotalRechargeAmount": "Today jumlah deposit",
+          "todayTotalWithdrawAmount": "Hari ini Jumlah penarikan",
+          "timeRangeFirstRechargeCount": "Range Deposit pertama Pengguna",
+          "timeRangeFirstRechargeAmount": "Range First jumlah deposit",
+          "timeRangeSecondRechargeCount": "Range Second deposit Pengguna",
+          "timeRangeSecondRechargeAmount": "Range Second jumlah deposit",
+          "timeRangeTotalRechargeAmount": "Range jumlah deposit",
+          "timeRangeTotalWithdrawAmount": "Range Jumlah penarikan"
+        }
+      },
+      "retentionReport": {
+        "tabs": {
+          "activeRetention": "Aktif Retention",
+          "rechargeRetention": "Deposit Retention",
+          "loginRetention": "Login Retention"
+        },
+        "form": {
+          "channelSource": "Kanal Sumber",
+          "channelSourcePlaceholder": "Pilih kanal sumber"
+        },
+        "columns": {
+          "date": "tanggal",
+          "dayAddRegisterUserCount": "Baru Pendaftaran (Day)",
+          "dayLoginUserCount": "Baru Login (Day)",
+          "isFirstRecharge": "New First Deposits (hari)",
+          "firstDayRetention": "hari 1 Retention",
+          "threeDayRetention": "hari 3 Retention",
+          "fiveDayRetention": "hari 5 Retention",
+          "sevenDayRetention": "hari 7 Retention",
+          "tenDayRetention": "hari 10 Retention",
+          "fourteenDayRetention": "hari 14 Retention",
+          "fifteenDayRetention": "hari 15 Retention",
+          "thirtyDayRetention": "hari 30 Retention",
+          "sixtyDayRetention": "hari 60 Retention",
+          "ninetyDayRetention": "hari 90 Retention",
+          "oneHundredTwentyDayRetention": "hari 120 Retention",
+          "oneHundredEightyDayRetention": "hari 180 Retention"
+        },
+        "common": {
+          "average": "Rata-rata"
+        },
+        "config": {
+          "title": "Retention Konfigurasi",
+          "activeRetentionBetAmount": "Active retention bet threshold",
+          "description": "Only pengguna whose daily bet >= this jumlah counted as retained (positive integer. setelah adjustment next hari's sampling changes; historical data not modified)",
+          "operationTime": "Waktu operasi",
+          "operator": "Operator",
+          "configValue": "Konfigurasi Nilai (Old -> Baru)"
+        }
+      },
+      "rechargeWithdrawReport": {
+        "tabs": {
+          "thirdPartyRecharge": "Third-party Deposit Channels",
+          "thirdPartyWithdraw": "pihak ketiga penarikan kanal",
+          "thirdPartyRechargeHourly": "Third-party Deposit Channels (Hourly)",
+          "thirdPartyWithdrawHourly": "Third-party Penarikan Kanal (Hourly)"
+        },
+        "form": {
+          "channelId": "kanal ID",
+          "channelIdPlaceholder": "Silakan masukkan kanal ID",
+          "channelDisplayName": "channel tampilan Name",
+          "channelDisplayNamePlaceholder": "Masukkan channel tampilan name"
+        },
+        "columns": {
+          "channelName": "kanal nama",
+          "type": "tipe",
+          "recharge": "Deposit",
+          "withdraw": "penarikan",
+          "orderCount": "Pesanan",
+          "successOrderCount": "Berhasil Pesanan",
+          "transactionAmount": "Transaction Jumlah",
+          "totalAmount": "Total jumlah",
+          "totalCount": "Total Times",
+          "successAmount": "berhasil jumlah",
+          "successCount": "berhasil jumlah",
+          "failAmount": "gagal jumlah",
+          "failCount": "gagal jumlah",
+          "successRate": "Berhasil Tarif",
+          "indicator": "Indicator",
+          "weight": "Bobot",
+          "submittedCount": "Dikirim jumlah",
+          "successfulCount": "Dikirim berhasil jumlah",
+          "successCounts": "Berhasil Jumlah",
+          "totalCounts": "Total jumlah"
+        }
+      },
+      "paymentModeReport": {
+        "columns": {
+          "payMode": "Pembayaran Mode",
+          "rechargeOrderCount": "deposit Order jumlah",
+          "rechargeSuccessCount": "deposit berhasil jumlah",
+          "rechargeSuccessRate": "deposit berhasil Rate",
+          "rechargeSuccessAmount": "deposit berhasil jumlah",
+          "rechargeAmountRatio": "jumlah deposit Ratio"
+        },
+        "paymentModes": {
+          "totals": "Totals",
+          "unknown": "Tidak diketahui",
+          "awaken": "Awaken",
+          "native": "Native",
+          "scan": "Scan"
+        }
+      },
+      "depositWithdrawOrderStat": {
+        "columns": {
+          "operator": "Operator",
+          "multiDayTotalOrders": "Multi-day Total Pesanan",
+          "todayTotalOrders": "Hari ini Total Pesanan",
+          "withdrawApprovedOrders": "Tarik Disetujui Pesanan",
+          "withdrawRejectedOrders": "Tarik Ditolak Pesanan",
+          "withdrawSubmittedOrders": "tarik dana Dikirim Order",
+          "depositApprovedOrders": "Deposit Approved Order",
+          "depositRejectedOrders": "Deposit Rejected Order",
+          "operatorPlaceholder": "Masukkan operator",
+          "dateWarningTips": "Silakan pilih a date range dalam 7 days."
+        }
+      }
+    },
+    "userInfoReport": {
+      "title": "anggota laporan",
+      "tabs": {
+        "userRptTotal": "Anggota Ringkasan",
+        "userGameTotal": "anggota game",
+        "userActivity": "anggota aktivitas",
+        "userRechargeInfo": "First/Second/Third Deposit",
+        "userWithdraw": "Pertama/Second/Third Penarikan",
+        "userLogin": "anggota login",
+        "userDevice": "anggota Devices",
+        "userRetain": "Anggota Retention Tarif"
+      },
+      "form": {
+        "selectQueryId": "Pilih Kueri ID",
+        "memberIdType": "ID anggota tipe",
+        "memberId": "ID anggota",
+        "agentId": "agen ID",
+        "generalAgentId": "Agen utama ID",
+        "memberIdPlaceholder": "Silakan masukkan ID anggota",
+        "agentIdPlaceholder": "Silakan masukkan agen ID",
+        "timeRange": "Rentang waktu",
+        "withdrawType": "penarikan tipe",
+        "withdrawTypePlaceholder": "Silakan pilih penarikan tipe",
+        "activityType": "aktivitas tipe",
+        "activityTypePlaceholder": "Silakan pilih aktivitas tipe",
+        "gameCategory": "Kategori game",
+        "gameCategoryPlaceholder": "Pilih game kategori",
+        "gameVendor": "Provider game",
+        "gameVendorPlaceholder": "Silakan pilih Provider game",
+        "subGame": "sub-game",
+        "subGamePlaceholder": "Silakan pilih sub-game",
+        "channelSource": "Kanal Sumber",
+        "channelSourcePlaceholder": "Pilih kanal sumber",
+        "maxGameVendorSelection": "You Dapat pilih up to 5 Game providers",
+        "maxSubGameSelection": "You Dapat pilih up to 5 games",
+        "day": "hari",
+        "month": "bulan",
+        "exportWithMobile": "Ekspor dengan mobile number",
+        "firstRecharge": "Deposit pertama",
+        "secondRecharge": "Second Deposit",
+        "thirdRecharge": "Third Deposit",
+        "firstWithdraw": "Pertama Penarikan",
+        "secondWithdraw": "Second Penarikan",
+        "thirdWithdraw": "Third Penarikan",
+        "rechargeTypePlaceholder": "Pilih deposit jenis",
+        "gameTypes": {
+          "lottery": "Lotere",
+          "electronic": "Elektronik",
+          "video": "Live Video",
+          "sports": "Olahraga",
+          "chessCard": "Catur & kartu"
+        }
+      },
+      "common": {
+        "export": "ekspor",
+        "exportFailed": "ekspor gagal",
+        "none": "Tidak ada",
+        "completionTime": "Completion waktu",
+        "loginTime": "Waktu login",
+        "registrationTime": "Waktu pendaftaran",
+        "date": "tanggal"
+      },
+      "userRptTotal": {
+        "columns": {
+          "memberId": "ID anggota",
+          "parentId": "upline ID",
+          "generalAgentId": "Agen utama ID",
+          "rechargeAmount": "jumlah deposit",
+          "rechargeCount": "Deposit Times",
+          "withdrawAmount": "Jumlah penarikan",
+          "withdrawCount": "penarikan jumlah",
+          "activityAmount": "aktivitas",
+          "codingAmount": "jumlah syarat taruhan",
+          "memberWinLoss": "Anggota Laba/Rugi"
+        }
+      },
+      "userGameTotal": {
+        "columns": {
+          "memberId": "ID anggota",
+          "parentId": "upline ID",
+          "generalAgentId": "Agen utama ID",
+          "gameCategory": "Kategori game",
+          "gameVendor": "Provider game",
+          "gameName": "Nama game",
+          "betAmount": "Jumlah taruhan",
+          "validAmount": "Taruhan valid",
+          "winAmount": "pembayaran hadiah jumlah",
+          "memberWinLoss": "Anggota Laba/Rugi",
+          "betCount": "game jumlah"
+        }
+      },
+      "userActivity": {
+        "columns": {
+          "memberId": "ID anggota",
+          "parentId": "upline ID",
+          "generalAgentId": "Agen utama ID",
+          "activityType": "aktivitas tipe",
+          "amount": "jumlah",
+          "count": "jumlah",
+          "completionTime": "Completion waktu",
+          "totalActivityAmount": "Total Aktivitas Income"
+        }
+      },
+      "userRechargeInfo": {
+        "columns": {
+          "completionTime": "Completion waktu",
+          "memberId": "ID anggota",
+          "parentId": "upline ID",
+          "generalAgentId": "Agen utama ID",
+          "rechargeType": "deposit jenis",
+          "orderNo": "No. pesanan",
+          "rechargeAmount": "jumlah deposit",
+          "totalRecharge": "Total Deposit",
+          "totalWithdraw": "Total Penarikan",
+          "totalRechargeDifference": "Total deposit-penarikan Diff"
+        }
+      },
+      "userWithdraw": {
+        "columns": {
+          "completionTime": "Completion waktu",
+          "memberId": "ID anggota",
+          "parentId": "upline ID",
+          "generalAgentId": "Agen utama ID",
+          "withdrawType": "penarikan tipe",
+          "orderNo": "No. pesanan",
+          "withdrawAmount": "Jumlah penarikan",
+          "totalRecharge": "Total Deposit",
+          "totalWithdraw": "Total Penarikan",
+          "totalRechargeDifference": "Total deposit-penarikan Diff"
+        }
+      },
+      "userLogin": {
+        "columns": {
+          "memberId": "ID anggota",
+          "parentId": "upline ID",
+          "generalAgentId": "Agen utama ID",
+          "loginTime": "Waktu login",
+          "ip": "IP",
+          "deviceType": "Perangkat Tipe",
+          "loginAddress": "Login Alamat",
+          "loginIp": "Login IP",
+          "loginCount": "login jumlah",
+          "lastUpdateTime": "Terakhir Waktu diperbarui"
+        },
+        "form": {
+          "ipPlaceholder": "Silakan masukkan IP"
+        }
+      },
+      "userDevice": {
+        "columns": {
+          "memberId": "ID anggota",
+          "parentId": "upline ID",
+          "generalAgentId": "Agen utama ID",
+          "registrationTime": "Waktu pendaftaran",
+          "deviceType": "Perangkat Tipe",
+          "deviceInfo": "Perangkat Info",
+          "ip": "IP",
+          "android": "Android",
+          "ios": "iOS",
+          "pc": "PC",
+          "h5": "H5",
+          "unknown": "Tidak diketahui",
+          "total": "Total",
+          "memberCount": "nomor of anggota"
+        }
+      },
+      "userRetain": {
+        "tabs": {
+          "activeRetention": "Aktif Retention",
+          "rechargeRetention": "Deposit Retention",
+          "loginRetention": "Login Retention"
+        },
+        "columns": {
+          "memberId": "ID anggota",
+          "parentId": "upline ID",
+          "generalAgentId": "Agen utama ID",
+          "channelSource": "Kanal Sumber",
+          "registrationTime": "Waktu pendaftaran",
+          "firstDayLogin": "hari 2 Login",
+          "threeDayLogin": "3 hari Login",
+          "sevenDayLogin": "7-hari Login",
+          "thirtyDayLogin": "30-hari Login",
+          "dailyNewRegistrations": "Baru Pendaftaran Hari ini",
+          "dailyNewLogins": "Baru Login Hari ini",
+          "dailyFirstRecharge": "New First Deposits Today",
+          "twoDayRetention": "hari 2 Retention",
+          "threeDayRetention": "3 hari Retention",
+          "fiveDayRetention": "5-hari Retention",
+          "sevenDayRetention": "7-hari Retention",
+          "tenDayRetention": "10-hari Retention",
+          "fourteenDayRetention": "14-hari Retention",
+          "fifteenDayRetention": "15-hari Retention",
+          "thirtyDayRetention": "30-hari Retention",
+          "sixtyDayRetention": "60-hari Retention",
+          "ninetyDayRetention": "90-hari Retention",
+          "oneHundredTwentyDayRetention": "120-hari Retention",
+          "oneHundredEightyDayRetention": "180-hari Retention"
+        },
+        "validation": {
+          "memberIdRequired": "Silakan masukkan ID anggota"
+        }
+      }
+    },
+    "dataAnalysis": {
+      "title": "data analisis",
+      "tabs": {
+        "dataSummary": "Data Ikhtisar",
+        "subBagSummary": "Package Ikhtisar",
+        "firstCharge": "Deposit pertama Analysis",
+        "LtvAnalyze": "pengguna LTV analisis",
+        "userChurn": "Pengguna Churn Analysis",
+        "dataExport": "data ekspor Center",
+        "unchargedStatistics": "Uncharged Statistik"
+      },
+      "common": {
+        "export": "ekspor",
+        "exportFailed": "ekspor gagal",
+        "timeRange": "Rentang waktu",
+        "dataDefinition": "Data Definition",
+        "calculationFormula": "data Definition/Formula",
+        "indicatorName": "Indicator Nama",
+        "formula": "Formula",
+        "confirm": "konfirmasi",
+        "today": "Hari ini",
+        "yesterday": "Kemarin",
+        "thisWeek": "Minggu ini",
+        "lastWeek": "Minggu lalu",
+        "thisMonth": "Bulan ini",
+        "lastMonth": "Bulan lalu",
+        "date": "tanggal",
+        "userCount": "pengguna jumlah",
+        "firstLtv": "Deposit pertama pengguna LTV",
+        "addLtv": "tambah pengguna LTV",
+        "firstLtvExport": "Deposit pertama pengguna LTV report",
+        "addLtvExport": "tambah pengguna LTV laporan",
+        "firstLtv2": "Pertama Dep LTV (Dep/dengan)",
+        "addLtv2": "Baru Pengguna LTV (Dep/dengan)",
+        "firstLtvExport2": "Pertama Dep LTV Laporan",
+        "addLtvExport2": "Baru Pengguna LTV Laporan",
+        "firstLtvTip1": "Avg Bet-Win-bonus of 1st Dep Pengguna in N hari",
+        "firstLtvTip2": "Avg Bet-Win-bonus of New Pengguna in N hari",
+        "firstLtvTip3": "Avg Dep-dengan of 1st Dep Pengguna in N Days",
+        "firstLtvTip4": "Avg Dep-dengan of Baru Pengguna in N Days",
+        "dayLtvTip5": "Sum of (Bet - Win - bonus) of 1st Dep Pengguna/nomor of 1st Dep Pengguna",
+        "dayLtvTip7": "Sum of (Bet - Win - bonus) of New Pengguna/nomor of New Pengguna",
+        "dayLtvTip6": "Sum of (Dep - dengan) of 1st Dep Pengguna/Number of 1st Dep Pengguna",
+        "dayLtvTip8": "Sum of (Dep - dengan) of Baru Pengguna/Number of Baru Pengguna"
+      },
+      "dataSummary": {
+        "title": "Data Ikhtisar",
+        "tips": {
+          "newRegisterDevice": "nomor of new anggota today that are also new devices",
+          "newMember": "nomor of new registered anggota today",
+          "effectiveNewRate": "New registered devices today/New anggota",
+          "dailyActiveMember": "nomor of anggota who logged in today",
+          "oldMemberDailyActive": "Harian active Anggota - New Anggota",
+          "rechargeMember": "nomor of anggota who deposited today",
+          "rechargeAmount": "Total jumlah deposited by all anggota today",
+          "withdrawAmount": "Total jumlah withdrawn by all anggota today",
+          "chargeWithdrawDiff": "jumlah deposit - jumlah penarikan",
+          "excessRate": "(deposit - penarikan)/deposit",
+          "effectiveBet": "Total jumlah taruhan valid today",
+          "firstRechargeMember": "nomor of anggota making their deposit pertama today",
+          "firstRechargeAmount": "Total pertama jumlah deposit today",
+          "firstRechargeExcessRate": "(Deposit pertama anggota deposit - penarikan)/First jumlah deposit",
+          "firstRechargeWithdrawProportion": "nomor of pertama deposits and penarikan/nomor of pertama deposits",
+          "firstRechargePaymentRate": "Deposit pertama anggota/New anggota",
+          "firstRechargeRepeatRate": "anggota who re-deposit setelah deposit pertama/Deposit pertama anggota",
+          "newARPU": "New anggota jumlah deposit/New anggota",
+          "newARPPU": "New anggota jumlah deposit/New depositing anggota",
+          "oldMemberRechargeCount": "nomor of old anggota who deposited",
+          "oldMemberRechargeAmount": "Total jumlah deposit from old anggota",
+          "oldMemberPaymentRate": "Old anggota jumlah deposit/Old anggota daily active",
+          "oldMemberARPU": "Old anggota jumlah deposit/Old anggota daily active",
+          "oldMemberARPPU": "Old anggota jumlah deposit/Old anggota jumlah deposit",
+          "oldMemberWithdrawAmount": "Total jumlah penarikan of old anggota",
+          "oldMemberWithdrawCount": "nomor of old anggota who withdrew",
+          "oldMemberChargeWithdrawDiff": "Old anggota jumlah deposit - Old anggota jumlah penarikan",
+          "oldMemberExcessRate": "(Old anggota deposit - penarikan)/Old anggota jumlah deposit",
+          "paymentRate": "Depositing anggota/Daily active anggota",
+          "arpu": "jumlah deposit/Daily active anggota",
+          "arppu": "jumlah deposit/Depositing anggota",
+          "newMemberRechargeAmount": "Total jumlah deposit from today's new anggota",
+          "newMemberRechargeCount": "nomor of today's new anggota who deposited",
+          "newMemberPaymentRate": "New depositing anggota/New anggota",
+          "withdrawMemberCount": "nomor of anggota Who Withdrew Today",
+          "totalBalance": "Total In-Platform Saldo"
+        },
+        "columns": {
+          "date": "tanggal",
+          "newRegisterDeviceCount": "New Terdaftar Devices",
+          "newMemberCount": "tambah anggota",
+          "newMemberRechargeAmount": "New anggota jumlah deposit",
+          "newMemberRechargeCount": "New Depositing Anggota",
+          "newMemberPaymentRate": "New anggota deposit Conversion Rate",
+          "effectiveNewRate": "Effective Baru Tarif",
+          "dailyActiveMemberCount": "Harian Active Anggota",
+          "oldMemberDailyActive": "Old Anggota Daily Aktif",
+          "rechargeMemberCount": "Depositing Anggota",
+          "rechargeAmount": "jumlah deposit",
+          "withdrawMemberCount": "Withdrawing Anggota",
+          "withdrawAmount": "Jumlah penarikan",
+          "chargeWithdrawDiff": "deposit-penarikan Diff",
+          "excessRate": "Surplus Tarif",
+          "effectiveBetAmount": "Taruhan valid",
+          "firstRechargeMemberCount": "Deposit pertama anggota",
+          "firstRechargeAmount": "First jumlah deposit",
+          "firstRechargeExcessRate": "Deposit pertama Surplus Rate",
+          "firstRechargeWithdrawProportion": "Deposit pertama penarikan Ratio",
+          "firstRechargePaymentRate": "Deposit pertama Payment Rate",
+          "firstRechargeReChargeCount": "Anggota Re-Deposit Setelah First",
+          "firstRechargeRepeatRate": "Deposit pertama Repeat Rate",
+          "newARPU": "tambah ARPU",
+          "newARPPU": "tambah ARPPU",
+          "oldMemberRechargeCount": "Old anggota Depositing jumlah",
+          "oldMemberRechargeAmount": "Old anggota jumlah deposit",
+          "oldMemberPaymentRate": "Old Anggota Pembayaran Tarif",
+          "oldMemberARPU": "Old Anggota ARPU",
+          "oldMemberARPPU": "Old Anggota ARPPU",
+          "oldMemberWithdrawAmount": "Old Anggota Jumlah penarikan",
+          "oldMemberWithdrawCount": "Old Anggota Jumlah penarikan",
+          "oldMemberChargeWithdrawDiff": "Old anggota deposit-penarikan Diff",
+          "oldMemberExcessRate": "Old Anggota Surplus Tarif",
+          "paymentRate": "Pembayaran Tarif",
+          "arpu": "ARPU",
+          "arppu": "ARPPU",
+          "totalBalance": "Total In-Platform Saldo"
+        }
+      },
+      "subBagSummary": {
+        "title": "Package Ikhtisar",
+        "form": {
+          "packageId": "Kanal Sumber",
+          "packageIdPlaceholder": "Pilih kanal package"
+        },
+        "tips": {
+          "packageName": "Mostly associated by FB PixelID; if none, grouped as Other",
+          "newRegisterDevice": "nomor of new anggota today that are also new devices",
+          "newMember": "nomor of new registered anggota today",
+          "effectiveNewRate": "New registered devices today/New anggota",
+          "dailyActiveMember": "nomor of anggota who logged in today",
+          "oldMemberDailyActive": "Harian active Anggota - New Anggota",
+          "rechargeMember": "nomor of anggota who deposited today",
+          "rechargeAmount": "Total jumlah deposited by all anggota today",
+          "withdrawAmount": "Total jumlah withdrawn by all anggota today",
+          "chargeWithdrawDiff": "jumlah deposit - jumlah penarikan",
+          "excessRate": "(deposit - penarikan)/deposit",
+          "effectiveBet": "Total jumlah taruhan valid today",
+          "firstRechargeMember": "nomor of anggota making their deposit pertama today",
+          "firstRechargeAmount": "Total pertama jumlah deposit today",
+          "firstRechargeExcessRate": "(Deposit pertama anggota deposit - penarikan)/First jumlah deposit",
+          "firstRechargeWithdrawProportion": "nomor of pertama deposits and penarikan/nomor of pertama deposits",
+          "firstRechargePaymentRate": "Deposit pertama anggota/New anggota",
+          "firstRechargeRepeatRate": "anggota who re-deposit setelah deposit pertama/Deposit pertama anggota",
+          "newARPU": "New anggota jumlah deposit/New anggota",
+          "newARPPU": "New anggota jumlah deposit/New depositing anggota",
+          "oldMemberRechargeCount": "nomor of old anggota who deposited",
+          "oldMemberRechargeAmount": "Total jumlah deposit from old anggota",
+          "oldMemberPaymentRate": "Old anggota jumlah deposit/Old anggota daily active",
+          "oldMemberARPU": "Old anggota jumlah deposit/Old anggota daily active",
+          "oldMemberARPPU": "Old anggota jumlah deposit/Old anggota jumlah deposit",
+          "oldMemberWithdrawAmount": "Total jumlah penarikan of old anggota",
+          "oldMemberWithdrawCount": "nomor of old anggota who withdrew",
+          "oldMemberChargeWithdrawDiff": "Old anggota jumlah deposit - Old anggota jumlah penarikan",
+          "oldMemberExcessRate": "(Old anggota deposit - penarikan)/Old anggota jumlah deposit",
+          "paymentRate": "Depositing anggota/Daily active anggota",
+          "arpu": "jumlah deposit/Daily active anggota",
+          "arppu": "jumlah deposit/Depositing anggota",
+          "newMemberRechargeAmount": "Total jumlah deposit from new anggota",
+          "newMemberPaymentRate": "New depositing anggota/New anggota",
+          "newMemberRechargeCount": "nomor of new anggota who deposited",
+          "withdrawMemberCount": "nomor of anggota Who Withdrew Today"
+        },
+        "columns": {
+          "packageName": "Package Nama",
+          "date": "tanggal",
+          "newRegisterDeviceCount": "New Terdaftar Devices",
+          "newMemberCount": "tambah anggota",
+          "newMemberRechargeAmount": "New anggota jumlah deposit",
+          "newMemberRechargeCount": "New Depositing Anggota",
+          "effectiveNewRate": "Effective Baru Tarif",
+          "dailyActiveMemberCount": "Harian Active Anggota",
+          "oldMemberDailyActive": "Old Anggota Daily Aktif",
+          "rechargeMemberCount": "Depositing Anggota",
+          "rechargeAmount": "jumlah deposit",
+          "withdrawMemberCount": "Withdrawing Anggota",
+          "withdrawAmount": "Jumlah penarikan",
+          "chargeWithdrawDiff": "deposit-penarikan Diff",
+          "excessRate": "Surplus Tarif",
+          "effectiveBetAmount": "Taruhan valid",
+          "firstRechargeMemberCount": "Deposit pertama anggota",
+          "firstRechargeAmount": "First jumlah deposit",
+          "firstRechargeExcessRate": "Deposit pertama Surplus Rate",
+          "firstRechargeWithdrawProportion": "Deposit pertama penarikan Ratio",
+          "firstRechargePaymentRate": "Deposit pertama Payment Rate",
+          "firstRechargeReChargeCount": "Anggota Re-Deposit Setelah First",
+          "firstRechargeRepeatRate": "Deposit pertama Repeat Rate",
+          "newARPU": "tambah ARPU",
+          "newARPPU": "tambah ARPPU",
+          "oldMemberRechargeCount": "Old anggota Depositing jumlah",
+          "oldMemberRechargeAmount": "Old anggota jumlah deposit",
+          "oldMemberPaymentRate": "Old Anggota Pembayaran Tarif",
+          "oldMemberARPU": "Old Anggota ARPU",
+          "oldMemberARPPU": "Old Anggota ARPPU",
+          "oldMemberWithdrawAmount": "Old Anggota Jumlah penarikan",
+          "oldMemberWithdrawCount": "Old Anggota Jumlah penarikan",
+          "oldMemberChargeWithdrawDiff": "Old anggota deposit-penarikan Diff",
+          "oldMemberExcessRate": "Old Anggota Surplus Tarif",
+          "paymentRate": "Pembayaran Tarif",
+          "arpu": "ARPU",
+          "arppu": "ARPPU",
+          "newMemberPaymentRate": "Baru Anggota Dibayar Conversion Tarif"
+        }
+      },
+      "firstCharge": {
+        "title": "Deposit pertama Analysis",
+        "form": {
+          "packageId": "Kanal Sumber",
+          "packageIdPlaceholder": "Pilih kanal sumber",
+          "adGroup": "Ad Grup",
+          "adGroupPlaceholder": "Pilih ad grup",
+          "selectType": "Silakan pilih tipe",
+          "channelSource": "Kanal Sumber",
+          "adGroupOption": "Ad Grup"
+        },
+        "columns": {
+          "time": "waktu",
+          "dayRegisterRechargeUserCount": "Same-hari Registered First Deposits",
+          "dayRegisterNoRechargeUserCount": "Same-hari Registered No Deposit pertama",
+          "dayFirstRechargeUserCount": "Same-hari First Deposits",
+          "dayReRechargeUserCount": "Same-hari Re-deposits",
+          "dayNoReRechargeUserCount": "Same-hari No Re-deposit",
+          "nextDayRechargeUserCount": "hari 2 Re-deposits",
+          "nextDayNoRechargeUserCount": "hari 2 No Re-deposit",
+          "isretention2": "2-hari Re-deposit",
+          "isretention3": "3 hari Re-deposit",
+          "isretention4": "4-hari Re-deposit",
+          "isretention5": "5-hari Re-deposit",
+          "isretention6": "6-hari Re-deposit",
+          "isretention7": "7-hari Re-deposit",
+          "isretention10": "10-hari Re-deposit",
+          "isretention15": "15-hari Re-deposit",
+          "isretention20": "20-hari Re-deposit",
+          "isretention25": "25-hari Re-deposit",
+          "isretention30": "30-hari Re-deposit",
+          "isretention60": "60-hari Re-deposit",
+          "isretention90": "90-hari Re-deposit",
+          "isretention120": "120-hari Re-deposit",
+          "isretention180": "180-hari Re-deposit"
+        },
+        "common": {
+          "average": "Rata-rata",
+          "detail": "Detail",
+          "export": "ekspor",
+          "exportFailed": "ekspor gagal",
+          "download": "unduh",
+          "todayNoRechargeReport": "Same-hari No Re-deposit Report",
+          "nextDayNoRechargeReport": "hari 2 No Re-deposit Report",
+          "getLandingPageStyleFailed": "Gagal to get landing page Style"
+        }
+      },
+      "userChurn": {
+        "title": "Pengguna Churn Analysis",
+        "form": {
+          "packageId": "Kanal Sumber",
+          "packageIdPlaceholder": "Pilih kanal sumber",
+          "unActiveDays": "Tidak aktif Days",
+          "unActiveDaysPlaceholder": "Masukkan hari",
+          "userVipLevel": "anggota Level VIP",
+          "userVipLevelPlaceholder": "Silakan pilih anggota Level VIP",
+          "totalRechargeAmount": "Total jumlah deposit",
+          "totalWithdrawAmount": "Total Jumlah penarikan",
+          "minValue": "Minimum Nilai",
+          "maxValue": "Maksimum Nilai",
+          "unActiveDaysText": "to"
+        },
+        "columns": {
+          "userId": "ID anggota",
+          "packageName": "Kanal Sumber",
+          "vipLevel": "anggota Level VIP",
+          "totalRechargeAmount": "Total jumlah deposit",
+          "totalWithdrawAmount": "Total Jumlah penarikan",
+          "totalBalance": "Total saldo",
+          "lastLoginTime": "Waktu login terakhir",
+          "registerTime": "Waktu pendaftaran",
+          "mobileNo": "Nomor ponsel"
+        },
+        "common": {
+          "export": "ekspor",
+          "exportWithMobile": "Ekspor dengan mobile number",
+          "exportFailed": "ekspor gagal",
+          "exportSuccess": "ekspor berhasil",
+          "largeDataWaitMessage": "Data Volume too large, silakan Buka Download Center"
+        }
+      },
+      "dataExport": {
+        "title": "data ekspor Center",
+        "exportTaskList": "ekspor tugas daftar",
+        "memberDataExportApply": "anggota data ekspor aplikasi",
+        "form": {
+          "createTime": "Waktu dibuat",
+          "exportStatus": "ekspor Status",
+          "exportStatusPlaceholder": "Pilih ekspor status",
+          "creator": "Pembuat",
+          "lastLoginDate": "Terakhir Login Date",
+          "registerDate": "Registration tanggal",
+          "totalRechargeAmount": "Total jumlah deposit",
+          "totalWithdrawAmount": "Total Jumlah penarikan",
+          "totalBalance": "Total saldo",
+          "memberVipLevel": "anggota Level VIP",
+          "minValue": "Minimum Nilai",
+          "maxValue": "Maksimum Nilai",
+          "to": "To"
+        },
+        "columns": {
+          "taskId": "tugas ID",
+          "creator": "Pembuat",
+          "createTime": "Waktu dibuat",
+          "exportStatus": "ekspor Status",
+          "exportSummary": "Ekspor Ringkasan",
+          "action": "operasi"
+        },
+        "actions": {
+          "download": "unduh",
+          "viewPassword": "Lihat Kata sandi",
+          "retry": "Retry",
+          "password": "Kata sandi",
+          "confirm": "konfirmasi"
+        },
+        "buttons": {
+          "export": "ekspor",
+          "exportWithMobile": "Ekspor dengan mobile number"
+        },
+        "messages": {
+          "operationSuccess": "Operasi berhasil",
+          "exportApplicationSubmitted": "ekspor aplikasi Dikirim",
+          "exportSuccess": "ekspor berhasil",
+          "operationFailed": "Operasi gagal",
+          "exportFailed": "ekspor gagal"
+        },
+        "tips": {
+          "exportFieldsNote": "catatan",
+          "exportFieldsDescription": "ekspor fields: anggota ID, channel, anggota VIP level, Total jumlah deposit, Total jumlah penarikan, Total Balance, Last Login waktu, Last deposit waktu, Last penarikan waktu, Registration waktu, Mobile nomor (if aktif)"
+        }
+      },
+      "economyReport": {
+        "title": "Economic System Daily Laporan",
+        "actions": {
+          "dataDefinition": "Data Definition",
+          "dataDefinitionDescription": "Data Definition Deskripsi"
+        },
+        "columns": {
+          "activityAmount": "Total Distributed Jumlah",
+          "activityRate": "Distribution Rasio",
+          "activityCount": "nomor of Recipients",
+          "activityAmountTotalToday": "Total jumlah of Rewards Distributed for This Aktivitas Hari ini",
+          "activityAmountPerTotal": "Daily Aktivitas Distribution Total",
+          "activityCountTotalToday": "Number of Recipients for This Aktivitas Hari ini",
+          "activityCountPerTotal": "Total Number of Aktivitas Recipients",
+          "platformProfit": "platform profit and rugi",
+          "betAmount": "Jumlah taruhan",
+          "winningAmount": "Winning Jumlah",
+          "allActivityAmountTotalToday": "Total Rewards Distributed for Semua Activities Hari ini",
+          "rechargeTotalAmount": "Total jumlah deposit",
+          "allUserRechargeTotalAmount": "Total jumlah deposit of All Pengguna Today",
+          "activityRechargeRatio": "Activity Bonus Ratio",
+          "balanceActivityAmount": "Remaining Jumlah",
+          "balanceActivityRatio": "Remaining Rasio",
+          "allUserBetAmountToday": "Total Jumlah taruhan of Semua Pengguna Hari ini",
+          "activityBetRatio": "Platform Betting Rasio",
+          "rankingAmount": "Total Peringkat Rewards Distributed",
+          "rankingAmountTotalToday": "Total jumlah of Peringkat Rewards Distributed Hari ini",
+          "rankingAmountActivityRate": "Peringkat Distribution Rasio",
+          "rankingCount": "Number of Peringkat Recipients",
+          "rankingCountDescription": "nomor of recipients of today's ranking rewards. Click the download button to download the detailed pengguna daftar.",
+          "vipTotalAmount": "Total VIP Reward Distributed",
+          "vipTotalAmountDescription": "Total jumlah of VIP rewards distributed today",
+          "vipTotalAmountRatio": "VIP Distribution Rasio",
+          "vipTotalAllAmount": "Total VIP Jumlah",
+          "vipTotalCount": "nomor of VIP Recipients",
+          "vipTotalCountDescription": "nomor of VIP recipients today. Click the download button to download the detailed pengguna daftar.",
+          "oneDayoneData": "One Catatan Per Day"
+        }
+      },
+      "uncharged": {
+        "column": {
+          "samedayRegister": "Registered pengguna on the same hari",
+          "samedayLogin": "Pengguna who log in on the same day",
+          "neverFirstRecharge": "Deposit pertama prompt never shown",
+          "mindRecharge": "Deposit pertama prompt shown, no deposit made",
+          "rechargedButNextUnRecharge": "setelah deposit pertama, second deposit prompt shown but no deposit made",
+          "firstRechargeNerveMindRecharge": "setelah deposit pertama, second deposit prompt never shown",
+          "secondRechargeNerveMindRecharge": "Setelah second Deposit, third Deposit prompt shown but no Deposit made",
+          "neverThirdRecharge": "Setelah second Deposit, third Deposit prompt never shown",
+          "download": "unduh ({num})"
+        }
+      }
+    },
+    "userData": {
+      "title": "pengguna data",
+      "tabs": {
+        "userDataOverview": "Harian Data",
+        "userDataDetails": "Multi-hari data"
+      },
+      "schemas": {
+        "userId": "ID anggota",
+        "userIdPlaceholder": "Silakan masukkan ID anggota",
+        "parentId": "upline ID",
+        "parentIdPlaceholder": "Silakan masukkan upline ID",
+        "phone": "Telepon",
+        "phonePlaceholder": "Masukkan Phone",
+        "packageId": "Kanal",
+        "vipLevel": "Level VIP",
+        "reportDateStart": "statistik tanggal",
+        "isRecharge": "Sudah deposit",
+        "isRechargeAll": "semua",
+        "isRechargeNo": "tidak",
+        "isRechargeYes": "ya",
+        "time1": "Deposit pertama waktu",
+        "time2": "Waktu pendaftaran",
+        "statisticType1Placeholder": "Silakan pilih",
+        "quickQuery": "Quick Cari",
+        "firstRechargeAmount": "Deposit pertama",
+        "rechargeAmount": "Harian Deposit",
+        "withdrawAmount": "Daily Tarik",
+        "winLoseAmount": "Daily Menang/Kalah",
+        "betAmount": "Taruhan valid",
+        "activityAmount": "Bonus",
+        "commissionAmount": "Komisi",
+        "betCount": "Rounds",
+        "netAmount": "Net Jumlah",
+        "registerTime": "Register tanggal",
+        "firstRechargeDate": "Deposit pertama tanggal",
+        "statisticsStartTime": "statistik Tanggal mulai",
+        "statisticsEndTime": "statistik Tanggal berakhir",
+        "historyRechargeAmount": "Total Deposit",
+        "historyWithdrawAmount": "Total Tarik",
+        "historyActivityAmount": "Total Bonus",
+        "lookInfo": "lihat",
+        "moreDays": "Compare hari",
+        "userReport": "Daily Pengguna Laporan",
+        "moreDayReport": "Multi-day Laporan",
+        "userMoreDayReport": "Multi-day Pengguna Laporan"
+      },
+      "summary": {
+        "recharge": "Deposit",
+        "withdraw": "penarikan",
+        "winLose": "Menang/Kalah",
+        "bet": "Taruhan valid",
+        "activity": "promosi",
+        "commission": "Komisi",
+        "betCount": "Rounds",
+        "net": "Net"
+      },
+      "common": {
+        "export": "ekspor"
+      }
+    }
+  }
+}
