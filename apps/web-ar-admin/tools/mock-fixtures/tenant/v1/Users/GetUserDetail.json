@@ -1,0 +1,212 @@
+{
+  "data": {
+    "tenantId": 2001,
+    "userInfo": {
+      "userName": "9188888888",
+      "userId": 2247621,
+      "user_ID": null,
+      "user_Name": null,
+      "user_Name2": "",
+      "createTime": "2026-04-28 15:27:08",
+      "userRegisterTime": "2026-04-28 15:27:08",
+      "userRegisterIP": "8.211.42.128",
+      "userRegisterSameIPCount": 51,
+      "userRegisterDevice": "",
+      "userRegisterSameDeviceCount": 0,
+      "userLoginDate": "2026-04-28 00:00:00",
+      "userAmount": 101113.52,
+      "amountofCode": 0,
+      "allAmountofCode": 0,
+      "needAmountofCode": 0,
+      "thisCodingAmount": null,
+      "codeWash_Amount": 0,
+      "backWater_Amount": 0,
+      "parentUserID": 2247621,
+      "rechargesLeve": 2,
+      "rechargesLeveStr": "L2",
+      "integral": 0,
+      "remark": "",
+      "useLanguage": "zh",
+      "userState": 1,
+      "userStateStr": "启用",
+      "regType": 1,
+      "isValid": 0,
+      "isValidStr": "否",
+      "isRebate_Bet": 0,
+      "isRebateBetStr": "否",
+      "userVipLevelId": 0,
+      "userVipExperienceId": 0,
+      "safeAmount": 0,
+      "safeEarnings": 0,
+      "safeTotalEarnings": 0,
+      "dayShareRate": 0.58,
+      "children_1_Total": 0,
+      "partnerReward": 0,
+      "oldUserReturnAward": 0,
+      "turntableInviteReward": 0,
+      "returnNewRechargeReward": 0,
+      "redEnvelope_Recharge": 0,
+      "tgActivityAward": 0,
+      "vipReward_1": 0,
+      "vipReward_2": 0,
+      "vipIntegral_1": 0,
+      "vipIntegral_2": 0,
+      "integral_Invite_Level": 0,
+      "recharge_1_Amount": 10000,
+      "recharge_1_Time": "2026-04-28",
+      "recharge_2_Amount": 100000,
+      "recharge_2_Time": "2026-04-29",
+      "recharge_3_Amount": 0,
+      "recharge_3_Time": null,
+      "userRechargePriceSum_All": 110000,
+      "userRechargePriceSum_Today": 0,
+      "userWithdrawPriceSum_All": 4432,
+      "userWithdrawPriceSum_Today": 0,
+      "userWithdrawPriceSum_0": 0,
+      "userWithdrawPriceSum_3": 0,
+      "recharge_Times_All": 2,
+      "withdraw_Times_1": 4,
+      "userWithdrawCommissionSum_All": 0,
+      "recharge_Withdraw_Sum_All": 105568,
+      "cwDifference_Today": 0,
+      "cwDifference_All": 105568,
+      "validAmount_Today": 0,
+      "validAmount_All": 126.06,
+      "profitAmount_Today": 0,
+      "profitAmount_All": -94.56,
+      "activityDiscount_Today": 0,
+      "activityDiscount_All": 0,
+      "userBetAmount": 0,
+      "betTotalBegin": "2026-04-30 17:59:02",
+      "betTotalEnd": "2026-05-08 23:59:59",
+      "financeCommission": 0,
+      "financeRedEnvelope": 0,
+      "financeDailySignIn": 0,
+      "financeSuperJackpot": 0,
+      "financeNewbieGift": 0,
+      "financeTournament": 0,
+      "financeNewMemberGift": 0,
+      "financeWeeklyAward": 0,
+      "financeDailyAward": 0,
+      "financeRechargeGift": 0,
+      "financeManualRecharge": 110000,
+      "financeRegisterBonus": 0,
+      "financeBonusRecharge": 0,
+      "financeFirstRechargeReward": 0,
+      "financeBigWheel": 0,
+      "financeInviteReward": 0
+    },
+    "loginLogList": [
+      {
+        "time": "2026-04-29 20:16:01",
+        "loginIp": "8.211.42.128",
+        "ip_UserID_Count": 6878
+      },
+      {
+        "time": "2026-04-29 11:22:11",
+        "loginIp": "78.46.104.229",
+        "ip_UserID_Count": 1
+      },
+      {
+        "time": "2026-04-28 20:07:20",
+        "loginIp": "8.211.42.128",
+        "ip_UserID_Count": 40
+      }
+    ],
+    "rechargeList": [
+      {
+        "upTime": "2026-04-29 18:07:18",
+        "price": 100000,
+        "type": "人工充值",
+        "payTypeId": 0
+      },
+      {
+        "upTime": "2026-04-28 15:28:15",
+        "price": 10000,
+        "type": "人工充值",
+        "payTypeId": 0
+      }
+    ],
+    "withdrawList": [
+      {
+        "upTime": "2026-04-30 17:59:02",
+        "price": 1000,
+        "thisCodingAmount": 0,
+        "type": "人工确认-8",
+        "withdrawTypeId": 8
+      },
+      {
+        "upTime": "2026-04-29 18:29:59",
+        "price": 704,
+        "thisCodingAmount": 0,
+        "type": "人工确认-8",
+        "withdrawTypeId": 8
+      },
+      {
+        "upTime": "2026-04-29 18:27:23",
+        "price": 968,
+        "thisCodingAmount": 0,
+        "type": "人工确认-8",
+        "withdrawTypeId": 8
+      }
+    ],
+    "financeList": [
+      {
+        "type": 5,
+        "financeAmountSum": 11088,
+        "finance_TimesSum": 11
+      },
+      {
+        "type": 6,
+        "financeAmountSum": 2200,
+        "finance_TimesSum": 2
+      },
+      {
+        "type": 11,
+        "financeAmountSum": 110000,
+        "finance_TimesSum": 2
+      },
+      {
+        "type": 21,
+        "financeAmountSum": 16424,
+        "finance_TimesSum": 3
+      },
+      {
+        "type": 22,
+        "financeAmountSum": 16425.52,
+        "finance_TimesSum": 3
+      }
+    ],
+    "lotteryList": [
+      {
+        "type": 14001,
+        "lotteryAmountSum": 117.51,
+        "serverAmountSum": 0,
+        "profitAmountSum": 49.29,
+        "lotteryTimesSum": 27,
+        "categoryType": 2
+      },
+      {
+        "type": 14010,
+        "lotteryAmountSum": 8.55,
+        "serverAmountSum": 0,
+        "profitAmountSum": 8.55,
+        "lotteryTimesSum": 3,
+        "categoryType": 2
+      },
+      {
+        "type": 14031,
+        "lotteryAmountSum": 0,
+        "serverAmountSum": 0,
+        "profitAmountSum": 36.72,
+        "lotteryTimesSum": 12,
+        "categoryType": 2
+      }
+    ],
+    "lastWithdrawTime": "2026-04-30 17:59:02",
+    "thirdamout": 30
+  },
+  "code": 0,
+  "msg": "成功",
+  "msgCode": 0
+}

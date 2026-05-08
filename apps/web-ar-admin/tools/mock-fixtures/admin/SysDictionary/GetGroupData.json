@@ -1,0 +1,4222 @@
+{
+  "data": {
+    "countryDictionaryList": [
+      {
+        "id": 104838,
+        "dictCode": "VCT",
+        "dictName": "圣文森特和格林纳丁斯",
+        "dictCategory": 4,
+        "dictValue": "VC"
+      },
+      {
+        "id": 104668,
+        "dictCode": "ERI",
+        "dictName": "厄立特里亚",
+        "dictCategory": 4,
+        "dictValue": "ER"
+      },
+      {
+        "id": 104606,
+        "dictCode": "ALB",
+        "dictName": "阿尔巴尼亚",
+        "dictCategory": 4,
+        "dictValue": "AL"
+      },
+      {
+        "id": 104763,
+        "dictCode": "NFK",
+        "dictName": "诺福克岛",
+        "dictCategory": 4,
+        "dictValue": "NF"
+      },
+      {
+        "id": 104709,
+        "dictCode": "IRQ",
+        "dictName": "伊拉克",
+        "dictCategory": 4,
+        "dictValue": "IQ"
+      },
+      {
+        "id": 104667,
+        "dictCode": "EGY",
+        "dictName": "埃及",
+        "dictCategory": 4,
+        "dictValue": "EG"
+      },
+      {
+        "id": 104601,
+        "dictCode": "ABW",
+        "dictName": "阿鲁巴",
+        "dictCategory": 4,
+        "dictValue": "AW"
+      },
+      {
+        "id": 104691,
+        "dictCode": "GRD",
+        "dictName": "格林纳达",
+        "dictCategory": 4,
+        "dictValue": "GD"
+      },
+      {
+        "id": 104662,
+        "dictCode": "DMA",
+        "dictName": "多米尼克",
+        "dictCategory": 4,
+        "dictValue": "DM"
+      },
+      {
+        "id": 104696,
+        "dictCode": "GUY",
+        "dictName": "圭亚那",
+        "dictCategory": 4,
+        "dictValue": "GY"
+      },
+      {
+        "id": 104748,
+        "dictCode": "MMR",
+        "dictName": "缅甸",
+        "dictCategory": 4,
+        "dictValue": "MM"
+      },
+      {
+        "id": 104661,
+        "dictCode": "DJI",
+        "dictName": "吉布提",
+        "dictCategory": 4,
+        "dictValue": "DJ"
+      },
+      {
+        "id": 104789,
+        "dictCode": "ROU",
+        "dictName": "罗马尼亚",
+        "dictCategory": 4,
+        "dictValue": "RO"
+      },
+      {
+        "id": 104745,
+        "dictCode": "MKD",
+        "dictName": "北马其顿",
+        "dictCategory": 4,
+        "dictValue": "MK"
+      },
+      {
+        "id": 104750,
+        "dictCode": "MNG",
+        "dictName": "蒙古国",
+        "dictCategory": 4,
+        "dictValue": "MN"
+      },
+      {
+        "id": 104742,
+        "dictCode": "MDV",
+        "dictName": "马尔代夫",
+        "dictCategory": 4,
+        "dictValue": "MV"
+      },
+      {
+        "id": 104629,
+        "dictCode": "BLR",
+        "dictName": "白俄罗斯",
+        "dictCategory": 4,
+        "dictValue": "BY"
+      },
+      {
+        "id": 104792,
+        "dictCode": "SAU",
+        "dictName": "沙特阿拉伯",
+        "dictCategory": 4,
+        "dictValue": "SA"
+      },
+      {
+        "id": 104767,
+        "dictCode": "NLD",
+        "dictName": "荷兰",
+        "dictCategory": 4,
+        "dictValue": "NL"
+      },
+      {
+        "id": 104783,
+        "dictCode": "PRT",
+        "dictName": "葡萄牙",
+        "dictCategory": 4,
+        "dictValue": "PT"
+      },
+      {
+        "id": 104760,
+        "dictCode": "NAM",
+        "dictName": "纳米比亚",
+        "dictCategory": 4,
+        "dictValue": "NA"
+      },
+      {
+        "id": 104780,
+        "dictCode": "POL",
+        "dictName": "波兰",
+        "dictCategory": 4,
+        "dictValue": "PL"
+      },
+      {
+        "id": 104666,
+        "dictCode": "ECU",
+        "dictName": "厄瓜多尔",
+        "dictCategory": 4,
+        "dictValue": "EC"
+      },
+      {
+        "id": 104802,
+        "dictCode": "SMR",
+        "dictName": "圣马力诺",
+        "dictCategory": 4,
+        "dictValue": "SM"
+      },
+      {
+        "id": 104665,
+        "dictCode": "DZA",
+        "dictName": "阿尔及利亚",
+        "dictCategory": 4,
+        "dictValue": "DZ"
+      },
+      {
+        "id": 104660,
+        "dictCode": "DEU",
+        "dictName": "德国",
+        "dictCategory": 4,
+        "dictValue": "DE"
+      },
+      {
+        "id": 104746,
+        "dictCode": "MLI",
+        "dictName": "马里",
+        "dictCategory": 4,
+        "dictValue": "ML"
+      },
+      {
+        "id": 104609,
+        "dictCode": "ARG",
+        "dictName": "阿根廷",
+        "dictCategory": 4,
+        "dictValue": "AR"
+      },
+      {
+        "id": 104743,
+        "dictCode": "MEX",
+        "dictName": "墨西哥",
+        "dictCategory": 4,
+        "dictValue": "MX"
+      },
+      {
+        "id": 104778,
+        "dictCode": "PLW",
+        "dictName": "帕劳",
+        "dictCategory": 4,
+        "dictValue": "PW"
+      },
+      {
+        "id": 104752,
+        "dictCode": "MOZ",
+        "dictName": "莫桑比克",
+        "dictCategory": 4,
+        "dictValue": "MZ"
+      },
+      {
+        "id": 104740,
+        "dictCode": "MDA",
+        "dictName": "摩尔多瓦",
+        "dictCategory": 4,
+        "dictValue": "MD"
+      },
+      {
+        "id": 104755,
+        "dictCode": "MTQ",
+        "dictName": "马提尼克",
+        "dictCategory": 4,
+        "dictValue": "MQ"
+      },
+      {
+        "id": 104631,
+        "dictCode": "BMU",
+        "dictName": "百慕大",
+        "dictCategory": 4,
+        "dictValue": "BM"
+      },
+      {
+        "id": 104781,
+        "dictCode": "PRI",
+        "dictName": "波尔图黎各",
+        "dictCategory": 4,
+        "dictValue": "PR"
+      },
+      {
+        "id": 104689,
+        "dictCode": "GNQ",
+        "dictName": "赤道几内亚",
+        "dictCategory": 4,
+        "dictValue": "GQ"
+      },
+      {
+        "id": 104758,
+        "dictCode": "MYS",
+        "dictName": "马来西亚",
+        "dictCategory": 4,
+        "dictValue": "MY"
+      },
+      {
+        "id": 104715,
+        "dictCode": "JOR",
+        "dictName": "约旦",
+        "dictCategory": 4,
+        "dictValue": "JO"
+      },
+      {
+        "id": 104632,
+        "dictCode": "BOL",
+        "dictName": "玻利维亚",
+        "dictCategory": 4,
+        "dictValue": "BO"
+      },
+      {
+        "id": 104786,
+        "dictCode": "PYF",
+        "dictName": "法属波利尼西亚",
+        "dictCategory": 4,
+        "dictValue": "PF"
+      },
+      {
+        "id": 104684,
+        "dictCode": "GIB",
+        "dictName": "直布罗陀",
+        "dictCategory": 4,
+        "dictValue": "GI"
+      },
+      {
+        "id": 104679,
+        "dictCode": "GAB",
+        "dictName": "加蓬",
+        "dictCategory": 4,
+        "dictValue": "GA"
+      },
+      {
+        "id": 104800,
+        "dictCode": "SLE",
+        "dictName": "塞拉利昂",
+        "dictCategory": 4,
+        "dictValue": "SL"
+      },
+      {
+        "id": 104637,
+        "dictCode": "BVT",
+        "dictName": "布韦岛",
+        "dictCategory": 4,
+        "dictValue": "BV"
+      },
+      {
+        "id": 104687,
+        "dictCode": "GMB",
+        "dictName": "冈比亚",
+        "dictCategory": 4,
+        "dictValue": "GM"
+      },
+      {
+        "id": 104733,
+        "dictCode": "LTU",
+        "dictName": "立陶宛",
+        "dictCategory": 4,
+        "dictValue": "LT"
+      },
+      {
+        "id": 104807,
+        "dictCode": "STP",
+        "dictName": "圣多美和普林西比",
+        "dictCategory": 4,
+        "dictValue": "ST"
+      },
+      {
+        "id": 104682,
+        "dictCode": "GGY",
+        "dictName": "根西",
+        "dictCategory": 4,
+        "dictValue": "GG"
+      },
+      {
+        "id": 104677,
+        "dictCode": "FRO",
+        "dictName": "法罗群岛",
+        "dictCategory": 4,
+        "dictValue": "FO"
+      },
+      {
+        "id": 104788,
+        "dictCode": "REU",
+        "dictName": "留尼汪",
+        "dictCategory": 4,
+        "dictValue": "RE"
+      },
+      {
+        "id": 104736,
+        "dictCode": "MAC",
+        "dictName": "澳门",
+        "dictCategory": 4,
+        "dictValue": "MO"
+      },
+      {
+        "id": 104751,
+        "dictCode": "MNP",
+        "dictName": "北马里亚纳群岛",
+        "dictCategory": 4,
+        "dictValue": "MP"
+      },
+      {
+        "id": 104670,
+        "dictCode": "ESP",
+        "dictName": "西班牙",
+        "dictCategory": 4,
+        "dictValue": "ES"
+      },
+      {
+        "id": 104735,
+        "dictCode": "LVA",
+        "dictName": "拉脱维亚",
+        "dictCategory": 4,
+        "dictValue": "LV"
+      },
+      {
+        "id": 104809,
+        "dictCode": "SVK",
+        "dictName": "斯洛伐克",
+        "dictCategory": 4,
+        "dictValue": "SK"
+      },
+      {
+        "id": 104611,
+        "dictCode": "ASM",
+        "dictName": "美属萨摩亚",
+        "dictCategory": 4,
+        "dictValue": "AS"
+      },
+      {
+        "id": 104776,
+        "dictCode": "PER",
+        "dictName": "秘鲁",
+        "dictCategory": 4,
+        "dictValue": "PE"
+      },
+      {
+        "id": 104754,
+        "dictCode": "MSR",
+        "dictName": "蒙特塞拉特",
+        "dictCategory": 4,
+        "dictValue": "MS"
+      },
+      {
+        "id": 104825,
+        "dictCode": "TTO",
+        "dictName": "特立尼达和多巴哥",
+        "dictCategory": 4,
+        "dictValue": "TT"
+      },
+      {
+        "id": 104782,
+        "dictCode": "PRK",
+        "dictName": "朝鲜",
+        "dictCategory": 4,
+        "dictValue": "KP"
+      },
+      {
+        "id": 104738,
+        "dictCode": "MAR",
+        "dictName": "摩洛哥",
+        "dictCategory": 4,
+        "dictValue": "MA"
+      },
+      {
+        "id": 104688,
+        "dictCode": "GNB",
+        "dictName": "几内亚比绍",
+        "dictCategory": 4,
+        "dictValue": "GW"
+      },
+      {
+        "id": 104616,
+        "dictCode": "AUT",
+        "dictName": "奥地利",
+        "dictCategory": 4,
+        "dictValue": "AT"
+      },
+      {
+        "id": 104775,
+        "dictCode": "PCN",
+        "dictName": "皮特凯恩群岛",
+        "dictCategory": 4,
+        "dictValue": "PN"
+      },
+      {
+        "id": 104757,
+        "dictCode": "MWI",
+        "dictName": "马拉维",
+        "dictCategory": 4,
+        "dictValue": "MW"
+      },
+      {
+        "id": 104659,
+        "dictCode": "CZE",
+        "dictName": "捷克",
+        "dictCategory": 4,
+        "dictValue": "CZ"
+      },
+      {
+        "id": 104714,
+        "dictCode": "JEY",
+        "dictName": "泽西",
+        "dictCategory": 4,
+        "dictValue": "JE"
+      },
+      {
+        "id": 104633,
+        "dictCode": "BRA",
+        "dictName": "巴西",
+        "dictCategory": 4,
+        "dictValue": "BR"
+      },
+      {
+        "id": 104820,
+        "dictCode": "TJK",
+        "dictName": "塔吉克斯坦",
+        "dictCategory": 4,
+        "dictValue": "TJ"
+      },
+      {
+        "id": 104787,
+        "dictCode": "QAT",
+        "dictName": "卡塔尔",
+        "dictCategory": 4,
+        "dictValue": "QA"
+      },
+      {
+        "id": 104770,
+        "dictCode": "NRU",
+        "dictName": "瑙鲁",
+        "dictCategory": 4,
+        "dictValue": "NR"
+      },
+      {
+        "id": 104803,
+        "dictCode": "SOM",
+        "dictName": "索马里",
+        "dictCategory": 4,
+        "dictValue": "SO"
+      },
+      {
+        "id": 104656,
+        "dictCode": "CXR",
+        "dictName": "圣诞岛",
+        "dictCategory": 4,
+        "dictValue": "CX"
+      },
+      {
+        "id": 104717,
+        "dictCode": "KAZ",
+        "dictName": "哈萨克斯坦",
+        "dictCategory": 4,
+        "dictValue": "KZ"
+      },
+      {
+        "id": 104634,
+        "dictCode": "BRB",
+        "dictName": "巴巴多斯",
+        "dictCategory": 4,
+        "dictValue": "BB"
+      },
+      {
+        "id": 104823,
+        "dictCode": "TLS",
+        "dictName": "东帝汶",
+        "dictCategory": 4,
+        "dictValue": "TL"
+      },
+      {
+        "id": 104784,
+        "dictCode": "PRY",
+        "dictName": "巴拉圭",
+        "dictCategory": 4,
+        "dictValue": "PY"
+      },
+      {
+        "id": 104686,
+        "dictCode": "GLP",
+        "dictName": "瓜德罗普",
+        "dictCategory": 4,
+        "dictValue": "GP"
+      },
+      {
+        "id": 104732,
+        "dictCode": "LSO",
+        "dictName": "莱索托",
+        "dictCategory": 4,
+        "dictValue": "LS"
+      },
+      {
+        "id": 104806,
+        "dictCode": "SSD",
+        "dictName": "南苏丹",
+        "dictCategory": 4,
+        "dictValue": "SS"
+      },
+      {
+        "id": 104653,
+        "dictCode": "CRI",
+        "dictName": "哥斯达黎加",
+        "dictCategory": 4,
+        "dictValue": "CR"
+      },
+      {
+        "id": 104712,
+        "dictCode": "ITA",
+        "dictName": "意大利",
+        "dictCategory": 4,
+        "dictValue": "IT"
+      },
+      {
+        "id": 104639,
+        "dictCode": "CAF",
+        "dictName": "中非",
+        "dictCategory": 4,
+        "dictValue": "CF"
+      },
+      {
+        "id": 104681,
+        "dictCode": "GEO",
+        "dictName": "格鲁吉亚",
+        "dictCategory": 4,
+        "dictValue": "GE"
+      },
+      {
+        "id": 104674,
+        "dictCode": "FJI",
+        "dictName": "斐济",
+        "dictCategory": 4,
+        "dictValue": "FJ"
+      },
+      {
+        "id": 104731,
+        "dictCode": "LKA",
+        "dictName": "斯里兰卡",
+        "dictCategory": 4,
+        "dictValue": "LK"
+      },
+      {
+        "id": 104805,
+        "dictCode": "SRB",
+        "dictName": "塞尔维亚",
+        "dictCategory": 4,
+        "dictValue": "RS"
+      },
+      {
+        "id": 104671,
+        "dictCode": "EST",
+        "dictName": "爱沙尼亚",
+        "dictCategory": 4,
+        "dictValue": "EE"
+      },
+      {
+        "id": 104734,
+        "dictCode": "LUX",
+        "dictName": "卢森堡",
+        "dictCategory": 4,
+        "dictValue": "LU"
+      },
+      {
+        "id": 104808,
+        "dictCode": "SUR",
+        "dictName": "苏里南",
+        "dictCategory": 4,
+        "dictValue": "SR"
+      },
+      {
+        "id": 104612,
+        "dictCode": "ATA",
+        "dictName": "南极洲",
+        "dictCategory": 4,
+        "dictValue": "AQ"
+      },
+      {
+        "id": 104718,
+        "dictCode": "KEN",
+        "dictName": "肯尼亚",
+        "dictCategory": 4,
+        "dictValue": "KE"
+      },
+      {
+        "id": 104779,
+        "dictCode": "PNG",
+        "dictName": "巴布亚新几内亚",
+        "dictCategory": 4,
+        "dictValue": "PG"
+      },
+      {
+        "id": 104753,
+        "dictCode": "MRT",
+        "dictName": "毛里塔尼亚",
+        "dictCategory": 4,
+        "dictValue": "MR"
+      },
+      {
+        "id": 104672,
+        "dictCode": "ETH",
+        "dictName": "埃塞俄比亚",
+        "dictCategory": 4,
+        "dictValue": "ET"
+      },
+      {
+        "id": 104824,
+        "dictCode": "TON",
+        "dictName": "汤加",
+        "dictCategory": 4,
+        "dictValue": "TO"
+      },
+      {
+        "id": 104617,
+        "dictCode": "AZE",
+        "dictName": "阿塞拜疆",
+        "dictCategory": 4,
+        "dictValue": "AZ"
+      },
+      {
+        "id": 104774,
+        "dictCode": "PAN",
+        "dictName": "巴拿马",
+        "dictCategory": 4,
+        "dictValue": "PA"
+      },
+      {
+        "id": 104756,
+        "dictCode": "MUS",
+        "dictName": "毛里求斯",
+        "dictCategory": 4,
+        "dictValue": "MU"
+      },
+      {
+        "id": 104849,
+        "dictCode": "ZWE",
+        "dictName": "津巴布韦",
+        "dictCategory": 4,
+        "dictValue": "ZW"
+      },
+      {
+        "id": 104630,
+        "dictCode": "BLZ",
+        "dictName": "伯利兹",
+        "dictCategory": 4,
+        "dictValue": "BZ"
+      },
+      {
+        "id": 104827,
+        "dictCode": "TUR",
+        "dictName": "土耳其",
+        "dictCategory": 4,
+        "dictValue": "TR"
+      },
+      {
+        "id": 104614,
+        "dictCode": "ATG",
+        "dictName": "安提瓜和巴布达",
+        "dictCategory": 4,
+        "dictValue": "AG"
+      },
+      {
+        "id": 104773,
+        "dictCode": "PAK",
+        "dictName": "巴基斯坦",
+        "dictCategory": 4,
+        "dictValue": "PK"
+      },
+      {
+        "id": 104759,
+        "dictCode": "MYT",
+        "dictName": "马约特",
+        "dictCategory": 4,
+        "dictValue": "YT"
+      },
+      {
+        "id": 104657,
+        "dictCode": "CYM",
+        "dictName": "开曼群岛",
+        "dictCategory": 4,
+        "dictValue": "KY"
+      },
+      {
+        "id": 104844,
+        "dictCode": "WLF",
+        "dictName": "瓦利斯和富图纳",
+        "dictCategory": 4,
+        "dictValue": "WF"
+      },
+      {
+        "id": 104716,
+        "dictCode": "JPN",
+        "dictName": "日本",
+        "dictCategory": 4,
+        "dictValue": "JP"
+      },
+      {
+        "id": 104635,
+        "dictCode": "BRN",
+        "dictName": "文莱",
+        "dictCategory": 4,
+        "dictValue": "BN"
+      },
+      {
+        "id": 104822,
+        "dictCode": "TKM",
+        "dictName": "土库曼斯坦",
+        "dictCategory": 4,
+        "dictValue": "TM"
+      },
+      {
+        "id": 104785,
+        "dictCode": "PSE",
+        "dictName": "巴勒斯坦",
+        "dictCategory": 4,
+        "dictValue": "PS"
+      },
+      {
+        "id": 104685,
+        "dictCode": "GIN",
+        "dictName": "几内亚",
+        "dictCategory": 4,
+        "dictValue": "GN"
+      },
+      {
+        "id": 104619,
+        "dictCode": "BEL",
+        "dictName": "比利时",
+        "dictCategory": 4,
+        "dictValue": "BE"
+      },
+      {
+        "id": 104678,
+        "dictCode": "FSM",
+        "dictName": "密克罗尼西亚联邦",
+        "dictCategory": 4,
+        "dictValue": "FM"
+      },
+      {
+        "id": 104801,
+        "dictCode": "SLV",
+        "dictName": "萨尔瓦多",
+        "dictCategory": 4,
+        "dictValue": "SV"
+      },
+      {
+        "id": 104654,
+        "dictCode": "CUB",
+        "dictName": "古巴",
+        "dictCategory": 4,
+        "dictValue": "CU"
+      },
+      {
+        "id": 104843,
+        "dictCode": "VUT",
+        "dictName": "瓦努阿图",
+        "dictCategory": 4,
+        "dictValue": "VU"
+      },
+      {
+        "id": 104711,
+        "dictCode": "ISR",
+        "dictName": "以色列",
+        "dictCategory": 4,
+        "dictValue": "IL"
+      },
+      {
+        "id": 104636,
+        "dictCode": "BTN",
+        "dictName": "不丹",
+        "dictCategory": 4,
+        "dictValue": "BT"
+      },
+      {
+        "id": 104680,
+        "dictCode": "GBR",
+        "dictName": "英国",
+        "dictCategory": 4,
+        "dictValue": "GB"
+      },
+      {
+        "id": 104675,
+        "dictCode": "FLK",
+        "dictName": "福克兰群岛",
+        "dictCategory": 4,
+        "dictValue": "FK"
+      },
+      {
+        "id": 104730,
+        "dictCode": "LIE",
+        "dictName": "列支敦士登",
+        "dictCategory": 4,
+        "dictValue": "LI"
+      },
+      {
+        "id": 104804,
+        "dictCode": "SPM",
+        "dictName": "圣皮埃尔和密克隆",
+        "dictCategory": 4,
+        "dictValue": "PM"
+      },
+      {
+        "id": 104651,
+        "dictCode": "COM",
+        "dictName": "科摩罗",
+        "dictCategory": 4,
+        "dictValue": "KM"
+      },
+      {
+        "id": 104811,
+        "dictCode": "SWE",
+        "dictName": "瑞典",
+        "dictCategory": 4,
+        "dictValue": "SE"
+      },
+      {
+        "id": 104828,
+        "dictCode": "TUV",
+        "dictName": "图瓦卢",
+        "dictCategory": 4,
+        "dictValue": "TV"
+      },
+      {
+        "id": 104683,
+        "dictCode": "GHA",
+        "dictName": "加纳",
+        "dictCategory": 4,
+        "dictValue": "GH"
+      },
+      {
+        "id": 104676,
+        "dictCode": "FRA",
+        "dictName": "法国",
+        "dictCategory": 4,
+        "dictValue": "FR"
+      },
+      {
+        "id": 104737,
+        "dictCode": "MAF",
+        "dictName": "法属圣马丁",
+        "dictCategory": 4,
+        "dictValue": "MF"
+      },
+      {
+        "id": 104613,
+        "dictCode": "ATF",
+        "dictName": "法属南部和南极领地",
+        "dictCategory": 4,
+        "dictValue": "TF"
+      },
+      {
+        "id": 104673,
+        "dictCode": "FIN",
+        "dictName": "芬兰",
+        "dictCategory": 4,
+        "dictValue": "FI"
+      },
+      {
+        "id": 104723,
+        "dictCode": "KOR",
+        "dictName": "韩国",
+        "dictCategory": 4,
+        "dictValue": "KR"
+      },
+      {
+        "id": 104610,
+        "dictCode": "ARM",
+        "dictName": "亚美尼亚",
+        "dictCategory": 4,
+        "dictValue": "AM"
+      },
+      {
+        "id": 104777,
+        "dictCode": "PHL",
+        "dictName": "菲律宾",
+        "dictCategory": 4,
+        "dictValue": "PH"
+      },
+      {
+        "id": 104848,
+        "dictCode": "ZMB",
+        "dictName": "赞比亚",
+        "dictCategory": 4,
+        "dictValue": "ZM"
+      },
+      {
+        "id": 104826,
+        "dictCode": "TUN",
+        "dictName": "突尼斯",
+        "dictCategory": 4,
+        "dictValue": "TN"
+      },
+      {
+        "id": 104739,
+        "dictCode": "MCO",
+        "dictName": "摩纳哥",
+        "dictCategory": 4,
+        "dictValue": "MC"
+      },
+      {
+        "id": 104615,
+        "dictCode": "AUS",
+        "dictName": "澳大利亚",
+        "dictCategory": 4,
+        "dictValue": "AU"
+      },
+      {
+        "id": 104772,
+        "dictCode": "OMN",
+        "dictName": "阿曼",
+        "dictCategory": 4,
+        "dictValue": "OM"
+      },
+      {
+        "id": 104658,
+        "dictCode": "CYP",
+        "dictName": "塞浦路斯",
+        "dictCategory": 4,
+        "dictValue": "CY"
+      },
+      {
+        "id": 104847,
+        "dictCode": "ZAF",
+        "dictName": "南非",
+        "dictCategory": 4,
+        "dictValue": "ZA"
+      },
+      {
+        "id": 104821,
+        "dictCode": "TKL",
+        "dictName": "托克劳",
+        "dictCategory": 4,
+        "dictValue": "TK"
+      },
+      {
+        "id": 104771,
+        "dictCode": "NZL",
+        "dictName": "新西兰",
+        "dictCategory": 4,
+        "dictValue": "NZ"
+      },
+      {
+        "id": 104655,
+        "dictCode": "CUW",
+        "dictName": "库拉索",
+        "dictCategory": 4,
+        "dictValue": "CW"
+      },
+      {
+        "id": 104842,
+        "dictCode": "VNM",
+        "dictName": "越南",
+        "dictCategory": 4,
+        "dictValue": "VN"
+      },
+      {
+        "id": 104710,
+        "dictCode": "ISL",
+        "dictName": "冰岛",
+        "dictCategory": 4,
+        "dictValue": "IS"
+      },
+      {
+        "id": 104640,
+        "dictCode": "CAN",
+        "dictName": "加拿大",
+        "dictCategory": 4,
+        "dictValue": "CA"
+      },
+      {
+        "id": 104652,
+        "dictCode": "CPV",
+        "dictName": "佛得角",
+        "dictCategory": 4,
+        "dictValue": "CV"
+      },
+      {
+        "id": 104841,
+        "dictCode": "VIR",
+        "dictName": "美属维尔京群岛",
+        "dictCategory": 4,
+        "dictValue": "VI"
+      },
+      {
+        "id": 104713,
+        "dictCode": "JAM",
+        "dictName": "牙买加",
+        "dictCategory": 4,
+        "dictValue": "JM"
+      },
+      {
+        "id": 104638,
+        "dictCode": "BWA",
+        "dictName": "博茨瓦纳",
+        "dictCategory": 4,
+        "dictValue": "BW"
+      },
+      {
+        "id": 104702,
+        "dictCode": "HUN",
+        "dictName": "匈牙利",
+        "dictCategory": 4,
+        "dictValue": "HU"
+      },
+      {
+        "id": 104643,
+        "dictCode": "CHL",
+        "dictName": "智利",
+        "dictCategory": 4,
+        "dictValue": "CL"
+      },
+      {
+        "id": 104813,
+        "dictCode": "SXM",
+        "dictName": "荷属圣马丁",
+        "dictCategory": 4,
+        "dictValue": "SX"
+      },
+      {
+        "id": 104646,
+        "dictCode": "CMR",
+        "dictName": "喀麦隆",
+        "dictCategory": 4,
+        "dictValue": "CM"
+      },
+      {
+        "id": 104720,
+        "dictCode": "KHM",
+        "dictName": "柬埔寨",
+        "dictCategory": 4,
+        "dictValue": "KH"
+      },
+      {
+        "id": 104814,
+        "dictCode": "SYC",
+        "dictName": "塞舌尔",
+        "dictCategory": 4,
+        "dictValue": "SC"
+      },
+      {
+        "id": 104719,
+        "dictCode": "KGZ",
+        "dictName": "吉尔吉斯斯坦",
+        "dictCategory": 4,
+        "dictValue": "KG"
+      },
+      {
+        "id": 104725,
+        "dictCode": "LAO",
+        "dictName": "老挝",
+        "dictCategory": 4,
+        "dictValue": "LA"
+      },
+      {
+        "id": 104819,
+        "dictCode": "THA",
+        "dictName": "泰国",
+        "dictCategory": 4,
+        "dictValue": "TH"
+      },
+      {
+        "id": 104846,
+        "dictCode": "YEM",
+        "dictName": "也门",
+        "dictCategory": 4,
+        "dictValue": "YE"
+      },
+      {
+        "id": 104726,
+        "dictCode": "LBN",
+        "dictName": "黎巴嫩",
+        "dictCategory": 4,
+        "dictValue": "LB"
+      },
+      {
+        "id": 104620,
+        "dictCode": "BEN",
+        "dictName": "贝宁",
+        "dictCategory": 4,
+        "dictValue": "BJ"
+      },
+      {
+        "id": 104845,
+        "dictCode": "WSM",
+        "dictName": "萨摩亚",
+        "dictCategory": 4,
+        "dictValue": "WS"
+      },
+      {
+        "id": 104799,
+        "dictCode": "SLB",
+        "dictName": "所罗门群岛",
+        "dictCategory": 4,
+        "dictValue": "SB"
+      },
+      {
+        "id": 104832,
+        "dictCode": "UKR",
+        "dictName": "乌克兰",
+        "dictCategory": 4,
+        "dictValue": "UA"
+      },
+      {
+        "id": 104618,
+        "dictCode": "BDI",
+        "dictName": "布隆迪",
+        "dictCategory": 4,
+        "dictValue": "BI"
+      },
+      {
+        "id": 104627,
+        "dictCode": "BIH",
+        "dictName": "波黑",
+        "dictCategory": 4,
+        "dictValue": "BA"
+      },
+      {
+        "id": 104840,
+        "dictCode": "VGB",
+        "dictName": "英属维尔京群岛",
+        "dictCategory": 4,
+        "dictValue": "VG"
+      },
+      {
+        "id": 104794,
+        "dictCode": "SEN",
+        "dictName": "塞内加尔",
+        "dictCategory": 4,
+        "dictValue": "SN"
+      },
+      {
+        "id": 104769,
+        "dictCode": "NPL",
+        "dictName": "尼泊尔",
+        "dictCategory": 4,
+        "dictValue": "NP"
+      },
+      {
+        "id": 104703,
+        "dictCode": "IDN",
+        "dictName": "印度尼西亚",
+        "dictCategory": 4,
+        "dictValue": "ID"
+      },
+      {
+        "id": 104642,
+        "dictCode": "CHE",
+        "dictName": "瑞士",
+        "dictCategory": 4,
+        "dictValue": "CH"
+      },
+      {
+        "id": 104837,
+        "dictCode": "VAT",
+        "dictName": "梵蒂冈",
+        "dictCategory": 4,
+        "dictValue": "VA"
+      },
+      {
+        "id": 104650,
+        "dictCode": "COL",
+        "dictName": "哥伦比亚",
+        "dictCategory": 4,
+        "dictValue": "CO"
+      },
+      {
+        "id": 104810,
+        "dictCode": "SVN",
+        "dictName": "斯洛文尼亚",
+        "dictCategory": 4,
+        "dictValue": "SI"
+      },
+      {
+        "id": 104797,
+        "dictCode": "SHN",
+        "dictName": "圣赫勒拿、阿森松和特里斯坦-达库尼亚",
+        "dictCategory": 4,
+        "dictValue": "SH"
+      },
+      {
+        "id": 104829,
+        "dictCode": "TWN",
+        "dictName": "中国台湾省[注 1]",
+        "dictCategory": 4,
+        "dictValue": "TW"
+      },
+      {
+        "id": 104700,
+        "dictCode": "HRV",
+        "dictName": "克罗地亚",
+        "dictCategory": 4,
+        "dictValue": "HR"
+      },
+      {
+        "id": 104645,
+        "dictCode": "CIV",
+        "dictName": "科特迪瓦",
+        "dictCategory": 4,
+        "dictValue": "CI"
+      },
+      {
+        "id": 104834,
+        "dictCode": "URY",
+        "dictName": "乌拉圭",
+        "dictCategory": 4,
+        "dictValue": "UY"
+      },
+      {
+        "id": 104721,
+        "dictCode": "KIR",
+        "dictName": "基里巴斯",
+        "dictCategory": 4,
+        "dictValue": "KI"
+      },
+      {
+        "id": 104698,
+        "dictCode": "HMD",
+        "dictName": "赫德岛和麦克唐纳群岛",
+        "dictCategory": 4,
+        "dictValue": "HM"
+      },
+      {
+        "id": 104815,
+        "dictCode": "SYR",
+        "dictName": "叙利亚",
+        "dictCategory": 4,
+        "dictValue": "SY"
+      },
+      {
+        "id": 104705,
+        "dictCode": "IND",
+        "dictName": "印度",
+        "dictCategory": 4,
+        "dictValue": "IN"
+      },
+      {
+        "id": 104648,
+        "dictCode": "COG",
+        "dictName": "刚果共和国",
+        "dictCategory": 4,
+        "dictValue": "CG"
+      },
+      {
+        "id": 104839,
+        "dictCode": "VEN",
+        "dictName": "委内瑞拉",
+        "dictCategory": 4,
+        "dictValue": "VE"
+      },
+      {
+        "id": 104605,
+        "dictCode": "ALA",
+        "dictName": "奥兰",
+        "dictCategory": 4,
+        "dictValue": "AX"
+      },
+      {
+        "id": 104722,
+        "dictCode": "KNA",
+        "dictName": "圣基茨和尼维斯",
+        "dictCategory": 4,
+        "dictValue": "KN"
+      },
+      {
+        "id": 104816,
+        "dictCode": "TCA",
+        "dictName": "特克斯和凯科斯群岛",
+        "dictCategory": 4,
+        "dictValue": "TC"
+      },
+      {
+        "id": 104727,
+        "dictCode": "LBR",
+        "dictName": "利比里亚",
+        "dictCategory": 4,
+        "dictValue": "LR"
+      },
+      {
+        "id": 104692,
+        "dictCode": "GRL",
+        "dictName": "格陵兰",
+        "dictCategory": 4,
+        "dictValue": "GL"
+      },
+      {
+        "id": 104623,
+        "dictCode": "BGD",
+        "dictName": "孟加拉国",
+        "dictCategory": 4,
+        "dictValue": "BD"
+      },
+      {
+        "id": 104798,
+        "dictCode": "SJM",
+        "dictName": "斯瓦尔巴和扬马延",
+        "dictCategory": 4,
+        "dictValue": "SJ"
+      },
+      {
+        "id": 104603,
+        "dictCode": "AGO",
+        "dictName": "安哥拉",
+        "dictCategory": 4,
+        "dictValue": "AO"
+      },
+      {
+        "id": 104833,
+        "dictCode": "UMI",
+        "dictName": "美国本土外小岛屿",
+        "dictCategory": 4,
+        "dictValue": "UM"
+      },
+      {
+        "id": 104728,
+        "dictCode": "LBY",
+        "dictName": "利比亚",
+        "dictCategory": 4,
+        "dictValue": "LY"
+      },
+      {
+        "id": 104697,
+        "dictCode": "HKG",
+        "dictName": "香港",
+        "dictCategory": 4,
+        "dictValue": "HK"
+      },
+      {
+        "id": 104749,
+        "dictCode": "MNE",
+        "dictName": "黑山",
+        "dictCategory": 4,
+        "dictValue": "ME"
+      },
+      {
+        "id": 104626,
+        "dictCode": "BHS",
+        "dictName": "巴哈马",
+        "dictCategory": 4,
+        "dictValue": "BS"
+      },
+      {
+        "id": 104641,
+        "dictCode": "CCK",
+        "dictName": "科科斯（基林）群岛",
+        "dictCategory": 4,
+        "dictValue": "CC"
+      },
+      {
+        "id": 104830,
+        "dictCode": "TZA",
+        "dictName": "坦桑尼亚",
+        "dictCategory": 4,
+        "dictValue": "TZ"
+      },
+      {
+        "id": 104694,
+        "dictCode": "GUF",
+        "dictName": "法属圭亚那",
+        "dictCategory": 4,
+        "dictValue": "GF"
+      },
+      {
+        "id": 104625,
+        "dictCode": "BHR",
+        "dictName": "巴林",
+        "dictCategory": 4,
+        "dictValue": "BH"
+      },
+      {
+        "id": 104796,
+        "dictCode": "SGS",
+        "dictName": "南乔治亚和南桑威奇群岛",
+        "dictCategory": 4,
+        "dictValue": "GS"
+      },
+      {
+        "id": 104701,
+        "dictCode": "HTI",
+        "dictName": "海地",
+        "dictCategory": 4,
+        "dictValue": "HT"
+      },
+      {
+        "id": 104644,
+        "dictCode": "CHN",
+        "dictName": "中国",
+        "dictCategory": 4,
+        "dictValue": "CN"
+      },
+      {
+        "id": 104835,
+        "dictCode": "USA",
+        "dictName": "美国",
+        "dictCategory": 4,
+        "dictValue": "US"
+      },
+      {
+        "id": 104628,
+        "dictCode": "BLM",
+        "dictName": "圣巴泰勒米",
+        "dictCategory": 4,
+        "dictValue": "BL"
+      },
+      {
+        "id": 104699,
+        "dictCode": "HND",
+        "dictName": "洪都拉斯",
+        "dictCategory": 4,
+        "dictValue": "HN"
+      },
+      {
+        "id": 104812,
+        "dictCode": "SWZ",
+        "dictName": "斯威士兰",
+        "dictCategory": 4,
+        "dictValue": "SZ"
+      },
+      {
+        "id": 104791,
+        "dictCode": "RWA",
+        "dictName": "卢旺达",
+        "dictCategory": 4,
+        "dictValue": "RW"
+      },
+      {
+        "id": 104764,
+        "dictCode": "NGA",
+        "dictName": "尼日利亚",
+        "dictCategory": 4,
+        "dictValue": "NG"
+      },
+      {
+        "id": 104706,
+        "dictCode": "IOT",
+        "dictName": "英属印度洋领地",
+        "dictCategory": 4,
+        "dictValue": "IO"
+      },
+      {
+        "id": 104647,
+        "dictCode": "COD",
+        "dictName": "刚果民主共和国",
+        "dictCategory": 4,
+        "dictValue": "CD"
+      },
+      {
+        "id": 104604,
+        "dictCode": "AIA",
+        "dictName": "安圭拉",
+        "dictCategory": 4,
+        "dictValue": "AI"
+      },
+      {
+        "id": 104817,
+        "dictCode": "TCD",
+        "dictName": "乍得",
+        "dictCategory": 4,
+        "dictValue": "TD"
+      },
+      {
+        "id": 104761,
+        "dictCode": "NCL",
+        "dictName": "新喀里多尼亚",
+        "dictCategory": 4,
+        "dictValue": "NC"
+      },
+      {
+        "id": 104669,
+        "dictCode": "ESH",
+        "dictName": "西撒哈拉",
+        "dictCategory": 4,
+        "dictValue": "EH"
+      },
+      {
+        "id": 104607,
+        "dictCode": "AND",
+        "dictName": "安道尔",
+        "dictCategory": 4,
+        "dictValue": "AD"
+      },
+      {
+        "id": 104724,
+        "dictCode": "KWT",
+        "dictName": "科威特",
+        "dictCategory": 4,
+        "dictValue": "KW"
+      },
+      {
+        "id": 104693,
+        "dictCode": "GTM",
+        "dictName": "危地马拉",
+        "dictCategory": 4,
+        "dictValue": "GT"
+      },
+      {
+        "id": 104818,
+        "dictCode": "TGO",
+        "dictName": "多哥",
+        "dictCategory": 4,
+        "dictValue": "TG"
+      },
+      {
+        "id": 104762,
+        "dictCode": "NER",
+        "dictName": "尼日尔",
+        "dictCategory": 4,
+        "dictValue": "NE"
+      },
+      {
+        "id": 104622,
+        "dictCode": "BFA",
+        "dictName": "布基纳法索",
+        "dictCategory": 4,
+        "dictValue": "BF"
+      },
+      {
+        "id": 104708,
+        "dictCode": "IRN",
+        "dictName": "伊朗",
+        "dictCategory": 4,
+        "dictValue": "IR"
+      },
+      {
+        "id": 104664,
+        "dictCode": "DOM",
+        "dictName": "多米尼加",
+        "dictCategory": 4,
+        "dictValue": "DO"
+      },
+      {
+        "id": 104602,
+        "dictCode": "AFG",
+        "dictName": "阿富汗",
+        "dictCategory": 4,
+        "dictValue": "AF"
+      },
+      {
+        "id": 104729,
+        "dictCode": "LCA",
+        "dictName": "圣卢西亚",
+        "dictCategory": 4,
+        "dictValue": "LC"
+      },
+      {
+        "id": 104690,
+        "dictCode": "GRC",
+        "dictName": "希腊",
+        "dictCategory": 4,
+        "dictValue": "GR"
+      },
+      {
+        "id": 104621,
+        "dictCode": "BES",
+        "dictName": "荷兰加勒比区",
+        "dictCategory": 4,
+        "dictValue": "BQ"
+      },
+      {
+        "id": 104663,
+        "dictCode": "DNK",
+        "dictName": "丹麦",
+        "dictCategory": 4,
+        "dictValue": "DK"
+      },
+      {
+        "id": 104831,
+        "dictCode": "UGA",
+        "dictName": "乌干达",
+        "dictCategory": 4,
+        "dictValue": "UG"
+      },
+      {
+        "id": 104695,
+        "dictCode": "GUM",
+        "dictName": "关岛",
+        "dictCategory": 4,
+        "dictValue": "GU"
+      },
+      {
+        "id": 104747,
+        "dictCode": "MLT",
+        "dictName": "马耳他",
+        "dictCategory": 4,
+        "dictValue": "MT"
+      },
+      {
+        "id": 104624,
+        "dictCode": "BGR",
+        "dictName": "保加利亚",
+        "dictCategory": 4,
+        "dictValue": "BG"
+      },
+      {
+        "id": 104795,
+        "dictCode": "SGP",
+        "dictName": "新加坡",
+        "dictCategory": 4,
+        "dictValue": "SG"
+      },
+      {
+        "id": 104608,
+        "dictCode": "ARE",
+        "dictName": "阿联酋",
+        "dictCategory": 4,
+        "dictValue": "AE"
+      },
+      {
+        "id": 104768,
+        "dictCode": "NOR",
+        "dictName": "挪威",
+        "dictCategory": 4,
+        "dictValue": "NO"
+      },
+      {
+        "id": 104836,
+        "dictCode": "UZB",
+        "dictName": "乌兹别克斯坦",
+        "dictCategory": 4,
+        "dictValue": "UZ"
+      },
+      {
+        "id": 104744,
+        "dictCode": "MHL",
+        "dictName": "马绍尔群岛",
+        "dictCategory": 4,
+        "dictValue": "MH"
+      },
+      {
+        "id": 104790,
+        "dictCode": "RUS",
+        "dictName": "俄罗斯",
+        "dictCategory": 4,
+        "dictValue": "RU"
+      },
+      {
+        "id": 104765,
+        "dictCode": "NIC",
+        "dictName": "尼加拉瓜",
+        "dictCategory": 4,
+        "dictValue": "NI"
+      },
+      {
+        "id": 104707,
+        "dictCode": "IRL",
+        "dictName": "爱尔兰",
+        "dictCategory": 4,
+        "dictValue": "IE"
+      },
+      {
+        "id": 104741,
+        "dictCode": "MDG",
+        "dictName": "马达加斯加",
+        "dictCategory": 4,
+        "dictValue": "MG"
+      },
+      {
+        "id": 104793,
+        "dictCode": "SDN",
+        "dictName": "苏丹",
+        "dictCategory": 4,
+        "dictValue": "SD"
+      },
+      {
+        "id": 104766,
+        "dictCode": "NIU",
+        "dictName": "纽埃",
+        "dictCategory": 4,
+        "dictValue": "NU"
+      },
+      {
+        "id": 104704,
+        "dictCode": "IMN",
+        "dictName": "马恩岛",
+        "dictCategory": 4,
+        "dictValue": "IM"
+      },
+      {
+        "id": 104649,
+        "dictCode": "COK",
+        "dictName": "库克群岛",
+        "dictCategory": 4,
+        "dictValue": "CK"
+      }
+    ],
+    "currencyDictionaryList": [
+      {
+        "id": 104998,
+        "dictCode": "XOF",
+        "dictName": "西非法郎",
+        "dictCategory": 1,
+        "dictValue": "CFA"
+      },
+      {
+        "id": 104954,
+        "dictCode": "PGK",
+        "dictName": "巴布亚新几内亚基那",
+        "dictCategory": 1,
+        "dictValue": "K"
+      },
+      {
+        "id": 104893,
+        "dictCode": "FJD",
+        "dictName": "斐济元",
+        "dictCategory": 1,
+        "dictValue": "FJ$"
+      },
+      {
+        "id": 104953,
+        "dictCode": "PEN",
+        "dictName": "秘鲁索尔",
+        "dictCategory": 1,
+        "dictValue": "S/."
+      },
+      {
+        "id": 104877,
+        "dictCode": "CHF",
+        "dictName": "瑞士法郎",
+        "dictCategory": 1,
+        "dictValue": "SFr."
+      },
+      {
+        "id": 104992,
+        "dictCode": "VES",
+        "dictName": "委内瑞拉玻利瓦尔",
+        "dictCategory": 1,
+        "dictValue": ""
+      },
+      {
+        "id": 104938,
+        "dictCode": "MRU",
+        "dictName": "毛里塔尼亚乌吉亚",
+        "dictCategory": 1,
+        "dictValue": "UM"
+      },
+      {
+        "id": 104874,
+        "dictCode": "BZD",
+        "dictName": "伯利兹元",
+        "dictCategory": 1,
+        "dictValue": ""
+      },
+      {
+        "id": 104899,
+        "dictCode": "GMD",
+        "dictName": "冈比亚达拉西",
+        "dictCategory": 1,
+        "dictValue": "D"
+      },
+      {
+        "id": 104861,
+        "dictCode": "BBD",
+        "dictName": "巴巴多斯元",
+        "dictCategory": 1,
+        "dictValue": "Bds$"
+      },
+      {
+        "id": 104991,
+        "dictCode": "UZS",
+        "dictName": "乌兹别克斯坦索姆",
+        "dictCategory": 1,
+        "dictValue": "so'm"
+      },
+      {
+        "id": 104855,
+        "dictCode": "AOA",
+        "dictName": "安哥拉宽扎",
+        "dictCategory": 1,
+        "dictValue": "Kz"
+      },
+      {
+        "id": 104871,
+        "dictCode": "BTN",
+        "dictName": "不丹努尔特鲁姆",
+        "dictCategory": 1,
+        "dictValue": "Nu."
+      },
+      {
+        "id": 104994,
+        "dictCode": "VUV",
+        "dictName": "瓦努阿图瓦图",
+        "dictCategory": 1,
+        "dictValue": "VT"
+      },
+      {
+        "id": 104856,
+        "dictCode": "ARS",
+        "dictName": "阿根廷比索",
+        "dictCategory": 1,
+        "dictValue": "$"
+      },
+      {
+        "id": 104853,
+        "dictCode": "AMD",
+        "dictName": "亚美尼亚德拉姆",
+        "dictCategory": 1,
+        "dictValue": "֏"
+      },
+      {
+        "id": 104903,
+        "dictCode": "HKD",
+        "dictName": "港元",
+        "dictCategory": 1,
+        "dictValue": "$"
+      },
+      {
+        "id": 104890,
+        "dictCode": "ERN",
+        "dictName": "厄立特里亚纳克法",
+        "dictCategory": 1,
+        "dictValue": ""
+      },
+      {
+        "id": 104904,
+        "dictCode": "HNL",
+        "dictName": "洪都拉斯伦皮拉",
+        "dictCategory": 1,
+        "dictValue": "L"
+      },
+      {
+        "id": 104952,
+        "dictCode": "PAB",
+        "dictName": "巴拿马巴波亚",
+        "dictCategory": 1,
+        "dictValue": "B/."
+      },
+      {
+        "id": 104895,
+        "dictCode": "GBP",
+        "dictName": "英镑",
+        "dictCategory": 1,
+        "dictValue": "£"
+      },
+      {
+        "id": 104878,
+        "dictCode": "CLP",
+        "dictName": "智利比索",
+        "dictCategory": 1,
+        "dictValue": "$"
+      },
+      {
+        "id": 104951,
+        "dictCode": "OMR",
+        "dictName": "阿曼里亚尔",
+        "dictCategory": 1,
+        "dictValue": "ر.ع."
+      },
+      {
+        "id": 104896,
+        "dictCode": "GEL",
+        "dictName": "格鲁吉亚拉里",
+        "dictCategory": 1,
+        "dictValue": "₾"
+      },
+      {
+        "id": 104875,
+        "dictCode": "CAD",
+        "dictName": "加拿大元",
+        "dictCategory": 1,
+        "dictValue": "C$"
+      },
+      {
+        "id": 104860,
+        "dictCode": "BAM",
+        "dictName": "波斯尼亚和黑塞哥维那可兑换马克",
+        "dictCategory": 1,
+        "dictValue": "KM"
+      },
+      {
+        "id": 104990,
+        "dictCode": "UYU",
+        "dictName": "乌拉圭比索",
+        "dictCategory": 1,
+        "dictValue": "$U"
+      },
+      {
+        "id": 104872,
+        "dictCode": "BWP",
+        "dictName": "博茨瓦纳普拉",
+        "dictCategory": 1,
+        "dictValue": "P"
+      },
+      {
+        "id": 104922,
+        "dictCode": "KWD",
+        "dictName": "科威特第纳尔",
+        "dictCategory": 1,
+        "dictValue": "ك"
+      },
+      {
+        "id": 104863,
+        "dictCode": "BGN",
+        "dictName": "保加利亚列弗",
+        "dictCategory": 1,
+        "dictValue": "лв"
+      },
+      {
+        "id": 104997,
+        "dictCode": "XCD",
+        "dictName": "东加勒比元",
+        "dictCategory": 1,
+        "dictValue": "$"
+      },
+      {
+        "id": 104927,
+        "dictCode": "LKR",
+        "dictName": "斯里兰卡卢比",
+        "dictCategory": 1,
+        "dictValue": "Rs"
+      },
+      {
+        "id": 104866,
+        "dictCode": "BMD",
+        "dictName": "百慕大元",
+        "dictCategory": 1,
+        "dictValue": "$"
+      },
+      {
+        "id": 104900,
+        "dictCode": "GNF",
+        "dictName": "几内亚法郎",
+        "dictCategory": 1,
+        "dictValue": "GFr"
+      },
+      {
+        "id": 104891,
+        "dictCode": "ETB",
+        "dictName": "埃塞俄比亚比尔",
+        "dictCategory": 1,
+        "dictValue": "Br"
+      },
+      {
+        "id": 104869,
+        "dictCode": "BRL",
+        "dictName": "巴西雷亚尔",
+        "dictCategory": 1,
+        "dictValue": "R$"
+      },
+      {
+        "id": 104905,
+        "dictCode": "HTG",
+        "dictName": "海地古德",
+        "dictCategory": 1,
+        "dictValue": "G"
+      },
+      {
+        "id": 104892,
+        "dictCode": "EUR",
+        "dictName": "欧元",
+        "dictCategory": 1,
+        "dictValue": "€"
+      },
+      {
+        "id": 104906,
+        "dictCode": "HUF",
+        "dictName": "匈牙利福林",
+        "dictCategory": 1,
+        "dictValue": "Ft"
+      },
+      {
+        "id": 104897,
+        "dictCode": "GHS",
+        "dictName": "加纳塞地",
+        "dictCategory": 1,
+        "dictValue": "GH¢"
+      },
+      {
+        "id": 104993,
+        "dictCode": "VND",
+        "dictName": "越南盾",
+        "dictCategory": 1,
+        "dictValue": "₫"
+      },
+      {
+        "id": 105002,
+        "dictCode": "ZAR",
+        "dictName": "南非兰特",
+        "dictCategory": 1,
+        "dictValue": "R"
+      },
+      {
+        "id": 104949,
+        "dictCode": "NPR",
+        "dictName": "尼泊尔卢比",
+        "dictCategory": 1,
+        "dictValue": "₨"
+      },
+      {
+        "id": 104923,
+        "dictCode": "KYD",
+        "dictName": "开曼群岛元",
+        "dictCategory": 1,
+        "dictValue": "$"
+      },
+      {
+        "id": 104862,
+        "dictCode": "BDT",
+        "dictName": "孟加拉塔卡",
+        "dictCategory": 1,
+        "dictValue": "Tk"
+      },
+      {
+        "id": 104996,
+        "dictCode": "XAF",
+        "dictName": "中非法郎",
+        "dictCategory": 1,
+        "dictValue": ""
+      },
+      {
+        "id": 105001,
+        "dictCode": "YER",
+        "dictName": "也门里亚尔",
+        "dictCategory": 1,
+        "dictValue": ""
+      },
+      {
+        "id": 104920,
+        "dictCode": "KPW",
+        "dictName": "朝鲜圆",
+        "dictCategory": 1,
+        "dictValue": ""
+      },
+      {
+        "id": 104865,
+        "dictCode": "BIF",
+        "dictName": "布隆迪法郎",
+        "dictCategory": 1,
+        "dictValue": ""
+      },
+      {
+        "id": 104995,
+        "dictCode": "WST",
+        "dictName": "萨摩亚塔拉",
+        "dictCategory": 1,
+        "dictValue": "WS$"
+      },
+      {
+        "id": 105004,
+        "dictCode": "ZWG",
+        "dictName": "津巴布韦金",
+        "dictCategory": 1,
+        "dictValue": ""
+      },
+      {
+        "id": 104901,
+        "dictCode": "GTQ",
+        "dictName": "危地马拉格查尔",
+        "dictCategory": 1,
+        "dictValue": "Q"
+      },
+      {
+        "id": 104947,
+        "dictCode": "NIO",
+        "dictName": "尼加拉瓜科多巴",
+        "dictCategory": 1,
+        "dictValue": "C$"
+      },
+      {
+        "id": 104925,
+        "dictCode": "LAK",
+        "dictName": "老挝基普",
+        "dictCategory": 1,
+        "dictValue": "₭"
+      },
+      {
+        "id": 104868,
+        "dictCode": "BOB",
+        "dictName": "玻利维亚诺",
+        "dictCategory": 1,
+        "dictValue": "Bs"
+      },
+      {
+        "id": 104902,
+        "dictCode": "GYD",
+        "dictName": "圭亚那元",
+        "dictCategory": 1,
+        "dictValue": "GY$"
+      },
+      {
+        "id": 104907,
+        "dictCode": "IDR",
+        "dictName": "印尼盾",
+        "dictCategory": 1,
+        "dictValue": "Rp"
+      },
+      {
+        "id": 104894,
+        "dictCode": "FKP",
+        "dictName": "福克兰群岛镑",
+        "dictCategory": 1,
+        "dictValue": "£"
+      },
+      {
+        "id": 104908,
+        "dictCode": "ILS",
+        "dictName": "以色列新谢克尔",
+        "dictCategory": 1,
+        "dictValue": "₪"
+      },
+      {
+        "id": 104969,
+        "dictCode": "SGD",
+        "dictName": "新加坡元",
+        "dictCategory": 1,
+        "dictValue": "S$"
+      },
+      {
+        "id": 104966,
+        "dictCode": "SCR",
+        "dictName": "塞舌尔卢比",
+        "dictCategory": 1,
+        "dictValue": "₨"
+      },
+      {
+        "id": 105000,
+        "dictCode": "XSU",
+        "dictName": "苏克雷",
+        "dictCategory": 1,
+        "dictValue": ""
+      },
+      {
+        "id": 104921,
+        "dictCode": "KRW",
+        "dictName": "韩圆",
+        "dictCategory": 1,
+        "dictValue": "₩"
+      },
+      {
+        "id": 104864,
+        "dictCode": "BHD",
+        "dictName": "巴林第纳尔",
+        "dictCategory": 1,
+        "dictValue": ".د.ب"
+      },
+      {
+        "id": 104988,
+        "dictCode": "UGX",
+        "dictName": "乌干达先令",
+        "dictCategory": 1,
+        "dictValue": "Ush"
+      },
+      {
+        "id": 104944,
+        "dictCode": "MZN",
+        "dictName": "莫桑比克梅蒂卡尔",
+        "dictCategory": 1,
+        "dictValue": "MT"
+      },
+      {
+        "id": 104926,
+        "dictCode": "LBP",
+        "dictName": "黎巴嫩镑",
+        "dictCategory": 1,
+        "dictValue": "ل.ل."
+      },
+      {
+        "id": 104867,
+        "dictCode": "BND",
+        "dictName": "文莱元",
+        "dictCategory": 1,
+        "dictValue": "B$"
+      },
+      {
+        "id": 104941,
+        "dictCode": "MWK",
+        "dictName": "马拉维克瓦查",
+        "dictCategory": 1,
+        "dictValue": "MK"
+      },
+      {
+        "id": 104942,
+        "dictCode": "MXN",
+        "dictName": "墨西哥比索",
+        "dictCategory": 1,
+        "dictValue": "Mex$"
+      },
+      {
+        "id": 104928,
+        "dictCode": "LRD",
+        "dictName": "利比里亚元",
+        "dictCategory": 1,
+        "dictValue": "L$"
+      },
+      {
+        "id": 104909,
+        "dictCode": "INR",
+        "dictName": "印度卢比",
+        "dictCategory": 1,
+        "dictValue": "₹"
+      },
+      {
+        "id": 104972,
+        "dictCode": "SOS",
+        "dictName": "索马里先令",
+        "dictCategory": 1,
+        "dictValue": ""
+      },
+      {
+        "id": 104967,
+        "dictCode": "SDG",
+        "dictName": "苏丹镑",
+        "dictCategory": 1,
+        "dictValue": ""
+      },
+      {
+        "id": 104975,
+        "dictCode": "STN",
+        "dictName": "圣多美和普林西比多布拉",
+        "dictCategory": 1,
+        "dictValue": ""
+      },
+      {
+        "id": 105003,
+        "dictCode": "ZMW",
+        "dictName": "赞比亚克瓦查",
+        "dictCategory": 1,
+        "dictValue": "ZK"
+      },
+      {
+        "id": 104948,
+        "dictCode": "NOK",
+        "dictName": "挪威克朗",
+        "dictCategory": 1,
+        "dictValue": "kr"
+      },
+      {
+        "id": 104964,
+        "dictCode": "SAR",
+        "dictName": "沙特里亚尔",
+        "dictCategory": 1,
+        "dictValue": "SR"
+      },
+      {
+        "id": 104989,
+        "dictCode": "USD",
+        "dictName": "美元",
+        "dictCategory": 1,
+        "dictValue": "$"
+      },
+      {
+        "id": 104945,
+        "dictCode": "NAD",
+        "dictName": "纳米比亚元",
+        "dictCategory": 1,
+        "dictValue": "$"
+      },
+      {
+        "id": 104961,
+        "dictCode": "RSD",
+        "dictName": "塞尔维亚第纳尔",
+        "dictCategory": 1,
+        "dictValue": "РСД"
+      },
+      {
+        "id": 104946,
+        "dictCode": "NGN",
+        "dictName": "尼日利亚奈拉",
+        "dictCategory": 1,
+        "dictValue": "₦"
+      },
+      {
+        "id": 104924,
+        "dictCode": "KZT",
+        "dictName": "哈萨克斯坦坚戈",
+        "dictCategory": 1,
+        "dictValue": "₸"
+      },
+      {
+        "id": 104913,
+        "dictCode": "JMD",
+        "dictName": "牙买加元",
+        "dictCategory": 1,
+        "dictValue": "J$"
+      },
+      {
+        "id": 104943,
+        "dictCode": "MYR",
+        "dictName": "马来西亚令吉",
+        "dictCategory": 1,
+        "dictValue": "RM"
+      },
+      {
+        "id": 104929,
+        "dictCode": "LSL",
+        "dictName": "莱索托洛蒂",
+        "dictCategory": 1,
+        "dictValue": "L"
+      },
+      {
+        "id": 104916,
+        "dictCode": "KES",
+        "dictName": "肯尼亚先令",
+        "dictCategory": 1,
+        "dictValue": "Ksh"
+      },
+      {
+        "id": 104980,
+        "dictCode": "TMT",
+        "dictName": "土库曼斯坦马纳特",
+        "dictCategory": 1,
+        "dictValue": "T"
+      },
+      {
+        "id": 104971,
+        "dictCode": "SLL",
+        "dictName": "塞拉利昂利昂",
+        "dictCategory": 1,
+        "dictValue": "Le"
+      },
+      {
+        "id": 104985,
+        "dictCode": "TWD",
+        "dictName": "新台币",
+        "dictCategory": 1,
+        "dictValue": "NT$"
+      },
+      {
+        "id": 104968,
+        "dictCode": "SEK",
+        "dictName": "瑞典克朗",
+        "dictCategory": 1,
+        "dictValue": "kr"
+      },
+      {
+        "id": 104974,
+        "dictCode": "SSP",
+        "dictName": "南苏丹镑",
+        "dictCategory": 1,
+        "dictValue": ""
+      },
+      {
+        "id": 104986,
+        "dictCode": "TZS",
+        "dictName": "坦桑尼亚先令",
+        "dictCategory": 1,
+        "dictValue": "tzs"
+      },
+      {
+        "id": 104965,
+        "dictCode": "SBD",
+        "dictName": "所罗门群岛元",
+        "dictCategory": 1,
+        "dictValue": "SI$"
+      },
+      {
+        "id": 104977,
+        "dictCode": "SZL",
+        "dictName": "斯威士兰里兰吉尼",
+        "dictCategory": 1,
+        "dictValue": "L"
+      },
+      {
+        "id": 104880,
+        "dictCode": "COP",
+        "dictName": "哥伦比亚比索",
+        "dictCategory": 1,
+        "dictValue": "$"
+      },
+      {
+        "id": 104934,
+        "dictCode": "MKD",
+        "dictName": "马其顿代纳尔",
+        "dictCategory": 1,
+        "dictValue": "ден"
+      },
+      {
+        "id": 104962,
+        "dictCode": "RUB",
+        "dictName": "俄罗斯卢布",
+        "dictCategory": 1,
+        "dictValue": ""
+      },
+      {
+        "id": 104937,
+        "dictCode": "MOP",
+        "dictName": "澳门币",
+        "dictCategory": 1,
+        "dictValue": "MOP$"
+      },
+      {
+        "id": 104912,
+        "dictCode": "ISK",
+        "dictName": "冰岛克朗",
+        "dictCategory": 1,
+        "dictValue": "kr"
+      },
+      {
+        "id": 104932,
+        "dictCode": "MDL",
+        "dictName": "摩尔多瓦列伊",
+        "dictCategory": 1,
+        "dictValue": "L"
+      },
+      {
+        "id": 104940,
+        "dictCode": "MVR",
+        "dictName": "马尔代夫拉菲亚",
+        "dictCategory": 1,
+        "dictValue": "MVR"
+      },
+      {
+        "id": 104911,
+        "dictCode": "IRR",
+        "dictName": "伊朗里亚尔",
+        "dictCategory": 1,
+        "dictValue": ""
+      },
+      {
+        "id": 104981,
+        "dictCode": "TND",
+        "dictName": "突尼斯第纳尔",
+        "dictCategory": 1,
+        "dictValue": "DT"
+      },
+      {
+        "id": 104970,
+        "dictCode": "SHP",
+        "dictName": "圣赫勒拿镑",
+        "dictCategory": 1,
+        "dictValue": "£"
+      },
+      {
+        "id": 104889,
+        "dictCode": "EGP",
+        "dictName": "埃及镑",
+        "dictCategory": 1,
+        "dictValue": "E£"
+      },
+      {
+        "id": 104914,
+        "dictCode": "JOD",
+        "dictName": "约旦第纳尔",
+        "dictCategory": 1,
+        "dictValue": "JD"
+      },
+      {
+        "id": 104858,
+        "dictCode": "AWG",
+        "dictName": "阿鲁巴弗罗林",
+        "dictCategory": 1,
+        "dictValue": "ƒ"
+      },
+      {
+        "id": 104982,
+        "dictCode": "TOP",
+        "dictName": "汤加潘加",
+        "dictCategory": 1,
+        "dictValue": "T$"
+      },
+      {
+        "id": 104973,
+        "dictCode": "SRD",
+        "dictName": "苏里南元",
+        "dictCategory": 1,
+        "dictValue": "$"
+      },
+      {
+        "id": 104987,
+        "dictCode": "UAH",
+        "dictName": "乌克兰格里夫纳",
+        "dictCategory": 1,
+        "dictValue": ""
+      },
+      {
+        "id": 104976,
+        "dictCode": "SYP",
+        "dictName": "叙利亚镑",
+        "dictCategory": 1,
+        "dictValue": ""
+      },
+      {
+        "id": 104883,
+        "dictCode": "CVE",
+        "dictName": "佛得角埃斯库多",
+        "dictCategory": 1,
+        "dictValue": "Esc"
+      },
+      {
+        "id": 104963,
+        "dictCode": "RWF",
+        "dictName": "卢旺达法郎",
+        "dictCategory": 1,
+        "dictValue": "R₣"
+      },
+      {
+        "id": 104979,
+        "dictCode": "TJS",
+        "dictName": "塔吉克斯坦索莫尼",
+        "dictCategory": 1,
+        "dictValue": "SM"
+      },
+      {
+        "id": 104886,
+        "dictCode": "DKK",
+        "dictName": "丹麦克朗",
+        "dictCategory": 1,
+        "dictValue": "kr"
+      },
+      {
+        "id": 104958,
+        "dictCode": "PYG",
+        "dictName": "巴拉圭瓜拉尼",
+        "dictCategory": 1,
+        "dictValue": "₲"
+      },
+      {
+        "id": 104936,
+        "dictCode": "MNT",
+        "dictName": "蒙古图格里克",
+        "dictCategory": 1,
+        "dictValue": "₮"
+      },
+      {
+        "id": 104960,
+        "dictCode": "RON",
+        "dictName": "罗马尼亚列伊",
+        "dictCategory": 1,
+        "dictValue": "L"
+      },
+      {
+        "id": 104885,
+        "dictCode": "DJF",
+        "dictName": "吉布提法郎",
+        "dictCategory": 1,
+        "dictValue": "Fdj"
+      },
+      {
+        "id": 104957,
+        "dictCode": "PLN",
+        "dictName": "波兰兹罗提",
+        "dictCategory": 1,
+        "dictValue": "zł"
+      },
+      {
+        "id": 104931,
+        "dictCode": "MAD",
+        "dictName": "摩洛哥迪尔汗",
+        "dictCategory": 1,
+        "dictValue": "د.م."
+      },
+      {
+        "id": 104910,
+        "dictCode": "IQD",
+        "dictName": "伊拉克第纳尔",
+        "dictCategory": 1,
+        "dictValue": ""
+      },
+      {
+        "id": 104888,
+        "dictCode": "DZD",
+        "dictName": "阿尔及利亚第纳尔",
+        "dictCategory": 1,
+        "dictValue": "دج"
+      },
+      {
+        "id": 104917,
+        "dictCode": "KGS",
+        "dictName": "吉尔吉斯斯坦索姆",
+        "dictCategory": 1,
+        "dictValue": "Лв"
+      },
+      {
+        "id": 104859,
+        "dictCode": "AZN",
+        "dictName": "阿塞拜疆马纳特",
+        "dictCategory": 1,
+        "dictValue": "man."
+      },
+      {
+        "id": 104983,
+        "dictCode": "TRY",
+        "dictName": "土耳其里拉",
+        "dictCategory": 1,
+        "dictValue": "TL"
+      },
+      {
+        "id": 104984,
+        "dictCode": "TTD",
+        "dictName": "特立尼达和多巴哥元",
+        "dictCategory": 1,
+        "dictValue": "TT$"
+      },
+      {
+        "id": 104882,
+        "dictCode": "CUP",
+        "dictName": "古巴比索",
+        "dictCategory": 1,
+        "dictValue": ""
+      },
+      {
+        "id": 104919,
+        "dictCode": "KMF",
+        "dictName": "科摩罗法郎",
+        "dictCategory": 1,
+        "dictValue": "CF"
+      },
+      {
+        "id": 104857,
+        "dictCode": "AUD",
+        "dictName": "澳大利亚元",
+        "dictCategory": 1,
+        "dictValue": "A$"
+      },
+      {
+        "id": 104978,
+        "dictCode": "THB",
+        "dictName": "泰铢",
+        "dictCategory": 1,
+        "dictValue": "฿"
+      },
+      {
+        "id": 104881,
+        "dictCode": "CRC",
+        "dictName": "哥斯达黎加科朗",
+        "dictCategory": 1,
+        "dictValue": "₡"
+      },
+      {
+        "id": 104935,
+        "dictCode": "MMK",
+        "dictName": "缅元",
+        "dictCategory": 1,
+        "dictValue": ""
+      },
+      {
+        "id": 104850,
+        "dictCode": "AED",
+        "dictName": "阿联酋迪拉姆",
+        "dictCategory": 1,
+        "dictValue": "د.إ"
+      },
+      {
+        "id": 104884,
+        "dictCode": "CZK",
+        "dictName": "捷克克朗",
+        "dictCategory": 1,
+        "dictValue": "Kč"
+      },
+      {
+        "id": 104956,
+        "dictCode": "PKR",
+        "dictName": "巴基斯坦卢比",
+        "dictCategory": 1,
+        "dictValue": "₨"
+      },
+      {
+        "id": 104930,
+        "dictCode": "LYD",
+        "dictName": "利比亚第纳尔",
+        "dictCategory": 1,
+        "dictValue": ""
+      },
+      {
+        "id": 104999,
+        "dictCode": "XPF",
+        "dictName": "太平洋法郎",
+        "dictCategory": 1,
+        "dictValue": "₣"
+      },
+      {
+        "id": 104955,
+        "dictCode": "PHP",
+        "dictName": "菲律宾比索",
+        "dictCategory": 1,
+        "dictValue": "₱"
+      },
+      {
+        "id": 104933,
+        "dictCode": "MGA",
+        "dictName": "马达加斯加阿里亚里",
+        "dictCategory": 1,
+        "dictValue": "Ar"
+      },
+      {
+        "id": 104879,
+        "dictCode": "CNY",
+        "dictName": "人民币元",
+        "dictCategory": 1,
+        "dictValue": "¥"
+      },
+      {
+        "id": 104950,
+        "dictCode": "NZD",
+        "dictName": "新西兰元",
+        "dictCategory": 1,
+        "dictValue": "$"
+      },
+      {
+        "id": 104876,
+        "dictCode": "CDF",
+        "dictName": "刚果法郎",
+        "dictCategory": 1,
+        "dictValue": ""
+      },
+      {
+        "id": 104915,
+        "dictCode": "JPY",
+        "dictName": "日元",
+        "dictCategory": 1,
+        "dictValue": "¥"
+      },
+      {
+        "id": 104939,
+        "dictCode": "MUR",
+        "dictName": "毛里求斯卢比",
+        "dictCategory": 1,
+        "dictValue": "₨"
+      },
+      {
+        "id": 104873,
+        "dictCode": "BYN",
+        "dictName": "白俄罗斯卢布",
+        "dictCategory": 1,
+        "dictValue": "BZ$"
+      },
+      {
+        "id": 104898,
+        "dictCode": "GIP",
+        "dictName": "直布罗陀镑",
+        "dictCategory": 1,
+        "dictValue": "£"
+      },
+      {
+        "id": 104918,
+        "dictCode": "KHR",
+        "dictName": "柬埔寨瑞尔",
+        "dictCategory": 1,
+        "dictValue": "៛"
+      },
+      {
+        "id": 104854,
+        "dictCode": "ANG",
+        "dictName": "荷属安的列斯盾",
+        "dictCategory": 1,
+        "dictValue": "ƒ"
+      },
+      {
+        "id": 104870,
+        "dictCode": "BSD",
+        "dictName": "巴哈马元",
+        "dictCategory": 1,
+        "dictValue": "B$"
+      },
+      {
+        "id": 104851,
+        "dictCode": "AFN",
+        "dictName": "阿富汗尼",
+        "dictCategory": 1,
+        "dictValue": ""
+      },
+      {
+        "id": 104887,
+        "dictCode": "DOP",
+        "dictName": "多米尼加比索",
+        "dictCategory": 1,
+        "dictValue": "$"
+      },
+      {
+        "id": 104959,
+        "dictCode": "QAR",
+        "dictName": "卡塔尔里亚尔",
+        "dictCategory": 1,
+        "dictValue": "QR"
+      },
+      {
+        "id": 104852,
+        "dictCode": "ALL",
+        "dictName": "阿尔巴尼亚列克",
+        "dictCategory": 1,
+        "dictValue": "Lek"
+      }
+    ],
+    "languageDictionaryList": [
+      {
+        "id": 105116,
+        "dictCode": "nb",
+        "dictName": "书面挪威语",
+        "dictCategory": 3,
+        "dictValue": "书面挪威语"
+      },
+      {
+        "id": 105148,
+        "dictCode": "si",
+        "dictName": "僧伽罗语",
+        "dictCategory": 3,
+        "dictValue": "僧伽罗语"
+      },
+      {
+        "id": 105079,
+        "dictCode": "jv",
+        "dictName": "爪哇语",
+        "dictCategory": 3,
+        "dictValue": "爪哇语"
+      },
+      {
+        "id": 105185,
+        "dictCode": "yi",
+        "dictName": "依地语",
+        "dictCategory": 3,
+        "dictValue": "依地语"
+      },
+      {
+        "id": 105164,
+        "dictCode": "th",
+        "dictName": "泰语",
+        "dictCategory": 3,
+        "dictValue": "泰语"
+      },
+      {
+        "id": 105115,
+        "dictCode": "na",
+        "dictName": "瑙鲁语",
+        "dictCategory": 3,
+        "dictValue": "瑙鲁语"
+      },
+      {
+        "id": 105186,
+        "dictCode": "yo",
+        "dictName": "约鲁巴语",
+        "dictCategory": 3,
+        "dictValue": "约鲁巴语"
+      },
+      {
+        "id": 105031,
+        "dictCode": "cr",
+        "dictName": "克里语",
+        "dictCategory": 3,
+        "dictValue": "克里语"
+      },
+      {
+        "id": 105145,
+        "dictCode": "se",
+        "dictName": "北萨米语",
+        "dictCategory": 3,
+        "dictValue": "北萨米语"
+      },
+      {
+        "id": 105080,
+        "dictCode": "ka",
+        "dictName": "格鲁吉亚语",
+        "dictCategory": 3,
+        "dictValue": "格鲁吉亚语"
+      },
+      {
+        "id": 105139,
+        "dictCode": "ro",
+        "dictName": "罗马尼亚语",
+        "dictCategory": 3,
+        "dictValue": "罗马尼亚语"
+      },
+      {
+        "id": 105161,
+        "dictCode": "ta",
+        "dictName": "泰米尔语",
+        "dictCategory": 3,
+        "dictValue": "泰米尔语"
+      },
+      {
+        "id": 105069,
+        "dictCode": "ia",
+        "dictName": "因特语",
+        "dictCategory": 3,
+        "dictValue": "因特语"
+      },
+      {
+        "id": 105036,
+        "dictCode": "da",
+        "dictName": "丹麦语",
+        "dictCategory": 3,
+        "dictValue": "丹麦语"
+      },
+      {
+        "id": 105146,
+        "dictCode": "sg",
+        "dictName": "桑戈语",
+        "dictCategory": 3,
+        "dictValue": "桑戈语"
+      },
+      {
+        "id": 105087,
+        "dictCode": "kn",
+        "dictName": "卡纳达语",
+        "dictCategory": 3,
+        "dictValue": "卡纳达语"
+      },
+      {
+        "id": 105177,
+        "dictCode": "ur",
+        "dictName": "乌尔都语",
+        "dictCategory": 3,
+        "dictValue": "乌尔都语"
+      },
+      {
+        "id": 105134,
+        "dictCode": "ps",
+        "dictName": "普什图语",
+        "dictCategory": 3,
+        "dictValue": "普什图语"
+      },
+      {
+        "id": 105013,
+        "dictCode": "as",
+        "dictName": "阿萨姆语",
+        "dictCategory": 3,
+        "dictValue": "阿萨姆语"
+      },
+      {
+        "id": 105129,
+        "dictCode": "or",
+        "dictName": "奥里亚语",
+        "dictCategory": 3,
+        "dictValue": "奥里亚语"
+      },
+      {
+        "id": 105143,
+        "dictCode": "sc",
+        "dictName": "撒丁语",
+        "dictCategory": 3,
+        "dictValue": "撒丁语"
+      },
+      {
+        "id": 105047,
+        "dictCode": "fa",
+        "dictName": "波斯语",
+        "dictCategory": 3,
+        "dictValue": "波斯语"
+      },
+      {
+        "id": 105137,
+        "dictCode": "rm",
+        "dictName": "罗曼什语",
+        "dictCategory": 3,
+        "dictValue": "罗曼什语"
+      },
+      {
+        "id": 105014,
+        "dictCode": "av",
+        "dictName": "阿瓦尔语",
+        "dictCategory": 3,
+        "dictValue": "阿瓦尔语"
+      },
+      {
+        "id": 105089,
+        "dictCode": "kr",
+        "dictName": "卡努里语",
+        "dictCategory": 3,
+        "dictValue": "卡努里语"
+      },
+      {
+        "id": 105042,
+        "dictCode": "en",
+        "dictName": "英语",
+        "dictCategory": 3,
+        "dictValue": "英语"
+      },
+      {
+        "id": 105132,
+        "dictCode": "pi",
+        "dictName": "巴利语",
+        "dictCategory": 3,
+        "dictValue": "巴利语"
+      },
+      {
+        "id": 105149,
+        "dictCode": "sk",
+        "dictName": "斯洛伐克语",
+        "dictCategory": 3,
+        "dictValue": "斯洛伐克语"
+      },
+      {
+        "id": 105041,
+        "dictCode": "el",
+        "dictName": "现代希腊语",
+        "dictCategory": 3,
+        "dictValue": "现代希腊语"
+      },
+      {
+        "id": 105165,
+        "dictCode": "ti",
+        "dictName": "提格雷尼亚语",
+        "dictCategory": 3,
+        "dictValue": "提格雷尼亚语"
+      },
+      {
+        "id": 105114,
+        "dictCode": "my",
+        "dictName": "缅甸语",
+        "dictCategory": 3,
+        "dictValue": "缅甸语"
+      },
+      {
+        "id": 105101,
+        "dictCode": "lt",
+        "dictName": "立陶宛语",
+        "dictCategory": 3,
+        "dictValue": "立陶宛语"
+      },
+      {
+        "id": 105032,
+        "dictCode": "cs",
+        "dictName": "捷克语",
+        "dictCategory": 3,
+        "dictValue": "捷克语"
+      },
+      {
+        "id": 105009,
+        "dictCode": "ak",
+        "dictName": "阿坎语",
+        "dictCategory": 3,
+        "dictValue": "阿坎语"
+      },
+      {
+        "id": 105162,
+        "dictCode": "te",
+        "dictName": "泰卢固语",
+        "dictCategory": 3,
+        "dictValue": "泰卢固语"
+      },
+      {
+        "id": 105068,
+        "dictCode": "hz",
+        "dictName": "赫雷罗语",
+        "dictCategory": 3,
+        "dictValue": "赫雷罗语"
+      },
+      {
+        "id": 105102,
+        "dictCode": "lu",
+        "dictName": "卢巴语",
+        "dictCategory": 3,
+        "dictValue": "卢巴语"
+      },
+      {
+        "id": 105037,
+        "dictCode": "de",
+        "dictName": "德语",
+        "dictCategory": 3,
+        "dictValue": "德语"
+      },
+      {
+        "id": 105034,
+        "dictCode": "cv",
+        "dictName": "楚瓦什语",
+        "dictCategory": 3,
+        "dictValue": "楚瓦什语"
+      },
+      {
+        "id": 105140,
+        "dictCode": "ru",
+        "dictName": "俄语",
+        "dictCategory": 3,
+        "dictValue": "俄语"
+      },
+      {
+        "id": 105046,
+        "dictCode": "eu",
+        "dictName": "巴斯克语",
+        "dictCategory": 3,
+        "dictValue": "巴斯克语"
+      },
+      {
+        "id": 105088,
+        "dictCode": "ko",
+        "dictName": "韩语",
+        "dictCategory": 3,
+        "dictValue": "韩语"
+      },
+      {
+        "id": 105108,
+        "dictCode": "ml",
+        "dictName": "马拉雅拉姆语",
+        "dictCategory": 3,
+        "dictValue": "马拉雅拉姆语"
+      },
+      {
+        "id": 105045,
+        "dictCode": "et",
+        "dictName": "爱沙尼亚语",
+        "dictCategory": 3,
+        "dictValue": "爱沙尼亚语"
+      },
+      {
+        "id": 105131,
+        "dictCode": "pa",
+        "dictName": "旁遮普语",
+        "dictCategory": 3,
+        "dictValue": "旁遮普语"
+      },
+      {
+        "id": 105169,
+        "dictCode": "to",
+        "dictName": "汤加语",
+        "dictCategory": 3,
+        "dictValue": "汤加语"
+      },
+      {
+        "id": 105061,
+        "dictCode": "he",
+        "dictName": "希伯来语",
+        "dictCategory": 3,
+        "dictValue": "希伯来语"
+      },
+      {
+        "id": 105040,
+        "dictCode": "ee",
+        "dictName": "埃维语",
+        "dictCategory": 3,
+        "dictValue": "埃维语"
+      },
+      {
+        "id": 105121,
+        "dictCode": "nn",
+        "dictName": "新挪威语",
+        "dictCategory": 3,
+        "dictValue": "新挪威语"
+      },
+      {
+        "id": 105064,
+        "dictCode": "hr",
+        "dictName": "克罗地亚语",
+        "dictCategory": 3,
+        "dictValue": "克罗地亚语"
+      },
+      {
+        "id": 105029,
+        "dictCode": "ch",
+        "dictName": "查莫罗语",
+        "dictCategory": 3,
+        "dictValue": "查莫罗语"
+      },
+      {
+        "id": 105008,
+        "dictCode": "af",
+        "dictName": "南非语",
+        "dictCategory": 3,
+        "dictValue": "南非语"
+      },
+      {
+        "id": 105067,
+        "dictCode": "hy",
+        "dictName": "亚美尼亚语",
+        "dictCategory": 3,
+        "dictValue": "亚美尼亚语"
+      },
+      {
+        "id": 105163,
+        "dictCode": "tg",
+        "dictName": "塔吉克语",
+        "dictCategory": 3,
+        "dictValue": "塔吉克语"
+      },
+      {
+        "id": 105103,
+        "dictCode": "lv",
+        "dictName": "拉脱维亚语",
+        "dictCategory": 3,
+        "dictValue": "拉脱维亚语"
+      },
+      {
+        "id": 105160,
+        "dictCode": "sw",
+        "dictName": "斯瓦希里语",
+        "dictCategory": 3,
+        "dictValue": "斯瓦希里语"
+      },
+      {
+        "id": 105104,
+        "dictCode": "mg",
+        "dictName": "马达加斯加语",
+        "dictCategory": 3,
+        "dictValue": "马达加斯加语"
+      },
+      {
+        "id": 105049,
+        "dictCode": "fi",
+        "dictName": "芬兰语",
+        "dictCategory": 3,
+        "dictValue": "芬兰语"
+      },
+      {
+        "id": 105128,
+        "dictCode": "om",
+        "dictName": "奥罗莫语",
+        "dictCategory": 3,
+        "dictValue": "奥罗莫语"
+      },
+      {
+        "id": 105060,
+        "dictCode": "ha",
+        "dictName": "豪萨语",
+        "dictCategory": 3,
+        "dictValue": "豪萨语"
+      },
+      {
+        "id": 105122,
+        "dictCode": "no",
+        "dictName": "挪威语",
+        "dictCategory": 3,
+        "dictValue": "挪威语"
+      },
+      {
+        "id": 105063,
+        "dictCode": "ho",
+        "dictName": "希里莫图语",
+        "dictCategory": 3,
+        "dictValue": "希里莫图语"
+      },
+      {
+        "id": 105028,
+        "dictCode": "ce",
+        "dictName": "车臣语",
+        "dictCategory": 3,
+        "dictValue": "车臣语"
+      },
+      {
+        "id": 105093,
+        "dictCode": "kw",
+        "dictName": "康沃尔语",
+        "dictCategory": 3,
+        "dictValue": "康沃尔语"
+      },
+      {
+        "id": 105127,
+        "dictCode": "oj",
+        "dictName": "奥杰布瓦语",
+        "dictCategory": 3,
+        "dictValue": "奥杰布瓦语"
+      },
+      {
+        "id": 105066,
+        "dictCode": "hu",
+        "dictName": "匈牙利语",
+        "dictCategory": 3,
+        "dictValue": "匈牙利语"
+      },
+      {
+        "id": 105100,
+        "dictCode": "lo",
+        "dictName": "老挝语",
+        "dictCategory": 3,
+        "dictValue": "老挝语"
+      },
+      {
+        "id": 105094,
+        "dictCode": "ky",
+        "dictName": "吉尔吉斯语",
+        "dictCategory": 3,
+        "dictValue": "吉尔吉斯语"
+      },
+      {
+        "id": 105124,
+        "dictCode": "nv",
+        "dictName": "纳瓦霍语",
+        "dictCategory": 3,
+        "dictValue": "纳瓦霍语"
+      },
+      {
+        "id": 105026,
+        "dictCode": "bs",
+        "dictName": "波斯尼亚语",
+        "dictCategory": 3,
+        "dictValue": "波斯尼亚语"
+      },
+      {
+        "id": 105105,
+        "dictCode": "mh",
+        "dictName": "马绍尔语",
+        "dictCategory": 3,
+        "dictValue": "马绍尔语"
+      },
+      {
+        "id": 105048,
+        "dictCode": "ff",
+        "dictName": "富拉语",
+        "dictCategory": 3,
+        "dictValue": "富拉语"
+      },
+      {
+        "id": 105099,
+        "dictCode": "ln",
+        "dictName": "林加拉语",
+        "dictCategory": 3,
+        "dictValue": "林加拉语"
+      },
+      {
+        "id": 105021,
+        "dictCode": "bi",
+        "dictName": "比斯拉马语",
+        "dictCategory": 3,
+        "dictValue": "比斯拉马语"
+      },
+      {
+        "id": 105106,
+        "dictCode": "mi",
+        "dictName": "毛利语",
+        "dictCategory": 3,
+        "dictValue": "毛利语"
+      },
+      {
+        "id": 105007,
+        "dictCode": "ae",
+        "dictName": "阿维斯陀语",
+        "dictCategory": 3,
+        "dictValue": "阿维斯陀语"
+      },
+      {
+        "id": 105168,
+        "dictCode": "tn",
+        "dictName": "茨瓦纳语",
+        "dictCategory": 3,
+        "dictValue": "茨瓦纳语"
+      },
+      {
+        "id": 105123,
+        "dictCode": "nr",
+        "dictName": "南恩德贝莱语",
+        "dictCategory": 3,
+        "dictValue": "南恩德贝莱语"
+      },
+      {
+        "id": 105062,
+        "dictCode": "hi",
+        "dictName": "印地语",
+        "dictCategory": 3,
+        "dictValue": "印地语"
+      },
+      {
+        "id": 105154,
+        "dictCode": "sq",
+        "dictName": "阿尔巴尼亚语",
+        "dictCategory": 3,
+        "dictValue": "阿尔巴尼亚语"
+      },
+      {
+        "id": 105090,
+        "dictCode": "ks",
+        "dictName": "克什米尔语",
+        "dictCategory": 3,
+        "dictValue": "克什米尔语"
+      },
+      {
+        "id": 105120,
+        "dictCode": "nl",
+        "dictName": "荷兰语",
+        "dictCategory": 3,
+        "dictValue": "荷兰语"
+      },
+      {
+        "id": 105065,
+        "dictCode": "ht",
+        "dictName": "海地克里奥尔语",
+        "dictCategory": 3,
+        "dictValue": "海地克里奥尔语"
+      },
+      {
+        "id": 105095,
+        "dictCode": "la",
+        "dictName": "拉丁语",
+        "dictCategory": 3,
+        "dictValue": "拉丁语"
+      },
+      {
+        "id": 105125,
+        "dictCode": "ny",
+        "dictName": "尼扬贾语",
+        "dictCategory": 3,
+        "dictValue": "尼扬贾语"
+      },
+      {
+        "id": 105025,
+        "dictCode": "br",
+        "dictName": "布列塔尼语",
+        "dictCategory": 3,
+        "dictValue": "布列塔尼语"
+      },
+      {
+        "id": 105096,
+        "dictCode": "lb",
+        "dictName": "卢森堡语",
+        "dictCategory": 3,
+        "dictValue": "卢森堡语"
+      },
+      {
+        "id": 105055,
+        "dictCode": "gd",
+        "dictName": "苏格兰盖尔语",
+        "dictCategory": 3,
+        "dictValue": "苏格兰盖尔语"
+      },
+      {
+        "id": 105020,
+        "dictCode": "bh",
+        "dictName": "比哈尔语",
+        "dictCategory": 3,
+        "dictValue": "比哈尔语"
+      },
+      {
+        "id": 105107,
+        "dictCode": "mk",
+        "dictName": "马其顿语",
+        "dictCategory": 3,
+        "dictValue": "马其顿语"
+      },
+      {
+        "id": 105179,
+        "dictCode": "ve",
+        "dictName": "文达语",
+        "dictCategory": 3,
+        "dictValue": "文达语"
+      },
+      {
+        "id": 105056,
+        "dictCode": "gl",
+        "dictName": "加利西亚语",
+        "dictCategory": 3,
+        "dictValue": "加利西亚语"
+      },
+      {
+        "id": 105023,
+        "dictCode": "bn",
+        "dictName": "孟加拉语",
+        "dictCategory": 3,
+        "dictValue": "孟加拉语"
+      },
+      {
+        "id": 105006,
+        "dictCode": "ab",
+        "dictName": "阿布哈兹语",
+        "dictCategory": 3,
+        "dictValue": "阿布哈兹语"
+      },
+      {
+        "id": 105053,
+        "dictCode": "fy",
+        "dictName": "弗里西亚语",
+        "dictCategory": 3,
+        "dictValue": "弗里西亚语"
+      },
+      {
+        "id": 105157,
+        "dictCode": "st",
+        "dictName": "塞索托语",
+        "dictCategory": 3,
+        "dictValue": "塞索托语"
+      },
+      {
+        "id": 105005,
+        "dictCode": "aa",
+        "dictName": "阿法尔语",
+        "dictCategory": 3,
+        "dictValue": "阿法尔语"
+      },
+      {
+        "id": 105091,
+        "dictCode": "ku",
+        "dictName": "库尔德语",
+        "dictCategory": 3,
+        "dictValue": "库尔德语"
+      },
+      {
+        "id": 105152,
+        "dictCode": "sn",
+        "dictName": "修纳语",
+        "dictCategory": 3,
+        "dictValue": "修纳语"
+      },
+      {
+        "id": 105092,
+        "dictCode": "kv",
+        "dictName": "科米语",
+        "dictCategory": 3,
+        "dictValue": "科米语"
+      },
+      {
+        "id": 105126,
+        "dictCode": "oc",
+        "dictName": "奥克语",
+        "dictCategory": 3,
+        "dictValue": "奥克语"
+      },
+      {
+        "id": 105151,
+        "dictCode": "sm",
+        "dictName": "萨摩亚语",
+        "dictCategory": 3,
+        "dictValue": "萨摩亚语"
+      },
+      {
+        "id": 105024,
+        "dictCode": "bo",
+        "dictName": "藏语",
+        "dictCategory": 3,
+        "dictValue": "藏语"
+      },
+      {
+        "id": 105075,
+        "dictCode": "is",
+        "dictName": "冰岛语",
+        "dictCategory": 3,
+        "dictValue": "冰岛语"
+      },
+      {
+        "id": 105097,
+        "dictCode": "lg",
+        "dictName": "卢干达语",
+        "dictCategory": 3,
+        "dictValue": "卢干达语"
+      },
+      {
+        "id": 105027,
+        "dictCode": "ca",
+        "dictName": "加泰隆语",
+        "dictCategory": 3,
+        "dictValue": "加泰隆语"
+      },
+      {
+        "id": 105072,
+        "dictCode": "ig",
+        "dictName": "伊博语",
+        "dictCategory": 3,
+        "dictValue": "伊博语"
+      },
+      {
+        "id": 105098,
+        "dictCode": "li",
+        "dictName": "林堡语",
+        "dictCategory": 3,
+        "dictValue": "林堡语"
+      },
+      {
+        "id": 105178,
+        "dictCode": "uz",
+        "dictName": "乌孜别克语",
+        "dictCategory": 3,
+        "dictValue": "乌孜别克语"
+      },
+      {
+        "id": 105057,
+        "dictCode": "gn",
+        "dictName": "瓜拉尼语",
+        "dictCategory": 3,
+        "dictValue": "瓜拉尼语"
+      },
+      {
+        "id": 105022,
+        "dictCode": "bm",
+        "dictName": "班巴拉语",
+        "dictCategory": 3,
+        "dictValue": "班巴拉语"
+      },
+      {
+        "id": 105050,
+        "dictCode": "fj",
+        "dictName": "斐济语",
+        "dictCategory": 3,
+        "dictValue": "斐济语"
+      },
+      {
+        "id": 105156,
+        "dictCode": "ss",
+        "dictName": "斯威士语",
+        "dictCategory": 3,
+        "dictValue": "斯威士语"
+      },
+      {
+        "id": 105180,
+        "dictCode": "vi",
+        "dictName": "越南语",
+        "dictCategory": 3,
+        "dictValue": "越南语"
+      },
+      {
+        "id": 105018,
+        "dictCode": "be",
+        "dictName": "白俄罗斯语",
+        "dictCategory": 3,
+        "dictValue": "白俄罗斯语"
+      },
+      {
+        "id": 105155,
+        "dictCode": "sr",
+        "dictName": "塞尔维亚语",
+        "dictCategory": 3,
+        "dictValue": "塞尔维亚语"
+      },
+      {
+        "id": 105171,
+        "dictCode": "ts",
+        "dictName": "宗加语",
+        "dictCategory": 3,
+        "dictValue": "宗加语"
+      },
+      {
+        "id": 105150,
+        "dictCode": "sl",
+        "dictName": "斯洛文尼亚语",
+        "dictCategory": 3,
+        "dictValue": "斯洛文尼亚语"
+      },
+      {
+        "id": 105076,
+        "dictCode": "it",
+        "dictName": "意大利语",
+        "dictCategory": 3,
+        "dictValue": "意大利语"
+      },
+      {
+        "id": 105174,
+        "dictCode": "ty",
+        "dictName": "塔希提语",
+        "dictCategory": 3,
+        "dictValue": "塔希提语"
+      },
+      {
+        "id": 105118,
+        "dictCode": "ne",
+        "dictName": "尼泊尔语",
+        "dictCategory": 3,
+        "dictValue": "尼泊尔语"
+      },
+      {
+        "id": 105073,
+        "dictCode": "ik",
+        "dictName": "伊努皮克语",
+        "dictCategory": 3,
+        "dictValue": "伊努皮克语"
+      },
+      {
+        "id": 105054,
+        "dictCode": "ga",
+        "dictName": "爱尔兰语",
+        "dictCategory": 3,
+        "dictValue": "爱尔兰语"
+      },
+      {
+        "id": 105070,
+        "dictCode": "id",
+        "dictName": "印尼语",
+        "dictCategory": 3,
+        "dictValue": "印尼语"
+      },
+      {
+        "id": 105051,
+        "dictCode": "fo",
+        "dictName": "法罗语",
+        "dictCategory": 3,
+        "dictValue": "法罗语"
+      },
+      {
+        "id": 105159,
+        "dictCode": "sv",
+        "dictName": "瑞典语",
+        "dictCategory": 3,
+        "dictValue": "瑞典语"
+      },
+      {
+        "id": 105112,
+        "dictCode": "ms",
+        "dictName": "马来语",
+        "dictCategory": 3,
+        "dictValue": "马来语"
+      },
+      {
+        "id": 105181,
+        "dictCode": "vo",
+        "dictName": "沃拉普克语",
+        "dictCategory": 3,
+        "dictValue": "沃拉普克语"
+      },
+      {
+        "id": 105038,
+        "dictCode": "dv",
+        "dictName": "迪维西语",
+        "dictCategory": 3,
+        "dictValue": "迪维西语"
+      },
+      {
+        "id": 105052,
+        "dictCode": "fr",
+        "dictName": "法语",
+        "dictCategory": 3,
+        "dictValue": "法语"
+      },
+      {
+        "id": 105019,
+        "dictCode": "bg",
+        "dictName": "保加利亚语",
+        "dictCategory": 3,
+        "dictValue": "保加利亚语"
+      },
+      {
+        "id": 105111,
+        "dictCode": "mr",
+        "dictName": "马拉地语",
+        "dictCategory": 3,
+        "dictValue": "马拉地语"
+      },
+      {
+        "id": 105182,
+        "dictCode": "wa",
+        "dictName": "瓦隆语",
+        "dictCategory": 3,
+        "dictValue": "瓦隆语"
+      },
+      {
+        "id": 105170,
+        "dictCode": "tr",
+        "dictName": "土耳其语",
+        "dictCategory": 3,
+        "dictValue": "土耳其语"
+      },
+      {
+        "id": 105153,
+        "dictCode": "so",
+        "dictName": "索马里语",
+        "dictCategory": 3,
+        "dictValue": "索马里语"
+      },
+      {
+        "id": 105187,
+        "dictCode": "zh",
+        "dictName": "中文",
+        "dictCategory": 3,
+        "dictValue": "中文"
+      },
+      {
+        "id": 105077,
+        "dictCode": "iu",
+        "dictName": "因纽特语",
+        "dictCategory": 3,
+        "dictValue": "因纽特语"
+      },
+      {
+        "id": 105083,
+        "dictCode": "kj",
+        "dictName": "宽亚玛语",
+        "dictCategory": 3,
+        "dictValue": "宽亚玛语"
+      },
+      {
+        "id": 105173,
+        "dictCode": "tw",
+        "dictName": "特威语",
+        "dictCategory": 3,
+        "dictValue": "特威语"
+      },
+      {
+        "id": 105058,
+        "dictCode": "gu",
+        "dictName": "古吉拉特语",
+        "dictCategory": 3,
+        "dictValue": "古吉拉特语"
+      },
+      {
+        "id": 105138,
+        "dictCode": "rn",
+        "dictName": "基隆迪语",
+        "dictCategory": 3,
+        "dictValue": "基隆迪语"
+      },
+      {
+        "id": 105188,
+        "dictCode": "zu",
+        "dictName": "祖鲁语",
+        "dictCategory": 3,
+        "dictValue": "祖鲁语"
+      },
+      {
+        "id": 105147,
+        "dictCode": "sh",
+        "dictName": "塞尔维亚-克罗地亚语",
+        "dictCategory": 3,
+        "dictValue": "塞尔维亚-克罗地亚语"
+      },
+      {
+        "id": 105074,
+        "dictCode": "io",
+        "dictName": "伊多语",
+        "dictCategory": 3,
+        "dictValue": "伊多语"
+      },
+      {
+        "id": 105086,
+        "dictCode": "km",
+        "dictName": "高棉语",
+        "dictCategory": 3,
+        "dictValue": "高棉语"
+      },
+      {
+        "id": 105176,
+        "dictCode": "uk",
+        "dictName": "乌克兰语",
+        "dictCategory": 3,
+        "dictValue": "乌克兰语"
+      },
+      {
+        "id": 105010,
+        "dictCode": "am",
+        "dictName": "阿姆哈拉语",
+        "dictCategory": 3,
+        "dictValue": "阿姆哈拉语"
+      },
+      {
+        "id": 105071,
+        "dictCode": "ie",
+        "dictName": "西方国际语",
+        "dictCategory": 3,
+        "dictValue": "西方国际语"
+      },
+      {
+        "id": 105085,
+        "dictCode": "kl",
+        "dictName": "格陵兰语",
+        "dictCategory": 3,
+        "dictValue": "格陵兰语"
+      },
+      {
+        "id": 105136,
+        "dictCode": "qu",
+        "dictName": "克丘亚语",
+        "dictCategory": 3,
+        "dictValue": "克丘亚语"
+      },
+      {
+        "id": 105015,
+        "dictCode": "ay",
+        "dictName": "艾马拉语",
+        "dictCategory": 3,
+        "dictValue": "艾马拉语"
+      },
+      {
+        "id": 105158,
+        "dictCode": "su",
+        "dictName": "巽他语",
+        "dictCategory": 3,
+        "dictValue": "巽他语"
+      },
+      {
+        "id": 105039,
+        "dictCode": "dz",
+        "dictName": "不丹语",
+        "dictCategory": 3,
+        "dictValue": "不丹语"
+      },
+      {
+        "id": 105016,
+        "dictCode": "az",
+        "dictName": "阿塞拜疆语",
+        "dictCategory": 3,
+        "dictValue": "阿塞拜疆语"
+      },
+      {
+        "id": 105110,
+        "dictCode": "mo",
+        "dictName": "摩尔达维亚语",
+        "dictCategory": 3,
+        "dictValue": "摩尔达维亚语"
+      },
+      {
+        "id": 105183,
+        "dictCode": "wo",
+        "dictName": "沃洛夫语",
+        "dictCategory": 3,
+        "dictValue": "沃洛夫语"
+      },
+      {
+        "id": 105166,
+        "dictCode": "tk",
+        "dictName": "土库曼语",
+        "dictCategory": 3,
+        "dictValue": "土库曼语"
+      },
+      {
+        "id": 105117,
+        "dictCode": "nd",
+        "dictName": "北恩德贝莱语",
+        "dictCategory": 3,
+        "dictValue": "北恩德贝莱语"
+      },
+      {
+        "id": 105078,
+        "dictCode": "ja",
+        "dictName": "日语",
+        "dictCategory": 3,
+        "dictValue": "日语"
+      },
+      {
+        "id": 105184,
+        "dictCode": "xh",
+        "dictName": "科萨语",
+        "dictCategory": 3,
+        "dictValue": "科萨语"
+      },
+      {
+        "id": 105033,
+        "dictCode": "cu",
+        "dictName": "古教会斯拉夫语",
+        "dictCategory": 3,
+        "dictValue": "古教会斯拉夫语"
+      },
+      {
+        "id": 105082,
+        "dictCode": "ki",
+        "dictName": "基库尤语",
+        "dictCategory": 3,
+        "dictValue": "基库尤语"
+      },
+      {
+        "id": 105172,
+        "dictCode": "tt",
+        "dictName": "塔塔尔语",
+        "dictCategory": 3,
+        "dictValue": "塔塔尔语"
+      },
+      {
+        "id": 105059,
+        "dictCode": "gv",
+        "dictName": "马恩岛语",
+        "dictCategory": 3,
+        "dictValue": "马恩岛语"
+      },
+      {
+        "id": 105030,
+        "dictCode": "co",
+        "dictName": "科西嘉语",
+        "dictCategory": 3,
+        "dictValue": "科西嘉语"
+      },
+      {
+        "id": 105144,
+        "dictCode": "sd",
+        "dictName": "信德语",
+        "dictCategory": 3,
+        "dictValue": "信德语"
+      },
+      {
+        "id": 105081,
+        "dictCode": "kg",
+        "dictName": "刚果语",
+        "dictCategory": 3,
+        "dictValue": "刚果语"
+      },
+      {
+        "id": 105175,
+        "dictCode": "ug",
+        "dictName": "维吾尔语",
+        "dictCategory": 3,
+        "dictValue": "维吾尔语"
+      },
+      {
+        "id": 105011,
+        "dictCode": "an",
+        "dictName": "阿拉贡语",
+        "dictCategory": 3,
+        "dictValue": "阿拉贡语"
+      },
+      {
+        "id": 105035,
+        "dictCode": "cy",
+        "dictName": "威尔士语",
+        "dictCategory": 3,
+        "dictValue": "威尔士语"
+      },
+      {
+        "id": 105119,
+        "dictCode": "ng",
+        "dictName": "恩敦加语",
+        "dictCategory": 3,
+        "dictValue": "恩敦加语"
+      },
+      {
+        "id": 105141,
+        "dictCode": "rw",
+        "dictName": "卢旺达语",
+        "dictCategory": 3,
+        "dictValue": "卢旺达语"
+      },
+      {
+        "id": 105084,
+        "dictCode": "kk",
+        "dictName": "哈萨克语",
+        "dictCategory": 3,
+        "dictValue": "哈萨克语"
+      },
+      {
+        "id": 105135,
+        "dictCode": "pt",
+        "dictName": "葡萄牙语",
+        "dictCategory": 3,
+        "dictValue": "葡萄牙语"
+      },
+      {
+        "id": 105012,
+        "dictCode": "ar",
+        "dictName": "阿拉伯语",
+        "dictCategory": 3,
+        "dictValue": "阿拉伯语"
+      },
+      {
+        "id": 105142,
+        "dictCode": "sa",
+        "dictName": "梵语",
+        "dictCategory": 3,
+        "dictValue": "梵语"
+      },
+      {
+        "id": 105109,
+        "dictCode": "mn",
+        "dictName": "蒙古语",
+        "dictCategory": 3,
+        "dictValue": "蒙古语"
+      },
+      {
+        "id": 105044,
+        "dictCode": "es",
+        "dictName": "西班牙语",
+        "dictCategory": 3,
+        "dictValue": "西班牙语"
+      },
+      {
+        "id": 105130,
+        "dictCode": "os",
+        "dictName": "奥塞梯语",
+        "dictCategory": 3,
+        "dictValue": "奥塞梯语"
+      },
+      {
+        "id": 105017,
+        "dictCode": "ba",
+        "dictName": "巴什基尔语",
+        "dictCategory": 3,
+        "dictValue": "巴什基尔语"
+      },
+      {
+        "id": 105113,
+        "dictCode": "mt",
+        "dictName": "马耳他语",
+        "dictCategory": 3,
+        "dictValue": "马耳他语"
+      },
+      {
+        "id": 105043,
+        "dictCode": "eo",
+        "dictName": "世界语",
+        "dictCategory": 3,
+        "dictValue": "世界语"
+      },
+      {
+        "id": 105133,
+        "dictCode": "pl",
+        "dictName": "波兰语",
+        "dictCategory": 3,
+        "dictValue": "波兰语"
+      },
+      {
+        "id": 105167,
+        "dictCode": "tl",
+        "dictName": "他加禄语",
+        "dictCategory": 3,
+        "dictValue": "他加禄语"
+      }
+    ],
+    "timeZoneDictionaryList": [
+      {
+        "id": 105193,
+        "dictCode": "Africa/Cairo",
+        "dictName": "埃及(+3)",
+        "dictCategory": 2,
+        "dictValue": "03:00:00"
+      },
+      {
+        "id": 105192,
+        "dictCode": "Africa/Lagos",
+        "dictName": "尼日利亚(+1)",
+        "dictCategory": 2,
+        "dictValue": "01:00:00"
+      },
+      {
+        "id": 105191,
+        "dictCode": "Europe/London",
+        "dictName": "英国(0)",
+        "dictCategory": 2,
+        "dictValue": "00:00:00"
+      },
+      {
+        "id": 105194,
+        "dictCode": "Asia/Dubai",
+        "dictName": "阿联酋(+4)",
+        "dictCategory": 2,
+        "dictValue": "04:00:00"
+      },
+      {
+        "id": 105190,
+        "dictCode": "America/Sao_Paulo",
+        "dictName": "巴西(-3)",
+        "dictCategory": 2,
+        "dictValue": "-03:00:00"
+      },
+      {
+        "id": 105197,
+        "dictCode": "Asia/Dhaka",
+        "dictName": "孟加拉(+6)",
+        "dictCategory": 2,
+        "dictValue": "06:00:00"
+      },
+      {
+        "id": 105201,
+        "dictCode": "Asia/Tokyo",
+        "dictName": "日本(+9)",
+        "dictCategory": 2,
+        "dictValue": "09:00:00"
+      },
+      {
+        "id": 105199,
+        "dictCode": "Asia/Ho_Chi_Minh",
+        "dictName": "越南(+7)",
+        "dictCategory": 2,
+        "dictValue": "07:00:00"
+      },
+      {
+        "id": 105196,
+        "dictCode": "Asia/Kolkata",
+        "dictName": "印度(+5.5)",
+        "dictCategory": 2,
+        "dictValue": "05:30:00"
+      },
+      {
+        "id": 105195,
+        "dictCode": "Asia/Karachi",
+        "dictName": "巴基斯坦(+5)",
+        "dictCategory": 2,
+        "dictValue": "05:00:00"
+      },
+      {
+        "id": 105200,
+        "dictCode": "Asia/Kuala_Lumpur",
+        "dictName": "马来西亚(+8)",
+        "dictCategory": 2,
+        "dictValue": "08:00:00"
+      },
+      {
+        "id": 105198,
+        "dictCode": "Asia/Yangon",
+        "dictName": "缅甸(+6.5)",
+        "dictCategory": 2,
+        "dictValue": "06:30:00"
+      },
+      {
+        "id": 105189,
+        "dictCode": "America/Los_Angeles",
+        "dictName": "美国(-8)",
+        "dictCategory": 2,
+        "dictValue": "-08:00:00"
+      }
+    ]
+  },
+  "code": 0,
+  "msg": "成功",
+  "msgCode": 0
+}

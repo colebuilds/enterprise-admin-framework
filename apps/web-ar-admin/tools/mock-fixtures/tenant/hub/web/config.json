@@ -1,0 +1,10 @@
+{
+  "data": null,
+  "code": 400,
+  "msg": [
+    "tenantId must not be less than 1",
+    "tenantId must be an integer number"
+  ],
+  "msgCode": 400,
+  "msgParameters": null
+}

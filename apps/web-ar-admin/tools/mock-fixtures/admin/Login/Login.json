@@ -1,0 +1,26 @@
+{
+  "data": {
+    "tokenHeader": "Bearer ",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOiIxNzc4MjQxODkzIiwibmJmIjoiMTc3ODI0MTg5MyIsImV4cCI6IjE3NzgzMjgyOTMiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiIwNS8wOS8yMDI2IDEyOjA0OjUzIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWNjZXNzX1Rva2VuIiwiTWFuYWdlVGVuYW50SWRzIjoiIiwiT3JnSWQiOiIwIiwiVXNlcklkIjoiMTMwMDA5IiwiVXNlck5hbWUiOiJzeXNfbWlsbyIsIkFnZW50SWQiOiIwIiwiTG9naW5UaW1lIjoiMDUvMDgvMjAyNiAxMjowNDo1MyIsIkxvZ2luSVBBZGRyZXNzIjoiOC4yMTEuNDIuMTI4IiwiSXNCaW5kR29vZ2xlIjoiMSIsIkxvZ2luVGltZXMiOiI1MiIsIlRva2VuVHlwZSI6IkFjY2Vzc19Ub2tlbiIsIlVzZXJUeXBlIjoiMCIsIlN1cGVyQWRtaW5UeXBlIjoiTm9uZSIsIlBlcm1pc3Npb25MZXZlbCI6IjAiLCJpc3MiOiJqd3RJc3N1ZXIiLCJhdWQiOiJsb3R0b0FkbWluIn0.K7-8KJvdY8FbVI0aJHYdul03LUnKxyTSHNTJmSNXKNE",
+    "expiresIn": 1778328293,
+    "passwordErrorNum": 0,
+    "passwordErrorMaxNum": null,
+    "webSocketUrl": "wss://sit-lotto-admin.99888666.com/event/realtime?Token=eyJhbGciOiJSUzI1NiIsImtpZCI6IkxvdHRvU2FhcyIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMzAwMDkiLCJpYXQiOjE3NzgyNDE4OTMsImp0aSI6ImJiNGNjNzllLTAyYmUtNGMyMi1iMmMzLWZiYmMwN2VhZTRlZCIsIm5iZiI6MTc3ODI0MTg5MywiZXhwIjoxNzc4MzI4MjkzLCJpc3MiOiJodHRwczovL3NpdGF1dGgubG90dG90ZXN0NjY4OC5jb20ifQ.kwUkYObIEGWfV5dzRPd-1Wn7hPGgWCjMxNy5ZCr1NNd8oYBUqwusnr8cUbUHOMwdftQbb5_b5n0SkR8af26IrYssnLt5OEpxw-NqOxxwDlWLX6IQnndQhP-Sd44m2uPiMfmML1FTeOgXNtaFfmy56e6tKj9n6_UBb61OwX5h-hj1Bh5hj6dsLhQ5MnKf-UQwnDISiGRLSxicvtduRbUh6JuzFcXbmKQX5UsHrqVckKkRiThKlyWeOyXxgZM_2_wkCczRqHUkTskt-i7YJs5RMpyPC78GSFHQoHCZxwUz_OZ2vdHe9S7Hbr3hWFOR1eWaO5_jm2foV6qzumAslVnXnw",
+    "channels": [
+      {
+        "channel": "/AdminApi/0/all",
+        "channelType": "all",
+        "description": "集团广播频道"
+      },
+      {
+        "channel": "/AdminApi/0/userid/130009",
+        "channelType": "target",
+        "description": "用户个人频道"
+      }
+    ],
+    "googleVerifyInfo": null
+  },
+  "code": 0,
+  "msg": "成功",
+  "msgCode": 0
+}

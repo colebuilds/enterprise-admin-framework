@@ -1,0 +1,30 @@
+{
+  "data": {
+    "list": [
+      {
+        "tenantId": 2001,
+        "bId": 1463,
+        "userId": 2247621,
+        "bankId": 973,
+        "bankNameStr": "BANORTE",
+        "beneficiaryName": "QWEQW",
+        "accountNo": "12457889562",
+        "ifscCode": "SBIN0005943",
+        "mobileNO": "918888888888",
+        "email": "",
+        "bankProvinceCode": "",
+        "bankCityCode": "",
+        "bankBranchAddress": "",
+        "addTime": "2026-04-29 12:30:01",
+        "updateTime": "2026-04-29 12:30:01",
+        "lastUpdateOperator": null
+      }
+    ],
+    "pageNo": 1,
+    "totalPage": 1,
+    "totalCount": 1
+  },
+  "code": 0,
+  "msg": "成功",
+  "msgCode": 0
+}

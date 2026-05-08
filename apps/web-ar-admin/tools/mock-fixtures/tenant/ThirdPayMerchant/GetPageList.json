@@ -1,0 +1,743 @@
+{
+  "data": {
+    "list": [
+      {
+        "id": 344013,
+        "payCode": "MovPayINR",
+        "sysCurrency": "INR",
+        "customName": "movpayinr",
+        "merchantCode": "test-Movpay",
+        "publicKeyMask": "",
+        "tenantNameWithId": "sit-inr(2001)",
+        "thirdPayMerchantRelationList": [
+          {
+            "tenantId": 2001,
+            "tenantNameWithId": "sit-inr(2001)",
+            "rechargeWithdrawChannelList": [
+              {
+                "channelId": 484057,
+                "sysChannelId": 12022,
+                "channelType": "Recharge",
+                "channelNameWithId": "MovPayINR-Paytm",
+                "state": 0,
+                "lastUpdateMan": "org_figo",
+                "lastUpdateTime": 1778238974880
+              },
+              {
+                "channelId": 484058,
+                "sysChannelId": 12075,
+                "channelType": "Recharge",
+                "channelNameWithId": "MovPayINR-Paytm2",
+                "state": 0,
+                "lastUpdateMan": "org_figo",
+                "lastUpdateTime": 1778238977782
+              },
+              {
+                "channelId": 484060,
+                "sysChannelId": 12120,
+                "channelType": "Recharge",
+                "channelNameWithId": "MovPayINR-PaytmQR3",
+                "state": 0,
+                "lastUpdateMan": "org_figo",
+                "lastUpdateTime": 1778238979868
+              }
+            ]
+          }
+        ],
+        "createTime": 1778235963841,
+        "creator": "org_figo",
+        "lastUpdateMan": "org_figo",
+        "lastUpdateTime": 1778235963841,
+        "state": 1,
+        "balance": 0,
+        "balanceUpdateTime": -1
+      },
+      {
+        "id": 344012,
+        "payCode": "ArbPay2INR",
+        "sysCurrency": "INR",
+        "customName": "ar钱包",
+        "merchantCode": "sitweb",
+        "publicKeyMask": "",
+        "tenantNameWithId": "sit-inr(2001)",
+        "thirdPayMerchantRelationList": [
+          {
+            "tenantId": 2001,
+            "tenantNameWithId": "sit-inr(2001)",
+            "rechargeWithdrawChannelList": [
+              {
+                "channelId": 484054,
+                "sysChannelId": 10444,
+                "channelType": "Withdraw",
+                "channelNameWithId": "ArbPay2INR-UPI",
+                "state": 1,
+                "lastUpdateMan": "org_luna",
+                "lastUpdateTime": 1778236399323
+              }
+            ]
+          }
+        ],
+        "createTime": 1778235271541,
+        "creator": "org_figo",
+        "lastUpdateMan": "org_figo",
+        "lastUpdateTime": 1778235271541,
+        "state": 1,
+        "balance": 0,
+        "balanceUpdateTime": -1
+      },
+      {
+        "id": 344011,
+        "payCode": "AYPayUSDTCU",
+        "sysCurrency": "USDT",
+        "customName": "111",
+        "merchantCode": "1111",
+        "publicKeyMask": "",
+        "tenantNameWithId": "sit-inr(2001)",
+        "thirdPayMerchantRelationList": [
+          {
+            "tenantId": 2001,
+            "tenantNameWithId": "sit-inr(2001)",
+            "rechargeWithdrawChannelList": [
+              {
+                "channelId": 484062,
+                "sysChannelId": 10965,
+                "channelType": "Recharge",
+                "channelNameWithId": "AYPayUSDTCU",
+                "state": 1,
+                "lastUpdateMan": "sam002",
+                "lastUpdateTime": 1778239394408
+              }
+            ]
+          }
+        ],
+        "createTime": 1778233898177,
+        "creator": "org_jadon",
+        "lastUpdateMan": "org_jadon",
+        "lastUpdateTime": 1778233898177,
+        "state": 1,
+        "balance": 0,
+        "balanceUpdateTime": -1
+      },
+      {
+        "id": 344010,
+        "payCode": "FyPayVND",
+        "sysCurrency": "VND",
+        "customName": "vnd_test",
+        "merchantCode": "vnd_test",
+        "publicKeyMask": "",
+        "tenantNameWithId": "",
+        "thirdPayMerchantRelationList": [],
+        "createTime": 1777875618379,
+        "creator": "ben_admin",
+        "lastUpdateMan": "ben_admin",
+        "lastUpdateTime": 1777875618378,
+        "state": 1,
+        "balance": 0,
+        "balanceUpdateTime": -1
+      },
+      {
+        "id": 344009,
+        "payCode": "YayaPayINR",
+        "sysCurrency": "INR",
+        "customName": "figo007",
+        "merchantCode": "qwer2342345345",
+        "publicKeyMask": "",
+        "tenantNameWithId": "",
+        "thirdPayMerchantRelationList": [],
+        "createTime": 1777724726215,
+        "creator": "org_figo",
+        "lastUpdateMan": "org_figo",
+        "lastUpdateTime": 1777724726214,
+        "state": 1,
+        "balance": 0,
+        "balanceUpdateTime": -1
+      },
+      {
+        "id": 344008,
+        "payCode": "YayaPayINR",
+        "sysCurrency": "INR",
+        "customName": "yayapay3",
+        "merchantCode": "yayapay3",
+        "publicKeyMask": "",
+        "tenantNameWithId": "sit-inr(2001)",
+        "thirdPayMerchantRelationList": [
+          {
+            "tenantId": 2001,
+            "tenantNameWithId": "sit-inr(2001)",
+            "rechargeWithdrawChannelList": [
+              {
+                "channelId": 484036,
+                "sysChannelId": 10504,
+                "channelType": "Recharge",
+                "channelNameWithId": "DONT OPEN YayaPay- PAYTM",
+                "state": 0,
+                "lastUpdateMan": "org_figo",
+                "lastUpdateTime": 1777706563814
+              }
+            ]
+          }
+        ],
+        "createTime": 1777706443789,
+        "creator": "org_raymond",
+        "lastUpdateMan": "org_raymond",
+        "lastUpdateTime": 1777706443788,
+        "state": 1,
+        "balance": 0,
+        "balanceUpdateTime": -1
+      },
+      {
+        "id": 344007,
+        "payCode": "YayaPayINR",
+        "sysCurrency": "INR",
+        "customName": "YayaPay2",
+        "merchantCode": "testett",
+        "publicKeyMask": "",
+        "tenantNameWithId": "",
+        "thirdPayMerchantRelationList": [],
+        "createTime": 1777705680796,
+        "creator": "org_figo",
+        "lastUpdateMan": "org_raymond",
+        "lastUpdateTime": 1777706108546,
+        "state": 1,
+        "balance": 0,
+        "balanceUpdateTime": -1
+      },
+      {
+        "id": 344006,
+        "payCode": "YayaPayINR",
+        "sysCurrency": "INR",
+        "customName": "YayaPay1",
+        "merchantCode": "M1762771883",
+        "publicKeyMask": "",
+        "tenantNameWithId": "sit-inr(2001)",
+        "thirdPayMerchantRelationList": [
+          {
+            "tenantId": 2001,
+            "tenantNameWithId": "sit-inr(2001)",
+            "rechargeWithdrawChannelList": [
+              {
+                "channelId": 484026,
+                "sysChannelId": 10503,
+                "channelType": "Recharge",
+                "channelNameWithId": "YayaPay - APP",
+                "state": 0,
+                "lastUpdateMan": "org_figo",
+                "lastUpdateTime": 1778240171642
+              },
+              {
+                "channelId": 484027,
+                "sysChannelId": 10504,
+                "channelType": "Recharge",
+                "channelNameWithId": "DONT OPEN YayaPay- PAYTM",
+                "state": 0,
+                "lastUpdateMan": "org_figo",
+                "lastUpdateTime": 1778240166732
+              },
+              {
+                "channelId": 484028,
+                "sysChannelId": 10761,
+                "channelType": "Recharge",
+                "channelNameWithId": "YayaPayINR-UPI",
+                "state": 0,
+                "lastUpdateMan": "org_figo",
+                "lastUpdateTime": 1778240174649
+              },
+              {
+                "channelId": 484031,
+                "sysChannelId": 10300,
+                "channelType": "Withdraw",
+                "channelNameWithId": "YayaPayINR",
+                "state": 1,
+                "lastUpdateMan": "ben_jmeter_002",
+                "lastUpdateTime": 1778224806207
+              },
+              {
+                "channelId": 484034,
+                "sysChannelId": 10725,
+                "channelType": "Recharge",
+                "channelNameWithId": "YayaPay - UPI x QR",
+                "state": 1,
+                "lastUpdateMan": "org_figo",
+                "lastUpdateTime": 1778240177768
+              },
+              {
+                "channelId": 484045,
+                "sysChannelId": 10901,
+                "channelType": "Recharge",
+                "channelNameWithId": "YayaPayINR-app",
+                "state": 0,
+                "lastUpdateMan": "org_figo",
+                "lastUpdateTime": 1778238022235
+              }
+            ]
+          }
+        ],
+        "createTime": 1777611721812,
+        "creator": "org_figo",
+        "lastUpdateMan": "ben_admin",
+        "lastUpdateTime": 1778045076001,
+        "state": 1,
+        "balance": 90.71,
+        "balanceUpdateTime": 1778240849286
+      },
+      {
+        "id": 344005,
+        "payCode": "TetherPayUSDTCU",
+        "sysCurrency": "USDT",
+        "customName": "Test001",
+        "merchantCode": "Test001",
+        "publicKeyMask": "",
+        "tenantNameWithId": "sit-inr(2001)",
+        "thirdPayMerchantRelationList": [
+          {
+            "tenantId": 2001,
+            "tenantNameWithId": "sit-inr(2001)",
+            "rechargeWithdrawChannelList": [
+              {
+                "channelId": 484038,
+                "sysChannelId": 10706,
+                "channelType": "Recharge",
+                "channelNameWithId": "USDT - TRC20 (Tetherpay)",
+                "state": 1,
+                "lastUpdateMan": "org_milo",
+                "lastUpdateTime": 1778050940716
+              }
+            ]
+          }
+        ],
+        "createTime": 1777464419842,
+        "creator": "org_figo",
+        "lastUpdateMan": "org_figo",
+        "lastUpdateTime": 1777464419841,
+        "state": 1,
+        "balance": 0,
+        "balanceUpdateTime": -1
+      },
+      {
+        "id": 344004,
+        "payCode": "ArbPayINR",
+        "sysCurrency": "INR",
+        "customName": "fastupi_name",
+        "merchantCode": "fastupi_num",
+        "publicKeyMask": "",
+        "tenantNameWithId": "sit-inr(2001)",
+        "thirdPayMerchantRelationList": [
+          {
+            "tenantId": 2001,
+            "tenantNameWithId": "sit-inr(2001)",
+            "rechargeWithdrawChannelList": [
+              {
+                "channelId": 484044,
+                "sysChannelId": 26003,
+                "channelType": "Withdraw",
+                "channelNameWithId": "FastUPI提现",
+                "state": 1,
+                "lastUpdateMan": "org_milo",
+                "lastUpdateTime": 1778233942825
+              }
+            ]
+          }
+        ],
+        "createTime": 1777213335285,
+        "creator": "user001",
+        "lastUpdateMan": "sam002",
+        "lastUpdateTime": 1777544205424,
+        "state": 1,
+        "balance": 0,
+        "balanceUpdateTime": -1
+      },
+      {
+        "id": 344003,
+        "payCode": "UmoneyPayINR",
+        "sysCurrency": "INR",
+        "customName": "umoney_name",
+        "merchantCode": "umoney_unm",
+        "publicKeyMask": "",
+        "tenantNameWithId": "sit-inr(2001)",
+        "thirdPayMerchantRelationList": [
+          {
+            "tenantId": 2001,
+            "tenantNameWithId": "sit-inr(2001)",
+            "rechargeWithdrawChannelList": [
+              {
+                "channelId": 484011,
+                "sysChannelId": 10386,
+                "channelType": "Withdraw",
+                "channelNameWithId": "UmoneyPayINR",
+                "state": 0,
+                "lastUpdateMan": "user001",
+                "lastUpdateTime": 1777290775515
+              }
+            ]
+          }
+        ],
+        "createTime": 1777212947479,
+        "creator": "user001",
+        "lastUpdateMan": "ben_admin",
+        "lastUpdateTime": 1778068454464,
+        "state": 1,
+        "balance": 0,
+        "balanceUpdateTime": -1
+      },
+      {
+        "id": 344002,
+        "payCode": "TetherPayUSDTCU",
+        "sysCurrency": "USDT",
+        "customName": "usdt2_name",
+        "merchantCode": "180126",
+        "publicKeyMask": "",
+        "tenantNameWithId": "sit-inr(2001)",
+        "thirdPayMerchantRelationList": [
+          {
+            "tenantId": 2001,
+            "tenantNameWithId": "sit-inr(2001)",
+            "rechargeWithdrawChannelList": [
+              {
+                "channelId": 484009,
+                "sysChannelId": 10706,
+                "channelType": "Recharge",
+                "channelNameWithId": "USDT - TRC20 (Tetherpay)",
+                "state": 0,
+                "lastUpdateMan": "ar_admin",
+                "lastUpdateTime": 1778153420287
+              }
+            ]
+          }
+        ],
+        "createTime": 1777038923124,
+        "creator": "user001",
+        "lastUpdateMan": "ar_admin",
+        "lastUpdateTime": 1778219096749,
+        "state": 1,
+        "balance": 0,
+        "balanceUpdateTime": -1
+      },
+      {
+        "id": 344001,
+        "payCode": "TetherPayUSDTCU",
+        "sysCurrency": "USDT",
+        "customName": "USDT - TRC20 (Tetherpay)-10706",
+        "merchantCode": "180126",
+        "publicKeyMask": "",
+        "tenantNameWithId": "sit-inr(2001)",
+        "thirdPayMerchantRelationList": [
+          {
+            "tenantId": 2001,
+            "tenantNameWithId": "sit-inr(2001)",
+            "rechargeWithdrawChannelList": [
+              {
+                "channelId": 484002,
+                "sysChannelId": 10706,
+                "channelType": "Recharge",
+                "channelNameWithId": "USDT - TRC20 (Tetherpay)",
+                "state": 1,
+                "lastUpdateMan": "org_figo",
+                "lastUpdateTime": 1778221949557
+              }
+            ]
+          }
+        ],
+        "createTime": 1777016276222,
+        "creator": "org_len",
+        "lastUpdateMan": "user001",
+        "lastUpdateTime": 1777099275899,
+        "state": 1,
+        "balance": 0,
+        "balanceUpdateTime": -1
+      },
+      {
+        "id": 340010,
+        "payCode": "ArbPayINR",
+        "sysCurrency": "INR",
+        "customName": "ar钱包1",
+        "merchantCode": "sitweb",
+        "publicKeyMask": "",
+        "tenantNameWithId": "sit-inr(2001)",
+        "thirdPayMerchantRelationList": [
+          {
+            "tenantId": 2001,
+            "tenantNameWithId": "sit-inr(2001)",
+            "rechargeWithdrawChannelList": [
+              {
+                "channelId": 484001,
+                "sysChannelId": 10090,
+                "channelType": "Withdraw",
+                "channelNameWithId": "ArbPay",
+                "state": 1,
+                "lastUpdateMan": "org_len",
+                "lastUpdateTime": 1777707693400
+              },
+              {
+                "channelId": 484010,
+                "sysChannelId": 26003,
+                "channelType": "Withdraw",
+                "channelNameWithId": "FastUPI提现",
+                "state": 1,
+                "lastUpdateMan": "org_figo",
+                "lastUpdateTime": 1778234706755
+              },
+              {
+                "channelId": 484018,
+                "sysChannelId": 10201,
+                "channelType": "Recharge",
+                "channelNameWithId": "ArbPay",
+                "state": 1,
+                "lastUpdateMan": "org_len",
+                "lastUpdateTime": 1777388003244
+              },
+              {
+                "channelId": 484019,
+                "sysChannelId": 26000,
+                "channelType": "Recharge",
+                "channelNameWithId": "UPI-QR",
+                "state": 1,
+                "lastUpdateMan": "org_len",
+                "lastUpdateTime": 1777388066788
+              },
+              {
+                "channelId": 484043,
+                "sysChannelId": 26004,
+                "channelType": "Withdraw",
+                "channelNameWithId": "FastUPI提现",
+                "state": 1,
+                "lastUpdateMan": "org_milo",
+                "lastUpdateTime": 1778233982568
+              }
+            ]
+          }
+        ],
+        "createTime": 1776701716813,
+        "creator": "ar_admin",
+        "lastUpdateMan": "ar_admin",
+        "lastUpdateTime": 1778237177852,
+        "state": 1,
+        "balance": 0,
+        "balanceUpdateTime": -1
+      },
+      {
+        "id": 340009,
+        "payCode": "UmoneyPayINR",
+        "sysCurrency": "INR",
+        "customName": "Umoney-自动回调",
+        "merchantCode": "101",
+        "publicKeyMask": "",
+        "tenantNameWithId": "sit-inr(2001),sitINR-2002(2002)",
+        "thirdPayMerchantRelationList": [
+          {
+            "tenantId": 2001,
+            "tenantNameWithId": "sit-inr(2001)",
+            "rechargeWithdrawChannelList": [
+              {
+                "channelId": 480028,
+                "sysChannelId": 10386,
+                "channelType": "Withdraw",
+                "channelNameWithId": "UmoneyPayINR",
+                "state": 1,
+                "lastUpdateMan": "ben_jmeter_002",
+                "lastUpdateTime": 1778224590438
+              },
+              {
+                "channelId": 480030,
+                "sysChannelId": 10656,
+                "channelType": "Recharge",
+                "channelNameWithId": "Umoney - UPI x QR",
+                "state": 0,
+                "lastUpdateMan": "ar_admin",
+                "lastUpdateTime": 1776701976819
+              },
+              {
+                "channelId": 480033,
+                "sysChannelId": 10696,
+                "channelType": "Recharge",
+                "channelNameWithId": "UmoneyPayINR",
+                "state": 0,
+                "lastUpdateMan": "org_milo",
+                "lastUpdateTime": 1777964549578
+              },
+              {
+                "channelId": 484039,
+                "sysChannelId": 10693,
+                "channelType": "Recharge",
+                "channelNameWithId": "Umoney-APP",
+                "state": 1,
+                "lastUpdateMan": "org_milo",
+                "lastUpdateTime": 1777964573073
+              },
+              {
+                "channelId": 484040,
+                "sysChannelId": 10697,
+                "channelType": "Recharge",
+                "channelNameWithId": "UmoneyPayINR",
+                "state": 1,
+                "lastUpdateMan": "org_milo",
+                "lastUpdateTime": 1777964642452
+              }
+            ]
+          },
+          {
+            "tenantId": 2002,
+            "tenantNameWithId": "sitINR-2002(2002)",
+            "rechargeWithdrawChannelList": [
+              {
+                "channelId": 484025,
+                "sysChannelId": 10656,
+                "channelType": "Recharge",
+                "channelNameWithId": "Umoney - UPI x QR",
+                "state": 0,
+                "lastUpdateMan": "sys_ben",
+                "lastUpdateTime": 1777901620797
+              },
+              {
+                "channelId": 484042,
+                "sysChannelId": 10386,
+                "channelType": "Withdraw",
+                "channelNameWithId": "UmoneyPayINR",
+                "state": 0,
+                "lastUpdateMan": "sys_ben",
+                "lastUpdateTime": 1777901620797
+              }
+            ]
+          }
+        ],
+        "createTime": 1776701122516,
+        "creator": "org_nick",
+        "lastUpdateMan": "user001",
+        "lastUpdateTime": 1777278355758,
+        "state": 1,
+        "balance": 10000,
+        "balanceUpdateTime": 1778240819050
+      },
+      {
+        "id": 340008,
+        "payCode": "AAPay2INR",
+        "sysCurrency": "INR",
+        "customName": "TestPay_BizRule_01",
+        "merchantCode": "M_BIZ_001",
+        "publicKeyMask": "",
+        "tenantNameWithId": "",
+        "thirdPayMerchantRelationList": [],
+        "createTime": 1776491770918,
+        "creator": "ben_uitest1",
+        "lastUpdateMan": "ben_uitest1",
+        "lastUpdateTime": 1776491770917,
+        "state": 1,
+        "balance": 0,
+        "balanceUpdateTime": -1
+      },
+      {
+        "id": 340007,
+        "payCode": "AAPay2INR",
+        "sysCurrency": "INR",
+        "customName": "NewPayMerchant",
+        "merchantCode": "M001",
+        "publicKeyMask": "",
+        "tenantNameWithId": "sit-inr(2001)",
+        "thirdPayMerchantRelationList": [
+          {
+            "tenantId": 2001,
+            "tenantNameWithId": "sit-inr(2001)",
+            "rechargeWithdrawChannelList": [
+              {
+                "channelId": 480027,
+                "sysChannelId": 10639,
+                "channelType": "Recharge",
+                "channelNameWithId": "",
+                "state": 0,
+                "lastUpdateMan": "org_jadon",
+                "lastUpdateTime": 1777112836031
+              }
+            ]
+          }
+        ],
+        "createTime": 1776491046462,
+        "creator": "ben_uitest1",
+        "lastUpdateMan": "ben_uitest1",
+        "lastUpdateTime": 1776491579581,
+        "state": 1,
+        "balance": 0,
+        "balanceUpdateTime": -1
+      },
+      {
+        "id": 340006,
+        "payCode": "AYPayUSDTCU",
+        "sysCurrency": "USDT",
+        "customName": "测试===",
+        "merchantCode": "测试===",
+        "publicKeyMask": "",
+        "tenantNameWithId": "sit-inr(2001),sit-vnd(2007)",
+        "thirdPayMerchantRelationList": [
+          {
+            "tenantId": 2001,
+            "tenantNameWithId": "sit-inr(2001)",
+            "rechargeWithdrawChannelList": [
+              {
+                "channelId": 480011,
+                "sysChannelId": 10965,
+                "channelType": "Recharge",
+                "channelNameWithId": "AYPayUSDTCU",
+                "state": 0,
+                "lastUpdateMan": "user001",
+                "lastUpdateTime": 1777045414056
+              },
+              {
+                "channelId": 480025,
+                "sysChannelId": 12051,
+                "channelType": "Recharge",
+                "channelNameWithId": "AYPayUSDT-TRC20(2)",
+                "state": 0,
+                "lastUpdateMan": "org_alex",
+                "lastUpdateTime": 1778139948071
+              },
+              {
+                "channelId": 484012,
+                "sysChannelId": 10542,
+                "channelType": "Withdraw",
+                "channelNameWithId": "AYPayUSDTCU",
+                "state": 1,
+                "lastUpdateMan": "ben_jmeter_002",
+                "lastUpdateTime": 1777956709264
+              },
+              {
+                "channelId": 484013,
+                "sysChannelId": 12035,
+                "channelType": "Withdraw",
+                "channelNameWithId": "AYPay-USDT2",
+                "state": 1,
+                "lastUpdateMan": "ben_jmeter_002",
+                "lastUpdateTime": 1777956695082
+              }
+            ]
+          },
+          {
+            "tenantId": 2007,
+            "tenantNameWithId": "sit-vnd(2007)",
+            "rechargeWithdrawChannelList": [
+              {
+                "channelId": 484061,
+                "sysChannelId": 10965,
+                "channelType": "Recharge",
+                "channelNameWithId": "AYPayUSDTCU",
+                "state": 1,
+                "lastUpdateMan": "org_jadon",
+                "lastUpdateTime": 1778237846950
+              }
+            ]
+          }
+        ],
+        "createTime": 1776432716114,
+        "creator": "org_jadon",
+        "lastUpdateMan": "org_sam",
+        "lastUpdateTime": 1777796019315,
+        "state": 1,
+        "balance": 0,
+        "balanceUpdateTime": -1
+      }
+    ],
+    "pageNo": 1,
+    "totalPage": 1,
+    "totalCount": 18
+  },
+  "code": 0,
+  "msg": "成功",
+  "msgCode": 0
+}

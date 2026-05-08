@@ -1,0 +1,100 @@
+{
+  "data": {
+    "list": [
+      {
+        "languageCode": "ja",
+        "languageName": "Japanese(日语)",
+        "creator": "sys_milo",
+        "createTime": 1776146680341,
+        "lastUpdateMan": "sys_milo",
+        "lastUpdateTime": 1776146680337
+      },
+      {
+        "languageCode": "fr",
+        "languageName": "French(法语)",
+        "creator": "sys_milo",
+        "createTime": 1776146671424,
+        "lastUpdateMan": "sys_milo",
+        "lastUpdateTime": 1776146671421
+      },
+      {
+        "languageCode": "fi",
+        "languageName": "Finnish(芬兰语)",
+        "creator": "sys_milo",
+        "createTime": 1776146658864,
+        "lastUpdateMan": "sys_milo",
+        "lastUpdateTime": 1776146658861
+      },
+      {
+        "languageCode": "uk",
+        "languageName": "Ukrainian(乌克兰语)",
+        "creator": "sys_milo",
+        "createTime": 1776146649099,
+        "lastUpdateMan": "sys_milo",
+        "lastUpdateTime": 1776146649095
+      },
+      {
+        "languageCode": "hy",
+        "languageName": "Armenian(亚美尼亚语)",
+        "creator": "sys_milo",
+        "createTime": 1776146639567,
+        "lastUpdateMan": "sys_milo",
+        "lastUpdateTime": 1776146639563
+      },
+      {
+        "languageCode": "ga",
+        "languageName": "Irish(爱尔兰语)",
+        "creator": "sys_milo",
+        "createTime": 1776146629534,
+        "lastUpdateMan": "sys_milo",
+        "lastUpdateTime": 1776146629531
+      },
+      {
+        "languageCode": "vi",
+        "languageName": "Vietnamese(越南语)",
+        "creator": "sys_milo",
+        "createTime": 1776146341926,
+        "lastUpdateMan": "sys_milo",
+        "lastUpdateTime": 1776146341923
+      },
+      {
+        "languageCode": "en",
+        "languageName": "英语",
+        "creator": "admin",
+        "createTime": 1747323573004,
+        "lastUpdateMan": "admin",
+        "lastUpdateTime": 1722541293429
+      },
+      {
+        "languageCode": "hi",
+        "languageName": "印地语",
+        "creator": "admin",
+        "createTime": 1723451134533,
+        "lastUpdateMan": "admin",
+        "lastUpdateTime": 1723451134529
+      },
+      {
+        "languageCode": "pt",
+        "languageName": "葡萄牙语",
+        "creator": "admin",
+        "createTime": 1723180102227,
+        "lastUpdateMan": "admin",
+        "lastUpdateTime": 1723180102223
+      },
+      {
+        "languageCode": "zh",
+        "languageName": "中文",
+        "creator": "SysAdmin",
+        "createTime": 1722571255332,
+        "lastUpdateMan": "admin",
+        "lastUpdateTime": 1722588080991
+      }
+    ],
+    "pageNo": 1,
+    "totalPage": 1,
+    "totalCount": 11
+  },
+  "code": 0,
+  "msg": "成功",
+  "msgCode": 0
+}

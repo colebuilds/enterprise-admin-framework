@@ -1,0 +1,232 @@
+{
+  "data": {
+    "list": [
+      {
+        "bankId": 977,
+        "bankLogo": "",
+        "bankName": "v1卡",
+        "bankCode": "v1code",
+        "state": 0,
+        "stateStr": "关闭",
+        "upTime": "2026-04-18 10:16:50",
+        "reserved": "1",
+        "ifscCode": ""
+      },
+      {
+        "bankId": 976,
+        "bankLogo": "",
+        "bankName": "qweqwe",
+        "bankCode": "13467845123",
+        "state": 1,
+        "stateStr": "显示",
+        "upTime": "2026-05-04 16:32:11",
+        "reserved": "1",
+        "ifscCode": ""
+      },
+      {
+        "bankId": 975,
+        "bankLogo": "",
+        "bankName": "Mercado Pago",
+        "bankCode": "Mercado Pago",
+        "state": 1,
+        "stateStr": "显示",
+        "upTime": "2026-04-04 06:50:55",
+        "reserved": "1",
+        "ifscCode": ""
+      },
+      {
+        "bankId": 974,
+        "bankLogo": "",
+        "bankName": "SPIN BY OXXO",
+        "bankCode": "SPIN BY OXXO",
+        "state": 1,
+        "stateStr": "显示",
+        "upTime": "2026-04-04 05:32:30",
+        "reserved": "1",
+        "ifscCode": ""
+      },
+      {
+        "bankId": 973,
+        "bankLogo": "",
+        "bankName": "BANORTE",
+        "bankCode": "BANORTE",
+        "state": 1,
+        "stateStr": "显示",
+        "upTime": "0001-01-01 00:00:00",
+        "reserved": "1",
+        "ifscCode": ""
+      },
+      {
+        "bankId": 972,
+        "bankLogo": "",
+        "bankName": "SANTANDER",
+        "bankCode": "SANTANDER",
+        "state": 1,
+        "stateStr": "显示",
+        "upTime": "0001-01-01 00:00:00",
+        "reserved": "1",
+        "ifscCode": ""
+      },
+      {
+        "bankId": 971,
+        "bankLogo": "",
+        "bankName": "BBVA MEXICO",
+        "bankCode": "BBVA MEXICO",
+        "state": 1,
+        "stateStr": "显示",
+        "upTime": "0001-01-01 00:00:00",
+        "reserved": "1",
+        "ifscCode": ""
+      },
+      {
+        "bankId": 958,
+        "bankLogo": null,
+        "bankName": "Fast UPI",
+        "bankCode": "Fast UPI",
+        "state": 1,
+        "stateStr": "显示",
+        "upTime": "2025-11-21 16:17:33",
+        "reserved": "27",
+        "ifscCode": "Fast UPI"
+      },
+      {
+        "bankId": 952,
+        "bankLogo": null,
+        "bankName": "Access Bank",
+        "bankCode": "Access Bank",
+        "state": 1,
+        "stateStr": "显示",
+        "upTime": "2025-11-20 18:41:45",
+        "reserved": "1",
+        "ifscCode": ""
+      },
+      {
+        "bankId": 951,
+        "bankLogo": null,
+        "bankName": "PalmPay",
+        "bankCode": "PalmPay",
+        "state": 1,
+        "stateStr": "显示",
+        "upTime": "2025-11-20 18:41:28",
+        "reserved": "1",
+        "ifscCode": ""
+      },
+      {
+        "bankId": 950,
+        "bankLogo": null,
+        "bankName": "Kuda Microfinance Bank",
+        "bankCode": "Kuda Microfinance Bank",
+        "state": 1,
+        "stateStr": "显示",
+        "upTime": "2025-11-20 18:41:06",
+        "reserved": "1",
+        "ifscCode": ""
+      },
+      {
+        "bankId": 949,
+        "bankLogo": null,
+        "bankName": "Guaranty Trust Bank",
+        "bankCode": "Guaranty Trust Bank",
+        "state": 1,
+        "stateStr": "显示",
+        "upTime": "2025-11-20 18:40:51",
+        "reserved": "1",
+        "ifscCode": ""
+      },
+      {
+        "bankId": 948,
+        "bankLogo": null,
+        "bankName": "Etisalat Misr",
+        "bankCode": "Etisalat Misr",
+        "state": 1,
+        "stateStr": "显示",
+        "upTime": "2025-11-20 18:39:13",
+        "reserved": "4",
+        "ifscCode": ""
+      },
+      {
+        "bankId": 947,
+        "bankLogo": null,
+        "bankName": "Orange",
+        "bankCode": "Orange",
+        "state": 1,
+        "stateStr": "显示",
+        "upTime": "2025-11-20 18:38:52",
+        "reserved": "4",
+        "ifscCode": ""
+      },
+      {
+        "bankId": 946,
+        "bankLogo": null,
+        "bankName": "Vodafone",
+        "bankCode": "Vodafone",
+        "state": 1,
+        "stateStr": "显示",
+        "upTime": "2025-11-20 18:38:34",
+        "reserved": "4",
+        "ifscCode": ""
+      },
+      {
+        "bankId": 945,
+        "bankLogo": null,
+        "bankName": "RHB",
+        "bankCode": "RHB",
+        "state": 1,
+        "stateStr": "显示",
+        "upTime": "2025-11-20 18:22:28",
+        "reserved": "1",
+        "ifscCode": ""
+      },
+      {
+        "bankId": 944,
+        "bankLogo": null,
+        "bankName": "Public Bank Berhad",
+        "bankCode": "Public Bank Berhad",
+        "state": 1,
+        "stateStr": "显示",
+        "upTime": "2025-11-20 18:22:09",
+        "reserved": "1",
+        "ifscCode": ""
+      },
+      {
+        "bankId": 943,
+        "bankLogo": null,
+        "bankName": "MAYBANK",
+        "bankCode": "MAYBANK",
+        "state": 1,
+        "stateStr": "显示",
+        "upTime": "2025-11-20 18:21:52",
+        "reserved": "1",
+        "ifscCode": ""
+      },
+      {
+        "bankId": 942,
+        "bankLogo": null,
+        "bankName": "CIMB",
+        "bankCode": "CIMB",
+        "state": 1,
+        "stateStr": "显示",
+        "upTime": "2025-11-20 18:21:28",
+        "reserved": "1",
+        "ifscCode": ""
+      },
+      {
+        "bankId": 941,
+        "bankLogo": null,
+        "bankName": "Touch n Go",
+        "bankCode": "Touch n Go",
+        "state": 1,
+        "stateStr": "显示",
+        "upTime": "2025-11-20 18:20:57",
+        "reserved": "1",
+        "ifscCode": ""
+      }
+    ],
+    "pageNo": 1,
+    "totalPage": 46,
+    "totalCount": 914
+  },
+  "code": 0,
+  "msg": "成功",
+  "msgCode": 0
+}

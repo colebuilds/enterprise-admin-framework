@@ -1,0 +1,144 @@
+{
+  "data": {
+    "list": [
+      {
+        "currencyCode": "PKR",
+        "currencyName": "巴基斯坦卢比",
+        "currencyMarkCode": "₨",
+        "currencyRate": 278.55,
+        "state": 1,
+        "creator": "sys_len",
+        "createTime": 1777543657728,
+        "lastUpdateMan": "sys_len",
+        "lastUpdateTime": 1777543657724
+      },
+      {
+        "currencyCode": "JPY",
+        "currencyName": "日元",
+        "currencyMarkCode": "¥",
+        "currencyRate": 1,
+        "state": 1,
+        "creator": "sys_milo",
+        "createTime": 1776147267272,
+        "lastUpdateMan": "sys_milo",
+        "lastUpdateTime": 1776147267268
+      },
+      {
+        "currencyCode": "GIP",
+        "currencyName": "直布罗陀镑",
+        "currencyMarkCode": "£",
+        "currencyRate": 1,
+        "state": 1,
+        "creator": "sys_milo",
+        "createTime": 1776147262197,
+        "lastUpdateMan": "sys_milo",
+        "lastUpdateTime": 1776147262193
+      },
+      {
+        "currencyCode": "EUR",
+        "currencyName": "欧元",
+        "currencyMarkCode": "€",
+        "currencyRate": 1,
+        "state": 1,
+        "creator": "sys_milo",
+        "createTime": 1776147256977,
+        "lastUpdateMan": "sys_milo",
+        "lastUpdateTime": 1776147256973
+      },
+      {
+        "currencyCode": "TWD",
+        "currencyName": "新台币",
+        "currencyMarkCode": "NT$",
+        "currencyRate": 1,
+        "state": 1,
+        "creator": "sys_milo",
+        "createTime": 1776147251934,
+        "lastUpdateMan": "sys_milo",
+        "lastUpdateTime": 1776147251930
+      },
+      {
+        "currencyCode": "MGA",
+        "currencyName": "马达加斯加阿里亚里",
+        "currencyMarkCode": "Ar",
+        "currencyRate": 1,
+        "state": 1,
+        "creator": "sys_milo",
+        "createTime": 1776147247805,
+        "lastUpdateMan": "sys_milo",
+        "lastUpdateTime": 1776147247808
+      },
+      {
+        "currencyCode": "MYR",
+        "currencyName": "马来西亚令吉",
+        "currencyMarkCode": "RM",
+        "currencyRate": 1,
+        "state": 1,
+        "creator": "sys_milo",
+        "createTime": 1776147223964,
+        "lastUpdateMan": "sys_milo",
+        "lastUpdateTime": 1776147223961
+      },
+      {
+        "currencyCode": "MMK",
+        "currencyName": "缅元",
+        "currencyMarkCode": "",
+        "currencyRate": 1,
+        "state": 1,
+        "creator": "sys_milo",
+        "createTime": 1776147218676,
+        "lastUpdateMan": "sys_milo",
+        "lastUpdateTime": 1776147218673
+      },
+      {
+        "currencyCode": "MXN",
+        "currencyName": "墨西哥比索",
+        "currencyMarkCode": "Mex$",
+        "currencyRate": 1,
+        "state": 1,
+        "creator": "sys_milo",
+        "createTime": 1776147213578,
+        "lastUpdateMan": "sys_milo",
+        "lastUpdateTime": 1776147213574
+      },
+      {
+        "currencyCode": "VND",
+        "currencyName": "越南盾",
+        "currencyMarkCode": "₫",
+        "currencyRate": 3820.000001,
+        "state": 1,
+        "creator": "sys_milo",
+        "createTime": 1776146331206,
+        "lastUpdateMan": "sys_milo",
+        "lastUpdateTime": 1776147186550
+      },
+      {
+        "currencyCode": "BRL",
+        "currencyName": "巴西雷亚尔",
+        "currencyMarkCode": "R$",
+        "currencyRate": 5.66,
+        "state": 1,
+        "creator": "admin",
+        "createTime": 1746763791418,
+        "lastUpdateMan": "sysadmin",
+        "lastUpdateTime": 1768647587558
+      },
+      {
+        "currencyCode": "INR",
+        "currencyName": "印度卢比",
+        "currencyMarkCode": "₹",
+        "currencyRate": 55,
+        "state": 1,
+        "creator": "SysAdmin",
+        "createTime": 1723451838725,
+        "lastUpdateMan": "admin",
+        "lastUpdateTime": 1752743476637
+      }
+    ],
+    "pageNo": 1,
+    "totalPage": 1,
+    "totalCount": 12
+  },
+  "code": 0,
+  "msg": "成功",
+  "msgCode": 0
+}

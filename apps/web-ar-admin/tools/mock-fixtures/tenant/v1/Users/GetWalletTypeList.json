@@ -1,0 +1,63 @@
+{
+  "data": [
+    {
+      "id": 948,
+      "name": "Etisalat Misr"
+    },
+    {
+      "id": 947,
+      "name": "Orange"
+    },
+    {
+      "id": 946,
+      "name": "Vodafone"
+    },
+    {
+      "id": 896,
+      "name": "JAZZCASH"
+    },
+    {
+      "id": 895,
+      "name": "Easypaisa"
+    },
+    {
+      "id": 892,
+      "name": "RSN Wallet"
+    },
+    {
+      "id": 884,
+      "name": "AR Pay"
+    },
+    {
+      "id": 41,
+      "name": "Surecash11"
+    },
+    {
+      "id": 38,
+      "name": "WavePay"
+    },
+    {
+      "id": 37,
+      "name": "KBZpay"
+    },
+    {
+      "id": 36,
+      "name": "NAGAD"
+    },
+    {
+      "id": 35,
+      "name": "UPAY"
+    },
+    {
+      "id": 34,
+      "name": "ROCKET"
+    },
+    {
+      "id": 33,
+      "name": "BKASH"
+    }
+  ],
+  "code": 0,
+  "msg": "成功",
+  "msgCode": 0
+}

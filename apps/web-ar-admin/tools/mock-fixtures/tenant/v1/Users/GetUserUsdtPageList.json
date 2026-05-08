@@ -1,0 +1,25 @@
+{
+  "data": {
+    "list": [
+      {
+        "tenantId": 2001,
+        "bId": 1461,
+        "userId": 2247621,
+        "bankId": 25,
+        "bankNameStr": "TRC",
+        "beneficiaryName": "11",
+        "accountNo": "TQwFHYbT9R4w2VjK8Yq8C6X8kzZ1Yp9b6X",
+        "mobileNO": "",
+        "addTime": "2026-04-28 15:53:06",
+        "updateTime": "2026-05-06 18:39:22",
+        "lastUpdateOperator": "admin"
+      }
+    ],
+    "pageNo": 1,
+    "totalPage": 1,
+    "totalCount": 1
+  },
+  "code": 0,
+  "msg": "成功",
+  "msgCode": 0
+}

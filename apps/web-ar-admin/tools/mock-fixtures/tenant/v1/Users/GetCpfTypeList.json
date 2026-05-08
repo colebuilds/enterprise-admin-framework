@@ -1,0 +1,23 @@
+{
+  "data": [
+    {
+      "id": 31,
+      "name": "CNPJ"
+    },
+    {
+      "id": 30,
+      "name": "EMAIL"
+    },
+    {
+      "id": 29,
+      "name": "PHONE"
+    },
+    {
+      "id": 28,
+      "name": "CPF"
+    }
+  ],
+  "code": 0,
+  "msg": "成功",
+  "msgCode": 0
+}

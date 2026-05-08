@@ -1,0 +1,72 @@
+{
+  "data": {
+    "list": [
+      {
+        "tenantId": 2001,
+        "categoryType": 2,
+        "categoryTypeStr": "体育竞技",
+        "gameCategory": "Sports",
+        "vendorCode": "SaBa",
+        "vendorDisplayName": "沙巴体育",
+        "gameName": "Soccer",
+        "gameCode": "1",
+        "gameType": null,
+        "betCount": 27,
+        "betAmount": 180,
+        "validAmount": 117.51,
+        "winAmount": 229.29,
+        "winLoseAmount": -49.29
+      },
+      {
+        "tenantId": 2001,
+        "categoryType": 2,
+        "categoryTypeStr": "体育竞技",
+        "gameCategory": "Sports",
+        "vendorCode": "SaBa",
+        "vendorDisplayName": "沙巴体育",
+        "gameName": "Happy 5",
+        "gameCode": "164",
+        "gameType": null,
+        "betCount": 3,
+        "betAmount": 9,
+        "validAmount": 8.55,
+        "winAmount": 17.55,
+        "winLoseAmount": -8.55
+      },
+      {
+        "tenantId": 2001,
+        "categoryType": 2,
+        "categoryTypeStr": "体育竞技",
+        "gameCategory": "Sports",
+        "vendorCode": "SaBa",
+        "vendorDisplayName": "沙巴体育",
+        "gameName": "Basketball",
+        "gameCode": "2",
+        "gameType": null,
+        "betCount": 12,
+        "betAmount": 0,
+        "validAmount": 0,
+        "winAmount": 36.72,
+        "winLoseAmount": -36.72
+      }
+    ],
+    "summary": {
+      "pageBetCount": 42,
+      "pageBetAmount": 189,
+      "pageValidAmount": 126.06,
+      "pageWinAmount": 283.56,
+      "pageWinLoseAmount": -94.56,
+      "totalBetCount": 42,
+      "totalBetAmount": 189,
+      "totalValidAmount": 126.06,
+      "totalWinAmount": 283.56,
+      "totalWinLoseAmount": -94.56
+    },
+    "pageNo": 1,
+    "totalPage": 1,
+    "totalCount": 3
+  },
+  "code": 0,
+  "msg": "成功",
+  "msgCode": 0
+}

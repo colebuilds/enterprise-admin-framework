@@ -1,0 +1,70 @@
+{
+  "data": [
+    {
+      "orgId": 1000,
+      "tenantList": [
+        {
+          "tenantId": 2001,
+          "supportSysCurrency": "INR",
+          "mainCountry": "IND"
+        },
+        {
+          "tenantId": 2002,
+          "supportSysCurrency": "INR",
+          "mainCountry": "IND"
+        },
+        {
+          "tenantId": 2007,
+          "supportSysCurrency": "VND",
+          "mainCountry": "VNM"
+        },
+        {
+          "tenantId": 2024,
+          "supportSysCurrency": "VND",
+          "mainCountry": "MMR"
+        },
+        {
+          "tenantId": 2026,
+          "supportSysCurrency": "VND",
+          "mainCountry": "PAK"
+        },
+        {
+          "tenantId": 2028,
+          "supportSysCurrency": "PKR",
+          "mainCountry": "PAK"
+        }
+      ]
+    },
+    {
+      "orgId": 1001,
+      "tenantList": []
+    },
+    {
+      "orgId": 31000,
+      "tenantList": []
+    },
+    {
+      "orgId": 61000,
+      "tenantList": [
+        {
+          "tenantId": 1001,
+          "supportSysCurrency": "INR",
+          "mainCountry": "IND"
+        }
+      ]
+    },
+    {
+      "orgId": 61022,
+      "tenantList": [
+        {
+          "tenantId": 1990,
+          "supportSysCurrency": "INR",
+          "mainCountry": "IND"
+        }
+      ]
+    }
+  ],
+  "code": 0,
+  "msg": "成功",
+  "msgCode": 0
+}

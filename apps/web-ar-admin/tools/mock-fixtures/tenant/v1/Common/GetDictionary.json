@@ -1,0 +1,1278 @@
+{
+  "data": {
+    "rebateMode": null,
+    "ossFileTypeEnum": null,
+    "smsConfigList": null,
+    "upiList": [
+      {
+        "code": "2",
+        "name": "UPI"
+      },
+      {
+        "code": "27",
+        "name": "Fast UPI"
+      }
+    ],
+    "financialTypeList": [
+      {
+        "code": "0",
+        "name": "投注"
+      },
+      {
+        "code": "1",
+        "name": "投注返佣"
+      },
+      {
+        "code": "2",
+        "name": "中奖"
+      },
+      {
+        "code": "3",
+        "name": "红包"
+      },
+      {
+        "code": "4",
+        "name": "充值"
+      },
+      {
+        "code": "5",
+        "name": "提现"
+      },
+      {
+        "code": "6",
+        "name": "提现退回"
+      },
+      {
+        "code": "7",
+        "name": "每日签到"
+      },
+      {
+        "code": "8",
+        "name": "代理红包充值"
+      },
+      {
+        "code": "9",
+        "name": "出款拒绝"
+      },
+      {
+        "code": "10",
+        "name": "充值赠送"
+      },
+      {
+        "code": "11",
+        "name": "人工充值"
+      },
+      {
+        "code": "12",
+        "name": "注册送金"
+      },
+      {
+        "code": "13",
+        "name": "彩金充值"
+      },
+      {
+        "code": "14",
+        "name": "首充满赠送"
+      },
+      {
+        "code": "15",
+        "name": "首充返佣"
+      },
+      {
+        "code": "17",
+        "name": "保险箱理财收益"
+      },
+      {
+        "code": "18",
+        "name": "保险箱本金存入"
+      },
+      {
+        "code": "19",
+        "name": "保险箱本金取回"
+      },
+      {
+        "code": "20",
+        "name": "邀请奖励"
+      },
+      {
+        "code": "21",
+        "name": "游戏存入"
+      },
+      {
+        "code": "22",
+        "name": "游戏取回"
+      },
+      {
+        "code": "23",
+        "name": "电子投注"
+      },
+      {
+        "code": "24",
+        "name": "电子中奖"
+      },
+      {
+        "code": "25",
+        "name": "绑卡赠送"
+      },
+      {
+        "code": "26",
+        "name": "游戏退还"
+      },
+      {
+        "code": "27",
+        "name": "USDT充值"
+      },
+      {
+        "code": "28",
+        "name": "投注返水"
+      },
+      {
+        "code": "29",
+        "name": "VIP会员升级礼包"
+      },
+      {
+        "code": "30",
+        "name": "VIP会员每月奖励"
+      },
+      {
+        "code": "31",
+        "name": "VIP会员充值奖励"
+      },
+      {
+        "code": "100",
+        "name": "彩金扣除"
+      },
+      {
+        "code": "101",
+        "name": "人工提款"
+      },
+      {
+        "code": "102",
+        "name": "洗码反水"
+      },
+      {
+        "code": "103",
+        "name": "电子大奖"
+      },
+      {
+        "code": "104",
+        "name": "绑定手机奖励"
+      },
+      {
+        "code": "105",
+        "name": "XOSO期号取消"
+      },
+      {
+        "code": "106",
+        "name": "绑定邮箱奖励"
+      },
+      {
+        "code": "107",
+        "name": "每周奖励"
+      },
+      {
+        "code": "108",
+        "name": "C2C提现奖励"
+      },
+      {
+        "code": "109",
+        "name": "C2C提现"
+      },
+      {
+        "code": "110",
+        "name": "C2C提现退回"
+      },
+      {
+        "code": "111",
+        "name": "C2C充值"
+      },
+      {
+        "code": "112",
+        "name": "C2C充值奖励"
+      },
+      {
+        "code": "113",
+        "name": "新手礼包"
+      },
+      {
+        "code": "114",
+        "name": "锦标赛奖励"
+      },
+      {
+        "code": "115",
+        "name": "回归奖励"
+      },
+      {
+        "code": "116",
+        "name": "新会员负盈利送彩金"
+      },
+      {
+        "code": "117",
+        "name": "新会员玩游戏送彩金"
+      },
+      {
+        "code": "118",
+        "name": "每日奖励"
+      },
+      {
+        "code": "119",
+        "name": "转盘奖励"
+      },
+      {
+        "code": "122",
+        "name": "合伙人奖励"
+      },
+      {
+        "code": "123",
+        "name": "ARPay钱包退回"
+      },
+      {
+        "code": "124",
+        "name": "加入频道奖励"
+      },
+      {
+        "code": "125",
+        "name": "充值补单"
+      },
+      {
+        "code": "126",
+        "name": "提现活动奖励"
+      },
+      {
+        "code": "130",
+        "name": "邀请转盘奖励"
+      },
+      {
+        "code": "131",
+        "name": "下载APP充值奖励"
+      },
+      {
+        "code": "132",
+        "name": "充值等级奖励"
+      },
+      {
+        "code": "133",
+        "name": "VIP充值等级奖励"
+      },
+      {
+        "code": "134",
+        "name": "回归新充值奖励"
+      }
+    ],
+    "orderStatusList": [
+      {
+        "id": 0,
+        "name": "未结算"
+      },
+      {
+        "id": 1,
+        "name": "已结算"
+      },
+      {
+        "id": 2,
+        "name": "已取消"
+      }
+    ],
+    "sportGamesOrderStatusList": [
+      {
+        "code": "0",
+        "name": "未结算"
+      },
+      {
+        "code": "1",
+        "name": "已结算"
+      },
+      {
+        "code": "2",
+        "name": "下注中"
+      },
+      {
+        "code": "3",
+        "name": "未知"
+      },
+      {
+        "code": "4",
+        "name": "退款"
+      },
+      {
+        "code": "5",
+        "name": "已取消"
+      },
+      {
+        "code": "6",
+        "name": "作废"
+      },
+      {
+        "code": "7",
+        "name": "提前结算"
+      }
+    ],
+    "orderOrderByTypeList": [
+      {
+        "id": 1,
+        "name": "投注金额升序"
+      },
+      {
+        "id": 2,
+        "name": "投注金额降序"
+      }
+    ],
+    "gameOrderStateList": [
+      {
+        "code": "0",
+        "name": "未压中"
+      },
+      {
+        "code": "1",
+        "name": "已压中"
+      },
+      {
+        "code": "2",
+        "name": "待开奖"
+      },
+      {
+        "code": "3",
+        "name": "开奖中"
+      }
+    ],
+    "gameTypeWinList": [
+      {
+        "code": "0",
+        "name": "颜色"
+      },
+      {
+        "code": "1",
+        "name": "数字"
+      },
+      {
+        "code": "2",
+        "name": "大小"
+      }
+    ],
+    "gameType5DList": [
+      {
+        "code": "1",
+        "name": "A"
+      },
+      {
+        "code": "2",
+        "name": "B"
+      },
+      {
+        "code": "3",
+        "name": "C"
+      },
+      {
+        "code": "4",
+        "name": "D"
+      },
+      {
+        "code": "5",
+        "name": "E"
+      },
+      {
+        "code": "6",
+        "name": "F"
+      }
+    ],
+    "gameTypeK3List": [
+      {
+        "code": "1",
+        "name": "和值"
+      },
+      {
+        "code": "2",
+        "name": "和值大小"
+      },
+      {
+        "code": "3",
+        "name": "和值单双"
+      },
+      {
+        "code": "4",
+        "name": "二不同号"
+      },
+      {
+        "code": "5",
+        "name": "二同号单选"
+      },
+      {
+        "code": "6",
+        "name": "二同号复选"
+      },
+      {
+        "code": "7",
+        "name": "三同号单选"
+      },
+      {
+        "code": "8",
+        "name": "三同号通选"
+      },
+      {
+        "code": "9",
+        "name": "三不同号"
+      },
+      {
+        "code": "10",
+        "name": "三连号通选"
+      }
+    ],
+    "fXosoOrderStatusList": [
+      {
+        "code": "1",
+        "name": "待开奖"
+      },
+      {
+        "code": "2",
+        "name": "未中奖"
+      },
+      {
+        "code": "3",
+        "name": "已中奖"
+      }
+    ],
+    "xosoTypeParentList": [
+      {
+        "code": "1",
+        "name": "包胆"
+      },
+      {
+        "code": "2",
+        "name": "后二组合"
+      },
+      {
+        "code": "3",
+        "name": "二星"
+      },
+      {
+        "code": "4",
+        "name": "定位胆"
+      },
+      {
+        "code": "5",
+        "name": "三星"
+      },
+      {
+        "code": "6",
+        "name": "四星"
+      },
+      {
+        "code": "7",
+        "name": "不同号"
+      },
+      {
+        "code": "8",
+        "name": "趣味游戏"
+      }
+    ],
+    "xosoBettingTypeList": [
+      {
+        "lotteryType": 1,
+        "oddsType": 1,
+        "oddsTypeStr": "包二码"
+      },
+      {
+        "lotteryType": 1,
+        "oddsType": 2,
+        "oddsTypeStr": "二码"
+      },
+      {
+        "lotteryType": 1,
+        "oddsType": 3,
+        "oddsTypeStr": "包二码1K"
+      },
+      {
+        "lotteryType": 1,
+        "oddsType": 4,
+        "oddsTypeStr": "包三码"
+      },
+      {
+        "lotteryType": 1,
+        "oddsType": 5,
+        "oddsTypeStr": "包四码"
+      },
+      {
+        "lotteryType": 2,
+        "oddsType": 1,
+        "oddsTypeStr": "组二码"
+      },
+      {
+        "lotteryType": 2,
+        "oddsType": 2,
+        "oddsTypeStr": "组三码"
+      },
+      {
+        "lotteryType": 2,
+        "oddsType": 3,
+        "oddsTypeStr": "组四码"
+      },
+      {
+        "lotteryType": 3,
+        "oddsType": 1,
+        "oddsTypeStr": "特奖"
+      },
+      {
+        "lotteryType": 3,
+        "oddsType": 2,
+        "oddsTypeStr": "特前二"
+      },
+      {
+        "lotteryType": 3,
+        "oddsType": 3,
+        "oddsTypeStr": "一奖"
+      },
+      {
+        "lotteryType": 3,
+        "oddsType": 4,
+        "oddsTypeStr": "一等奖前二码"
+      },
+      {
+        "lotteryType": 3,
+        "oddsType": 5,
+        "oddsTypeStr": "七奖"
+      },
+      {
+        "lotteryType": 3,
+        "oddsType": 6,
+        "oddsTypeStr": "八奖"
+      },
+      {
+        "lotteryType": 3,
+        "oddsType": 7,
+        "oddsTypeStr": "特/八奖"
+      },
+      {
+        "lotteryType": 4,
+        "oddsType": 1,
+        "oddsTypeStr": "十位"
+      },
+      {
+        "lotteryType": 4,
+        "oddsType": 2,
+        "oddsTypeStr": "个位"
+      },
+      {
+        "lotteryType": 5,
+        "oddsType": 1,
+        "oddsTypeStr": "特奖"
+      },
+      {
+        "lotteryType": 5,
+        "oddsType": 2,
+        "oddsTypeStr": "一奖"
+      },
+      {
+        "lotteryType": 5,
+        "oddsType": 3,
+        "oddsTypeStr": "六奖"
+      },
+      {
+        "lotteryType": 5,
+        "oddsType": 4,
+        "oddsTypeStr": "六/特奖"
+      },
+      {
+        "lotteryType": 5,
+        "oddsType": 5,
+        "oddsTypeStr": "七奖"
+      },
+      {
+        "lotteryType": 5,
+        "oddsType": 6,
+        "oddsTypeStr": "七特奖"
+      },
+      {
+        "lotteryType": 6,
+        "oddsType": 1,
+        "oddsTypeStr": "特奖"
+      },
+      {
+        "lotteryType": 7,
+        "oddsType": 1,
+        "oddsTypeStr": "四码"
+      },
+      {
+        "lotteryType": 7,
+        "oddsType": 2,
+        "oddsTypeStr": "八码"
+      },
+      {
+        "lotteryType": 7,
+        "oddsType": 3,
+        "oddsTypeStr": "十码"
+      },
+      {
+        "lotteryType": 8,
+        "oddsType": 0,
+        "oddsTypeStr": "0"
+      },
+      {
+        "lotteryType": 8,
+        "oddsType": 1,
+        "oddsTypeStr": "1"
+      },
+      {
+        "lotteryType": 8,
+        "oddsType": 2,
+        "oddsTypeStr": "2"
+      },
+      {
+        "lotteryType": 8,
+        "oddsType": 3,
+        "oddsTypeStr": "3"
+      },
+      {
+        "lotteryType": 8,
+        "oddsType": 4,
+        "oddsTypeStr": "4"
+      },
+      {
+        "lotteryType": 8,
+        "oddsType": 5,
+        "oddsTypeStr": "5"
+      },
+      {
+        "lotteryType": 8,
+        "oddsType": 6,
+        "oddsTypeStr": "6"
+      },
+      {
+        "lotteryType": 8,
+        "oddsType": 7,
+        "oddsTypeStr": "7"
+      },
+      {
+        "lotteryType": 8,
+        "oddsType": 8,
+        "oddsTypeStr": "8"
+      },
+      {
+        "lotteryType": 8,
+        "oddsType": 9,
+        "oddsTypeStr": "9"
+      },
+      {
+        "lotteryType": 8,
+        "oddsType": 10,
+        "oddsTypeStr": "10"
+      },
+      {
+        "lotteryType": 8,
+        "oddsType": 11,
+        "oddsTypeStr": "11"
+      },
+      {
+        "lotteryType": 8,
+        "oddsType": 12,
+        "oddsTypeStr": "12"
+      },
+      {
+        "lotteryType": 8,
+        "oddsType": 13,
+        "oddsTypeStr": "13"
+      },
+      {
+        "lotteryType": 8,
+        "oddsType": 14,
+        "oddsTypeStr": "14"
+      },
+      {
+        "lotteryType": 8,
+        "oddsType": 15,
+        "oddsTypeStr": "15"
+      },
+      {
+        "lotteryType": 8,
+        "oddsType": 16,
+        "oddsTypeStr": "16"
+      },
+      {
+        "lotteryType": 8,
+        "oddsType": 17,
+        "oddsTypeStr": "17"
+      },
+      {
+        "lotteryType": 8,
+        "oddsType": 18,
+        "oddsTypeStr": "18"
+      },
+      {
+        "lotteryType": 8,
+        "oddsType": 19,
+        "oddsTypeStr": "大"
+      },
+      {
+        "lotteryType": 8,
+        "oddsType": 20,
+        "oddsTypeStr": "小"
+      },
+      {
+        "lotteryType": 8,
+        "oddsType": 21,
+        "oddsTypeStr": "单"
+      },
+      {
+        "lotteryType": 8,
+        "oddsType": 22,
+        "oddsTypeStr": "双"
+      }
+    ],
+    "phoneTypeList": [
+      {
+        "code": "0",
+        "name": "PC"
+      },
+      {
+        "code": "1",
+        "name": "Android"
+      },
+      {
+        "code": "2",
+        "name": "IOS"
+      },
+      {
+        "code": "3",
+        "name": "未知"
+      }
+    ],
+    "userStateList": [
+      {
+        "code": "0",
+        "name": "禁用"
+      },
+      {
+        "code": "1",
+        "name": "启用"
+      }
+    ],
+    "agentTypeList": [
+      {
+        "code": "0",
+        "name": "未开通"
+      },
+      {
+        "code": "1",
+        "name": "外部代理"
+      },
+      {
+        "code": "2",
+        "name": "内部代理"
+      }
+    ],
+    "blockStateList": [
+      {
+        "code": "0",
+        "name": "正常"
+      },
+      {
+        "code": "1",
+        "name": "拉黑"
+      }
+    ],
+    "userOrderByList": [
+      {
+        "code": "AddTime desc",
+        "name": "请选择"
+      },
+      {
+        "code": "Amount asc",
+        "name": "用户余额升序"
+      },
+      {
+        "code": "Amount desc",
+        "name": "用户余额降序"
+      },
+      {
+        "code": "SafeAmount asc",
+        "name": "保险箱余额升序"
+      },
+      {
+        "code": "SafeAmount desc",
+        "name": "保险箱余额降序"
+      }
+    ],
+    "userRelativeLevelList": [
+      {
+        "code": "0",
+        "name": "0级"
+      },
+      {
+        "code": "1",
+        "name": "1级"
+      },
+      {
+        "code": "2",
+        "name": "2级"
+      },
+      {
+        "code": "3",
+        "name": "3级"
+      },
+      {
+        "code": "4",
+        "name": "4级"
+      },
+      {
+        "code": "5",
+        "name": "5级"
+      },
+      {
+        "code": "6",
+        "name": "6级"
+      },
+      {
+        "code": "7",
+        "name": "7级"
+      },
+      {
+        "code": "8",
+        "name": "8级"
+      },
+      {
+        "code": "9",
+        "name": "9级"
+      },
+      {
+        "code": "10",
+        "name": "10级"
+      },
+      {
+        "code": "11",
+        "name": "11级"
+      },
+      {
+        "code": "12",
+        "name": "12级"
+      },
+      {
+        "code": "13",
+        "name": "13级"
+      },
+      {
+        "code": "14",
+        "name": "14级"
+      },
+      {
+        "code": "15",
+        "name": "15级"
+      },
+      {
+        "code": "16",
+        "name": "16级"
+      },
+      {
+        "code": "17",
+        "name": "17级"
+      },
+      {
+        "code": "18",
+        "name": "18级"
+      },
+      {
+        "code": "19",
+        "name": "19级"
+      },
+      {
+        "code": "20",
+        "name": "20级"
+      },
+      {
+        "code": "21",
+        "name": "21级"
+      },
+      {
+        "code": "22",
+        "name": "22级"
+      },
+      {
+        "code": "23",
+        "name": "23级"
+      },
+      {
+        "code": "24",
+        "name": "24级"
+      },
+      {
+        "code": "25",
+        "name": "25级"
+      },
+      {
+        "code": "26",
+        "name": "26级"
+      },
+      {
+        "code": "27",
+        "name": "27级"
+      },
+      {
+        "code": "28",
+        "name": "28级"
+      },
+      {
+        "code": "29",
+        "name": "29级"
+      },
+      {
+        "code": "30",
+        "name": "30级"
+      },
+      {
+        "code": "31",
+        "name": "31级"
+      },
+      {
+        "code": "32",
+        "name": "32级"
+      },
+      {
+        "code": "33",
+        "name": "33级"
+      },
+      {
+        "code": "34",
+        "name": "34级"
+      },
+      {
+        "code": "35",
+        "name": "35级"
+      },
+      {
+        "code": "36",
+        "name": "36级"
+      },
+      {
+        "code": "37",
+        "name": "37级"
+      },
+      {
+        "code": "38",
+        "name": "38级"
+      },
+      {
+        "code": "39",
+        "name": "39级"
+      },
+      {
+        "code": "40",
+        "name": "40级"
+      },
+      {
+        "code": "41",
+        "name": "41级"
+      },
+      {
+        "code": "42",
+        "name": "42级"
+      },
+      {
+        "code": "43",
+        "name": "43级"
+      },
+      {
+        "code": "44",
+        "name": "44级"
+      },
+      {
+        "code": "45",
+        "name": "45级"
+      },
+      {
+        "code": "46",
+        "name": "46级"
+      },
+      {
+        "code": "47",
+        "name": "47级"
+      },
+      {
+        "code": "48",
+        "name": "48级"
+      },
+      {
+        "code": "49",
+        "name": "49级"
+      },
+      {
+        "code": "50",
+        "name": "50级"
+      }
+    ],
+    "userRelativeOrderList": [
+      {
+        "code": "0",
+        "name": "默认"
+      },
+      {
+        "code": "1",
+        "name": "充值金额升序"
+      },
+      {
+        "code": "2",
+        "name": "充值金额降序"
+      }
+    ],
+    "subsetUserLevelList": [
+      {
+        "code": "1",
+        "name": "1级"
+      },
+      {
+        "code": "2",
+        "name": "2级"
+      },
+      {
+        "code": "3",
+        "name": "3级"
+      },
+      {
+        "code": "4",
+        "name": "4级"
+      },
+      {
+        "code": "5",
+        "name": "5级"
+      },
+      {
+        "code": "6",
+        "name": "6级"
+      },
+      {
+        "code": "7",
+        "name": "7级"
+      },
+      {
+        "code": "8",
+        "name": "8级"
+      },
+      {
+        "code": "9",
+        "name": "9级"
+      },
+      {
+        "code": "10",
+        "name": "10级"
+      },
+      {
+        "code": "11",
+        "name": "11级"
+      },
+      {
+        "code": "12",
+        "name": "12级"
+      },
+      {
+        "code": "13",
+        "name": "13级"
+      },
+      {
+        "code": "14",
+        "name": "14级"
+      },
+      {
+        "code": "15",
+        "name": "15级"
+      },
+      {
+        "code": "16",
+        "name": "16级"
+      },
+      {
+        "code": "17",
+        "name": "17级"
+      },
+      {
+        "code": "18",
+        "name": "18级"
+      },
+      {
+        "code": "19",
+        "name": "19级"
+      },
+      {
+        "code": "20",
+        "name": "20级"
+      },
+      {
+        "code": "21",
+        "name": "21级"
+      },
+      {
+        "code": "22",
+        "name": "22级"
+      },
+      {
+        "code": "23",
+        "name": "23级"
+      },
+      {
+        "code": "24",
+        "name": "24级"
+      },
+      {
+        "code": "25",
+        "name": "25级"
+      },
+      {
+        "code": "26",
+        "name": "26级"
+      },
+      {
+        "code": "27",
+        "name": "27级"
+      },
+      {
+        "code": "28",
+        "name": "28级"
+      },
+      {
+        "code": "29",
+        "name": "29级"
+      }
+    ],
+    "subsetUserOrderList": [
+      {
+        "code": "0",
+        "name": "默认"
+      },
+      {
+        "code": "1",
+        "name": "余额降序"
+      },
+      {
+        "code": "3",
+        "name": "注册时间降序"
+      }
+    ],
+    "logTypeList": [
+      {
+        "code": "1",
+        "name": "登录日志"
+      },
+      {
+        "code": "2",
+        "name": "操作日志"
+      }
+    ],
+    "logStateList": [
+      {
+        "code": "0",
+        "name": "失败"
+      },
+      {
+        "code": "1",
+        "name": "成功"
+      }
+    ],
+    "onlineBankingStateList": [
+      {
+        "code": "0",
+        "name": "匹配失败"
+      },
+      {
+        "code": "1",
+        "name": "匹配成功"
+      },
+      {
+        "code": "2",
+        "name": "匹配超时"
+      },
+      {
+        "code": "3",
+        "name": "等待匹配"
+      }
+    ],
+    "manualRechargeRecordStateList": [
+      {
+        "id": 0,
+        "name": "审核中"
+      },
+      {
+        "id": 1,
+        "name": "通过"
+      },
+      {
+        "id": 2,
+        "name": "拒绝"
+      }
+    ],
+    "manualRechargeTypeList": [
+      {
+        "list": [
+          {
+            "id": 1,
+            "name": "人工存款"
+          },
+          {
+            "id": 2,
+            "name": "彩金充值"
+          },
+          {
+            "id": 3,
+            "name": "USDT充值"
+          },
+          {
+            "id": 4,
+            "name": "人工提款"
+          },
+          {
+            "id": 5,
+            "name": "彩金扣除"
+          },
+          {
+            "id": 6,
+            "name": "退回提现"
+          }
+        ],
+        "id": 1,
+        "name": "人工充值"
+      },
+      {
+        "list": [],
+        "id": 2,
+        "name": "修改银行卡"
+      },
+      {
+        "list": [],
+        "id": 3,
+        "name": "修改会员密码"
+      }
+    ],
+    "manualRechargePermissionTypeList": [
+      {
+        "code": "1",
+        "name": "操作"
+      },
+      {
+        "code": "2",
+        "name": "审核"
+      }
+    ],
+    "manualRechargePermissionStateList": [
+      {
+        "code": "0",
+        "name": "关闭"
+      },
+      {
+        "code": "1",
+        "name": "开启"
+      },
+      {
+        "code": "2",
+        "name": "未配置"
+      }
+    ],
+    "queryTimeTypeList": [
+      {
+        "code": "0",
+        "name": "下注时间"
+      },
+      {
+        "code": "1",
+        "name": "结算时间"
+      }
+    ]
+  },
+  "code": 0,
+  "msg": "成功",
+  "msgCode": 0
+}

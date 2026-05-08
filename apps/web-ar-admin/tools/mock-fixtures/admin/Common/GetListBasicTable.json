@@ -1,0 +1,32 @@
+{
+  "data": [
+    "sys_menu",
+    "tab_recharge_localbankcard",
+    "tab_thirdpay_bankmapping",
+    "tab_language",
+    "sys_orgmenu",
+    "tab_recharge_channel",
+    "tab_translationlist",
+    "tab_organization",
+    "tab_thirdpay_merchant",
+    "tab_recharge_category",
+    "tab_country",
+    "sys_users",
+    "tab_withdraw_category",
+    "sys_roleauthorize",
+    "tab_settings",
+    "tab_currency",
+    "sys_dictionary",
+    "tab_ip_whitelist",
+    "tab_withdraw_channel",
+    "tab_warning_rule",
+    "tab_tenant",
+    "sys_role",
+    "tab_thirdpay_tenantchannel",
+    "tab_thirdpay_codedictionary",
+    "tab_withdraw_configgroup"
+  ],
+  "code": 0,
+  "msg": "成功",
+  "msgCode": 0
+}

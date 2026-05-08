@@ -1,0 +1,253 @@
+{
+  "mode": "tenant",
+  "capturedAt": "2026-05-08T11:47:55.392Z",
+  "results": [
+    {
+      "path": "/menu/all",
+      "status": "error",
+      "note": "HTTP 404 /menu/all"
+    },
+    {
+      "path": "/user/info",
+      "status": "error",
+      "note": "HTTP 404 /user/info"
+    },
+    {
+      "path": "/auth/codes",
+      "status": "error",
+      "note": "HTTP 404 /auth/codes"
+    },
+    {
+      "path": "/Home/GetSysUserInfo",
+      "status": "ok"
+    },
+    {
+      "path": "/Login/HomeBasic",
+      "status": "ok"
+    },
+    {
+      "path": "/Auth/CheckAuth",
+      "status": "ok"
+    },
+    {
+      "path": "/Auth/GetOrgTenantList",
+      "status": "ok"
+    },
+    {
+      "path": "/Common/GetDictionary",
+      "status": "ok"
+    },
+    {
+      "path": "/Common/GetPlatformDic",
+      "status": "ok"
+    },
+    {
+      "path": "/Common/GetDynamicDictionary",
+      "status": "ok"
+    },
+    {
+      "path": "/Common/GetDateTimeScopeTypes",
+      "status": "ok"
+    },
+    {
+      "path": "/v1/Common/GetDictionary",
+      "status": "ok"
+    },
+    {
+      "path": "/RechargeCategory/GetPageList",
+      "status": "ok"
+    },
+    {
+      "path": "/RechargeChannel/GetPageList",
+      "status": "ok"
+    },
+    {
+      "path": "/RechargeLocalBank/GetPageList",
+      "status": "ok"
+    },
+    {
+      "path": "/RechargeLocalEWallet/GetPageList",
+      "status": "ok"
+    },
+    {
+      "path": "/RechargeLocalUpi/GetPageList",
+      "status": "ok"
+    },
+    {
+      "path": "/RechargeLocalUsdt/GetPageList",
+      "status": "ok"
+    },
+    {
+      "path": "/ThirdPayMerchant/GetPageList",
+      "status": "ok"
+    },
+    {
+      "path": "/WithdrawCategory/GetPageList",
+      "status": "ok"
+    },
+    {
+      "path": "/WithdrawChannel/GetPageList",
+      "status": "ok"
+    },
+    {
+      "path": "/WithdrawConfigGroup/GetPageList",
+      "status": "ok"
+    },
+    {
+      "path": "/WithdrawOrder/GetPageList",
+      "status": "ok"
+    },
+    {
+      "path": "/WithdrawOrder/GetAuditPageList",
+      "status": "ok"
+    },
+    {
+      "path": "/WithdrawRecord/GetPageList",
+      "status": "ok"
+    },
+    {
+      "path": "/WithdrawStaticDay/GetPageList",
+      "status": "ok"
+    },
+    {
+      "path": "/PaymentReport/GetChannelPageList",
+      "status": "ok"
+    },
+    {
+      "path": "/PaymentReport/GetTenantPageList",
+      "status": "ok"
+    },
+    {
+      "path": "/v1/Finance/GetTabBanksPageList",
+      "status": "ok"
+    },
+    {
+      "path": "/v1/Users/GetUserPageList",
+      "status": "ok"
+    },
+    {
+      "path": "/v1/Users/GetUserDetail",
+      "status": "ok"
+    },
+    {
+      "path": "/v1/Users/GetUserBetTotal",
+      "status": "ok"
+    },
+    {
+      "path": "/v1/Users/GetUserBankCardPageList",
+      "status": "ok"
+    },
+    {
+      "path": "/v1/Users/GetUserRelativePageList",
+      "status": "ok"
+    },
+    {
+      "path": "/v1/Users/GetSubsetUserPageList",
+      "status": "ok"
+    },
+    {
+      "path": "/v1/Users/GetOnlineUserPageList",
+      "status": "ok"
+    },
+    {
+      "path": "/v1/Users/GetUPIPageList",
+      "status": "ok"
+    },
+    {
+      "path": "/v1/Users/GetUserCpfPageList",
+      "status": "ok"
+    },
+    {
+      "path": "/v1/Users/GetUserRealNamePageList",
+      "status": "ok"
+    },
+    {
+      "path": "/v1/Users/GetUserUsdtPageList",
+      "status": "ok"
+    },
+    {
+      "path": "/v1/Users/GetUserWalletPageList",
+      "status": "ok"
+    },
+    {
+      "path": "/v1/Users/GetBankTypeList",
+      "status": "ok"
+    },
+    {
+      "path": "/v1/Users/GetCpfTypeList",
+      "status": "ok"
+    },
+    {
+      "path": "/v1/Users/GetUsdtTypeList",
+      "status": "ok"
+    },
+    {
+      "path": "/v1/Users/GetWalletTypeList",
+      "status": "ok"
+    },
+    {
+      "path": "/v1/System/GetPlatformLogPageList",
+      "status": "ok"
+    },
+    {
+      "path": "/v1/System/GetWebLogPageList",
+      "status": "ok"
+    },
+    {
+      "path": "/hub/domains/list",
+      "status": "ok"
+    },
+    {
+      "path": "/hub/assets/list",
+      "status": "ok"
+    },
+    {
+      "path": "/hub/jobs/list",
+      "status": "ok"
+    },
+    {
+      "path": "/hub/jobs/stats",
+      "status": "ok"
+    },
+    {
+      "path": "/hub/themes/list",
+      "status": "ok"
+    },
+    {
+      "path": "/hub/layouts/list",
+      "status": "ok"
+    },
+    {
+      "path": "/hub/tabbars/list",
+      "status": "ok"
+    },
+    {
+      "path": "/hub/merchant/sites",
+      "status": "ok"
+    },
+    {
+      "path": "/hub/web/config",
+      "status": "ok"
+    },
+    {
+      "path": "/event/metrics",
+      "status": "ok"
+    },
+    {
+      "path": "/event/traffic/health",
+      "status": "ok"
+    },
+    {
+      "path": "/event/traffic/summary",
+      "status": "ok"
+    },
+    {
+      "path": "/ai/metrics",
+      "status": "ok"
+    },
+    {
+      "path": "/ai/health",
+      "status": "ok"
+    }
+  ]
+}

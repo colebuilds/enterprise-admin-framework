@@ -1,0 +1,54 @@
+{
+  "data": {
+    "list": [
+      {
+        "id": 130001,
+        "orgId": 0,
+        "name": "人事主管",
+        "isAllowEdit": false,
+        "isAllowDelete": false,
+        "sort": 0,
+        "state": false,
+        "remark": "",
+        "createTime": 1776152060952,
+        "creator": "sysadmin",
+        "lastUpdateTime": 1776344917854,
+        "lastUpdateMan": "sysadmin"
+      },
+      {
+        "id": 130000,
+        "orgId": 0,
+        "name": "财务主管",
+        "isAllowEdit": false,
+        "isAllowDelete": false,
+        "sort": 0,
+        "state": true,
+        "remark": "",
+        "createTime": 1776152054205,
+        "creator": "sysadmin",
+        "lastUpdateTime": 1776345995656,
+        "lastUpdateMan": "sys_peggy"
+      },
+      {
+        "id": 100000,
+        "orgId": 0,
+        "name": "superadmin",
+        "isAllowEdit": false,
+        "isAllowDelete": false,
+        "sort": 0,
+        "state": true,
+        "remark": "管理员",
+        "createTime": 1776067919712,
+        "creator": "sysadmin",
+        "lastUpdateTime": 1776067961661,
+        "lastUpdateMan": "sysadmin"
+      }
+    ],
+    "pageNo": 1,
+    "totalPage": 1,
+    "totalCount": 3
+  },
+  "code": 0,
+  "msg": "成功",
+  "msgCode": 0
+}

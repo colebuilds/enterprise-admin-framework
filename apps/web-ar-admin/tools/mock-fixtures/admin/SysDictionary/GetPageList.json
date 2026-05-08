@@ -1,0 +1,232 @@
+{
+  "data": {
+    "list": [
+      {
+        "id": 104838,
+        "dictCode": "VCT",
+        "dictName": "圣文森特和格林纳丁斯",
+        "dictCategory": 4,
+        "dictValue": "VC",
+        "groupName": "country",
+        "sort": 0,
+        "state": 1,
+        "remark": ""
+      },
+      {
+        "id": 104668,
+        "dictCode": "ERI",
+        "dictName": "厄立特里亚",
+        "dictCategory": 4,
+        "dictValue": "ER",
+        "groupName": "country",
+        "sort": 0,
+        "state": 1,
+        "remark": ""
+      },
+      {
+        "id": 104606,
+        "dictCode": "ALB",
+        "dictName": "阿尔巴尼亚",
+        "dictCategory": 4,
+        "dictValue": "AL",
+        "groupName": "country",
+        "sort": 0,
+        "state": 1,
+        "remark": ""
+      },
+      {
+        "id": 104763,
+        "dictCode": "NFK",
+        "dictName": "诺福克岛",
+        "dictCategory": 4,
+        "dictValue": "NF",
+        "groupName": "country",
+        "sort": 0,
+        "state": 1,
+        "remark": ""
+      },
+      {
+        "id": 104709,
+        "dictCode": "IRQ",
+        "dictName": "伊拉克",
+        "dictCategory": 4,
+        "dictValue": "IQ",
+        "groupName": "country",
+        "sort": 0,
+        "state": 1,
+        "remark": ""
+      },
+      {
+        "id": 104998,
+        "dictCode": "XOF",
+        "dictName": "西非法郎",
+        "dictCategory": 1,
+        "dictValue": "CFA",
+        "groupName": "currency",
+        "sort": 0,
+        "state": 1,
+        "remark": ""
+      },
+      {
+        "id": 104954,
+        "dictCode": "PGK",
+        "dictName": "巴布亚新几内亚基那",
+        "dictCategory": 1,
+        "dictValue": "K",
+        "groupName": "currency",
+        "sort": 0,
+        "state": 1,
+        "remark": ""
+      },
+      {
+        "id": 104893,
+        "dictCode": "FJD",
+        "dictName": "斐济元",
+        "dictCategory": 1,
+        "dictValue": "FJ$",
+        "groupName": "currency",
+        "sort": 0,
+        "state": 1,
+        "remark": ""
+      },
+      {
+        "id": 104953,
+        "dictCode": "PEN",
+        "dictName": "秘鲁索尔",
+        "dictCategory": 1,
+        "dictValue": "S/.",
+        "groupName": "currency",
+        "sort": 0,
+        "state": 1,
+        "remark": ""
+      },
+      {
+        "id": 104877,
+        "dictCode": "CHF",
+        "dictName": "瑞士法郎",
+        "dictCategory": 1,
+        "dictValue": "SFr.",
+        "groupName": "currency",
+        "sort": 0,
+        "state": 1,
+        "remark": ""
+      },
+      {
+        "id": 105116,
+        "dictCode": "nb",
+        "dictName": "书面挪威语",
+        "dictCategory": 3,
+        "dictValue": "书面挪威语",
+        "groupName": "language",
+        "sort": 0,
+        "state": 1,
+        "remark": ""
+      },
+      {
+        "id": 105148,
+        "dictCode": "si",
+        "dictName": "僧伽罗语",
+        "dictCategory": 3,
+        "dictValue": "僧伽罗语",
+        "groupName": "language",
+        "sort": 0,
+        "state": 1,
+        "remark": ""
+      },
+      {
+        "id": 105079,
+        "dictCode": "jv",
+        "dictName": "爪哇语",
+        "dictCategory": 3,
+        "dictValue": "爪哇语",
+        "groupName": "language",
+        "sort": 0,
+        "state": 1,
+        "remark": ""
+      },
+      {
+        "id": 105185,
+        "dictCode": "yi",
+        "dictName": "依地语",
+        "dictCategory": 3,
+        "dictValue": "依地语",
+        "groupName": "language",
+        "sort": 0,
+        "state": 1,
+        "remark": ""
+      },
+      {
+        "id": 105164,
+        "dictCode": "th",
+        "dictName": "泰语",
+        "dictCategory": 3,
+        "dictValue": "泰语",
+        "groupName": "language",
+        "sort": 0,
+        "state": 1,
+        "remark": ""
+      },
+      {
+        "id": 105193,
+        "dictCode": "Africa/Cairo",
+        "dictName": "埃及(+3)",
+        "dictCategory": 2,
+        "dictValue": "03:00:00",
+        "groupName": "timeZone",
+        "sort": 0,
+        "state": 1,
+        "remark": ""
+      },
+      {
+        "id": 105192,
+        "dictCode": "Africa/Lagos",
+        "dictName": "尼日利亚(+1)",
+        "dictCategory": 2,
+        "dictValue": "01:00:00",
+        "groupName": "timeZone",
+        "sort": 0,
+        "state": 1,
+        "remark": ""
+      },
+      {
+        "id": 105191,
+        "dictCode": "Europe/London",
+        "dictName": "英国(0)",
+        "dictCategory": 2,
+        "dictValue": "00:00:00",
+        "groupName": "timeZone",
+        "sort": 0,
+        "state": 1,
+        "remark": ""
+      },
+      {
+        "id": 105194,
+        "dictCode": "Asia/Dubai",
+        "dictName": "阿联酋(+4)",
+        "dictCategory": 2,
+        "dictValue": "04:00:00",
+        "groupName": "timeZone",
+        "sort": 0,
+        "state": 1,
+        "remark": ""
+      },
+      {
+        "id": 105190,
+        "dictCode": "America/Sao_Paulo",
+        "dictName": "巴西(-3)",
+        "dictCategory": 2,
+        "dictValue": "-03:00:00",
+        "groupName": "timeZone",
+        "sort": 0,
+        "state": 1,
+        "remark": ""
+      }
+    ],
+    "pageNo": 1,
+    "totalPage": 1,
+    "totalCount": 20
+  },
+  "code": 0,
+  "msg": "成功",
+  "msgCode": 0
+}

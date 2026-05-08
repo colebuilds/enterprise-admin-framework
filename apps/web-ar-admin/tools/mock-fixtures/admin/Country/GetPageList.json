@@ -1,0 +1,96 @@
+{
+  "data": {
+    "list": [
+      {
+        "countryCode": "AFG",
+        "countryName": "阿富汗",
+        "timeZoneCode": "UTC+5:30",
+        "timeZone": "UTC+5:30",
+        "phoneArea": "971",
+        "phoneLen": "6-8",
+        "creator": "sys_milo",
+        "createTime": 1776233768267,
+        "lastUpdateMan": "sys_milo",
+        "lastUpdateTime": 1776233768268
+      },
+      {
+        "countryCode": "ARE",
+        "countryName": "阿联酋",
+        "timeZoneCode": "UTC+4",
+        "timeZone": "UTC+4",
+        "phoneArea": "971",
+        "phoneLen": "7",
+        "creator": "sys_milo",
+        "createTime": 1776147744542,
+        "lastUpdateMan": "sys_milo",
+        "lastUpdateTime": 1776147744540
+      },
+      {
+        "countryCode": "MMR",
+        "countryName": "缅甸",
+        "timeZoneCode": "Asia/Yangon",
+        "timeZone": "(UTC+6:30)Asia/Yangon",
+        "phoneArea": "+92",
+        "phoneLen": "10-15",
+        "creator": "System",
+        "createTime": 1753529817114,
+        "lastUpdateMan": "System",
+        "lastUpdateTime": 1753529817130
+      },
+      {
+        "countryCode": "PAK",
+        "countryName": "巴基斯坦",
+        "timeZoneCode": "Asia/Karachi",
+        "timeZone": "(UTC+5)Asia/Karachi",
+        "phoneArea": "+92",
+        "phoneLen": "10-15",
+        "creator": "System",
+        "createTime": 1753529817114,
+        "lastUpdateMan": "System",
+        "lastUpdateTime": 1753529817130
+      },
+      {
+        "countryCode": "VNM",
+        "countryName": "越南",
+        "timeZoneCode": "Asia/Ho_Chi_Minh",
+        "timeZone": "(UTC+7)Asia/Ho_Chi_Minh",
+        "phoneArea": "+92",
+        "phoneLen": "10-15",
+        "creator": "System",
+        "createTime": 1753529817114,
+        "lastUpdateMan": "System",
+        "lastUpdateTime": 1753529817130
+      },
+      {
+        "countryCode": "BRA",
+        "countryName": "巴西",
+        "timeZoneCode": "America/Sao_Paulo",
+        "timeZone": "(UTC-3)America/Sao_Paulo",
+        "phoneArea": "+55",
+        "phoneLen": "11",
+        "creator": "SysAdmin",
+        "createTime": 1722571216381,
+        "lastUpdateMan": "SysAdmin",
+        "lastUpdateTime": 1722571225043
+      },
+      {
+        "countryCode": "IND",
+        "countryName": "印度",
+        "timeZoneCode": "Asia/Kolkata",
+        "timeZone": "(UTC+5:30)Asia/Kolkata",
+        "phoneArea": "+91",
+        "phoneLen": "10",
+        "creator": "admin",
+        "createTime": 1722501072045,
+        "lastUpdateMan": "admin",
+        "lastUpdateTime": 1722501072042
+      }
+    ],
+    "pageNo": 1,
+    "totalPage": 1,
+    "totalCount": 7
+  },
+  "code": 0,
+  "msg": "成功",
+  "msgCode": 0
+}

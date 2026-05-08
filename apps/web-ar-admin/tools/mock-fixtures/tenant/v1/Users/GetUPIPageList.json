@@ -1,0 +1,27 @@
+{
+  "data": {
+    "list": [
+      {
+        "tenantId": 2001,
+        "tenantName": "sit-inr",
+        "bId": 1462,
+        "userId": 2247621,
+        "withType": 2,
+        "withTypeName": "UPI",
+        "accountNo": "9876543210@paytm",
+        "beneficiaryName": "milo",
+        "mobileNO": "",
+        "bankCode": "",
+        "addTime": "2026-04-28 18:04:07",
+        "updateTime": "2026-04-28 18:04:07",
+        "lastUpdateOperator": null
+      }
+    ],
+    "pageNo": 1,
+    "totalPage": 1,
+    "totalCount": 1
+  },
+  "code": 0,
+  "msg": "成功",
+  "msgCode": 0
+}

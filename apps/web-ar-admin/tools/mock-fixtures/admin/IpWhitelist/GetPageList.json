@@ -1,0 +1,78 @@
+{
+  "data": {
+    "list": [
+      {
+        "id": 100000,
+        "ip": "8.211.42.128",
+        "orgId": 0,
+        "state": 1,
+        "remark": "112",
+        "creator": "sysadmin",
+        "createTime": 1776068523064,
+        "lastUpdateTime": 1776159833478,
+        "lastUpdateMan": "sys_milo"
+      },
+      {
+        "id": 190010,
+        "ip": "150.228.53.145",
+        "orgId": 0,
+        "state": 1,
+        "remark": "",
+        "creator": "",
+        "createTime": 3,
+        "lastUpdateTime": 0,
+        "lastUpdateMan": ""
+      },
+      {
+        "id": 194001,
+        "ip": "83.139.26.53",
+        "orgId": 0,
+        "state": 1,
+        "remark": "",
+        "creator": "",
+        "createTime": 3,
+        "lastUpdateTime": 0,
+        "lastUpdateMan": ""
+      },
+      {
+        "id": 190003,
+        "ip": "150.228.53.230",
+        "orgId": 0,
+        "state": 1,
+        "remark": "1",
+        "creator": "",
+        "createTime": 3,
+        "lastUpdateTime": 1776432000151,
+        "lastUpdateMan": "sys_jadon"
+      },
+      {
+        "id": 194010,
+        "ip": "150.228.53.0",
+        "orgId": 0,
+        "state": 1,
+        "remark": "",
+        "creator": "",
+        "createTime": 3,
+        "lastUpdateTime": 0,
+        "lastUpdateMan": ""
+      },
+      {
+        "id": 130001,
+        "ip": "150.228.53.206",
+        "orgId": 0,
+        "state": 1,
+        "remark": "",
+        "creator": "",
+        "createTime": 3,
+        "lastUpdateTime": 0,
+        "lastUpdateMan": ""
+      }
+    ],
+    "pageNo": 1,
+    "totalPage": 1,
+    "totalCount": 6
+  },
+  "code": 0,
+  "msg": "成功",
+  "msgCode": 0
+}

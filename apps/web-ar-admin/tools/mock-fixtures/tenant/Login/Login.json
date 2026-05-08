@@ -1,0 +1,26 @@
+{
+  "data": {
+    "tokenHeader": "Bearer ",
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOiIxNzc4MjQwODUwIiwibmJmIjoiMTc3ODI0MDg1MCIsImV4cCI6IjE3NzgzMjcyNTAiLCJodHRwOi8vc2NoZW1hcy5taWNyb3NvZnQuY29tL3dzLzIwMDgvMDYvaWRlbnRpdHkvY2xhaW1zL2V4cGlyYXRpb24iOiIwNS8wOS8yMDI2IDExOjQ3OjMwIiwiaHR0cDovL3NjaGVtYXMubWljcm9zb2Z0LmNvbS93cy8yMDA4LzA2L2lkZW50aXR5L2NsYWltcy9yb2xlIjoiQWNjZXNzX1Rva2VuIiwiTWFuYWdlVGVuYW50SWRzIjoiMjAwMSwyMDA3LDIwMjYsMjAyNCwyMDI4IiwiT3JnSWQiOiIxMDAwIiwiVXNlcklkIjoiMTYwMDAwIiwiVXNlck5hbWUiOiJvcmdfbWlsbyIsIkFnZW50SWQiOiIwIiwiTG9naW5UaW1lIjoiMDUvMDgvMjAyNiAxMTo0NzozMCIsIkxvZ2luSVBBZGRyZXNzIjoiOC4yMTEuNDIuMTI4IiwiSXNCaW5kR29vZ2xlIjoiMSIsIkxvZ2luVGltZXMiOiIxNTIiLCJUb2tlblR5cGUiOiJBY2Nlc3NfVG9rZW4iLCJVc2VyVHlwZSI6IjAiLCJTdXBlckFkbWluVHlwZSI6Ik5vbmUiLCJQZXJtaXNzaW9uTGV2ZWwiOiIwIiwiaXNzIjoiand0SXNzdWVyIiwiYXVkIjoibG90dG9BZG1pbiJ9.4YvLqqZcDSwPOs5WRRaCsK2Zcc09tYpVYR5AUBwe0lg",
+    "expiresIn": 1778327250,
+    "passwordErrorNum": 0,
+    "passwordErrorMaxNum": null,
+    "webSocketUrl": "wss://sit-lotto-admin.99888666.com/event/realtime?Token=eyJhbGciOiJSUzI1NiIsImtpZCI6IkxvdHRvU2FhcyIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxNjAwMDAiLCJpYXQiOjE3NzgyNDA4NTAsImp0aSI6IjJjMTc4YTRkLTY1NDQtNDkyZS1hNWMwLTc2Y2U0MWVhOGFiNiIsIm5iZiI6MTc3ODI0MDg1MCwiZXhwIjoxNzc4MzI3MjUwLCJpc3MiOiJodHRwczovL3NpdGF1dGgubG90dG90ZXN0NjY4OC5jb20ifQ.hfyKUp8_77P2ugvrdFtuiP8tN_gh2Qrn9WQCcmqGTm3a658ZUdv0J7xZIqf7odfAhf1i4pA7tizfCNfEBzdxkvXJD44o-_pZZ358qKrG3Jr6KEQYDGE2PJSqWbQMPhjgDOMaj089OsOCRY41Myk36W4R9j_z_whI_zkHFlz7G1HZSGRz7rHoudm12JMzEKzQVDFZJqAGFlU03PDS44zn1XGgUo-v6fRHha1nw0_nUoacOOUYkUB8QE3iIYIs6AHsS6AVasn3SfGEnhm-qhtuFGoxmwbN7g5xq98RM5R-pm5x6p3wylflLuGgsSNhtTL1K1AcYWKqShRBxLHhbPWiOQ",
+    "channels": [
+      {
+        "channel": "/AdminApi/1000/all",
+        "channelType": "all",
+        "description": "集团广播频道"
+      },
+      {
+        "channel": "/AdminApi/1000/userid/160000",
+        "channelType": "target",
+        "description": "用户个人频道"
+      }
+    ],
+    "googleVerifyInfo": null
+  },
+  "code": 0,
+  "msg": "成功",
+  "msgCode": 0
+}

@@ -1,0 +1,192 @@
+{
+  "data": {
+    "status": "Healthy",
+    "items": [
+      {
+        "name": "Apollo",
+        "checkType": "Read",
+        "status": "OK",
+        "elapsedMs": 5,
+        "error": null
+      },
+      {
+        "name": "ES:Org:Asia-1",
+        "checkType": "Read",
+        "status": "OK",
+        "elapsedMs": 29,
+        "error": null
+      },
+      {
+        "name": "GameSaas:ADB",
+        "checkType": "Read",
+        "status": "OK",
+        "elapsedMs": 146,
+        "error": null
+      },
+      {
+        "name": "GameSaas:API",
+        "checkType": "Read",
+        "status": "OK",
+        "elapsedMs": 13,
+        "error": null
+      },
+      {
+        "name": "GameSaas:Basic",
+        "checkType": "Read",
+        "status": "OK",
+        "elapsedMs": 13,
+        "error": null
+      },
+      {
+        "name": "InternalApi:CommonJob",
+        "checkType": "Read",
+        "status": "OK",
+        "elapsedMs": 6,
+        "error": null
+      },
+      {
+        "name": "InternalApi:SchedulerTask",
+        "checkType": "Read",
+        "status": "OK",
+        "elapsedMs": 40,
+        "error": null
+      },
+      {
+        "name": "IPArea:RequestIp",
+        "checkType": "Read",
+        "status": "OK",
+        "elapsedMs": 48,
+        "error": "IP=8.211.42.128; Area=Germany; Province=Hesse; City=Frankfurt am Main; AreaLocal=Germany Hesse; ErrMsg="
+      },
+      {
+        "name": "IPArea:Validate:8.211.42.128",
+        "checkType": "Read",
+        "status": "OK",
+        "elapsedMs": 10,
+        "error": "IP=8.211.42.128; ExpectedArea=Germany; ExpectedProvince=Hesse; ExpectedAreaLocal=Germany Hesse; ActualArea=Germany; ActualProvince=Hesse; ActualCity=Frankfurt am Main; ActualAreaLocal=Germany Hesse; ErrMsg="
+      },
+      {
+        "name": "OSS:Aliyun",
+        "checkType": "Write",
+        "status": "OK",
+        "elapsedMs": 170,
+        "error": null
+      },
+      {
+        "name": "Redis:Admin",
+        "checkType": "ReadWrite",
+        "status": "OK",
+        "elapsedMs": 29,
+        "error": null
+      },
+      {
+        "name": "Redis:Basic",
+        "checkType": "ReadWrite",
+        "status": "OK",
+        "elapsedMs": 7,
+        "error": null
+      },
+      {
+        "name": "Redis:Persistence",
+        "checkType": "ReadWrite",
+        "status": "OK",
+        "elapsedMs": 7,
+        "error": null
+      },
+      {
+        "name": "Redis:PlatformApi",
+        "checkType": "ReadWrite",
+        "status": "OK",
+        "elapsedMs": 4,
+        "error": null
+      },
+      {
+        "name": "Redis:User",
+        "checkType": "ReadWrite",
+        "status": "OK",
+        "elapsedMs": 4,
+        "error": null
+      },
+      {
+        "name": "RocketMQ",
+        "checkType": "Read",
+        "status": "OK",
+        "elapsedMs": 9,
+        "error": null
+      },
+      {
+        "name": "SQL:LottoBasic",
+        "checkType": "Read",
+        "status": "OK",
+        "elapsedMs": 16,
+        "error": null
+      },
+      {
+        "name": "SQL:Org:Asia-1",
+        "checkType": "Read",
+        "status": "OK",
+        "elapsedMs": 49,
+        "error": null
+      },
+      {
+        "name": "SQL:OrgADB:Asia-1",
+        "checkType": "Read",
+        "status": "OK",
+        "elapsedMs": 20,
+        "error": null
+      },
+      {
+        "name": "TenantRedis:2001:LotteryApi",
+        "checkType": "ReadWrite",
+        "status": "OK",
+        "elapsedMs": 39,
+        "error": null
+      },
+      {
+        "name": "TenantRedis:2002:LotteryApi",
+        "checkType": "ReadWrite",
+        "status": "OK",
+        "elapsedMs": 37,
+        "error": null
+      },
+      {
+        "name": "TenantRedis:2007:LotteryApi",
+        "checkType": "ReadWrite",
+        "status": "OK",
+        "elapsedMs": 37,
+        "error": null
+      },
+      {
+        "name": "TenantSqlServer:2001",
+        "checkType": "ReadWrite",
+        "status": "OK",
+        "elapsedMs": 42,
+        "error": null
+      },
+      {
+        "name": "TenantSqlServer:2002",
+        "checkType": "ReadWrite",
+        "status": "OK",
+        "elapsedMs": 40,
+        "error": null
+      },
+      {
+        "name": "TenantSqlServer:2007",
+        "checkType": "ReadWrite",
+        "status": "OK",
+        "elapsedMs": 40,
+        "error": null
+      },
+      {
+        "name": "WebSocket:Tenant(0)",
+        "checkType": "Read",
+        "status": "OK",
+        "elapsedMs": 210,
+        "error": null
+      }
+    ]
+  },
+  "code": 0,
+  "msg": "成功",
+  "msgCode": 0
+}

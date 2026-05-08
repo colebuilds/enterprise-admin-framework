@@ -1,0 +1,3000 @@
+{
+  "data": {
+    "rebateMode": [
+      {
+        "id": 0,
+        "name": "正常走目前返佣"
+      },
+      {
+        "id": 1,
+        "name": "锁定返佣"
+      },
+      {
+        "id": 2,
+        "name": "特殊设置返佣"
+      }
+    ],
+    "tenantStateList": [
+      {
+        "id": 0,
+        "name": "已关站"
+      },
+      {
+        "id": 1,
+        "name": "运营中"
+      },
+      {
+        "id": 2,
+        "name": "维护中"
+      }
+    ],
+    "lotteryGameCode": [
+      {
+        "id": "WinGo_30S",
+        "name": "WinGo_30S"
+      },
+      {
+        "id": "WinGo_1M",
+        "name": "WinGo_1M"
+      },
+      {
+        "id": "WinGo_3M",
+        "name": "WinGo_3M"
+      },
+      {
+        "id": "WinGo_5M",
+        "name": "WinGo_5M"
+      },
+      {
+        "id": "WinGo_10M",
+        "name": "WinGo_10M"
+      },
+      {
+        "id": "K3_1M",
+        "name": "K3_1M"
+      },
+      {
+        "id": "K3_3M",
+        "name": "K3_3M"
+      },
+      {
+        "id": "K3_5M",
+        "name": "K3_5M"
+      },
+      {
+        "id": "K3_10M",
+        "name": "K3_10M"
+      },
+      {
+        "id": "TrxWinGo_1M",
+        "name": "TrxWinGo_1M"
+      },
+      {
+        "id": "TrxWinGo_3M",
+        "name": "TrxWinGo_3M"
+      },
+      {
+        "id": "TrxWinGo_5M",
+        "name": "TrxWinGo_5M"
+      },
+      {
+        "id": "TrxWinGo_10M",
+        "name": "TrxWinGo_10M"
+      },
+      {
+        "id": "D5_1M",
+        "name": "5D_1M"
+      },
+      {
+        "id": "D5_3M",
+        "name": "5D_3M"
+      },
+      {
+        "id": "D5_5M",
+        "name": "5D_5M"
+      },
+      {
+        "id": "D5_10M",
+        "name": "5D_10M"
+      },
+      {
+        "id": "VideoWinGo_1M",
+        "name": "VideoWinGo_1M"
+      },
+      {
+        "id": "MotoRace_1M",
+        "name": "MotoRace_1M"
+      }
+    ],
+    "orderStateEnum": [
+      {
+        "id": "Unsettled",
+        "name": "未结算"
+      },
+      {
+        "id": "Settled",
+        "name": "已结算"
+      },
+      {
+        "id": "Cancelled",
+        "name": "已取消"
+      },
+      {
+        "id": "Refunded",
+        "name": "已退款"
+      },
+      {
+        "id": "Voided",
+        "name": "已作废"
+      },
+      {
+        "id": "SettleEarly",
+        "name": "提前结算"
+      },
+      {
+        "id": "ReSettlement",
+        "name": "重新结算"
+      }
+    ],
+    "playTypeEnum": [
+      {
+        "id": "Num",
+        "name": "数字"
+      },
+      {
+        "id": "Color",
+        "name": "单码颜色"
+      },
+      {
+        "id": "BigSmall",
+        "name": "单码大小"
+      },
+      {
+        "id": "OddEven",
+        "name": "单码单双"
+      },
+      {
+        "id": "SumNum",
+        "name": "和值数字"
+      },
+      {
+        "id": "SumBigSmall",
+        "name": "和值大小"
+      },
+      {
+        "id": "SumOddEven",
+        "name": "和值单双"
+      },
+      {
+        "id": "NumDiff2",
+        "name": "二不同号"
+      },
+      {
+        "id": "NumSame2",
+        "name": "二同号单选"
+      },
+      {
+        "id": "NumSame2Mult",
+        "name": "二同号复选"
+      },
+      {
+        "id": "NumDiff3",
+        "name": "三不同号"
+      },
+      {
+        "id": "NumSame3",
+        "name": "三同号单选"
+      },
+      {
+        "id": "NumSame3All",
+        "name": "三同号通选"
+      },
+      {
+        "id": "NumNear3All",
+        "name": "三连号通选"
+      }
+    ],
+    "ossFileTypeEnum": [
+      {
+        "id": "gamelogo",
+        "name": "游戏logo图片"
+      },
+      {
+        "id": "editor",
+        "name": "编辑器上传图片"
+      },
+      {
+        "id": "other",
+        "name": "其他类型文件"
+      },
+      {
+        "id": "googleauth",
+        "name": "Google认证相关文件"
+      },
+      {
+        "id": "template",
+        "name": "模板文件"
+      },
+      {
+        "id": "web",
+        "name": "前台网站文件"
+      },
+      {
+        "id": "export",
+        "name": "导出的文件"
+      },
+      {
+        "id": "recharge",
+        "name": "充值相关文件"
+      }
+    ],
+    "withdrawCategory": [
+      {
+        "id": 1,
+        "name": "银行卡 (BankCard)"
+      },
+      {
+        "id": 2,
+        "name": "UPI (UPI)"
+      },
+      {
+        "id": 3,
+        "name": "USDT (USDT)"
+      },
+      {
+        "id": 4,
+        "name": "电子钱包 (EWallet)"
+      },
+      {
+        "id": 5,
+        "name": "PIX (PIX)"
+      },
+      {
+        "id": 6,
+        "name": "WavePay (WavePay)"
+      },
+      {
+        "id": 8,
+        "name": "KBZPay (KBZPay)"
+      },
+      {
+        "id": 21,
+        "name": "ARPay (ARPay)"
+      },
+      {
+        "id": 23,
+        "name": "Easypaisa (Easypaisa)"
+      },
+      {
+        "id": 24,
+        "name": "JAZZCASH (JAZZCASH)"
+      },
+      {
+        "id": 27,
+        "name": "FAST-UPI (FastUPI)"
+      }
+    ],
+    "withdrawCategoryEnumList": [
+      {
+        "id": 1,
+        "name": "银行卡"
+      },
+      {
+        "id": 2,
+        "name": "UPI"
+      },
+      {
+        "id": 3,
+        "name": "USDT"
+      },
+      {
+        "id": 4,
+        "name": "电子钱包"
+      },
+      {
+        "id": 5,
+        "name": "PIX"
+      },
+      {
+        "id": 6,
+        "name": "WavePay"
+      },
+      {
+        "id": 8,
+        "name": "KBZPay"
+      },
+      {
+        "id": 21,
+        "name": "ARPay"
+      },
+      {
+        "id": 23,
+        "name": "Easypaisa"
+      },
+      {
+        "id": 24,
+        "name": "JAZZCASH"
+      },
+      {
+        "id": 27,
+        "name": "FAST-UPI"
+      }
+    ],
+    "smsConfigList": [
+      {
+        "code": "SLSms",
+        "name": "颂量短信"
+      },
+      {
+        "code": "BuKaSms",
+        "name": "布卡短信"
+      },
+      {
+        "code": "TianYiHongSms",
+        "name": "天一泓短信"
+      },
+      {
+        "code": "ChuanXinSms",
+        "name": "传信短信"
+      },
+      {
+        "code": "NodeSms",
+        "name": "节点融合短信"
+      },
+      {
+        "code": "SubmailSms",
+        "name": "塞游短信"
+      },
+      {
+        "code": "LinkseeSms",
+        "name": "灵犀云短信"
+      },
+      {
+        "code": "ChangyiCloudSms",
+        "name": "畅亿云短信"
+      }
+    ],
+    "emailConfigList": [
+      {
+        "code": "Alibaba",
+        "name": "阿里云邮箱"
+      },
+      {
+        "code": "Google",
+        "name": "Google邮箱"
+      }
+    ],
+    "usdt": "USDT",
+    "stateList": [
+      {
+        "id": 1,
+        "name": "正常"
+      },
+      {
+        "id": 2,
+        "name": "临时冻结"
+      },
+      {
+        "id": 3,
+        "name": "手动冻结"
+      },
+      {
+        "id": 4,
+        "name": "黑名单"
+      }
+    ],
+    "registerSourceList": [
+      {
+        "id": 1,
+        "name": "投流推广"
+      },
+      {
+        "id": 2,
+        "name": "后台注册"
+      },
+      {
+        "id": 3,
+        "name": "官网注册"
+      },
+      {
+        "id": 4,
+        "name": "代理推广"
+      }
+    ],
+    "userTypeList": [
+      {
+        "id": 0,
+        "name": "正式账号"
+      },
+      {
+        "id": 1,
+        "name": "测试账号"
+      },
+      {
+        "id": 2,
+        "name": "游客账号"
+      }
+    ],
+    "disablePermissList": [
+      {
+        "id": 2,
+        "name": "禁止提现"
+      },
+      {
+        "id": 3,
+        "name": "禁止进入游戏"
+      },
+      {
+        "id": 4,
+        "name": "禁止派发返佣"
+      },
+      {
+        "id": 5,
+        "name": "禁止参与返佣"
+      }
+    ],
+    "rechargeStateList": [
+      {
+        "code": "0",
+        "name": "待支付"
+      },
+      {
+        "code": "1",
+        "name": "已支付"
+      },
+      {
+        "code": "2",
+        "name": "已取消"
+      }
+    ],
+    "withdrawStateList": [
+      {
+        "id": 0,
+        "name": "待审核"
+      },
+      {
+        "id": 1,
+        "name": "已通过"
+      },
+      {
+        "id": 2,
+        "name": "已拒绝"
+      },
+      {
+        "id": 3,
+        "name": "已提交"
+      }
+    ],
+    "withdrawAuditStateList": [
+      {
+        "id": 0,
+        "name": "待审核"
+      },
+      {
+        "id": 1,
+        "name": "审核中"
+      }
+    ],
+    "withdrawWorkStateList": [
+      {
+        "code": "NoWork",
+        "name": "未上班"
+      },
+      {
+        "code": "Work_NoOpenTakeOrder",
+        "name": "上班(未开启接单)"
+      },
+      {
+        "code": "Work_TakingOrder",
+        "name": "上班(接单中)"
+      },
+      {
+        "code": "Work_ManagerStopTakeOrder",
+        "name": "上班(管理设置暂停接单)"
+      },
+      {
+        "code": "Work_Paused",
+        "name": "上班(主动暂停中)"
+      },
+      {
+        "code": "Work_ExceptionPausedTimeout",
+        "name": "上班(暂停超时异常)"
+      },
+      {
+        "code": "Work_ExceptionUnAuditTimeout",
+        "name": "上班(未审核超时异常)"
+      }
+    ],
+    "withdrawWorkStateFilterList": [
+      {
+        "code": "Work_NoOpenTakeOrder",
+        "name": "上班-未派单"
+      },
+      {
+        "code": "Work_TakingOrder",
+        "name": "上班-派单中"
+      },
+      {
+        "code": "Work_Paused",
+        "name": "上班-主动暂停"
+      },
+      {
+        "code": "Work_ExceptionPausedTimeout",
+        "name": "上班-异常暂停"
+      },
+      {
+        "code": "Work_ManagerStopTakeOrder",
+        "name": "上班-停止派单(管理员停止)"
+      }
+    ],
+    "withdrawWorkProcessStateList": [
+      {
+        "code": "PendingDispatch",
+        "name": "待派发"
+      },
+      {
+        "code": "PendingAudit",
+        "name": "待审核"
+      },
+      {
+        "code": "Auditing",
+        "name": "审核中"
+      },
+      {
+        "code": "AuditTimeout",
+        "name": "审核超时"
+      }
+    ],
+    "orderDispatchModeList": [
+      {
+        "code": "TimeRandom",
+        "name": "按照提现时间先后，随机分配"
+      }
+    ],
+    "dynamicDictionaryKeyList": [
+      {
+        "code": "WithdrawCategoryList",
+        "name": "提现大类列表"
+      },
+      {
+        "code": "UserName",
+        "name": "系统用户名映射"
+      },
+      {
+        "code": "OrganizationList",
+        "name": "集团下拉框数据"
+      },
+      {
+        "code": "TenantList",
+        "name": "商户下拉框数据"
+      },
+      {
+        "code": "SysCurrencyList",
+        "name": "币种下拉框数据"
+      },
+      {
+        "code": "PayCodeList",
+        "name": "三方映射码下拉框数据"
+      },
+      {
+        "code": "ThirdPayMerchantList",
+        "name": "三方商户昵称/商户号下拉框数据"
+      },
+      {
+        "code": "TenantPayChannelList",
+        "name": "商户通道下拉框数据"
+      },
+      {
+        "code": "SysPayChannelList",
+        "name": "系统通道字典下拉框数据"
+      },
+      {
+        "code": "RechargeCategoryList",
+        "name": "充值大类下拉框数据"
+      },
+      {
+        "code": "RoleList",
+        "name": "系统角色下拉框数据"
+      },
+      {
+        "code": "MenuList",
+        "name": "系统菜单下拉框数据"
+      },
+      {
+        "code": "WithdrawConfigGroupList",
+        "name": "出款派单配置组别下拉框数据"
+      }
+    ],
+    "financialTypeList": [
+      {
+        "code": "Recharge",
+        "name": "充值"
+      },
+      {
+        "code": "ManualRecharge",
+        "name": "人工充值"
+      },
+      {
+        "code": "RechargeGift",
+        "name": "充值赠送"
+      },
+      {
+        "code": "BonusRecharge",
+        "name": "彩金充值"
+      },
+      {
+        "code": "Withdraw",
+        "name": "提现"
+      },
+      {
+        "code": "WithdrawBack",
+        "name": "提现退回"
+      },
+      {
+        "code": "WithdrawReject",
+        "name": "出款拒绝"
+      },
+      {
+        "code": "ManualWithdraw",
+        "name": "人工提现"
+      },
+      {
+        "code": "InvitedWheel",
+        "name": "邀请转盘奖金"
+      },
+      {
+        "code": "BonusReduce",
+        "name": "彩金扣减"
+      },
+      {
+        "code": "RedBagReceived",
+        "name": "红包派发"
+      },
+      {
+        "code": "GiftCode",
+        "name": "礼品码领取"
+      },
+      {
+        "code": "VIPReward",
+        "name": "VIP活动"
+      },
+      {
+        "code": "SignReward",
+        "name": "签到活动"
+      },
+      {
+        "code": "TurnableSpin",
+        "name": "大转盘"
+      },
+      {
+        "code": "CodeWashing",
+        "name": "洗码"
+      },
+      {
+        "code": "Champion",
+        "name": "锦标赛"
+      },
+      {
+        "code": "RankUserReward",
+        "name": "会员排行榜奖金"
+      },
+      {
+        "code": "RankAgentReward",
+        "name": "代理排行榜奖金"
+      },
+      {
+        "code": "SafeBoxTransIn",
+        "name": "转入保险箱"
+      },
+      {
+        "code": "SafeBoxReward",
+        "name": "保险箱利息奖励"
+      },
+      {
+        "code": "SafeBoxTransOut",
+        "name": "保险箱转出"
+      },
+      {
+        "code": "SendCommission",
+        "name": "佣金发放"
+      },
+      {
+        "code": "L3SendCommission",
+        "name": "三层代理返佣"
+      },
+      {
+        "code": "BigJackpotReward",
+        "name": "大奖活动奖励"
+      },
+      {
+        "code": "GiftPackReward",
+        "name": "活动礼包奖励"
+      },
+      {
+        "code": "RechargeGiftPackReward",
+        "name": "充值礼包活动"
+      },
+      {
+        "code": "GameTransIn",
+        "name": "游戏上分"
+      },
+      {
+        "code": "GameTransOut",
+        "name": "游戏下分"
+      },
+      {
+        "code": "GameReturn",
+        "name": "游戏退款"
+      },
+      {
+        "code": "InmailReward",
+        "name": "站内信奖励"
+      },
+      {
+        "code": "RechargeWheelSpin",
+        "name": "充值转盘旋转"
+      },
+      {
+        "code": "ActivityGuideReward",
+        "name": "引导活动奖励"
+      },
+      {
+        "code": "L3InviteOkReward",
+        "name": "邀请成功奖金"
+      },
+      {
+        "code": "L3InvitedReward",
+        "name": "被邀请人奖金"
+      },
+      {
+        "code": "L3InvitedTaskReward",
+        "name": "邀请任务奖金"
+      },
+      {
+        "code": "CouponReward",
+        "name": "优惠券奖励"
+      },
+      {
+        "code": "SpecialBonus",
+        "name": "特邀彩金"
+      },
+      {
+        "code": "PackageTransferReward",
+        "name": "分包转移奖励"
+      },
+      {
+        "code": "MysteryReward",
+        "name": "平台自动返水"
+      },
+      {
+        "code": "RechargeGoodsR1Reward",
+        "name": "首充彩金"
+      },
+      {
+        "code": "RechargeGoodsR2Reward",
+        "name": "二充彩金"
+      },
+      {
+        "code": "RechargeGoodsR3Reward",
+        "name": "三充彩金"
+      },
+      {
+        "code": "PromotionShareReward",
+        "name": "推广分享奖励"
+      },
+      {
+        "code": "CashRainReward",
+        "name": "红包雨"
+      },
+      {
+        "code": "WithdrawTimeoutCompensation",
+        "name": "提现超时赔付"
+      },
+      {
+        "code": "LossReliefReward",
+        "name": "亏损救援金"
+      },
+      {
+        "code": "LuckyDoubleReward",
+        "name": "幸运加倍礼包奖励"
+      },
+      {
+        "code": "DayWeekTaskReward",
+        "name": "每日每周任务奖励"
+      },
+      {
+        "code": "DailyCheckInReward",
+        "name": "每日签到奖励"
+      },
+      {
+        "code": "CardPlanWeekReward",
+        "name": "周卡奖励"
+      },
+      {
+        "code": "CardPlanMonthReward",
+        "name": "月卡奖励"
+      }
+    ],
+    "artificialRechargeTypeList": [
+      {
+        "id": 1,
+        "name": "彩金充值"
+      },
+      {
+        "id": 2,
+        "name": "彩金扣减"
+      },
+      {
+        "id": 3,
+        "name": "人工充值"
+      },
+      {
+        "id": 4,
+        "name": "人工提现"
+      },
+      {
+        "id": 5,
+        "name": "提现退回"
+      }
+    ],
+    "bankCardTypeList": [
+      {
+        "id": 1,
+        "name": "银行"
+      },
+      {
+        "id": 2,
+        "name": "电子钱包"
+      }
+    ],
+    "thirdStateList": [
+      {
+        "id": 0,
+        "name": "待提交"
+      },
+      {
+        "id": 1,
+        "name": "等待回调"
+      },
+      {
+        "id": 2,
+        "name": "失败"
+      },
+      {
+        "id": 3,
+        "name": "成功"
+      },
+      {
+        "id": 4,
+        "name": "异常，待前往三方确认"
+      },
+      {
+        "id": 5,
+        "name": "提交三方中"
+      }
+    ],
+    "sysEventLogEventCategoryList": [
+      {
+        "id": 0,
+        "name": "无"
+      },
+      {
+        "id": 1,
+        "name": "提现订单"
+      },
+      {
+        "id": 2,
+        "name": "出款员工操作事件"
+      }
+    ],
+    "withdrawOrderActionTypeList": [
+      {
+        "code": "StartAudit",
+        "name": "开始审核"
+      },
+      {
+        "code": "AssignOrder",
+        "name": "转派订单"
+      },
+      {
+        "code": "ExceptionAuditedTimeout",
+        "name": "订单审核超时"
+      },
+      {
+        "code": "SysAssignOrder",
+        "name": "系统派单"
+      },
+      {
+        "code": "QueryFinancial",
+        "name": "查询账变"
+      },
+      {
+        "code": "NotifyFail",
+        "name": "三方回调出款失败"
+      },
+      {
+        "code": "NotifySuccess",
+        "name": "三方回调出款成功"
+      },
+      {
+        "code": "NotifySubmited",
+        "name": "三方回调提单成功"
+      },
+      {
+        "code": "QuerySuccess",
+        "name": "刷新确认出款成功"
+      },
+      {
+        "code": "QueryFail",
+        "name": "查询订单出款失败"
+      },
+      {
+        "code": "QuerySubmited",
+        "name": "刷新确认提交成功"
+      },
+      {
+        "code": "ExceptionUnAuditTimeoutReturnToPool",
+        "name": "未审核超时订单返回订单池"
+      },
+      {
+        "code": "ForcedEndReturnToPool",
+        "name": "强制下班订单返回订单池"
+      },
+      {
+        "code": "UserPauseReturnToPool",
+        "name": "用户暂停订单返回订单池"
+      },
+      {
+        "code": "UserEndWorkReturnToPool",
+        "name": "用户下班订单返回订单池"
+      },
+      {
+        "code": "ManagerDisabledAccountReturnToPool",
+        "name": "管理员禁用账号订单返回订单池"
+      },
+      {
+        "code": "RemoveAccountReturnToPool",
+        "name": "管理员移除账号订单返回订单池"
+      },
+      {
+        "code": "SubmitThirdPay_Submitting",
+        "name": "提交三方出款-提交中"
+      },
+      {
+        "code": "SubmitThirdPay_Success",
+        "name": "提交三方出款-成功"
+      },
+      {
+        "code": "SubmitThirdPay_Failed",
+        "name": "提交三方出款-失败"
+      },
+      {
+        "code": "SubmitThirdPay_Exception",
+        "name": "提交三方出款-异常待确认"
+      },
+      {
+        "code": "ManualConfirm",
+        "name": "人工确认出款"
+      },
+      {
+        "code": "ManualCancel",
+        "name": "人工取消出款"
+      },
+      {
+        "code": "ResetOrderToWait",
+        "name": "订单重审"
+      },
+      {
+        "code": "ClearException",
+        "name": "异常消除"
+      }
+    ],
+    "withdrawUserActionTypeList": [
+      {
+        "code": "StartWork",
+        "name": "上班打卡"
+      },
+      {
+        "code": "StopWork",
+        "name": "下班打卡"
+      },
+      {
+        "code": "StartToTakeOrder",
+        "name": "开始接单"
+      },
+      {
+        "code": "SelfPauseTakingOrder",
+        "name": "手动暂停接单"
+      },
+      {
+        "code": "SelfRecoverNoTakingOrder",
+        "name": "恢复但不接单"
+      },
+      {
+        "code": "SelfRecoverTakingOrder",
+        "name": "恢复并接单"
+      },
+      {
+        "code": "System_ExceptionPauseTimeout",
+        "name": "暂停超时异常"
+      },
+      {
+        "code": "System_ExceptionUnAuditTimeout",
+        "name": "未审核超时异常"
+      },
+      {
+        "code": "System_ForcedEndByForget",
+        "name": "系统强制下班-忘记下班"
+      },
+      {
+        "code": "System_ForcedEndByPausedTimeoutEx",
+        "name": "系统强制下班-暂停超时异常"
+      },
+      {
+        "code": "System_ForcedEndByUnAuditTimeoutEx",
+        "name": "系统强制下班-未审核超时异常"
+      },
+      {
+        "code": "System_ForcedEndBySelfPaused",
+        "name": "系统强制下班-主动暂停"
+      },
+      {
+        "code": "System_AccountDisabled",
+        "name": "账号禁用出款"
+      },
+      {
+        "code": "System_AccountEnabled",
+        "name": "账号恢复出款"
+      },
+      {
+        "code": "Manager_ManagerRecoverTakeOrder",
+        "name": "管理员恢复派单"
+      },
+      {
+        "code": "Manager_ManagerStopTakeOrder",
+        "name": "管理员停止派单"
+      },
+      {
+        "code": "Manager_RecoverPauseTimeoutException",
+        "name": "管理员解除暂停超时异常"
+      },
+      {
+        "code": "Manager_RecoverUnAuditTimeoutException",
+        "name": "管理员解除未审核超时异常"
+      }
+    ],
+    "pixWalletTypeList": [
+      {
+        "code": "CNPJ",
+        "name": "CNPJ"
+      },
+      {
+        "code": "Email",
+        "name": "Email"
+      },
+      {
+        "code": "Phone",
+        "name": "Phone"
+      },
+      {
+        "code": "CPF",
+        "name": "CPF"
+      }
+    ],
+    "withdrawWalletTypeList": [
+      {
+        "id": 1,
+        "name": "银行卡"
+      },
+      {
+        "id": 2,
+        "name": "电子钱包"
+      },
+      {
+        "id": 3,
+        "name": "PIX"
+      },
+      {
+        "id": 4,
+        "name": "USDT"
+      },
+      {
+        "id": 5,
+        "name": "UPI"
+      }
+    ],
+    "feedBackStateList": [
+      {
+        "id": 0,
+        "name": "未读"
+      },
+      {
+        "id": 1,
+        "name": "已读"
+      },
+      {
+        "id": 2,
+        "name": "已采纳"
+      }
+    ],
+    "gameCategoryList": [
+      {
+        "id": 0,
+        "name": "电子游戏"
+      },
+      {
+        "id": 1,
+        "name": "真人视讯"
+      },
+      {
+        "id": 2,
+        "name": "体育竞技"
+      },
+      {
+        "id": 3,
+        "name": "彩票"
+      },
+      {
+        "id": 4,
+        "name": "棋牌游戏"
+      }
+    ],
+    "gameTypeList": [
+      {
+        "id": 1,
+        "name": "视讯"
+      },
+      {
+        "id": 2,
+        "name": "电子"
+      },
+      {
+        "id": 3,
+        "name": "捕鱼"
+      },
+      {
+        "id": 4,
+        "name": "体育"
+      },
+      {
+        "id": 5,
+        "name": "棋牌"
+      },
+      {
+        "id": 6,
+        "name": "小游戏"
+      },
+      {
+        "id": 100,
+        "name": "WinGo"
+      },
+      {
+        "id": 101,
+        "name": "K3"
+      },
+      {
+        "id": 102,
+        "name": "5D"
+      },
+      {
+        "id": 103,
+        "name": "TrxWinGo"
+      },
+      {
+        "id": 104,
+        "name": "VideoWinGo"
+      },
+      {
+        "id": 105,
+        "name": "MotoRace"
+      },
+      {
+        "id": 106,
+        "name": "LuckyWinGo"
+      }
+    ],
+    "taskCycleList": [
+      {
+        "id": 1,
+        "name": "日"
+      },
+      {
+        "id": 2,
+        "name": "周"
+      },
+      {
+        "id": 3,
+        "name": "月"
+      }
+    ],
+    "activityStateList": [
+      {
+        "id": 1,
+        "name": "未开始"
+      },
+      {
+        "id": 2,
+        "name": "进行中"
+      },
+      {
+        "id": 3,
+        "name": "已结束"
+      }
+    ],
+    "schedulerTaskTypeList": [
+      {
+        "id": 1,
+        "name": "Url"
+      }
+    ],
+    "schedulerTriggerTypeList": [
+      {
+        "id": 1,
+        "name": "Cron"
+      },
+      {
+        "id": 2,
+        "name": "Simple"
+      }
+    ],
+    "schedulerRequestMethodList": [
+      {
+        "id": 1,
+        "name": "Get"
+      },
+      {
+        "id": 2,
+        "name": "Post"
+      },
+      {
+        "id": 3,
+        "name": "Put"
+      },
+      {
+        "id": 4,
+        "name": "Delete"
+      }
+    ],
+    "intervalTimeTypeList": [
+      {
+        "id": 1,
+        "name": "秒"
+      },
+      {
+        "id": 2,
+        "name": "分"
+      },
+      {
+        "id": 3,
+        "name": "时"
+      },
+      {
+        "id": 4,
+        "name": "天"
+      }
+    ],
+    "cacheInstanceList": [
+      {
+        "code": "Admin",
+        "name": "后台实例"
+      },
+      {
+        "code": "Basic",
+        "name": "基础业务"
+      },
+      {
+        "code": "PlatformApi",
+        "name": "平台API业务"
+      },
+      {
+        "code": "User",
+        "name": "用户实例"
+      },
+      {
+        "code": "PlatformJob",
+        "name": "定时任务"
+      },
+      {
+        "code": "Activity",
+        "name": "活动实例"
+      },
+      {
+        "code": "ThirdGame",
+        "name": "三方游戏"
+      },
+      {
+        "code": "Persistence",
+        "name": "持久数据"
+      },
+      {
+        "code": "TeamStatistic",
+        "name": "团队统计"
+      }
+    ],
+    "cacheDBList": [
+      {
+        "code": "DB1",
+        "name": "数据库1"
+      },
+      {
+        "code": "DB2",
+        "name": "数据库2"
+      },
+      {
+        "code": "DB3",
+        "name": "数据库3"
+      },
+      {
+        "code": "DB4",
+        "name": "数据库4"
+      },
+      {
+        "code": "DB5",
+        "name": "数据库5"
+      }
+    ],
+    "ossImageUrl": "https://sitossimg.uknm5qqzv3vqzdn9xgn5.com",
+    "activityTypeList": [
+      {
+        "code": "CodeWashing",
+        "name": "洗码"
+      },
+      {
+        "code": "BigJackpotReward",
+        "name": "超级大奖"
+      },
+      {
+        "code": "RedBagReceived",
+        "name": "红包"
+      },
+      {
+        "code": "Champion",
+        "name": "锦标赛"
+      },
+      {
+        "code": "TurnableSpin",
+        "name": "大转盘"
+      },
+      {
+        "code": "ActivityReward",
+        "name": "常规活动"
+      },
+      {
+        "code": "VIPReward",
+        "name": "VIP"
+      },
+      {
+        "code": "SendCommission",
+        "name": "佣金"
+      },
+      {
+        "code": "SignReward",
+        "name": "签到"
+      },
+      {
+        "code": "SafeBoxReward",
+        "name": "保险箱"
+      },
+      {
+        "code": "BonusRecharge",
+        "name": "彩金充值"
+      },
+      {
+        "code": "RechargeGift",
+        "name": "充值赠送"
+      },
+      {
+        "code": "BonusReduce",
+        "name": "彩金扣减"
+      },
+      {
+        "code": "GiftCode",
+        "name": "礼品码"
+      },
+      {
+        "code": "InvitedWheel",
+        "name": "邀请转盘"
+      },
+      {
+        "code": "GiftPackReward",
+        "name": "活动礼包"
+      },
+      {
+        "code": "InmailReward",
+        "name": "站内信奖励"
+      },
+      {
+        "code": "RechargeWheelSpin",
+        "name": "充值转盘"
+      },
+      {
+        "code": "ActivityGuideReward",
+        "name": "引导活动奖励"
+      },
+      {
+        "code": "L3SendCommission",
+        "name": "三层代理返佣"
+      },
+      {
+        "code": "L3InviteOkReward",
+        "name": "邀请成功奖金"
+      },
+      {
+        "code": "L3InvitedReward",
+        "name": "被邀请人奖金"
+      },
+      {
+        "code": "L3InvitedTaskReward",
+        "name": "被邀任务奖金"
+      },
+      {
+        "code": "RankUserReward",
+        "name": "会员排行榜奖金"
+      },
+      {
+        "code": "RankAgentReward",
+        "name": "代理排行榜奖金"
+      },
+      {
+        "code": "CouponReward",
+        "name": "优惠券奖励"
+      },
+      {
+        "code": "RechargeGiftPackReward",
+        "name": "充值礼包活动"
+      },
+      {
+        "code": "MysteryReward",
+        "name": "平台自动返水"
+      },
+      {
+        "code": "SpecialBonus",
+        "name": "特邀彩金"
+      },
+      {
+        "code": "PackageTransferReward",
+        "name": "分包转移奖励"
+      },
+      {
+        "code": "RechargeGoodsR1Reward",
+        "name": "首充商品彩金"
+      },
+      {
+        "code": "RechargeGoodsR2Reward",
+        "name": "二充商品彩金"
+      },
+      {
+        "code": "RechargeGoodsR3Reward",
+        "name": "三充商品彩金"
+      },
+      {
+        "code": "PromotionShareReward",
+        "name": "推广分享奖励"
+      },
+      {
+        "code": "WithdrawTimeoutCompensation",
+        "name": "提现超时赔付"
+      },
+      {
+        "code": "CashRainReward",
+        "name": "红包雨"
+      },
+      {
+        "code": "LossReliefReward",
+        "name": "亏损救援金"
+      },
+      {
+        "code": "LuckyDoubleReward",
+        "name": "幸运加倍奖励"
+      },
+      {
+        "code": "DayWeekTaskReward",
+        "name": "每日每周任务奖励"
+      },
+      {
+        "code": "DailyCheckInReward",
+        "name": "每日签到奖励"
+      },
+      {
+        "code": "CardPlanWeekReward",
+        "name": "周卡奖励"
+      },
+      {
+        "code": "CardPlanMonthReward",
+        "name": "月卡奖励"
+      }
+    ],
+    "templateFileList": [
+      {
+        "id": 1,
+        "name": "三方充值银行"
+      },
+      {
+        "id": 2,
+        "name": "三方提现银行"
+      },
+      {
+        "id": 3,
+        "name": "人工充值"
+      },
+      {
+        "id": 4,
+        "name": "会员批量拉黑备注"
+      },
+      {
+        "id": 5,
+        "name": "批量代理特设返佣"
+      },
+      {
+        "id": 6,
+        "name": "批量展示目标用户"
+      },
+      {
+        "id": 7,
+        "name": "特邀彩金"
+      },
+      {
+        "id": 8,
+        "name": "排行榜奖金比例配置"
+      },
+      {
+        "id": 9,
+        "name": "会员活动黑名单"
+      },
+      {
+        "id": 10,
+        "name": "每日签到奖励配置"
+      }
+    ],
+    "informationTypeList": [
+      {
+        "id": 0,
+        "name": "链接"
+      },
+      {
+        "id": 1,
+        "name": "富文本"
+      },
+      {
+        "id": 2,
+        "name": "界面"
+      },
+      {
+        "id": 3,
+        "name": "工单"
+      },
+      {
+        "id": 4,
+        "name": "富文本不跳转"
+      }
+    ],
+    "popupTypeList": [
+      {
+        "id": 1,
+        "name": "新人专属礼包"
+      },
+      {
+        "id": 2,
+        "name": "每日签到奖励"
+      },
+      {
+        "id": 3,
+        "name": "限时优惠活动"
+      },
+      {
+        "id": 4,
+        "name": "VIP专属特权"
+      },
+      {
+        "id": 5,
+        "name": "周年庆典活动"
+      }
+    ],
+    "topRechargeWithdrawTypeList": [
+      {
+        "id": "R1",
+        "name": "首充"
+      },
+      {
+        "id": "R2",
+        "name": "二充"
+      },
+      {
+        "id": "R3",
+        "name": "三充"
+      },
+      {
+        "id": "W1",
+        "name": "首提"
+      },
+      {
+        "id": "W2",
+        "name": "二提"
+      },
+      {
+        "id": "W3",
+        "name": "三提"
+      }
+    ],
+    "vipRewardTypeList": [
+      {
+        "id": 1,
+        "name": "升级"
+      },
+      {
+        "id": 2,
+        "name": "升级奖励"
+      },
+      {
+        "id": 3,
+        "name": "周奖励"
+      },
+      {
+        "id": 4,
+        "name": "月奖励"
+      },
+      {
+        "id": 5,
+        "name": "保级成功"
+      },
+      {
+        "id": 6,
+        "name": "保级失败"
+      },
+      {
+        "id": 7,
+        "name": "降级"
+      }
+    ],
+    "exportStateList": [
+      {
+        "id": "WaitExport",
+        "name": "等待中"
+      },
+      {
+        "id": "Exporting",
+        "name": "处理中"
+      },
+      {
+        "id": "Completed",
+        "name": "已完成"
+      },
+      {
+        "id": "Failed",
+        "name": "失败"
+      }
+    ],
+    "giftPackRewardTypeList": [
+      {
+        "id": 0,
+        "name": "金额奖励"
+      },
+      {
+        "id": 1,
+        "name": "白银转盘次数"
+      },
+      {
+        "id": 2,
+        "name": "黄金转盘次数"
+      },
+      {
+        "id": 3,
+        "name": "钻石转盘次数"
+      },
+      {
+        "id": 4,
+        "name": "特殊转盘次数"
+      },
+      {
+        "id": 5,
+        "name": "优惠券"
+      }
+    ],
+    "validTypeList": [
+      {
+        "id": 1,
+        "name": "长期有效"
+      },
+      {
+        "id": 2,
+        "name": "固定时间"
+      }
+    ],
+    "jumpTypeList": [
+      {
+        "id": 1,
+        "name": "无跳转"
+      },
+      {
+        "id": 2,
+        "name": "链接"
+      },
+      {
+        "id": 3,
+        "name": "界面"
+      },
+      {
+        "id": 4,
+        "name": "工单"
+      }
+    ],
+    "jumpPageList": [
+      {
+        "id": 1,
+        "name": "充值"
+      },
+      {
+        "id": 2,
+        "name": "提现"
+      },
+      {
+        "id": 3,
+        "name": "礼品码"
+      },
+      {
+        "id": 4,
+        "name": "优惠券"
+      },
+      {
+        "id": 5,
+        "name": "超级大奖"
+      },
+      {
+        "id": 6,
+        "name": "洗码"
+      },
+      {
+        "id": 7,
+        "name": "VIP"
+      },
+      {
+        "id": 8,
+        "name": "锦标赛"
+      },
+      {
+        "id": 9,
+        "name": "排行榜"
+      },
+      {
+        "id": 11,
+        "name": "站内信"
+      },
+      {
+        "id": 12,
+        "name": "邀请转盘"
+      },
+      {
+        "id": 13,
+        "name": "新版返佣"
+      },
+      {
+        "id": 14,
+        "name": "充值转盘"
+      },
+      {
+        "id": 15,
+        "name": "我的"
+      },
+      {
+        "id": 16,
+        "name": "首页"
+      },
+      {
+        "id": 18,
+        "name": "亏损救援金"
+      },
+      {
+        "id": 19,
+        "name": "每日每周任务"
+      },
+      {
+        "id": 20,
+        "name": "每日签到"
+      },
+      {
+        "id": 21,
+        "name": "周卡月卡"
+      }
+    ],
+    "targetList": [
+      {
+        "id": 1,
+        "name": "全平台会员"
+      },
+      {
+        "id": 2,
+        "name": "新注册会员"
+      },
+      {
+        "id": 5,
+        "name": "游客会员"
+      },
+      {
+        "id": 6,
+        "name": "批量导入"
+      },
+      {
+        "id": 8,
+        "name": "分组"
+      },
+      {
+        "id": 9,
+        "name": "VIP等级"
+      },
+      {
+        "id": 11,
+        "name": "来源渠道"
+      },
+      {
+        "id": 16,
+        "name": "会员充值次数"
+      },
+      {
+        "id": 17,
+        "name": "组合标签"
+      }
+    ],
+    "inmailTargetList": [
+      {
+        "id": 1,
+        "name": "全平台会员"
+      },
+      {
+        "id": 2,
+        "name": "新注册会员"
+      },
+      {
+        "id": 3,
+        "name": "未付费会员"
+      },
+      {
+        "id": 4,
+        "name": "已付费会员"
+      },
+      {
+        "id": 5,
+        "name": "游客会员"
+      },
+      {
+        "id": 6,
+        "name": "批量导入"
+      },
+      {
+        "id": 8,
+        "name": "分组"
+      },
+      {
+        "id": 9,
+        "name": "VIP等级"
+      },
+      {
+        "id": 11,
+        "name": "来源渠道"
+      },
+      {
+        "id": 12,
+        "name": "新首充用户"
+      },
+      {
+        "id": 17,
+        "name": "组合标签"
+      }
+    ],
+    "frequencyList": [
+      {
+        "id": 1,
+        "name": "只弹一次"
+      },
+      {
+        "id": 2,
+        "name": "每天一次"
+      },
+      {
+        "id": 3,
+        "name": "每次登陆"
+      }
+    ],
+    "blackContentTypeList": [
+      {
+        "id": 0,
+        "name": "黑名单ip"
+      },
+      {
+        "id": 1,
+        "name": "黑名单手机号"
+      },
+      {
+        "id": 2,
+        "name": "黑名单设备号"
+      },
+      {
+        "id": 3,
+        "name": "黑名单提现账号"
+      }
+    ],
+    "platformTypeList": [
+      {
+        "id": 1,
+        "name": "Web"
+      },
+      {
+        "id": 2,
+        "name": "IOS"
+      },
+      {
+        "id": 3,
+        "name": "Android"
+      }
+    ],
+    "pushPriorityTypeList": [
+      {
+        "id": 0,
+        "name": "普通"
+      },
+      {
+        "id": 1,
+        "name": "高"
+      }
+    ],
+    "sendTimeTypeList": [
+      {
+        "id": 1,
+        "name": "立即发送"
+      },
+      {
+        "id": 2,
+        "name": "定时发送"
+      }
+    ],
+    "clickTypeList": [
+      {
+        "id": 0,
+        "name": "无操作"
+      },
+      {
+        "id": 1,
+        "name": "打开链接"
+      },
+      {
+        "id": 2,
+        "name": "打开页面"
+      }
+    ],
+    "fbMsgSendStateList": [
+      {
+        "id": 0,
+        "name": "待发送"
+      },
+      {
+        "id": 1,
+        "name": "发送中"
+      },
+      {
+        "id": 2,
+        "name": "发送成功"
+      },
+      {
+        "id": 3,
+        "name": "发送失败"
+      }
+    ],
+    "fbTargetList": [
+      {
+        "id": 1,
+        "name": "全平台会员"
+      },
+      {
+        "id": 2,
+        "name": "新注册会员"
+      },
+      {
+        "id": 3,
+        "name": "未付费会员"
+      },
+      {
+        "id": 4,
+        "name": "已付费会员"
+      },
+      {
+        "id": 5,
+        "name": "游客会员"
+      },
+      {
+        "id": 6,
+        "name": "批量导入"
+      },
+      {
+        "id": 8,
+        "name": "分组"
+      },
+      {
+        "id": 9,
+        "name": "VIP等级"
+      },
+      {
+        "id": 11,
+        "name": "来源渠道"
+      },
+      {
+        "id": 13,
+        "name": "已首充会员"
+      },
+      {
+        "id": 14,
+        "name": "已二充会员"
+      },
+      {
+        "id": 15,
+        "name": "已三充会员"
+      }
+    ],
+    "analyticsEventTypeList": [
+      {
+        "id": 1,
+        "name": "Facebook"
+      },
+      {
+        "id": 2,
+        "name": "Adjust"
+      },
+      {
+        "id": 3,
+        "name": "AppsFlyer"
+      },
+      {
+        "id": 4,
+        "name": "谷歌分析"
+      },
+      {
+        "id": 5,
+        "name": "谷歌广告"
+      }
+    ],
+    "eventLogStateList": [
+      {
+        "id": 0,
+        "name": "待发送"
+      },
+      {
+        "id": 1,
+        "name": "已发送"
+      },
+      {
+        "id": 2,
+        "name": "发送失败"
+      }
+    ],
+    "eventTriggerModeList": [
+      {
+        "id": 0,
+        "name": "客户端"
+      },
+      {
+        "id": 1,
+        "name": "服务端"
+      },
+      {
+        "id": 2,
+        "name": "混合"
+      }
+    ],
+    "maxHierarchy": 0,
+    "sysUserNotifyMessageTypeList": [
+      {
+        "id": 1,
+        "name": "您有新的提现订单，请及时处理，订单号：{OrderNo}"
+      },
+      {
+        "id": 2,
+        "name": "{OperatorName} 指派给你新的提现订单，订单号：{OrderNo}，备注：{Remark}"
+      },
+      {
+        "id": 3,
+        "name": "您的暂停接单已超时，暂停时长：{DurationText}，超时阈值：{ThresholdMinutes}分钟，系统已将状态置为异常暂停"
+      },
+      {
+        "id": 4,
+        "name": "您长时间未审核订单，空闲时长：{DurationText}，持有订单数：{OrderCount}，系统已将状态置为异常未审核"
+      },
+      {
+        "id": 5,
+        "name": "您的工作时长已超过限制，工作时长：{DurationText}，系统已为您强制下班"
+      },
+      {
+        "id": 6,
+        "name": "{OperatorName} 已为您恢复派单"
+      },
+      {
+        "id": 7,
+        "name": "{OperatorName} 已停止您的派单"
+      },
+      {
+        "id": 8,
+        "name": "{OperatorName} 已为您解除异常状态"
+      },
+      {
+        "id": 9,
+        "name": "{OperatorName} 已禁用您的出款权限"
+      },
+      {
+        "id": 10,
+        "name": "您的提现订单已被转派，订单号：{OrderNo}"
+      },
+      {
+        "id": 11,
+        "name": "用户 {UserName} 的暂停接单已超时，暂停时长：{DurationText}，超时阈值：{ThresholdMinutes}分钟，系统已将其状态置为异常暂停"
+      },
+      {
+        "id": 12,
+        "name": "用户 {UserName} 长时间未审核订单，空闲时长：{DurationText}，持有订单数：{OrderCount}，系统已将其状态置为异常未审核"
+      },
+      {
+        "id": 501,
+        "name": "{WindowMinutes}分钟内，代收拉单总次数≥{MinAttemptCount}，拉单失败率达到 {ActualValue}%，已超过预警阈值 {ConfigValue}%，通道名称：{ChannelName}"
+      },
+      {
+        "id": 502,
+        "name": "代收拉单连续失败{ActualValue}次，已超过预警阈值 {ConfigValue}次，通道名称：{ChannelName}"
+      },
+      {
+        "id": 503,
+        "name": "代付通道余额低于 {ConfigValue} {CurrencyCode}，当前余额 {ActualValue} {CurrencyCode}，通道名称：{ChannelName}"
+      },
+      {
+        "id": 504,
+        "name": "单笔出款金额 {ActualValue} {CurrencyCode} 超过预警阈值 {ConfigValue} {CurrencyCode}，订单号：{OrderNo}，操作人：{OperatorName}"
+      },
+      {
+        "id": 505,
+        "name": "集团内 {SysCurrency} 币种，待派发的订单数已达到{ActualCount}，超过了预设阈值 {ThresholdCount}，请通知出款人员处理！"
+      },
+      {
+        "id": 506,
+        "name": "用户：{UserName}，暂停时间过长，超过了预设阈值 {ThresholdMinutes}分钟，账号状态变为异常，需要管理员审核后解除！"
+      },
+      {
+        "id": 507,
+        "name": "用户：{UserName}，一直未审核订单，时长超过了预设阈值 {ThresholdMinutes}分钟，账号状态变为异常，需要管理员审核后解除！"
+      },
+      {
+        "id": 508,
+        "name": "用户：{UserName}，审核订单过慢，时长超过了预设阈值 {ThresholdMinutes}分钟，订单号：{OrderNo}！"
+      }
+    ],
+    "warningTypeList": [
+      {
+        "warningCategoryType": 1,
+        "id": 501,
+        "name": "代收通道失败率预警"
+      },
+      {
+        "warningCategoryType": 1,
+        "id": 502,
+        "name": "代收通道拉单失败预警"
+      },
+      {
+        "warningCategoryType": 1,
+        "id": 503,
+        "name": "代付通道余额不足预警"
+      },
+      {
+        "warningCategoryType": 1,
+        "id": 504,
+        "name": "大额出款预警"
+      },
+      {
+        "warningCategoryType": 2,
+        "id": 505,
+        "name": "订单池单数超上限"
+      },
+      {
+        "warningCategoryType": 2,
+        "id": 506,
+        "name": "用户暂停超时"
+      },
+      {
+        "warningCategoryType": 2,
+        "id": 507,
+        "name": "用户未审核超时"
+      },
+      {
+        "warningCategoryType": 2,
+        "id": 508,
+        "name": "订单审核超时"
+      }
+    ],
+    "warningCategoryList": [
+      {
+        "id": 1,
+        "name": "支代付通道预警"
+      },
+      {
+        "id": 2,
+        "name": "提现派单预警"
+      }
+    ],
+    "thirdPayChannelTypeList": [
+      {
+        "id": 1,
+        "name": "代收"
+      },
+      {
+        "id": 2,
+        "name": "代付"
+      }
+    ],
+    "messageJumpTypeList": [
+      {
+        "id": 0,
+        "name": "不跳转"
+      },
+      {
+        "id": 1,
+        "name": "链接"
+      },
+      {
+        "id": 2,
+        "name": "界面"
+      },
+      {
+        "id": 3,
+        "name": "定制化弹窗"
+      },
+      {
+        "id": 4,
+        "name": "游戏"
+      },
+      {
+        "id": 5,
+        "name": "工单"
+      }
+    ],
+    "language": [
+      {
+        "id": 0,
+        "nativeName": "英语",
+        "name": "英语",
+        "code": "en"
+      },
+      {
+        "id": 0,
+        "nativeName": "Finnish(芬兰语)",
+        "name": "Finnish(芬兰语)",
+        "code": "fi"
+      },
+      {
+        "id": 0,
+        "nativeName": "French(法语)",
+        "name": "French(法语)",
+        "code": "fr"
+      },
+      {
+        "id": 0,
+        "nativeName": "Irish(爱尔兰语)",
+        "name": "Irish(爱尔兰语)",
+        "code": "ga"
+      },
+      {
+        "id": 0,
+        "nativeName": "印地语",
+        "name": "印地语",
+        "code": "hi"
+      },
+      {
+        "id": 0,
+        "nativeName": "Armenian(亚美尼亚语)",
+        "name": "Armenian(亚美尼亚语)",
+        "code": "hy"
+      },
+      {
+        "id": 0,
+        "nativeName": "Japanese(日语)",
+        "name": "Japanese(日语)",
+        "code": "ja"
+      },
+      {
+        "id": 0,
+        "nativeName": "葡萄牙语",
+        "name": "葡萄牙语",
+        "code": "pt"
+      },
+      {
+        "id": 0,
+        "nativeName": "Ukrainian(乌克兰语)",
+        "name": "Ukrainian(乌克兰语)",
+        "code": "uk"
+      },
+      {
+        "id": 0,
+        "nativeName": "Vietnamese(越南语)",
+        "name": "Vietnamese(越南语)",
+        "code": "vi"
+      },
+      {
+        "id": 0,
+        "nativeName": "中文",
+        "name": "中文",
+        "code": "zh"
+      }
+    ],
+    "currencyList": [
+      {
+        "currencyCode": "BRL",
+        "currencyName": "巴西雷亚尔",
+        "currencyRate": 5.66
+      },
+      {
+        "currencyCode": "EUR",
+        "currencyName": "欧元",
+        "currencyRate": 1
+      },
+      {
+        "currencyCode": "GIP",
+        "currencyName": "直布罗陀镑",
+        "currencyRate": 1
+      },
+      {
+        "currencyCode": "INR",
+        "currencyName": "印度卢比",
+        "currencyRate": 55
+      },
+      {
+        "currencyCode": "JPY",
+        "currencyName": "日元",
+        "currencyRate": 1
+      },
+      {
+        "currencyCode": "MGA",
+        "currencyName": "马达加斯加阿里亚里",
+        "currencyRate": 1
+      },
+      {
+        "currencyCode": "MMK",
+        "currencyName": "缅元",
+        "currencyRate": 1
+      },
+      {
+        "currencyCode": "MXN",
+        "currencyName": "墨西哥比索",
+        "currencyRate": 1
+      },
+      {
+        "currencyCode": "MYR",
+        "currencyName": "马来西亚令吉",
+        "currencyRate": 1
+      },
+      {
+        "currencyCode": "PKR",
+        "currencyName": "巴基斯坦卢比",
+        "currencyRate": 278.55
+      },
+      {
+        "currencyCode": "TWD",
+        "currencyName": "新台币",
+        "currencyRate": 1
+      },
+      {
+        "currencyCode": "VND",
+        "currencyName": "越南盾",
+        "currencyRate": 3820.000001
+      }
+    ],
+    "countryList": [
+      {
+        "id": 0,
+        "countryName": "阿富汗",
+        "countryCode": "AFG",
+        "timeZoneCode": "Asia/Kolkata",
+        "timeZone": "(UTC+5:30)Asia/Kolkata"
+      },
+      {
+        "id": 0,
+        "countryName": "阿联酋",
+        "countryCode": "ARE",
+        "timeZoneCode": "Asia/Dubai",
+        "timeZone": "(UTC+4)Asia/Dubai"
+      },
+      {
+        "id": 0,
+        "countryName": "巴西",
+        "countryCode": "BRA",
+        "timeZoneCode": "America/Sao_Paulo",
+        "timeZone": "(UTC-3)America/Sao_Paulo"
+      },
+      {
+        "id": 0,
+        "countryName": "印度",
+        "countryCode": "IND",
+        "timeZoneCode": "Asia/Kolkata",
+        "timeZone": "(UTC+5:30)Asia/Kolkata"
+      },
+      {
+        "id": 0,
+        "countryName": "缅甸",
+        "countryCode": "MMR",
+        "timeZoneCode": "Asia/Yangon",
+        "timeZone": "(UTC+6:30)Asia/Yangon"
+      },
+      {
+        "id": 0,
+        "countryName": "巴基斯坦",
+        "countryCode": "PAK",
+        "timeZoneCode": "Asia/Karachi",
+        "timeZone": "(UTC+5)Asia/Karachi"
+      },
+      {
+        "id": 0,
+        "countryName": "越南",
+        "countryCode": "VNM",
+        "timeZoneCode": "Asia/Ho_Chi_Minh",
+        "timeZone": "(UTC+7)Asia/Ho_Chi_Minh"
+      }
+    ],
+    "blackFreezeTypeList": [
+      {
+        "id": 0,
+        "name": "关联IP异常"
+      },
+      {
+        "id": 1,
+        "name": "关联设备异常"
+      },
+      {
+        "id": 2,
+        "name": "关联手机号异常"
+      },
+      {
+        "id": 3,
+        "name": "关联银行卡异常"
+      },
+      {
+        "id": 4,
+        "name": "投注行为异常"
+      },
+      {
+        "id": 5,
+        "name": "提现行为异常"
+      },
+      {
+        "id": 6,
+        "name": "游戏盈利异常"
+      },
+      {
+        "id": 7,
+        "name": "其他行为"
+      }
+    ],
+    "payModeList": [
+      {
+        "id": 0,
+        "name": "未知"
+      },
+      {
+        "id": 1,
+        "name": "唤醒"
+      },
+      {
+        "id": 2,
+        "name": "原生"
+      },
+      {
+        "id": 3,
+        "name": "扫码"
+      }
+    ],
+    "packageTransferConfigTypeList": [
+      {
+        "id": 0,
+        "name": "强制转移配置"
+      },
+      {
+        "id": 1,
+        "name": "非强制转移配置"
+      }
+    ],
+    "packageTransferTargetTypeList": [
+      {
+        "id": 0,
+        "name": "全体"
+      },
+      {
+        "id": 1,
+        "name": "已充值用户"
+      },
+      {
+        "id": 2,
+        "name": "非游客用户"
+      }
+    ],
+    "packageTransferRewardModeList": [
+      {
+        "id": 0,
+        "name": "全体"
+      },
+      {
+        "id": 1,
+        "name": "Vip等级"
+      },
+      {
+        "id": 2,
+        "name": "充值区间"
+      }
+    ],
+    "userActivityBlockTypeList": [
+      {
+        "id": -1,
+        "name": "全部活动"
+      },
+      {
+        "id": 1,
+        "name": "VIP升级"
+      },
+      {
+        "id": 2,
+        "name": "VIP周奖励"
+      },
+      {
+        "id": 3,
+        "name": "VIP月奖励"
+      },
+      {
+        "id": 4,
+        "name": "彩金充值"
+      },
+      {
+        "id": 5,
+        "name": "充值赠送"
+      },
+      {
+        "id": 6,
+        "name": "礼品码"
+      },
+      {
+        "id": 7,
+        "name": "邀请转盘"
+      },
+      {
+        "id": 8,
+        "name": "活动礼包"
+      },
+      {
+        "id": 9,
+        "name": "站内信奖励"
+      },
+      {
+        "id": 10,
+        "name": "充值转盘"
+      },
+      {
+        "id": 11,
+        "name": "三层代理返佣"
+      },
+      {
+        "id": 12,
+        "name": "三层代理邀请相关奖金"
+      },
+      {
+        "id": 13,
+        "name": "会员排行榜奖金"
+      },
+      {
+        "id": 14,
+        "name": "代理排行榜奖金"
+      },
+      {
+        "id": 15,
+        "name": "优惠券奖励"
+      },
+      {
+        "id": 16,
+        "name": "充值礼包活动"
+      },
+      {
+        "id": 17,
+        "name": "红包雨活动"
+      },
+      {
+        "id": 18,
+        "name": "提现超时赔付"
+      },
+      {
+        "id": 19,
+        "name": "亏损救援金"
+      },
+      {
+        "id": 20,
+        "name": "每日每周任务奖励"
+      },
+      {
+        "id": 21,
+        "name": "每日签到"
+      }
+    ],
+    "comparatorList": [
+      {
+        "code": "GreaterThanOrEqual",
+        "name": "大于等于"
+      },
+      {
+        "code": "Equal",
+        "name": "等于"
+      }
+    ],
+    "promotionShareUserTypeList": [
+      {
+        "id": 1,
+        "name": "全部用户"
+      },
+      {
+        "id": 2,
+        "name": "绑定手机号用户"
+      },
+      {
+        "id": 3,
+        "name": "充值用户"
+      }
+    ],
+    "promotionShareClaimPriorityTypeList": [
+      {
+        "id": 1,
+        "name": "优先级低"
+      },
+      {
+        "id": 2,
+        "name": "优先级中"
+      },
+      {
+        "id": 3,
+        "name": "优先级高"
+      }
+    ],
+    "promotionShareClaimTypeList": [
+      {
+        "id": 1,
+        "name": "每天"
+      },
+      {
+        "id": 2,
+        "name": "每自然周"
+      },
+      {
+        "id": 3,
+        "name": "每自然月"
+      },
+      {
+        "id": 4,
+        "name": "终身"
+      }
+    ],
+    "promotionShareRewardTypeList": [
+      {
+        "id": 1,
+        "name": "代理分享"
+      },
+      {
+        "id": 2,
+        "name": "邀请转盘分享"
+      }
+    ],
+    "compensationStateList": [
+      {
+        "id": 1,
+        "name": "待领取"
+      },
+      {
+        "id": 2,
+        "name": "已领取"
+      },
+      {
+        "id": 3,
+        "name": "已过期"
+      }
+    ],
+    "compensationTypeList": [
+      {
+        "id": 1,
+        "name": "赔付金额"
+      },
+      {
+        "id": 2,
+        "name": "赔付比例"
+      }
+    ],
+    "compensationReceiveTypeList": [
+      {
+        "id": 1,
+        "name": "自动领取"
+      },
+      {
+        "id": 2,
+        "name": "手动领取"
+      }
+    ],
+    "lossReliefRewardTImeTypeList": [
+      {
+        "id": 0,
+        "name": "发放时间"
+      },
+      {
+        "id": 1,
+        "name": "活动周期"
+      },
+      {
+        "id": 2,
+        "name": "领取时间"
+      },
+      {
+        "id": 3,
+        "name": "过期时间"
+      }
+    ],
+    "luckyDoubleActivteStateList": [
+      {
+        "id": 0,
+        "name": "待开启"
+      },
+      {
+        "id": 1,
+        "name": "进行中"
+      },
+      {
+        "id": 2,
+        "name": "已关闭"
+      },
+      {
+        "id": 3,
+        "name": "已作废"
+      },
+      {
+        "id": 4,
+        "name": "导入中"
+      },
+      {
+        "id": 5,
+        "name": "导入失败"
+      }
+    ],
+    "luskyDoubleTargetGroupList": [
+      {
+        "id": 0,
+        "name": "新注册用户"
+      },
+      {
+        "id": 1,
+        "name": "注册未充值用户"
+      },
+      {
+        "id": 2,
+        "name": "手动导入"
+      },
+      {
+        "id": 3,
+        "name": "首充次日未充值用户"
+      },
+      {
+        "id": 4,
+        "name": "昨日亏损用户"
+      },
+      {
+        "id": 5,
+        "name": "多日未登录,历史充值过的用户"
+      },
+      {
+        "id": 6,
+        "name": "多日未登录,历史亏损用户"
+      },
+      {
+        "id": 7,
+        "name": "近日有充值记录用户"
+      }
+    ],
+    "enableStateList": [
+      {
+        "id": 1,
+        "name": "启用"
+      },
+      {
+        "id": 0,
+        "name": "禁用"
+      }
+    ],
+    "withdrawUserRankList": [
+      {
+        "code": "Staff",
+        "name": "组员"
+      },
+      {
+        "code": "Leader",
+        "name": "组长"
+      },
+      {
+        "code": "Manager",
+        "name": "主管"
+      },
+      {
+        "code": "Admin",
+        "name": "管理员"
+      }
+    ],
+    "userPermissionLevelList": [
+      {
+        "id": 0,
+        "name": "普通级"
+      },
+      {
+        "id": 1,
+        "name": "总控级"
+      },
+      {
+        "id": 2,
+        "name": "集团级"
+      }
+    ],
+    "approvalUserRoleList": [
+      {
+        "id": 1,
+        "name": "操作"
+      },
+      {
+        "id": 2,
+        "name": "审核"
+      }
+    ],
+    "approvalRoleAuthorizeList": [
+      {
+        "id": 1,
+        "name": "人工充值"
+      },
+      {
+        "id": 2,
+        "name": "修改银行卡"
+      },
+      {
+        "id": 3,
+        "name": "修改会员密码"
+      }
+    ],
+    "approvalSubRoleAuthorizeList": [
+      {
+        "id": 1,
+        "name": "人工存款"
+      },
+      {
+        "id": 2,
+        "name": "彩金充值"
+      },
+      {
+        "id": 3,
+        "name": "USDT充值"
+      },
+      {
+        "id": 4,
+        "name": "人工提款"
+      },
+      {
+        "id": 5,
+        "name": "彩金扣除"
+      },
+      {
+        "id": 6,
+        "name": "退回提现"
+      }
+    ],
+    "approvalAuthorizeList": [
+      {
+        "approvalUserRole": 1,
+        "approvalRoleAuthorize": 1,
+        "approvalSubRoleAuthorize": 1
+      },
+      {
+        "approvalUserRole": 1,
+        "approvalRoleAuthorize": 1,
+        "approvalSubRoleAuthorize": 2
+      },
+      {
+        "approvalUserRole": 1,
+        "approvalRoleAuthorize": 1,
+        "approvalSubRoleAuthorize": 3
+      },
+      {
+        "approvalUserRole": 1,
+        "approvalRoleAuthorize": 1,
+        "approvalSubRoleAuthorize": 4
+      },
+      {
+        "approvalUserRole": 1,
+        "approvalRoleAuthorize": 1,
+        "approvalSubRoleAuthorize": 5
+      },
+      {
+        "approvalUserRole": 1,
+        "approvalRoleAuthorize": 1,
+        "approvalSubRoleAuthorize": 6
+      },
+      {
+        "approvalUserRole": 1,
+        "approvalRoleAuthorize": 2,
+        "approvalSubRoleAuthorize": 0
+      },
+      {
+        "approvalUserRole": 1,
+        "approvalRoleAuthorize": 3,
+        "approvalSubRoleAuthorize": 0
+      },
+      {
+        "approvalUserRole": 2,
+        "approvalRoleAuthorize": 1,
+        "approvalSubRoleAuthorize": 0
+      },
+      {
+        "approvalUserRole": 2,
+        "approvalRoleAuthorize": 2,
+        "approvalSubRoleAuthorize": 0
+      },
+      {
+        "approvalUserRole": 2,
+        "approvalRoleAuthorize": 3,
+        "approvalSubRoleAuthorize": 0
+      }
+    ],
+    "dictCategoryList": [
+      {
+        "id": 1,
+        "name": "币种"
+      },
+      {
+        "id": 2,
+        "name": "时区"
+      },
+      {
+        "id": 3,
+        "name": "语言"
+      },
+      {
+        "id": 4,
+        "name": "国家"
+      }
+    ],
+    "rechargeCategoryEnumList": [
+      {
+        "id": 1,
+        "name": "三方法币"
+      },
+      {
+        "id": 9,
+        "name": "本地银行卡"
+      },
+      {
+        "id": 11,
+        "name": "三方Usdt"
+      },
+      {
+        "id": 12,
+        "name": "本地UPI"
+      },
+      {
+        "id": 14,
+        "name": "三方银行卡"
+      },
+      {
+        "id": 18,
+        "name": "本地电子钱包"
+      },
+      {
+        "id": 19,
+        "name": "本地USDT"
+      },
+      {
+        "id": 21,
+        "name": "ARPay"
+      },
+      {
+        "id": 26,
+        "name": "ArUpiPay"
+      }
+    ]
+  },
+  "code": 0,
+  "msg": "成功",
+  "msgCode": 0
+}

@@ -1,0 +1,5010 @@
+{
+  "data": {
+    "userName": "org_milo",
+    "userId": 160000,
+    "orgId": 1000,
+    "orgName": "ar集团",
+    "userLoginIP": "8.211.42.128",
+    "loginTime": 1778240850712,
+    "userLoginCount": 152,
+    "userState": 1,
+    "googleVerify": false,
+    "withdraw_EnableState": false,
+    "approval_UserState": false,
+    "googleAccount": null,
+    "menus": [
+      {
+        "id": 100001,
+        "name": "会员管理",
+        "authCode": "Member",
+        "menuType": 1,
+        "parentId": 0,
+        "state": true,
+        "icon": "",
+        "sort": 0,
+        "category": [
+          2
+        ],
+        "isSuperAuth": false,
+        "needSecondConfirm": false,
+        "children": [
+          {
+            "id": 100002,
+            "name": "会员列表",
+            "authCode": "Member:Users",
+            "menuType": 2,
+            "parentId": 100001,
+            "state": true,
+            "icon": "",
+            "sort": 0,
+            "category": [
+              2
+            ],
+            "isSuperAuth": false,
+            "needSecondConfirm": false,
+            "children": [
+              {
+                "id": 100003,
+                "name": "会员列表页面",
+                "authCode": "Member:Users:UserList",
+                "menuType": 2,
+                "parentId": 100002,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 100004,
+                    "name": "查询列表",
+                    "authCode": "Member:Users:UserList:GetPageList",
+                    "menuType": 3,
+                    "parentId": 100003,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100005,
+                    "name": "导出",
+                    "authCode": "Member:Users:UserList:Export",
+                    "menuType": 3,
+                    "parentId": 100003,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 104070,
+                    "name": "在线列表",
+                    "authCode": "Member:Users:UserList:GetOnlineUserPageList",
+                    "menuType": 3,
+                    "parentId": 100003,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": 100006,
+                "name": "会员详情页",
+                "authCode": "Member:Users:UserDetail",
+                "menuType": 2,
+                "parentId": 100002,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 100007,
+                    "name": "查看基本信息",
+                    "authCode": "Member:Users:UserDetail:ViewUserDetail",
+                    "menuType": 3,
+                    "parentId": 100006,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100008,
+                    "name": "修改备注",
+                    "authCode": "Member:Users:UserDetail:UpdateRemark",
+                    "menuType": 3,
+                    "parentId": 100006,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100010,
+                    "name": "设置打码量",
+                    "authCode": "Member:Users:UserDetail:UpdateActualCoding",
+                    "menuType": 3,
+                    "parentId": 100006,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100012,
+                    "name": "修改会员状态",
+                    "authCode": "Member:Users:UserDetail:SetUserState",
+                    "menuType": 3,
+                    "parentId": 100006,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100013,
+                    "name": "查看投注信息",
+                    "authCode": "Member:Users:UserDetail:ViewUserBetInfo",
+                    "menuType": 3,
+                    "parentId": 100006,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100014,
+                    "name": "查看操作日志",
+                    "authCode": "Member:Users:UserDetail:ViewSysLogInfo",
+                    "menuType": 3,
+                    "parentId": 100006,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100015,
+                    "name": "查看钱包信息",
+                    "authCode": "Member:Users:UserDetail:ViewUserWalletInfo",
+                    "menuType": 3,
+                    "parentId": 100006,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 160002,
+                    "name": "修改会员密码",
+                    "authCode": "Member:Users:UserDetail:EditUserpwdSubmit",
+                    "menuType": 3,
+                    "parentId": 100006,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 100016,
+            "name": "会员层级",
+            "authCode": "Member:Relative",
+            "menuType": 2,
+            "parentId": 100001,
+            "state": true,
+            "icon": "",
+            "sort": 0,
+            "category": [
+              2
+            ],
+            "isSuperAuth": false,
+            "needSecondConfirm": false,
+            "children": [
+              {
+                "id": 100017,
+                "name": "查询列表",
+                "authCode": "Member:Relative:GetPageList",
+                "menuType": 3,
+                "parentId": 100016,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": 100018,
+            "name": "下级会员列表",
+            "authCode": "Member:SubsetMember",
+            "menuType": 2,
+            "parentId": 100001,
+            "state": true,
+            "icon": "",
+            "sort": 0,
+            "category": [
+              2
+            ],
+            "isSuperAuth": false,
+            "needSecondConfirm": false,
+            "children": [
+              {
+                "id": 100019,
+                "name": "查询列表",
+                "authCode": "Member:SubsetMember:GetPageList",
+                "menuType": 3,
+                "parentId": 100018,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": 100020,
+            "name": "会员银行卡管理",
+            "authCode": "Member:BankCardManage",
+            "menuType": 2,
+            "parentId": 100001,
+            "state": true,
+            "icon": "",
+            "sort": 0,
+            "category": [
+              2
+            ],
+            "isSuperAuth": false,
+            "needSecondConfirm": false,
+            "children": [
+              {
+                "id": 100021,
+                "name": "银行卡信息",
+                "authCode": "Member:BankCardManage:UserBankCard",
+                "menuType": 2,
+                "parentId": 100020,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 100022,
+                    "name": "查询列表",
+                    "authCode": "Member:BankCardManage:UserBankCard:GetPageList",
+                    "menuType": 3,
+                    "parentId": 100021,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100023,
+                    "name": "新增",
+                    "authCode": "Member:BankCardManage:UserBankCard:Add",
+                    "menuType": 3,
+                    "parentId": 100021,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100024,
+                    "name": "编辑",
+                    "authCode": "Member:BankCardManage:UserBankCard:Update",
+                    "menuType": 3,
+                    "parentId": 100021,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100025,
+                    "name": "删除",
+                    "authCode": "Member:BankCardManage:UserBankCard:Delete",
+                    "menuType": 3,
+                    "parentId": 100021,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": 100026,
+                "name": "USDT地址",
+                "authCode": "Member:BankCardManage:UserUsdt",
+                "menuType": 2,
+                "parentId": 100020,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 100027,
+                    "name": "查询列表",
+                    "authCode": "Member:BankCardManage:UserUsdt:GetPageList",
+                    "menuType": 3,
+                    "parentId": 100026,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100028,
+                    "name": "新增",
+                    "authCode": "Member:BankCardManage:UserUsdt:Add",
+                    "menuType": 3,
+                    "parentId": 100026,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100029,
+                    "name": "编辑",
+                    "authCode": "Member:BankCardManage:UserUsdt:Update",
+                    "menuType": 3,
+                    "parentId": 100026,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100030,
+                    "name": "删除",
+                    "authCode": "Member:BankCardManage:UserUsdt:Delete",
+                    "menuType": 3,
+                    "parentId": 100026,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": 100031,
+                "name": "PIX钱包",
+                "authCode": "Member:BankCardManage:UserCpf",
+                "menuType": 2,
+                "parentId": 100020,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 100032,
+                    "name": "查询列表",
+                    "authCode": "Member:BankCardManage:UserCpf:GetPageList",
+                    "menuType": 3,
+                    "parentId": 100031,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100033,
+                    "name": "新增",
+                    "authCode": "Member:BankCardManage:UserCpf:Add",
+                    "menuType": 3,
+                    "parentId": 100031,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100034,
+                    "name": "编辑",
+                    "authCode": "Member:BankCardManage:UserCpf:Update",
+                    "menuType": 3,
+                    "parentId": 100031,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100035,
+                    "name": "删除",
+                    "authCode": "Member:BankCardManage:UserCpf:Delete",
+                    "menuType": 3,
+                    "parentId": 100031,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": 100036,
+                "name": "电子钱包信息",
+                "authCode": "Member:BankCardManage:UserEWallet",
+                "menuType": 2,
+                "parentId": 100020,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 100037,
+                    "name": "查询列表",
+                    "authCode": "Member:BankCardManage:UserEWallet:GetPageList",
+                    "menuType": 3,
+                    "parentId": 100036,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100038,
+                    "name": "新增",
+                    "authCode": "Member:BankCardManage:UserEWallet:Add",
+                    "menuType": 3,
+                    "parentId": 100036,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100039,
+                    "name": "编辑",
+                    "authCode": "Member:BankCardManage:UserEWallet:Update",
+                    "menuType": 3,
+                    "parentId": 100036,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100040,
+                    "name": "删除",
+                    "authCode": "Member:BankCardManage:UserEWallet:Delete",
+                    "menuType": 3,
+                    "parentId": 100036,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": 100041,
+                "name": "实名认证",
+                "authCode": "Member:BankCardManage:UserRealName",
+                "menuType": 2,
+                "parentId": 100020,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 100042,
+                    "name": "查询列表",
+                    "authCode": "Member:BankCardManage:UserRealName:GetPageList",
+                    "menuType": 3,
+                    "parentId": 100041,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100043,
+                    "name": "编辑",
+                    "authCode": "Member:BankCardManage:UserRealName:Update",
+                    "menuType": 3,
+                    "parentId": 100041,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100044,
+                    "name": "删除",
+                    "authCode": "Member:BankCardManage:UserRealName:Delete",
+                    "menuType": 3,
+                    "parentId": 100041,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": 100045,
+                "name": "UPI信息",
+                "authCode": "Member:BankCardManage:UserUpi",
+                "menuType": 2,
+                "parentId": 100020,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 100046,
+                    "name": "编辑",
+                    "authCode": "Member:BankCardManage:UserUpi:Update",
+                    "menuType": 3,
+                    "parentId": 100045,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100047,
+                    "name": "新增",
+                    "authCode": "Member:BankCardManage:UserUpi:Add",
+                    "menuType": 3,
+                    "parentId": 100045,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100048,
+                    "name": "查询列表",
+                    "authCode": "Member:BankCardManage:UserUpi:GetPageList",
+                    "menuType": 3,
+                    "parentId": 100045,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100049,
+                    "name": "删除",
+                    "authCode": "Member:BankCardManage:UserUpi:Delete",
+                    "menuType": 3,
+                    "parentId": 100045,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 100050,
+            "name": "资金账变",
+            "authCode": "Member:FinanceRecord",
+            "menuType": 2,
+            "parentId": 100001,
+            "state": true,
+            "icon": "",
+            "sort": 0,
+            "category": [
+              2
+            ],
+            "isSuperAuth": false,
+            "needSecondConfirm": false,
+            "children": [
+              {
+                "id": 100051,
+                "name": "查询列表",
+                "authCode": "Member:FinanceRecord:GetPageList",
+                "menuType": 3,
+                "parentId": 100050,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": []
+              },
+              {
+                "id": 100052,
+                "name": "修改账变备注",
+                "authCode": "Member:FinanceRecord:UpdateRemark",
+                "menuType": 3,
+                "parentId": 100050,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": []
+              },
+              {
+                "id": 100053,
+                "name": "导出",
+                "authCode": "Member:FinanceRecord:GetPageList:export",
+                "menuType": 3,
+                "parentId": 100050,
+                "state": true,
+                "icon": "a",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 100191,
+        "name": "财务管理",
+        "authCode": "Finance",
+        "menuType": 1,
+        "parentId": 0,
+        "state": true,
+        "icon": "",
+        "sort": 0,
+        "category": [
+          1,
+          2
+        ],
+        "isSuperAuth": false,
+        "needSecondConfirm": false,
+        "children": [
+          {
+            "id": 100296,
+            "name": "提现订单管理",
+            "authCode": "Finance:WithdrawOrderManage",
+            "menuType": 2,
+            "parentId": 100191,
+            "state": true,
+            "icon": "",
+            "sort": 10,
+            "category": [
+              2
+            ],
+            "isSuperAuth": false,
+            "needSecondConfirm": false,
+            "children": [
+              {
+                "id": 100310,
+                "name": "提现记录",
+                "authCode": "Finance:WithdrawOrderManage:WithdrawRecord",
+                "menuType": 2,
+                "parentId": 100296,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 100311,
+                    "name": "查询列表",
+                    "authCode": "Finance:WithdrawOrderManage:WithdrawRecord:GetPageList",
+                    "menuType": 3,
+                    "parentId": 100310,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100312,
+                    "name": "修改备注",
+                    "authCode": "Finance:WithdrawOrderManage:WithdrawRecord:UpdateRemark",
+                    "menuType": 3,
+                    "parentId": 100310,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 250370,
+                    "name": "订单重审",
+                    "authCode": "Finance:WithdrawOrderManage:HandledOrderDetail:ResetOrderToWait",
+                    "menuType": 3,
+                    "parentId": 100310,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 254038,
+                    "name": "人工确认",
+                    "authCode": "Finance:WithdrawOrderManage:WithdrawRecord:ManualConfirm",
+                    "menuType": 3,
+                    "parentId": 100310,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 100313,
+            "name": "充值订单管理",
+            "authCode": "Finance:RechargeManager",
+            "menuType": 2,
+            "parentId": 100191,
+            "state": true,
+            "icon": "",
+            "sort": 20,
+            "category": [
+              2
+            ],
+            "isSuperAuth": false,
+            "needSecondConfirm": false,
+            "children": [
+              {
+                "id": 100325,
+                "name": "直充短信",
+                "authCode": "Finance:RechargeManager:LocalRechargeSMS",
+                "menuType": 2,
+                "parentId": 100313,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 100326,
+                    "name": "查询列表",
+                    "authCode": "Finance:RechargeManager:LocalRechargeSMS:GetPageList",
+                    "menuType": 3,
+                    "parentId": 100325,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": 100314,
+                "name": "三方待入款",
+                "authCode": "Finance:RechargeManager:ThirdPendingRecord",
+                "menuType": 2,
+                "parentId": 100313,
+                "state": true,
+                "icon": "",
+                "sort": 10,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 100315,
+                    "name": "查询",
+                    "authCode": "Finance:RechargeManager:ThirdPendingRecord:GetPageList",
+                    "menuType": 3,
+                    "parentId": 100314,
+                    "state": true,
+                    "icon": "",
+                    "sort": 10,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100316,
+                    "name": "确认补单",
+                    "authCode": "Finance:RechargeManager:ThirdPendingRecord:ConfirmOrder",
+                    "menuType": 3,
+                    "parentId": 100314,
+                    "state": true,
+                    "icon": "",
+                    "sort": 20,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": 100317,
+                "name": "本地待入款",
+                "authCode": "Finance:RechargeManager:LocalPendingRecord",
+                "menuType": 2,
+                "parentId": 100313,
+                "state": true,
+                "icon": "",
+                "sort": 20,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 100318,
+                    "name": "查询",
+                    "authCode": "Finance:RechargeManager:LocalPendingRecord:GetPageList",
+                    "menuType": 3,
+                    "parentId": 100317,
+                    "state": true,
+                    "icon": "",
+                    "sort": 10,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100319,
+                    "name": "确认",
+                    "authCode": "Finance:RechargeManager:LocalPendingRecord:ConfirmOrder",
+                    "menuType": 3,
+                    "parentId": 100317,
+                    "state": true,
+                    "icon": "",
+                    "sort": 20,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100320,
+                    "name": "取消",
+                    "authCode": "Finance:RechargeManager:LocalPendingRecord:CancelOrder",
+                    "menuType": 3,
+                    "parentId": 100317,
+                    "state": true,
+                    "icon": "",
+                    "sort": 30,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100321,
+                    "name": "批量取消",
+                    "authCode": "Finance:RechargeManager:LocalPendingRecord:BatchCancelOrder",
+                    "menuType": 3,
+                    "parentId": 100317,
+                    "state": true,
+                    "icon": "",
+                    "sort": 40,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": 100322,
+                "name": "入款记录",
+                "authCode": "Finance:RechargeManager:RechargeRecord",
+                "menuType": 2,
+                "parentId": 100313,
+                "state": true,
+                "icon": "",
+                "sort": 30,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 100323,
+                    "name": "查询",
+                    "authCode": "Finance:RechargeManager:RechargeRecord:GetPageList",
+                    "menuType": 3,
+                    "parentId": 100322,
+                    "state": true,
+                    "icon": "",
+                    "sort": 10,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100324,
+                    "name": "确认补单",
+                    "authCode": "Finance:RechargeManager:RechargeRecord:ConfirmOrder",
+                    "menuType": 3,
+                    "parentId": 100322,
+                    "state": true,
+                    "icon": "",
+                    "sort": 20,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 100268,
+            "name": "人工充值管理",
+            "authCode": "Finance:ManualRecharge",
+            "menuType": 2,
+            "parentId": 100191,
+            "state": true,
+            "icon": "abc",
+            "sort": 30,
+            "category": [
+              2
+            ],
+            "isSuperAuth": false,
+            "needSecondConfirm": false,
+            "children": [
+              {
+                "id": 100269,
+                "name": "人工充值权限配置",
+                "authCode": "Finance:ManualRecharge:AuthConfigPage",
+                "menuType": 2,
+                "parentId": 100268,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 100270,
+                    "name": "查询列表",
+                    "authCode": "Finance:ManualRecharge:AuthConfigPage:GetPageList",
+                    "menuType": 3,
+                    "parentId": 100269,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100271,
+                    "name": "修改",
+                    "authCode": "Finance:ManualRecharge:AuthConfigPage:Update",
+                    "menuType": 3,
+                    "parentId": 100269,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100272,
+                    "name": "批量添加",
+                    "authCode": "Finance:ManualRecharge:AuthConfigPage:BatchAdd",
+                    "menuType": 3,
+                    "parentId": 100269,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100273,
+                    "name": "删除",
+                    "authCode": "Finance:ManualRecharge:AuthConfigPage:Delete",
+                    "menuType": 3,
+                    "parentId": 100269,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": 100274,
+                "name": "人工充值审核列表",
+                "authCode": "Finance:ManualRecharge:ApprovalPage",
+                "menuType": 2,
+                "parentId": 100268,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 100275,
+                    "name": "查询列表",
+                    "authCode": "Finance:ManualRecharge:ApprovalPage:GetPageList",
+                    "menuType": 3,
+                    "parentId": 100274,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100276,
+                    "name": "导出",
+                    "authCode": "Finance:ManualRecharge:ApprovalPage:GetPageList:export",
+                    "menuType": 3,
+                    "parentId": 100274,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": 100277,
+                "name": "人工充值审核记录",
+                "authCode": "Finance:ManualRechargee:ApprovalRecordPage",
+                "menuType": 2,
+                "parentId": 100268,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 100278,
+                    "name": "查询列表",
+                    "authCode": "Finance:ManualRecharge:ApprovalRecordPage:GetPageList",
+                    "menuType": 3,
+                    "parentId": 100277,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100279,
+                    "name": "导出",
+                    "authCode": "Finance:ManualRecharge:ApprovalRecordPage:GetPageList:Export",
+                    "menuType": 3,
+                    "parentId": 100277,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": 100280,
+                "name": "人工充值",
+                "authCode": "Finance:ManualRecharge:ManualRechargePage",
+                "menuType": 2,
+                "parentId": 100268,
+                "state": true,
+                "icon": "abc",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 100281,
+                    "name": "查看会员信息",
+                    "authCode": "Finance:ManualRecharge:ManualRechargePage:GetUserInfo",
+                    "menuType": 3,
+                    "parentId": 100280,
+                    "state": true,
+                    "icon": "a",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100282,
+                    "name": "充值",
+                    "authCode": "Finance:ManualRecharge:ManualRechargePage:SubmitRecharge",
+                    "menuType": 3,
+                    "parentId": 100280,
+                    "state": true,
+                    "icon": "a",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100283,
+                    "name": "批量导入",
+                    "authCode": "Finance:ManualRecharge:ManualRechargePage:BatchImport",
+                    "menuType": 3,
+                    "parentId": 100280,
+                    "state": true,
+                    "icon": "a",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 100199,
+            "name": "本地收款账户管理",
+            "authCode": "Finance:LocalBankCard",
+            "menuType": 2,
+            "parentId": 100191,
+            "state": true,
+            "icon": "",
+            "sort": 40,
+            "category": [
+              2
+            ],
+            "isSuperAuth": false,
+            "needSecondConfirm": false,
+            "children": [
+              {
+                "id": 100200,
+                "name": "本地银行卡账号",
+                "authCode": "Finance:LocalBankCard:BankCardPage",
+                "menuType": 2,
+                "parentId": 100199,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 100201,
+                    "name": "查询列表",
+                    "authCode": "Finance:LocalBankCard:BankCardPage:GetPageList",
+                    "menuType": 3,
+                    "parentId": 100200,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100205,
+                    "name": "查询单个",
+                    "authCode": "Finance:LocalBankCard:BankCardPage:Get",
+                    "menuType": 3,
+                    "parentId": 100200,
+                    "state": true,
+                    "icon": "",
+                    "sort": 1,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100202,
+                    "name": "编辑",
+                    "authCode": "Finance:LocalBankCard:BankCardPage:Update",
+                    "menuType": 3,
+                    "parentId": 100200,
+                    "state": true,
+                    "icon": "",
+                    "sort": 2,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100206,
+                    "name": "修改状态",
+                    "authCode": "Finance:LocalBankCard:BankCardPage:UpdateState",
+                    "menuType": 3,
+                    "parentId": 100200,
+                    "state": true,
+                    "icon": "",
+                    "sort": 2,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100204,
+                    "name": "新增",
+                    "authCode": "Finance:LocalBankCard:BankCardPage:Add",
+                    "menuType": 3,
+                    "parentId": 100200,
+                    "state": true,
+                    "icon": "",
+                    "sort": 3,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100203,
+                    "name": "删除",
+                    "authCode": "Finance:LocalBankCard:BankCardPage:Delete",
+                    "menuType": 3,
+                    "parentId": 100200,
+                    "state": true,
+                    "icon": "",
+                    "sort": 4,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": 100207,
+                "name": "本地EWallet",
+                "authCode": "Finance:LocalBankCard:EWalletPage",
+                "menuType": 2,
+                "parentId": 100199,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 100208,
+                    "name": "查询列表",
+                    "authCode": "Finance:LocalBankCard:EWalletPage:GetPageList",
+                    "menuType": 3,
+                    "parentId": 100207,
+                    "state": true,
+                    "icon": "",
+                    "sort": 10,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100209,
+                    "name": "查询单个",
+                    "authCode": "Finance:LocalBankCard:EWalletPage:Get",
+                    "menuType": 3,
+                    "parentId": 100207,
+                    "state": true,
+                    "icon": "",
+                    "sort": 20,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100210,
+                    "name": "修改状态",
+                    "authCode": "Finance:LocalBankCard:EWalletPage:UpdateState",
+                    "menuType": 3,
+                    "parentId": 100207,
+                    "state": true,
+                    "icon": "",
+                    "sort": 30,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100211,
+                    "name": "编辑",
+                    "authCode": "Finance:LocalBankCard:EWalletPage:Update",
+                    "menuType": 3,
+                    "parentId": 100207,
+                    "state": true,
+                    "icon": "",
+                    "sort": 40,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100213,
+                    "name": "新增",
+                    "authCode": "Finance:LocalBankCard:EWalletPage:Add",
+                    "menuType": 3,
+                    "parentId": 100207,
+                    "state": true,
+                    "icon": "",
+                    "sort": 40,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100212,
+                    "name": "删除",
+                    "authCode": "Finance:LocalBankCard:EWalletPage:Delete",
+                    "menuType": 3,
+                    "parentId": 100207,
+                    "state": true,
+                    "icon": "",
+                    "sort": 50,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": 100214,
+                "name": "本地USDT账号",
+                "authCode": "Finance:LocalBankCard:UsdtPage",
+                "menuType": 2,
+                "parentId": 100199,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 100215,
+                    "name": "查询列表",
+                    "authCode": "Finance:LocalBankCard:UsdtPage:GetPageList",
+                    "menuType": 3,
+                    "parentId": 100214,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100219,
+                    "name": "查询单个",
+                    "authCode": "Finance:LocalBankCard:UsdtPage:Get",
+                    "menuType": 3,
+                    "parentId": 100214,
+                    "state": true,
+                    "icon": "",
+                    "sort": 1,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100216,
+                    "name": "编辑",
+                    "authCode": "Finance:LocalBankCard:UsdtPage:Update",
+                    "menuType": 3,
+                    "parentId": 100214,
+                    "state": true,
+                    "icon": "",
+                    "sort": 2,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100220,
+                    "name": "修改状态",
+                    "authCode": "Finance:LocalBankCard:UsdtPage:UpdateState",
+                    "menuType": 3,
+                    "parentId": 100214,
+                    "state": true,
+                    "icon": "",
+                    "sort": 2,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100218,
+                    "name": "新增",
+                    "authCode": "Finance:LocalBankCard:UsdtPage:Add",
+                    "menuType": 3,
+                    "parentId": 100214,
+                    "state": true,
+                    "icon": "",
+                    "sort": 3,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100217,
+                    "name": "删除",
+                    "authCode": "Finance:LocalBankCard:UsdtPage:Delete",
+                    "menuType": 3,
+                    "parentId": 100214,
+                    "state": true,
+                    "icon": "",
+                    "sort": 4,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": 100221,
+                "name": " 本地UPI账号",
+                "authCode": "Finance:LocalBankCard:UpiPage",
+                "menuType": 2,
+                "parentId": 100199,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 100222,
+                    "name": "查询列表",
+                    "authCode": "Finance:LocalBankCard:UpiPage:GetPageList",
+                    "menuType": 3,
+                    "parentId": 100221,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100226,
+                    "name": "查询单个",
+                    "authCode": "Finance:LocalBankCard:UpiPage:Get",
+                    "menuType": 3,
+                    "parentId": 100221,
+                    "state": true,
+                    "icon": "",
+                    "sort": 1,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100223,
+                    "name": "编辑",
+                    "authCode": "Finance:LocalBankCard:UpiPage:Update",
+                    "menuType": 3,
+                    "parentId": 100221,
+                    "state": true,
+                    "icon": "",
+                    "sort": 2,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100227,
+                    "name": "修改状态",
+                    "authCode": "Finance:LocalBankCard:UpiPage:UpdateState",
+                    "menuType": 3,
+                    "parentId": 100221,
+                    "state": true,
+                    "icon": "",
+                    "sort": 2,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100225,
+                    "name": "新增",
+                    "authCode": "Finance:LocalBankCard:UpiPage:Add",
+                    "menuType": 3,
+                    "parentId": 100221,
+                    "state": true,
+                    "icon": "",
+                    "sort": 3,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100224,
+                    "name": "删除",
+                    "authCode": "Finance:LocalBankCard:UpiPage:Delete",
+                    "menuType": 3,
+                    "parentId": 100221,
+                    "state": true,
+                    "icon": "",
+                    "sort": 4,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 100192,
+            "name": "支代付三方管理",
+            "authCode": "Finance:ThirdPayMerchant",
+            "menuType": 2,
+            "parentId": 100191,
+            "state": true,
+            "icon": "",
+            "sort": 50,
+            "category": [
+              2
+            ],
+            "isSuperAuth": false,
+            "needSecondConfirm": false,
+            "children": [
+              {
+                "id": 100193,
+                "name": "支代付三方管理页面",
+                "authCode": "Finance:ThirdPayMerchant:ThirdPayMerchantPage",
+                "menuType": 2,
+                "parentId": 100192,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": true,
+                "children": [
+                  {
+                    "id": 100194,
+                    "name": "查询单个",
+                    "authCode": "Finance:ThirdPayMerchant:ThirdPayMerchantPage:Get",
+                    "menuType": 3,
+                    "parentId": 100193,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100195,
+                    "name": "查询列表",
+                    "authCode": "Finance:ThirdPayMerchant:ThirdPayMerchantPage:GetPageList",
+                    "menuType": 3,
+                    "parentId": 100193,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100196,
+                    "name": "编辑",
+                    "authCode": "Finance:ThirdPayMerchant:ThirdPayMerchantPage:Update",
+                    "menuType": 3,
+                    "parentId": 100193,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100197,
+                    "name": "新增",
+                    "authCode": "Finance:ThirdPayMerchant:ThirdPayMerchantPage:Add",
+                    "menuType": 3,
+                    "parentId": 100193,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100198,
+                    "name": "批量新增",
+                    "authCode": "Finance:ThirdPayMerchant:ThirdPayMerchantPage:BatchAdd",
+                    "menuType": 3,
+                    "parentId": 100193,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 100228,
+            "name": "充值类型管理",
+            "authCode": "Finance:RechargeManage",
+            "menuType": 2,
+            "parentId": 100191,
+            "state": true,
+            "icon": "",
+            "sort": 60,
+            "category": [
+              2
+            ],
+            "isSuperAuth": false,
+            "needSecondConfirm": false,
+            "children": [
+              {
+                "id": 100229,
+                "name": "充值大类",
+                "authCode": "Finance:RechargeManage:CategoryPage",
+                "menuType": 2,
+                "parentId": 100228,
+                "state": true,
+                "icon": "",
+                "sort": 10,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 100230,
+                    "name": "查询列表",
+                    "authCode": "Finance:RechargeManage:CategoryPage:GetPageList",
+                    "menuType": 3,
+                    "parentId": 100229,
+                    "state": true,
+                    "icon": "",
+                    "sort": 10,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100231,
+                    "name": "查询单个",
+                    "authCode": "Finance:RechargeManage:CategoryPage:Get",
+                    "menuType": 3,
+                    "parentId": 100229,
+                    "state": true,
+                    "icon": "",
+                    "sort": 20,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100232,
+                    "name": "修改状态",
+                    "authCode": "Finance:RechargeManage:CategoryPage:UpdateState",
+                    "menuType": 3,
+                    "parentId": 100229,
+                    "state": true,
+                    "icon": "",
+                    "sort": 30,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100234,
+                    "name": "新增",
+                    "authCode": "Finance:RechargeManage:CategoryPage:Add",
+                    "menuType": 3,
+                    "parentId": 100229,
+                    "state": true,
+                    "icon": "",
+                    "sort": 40,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100233,
+                    "name": "编辑",
+                    "authCode": "Finance:RechargeManage:CategoryPage:Update",
+                    "menuType": 3,
+                    "parentId": 100229,
+                    "state": true,
+                    "icon": "",
+                    "sort": 50,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100235,
+                    "name": "查询可用的系统充值大类下拉列表",
+                    "authCode": "Finance:RechargeManage:CategoryPage:GetAvailableCategoryEnumList",
+                    "menuType": 3,
+                    "parentId": 100229,
+                    "state": true,
+                    "icon": "",
+                    "sort": 60,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": 100236,
+                "name": "充值通道",
+                "authCode": "Finance:RechargeManage:ChannelPage",
+                "menuType": 2,
+                "parentId": 100228,
+                "state": true,
+                "icon": "",
+                "sort": 20,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 100241,
+                    "name": "新增",
+                    "authCode": "Finance:RechargeManage:ChannelPage:Add",
+                    "menuType": 3,
+                    "parentId": 100236,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100242,
+                    "name": "批量新增",
+                    "authCode": "Finance:RechargeManage:ChannelPage:BatchAdd",
+                    "menuType": 3,
+                    "parentId": 100236,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100243,
+                    "name": "删除",
+                    "authCode": "Finance:RechargeManage:ChannelPage:Delete",
+                    "menuType": 3,
+                    "parentId": 100236,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 250384,
+                    "name": "代收测试",
+                    "authCode": "Finance:RechargeManage:ChannelPage:TestRecharge",
+                    "menuType": 3,
+                    "parentId": 100236,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100237,
+                    "name": "查询列表",
+                    "authCode": "Finance:RechargeManage:ChannelPage:GetPageList",
+                    "menuType": 3,
+                    "parentId": 100236,
+                    "state": true,
+                    "icon": "",
+                    "sort": 10,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100238,
+                    "name": "查询单个",
+                    "authCode": "Finance:RechargeManage:ChannelPage:Get",
+                    "menuType": 3,
+                    "parentId": 100236,
+                    "state": true,
+                    "icon": "",
+                    "sort": 20,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100239,
+                    "name": "修改状态",
+                    "authCode": "Finance:RechargeManage:ChannelPage:UpdateState",
+                    "menuType": 3,
+                    "parentId": 100236,
+                    "state": true,
+                    "icon": "",
+                    "sort": 30,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100240,
+                    "name": "编辑",
+                    "authCode": "Finance:RechargeManage:ChannelPage:Update",
+                    "menuType": 3,
+                    "parentId": 100236,
+                    "state": true,
+                    "icon": "",
+                    "sort": 50,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 100244,
+            "name": "提现类型管理",
+            "authCode": "Finance:WithdrawManage",
+            "menuType": 2,
+            "parentId": 100191,
+            "state": true,
+            "icon": "",
+            "sort": 70,
+            "category": [
+              2
+            ],
+            "isSuperAuth": false,
+            "needSecondConfirm": false,
+            "children": [
+              {
+                "id": 100245,
+                "name": "提现大类",
+                "authCode": "Finance:WithdrawManage:CategoryPage",
+                "menuType": 2,
+                "parentId": 100244,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 100246,
+                    "name": "查询列表",
+                    "authCode": "Finance:WithdrawManage:CategoryPage:GetPageList",
+                    "menuType": 3,
+                    "parentId": 100245,
+                    "state": true,
+                    "icon": "",
+                    "sort": 10,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100247,
+                    "name": "查询单个",
+                    "authCode": "Finance:WithdrawManage:CategoryPage:Get",
+                    "menuType": 3,
+                    "parentId": 100245,
+                    "state": true,
+                    "icon": "",
+                    "sort": 20,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100248,
+                    "name": "修改状态",
+                    "authCode": "Finance:WithdrawManage:CategoryPage:UpdateState",
+                    "menuType": 3,
+                    "parentId": 100245,
+                    "state": true,
+                    "icon": "",
+                    "sort": 30,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100249,
+                    "name": "编辑",
+                    "authCode": "Finance:WithdrawManage:CategoryPage:Update",
+                    "menuType": 3,
+                    "parentId": 100245,
+                    "state": true,
+                    "icon": "",
+                    "sort": 40,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100250,
+                    "name": "设置今日提现总次数",
+                    "authCode": "Finance:WithdrawManage:CategoryPage:SetTodayTotalLimitCount",
+                    "menuType": 3,
+                    "parentId": 100245,
+                    "state": true,
+                    "icon": "",
+                    "sort": 50,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": 100251,
+                "name": "提现通道",
+                "authCode": "Finance:WithdrawManage:ChannelPage",
+                "menuType": 2,
+                "parentId": 100244,
+                "state": true,
+                "icon": "",
+                "sort": 20,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 100256,
+                    "name": "查询单个",
+                    "authCode": "Finance:WithdrawManage:ChannelPage:Get",
+                    "menuType": 3,
+                    "parentId": 100251,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100257,
+                    "name": "批量新增",
+                    "authCode": "Finance:WithdrawManage:ChannelPage:BatchAdd",
+                    "menuType": 3,
+                    "parentId": 100251,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100258,
+                    "name": "删除",
+                    "authCode": "Finance:WithdrawManage:ChannelPage:Delete",
+                    "menuType": 3,
+                    "parentId": 100251,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100252,
+                    "name": "查询列表",
+                    "authCode": "Finance:WithdrawManage:ChannelPage:GetPageList",
+                    "menuType": 3,
+                    "parentId": 100251,
+                    "state": true,
+                    "icon": "",
+                    "sort": 10,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100253,
+                    "name": "修改状态",
+                    "authCode": "Finance:WithdrawManage:ChannelPage:UpdateState",
+                    "menuType": 3,
+                    "parentId": 100251,
+                    "state": true,
+                    "icon": "",
+                    "sort": 30,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100255,
+                    "name": "新增",
+                    "authCode": "Finance:WithdrawManage:ChannelPage:Add",
+                    "menuType": 3,
+                    "parentId": 100251,
+                    "state": true,
+                    "icon": "",
+                    "sort": 40,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100254,
+                    "name": "编辑",
+                    "authCode": "Finance:WithdrawManage:ChannelPage:Update",
+                    "menuType": 3,
+                    "parentId": 100251,
+                    "state": true,
+                    "icon": "",
+                    "sort": 50,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 100259,
+            "name": "银行字典",
+            "authCode": "Finance:BankDictionary",
+            "menuType": 2,
+            "parentId": 100191,
+            "state": true,
+            "icon": "",
+            "sort": 80,
+            "category": [
+              2
+            ],
+            "isSuperAuth": false,
+            "needSecondConfirm": false,
+            "children": [
+              {
+                "id": 100260,
+                "name": "查询列表",
+                "authCode": "Finance:BankDictionary:GetPageList",
+                "menuType": 3,
+                "parentId": 100259,
+                "state": true,
+                "icon": "",
+                "sort": 10,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": []
+              },
+              {
+                "id": 100261,
+                "name": "修改状态",
+                "authCode": "Finance:BankDictionary:UpdateState",
+                "menuType": 3,
+                "parentId": 100259,
+                "state": true,
+                "icon": "",
+                "sort": 20,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 100353,
+        "name": "数据权限",
+        "authCode": "DataPermission",
+        "menuType": 1,
+        "parentId": 0,
+        "state": true,
+        "icon": "",
+        "sort": 0,
+        "category": [
+          1,
+          2
+        ],
+        "isSuperAuth": false,
+        "needSecondConfirm": false,
+        "children": [
+          {
+            "id": 100354,
+            "name": "会员敏感信息（数据查看）",
+            "authCode": "Member:Sensitive",
+            "menuType": 2,
+            "parentId": 100353,
+            "state": true,
+            "icon": "",
+            "sort": 0,
+            "category": [
+              1,
+              2
+            ],
+            "isSuperAuth": false,
+            "needSecondConfirm": false,
+            "children": [
+              {
+                "id": 100355,
+                "name": "查看银行卡完整信息",
+                "authCode": "Users:Sensitive:ViewBankCardInfo",
+                "menuType": 3,
+                "parentId": 100354,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  1,
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": []
+              },
+              {
+                "id": 100356,
+                "name": "查看会员手机号/邮箱",
+                "authCode": "Users:Sensitive:ViewMobileOrEmail",
+                "menuType": 3,
+                "parentId": 100354,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  1,
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 100132,
+        "name": "商户管理",
+        "authCode": "Tenant",
+        "menuType": 1,
+        "parentId": 0,
+        "state": true,
+        "icon": "",
+        "sort": 2,
+        "category": [
+          1,
+          2
+        ],
+        "isSuperAuth": false,
+        "needSecondConfirm": false,
+        "children": [
+          {
+            "id": 100133,
+            "name": "商户列表",
+            "authCode": "Tenant:TenantList",
+            "menuType": 2,
+            "parentId": 100132,
+            "state": true,
+            "icon": "",
+            "sort": 0,
+            "category": [
+              1,
+              2
+            ],
+            "isSuperAuth": false,
+            "needSecondConfirm": false,
+            "children": [
+              {
+                "id": 100134,
+                "name": "商户列表页面",
+                "authCode": "Tenant:TenantList:TenantListPage",
+                "menuType": 2,
+                "parentId": 100133,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  1,
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 100135,
+                    "name": "查询列表",
+                    "authCode": "Tenant:TenantList:TenantListPage:GetPageList",
+                    "menuType": 3,
+                    "parentId": 100134,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      1,
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 100054,
+        "name": "游戏管理",
+        "authCode": "Game",
+        "menuType": 1,
+        "parentId": 0,
+        "state": true,
+        "icon": "",
+        "sort": 3,
+        "category": [
+          2
+        ],
+        "isSuperAuth": false,
+        "needSecondConfirm": false,
+        "children": [
+          {
+            "id": 100055,
+            "name": "游戏投注订单页面",
+            "authCode": "game:orderPage",
+            "menuType": 2,
+            "parentId": 100054,
+            "state": true,
+            "icon": "",
+            "sort": 0,
+            "category": [
+              1,
+              2
+            ],
+            "isSuperAuth": false,
+            "needSecondConfirm": false,
+            "children": [
+              {
+                "id": 100056,
+                "name": "查询",
+                "authCode": "ThirdGame:GetBetRecordPageList",
+                "menuType": 3,
+                "parentId": 100055,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  1,
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": []
+              },
+              {
+                "id": 100057,
+                "name": "导出",
+                "authCode": "ThirdGame:GetBetRecordPageList:Export",
+                "menuType": 3,
+                "parentId": 100055,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  1,
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": 100058,
+            "name": "三方游戏记录",
+            "authCode": "Game:ThirdGame",
+            "menuType": 2,
+            "parentId": 100054,
+            "state": true,
+            "icon": "a",
+            "sort": 0,
+            "category": [
+              2
+            ],
+            "isSuperAuth": false,
+            "needSecondConfirm": false,
+            "children": [
+              {
+                "id": 250002,
+                "name": "查询列表",
+                "authCode": "Game:ThirdGame:GetPageList",
+                "menuType": 3,
+                "parentId": 100058,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": []
+              },
+              {
+                "id": 250003,
+                "name": "导出",
+                "authCode": "Game:ThirdGame:GetPageList:export",
+                "menuType": 3,
+                "parentId": 100058,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": []
+              },
+              {
+                "id": 250063,
+                "name": "查询列表",
+                "authCode": "Game:ThirdGame:Chess:GetPageList",
+                "menuType": 3,
+                "parentId": 100058,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": []
+              },
+              {
+                "id": 250064,
+                "name": "查询列表",
+                "authCode": "Game:ThirdGame:Sport:GetPageList",
+                "menuType": 3,
+                "parentId": 100058,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": []
+              },
+              {
+                "id": 250065,
+                "name": "查询列表",
+                "authCode": "Game:ThirdGame:LiveGame:GetPageList",
+                "menuType": 3,
+                "parentId": 100058,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": []
+              },
+              {
+                "id": 250066,
+                "name": "查询列表",
+                "authCode": "Game:ThirdGame:Electronic:GetPageList",
+                "menuType": 3,
+                "parentId": 100058,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": []
+              },
+              {
+                "id": 250067,
+                "name": "查询旧彩票投注列表",
+                "authCode": "Game:ThirdGame:Lottery:OldLottoGetPageList",
+                "menuType": 3,
+                "parentId": 100058,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": []
+              },
+              {
+                "id": 250068,
+                "name": "查询新彩票投注列表",
+                "authCode": "Game:ThirdGame:Lottery:NewLottoGetPageList",
+                "menuType": 3,
+                "parentId": 100058,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": []
+              },
+              {
+                "id": 250069,
+                "name": "查询XOSO投注列表",
+                "authCode": "Game:ThirdGame:Lottery:XosoGetPageList",
+                "menuType": 3,
+                "parentId": 100058,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": []
+              },
+              {
+                "id": 250070,
+                "name": "导出新彩票投注记录",
+                "authCode": "Game:ThirdGame:Lottery:NewLottoExport",
+                "menuType": 3,
+                "parentId": 100058,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": []
+              },
+              {
+                "id": 250071,
+                "name": "导出旧彩票投注记录",
+                "authCode": "Game:ThirdGame:Lottery:OldLottoExport",
+                "menuType": 3,
+                "parentId": 100058,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": []
+              },
+              {
+                "id": 250072,
+                "name": "导出",
+                "authCode": "Game:ThirdGame:Electronic:Export",
+                "menuType": 3,
+                "parentId": 100058,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": []
+              },
+              {
+                "id": 250073,
+                "name": "导出",
+                "authCode": "Game:ThirdGame:LiveGame:Export",
+                "menuType": 3,
+                "parentId": 100058,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  1,
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": []
+              },
+              {
+                "id": 250074,
+                "name": "导出",
+                "authCode": "Game:ThirdGame:Sport:Export",
+                "menuType": 3,
+                "parentId": 100058,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  1,
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": []
+              },
+              {
+                "id": 250075,
+                "name": "导出",
+                "authCode": "Game:ThirdGame:Chess:Export",
+                "menuType": 3,
+                "parentId": 100058,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2,
+                  1
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 100074,
+        "name": "系统管理",
+        "authCode": "SystemManage",
+        "menuType": 1,
+        "parentId": 0,
+        "state": true,
+        "icon": "",
+        "sort": 7,
+        "category": [
+          1,
+          2
+        ],
+        "isSuperAuth": false,
+        "needSecondConfirm": false,
+        "children": [
+          {
+            "id": 100086,
+            "name": "系统用户",
+            "authCode": "SystemManage:SysUser",
+            "menuType": 2,
+            "parentId": 100074,
+            "state": true,
+            "icon": "",
+            "sort": 10,
+            "category": [
+              1,
+              2
+            ],
+            "isSuperAuth": false,
+            "needSecondConfirm": false,
+            "children": [
+              {
+                "id": 100087,
+                "name": "系统用户页面",
+                "authCode": "SystemManage:SysUser:UserPage",
+                "menuType": 2,
+                "parentId": 100086,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  1,
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 100088,
+                    "name": "查询列表-总控使用",
+                    "authCode": "SystemManage:SysUserPage:UserPage:GetPageList",
+                    "menuType": 3,
+                    "parentId": 100087,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      1,
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100089,
+                    "name": "新增用户",
+                    "authCode": "SystemManage:SysUserPage:UserPage:Add",
+                    "menuType": 3,
+                    "parentId": 100087,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      1,
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100090,
+                    "name": "编辑用户",
+                    "authCode": "SystemManage:SysUserPage:UserPage:Update",
+                    "menuType": 3,
+                    "parentId": 100087,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      1,
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100091,
+                    "name": "删除用户",
+                    "authCode": "SystemManage:SysUserPage:UserPage:Delete",
+                    "menuType": 3,
+                    "parentId": 100087,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      1,
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100092,
+                    "name": "修改用户状态",
+                    "authCode": "SystemManage:SysUserPage:UserPage:UpdateState",
+                    "menuType": 3,
+                    "parentId": 100087,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      1,
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100093,
+                    "name": "修改用户密码",
+                    "authCode": "SystemManage:SysUserPage:UserPage:RevisePassword",
+                    "menuType": 3,
+                    "parentId": 100087,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      1,
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100094,
+                    "name": "修改用户谷歌验证码",
+                    "authCode": "SystemManage:SysUserPage:UserPage:UpdateGoogleAccount",
+                    "menuType": 3,
+                    "parentId": 100087,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      1,
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100098,
+                    "name": "查询单个",
+                    "authCode": "SystemManage:SysUserPage:UserPage:GetDetail",
+                    "menuType": 3,
+                    "parentId": 100087,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      1,
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100104,
+                    "name": "批量编辑处理订单上限--商户使用",
+                    "authCode": "SystemManage:SysUserPage:UserPage:BatchUpdateTenantSysUserCurrentProcessingOrderLimit",
+                    "menuType": 3,
+                    "parentId": 100087,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100378,
+                    "name": "批量删除用户",
+                    "authCode": "SystemManage:SysUserPage:UserPage:BatchDelete",
+                    "menuType": 3,
+                    "parentId": 100087,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2,
+                      1
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 250354,
+                    "name": "批量赋权系统用户--商户使用",
+                    "authCode": "SystemManage:SysUserPage:UserPage:BatchUpdateTenantSysUserPermission",
+                    "menuType": 3,
+                    "parentId": 100087,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100097,
+                    "name": "批量修改状态",
+                    "authCode": "SystemManage:SysUserPage:UserPage:UpdateSysUserState",
+                    "menuType": 3,
+                    "parentId": 100087,
+                    "state": true,
+                    "icon": "",
+                    "sort": 1,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100099,
+                    "name": "批量新增",
+                    "authCode": "SystemManage:SysUserPage:UserPage:BatchAdd",
+                    "menuType": 3,
+                    "parentId": 100087,
+                    "state": true,
+                    "icon": "",
+                    "sort": 1,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100100,
+                    "name": "编辑用户--商户使用",
+                    "authCode": "SystemManage:SysUserPage:UserPage:UpdateTenantSysUser",
+                    "menuType": 3,
+                    "parentId": 100087,
+                    "state": true,
+                    "icon": "",
+                    "sort": 1,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100101,
+                    "name": "修改用户状态--商户使用",
+                    "authCode": "SystemManage:SysUserPage:UserPage:UpdateTenantSysUserState",
+                    "menuType": 3,
+                    "parentId": 100087,
+                    "state": true,
+                    "icon": "",
+                    "sort": 1,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100102,
+                    "name": "查询单个--商户使用",
+                    "authCode": "SystemManage:SysUserPage:UserPage:GetTenantUserDetail",
+                    "menuType": 3,
+                    "parentId": 100087,
+                    "state": true,
+                    "icon": "",
+                    "sort": 1,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100103,
+                    "name": "批量编辑出款审核金额区间--商户使用",
+                    "authCode": "SystemManage:SysUserPage:UserPage:BatchUpdateTenantSysUserWithdrawAuditAmountRange",
+                    "menuType": 3,
+                    "parentId": 100087,
+                    "state": true,
+                    "icon": "",
+                    "sort": 1,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100096,
+                    "name": "查询列表-商户使用",
+                    "authCode": "SystemManage:SysUserPage:UserPage:GetTenantPageList",
+                    "menuType": 3,
+                    "parentId": 100087,
+                    "state": true,
+                    "icon": "",
+                    "sort": 90,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 100080,
+            "name": "系统角色",
+            "authCode": "SystemManage:SysRole",
+            "menuType": 2,
+            "parentId": 100074,
+            "state": true,
+            "icon": "",
+            "sort": 20,
+            "category": [
+              1,
+              2
+            ],
+            "isSuperAuth": false,
+            "needSecondConfirm": false,
+            "children": [
+              {
+                "id": 100081,
+                "name": "系统角色页面",
+                "authCode": "SystemManage:SysRole:RolePage",
+                "menuType": 2,
+                "parentId": 100080,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  1,
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 100082,
+                    "name": "查询列表",
+                    "authCode": "SystemManage:SysRole:RolePage:GetPageList",
+                    "menuType": 3,
+                    "parentId": 100081,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      1,
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100083,
+                    "name": "新增角色",
+                    "authCode": "SystemManage:SysRole:RolePage:Add",
+                    "menuType": 3,
+                    "parentId": 100081,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      1,
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100084,
+                    "name": "编辑角色",
+                    "authCode": "SystemManage:SysRole:RolePage:Update",
+                    "menuType": 3,
+                    "parentId": 100081,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      1,
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100085,
+                    "name": "角色权限编辑",
+                    "authCode": "SystemManage:SysRole:RolePage:UpdaterRoleAuth",
+                    "menuType": 3,
+                    "parentId": 100081,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      1,
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 220002,
+                    "name": "删除",
+                    "authCode": "SystemManage:SysRole:RolePage:DeleteRoleAuth",
+                    "menuType": 3,
+                    "parentId": 100081,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      1,
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 100115,
+            "name": "IP白名单",
+            "authCode": "SystemManage:IpWhiteList",
+            "menuType": 2,
+            "parentId": 100074,
+            "state": true,
+            "icon": "",
+            "sort": 40,
+            "category": [
+              2,
+              1
+            ],
+            "isSuperAuth": false,
+            "needSecondConfirm": false,
+            "children": [
+              {
+                "id": 100116,
+                "name": "IP白名单页面",
+                "authCode": "SystemManage:IpWhiteList:IpWhiteListPage",
+                "menuType": 2,
+                "parentId": 100115,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2,
+                  1
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 100117,
+                    "name": "查询列表",
+                    "authCode": "SystemManage:IpWhiteList:IpWhiteListPage:GetPageList",
+                    "menuType": 3,
+                    "parentId": 100116,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2,
+                      1
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100118,
+                    "name": "新增",
+                    "authCode": "SystemManage:IpWhiteList:IpWhiteListPage:Add",
+                    "menuType": 3,
+                    "parentId": 100116,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2,
+                      1
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100119,
+                    "name": "修改状态",
+                    "authCode": "SystemManage:IpWhiteList:IpWhiteListPage:UpdateState",
+                    "menuType": 3,
+                    "parentId": 100116,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      1,
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100120,
+                    "name": "删除",
+                    "authCode": "IpWhitelist:Delete",
+                    "menuType": 3,
+                    "parentId": 100116,
+                    "state": true,
+                    "icon": "",
+                    "sort": 40,
+                    "category": [
+                      1,
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 100121,
+                    "name": "修改备注",
+                    "authCode": "IpWhitelist:UpdateRemark",
+                    "menuType": 3,
+                    "parentId": 100116,
+                    "state": true,
+                    "icon": "",
+                    "sort": 50,
+                    "category": [
+                      1,
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 100122,
+            "name": "平台日志",
+            "authCode": "SystemManage:PlatformLog",
+            "menuType": 2,
+            "parentId": 100074,
+            "state": true,
+            "icon": "",
+            "sort": 50,
+            "category": [
+              2
+            ],
+            "isSuperAuth": false,
+            "needSecondConfirm": false,
+            "children": [
+              {
+                "id": 100123,
+                "name": "平台日志页面",
+                "authCode": "SystemManage:PlatformLog:PlatformLogPage",
+                "menuType": 2,
+                "parentId": 100122,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 100124,
+                    "name": "查询列表",
+                    "authCode": "SystemManage:PlatformLog:PlatformLogPage:GetPageList",
+                    "menuType": 3,
+                    "parentId": 100123,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 100105,
+            "name": "中台日志",
+            "authCode": "SystemManage:SysLog",
+            "menuType": 2,
+            "parentId": 100074,
+            "state": true,
+            "icon": "",
+            "sort": 60,
+            "category": [
+              1,
+              2
+            ],
+            "isSuperAuth": false,
+            "needSecondConfirm": false,
+            "children": [
+              {
+                "id": 100106,
+                "name": "中台日志页面",
+                "authCode": "SystemManage:SysLog:SysLogPage",
+                "menuType": 2,
+                "parentId": 100105,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  1,
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 100107,
+                    "name": "查询列表",
+                    "authCode": "SystemManage:SysLog:SysLogPage:GetPageList",
+                    "menuType": 3,
+                    "parentId": 100106,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      1,
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 104060,
+            "name": "消息通知",
+            "authCode": "SystemManage:SysUserNotify",
+            "menuType": 2,
+            "parentId": 100074,
+            "state": true,
+            "icon": "",
+            "sort": 9010,
+            "category": [
+              2
+            ],
+            "isSuperAuth": false,
+            "needSecondConfirm": false,
+            "children": [
+              {
+                "id": 104061,
+                "name": "消息通知页面",
+                "authCode": "SystemManage:SysUserNotify:NotifyPage",
+                "menuType": 2,
+                "parentId": 104060,
+                "state": true,
+                "icon": "",
+                "sort": 9011,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 104062,
+                    "name": "查询未读消息数量",
+                    "authCode": "SystemManage:SysUserNotify:NotifyPage:GetUnreadCount",
+                    "menuType": 3,
+                    "parentId": 104061,
+                    "state": true,
+                    "icon": "",
+                    "sort": 901101,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 104064,
+                    "name": "查询已读消息数量",
+                    "authCode": "SystemManage:SysUserNotify:NotifyPage:GetReadCount",
+                    "menuType": 3,
+                    "parentId": 104061,
+                    "state": true,
+                    "icon": "",
+                    "sort": 901102,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 104065,
+                    "name": "滚动查询消息列表",
+                    "authCode": "SystemManage:SysUserNotify:NotifyPage:GetScrollList",
+                    "menuType": 3,
+                    "parentId": 104061,
+                    "state": true,
+                    "icon": "",
+                    "sort": 901103,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 104063,
+                    "name": "查看消息详情",
+                    "authCode": "SystemManage:SysUserNotify:NotifyPage:Get",
+                    "menuType": 3,
+                    "parentId": 104061,
+                    "state": true,
+                    "icon": "",
+                    "sort": 901104,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 104066,
+                    "name": "标记消息已读",
+                    "authCode": "SystemManage:SysUserNotify:NotifyPage:MarkRead",
+                    "menuType": 3,
+                    "parentId": 104061,
+                    "state": true,
+                    "icon": "",
+                    "sort": 901105,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 104004,
+        "name": "报表管理",
+        "authCode": "Report",
+        "menuType": 1,
+        "parentId": 0,
+        "state": true,
+        "icon": "",
+        "sort": 1000,
+        "category": [
+          2,
+          1
+        ],
+        "isSuperAuth": false,
+        "needSecondConfirm": false,
+        "children": [
+          {
+            "id": 104068,
+            "name": "支代付通道预警",
+            "authCode": "Report:Payment:ThirdPayChannelWarning",
+            "menuType": 2,
+            "parentId": 104004,
+            "state": true,
+            "icon": "",
+            "sort": 0,
+            "category": [
+              2
+            ],
+            "isSuperAuth": false,
+            "needSecondConfirm": false,
+            "children": [
+              {
+                "id": 104049,
+                "name": "支代付通道预警页面",
+                "authCode": "Report:Payment:ThirdPayChannelWarningPage",
+                "menuType": 2,
+                "parentId": 104068,
+                "state": true,
+                "icon": "",
+                "sort": 1011,
+                "category": [
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 104050,
+                    "name": "查询汇总",
+                    "authCode": "Report:Payment:ThirdPayChannelWarningPage:GetSummary",
+                    "menuType": 3,
+                    "parentId": 104049,
+                    "state": true,
+                    "icon": "",
+                    "sort": 101101,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 104052,
+                    "name": "查询",
+                    "authCode": "Report:Payment:ThirdPayChannelWarningPage:GetPageList",
+                    "menuType": 3,
+                    "parentId": 104049,
+                    "state": true,
+                    "icon": "",
+                    "sort": 101102,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 104054,
+                    "name": "导出",
+                    "authCode": "Report:Payment:ThirdPayChannelWarningPage:GetPageList:Export",
+                    "menuType": 3,
+                    "parentId": 104049,
+                    "state": true,
+                    "icon": "",
+                    "sort": 101103,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 104053,
+                    "name": "查看详情",
+                    "authCode": "Report:Payment:ThirdPayChannelWarningPage:Get",
+                    "menuType": 3,
+                    "parentId": 104049,
+                    "state": true,
+                    "icon": "",
+                    "sort": 101104,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 104051,
+                    "name": "查询预警规则",
+                    "authCode": "Report:Payment:ThirdPayChannelWarningPage:GetRuleConfig",
+                    "menuType": 3,
+                    "parentId": 104049,
+                    "state": true,
+                    "icon": "",
+                    "sort": 101105,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 104055,
+                    "name": "保存预警规则",
+                    "authCode": "Report:Payment:ThirdPayChannelWarningPage:SaveRuleConfig",
+                    "menuType": 3,
+                    "parentId": 104049,
+                    "state": true,
+                    "icon": "",
+                    "sort": 101106,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 104057,
+                    "name": "处理通道预警",
+                    "authCode": "Report:Payment:ThirdPayChannelWarningPage:Handle",
+                    "menuType": 3,
+                    "parentId": 104049,
+                    "state": true,
+                    "icon": "",
+                    "sort": 101107,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 104056,
+                    "name": "忽略通道预警",
+                    "authCode": "Report:Payment:ThirdPayChannelWarningPage:Ignore",
+                    "menuType": 3,
+                    "parentId": 104049,
+                    "state": true,
+                    "icon": "",
+                    "sort": 101108,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 104058,
+                    "name": "批量处理通道预警",
+                    "authCode": "Report:Payment:ThirdPayChannelWarningPage:BatchHandle",
+                    "menuType": 3,
+                    "parentId": 104049,
+                    "state": true,
+                    "icon": "",
+                    "sort": 101109,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 104059,
+                    "name": "批量忽略通道预警",
+                    "authCode": "Report:Payment:ThirdPayChannelWarningPage:BatchIgnore",
+                    "menuType": 3,
+                    "parentId": 104049,
+                    "state": true,
+                    "icon": "",
+                    "sort": 101110,
+                    "category": [
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "id": 104021,
+            "name": "数据统计",
+            "authCode": "Report:Payment:Statistics",
+            "menuType": 2,
+            "parentId": 104004,
+            "state": true,
+            "icon": "",
+            "sort": 1,
+            "category": [
+              1,
+              2
+            ],
+            "isSuperAuth": false,
+            "needSecondConfirm": false,
+            "children": [
+              {
+                "id": 104024,
+                "name": "数据概况",
+                "authCode": "Report:Payment:OverviewPage",
+                "menuType": 2,
+                "parentId": 104021,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  1,
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 104025,
+                    "name": "查询",
+                    "authCode": "Report:Payment:OverviewPage:GetPageList",
+                    "menuType": 3,
+                    "parentId": 104024,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      1,
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 104026,
+                    "name": "导出",
+                    "authCode": "Report:Payment:OverviewPage:GetPageList:Export",
+                    "menuType": 3,
+                    "parentId": 104024,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      1,
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": 104027,
+                "name": "商户报表",
+                "authCode": "Report:Payment:TenantReportPage",
+                "menuType": 2,
+                "parentId": 104021,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  1,
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 104034,
+                    "name": "查询",
+                    "authCode": "Report:Payment:TenantReportPage:GetPageList",
+                    "menuType": 3,
+                    "parentId": 104027,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      1,
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 104035,
+                    "name": "导出",
+                    "authCode": "Report:Payment:TenantReportPage:GetPageList:Export",
+                    "menuType": 3,
+                    "parentId": 104027,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      1,
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": 104028,
+                "name": "通道报表",
+                "authCode": "Report:Payment:ChannelReportPage",
+                "menuType": 2,
+                "parentId": 104021,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  1,
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 104030,
+                    "name": "查询",
+                    "authCode": "Report:Payment:ChannelReportPage:GetPageList",
+                    "menuType": 3,
+                    "parentId": 104028,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      1,
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 104031,
+                    "name": "导出",
+                    "authCode": "Report:Payment:ChannelReportPage:GetPageList:Export",
+                    "menuType": 3,
+                    "parentId": 104028,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      1,
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": 104029,
+                "name": "三方商户号报表",
+                "authCode": "Report:Payment:ThirdPayMerchantReportPage",
+                "menuType": 2,
+                "parentId": 104021,
+                "state": true,
+                "icon": "",
+                "sort": 0,
+                "category": [
+                  1,
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 104032,
+                    "name": "查询",
+                    "authCode": "Report:Payment:ThirdPayMerchantReportPage:GetPageList",
+                    "menuType": 3,
+                    "parentId": 104029,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      1,
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  },
+                  {
+                    "id": 104033,
+                    "name": "导出",
+                    "authCode": "Report:Payment:ThirdPayMerchantReportPage:GetPageList:Export",
+                    "menuType": 3,
+                    "parentId": 104029,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      1,
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              },
+              {
+                "id": 104022,
+                "name": "24小时报表",
+                "authCode": "Report:Payment:24HourReportPage",
+                "menuType": 2,
+                "parentId": 104021,
+                "state": true,
+                "icon": "",
+                "sort": 1,
+                "category": [
+                  1,
+                  2
+                ],
+                "isSuperAuth": false,
+                "needSecondConfirm": false,
+                "children": [
+                  {
+                    "id": 104023,
+                    "name": "查询",
+                    "authCode": "Report:Payment:24HourReportPage:GetPageList",
+                    "menuType": 3,
+                    "parentId": 104022,
+                    "state": true,
+                    "icon": "",
+                    "sort": 0,
+                    "category": [
+                      1,
+                      2
+                    ],
+                    "isSuperAuth": false,
+                    "needSecondConfirm": false,
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "currentCurrency": null,
+    "permissionLevel": 0,
+    "currencyList": [],
+    "timeZoneList": [],
+    "languageList": null,
+    "isSuperAuthUser": false,
+    "orgList": [
+      {
+        "id": 1000,
+        "name": "ar集团"
+      }
+    ],
+    "tenantList": [
+      {
+        "id": 2024,
+        "name": "测试",
+        "orgId": 1000,
+        "mainCountry": "MMR",
+        "supportSysCurrency": "VND",
+        "timeZone": "(UTC+6:30)Asia/Yangon",
+        "state": 2,
+        "v1OssImageUrl": "https://bucket.22889.club",
+        "rechargeCategoryList": [
+          {
+            "id": 1,
+            "name": "三方法币"
+          },
+          {
+            "id": 9,
+            "name": "本地银行卡"
+          },
+          {
+            "id": 11,
+            "name": "三方Usdt"
+          },
+          {
+            "id": 19,
+            "name": "本地USDT"
+          }
+        ],
+        "rechargeLevelList": [
+          {
+            "userLevel": 1,
+            "userLevelText": "LV1",
+            "rechargeTimes": 1,
+            "rechargeAmounts": 100,
+            "giftRatio": 0.01,
+            "maxBonusAmount": 100
+          },
+          {
+            "userLevel": 2,
+            "userLevelText": "LV2",
+            "rechargeTimes": 2,
+            "rechargeAmounts": 200,
+            "giftRatio": 0.1,
+            "maxBonusAmount": 100
+          },
+          {
+            "userLevel": 3,
+            "userLevelText": "LV3",
+            "rechargeTimes": 3,
+            "rechargeAmounts": 600,
+            "giftRatio": 0.1,
+            "maxBonusAmount": 100
+          },
+          {
+            "userLevel": 4,
+            "userLevelText": "LV4",
+            "rechargeTimes": 6,
+            "rechargeAmounts": 0,
+            "giftRatio": 0,
+            "maxBonusAmount": 0
+          },
+          {
+            "userLevel": 5,
+            "userLevelText": "LV5",
+            "rechargeTimes": 99999999,
+            "rechargeAmounts": 9999999999,
+            "giftRatio": 0.5,
+            "maxBonusAmount": 9
+          },
+          {
+            "userLevel": 6,
+            "userLevelText": "LV6",
+            "rechargeTimes": 20,
+            "rechargeAmounts": 3000,
+            "giftRatio": 0.1,
+            "maxBonusAmount": 100
+          },
+          {
+            "userLevel": 7,
+            "userLevelText": "LV7",
+            "rechargeTimes": 50,
+            "rechargeAmounts": 4000,
+            "giftRatio": 0.1,
+            "maxBonusAmount": 100
+          },
+          {
+            "userLevel": 8,
+            "userLevelText": "LV8",
+            "rechargeTimes": 70,
+            "rechargeAmounts": 5000,
+            "giftRatio": 0.1,
+            "maxBonusAmount": 100
+          },
+          {
+            "userLevel": 9,
+            "userLevelText": "LV9",
+            "rechargeTimes": 100,
+            "rechargeAmounts": 6000,
+            "giftRatio": 0.1,
+            "maxBonusAmount": 100
+          },
+          {
+            "userLevel": 10,
+            "userLevelText": "LV10",
+            "rechargeTimes": 150,
+            "rechargeAmounts": 7000,
+            "giftRatio": 0.1,
+            "maxBonusAmount": 100
+          }
+        ]
+      },
+      {
+        "id": 2028,
+        "name": "PKR",
+        "orgId": 1000,
+        "mainCountry": "PAK",
+        "supportSysCurrency": "PKR",
+        "timeZone": "(UTC+5)Asia/Karachi",
+        "state": 1,
+        "v1OssImageUrl": "https://bucket.22889.club",
+        "rechargeCategoryList": [
+          {
+            "id": 1,
+            "name": "三方法币"
+          },
+          {
+            "id": 9,
+            "name": "本地银行卡"
+          },
+          {
+            "id": 11,
+            "name": "三方Usdt"
+          },
+          {
+            "id": 19,
+            "name": "本地USDT"
+          }
+        ],
+        "rechargeLevelList": [
+          {
+            "userLevel": 1,
+            "userLevelText": "LV1",
+            "rechargeTimes": 1,
+            "rechargeAmounts": 100,
+            "giftRatio": 0.01,
+            "maxBonusAmount": 100
+          },
+          {
+            "userLevel": 2,
+            "userLevelText": "LV2",
+            "rechargeTimes": 2,
+            "rechargeAmounts": 200,
+            "giftRatio": 0.1,
+            "maxBonusAmount": 100
+          },
+          {
+            "userLevel": 3,
+            "userLevelText": "LV3",
+            "rechargeTimes": 3,
+            "rechargeAmounts": 600,
+            "giftRatio": 0.1,
+            "maxBonusAmount": 100
+          },
+          {
+            "userLevel": 4,
+            "userLevelText": "LV4",
+            "rechargeTimes": 6,
+            "rechargeAmounts": 0,
+            "giftRatio": 0,
+            "maxBonusAmount": 0
+          },
+          {
+            "userLevel": 5,
+            "userLevelText": "LV5",
+            "rechargeTimes": 99999999,
+            "rechargeAmounts": 9999999999,
+            "giftRatio": 0.5,
+            "maxBonusAmount": 9
+          },
+          {
+            "userLevel": 6,
+            "userLevelText": "LV6",
+            "rechargeTimes": 20,
+            "rechargeAmounts": 3000,
+            "giftRatio": 0.1,
+            "maxBonusAmount": 100
+          },
+          {
+            "userLevel": 7,
+            "userLevelText": "LV7",
+            "rechargeTimes": 50,
+            "rechargeAmounts": 4000,
+            "giftRatio": 0.1,
+            "maxBonusAmount": 100
+          },
+          {
+            "userLevel": 8,
+            "userLevelText": "LV8",
+            "rechargeTimes": 70,
+            "rechargeAmounts": 5000,
+            "giftRatio": 0.1,
+            "maxBonusAmount": 100
+          },
+          {
+            "userLevel": 9,
+            "userLevelText": "LV9",
+            "rechargeTimes": 100,
+            "rechargeAmounts": 6000,
+            "giftRatio": 0.1,
+            "maxBonusAmount": 100
+          },
+          {
+            "userLevel": 10,
+            "userLevelText": "LV10",
+            "rechargeTimes": 150,
+            "rechargeAmounts": 7000,
+            "giftRatio": 0.1,
+            "maxBonusAmount": 100
+          }
+        ]
+      },
+      {
+        "id": 2007,
+        "name": "sit-vnd",
+        "orgId": 1000,
+        "mainCountry": "VNM",
+        "supportSysCurrency": "VND",
+        "timeZone": "(UTC+7)Asia/Ho_Chi_Minh",
+        "state": 1,
+        "v1OssImageUrl": "https://bucket-vnd.22889.club",
+        "rechargeCategoryList": [
+          {
+            "id": 1,
+            "name": "三方法币"
+          },
+          {
+            "id": 9,
+            "name": "本地银行卡"
+          },
+          {
+            "id": 11,
+            "name": "三方Usdt"
+          },
+          {
+            "id": 19,
+            "name": "本地USDT"
+          }
+        ],
+        "rechargeLevelList": [
+          {
+            "userLevel": 1,
+            "userLevelText": "LV1",
+            "rechargeTimes": 1,
+            "rechargeAmounts": 100000,
+            "giftRatio": 0,
+            "maxBonusAmount": 0
+          },
+          {
+            "userLevel": 2,
+            "userLevelText": "LV2",
+            "rechargeTimes": 1,
+            "rechargeAmounts": 1000000,
+            "giftRatio": 0,
+            "maxBonusAmount": 0
+          },
+          {
+            "userLevel": 3,
+            "userLevelText": "LV3",
+            "rechargeTimes": 1,
+            "rechargeAmounts": 30000000,
+            "giftRatio": 0,
+            "maxBonusAmount": 0
+          },
+          {
+            "userLevel": 4,
+            "userLevelText": "LV4",
+            "rechargeTimes": 1,
+            "rechargeAmounts": 50000000,
+            "giftRatio": 0,
+            "maxBonusAmount": 0
+          },
+          {
+            "userLevel": 5,
+            "userLevelText": "LV5",
+            "rechargeTimes": 1,
+            "rechargeAmounts": 80000000,
+            "giftRatio": 0,
+            "maxBonusAmount": 0
+          },
+          {
+            "userLevel": 6,
+            "userLevelText": "LV6",
+            "rechargeTimes": 1,
+            "rechargeAmounts": 100000000,
+            "giftRatio": 0,
+            "maxBonusAmount": 0
+          },
+          {
+            "userLevel": 7,
+            "userLevelText": "LV7",
+            "rechargeTimes": 1,
+            "rechargeAmounts": 200000000,
+            "giftRatio": 0,
+            "maxBonusAmount": 0
+          },
+          {
+            "userLevel": 8,
+            "userLevelText": "LV8",
+            "rechargeTimes": 1,
+            "rechargeAmounts": 500000000,
+            "giftRatio": 0,
+            "maxBonusAmount": 0
+          },
+          {
+            "userLevel": 9,
+            "userLevelText": "LV9",
+            "rechargeTimes": 1,
+            "rechargeAmounts": 1000000000,
+            "giftRatio": 0,
+            "maxBonusAmount": 0
+          },
+          {
+            "userLevel": 10,
+            "userLevelText": "LV10",
+            "rechargeTimes": 1,
+            "rechargeAmounts": 3000000000,
+            "giftRatio": 0,
+            "maxBonusAmount": 0
+          },
+          {
+            "userLevel": 11,
+            "userLevelText": "LV11",
+            "rechargeTimes": 1,
+            "rechargeAmounts": 5000000000,
+            "giftRatio": 0,
+            "maxBonusAmount": 0
+          },
+          {
+            "userLevel": 12,
+            "userLevelText": "LV12",
+            "rechargeTimes": 1,
+            "rechargeAmounts": 10000000000,
+            "giftRatio": 0,
+            "maxBonusAmount": 0
+          },
+          {
+            "userLevel": 13,
+            "userLevelText": "LV13",
+            "rechargeTimes": 1,
+            "rechargeAmounts": 30000000000,
+            "giftRatio": 0,
+            "maxBonusAmount": 0
+          },
+          {
+            "userLevel": 14,
+            "userLevelText": "LV14",
+            "rechargeTimes": 1,
+            "rechargeAmounts": 50000000000,
+            "giftRatio": 0,
+            "maxBonusAmount": 0
+          },
+          {
+            "userLevel": 15,
+            "userLevelText": "LV15",
+            "rechargeTimes": 1,
+            "rechargeAmounts": 100000000000,
+            "giftRatio": 0,
+            "maxBonusAmount": 0
+          }
+        ]
+      },
+      {
+        "id": 2026,
+        "name": "测试越南币种商户",
+        "orgId": 1000,
+        "mainCountry": "PAK",
+        "supportSysCurrency": "VND",
+        "timeZone": "(UTC+5)Asia/Karachi",
+        "state": 2,
+        "v1OssImageUrl": "https://bucket.22889.club",
+        "rechargeCategoryList": [
+          {
+            "id": 1,
+            "name": "三方法币"
+          },
+          {
+            "id": 9,
+            "name": "本地银行卡"
+          },
+          {
+            "id": 11,
+            "name": "三方Usdt"
+          },
+          {
+            "id": 19,
+            "name": "本地USDT"
+          }
+        ],
+        "rechargeLevelList": [
+          {
+            "userLevel": 1,
+            "userLevelText": "LV1",
+            "rechargeTimes": 1,
+            "rechargeAmounts": 100,
+            "giftRatio": 0.01,
+            "maxBonusAmount": 100
+          },
+          {
+            "userLevel": 2,
+            "userLevelText": "LV2",
+            "rechargeTimes": 2,
+            "rechargeAmounts": 200,
+            "giftRatio": 0.1,
+            "maxBonusAmount": 100
+          },
+          {
+            "userLevel": 3,
+            "userLevelText": "LV3",
+            "rechargeTimes": 3,
+            "rechargeAmounts": 600,
+            "giftRatio": 0.1,
+            "maxBonusAmount": 100
+          },
+          {
+            "userLevel": 4,
+            "userLevelText": "LV4",
+            "rechargeTimes": 6,
+            "rechargeAmounts": 0,
+            "giftRatio": 0,
+            "maxBonusAmount": 0
+          },
+          {
+            "userLevel": 5,
+            "userLevelText": "LV5",
+            "rechargeTimes": 99999999,
+            "rechargeAmounts": 9999999999,
+            "giftRatio": 0.5,
+            "maxBonusAmount": 9
+          },
+          {
+            "userLevel": 6,
+            "userLevelText": "LV6",
+            "rechargeTimes": 20,
+            "rechargeAmounts": 3000,
+            "giftRatio": 0.1,
+            "maxBonusAmount": 100
+          },
+          {
+            "userLevel": 7,
+            "userLevelText": "LV7",
+            "rechargeTimes": 50,
+            "rechargeAmounts": 4000,
+            "giftRatio": 0.1,
+            "maxBonusAmount": 100
+          },
+          {
+            "userLevel": 8,
+            "userLevelText": "LV8",
+            "rechargeTimes": 70,
+            "rechargeAmounts": 5000,
+            "giftRatio": 0.1,
+            "maxBonusAmount": 100
+          },
+          {
+            "userLevel": 9,
+            "userLevelText": "LV9",
+            "rechargeTimes": 100,
+            "rechargeAmounts": 6000,
+            "giftRatio": 0.1,
+            "maxBonusAmount": 100
+          },
+          {
+            "userLevel": 10,
+            "userLevelText": "LV10",
+            "rechargeTimes": 150,
+            "rechargeAmounts": 7000,
+            "giftRatio": 0.1,
+            "maxBonusAmount": 100
+          }
+        ]
+      },
+      {
+        "id": 2001,
+        "name": "sit-inr",
+        "orgId": 1000,
+        "mainCountry": "IND",
+        "supportSysCurrency": "INR",
+        "timeZone": "(UTC+5:30)Asia/Kolkata",
+        "state": 1,
+        "v1OssImageUrl": "https://bucket.22889.club",
+        "rechargeCategoryList": [
+          {
+            "id": 1,
+            "name": "三方法币"
+          },
+          {
+            "id": 9,
+            "name": "本地银行卡"
+          },
+          {
+            "id": 11,
+            "name": "三方Usdt"
+          },
+          {
+            "id": 12,
+            "name": "本地UPI"
+          },
+          {
+            "id": 19,
+            "name": "本地USDT"
+          },
+          {
+            "id": 21,
+            "name": "ARPay"
+          },
+          {
+            "id": 26,
+            "name": "ArUpiPay"
+          }
+        ],
+        "rechargeLevelList": [
+          {
+            "userLevel": 1,
+            "userLevelText": "LV1",
+            "rechargeTimes": 1,
+            "rechargeAmounts": 100,
+            "giftRatio": 0.01,
+            "maxBonusAmount": 100
+          },
+          {
+            "userLevel": 2,
+            "userLevelText": "LV2",
+            "rechargeTimes": 2,
+            "rechargeAmounts": 200,
+            "giftRatio": 0.1,
+            "maxBonusAmount": 100
+          },
+          {
+            "userLevel": 3,
+            "userLevelText": "LV3",
+            "rechargeTimes": 3,
+            "rechargeAmounts": 600,
+            "giftRatio": 0.1,
+            "maxBonusAmount": 100
+          },
+          {
+            "userLevel": 4,
+            "userLevelText": "LV4",
+            "rechargeTimes": 6,
+            "rechargeAmounts": 0,
+            "giftRatio": 0,
+            "maxBonusAmount": 0
+          },
+          {
+            "userLevel": 5,
+            "userLevelText": "LV5",
+            "rechargeTimes": 99999999,
+            "rechargeAmounts": 9999999999,
+            "giftRatio": 0.5,
+            "maxBonusAmount": 9
+          },
+          {
+            "userLevel": 6,
+            "userLevelText": "LV6",
+            "rechargeTimes": 20,
+            "rechargeAmounts": 3000,
+            "giftRatio": 0.1,
+            "maxBonusAmount": 100
+          },
+          {
+            "userLevel": 7,
+            "userLevelText": "LV7",
+            "rechargeTimes": 50,
+            "rechargeAmounts": 4000,
+            "giftRatio": 0.1,
+            "maxBonusAmount": 100
+          },
+          {
+            "userLevel": 8,
+            "userLevelText": "LV8",
+            "rechargeTimes": 70,
+            "rechargeAmounts": 5000,
+            "giftRatio": 0.1,
+            "maxBonusAmount": 100
+          },
+          {
+            "userLevel": 9,
+            "userLevelText": "LV9",
+            "rechargeTimes": 100,
+            "rechargeAmounts": 6000,
+            "giftRatio": 0.1,
+            "maxBonusAmount": 100
+          },
+          {
+            "userLevel": 10,
+            "userLevelText": "LV10",
+            "rechargeTimes": 150,
+            "rechargeAmounts": 7000,
+            "giftRatio": 0.1,
+            "maxBonusAmount": 100
+          }
+        ]
+      }
+    ],
+    "approvalTenantList": [],
+    "v3OssImageUrl": "https://sitossimg.uknm5qqzv3vqzdn9xgn5.com"
+  },
+  "code": 0,
+  "msg": "成功",
+  "msgCode": 0
+}

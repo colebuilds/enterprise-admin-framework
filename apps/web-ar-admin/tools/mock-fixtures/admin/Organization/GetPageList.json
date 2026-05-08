@@ -1,0 +1,115 @@
+{
+  "data": {
+    "list": [
+      {
+        "id": 61022,
+        "name": "figo集团",
+        "tenants": [
+          {
+            "id": 1990,
+            "name": "figo专属"
+          }
+        ],
+        "remark": "",
+        "createTime": 1776773828313,
+        "creator": "sys_milo",
+        "state": 1,
+        "adminUserName": "figoadmin",
+        "lastUpdateMan": "sys_milo",
+        "lastUpdateTime": 1776773828313
+      },
+      {
+        "id": 61000,
+        "name": "milo集团",
+        "tenants": [
+          {
+            "id": 1001,
+            "name": "milo测试商户"
+          }
+        ],
+        "remark": "",
+        "createTime": 1776326542387,
+        "creator": "sys_milo",
+        "state": 1,
+        "adminUserName": "milo01",
+        "lastUpdateMan": "sys_milo",
+        "lastUpdateTime": 1776326542383
+      },
+      {
+        "id": 31000,
+        "name": "vnd集团",
+        "tenants": [],
+        "remark": "vnd集团",
+        "createTime": 1776234509206,
+        "creator": "sys_ben",
+        "state": 1,
+        "adminUserName": "vnd12345",
+        "lastUpdateMan": "sys_ben",
+        "lastUpdateTime": 1776234509203
+      },
+      {
+        "id": 1001,
+        "name": "test",
+        "tenants": [],
+        "remark": "",
+        "createTime": 1776068696527,
+        "creator": "sys_milo",
+        "state": 1,
+        "adminUserName": "testadmin",
+        "lastUpdateMan": "sys_milo",
+        "lastUpdateTime": 1776068696524
+      },
+      {
+        "id": 1000,
+        "name": "ar集团",
+        "tenants": [
+          {
+            "id": 1111,
+            "name": "test1"
+          },
+          {
+            "id": 2001,
+            "name": "sit-inr"
+          },
+          {
+            "id": 2002,
+            "name": "sitINR-2002"
+          },
+          {
+            "id": 2007,
+            "name": "sit-vnd"
+          },
+          {
+            "id": 2024,
+            "name": "测试"
+          },
+          {
+            "id": 2025,
+            "name": "testvnd"
+          },
+          {
+            "id": 2026,
+            "name": "测试越南币种商户"
+          },
+          {
+            "id": 2028,
+            "name": "PKR"
+          }
+        ],
+        "remark": "ar集团",
+        "createTime": 1776067643084,
+        "creator": "sysadmin",
+        "state": 1,
+        "adminUserName": "ben_jmeter_10724",
+        "lastUpdateMan": "sysadmin",
+        "lastUpdateTime": 1776067643083
+      }
+    ],
+    "pageNo": 1,
+    "totalPage": 1,
+    "totalCount": 5
+  },
+  "code": 0,
+  "msg": "成功",
+  "msgCode": 0
+}
