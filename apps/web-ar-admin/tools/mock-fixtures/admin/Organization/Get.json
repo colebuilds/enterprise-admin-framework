@@ -1,5 +1,1 @@
-{
-  "code": 7,
-  "msg": "Id 字段必须在 1 和 2147483647 之间",
-  "msgCode": 6
-}
+{ "code": 0, "data": null, "msg": "" }

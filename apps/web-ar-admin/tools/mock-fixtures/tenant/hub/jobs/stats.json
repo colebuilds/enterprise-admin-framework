@@ -1,7 +1,1 @@
-{
-  "data": null,
-  "code": 401,
-  "msg": "访问未授权请联系管理员",
-  "msgCode": 401,
-  "msgParameters": null
-}
+{ "code": 0, "data": null, "msg": "" }

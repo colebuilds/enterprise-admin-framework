@@ -1,7 +1,1 @@
-{
-  "data": null,
-  "code": 404,
-  "msg": "Cannot POST /api/event/traffic/summary",
-  "msgCode": 404,
-  "msgParameters": null
-}
+{ "code": 0, "data": null, "msg": "" }

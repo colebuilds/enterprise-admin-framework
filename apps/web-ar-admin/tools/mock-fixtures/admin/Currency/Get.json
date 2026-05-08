@@ -1,5 +1,1 @@
-{
-  "code": 7,
-  "msg": "CurrencyCode can not be empty",
-  "msgCode": 6
-}
+{ "code": 0, "data": null, "msg": "" }
