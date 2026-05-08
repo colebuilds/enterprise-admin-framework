@@ -1,9 +1,22 @@
 <script setup lang="ts">
-import { computed, nextTick, onMounted, onUnmounted, ref, shallowRef, watch } from 'vue';
+import {
+  computed,
+  nextTick,
+  onMounted,
+  onUnmounted,
+  ref,
+  shallowRef,
+  watch,
+} from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useRouter } from 'vue-router';
 
-import { CheckOutlined, ClockCircleOutlined, DownOutlined, SearchOutlined } from '@vicons/antd';
+import {
+  CheckOutlined,
+  ClockCircleOutlined,
+  DownOutlined,
+  SearchOutlined,
+} from '@vicons/antd';
 import { useWindowSize } from '@vueuse/core';
 import { NEl, NIcon, NInput, NPopover, NTag } from 'naive-ui';
 
@@ -60,11 +73,13 @@ onMounted(() => {
     if (!clockTextRef.value) return;
     clockTextRef.value.textContent = formatTimeForTenant(Date.now());
   }, 1000);
+  void lockTenantPanelWidth();
 });
 onUnmounted(() => {
   if (_clockTimer !== null) clearInterval(_clockTimer);
 });
 
+// Initial render value only — the setInterval above takes over via direct DOM write.
 const formattedTime = computed(() => formatTimeForTenant(timestamp.value));
 const clockTimezoneLabel = computed(() => {
   const tz = currentTenant.value?.timeZone;
@@ -106,21 +121,25 @@ const tenantDisplay = computed(() => {
     groupName,
     metaLabel: t('common.header.tenant'),
     tenantName: tenant ? `(${tenant.id})${tenant.name}` : '--',
-    tenantTitle: tenant
-      ? `${tenant.name} (#${tenant.id})`
-      : t('common.noData'),
+    tenantTitle: tenant ? `${tenant.name} (#${tenant.id})` : t('common.noData'),
   };
 });
 
 const tenantTitle = computed(() =>
-  [tenantDisplay.value.groupName, tenantDisplay.value.tenantTitle, timezoneTitle.value]
+  [
+    tenantDisplay.value.groupName,
+    tenantDisplay.value.tenantTitle,
+    timezoneTitle.value,
+  ]
     .filter(Boolean)
     .join(' · '),
 );
 const switchTitle = computed(() =>
   t('common.header.switchTenant', { count: tenantFlatList.value.length }),
 );
-const normalizedTenantKeyword = computed(() => normalizeKeyword(tenantKeyword.value));
+const normalizedTenantKeyword = computed(() =>
+  normalizeKeyword(tenantKeyword.value),
+);
 
 const tenantPanelWidthStyle = computed(() => {
   if (!lockedTenantWidth.value) return undefined;
@@ -195,10 +214,6 @@ function matchesTenantKeyword(
     .some((item) => String(item).toLocaleLowerCase().includes(keyword));
 }
 
-onMounted(() => {
-  void lockTenantPanelWidth();
-});
-
 watch(isCompactViewport, () => {
   void lockTenantPanelWidth();
 });
@@ -238,9 +253,10 @@ watch(isCompactViewport, () => {
             <NIcon size="12" class="header-tenant__clock-icon opacity-85">
               <ClockCircleOutlined />
             </NIcon>
-            <span ref="clockTextRef" class="header-tenant__clock-text tracking-[0.5px]">{{
-              formattedTime
-            }}</span>
+            <span
+              ref="clockTextRef"
+              class="header-tenant__clock-text tracking-[0.5px]"
+              >{{ formattedTime }}</span>
             <span
               v-if="clockTimezoneLabel"
               class="header-tenant__clock-zone text-[11px] font-medium opacity-75"
@@ -251,7 +267,10 @@ watch(isCompactViewport, () => {
           <div
             class="header-tenant__meta flex max-w-full items-center justify-center gap-1.5 whitespace-nowrap text-[12px] font-medium leading-[1.35]"
           >
-            <span class="truncate max-w-[112px]" :title="tenantDisplay.groupName">
+            <span
+              class="truncate max-w-[112px]"
+              :title="tenantDisplay.groupName"
+            >
               {{ tenantDisplay.groupName }}
             </span>
             <span
@@ -304,7 +323,9 @@ watch(isCompactViewport, () => {
             class="tenant-popover__group"
           >
             <div class="flex items-center justify-between gap-2.5 px-2 pb-1">
-              <span class="tenant-popover__group-name min-w-0 truncate text-[12px] font-semibold">
+              <span
+                class="tenant-popover__group-name min-w-0 truncate text-[12px] font-semibold"
+              >
                 {{ group.orgName }}
               </span>
               <span
@@ -319,11 +340,15 @@ watch(isCompactViewport, () => {
                 :key="tenant.id"
                 type="button"
                 class="tenant-popover__item relative flex w-full items-center rounded-lg border-0 bg-transparent py-2 pl-2.5 pr-[30px] text-left text-inherit"
-                :class="{ 'tenant-popover__item--active': tenant.id === currentTenantId }"
+                :class="{
+                  'tenant-popover__item--active': tenant.id === currentTenantId,
+                }"
                 @click="handleTenantChange(tenant.id)"
               >
                 <span class="flex min-w-0 flex-1 flex-col gap-0.5">
-                  <span class="tenant-popover__tenant-name truncate text-[13px] font-semibold">
+                  <span
+                    class="tenant-popover__tenant-name truncate text-[13px] font-semibold"
+                  >
                     {{ tenant.name }}
                   </span>
                   <span
@@ -338,9 +363,10 @@ watch(isCompactViewport, () => {
                     >
                       {{ tenant.supportSysCurrency }}
                     </NTag>
-                    <span v-if="tenant.timeZone" class="tenant-popover__timezone truncate">{{
-                      resolveTenantTimezone(tenant.timeZone)
-                    }}</span>
+                    <span
+                      v-if="tenant.timeZone"
+                      class="tenant-popover__timezone truncate"
+                      >{{ resolveTenantTimezone(tenant.timeZone) }}</span>
                   </span>
                 </span>
                 <NIcon
@@ -386,11 +412,11 @@ watch(isCompactViewport, () => {
 }
 
 .header-tenant--clickable:hover {
-  background: rgb(255 255 255 / 0.08);
+  background: rgb(255 255 255 / 8%);
 }
 
 .header-tenant--open {
-  background: rgb(255 255 255 / 0.1);
+  background: rgb(255 255 255 / 10%);
 }
 
 .header-tenant__time {
@@ -398,18 +424,18 @@ watch(isCompactViewport, () => {
 }
 
 .header-tenant__meta {
-  color: rgb(255 255 255 / 0.72);
+  color: rgb(255 255 255 / 72%);
 }
 
 .header-tenant__pill {
   min-height: 20px;
-  border: 1px solid rgb(255 255 255 / 0.14);
-  background: rgb(255 255 255 / 0.12);
   color: #fff;
+  background: rgb(255 255 255 / 12%);
+  border: 1px solid rgb(255 255 255 / 14%);
 }
 
 .header-tenant__switch {
-  color: rgb(255 255 255 / 0.86);
+  color: rgb(255 255 255 / 86%);
 }
 
 .header-tenant--clickable:hover .header-tenant__switch {
@@ -424,9 +450,9 @@ watch(isCompactViewport, () => {
   box-sizing: border-box;
   padding: 8px;
   color: var(--text-color-1);
+  background: var(--popover-color);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
-  background: var(--popover-color);
   box-shadow: var(--popover-box-shadow);
 }
 
@@ -443,8 +469,8 @@ watch(isCompactViewport, () => {
 }
 
 .tenant-popover__group-count {
-  background: var(--hover-color);
   color: var(--text-color-2);
+  background: var(--hover-color);
 }
 
 .tenant-popover__tenant-name {
@@ -480,13 +506,13 @@ watch(isCompactViewport, () => {
 }
 
 .tenant-popover__body::-webkit-scrollbar-thumb {
-  border-radius: 999px;
   background: var(--border-color);
+  border-radius: 999px;
 }
 
 .tenant-popover__group + .tenant-popover__group {
-  margin-top: 6px;
   padding-top: 6px;
+  margin-top: 6px;
   border-top: 1px solid var(--divider-color);
 }
 
