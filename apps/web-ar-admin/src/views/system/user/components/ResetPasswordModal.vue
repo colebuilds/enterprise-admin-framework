@@ -1,52 +1,11 @@
-<template>
-  <n-form
-    ref="formRef"
-    :model="formData"
-    :rules="formRules"
-    label-placement="top"
-  >
-    <n-form-item
-      :label="t('system.sysUser.resetPassword.label.newPassword')"
-      path="password"
-    >
-      <n-input
-        v-model:value="formData.password"
-        type="password"
-        show-password-on="click"
-        :placeholder="t('system.sysUser.resetPassword.placeholder.newPassword')"
-      />
-    </n-form-item>
-
-    <n-form-item
-      :label="t('system.sysUser.resetPassword.label.confirmPassword')"
-      path="confirmPassword"
-    >
-      <n-input
-        v-model:value="formData.confirmPassword"
-        type="password"
-        show-password-on="click"
-        :placeholder="
-          t('system.sysUser.resetPassword.placeholder.confirmPassword')
-        "
-      />
-    </n-form-item>
-
-    <div class="system-reset-password__actions">
-      <n-button @click="emit('close')">
-        {{ t('common.cancel') }}
-      </n-button>
-      <n-button type="primary" :loading="loading" @click="handleSave">
-        {{ t('common.confirm') }}
-      </n-button>
-    </div>
-  </n-form>
-</template>
-
 <script lang="ts" setup>
+import type { FormInst, FormItemRule, FormRules } from 'naive-ui';
+
 import { reactive, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
+
 import { useMessage } from 'naive-ui';
-import type { FormInst, FormItemRule, FormRules } from 'naive-ui';
+
 import { api } from '#/api';
 
 const props = defineProps<{
@@ -129,6 +88,50 @@ async function handleSave() {
   }
 }
 </script>
+
+<template>
+  <n-form
+    ref="formRef"
+    :model="formData"
+    :rules="formRules"
+    label-placement="top"
+  >
+    <n-form-item
+      :label="t('system.sysUser.resetPassword.label.newPassword')"
+      path="password"
+    >
+      <n-input
+        v-model:value="formData.password"
+        type="password"
+        show-password-on="click"
+        :placeholder="t('system.sysUser.resetPassword.placeholder.newPassword')"
+      />
+    </n-form-item>
+
+    <n-form-item
+      :label="t('system.sysUser.resetPassword.label.confirmPassword')"
+      path="confirmPassword"
+    >
+      <n-input
+        v-model:value="formData.confirmPassword"
+        type="password"
+        show-password-on="click"
+        :placeholder="
+          t('system.sysUser.resetPassword.placeholder.confirmPassword')
+        "
+      />
+    </n-form-item>
+
+    <div class="system-reset-password__actions">
+      <n-button @click="emit('close')">
+        {{ t('common.cancel') }}
+      </n-button>
+      <n-button type="primary" :loading="loading" @click="handleSave">
+        {{ t('common.confirm') }}
+      </n-button>
+    </div>
+  </n-form>
+</template>
 
 <style lang="less" scoped>
 .system-reset-password__actions {

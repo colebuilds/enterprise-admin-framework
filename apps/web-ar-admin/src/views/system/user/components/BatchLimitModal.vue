@@ -1,43 +1,11 @@
-<template>
-  <div class="batch-modal">
-    <p class="batch-modal__tip">
-      {{ t('system.sysUser.batch.adjustLimitTip', { count }) }}
-    </p>
-    <n-form
-      ref="formRef"
-      :model="form"
-      :rules="rules"
-      label-placement="top"
-      size="small"
-    >
-      <n-form-item
-        :label="t('system.sysUser.withdraw.maxConcurrent')"
-        path="maxConcurrent"
-      >
-        <n-input-number
-          v-model:value="form.maxConcurrent"
-          :min="PROCESSING_LIMIT_MIN"
-          :max="PROCESSING_LIMIT_MAX"
-          :show-button="false"
-          :placeholder="t('system.sysUser.batch.maxConcurrentPlaceholder')"
-          style="width: 100%"
-        />
-      </n-form-item>
-    </n-form>
-    <div class="batch-modal__actions">
-      <n-button @click="emit('close')">{{ t('common.cancel') }}</n-button>
-      <n-button type="primary" :loading="loading" @click="handleSave">
-        {{ t('common.confirm') }}
-      </n-button>
-    </div>
-  </div>
-</template>
-
 <script setup lang="ts">
+import type { FormInst, FormRules } from 'naive-ui';
+
 import { reactive, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
+
 import { useMessage } from 'naive-ui';
-import type { FormInst, FormRules } from 'naive-ui';
+
 import { api } from '#/api';
 
 interface Props {
@@ -70,7 +38,8 @@ const rules: FormRules = {
       type: 'number',
       validator: (_rule, value: number) => {
         if (
-          value === null || value === undefined ||
+          value === null ||
+          value === undefined ||
           value < PROCESSING_LIMIT_MIN ||
           value > PROCESSING_LIMIT_MAX
         ) {
@@ -109,6 +78,41 @@ async function handleSave() {
   }
 }
 </script>
+
+<template>
+  <div class="batch-modal">
+    <p class="batch-modal__tip">
+      {{ t('system.sysUser.batch.adjustLimitTip', { count }) }}
+    </p>
+    <n-form
+      ref="formRef"
+      :model="form"
+      :rules="rules"
+      label-placement="top"
+      size="small"
+    >
+      <n-form-item
+        :label="t('system.sysUser.withdraw.maxConcurrent')"
+        path="maxConcurrent"
+      >
+        <n-input-number
+          v-model:value="form.maxConcurrent"
+          :min="PROCESSING_LIMIT_MIN"
+          :max="PROCESSING_LIMIT_MAX"
+          :show-button="false"
+          :placeholder="t('system.sysUser.batch.maxConcurrentPlaceholder')"
+          style="width: 100%"
+        />
+      </n-form-item>
+    </n-form>
+    <div class="batch-modal__actions">
+      <n-button @click="emit('close')">{{ t('common.cancel') }}</n-button>
+      <n-button type="primary" :loading="loading" @click="handleSave">
+        {{ t('common.confirm') }}
+      </n-button>
+    </div>
+  </div>
+</template>
 
 <style lang="less" scoped>
 .batch-modal__tip {

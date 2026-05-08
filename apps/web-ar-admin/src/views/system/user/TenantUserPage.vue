@@ -5,227 +5,24 @@
  * @scope src/views/system/user
  */
 -->
-<template>
-  <ProCrudTable
-    ref="tableRef"
-    class="system-user-page"
-    :columns="columns"
-    :search-columns="searchColumns"
-    :request="loadDataTable"
-    :action-column="actionColumn"
-    :row-props="rowProps"
-    row-key="userId"
-    :row-selection="{ disabled: (row) => !row.canOperate }"
-    :batch-actions="batchActions"
-    :search-cols="'1 s:2 m:3 l:3'"
-    @selection-change="handleSelectionChange"
-    @batch-action="handleBatchAction"
-    searchLayout="flex"
-  >
-    <template #table-header>
-      <n-space :size="8">
-        <n-button
-          type="primary"
-          v-permission="['SystemManage:SysUserPage:UserPage:Add']"
-          @click="handleAdd"
-        >
-          <template #icon>
-            <n-icon><PlusOutlined /></n-icon>
-          </template>
-          {{ t('system.sysUser.batch.addUser') }}
-        </n-button>
-        <n-dropdown
-          v-if="batchWithdrawOptions.length"
-          trigger="click"
-          :options="batchWithdrawOptions"
-          @select="handleBatchWithdraw"
-        >
-          <n-button :disabled="!hasSelection">{{
-            t('system.sysUser.batch.adjustWithdraw')
-          }}</n-button>
-        </n-dropdown>
-        <n-dropdown
-          v-if="canChangeBatchStatus"
-          trigger="click"
-          :options="batchStatusOptions"
-          @select="handleBatchStatus"
-        >
-          <n-button :disabled="!hasSelection">{{
-            t('system.sysUser.batch.changeStatus')
-          }}</n-button>
-        </n-dropdown>
-        <n-button
-          v-permission="[
-            'SystemManage:SysUserPage:UserPage:BatchUpdateTenantSysUserPermission',
-          ]"
-          type="warning"
-          :disabled="!hasSelection"
-          @click="handleBatchGrantPerm"
-        >
-          {{ t('system.sysUser.batch.grantPerm') }}
-        </n-button>
-      </n-space>
-    </template>
-    <template #toolbar-right>
-      <n-space :wrap="false" :size="8" align="center">
-        <n-popover
-          trigger="click"
-          placement="bottom-end"
-          :width="680"
-          :show-arrow="true"
-          :style="{ maxHeight: '500px', overflow: 'visible' }"
-        >
-          <template #trigger>
-            <n-button
-              size="small"
-              :type="permFilterCount > 0 ? 'info' : 'default'"
-            >
-              {{ t('system.sysUser.permFilter.title') }}
-              <template #icon>
-                <n-icon><DownOutlined /></n-icon>
-              </template>
-              <n-badge
-                v-if="permFilterCount > 0"
-                :value="permFilterCount"
-                :max="9"
-                style="margin-left: 4px"
-              />
-            </n-button>
-          </template>
-          <div class="py-1">
-            <div class="flex gap-4">
-              <div class="flex-1 min-w-0">
-                <div class="font-semibold text-[14px] mb-2">
-                  {{ t('system.sysUser.permFilter.withdrawTitle') }}
-                </div>
-                <div class="flex flex-col gap-2">
-                  <div class="flex items-center gap-1">
-                    <span class="shrink-0 text-[12px] w-[42px] text-right"
-                      >{{ t('system.sysUser.permFilter.tenant') }}：</span
-                    >
-                    <n-select
-                      v-model:value="permFilter.withdrawTenantIds"
-                      :options="tenantFilterOptions"
-                      size="small"
-                      multiple
-                      clearable
-                      :placeholder="t('common.all')"
-                      class="flex-1"
-                    />
-                  </div>
-                  <div class="flex items-center gap-1">
-                    <span class="shrink-0 text-[12px] w-[42px] text-right"
-                      >{{ t('system.sysUser.permFilter.position') }}：</span
-                    >
-                    <n-select
-                      v-model:value="permFilter.withdrawUserRank"
-                      :options="positionFilterOptions"
-                      size="small"
-                      clearable
-                      :placeholder="t('common.all')"
-                      class="flex-1"
-                    />
-                  </div>
-                  <div class="flex items-center gap-1">
-                    <span class="shrink-0 text-[12px] w-[42px] text-right"
-                      >{{ t('system.sysUser.permFilter.group') }}：</span
-                    >
-                    <n-select
-                      v-model:value="permFilter.withdrawConfigGroupId"
-                      :options="configGroupFilterOptions"
-                      size="small"
-                      clearable
-                      :placeholder="t('common.all')"
-                      class="flex-1"
-                    />
-                  </div>
-                  <div class="flex items-center gap-1">
-                    <span class="shrink-0 text-[12px] w-[42px] text-right"
-                      >{{ t('common.status') }}：</span
-                    >
-                    <n-select
-                      v-model:value="permFilter.withdrawState"
-                      :options="permStateOptions"
-                      size="small"
-                      clearable
-                      :placeholder="t('common.all')"
-                      class="flex-1"
-                    />
-                  </div>
-                </div>
-              </div>
-              <div class="flex-1 min-w-0">
-                <div class="font-semibold text-[14px] mb-2">
-                  {{ t('system.sysUser.permFilter.approvalTitle') }}
-                </div>
-                <div class="flex flex-col gap-2">
-                  <div class="flex items-center gap-1">
-                    <span class="shrink-0 text-[12px] w-[42px] text-right"
-                      >{{ t('system.sysUser.permFilter.tenant') }}：</span
-                    >
-                    <n-select
-                      v-model:value="permFilter.approvalTenantIds"
-                      :options="tenantFilterOptions"
-                      size="small"
-                      multiple
-                      clearable
-                      :placeholder="t('common.all')"
-                      class="flex-1"
-                    />
-                  </div>
-                  <div class="flex items-center gap-1">
-                    <span class="shrink-0 text-[12px] w-[42px] text-right"
-                      >{{ t('system.sysUser.permFilter.permType') }}：</span
-                    >
-                    <n-select
-                      v-model:value="permFilter.approvalUserRole"
-                      :options="approvalRoleOptions"
-                      size="small"
-                      clearable
-                      :placeholder="t('common.all')"
-                      class="flex-1"
-                    />
-                  </div>
-                  <div class="flex items-center gap-1">
-                    <span class="shrink-0 text-[12px] w-[42px] text-right"
-                      >{{ t('common.status') }}：</span
-                    >
-                    <n-select
-                      v-model:value="permFilter.approvalState"
-                      :options="permStateOptions"
-                      size="small"
-                      clearable
-                      :placeholder="t('common.all')"
-                      class="flex-1"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="flex justify-end gap-2 mt-3 pt-2.5 border-t border-gray-100"
-            >
-              <n-button size="small" @click="handleResetPermFilter">
-                {{ t('system.sysUser.permFilter.reset') }}
-              </n-button>
-              <n-button
-                size="small"
-                type="primary"
-                @click="handleApplyPermFilter"
-              >
-                {{ t('system.sysUser.permFilter.apply') }}
-              </n-button>
-            </div>
-          </div>
-        </n-popover>
-      </n-space>
-    </template>
-  </ProCrudTable>
-</template>
-
 <script lang="ts" setup>
-import { computed, h, onMounted, reactive, ref } from 'vue';
 import type { Component } from 'vue';
+
+import type {
+  SysUserApprovalPermissionQueryStateEnum,
+  SysUserPageListReq,
+  SysUsersPageListRsp,
+  SysUserWithdrawPermissionQueryStateEnum,
+} from '#/api/system';
+import type {
+  ProColumn,
+  ProCrudTableInstance,
+  ProSearchFormColumn,
+} from '#/components/pro';
+
+import { computed, h, onMounted, reactive, ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+
 import { DownOutlined, PlusOutlined } from '@vicons/antd';
 import {
   NBadge,
@@ -237,41 +34,31 @@ import {
   useMessage,
   useModal,
 } from 'naive-ui';
-import { useI18n } from 'vue-i18n';
+
+import { api } from '#/api';
 import { ConfirmSwitch } from '#/components/confirm-switch';
+import { useDictionary } from '#/components/dict-select';
 import { GoogleAuth } from '#/components/google-auth';
 import { ProCrudTable } from '#/components/pro';
-import type {
-  ProColumn,
-  ProCrudTableInstance,
-  ProSearchFormColumn,
-} from '#/components/pro';
 import { createActionColumn } from '#/components/table';
 import {
-  renderIPLink,
   renderBoolTag,
+  renderIPLink,
   renderTagList,
 } from '#/components/table-renders';
-import { api } from '#/api';
-import type {
-  SysUserPageListReq,
-  SysUserWithdrawPermissionQueryStateEnum,
-  SysUserApprovalPermissionQueryStateEnum,
-  SysUsersPageListRsp,
-} from '#/api/system';
 import { useTenantOptions } from '#/hooks';
 import { usePermission } from '#/hooks/usePermission';
-import { useDictionary } from '#/components/dict-select';
+
+import ApprovalPermCell from './components/ApprovalPermCell.vue';
+import BatchGrantPermModal from './components/BatchGrantPermModal.vue';
+import BatchLimitModal from './components/BatchLimitModal.vue';
+import BatchRangeModal from './components/BatchRangeModal.vue';
 import ResetPasswordModal from './components/ResetPasswordModal.vue';
 import TenantUserCreateModal from './components/TenantUserCreateModal.vue';
 import TenantUserDetailModal from './components/TenantUserDetailModal.vue';
-import BatchRangeModal from './components/BatchRangeModal.vue';
-import BatchLimitModal from './components/BatchLimitModal.vue';
-import BatchGrantPermModal from './components/BatchGrantPermModal.vue';
 import WithdrawPermCell from './components/WithdrawPermCell.vue';
-import ApprovalPermCell from './components/ApprovalPermCell.vue';
 
-const tableRef = ref<ProCrudTableInstance | null>(null);
+const tableRef = ref<null | ProCrudTableInstance>(null);
 const selectedRows = ref<SysUsersPageListRsp[]>([]);
 
 const { t } = useI18n();
@@ -286,7 +73,7 @@ const dictDynamic = useDictionary({ source: 'dynamic' });
 
 function resolveRoleNames(roleIds: string): string[] {
   return String(roleIds || '')
-    .replace(/^,|,$/g, '')
+    .replaceAll(/^,|,$/g, '')
     .split(',')
     .map((id) => dictDynamic.findLabel('roleList', Number(id.trim())))
     .filter(Boolean);
@@ -296,13 +83,13 @@ function resolveRoleNames(roleIds: string): string[] {
 const { tenantOptions, load: loadTenants } = useTenantOptions();
 
 const permFilter = reactive<{
-  withdrawTenantIds: number[];
-  withdrawUserRank: string | null;
-  withdrawConfigGroupId: number | null;
-  withdrawState: SysUserWithdrawPermissionQueryStateEnum | null;
+  approvalState: null | SysUserApprovalPermissionQueryStateEnum;
   approvalTenantIds: number[];
-  approvalUserRole: number | null;
-  approvalState: SysUserApprovalPermissionQueryStateEnum | null;
+  approvalUserRole: null | number;
+  withdrawConfigGroupId: null | number;
+  withdrawState: null | SysUserWithdrawPermissionQueryStateEnum;
+  withdrawTenantIds: number[];
+  withdrawUserRank: null | string;
 }>({
   withdrawTenantIds: [],
   withdrawUserRank: null,
@@ -336,11 +123,11 @@ const approvalRoleOptions = computed(() =>
 
 const permFilterCount = computed(() => {
   let count = 0;
-  if (permFilter.withdrawTenantIds.length) count++;
+  if (permFilter.withdrawTenantIds.length > 0) count++;
   if (permFilter.withdrawUserRank) count++;
   if (permFilter.withdrawConfigGroupId) count++;
   if (permFilter.withdrawState !== null) count++;
-  if (permFilter.approvalTenantIds.length) count++;
+  if (permFilter.approvalTenantIds.length > 0) count++;
   if (permFilter.approvalUserRole !== null) count++;
   if (permFilter.approvalState !== null) count++;
   return count;
@@ -533,7 +320,7 @@ const columns = computed<ProColumn[]>(() => [
         .split(',')
         .map((s) => s.trim())
         .filter(Boolean);
-      if (!names.length) return '--';
+      if (names.length === 0) return '--';
       return renderTagList(names, 'sky');
     },
   },
@@ -689,7 +476,7 @@ const hasSelection = computed(() => selectedRows.value.length > 0);
 
 // 批量调整出款权限下拉选项（按各自子权限过滤）
 const batchWithdrawOptions = computed(() => {
-  const opts: Array<{ label: string; key: string }> = [];
+  const opts: Array<{ key: string; label: string; }> = [];
   if (
     hasPermission([
       'SystemManage:SysUserPage:UserPage:BatchUpdateTenantSysUserWithdrawAuditAmountRange',
@@ -740,7 +527,7 @@ function handleBatchWithdraw(key: string) {
     (r) => r.canOperate && r.hasWithdrawConfig,
   );
   const skipped = selectedRows.value.length - eligible.length;
-  if (!eligible.length) {
+  if (eligible.length === 0) {
     message.warning(t('system.sysUser.batch.noWithdrawPermission'));
     return;
   }
@@ -834,7 +621,7 @@ function handleBatchStatus(key: string) {
     positiveText: t('common.confirm'),
     negativeText: t('common.cancel'),
     onPositiveClick: async () => {
-      if (!userIds.length) {
+      if (userIds.length === 0) {
         message.warning(t('system.sysUser.detail.notConfigured'));
         return;
       }
@@ -864,7 +651,7 @@ function handleBatchGrantPerm() {
   // 业务过滤：只对 canOperate=true 的行赋权
   const eligible = selectedRows.value.filter((r) => r.canOperate);
   const skipped = selectedRows.value.length - eligible.length;
-  if (!eligible.length) {
+  if (eligible.length === 0) {
     message.warning(t('system.sysUser.batch.noGrantPermission'));
     return;
   }
@@ -892,12 +679,12 @@ function handleBatchGrantPerm() {
 }
 
 async function handleBatchDelete(rows: SysUsersPageListRsp[]) {
-  if (!rows.length) return;
+  if (rows.length === 0) return;
 
   // 业务过滤：只删除 canOperate=true 的行
   const eligible = rows.filter((r) => r.canOperate);
   const skipped = rows.length - eligible.length;
-  if (!eligible.length) {
+  if (eligible.length === 0) {
     message.warning(t('system.sysUser.batch.noDeletePermission'));
     return;
   }
@@ -929,12 +716,12 @@ async function handleBatchDelete(rows: SysUsersPageListRsp[]) {
 }
 
 async function loadDataTable(params: {
-  userName?: string;
-  state?: SysUserPageListReq['state'];
-  roleId?: number;
-  tenantId?: number;
   pageNo?: number;
   pageSize?: number;
+  roleId?: number;
+  state?: SysUserPageListReq['state'];
+  tenantId?: number;
+  userName?: string;
 }) {
   const requestParams: SysUserPageListReq = {
     userName: String(params?.userName ?? '').trim() || undefined,
@@ -942,13 +729,13 @@ async function loadDataTable(params: {
     roleId: params?.roleId,
     tenantId: params?.tenantId || undefined,
     // 充提权限筛选
-    withdraw_TenantIds: permFilter.withdrawTenantIds.length
+    withdraw_TenantIds: permFilter.withdrawTenantIds.length > 0
       ? permFilter.withdrawTenantIds
       : undefined,
     withdraw_UserRank: permFilter.withdrawUserRank || undefined,
     withdraw_ConfigGroupId: permFilter.withdrawConfigGroupId ?? undefined,
     withdrawState: permFilter.withdrawState ?? undefined,
-    approval_TenantIds: permFilter.approvalTenantIds.length
+    approval_TenantIds: permFilter.approvalTenantIds.length > 0
       ? permFilter.approvalTenantIds
       : undefined,
     approval_UserRole: permFilter.approvalUserRole ?? undefined,
@@ -1064,6 +851,214 @@ async function handleRefreshGoogleCaptcha(record: SysUsersPageListRsp) {
   });
 }
 </script>
+
+<template>
+  <ProCrudTable
+    ref="tableRef"
+    class="system-user-page"
+    :columns="columns"
+    :search-columns="searchColumns"
+    :request="loadDataTable"
+    :action-column="actionColumn"
+    :row-props="rowProps"
+    row-key="userId"
+    :row-selection="{ disabled: (row) => !row.canOperate }"
+    :batch-actions="batchActions"
+    search-cols="1 s:2 m:3 l:3"
+    @selection-change="handleSelectionChange"
+    @batch-action="handleBatchAction"
+    search-layout="flex"
+  >
+    <template #table-header>
+      <NSpace :size="8">
+        <n-button
+          type="primary"
+          v-permission="['SystemManage:SysUserPage:UserPage:Add']"
+          @click="handleAdd"
+        >
+          <template #icon>
+            <NIcon><PlusOutlined /></NIcon>
+          </template>
+          {{ t('system.sysUser.batch.addUser') }}
+        </n-button>
+        <NDropdown
+          v-if="batchWithdrawOptions.length > 0"
+          trigger="click"
+          :options="batchWithdrawOptions"
+          @select="handleBatchWithdraw"
+        >
+          <n-button :disabled="!hasSelection">
+{{
+            t('system.sysUser.batch.adjustWithdraw')
+          }}
+</n-button>
+        </NDropdown>
+        <NDropdown
+          v-if="canChangeBatchStatus"
+          trigger="click"
+          :options="batchStatusOptions"
+          @select="handleBatchStatus"
+        >
+          <n-button :disabled="!hasSelection">
+{{
+            t('system.sysUser.batch.changeStatus')
+          }}
+</n-button>
+        </NDropdown>
+        <n-button
+          v-permission="[
+            'SystemManage:SysUserPage:UserPage:BatchUpdateTenantSysUserPermission',
+          ]"
+          type="warning"
+          :disabled="!hasSelection"
+          @click="handleBatchGrantPerm"
+        >
+          {{ t('system.sysUser.batch.grantPerm') }}
+        </n-button>
+      </NSpace>
+    </template>
+    <template #toolbar-right>
+      <NSpace :wrap="false" :size="8" align="center">
+        <n-popover
+          trigger="click"
+          placement="bottom-end"
+          :width="680"
+          :show-arrow="true"
+          :style="{ maxHeight: '500px', overflow: 'visible' }"
+        >
+          <template #trigger>
+            <n-button
+              size="small"
+              :type="permFilterCount > 0 ? 'info' : 'default'"
+            >
+              {{ t('system.sysUser.permFilter.title') }}
+              <template #icon>
+                <NIcon><DownOutlined /></NIcon>
+              </template>
+              <NBadge
+                v-if="permFilterCount > 0"
+                :value="permFilterCount"
+                :max="9"
+                style="margin-left: 4px"
+              />
+            </n-button>
+          </template>
+          <div class="py-1">
+            <div class="flex gap-4">
+              <div class="flex-1 min-w-0">
+                <div class="font-semibold text-[14px] mb-2">
+                  {{ t('system.sysUser.permFilter.withdrawTitle') }}
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="flex items-center gap-1">
+                    <span class="shrink-0 text-[12px] w-[42px] text-right">{{ t('system.sysUser.permFilter.tenant') }}：</span>
+                    <NSelect
+                      v-model:value="permFilter.withdrawTenantIds"
+                      :options="tenantFilterOptions"
+                      size="small"
+                      multiple
+                      clearable
+                      :placeholder="t('common.all')"
+                      class="flex-1"
+                    />
+                  </div>
+                  <div class="flex items-center gap-1">
+                    <span class="shrink-0 text-[12px] w-[42px] text-right">{{ t('system.sysUser.permFilter.position') }}：</span>
+                    <NSelect
+                      v-model:value="permFilter.withdrawUserRank"
+                      :options="positionFilterOptions"
+                      size="small"
+                      clearable
+                      :placeholder="t('common.all')"
+                      class="flex-1"
+                    />
+                  </div>
+                  <div class="flex items-center gap-1">
+                    <span class="shrink-0 text-[12px] w-[42px] text-right">{{ t('system.sysUser.permFilter.group') }}：</span>
+                    <NSelect
+                      v-model:value="permFilter.withdrawConfigGroupId"
+                      :options="configGroupFilterOptions"
+                      size="small"
+                      clearable
+                      :placeholder="t('common.all')"
+                      class="flex-1"
+                    />
+                  </div>
+                  <div class="flex items-center gap-1">
+                    <span class="shrink-0 text-[12px] w-[42px] text-right">{{ t('common.status') }}：</span>
+                    <NSelect
+                      v-model:value="permFilter.withdrawState"
+                      :options="permStateOptions"
+                      size="small"
+                      clearable
+                      :placeholder="t('common.all')"
+                      class="flex-1"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="flex-1 min-w-0">
+                <div class="font-semibold text-[14px] mb-2">
+                  {{ t('system.sysUser.permFilter.approvalTitle') }}
+                </div>
+                <div class="flex flex-col gap-2">
+                  <div class="flex items-center gap-1">
+                    <span class="shrink-0 text-[12px] w-[42px] text-right">{{ t('system.sysUser.permFilter.tenant') }}：</span>
+                    <NSelect
+                      v-model:value="permFilter.approvalTenantIds"
+                      :options="tenantFilterOptions"
+                      size="small"
+                      multiple
+                      clearable
+                      :placeholder="t('common.all')"
+                      class="flex-1"
+                    />
+                  </div>
+                  <div class="flex items-center gap-1">
+                    <span class="shrink-0 text-[12px] w-[42px] text-right">{{ t('system.sysUser.permFilter.permType') }}：</span>
+                    <NSelect
+                      v-model:value="permFilter.approvalUserRole"
+                      :options="approvalRoleOptions"
+                      size="small"
+                      clearable
+                      :placeholder="t('common.all')"
+                      class="flex-1"
+                    />
+                  </div>
+                  <div class="flex items-center gap-1">
+                    <span class="shrink-0 text-[12px] w-[42px] text-right">{{ t('common.status') }}：</span>
+                    <NSelect
+                      v-model:value="permFilter.approvalState"
+                      :options="permStateOptions"
+                      size="small"
+                      clearable
+                      :placeholder="t('common.all')"
+                      class="flex-1"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="flex justify-end gap-2 mt-3 pt-2.5 border-t border-gray-100"
+            >
+              <n-button size="small" @click="handleResetPermFilter">
+                {{ t('system.sysUser.permFilter.reset') }}
+              </n-button>
+              <n-button
+                size="small"
+                type="primary"
+                @click="handleApplyPermFilter"
+              >
+                {{ t('system.sysUser.permFilter.apply') }}
+              </n-button>
+            </div>
+          </div>
+        </n-popover>
+      </NSpace>
+    </template>
+  </ProCrudTable>
+</template>
 
 <style lang="less" scoped>
 // 行级禁用遮罩：整行置灰 + 拦截点击，让里面的开关/按钮自动不可操作。

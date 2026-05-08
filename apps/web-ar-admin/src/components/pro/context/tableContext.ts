@@ -1,6 +1,8 @@
 /* oxlint-disable */
 import type { DataTableRowKey, PaginationProps } from 'naive-ui';
 
+import type { ComputedRef, InjectionKey, Ref } from 'vue';
+
 import type {
   ProColumn,
   ProDataTableInstance,
@@ -9,7 +11,6 @@ import type {
   Recordable,
 } from '../types';
 
-import type { ComputedRef, InjectionKey, Ref } from 'vue';
 import { inject, provide } from 'vue';
 
 /**

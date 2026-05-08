@@ -591,12 +591,12 @@ function createQuickDateWriteValue(
 
   return valueFormat === 'string'
     ? [format(item.value[0], pattern), format(item.value[1], pattern)]
-    : timezone
+    : (timezone
       ? [
           panelToExternalTimestamp(item.value[0], timezone),
           panelToExternalTimestamp(item.value[1], timezone),
         ]
-      : [item.value[0], item.value[1]];
+      : [item.value[0], item.value[1]]);
 }
 
 /**

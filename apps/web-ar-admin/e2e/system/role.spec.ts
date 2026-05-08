@@ -63,10 +63,16 @@ test('search by role name updates table', async ({ page }) => {
 
   // Type a search term that won't match anything — table should go empty
   await page.getByRole('textbox').first().fill('__no_match_xyz__');
-  await page.getByRole('button', { name: /search|查询/i }).first().click();
+  await page
+    .getByRole('button', { name: /search|查询/i })
+    .first()
+    .click();
 
   await expect(
-    page.getByRole('row').nth(1).or(page.getByText(/no data|暂无数据/i).first()),
+    page
+      .getByRole('row')
+      .nth(1)
+      .or(page.getByText(/no data|暂无数据/i).first()),
   ).toBeVisible({ timeout: 8000 });
 });
 

@@ -1,3 +1,5 @@
+import type { ComputedRef, InjectionKey, Ref } from 'vue';
+
 /* oxlint-disable */
 import type {
   ProFieldInstance,
@@ -7,7 +9,6 @@ import type {
   Recordable,
 } from '../types';
 
-import type { ComputedRef, InjectionKey, Ref } from 'vue';
 import { computed, inject, provide, shallowRef } from 'vue';
 
 import { getValueByPath, setValueByPath } from '../utils';

@@ -1,3 +1,270 @@
+<script setup lang="ts">
+import type { FormInst } from 'naive-ui';
+
+import type {
+  BatchAddSysUsersApprovalApiConfigReq,
+  BatchAddSysUsersWithdrawConfigReq,
+  SysUsersDetailRsp,
+  SysUsersUpdateReq,
+} from '#/api/system';
+
+import { computed, onMounted, reactive, ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+import { useMessage } from 'naive-ui';
+
+import { api } from '#/api';
+import { AsyncSelect } from '#/components/dict-select';
+import { TenantCheckPanel } from '#/components/panel';
+import { useTenantOptions } from '#/hooks';
+
+import ApprovalPermCard from './ApprovalPermCard.vue';
+import { isEnabledFlag } from './composables/permCardHelpers';
+import WithdrawPermCard from './WithdrawPermCard.vue';
+
+interface Props {
+  userId: number;
+}
+
+const props = defineProps<Props>();
+const emit = defineEmits<{
+  close: [];
+  save: [];
+}>();
+
+const { t } = useI18n();
+const message = useMessage();
+const { tenantOptions: rawTenantOptions } = useTenantOptions();
+const tenantOptions = rawTenantOptions;
+
+// 权限卡片商户选项：仅包含归属商户已选项
+const permTenantOptions = computed(() => {
+  if (basicForm.manageTenantIds.length === 0) return [];
+  const selectedIds = new Set(basicForm.manageTenantIds.map(Number));
+  return tenantOptions.value.filter((opt) =>
+    selectedIds.has(Number(opt.value)),
+  );
+});
+
+const activeTab = ref('basic');
+
+// configured 代表"曾经配置过"（基于 rank/role 是否有值），与 enabled 解耦
+const withdrawConfigured = computed(
+  () => !!detail.value?.withdrawConfig?.withdraw_UserRank,
+);
+const approvalConfigured = computed(
+  () => !!detail.value?.approvalConfig?.approval_UserRole,
+);
+// enabled 与列表保持一致，权威源为 userInfo.xxxState；由 PermCard 的 update:enabled 实时回传
+const withdrawEnabled = ref(false);
+const approvalEnabled = ref(false);
+// 初始快照，用于 handleSave 判断是否需要单独走 updateTenantSysUserState
+const initialWithdrawEnabled = ref(false);
+const initialApprovalEnabled = ref(false);
+
+type TabStatus = 'none' | 'off' | 'on';
+function permStatus(configured: boolean, enabled: boolean): TabStatus {
+  if (!configured) return 'none';
+  return enabled ? 'on' : 'off';
+}
+
+const tabs = computed(() => [
+  { key: 'basic', label: t('system.sysUser.detail.basicInfo') },
+  {
+    key: 'withdraw',
+    label: t('system.sysUser.detail.withdrawPerm'),
+    status: permStatus(withdrawConfigured.value, withdrawEnabled.value),
+  },
+  {
+    key: 'approval',
+    label: t('system.sysUser.detail.approvalPerm'),
+    status: permStatus(approvalConfigured.value, approvalEnabled.value),
+  },
+]);
+
+const statusMap = computed<Record<TabStatus, { cls: string; text: string; }>>(
+  () => ({
+    on: {
+      text: t('system.sysUser.detail.enabled'),
+      cls: 'tu-detail__tab-badge--on',
+    },
+    off: {
+      text: t('system.sysUser.detail.disabled'),
+      cls: 'tu-detail__tab-badge--off',
+    },
+    none: {
+      text: t('system.sysUser.detail.notConfigured'),
+      cls: 'tu-detail__tab-badge--none',
+    },
+  }),
+);
+
+const detailLoading = ref(false);
+const saving = ref(false);
+const detail = ref<null | SysUsersDetailRsp>(null);
+
+const basicFormRef = ref<FormInst | null>(null);
+const withdrawPermRef = ref<InstanceType<typeof WithdrawPermCard> | null>(null);
+const approvalPermRef = ref<InstanceType<typeof ApprovalPermCard> | null>(null);
+const withdrawConfig = ref<
+  BatchAddSysUsersWithdrawConfigReq | null | undefined
+>(undefined);
+const approvalConfig = ref<
+  BatchAddSysUsersApprovalApiConfigReq | null | undefined
+>(undefined);
+
+// 基本信息表单
+const basicForm = reactive({
+  userName: '',
+  nickName: '',
+  roleIds: [] as number[],
+  orgId: '',
+  manageTenantIds: [] as (number | string)[],
+  userState: '1',
+  googleVerify: '0',
+});
+
+const basicRules = {
+  nickName: {
+    required: true,
+    message: () => t('system.sysUser.detail.rule.userNameRequired'),
+    trigger: 'blur',
+  },
+  roleIds: {
+    required: true,
+    type: 'array' as const,
+    message: () => t('system.sysUser.detail.rule.roleRequired'),
+    trigger: 'change',
+  },
+  manageTenantIds: {
+    required: true,
+    type: 'array' as const,
+    message: () => t('system.sysUser.detail.rule.tenantRequired'),
+    trigger: 'change',
+  },
+};
+
+// 加载详情
+async function loadDetail() {
+  detailLoading.value = true;
+  try {
+    const { data, code } = await api.system.getTenantUserDetail({
+      userId: props.userId,
+    });
+    if (code !== 0 || !data) return;
+
+    detail.value = data;
+
+    // 填充基本信息
+    const info = data.userInfo;
+    basicForm.userName = info.userName;
+    basicForm.nickName = info.nickName;
+    basicForm.roleIds = Array.isArray(info.roleIds) ? info.roleIds : [];
+    basicForm.orgId = info.orgId;
+    basicForm.manageTenantIds = Array.isArray(info.manageTenantIds)
+      ? info.manageTenantIds
+      : [];
+    // 归一化为字符串（接口类型虽声明 string，但实际下发可能是 number；
+    // 且 || 对 0 会 fallthrough，会把「禁用」误当成「启用」）
+    basicForm.userState =
+      info.userState !== null && info.userState !== undefined
+        ? String(info.userState)
+        : '1';
+    basicForm.googleVerify =
+      info.googleVerify !== null && info.googleVerify !== undefined
+        ? String(info.googleVerify)
+        : '0';
+
+    // 以 userInfo 的权威状态字段初始化 tab 徽章状态与快照
+    // isEnabledFlag 兼容 1 / "1" / true 三种返回（后端实际下发常是 number 而非 string）
+    const withdrawOn = isEnabledFlag(info.withdraw_EnableState);
+    const approvalOn = isEnabledFlag(info.approval_UserState);
+    withdrawEnabled.value = withdrawOn;
+    approvalEnabled.value = approvalOn;
+    initialWithdrawEnabled.value = withdrawOn;
+    initialApprovalEnabled.value = approvalOn;
+  } catch {
+    message.error(t('system.sysUser.detail.loadFailed'));
+  } finally {
+    detailLoading.value = false;
+  }
+}
+
+onMounted(loadDetail);
+
+// 保存
+async function handleSave() {
+  try {
+    await basicFormRef.value?.validate();
+  } catch {
+    return;
+  }
+  if (withdrawPermRef.value && !(await withdrawPermRef.value.validate()))
+    return;
+  if (approvalPermRef.value && !(await approvalPermRef.value.validate()))
+    return;
+
+  const req: SysUsersUpdateReq = {
+    userId: props.userId,
+    userInfo: {
+      userName: basicForm.userName,
+      nickName: basicForm.nickName,
+      roleIds: basicForm.roleIds,
+      orgId: basicForm.orgId,
+      manageTenantIds: basicForm.manageTenantIds.map(Number),
+      userState: basicForm.userState,
+      googleVerify: basicForm.googleVerify,
+    },
+    // 卡片始终输出完整结构（关闭时 EnableState=0 + 默认空字段），永远透传给后端，
+    // 与新增 / 批量赋权对齐 payload 结构。Card 内部以 detail 为初始 form，open 状态下
+    // 输出已经反映用户编辑后的完整字段，无需再用 Object.assign 与 detail 合并。
+    withdrawConfig: withdrawConfig.value ?? undefined,
+    approvalConfig: approvalConfig.value ?? undefined,
+  };
+  saving.value = true;
+  try {
+    const { code, msg } = await api.system.updateTenantSysUser(req);
+    if (code !== 0) {
+      message.error(msg || t('system.sysUser.detail.saveFailed'));
+      return;
+    }
+
+    // 出款/充值权限的 enabled 开关 **不在** updateTenantSysUser 接口语义内，
+    // 若用户在编辑弹窗里改了开关，单独走 updateTenantSysUserState 切状态
+    // (stateType: 1=出款, 2=充值；与列表行 switch 用同一接口保持一致)
+    const stateTogglePromises: Promise<any>[] = [];
+    if (withdrawEnabled.value !== initialWithdrawEnabled.value) {
+      stateTogglePromises.push(
+        api.system.updateTenantSysUserState({
+          userIds: [props.userId],
+          stateType: 1,
+          state: withdrawEnabled.value ? 1 : 0,
+        }),
+      );
+    }
+    if (approvalEnabled.value !== initialApprovalEnabled.value) {
+      stateTogglePromises.push(
+        api.system.updateTenantSysUserState({
+          userIds: [props.userId],
+          stateType: 2,
+          state: approvalEnabled.value ? 1 : 0,
+        }),
+      );
+    }
+    if (stateTogglePromises.length > 0) {
+      await Promise.all(stateTogglePromises);
+    }
+
+    message.success(t('system.sysUser.detail.saveSuccess'));
+    emit('save');
+  } catch {
+    message.error(t('system.sysUser.detail.saveFailed'));
+  } finally {
+    saving.value = false;
+  }
+}
+</script>
+
 <template>
   <div class="tu-detail">
     <div class="tu-detail__main">
@@ -149,263 +416,6 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { computed, onMounted, reactive, ref } from 'vue';
-import { useI18n } from 'vue-i18n';
-import { useMessage } from 'naive-ui';
-import type { FormInst } from 'naive-ui';
-import { api } from '#/api';
-import { useTenantOptions } from '#/hooks';
-import { TenantCheckPanel } from '#/components/panel';
-import type {
-  BatchAddSysUsersWithdrawConfigReq,
-  BatchAddSysUsersApprovalApiConfigReq,
-  SysUsersDetailRsp,
-  SysUsersUpdateReq,
-} from '#/api/system';
-import WithdrawPermCard from './WithdrawPermCard.vue';
-import ApprovalPermCard from './ApprovalPermCard.vue';
-import { isEnabledFlag } from './composables/permCardHelpers';
-import { AsyncSelect } from '#/components/dict-select';
-
-interface Props {
-  userId: number;
-}
-
-const props = defineProps<Props>();
-const emit = defineEmits<{
-  close: [];
-  save: [];
-}>();
-
-const { t } = useI18n();
-const message = useMessage();
-const { tenantOptions: rawTenantOptions } = useTenantOptions();
-const tenantOptions = rawTenantOptions;
-
-// 权限卡片商户选项：仅包含归属商户已选项
-const permTenantOptions = computed(() => {
-  if (!basicForm.manageTenantIds.length) return [];
-  const selectedIds = new Set(basicForm.manageTenantIds.map(Number));
-  return tenantOptions.value.filter((opt) =>
-    selectedIds.has(Number(opt.value)),
-  );
-});
-
-const activeTab = ref('basic');
-
-// configured 代表"曾经配置过"（基于 rank/role 是否有值），与 enabled 解耦
-const withdrawConfigured = computed(
-  () => !!detail.value?.withdrawConfig?.withdraw_UserRank,
-);
-const approvalConfigured = computed(
-  () => !!detail.value?.approvalConfig?.approval_UserRole,
-);
-// enabled 与列表保持一致，权威源为 userInfo.xxxState；由 PermCard 的 update:enabled 实时回传
-const withdrawEnabled = ref(false);
-const approvalEnabled = ref(false);
-// 初始快照，用于 handleSave 判断是否需要单独走 updateTenantSysUserState
-const initialWithdrawEnabled = ref(false);
-const initialApprovalEnabled = ref(false);
-
-type TabStatus = 'on' | 'off' | 'none';
-function permStatus(configured: boolean, enabled: boolean): TabStatus {
-  if (!configured) return 'none';
-  return enabled ? 'on' : 'off';
-}
-
-const tabs = computed(() => [
-  { key: 'basic', label: t('system.sysUser.detail.basicInfo') },
-  {
-    key: 'withdraw',
-    label: t('system.sysUser.detail.withdrawPerm'),
-    status: permStatus(withdrawConfigured.value, withdrawEnabled.value),
-  },
-  {
-    key: 'approval',
-    label: t('system.sysUser.detail.approvalPerm'),
-    status: permStatus(approvalConfigured.value, approvalEnabled.value),
-  },
-]);
-
-const statusMap = computed<Record<TabStatus, { text: string; cls: string }>>(
-  () => ({
-    on: {
-      text: t('system.sysUser.detail.enabled'),
-      cls: 'tu-detail__tab-badge--on',
-    },
-    off: {
-      text: t('system.sysUser.detail.disabled'),
-      cls: 'tu-detail__tab-badge--off',
-    },
-    none: {
-      text: t('system.sysUser.detail.notConfigured'),
-      cls: 'tu-detail__tab-badge--none',
-    },
-  }),
-);
-
-const detailLoading = ref(false);
-const saving = ref(false);
-const detail = ref<SysUsersDetailRsp | null>(null);
-
-const basicFormRef = ref<FormInst | null>(null);
-const withdrawPermRef = ref<InstanceType<typeof WithdrawPermCard> | null>(null);
-const approvalPermRef = ref<InstanceType<typeof ApprovalPermCard> | null>(null);
-const withdrawConfig = ref<
-  BatchAddSysUsersWithdrawConfigReq | null | undefined
->(undefined);
-const approvalConfig = ref<
-  BatchAddSysUsersApprovalApiConfigReq | null | undefined
->(undefined);
-
-// 基本信息表单
-const basicForm = reactive({
-  userName: '',
-  nickName: '',
-  roleIds: [] as number[],
-  orgId: '',
-  manageTenantIds: [] as (number | string)[],
-  userState: '1',
-  googleVerify: '0',
-});
-
-const basicRules = {
-  nickName: {
-    required: true,
-    message: () => t('system.sysUser.detail.rule.userNameRequired'),
-    trigger: 'blur',
-  },
-  roleIds: {
-    required: true,
-    type: 'array' as const,
-    message: () => t('system.sysUser.detail.rule.roleRequired'),
-    trigger: 'change',
-  },
-  manageTenantIds: {
-    required: true,
-    type: 'array' as const,
-    message: () => t('system.sysUser.detail.rule.tenantRequired'),
-    trigger: 'change',
-  },
-};
-
-// 加载详情
-async function loadDetail() {
-  detailLoading.value = true;
-  try {
-    const { data, code } = await api.system.getTenantUserDetail({
-      userId: props.userId,
-    });
-    if (code !== 0 || !data) return;
-
-    detail.value = data;
-
-    // 填充基本信息
-    const info = data.userInfo;
-    basicForm.userName = info.userName;
-    basicForm.nickName = info.nickName;
-    basicForm.roleIds = Array.isArray(info.roleIds) ? info.roleIds : [];
-    basicForm.orgId = info.orgId;
-    basicForm.manageTenantIds = Array.isArray(info.manageTenantIds)
-      ? info.manageTenantIds
-      : [];
-    // 归一化为字符串（接口类型虽声明 string，但实际下发可能是 number；
-    // 且 || 对 0 会 fallthrough，会把「禁用」误当成「启用」）
-    basicForm.userState = info.userState !== null && info.userState !== undefined ? String(info.userState) : '1';
-    basicForm.googleVerify =
-      info.googleVerify !== null && info.googleVerify !== undefined ? String(info.googleVerify) : '0';
-
-    // 以 userInfo 的权威状态字段初始化 tab 徽章状态与快照
-    // isEnabledFlag 兼容 1 / "1" / true 三种返回（后端实际下发常是 number 而非 string）
-    const withdrawOn = isEnabledFlag(info.withdraw_EnableState);
-    const approvalOn = isEnabledFlag(info.approval_UserState);
-    withdrawEnabled.value = withdrawOn;
-    approvalEnabled.value = approvalOn;
-    initialWithdrawEnabled.value = withdrawOn;
-    initialApprovalEnabled.value = approvalOn;
-  } catch (e) {
-    message.error(t('system.sysUser.detail.loadFailed'));
-  } finally {
-    detailLoading.value = false;
-  }
-}
-
-onMounted(loadDetail);
-
-// 保存
-async function handleSave() {
-  try {
-    await basicFormRef.value?.validate();
-  } catch {
-    return;
-  }
-  if (withdrawPermRef.value && !(await withdrawPermRef.value.validate()))
-    return;
-  if (approvalPermRef.value && !(await approvalPermRef.value.validate()))
-    return;
-
-  const req: SysUsersUpdateReq = {
-    userId: props.userId,
-    userInfo: {
-      userName: basicForm.userName,
-      nickName: basicForm.nickName,
-      roleIds: basicForm.roleIds,
-      orgId: basicForm.orgId,
-      manageTenantIds: basicForm.manageTenantIds.map(Number),
-      userState: basicForm.userState,
-      googleVerify: basicForm.googleVerify,
-    },
-    // 卡片始终输出完整结构（关闭时 EnableState=0 + 默认空字段），永远透传给后端，
-    // 与新增 / 批量赋权对齐 payload 结构。Card 内部以 detail 为初始 form，open 状态下
-    // 输出已经反映用户编辑后的完整字段，无需再用 Object.assign 与 detail 合并。
-    withdrawConfig: withdrawConfig.value ?? undefined,
-    approvalConfig: approvalConfig.value ?? undefined,
-  };
-  saving.value = true;
-  try {
-    const { code, msg } = await api.system.updateTenantSysUser(req);
-    if (code !== 0) {
-      message.error(msg || t('system.sysUser.detail.saveFailed'));
-      return;
-    }
-
-    // 出款/充值权限的 enabled 开关 **不在** updateTenantSysUser 接口语义内，
-    // 若用户在编辑弹窗里改了开关，单独走 updateTenantSysUserState 切状态
-    // (stateType: 1=出款, 2=充值；与列表行 switch 用同一接口保持一致)
-    const stateTogglePromises: Promise<any>[] = [];
-    if (withdrawEnabled.value !== initialWithdrawEnabled.value) {
-      stateTogglePromises.push(
-        api.system.updateTenantSysUserState({
-          userIds: [props.userId],
-          stateType: 1,
-          state: withdrawEnabled.value ? 1 : 0,
-        }),
-      );
-    }
-    if (approvalEnabled.value !== initialApprovalEnabled.value) {
-      stateTogglePromises.push(
-        api.system.updateTenantSysUserState({
-          userIds: [props.userId],
-          stateType: 2,
-          state: approvalEnabled.value ? 1 : 0,
-        }),
-      );
-    }
-    if (stateTogglePromises.length) {
-      await Promise.all(stateTogglePromises);
-    }
-
-    message.success(t('system.sysUser.detail.saveSuccess'));
-    emit('save');
-  } catch {
-    message.error(t('system.sysUser.detail.saveFailed'));
-  } finally {
-    saving.value = false;
-  }
-}
-</script>
 
 <style lang="less" scoped>
 .tu-detail {

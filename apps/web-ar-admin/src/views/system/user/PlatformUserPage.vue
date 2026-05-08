@@ -5,72 +5,43 @@
  * @scope src/views/system/user
  */
 -->
-<template>
-  <ProCrudTable
-    ref="tableRef"
-    class="system-user-page"
-    :columns="columns"
-    :search-columns="searchColumns"
-    :request="loadDataTable"
-    :action-column="actionColumn"
-    row-key="userId"
-    row-selection
-    :batch-actions="batchActions"
-    :search-cols="'1 s:2 m:3 l:3'"
-    @selection-change="handleSelectionChange"
-    @batch-action="handleBatchAction"
-    searchLayout="flex"
-  >
-    <template #table-header>
-      <n-button
-        type="primary"
-        v-permission="['SystemManage:SysUserPage:UserPage:Add']"
-        @click="handleOpenUserModal('add')"
-      >
-        <template #icon>
-          <n-icon>
-            <PlusOutlined />
-          </n-icon>
-        </template>
-        {{ t('system.sysUser.batch.addUser') }}
-      </n-button>
-    </template>
-  </ProCrudTable>
-</template>
-
 <script lang="ts" setup>
-import { computed, h, onMounted, ref } from 'vue';
-import { useI18n } from 'vue-i18n';
-import { PlusOutlined } from '@vicons/antd';
-import { NIcon, useDialog, useMessage, useModal } from 'naive-ui';
-import { ConfirmSwitch } from '#/components/confirm-switch';
-import { GoogleAuth } from '#/components/google-auth';
-import { ProCrudTable } from '#/components/pro';
-import type {
-  ProColumn,
-  ProCrudTableInstance,
-  ProSearchFormColumn,
-} from '#/components/pro';
-import { createActionColumn } from '#/components/table';
-import {
-  renderIPLink,
-  renderBoolTag,
-  renderTagList,
-  renderDateTime,
-} from '#/components/table-renders';
-import { useDictionary } from '#/components/dict-select';
-import { api } from '#/api';
 import type {
   EnableEnum,
   SysUserPageListReq,
   SysUsersPageListRsp,
 } from '#/api/system';
+import type {
+  ProColumn,
+  ProCrudTableInstance,
+  ProSearchFormColumn,
+} from '#/components/pro';
+
+import { computed, h, onMounted, ref } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+import { PlusOutlined } from '@vicons/antd';
+import { NIcon, useDialog, useMessage, useModal } from 'naive-ui';
+
+import { api } from '#/api';
+import { ConfirmSwitch } from '#/components/confirm-switch';
+import { useDictionary } from '#/components/dict-select';
+import { GoogleAuth } from '#/components/google-auth';
+import { ProCrudTable } from '#/components/pro';
+import { createActionColumn } from '#/components/table';
+import {
+  renderBoolTag,
+  renderDateTime,
+  renderIPLink,
+  renderTagList,
+} from '#/components/table-renders';
+
 import ResetPasswordModal from './components/ResetPasswordModal.vue';
 import UserFormModal from './components/UserFormModal.vue';
 
 const { t } = useI18n();
 
-const tableRef = ref<ProCrudTableInstance | null>(null);
+const tableRef = ref<null | ProCrudTableInstance>(null);
 const selectedRows = ref<SysUsersPageListRsp[]>([]);
 
 const message = useMessage();
@@ -81,7 +52,7 @@ const dictDynamic = useDictionary({ source: 'dynamic' });
 
 function resolveRoleNames(roleIds: string): string[] {
   return String(roleIds || '')
-    .replace(/^,|,$/g, '')
+    .replaceAll(/^,|,$/g, '')
     .split(',')
     .map((id) => dictDynamic.findLabel('roleList', Number(id.trim())))
     .filter(Boolean);
@@ -264,7 +235,7 @@ function handleBatchAction(key: string, rows: SysUsersPageListRsp[]) {
 }
 
 async function handleBatchDelete(rows: SysUsersPageListRsp[]) {
-  if (!rows.length) return;
+  if (rows.length === 0) return;
 
   dialog.warning({
     title: t('common.tip'),
@@ -286,12 +257,12 @@ async function handleBatchDelete(rows: SysUsersPageListRsp[]) {
 }
 
 async function loadDataTable(params: {
-  userName?: string;
-  state?: SysUserPageListReq['state'];
-  roleId?: number;
   pageNo?: number;
   pageSize?: number;
+  roleId?: number;
+  state?: SysUserPageListReq['state'];
   tenantId?: number;
+  userName?: string;
 }) {
   const requestParams: SysUserPageListReq = {
     tenantId: params.tenantId,
@@ -397,3 +368,36 @@ async function handleRefreshGoogleCaptcha(record: SysUsersPageListRsp) {
   });
 }
 </script>
+
+<template>
+  <ProCrudTable
+    ref="tableRef"
+    class="system-user-page"
+    :columns="columns"
+    :search-columns="searchColumns"
+    :request="loadDataTable"
+    :action-column="actionColumn"
+    row-key="userId"
+    row-selection
+    :batch-actions="batchActions"
+    search-cols="1 s:2 m:3 l:3"
+    @selection-change="handleSelectionChange"
+    @batch-action="handleBatchAction"
+    search-layout="flex"
+  >
+    <template #table-header>
+      <n-button
+        type="primary"
+        v-permission="['SystemManage:SysUserPage:UserPage:Add']"
+        @click="handleOpenUserModal('add')"
+      >
+        <template #icon>
+          <NIcon>
+            <PlusOutlined />
+          </NIcon>
+        </template>
+        {{ t('system.sysUser.batch.addUser') }}
+      </n-button>
+    </template>
+  </ProCrudTable>
+</template>

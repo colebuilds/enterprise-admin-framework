@@ -1,3 +1,92 @@
+<script setup lang="ts">
+import type { FormInst } from 'naive-ui';
+
+import type {
+  PermCardProps,
+  WithdrawInitial,
+  WithdrawOutput,
+} from './composables/permCardTypes';
+
+import { ref, toRef } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+import { AsyncSelect } from '#/components/dict-select';
+
+import { useWithdrawConfigForm } from './composables/useWithdrawConfigForm';
+
+/**
+ * 出款权限卡
+ * - v-model 输出 payload（`WithdrawOutput | null`）。
+ * - v-model:enabled 输出启用态，父组件响应式消费。
+ * - `initial` 统一回显入口：undefined = 新增；有值 = 复制 / 编辑（内部不区分）。
+ * - `initialEnabled` 仅在编辑场景下作为权威 seed；其他场景让卡片自行推断。
+ * - 所有 state / 快照恢复 / 字段裁剪都在 `useWithdrawConfigForm` 里。
+ */
+// editingUserId：编辑模式下传当前用户 ID，新增 / 批量场景默认 0。
+// 用于 getSuperiorList 排除自己，避免把当前编辑用户列为自己的上级。
+const props = withDefaults(
+  defineProps<PermCardProps<WithdrawInitial> & { editingUserId?: number }>(),
+  {
+    initial: undefined,
+    initialEnabled: undefined,
+    tenantOptions: () => [],
+    editingUserId: 0,
+  },
+);
+
+const model = defineModel<null | WithdrawOutput>({ default: null });
+const enabled = defineModel<boolean>('enabled', { default: false });
+
+const { t, locale } = useI18n();
+const formRef = ref<FormInst | null>(null);
+
+const {
+  form,
+  selectedSuperiorIds,
+  currencyType,
+  currencyTypeOptions,
+  superiorOptions,
+  superiorLoading,
+  currencyLoading,
+  isMemberOrLeader,
+  isSupervisorOrManager,
+  currencyOptions,
+  currencyTenantOptions,
+  rules,
+  handleConfigGroupChange,
+  handleRankChange,
+  handleCurrencyTypeChange,
+  handleCurrencyChange,
+  toggleSuperior,
+  goDispatchConfig,
+  ORDER_AMOUNT_MIN,
+  ORDER_AMOUNT_MAX,
+  PROCESSING_LIMIT_MIN,
+  PROCESSING_LIMIT_MAX,
+} = useWithdrawConfigForm({
+  initial: toRef(props, 'initial'),
+  initialEnabled: toRef(props, 'initialEnabled'),
+  tenantOptions: toRef(props, 'tenantOptions'),
+  editingUserId: toRef(props, 'editingUserId'),
+  enabled,
+  output: model,
+});
+
+const tenantOptions = toRef(props, 'tenantOptions');
+
+async function validate(): Promise<boolean> {
+  if (!enabled.value) return true;
+  try {
+    await formRef.value?.validate();
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+defineExpose({ validate });
+</script>
+
 <template>
   <div class="perm-card" :class="{ 'perm-card--disabled': !enabled }">
     <div class="perm-card__title">
@@ -46,8 +135,7 @@
                   {{ t('system.sysUser.withdraw.noGroup') }}，<a
                     class="perm-card__link"
                     @click="goDispatchConfig"
-                    >{{ t('system.sysUser.withdraw.goCreate') }}</a
-                  >
+                    >{{ t('system.sysUser.withdraw.goCreate') }}</a>
                 </span>
               </template>
             </AsyncSelect>
@@ -71,7 +159,7 @@
             </template>
             <div class="perm-card__tag-picker">
               <n-spin v-if="superiorLoading" :size="14" />
-              <template v-else-if="superiorOptions.length">
+              <template v-else-if="superiorOptions.length > 0">
                 <div
                   v-for="item in superiorOptions"
                   :key="item.value"
@@ -87,8 +175,7 @@
                   <span
                     v-if="selectedSuperiorIds.includes(String(item.value))"
                     class="perm-card__tag-check"
-                    >✓</span
-                  >
+                    >✓</span>
                 </div>
               </template>
               <span v-else class="perm-card__empty-hint">
@@ -234,91 +321,6 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { ref, toRef } from 'vue';
-import { useI18n } from 'vue-i18n';
-import type { FormInst } from 'naive-ui';
-import { AsyncSelect } from '#/components/dict-select';
-import type {
-  PermCardProps,
-  WithdrawInitial,
-  WithdrawOutput,
-} from './composables/permCardTypes';
-import { useWithdrawConfigForm } from './composables/useWithdrawConfigForm';
-
-/**
- * 出款权限卡
- * - v-model 输出 payload（`WithdrawOutput | null`）。
- * - v-model:enabled 输出启用态，父组件响应式消费。
- * - `initial` 统一回显入口：undefined = 新增；有值 = 复制 / 编辑（内部不区分）。
- * - `initialEnabled` 仅在编辑场景下作为权威 seed；其他场景让卡片自行推断。
- * - 所有 state / 快照恢复 / 字段裁剪都在 `useWithdrawConfigForm` 里。
- */
-// editingUserId：编辑模式下传当前用户 ID，新增 / 批量场景默认 0。
-// 用于 getSuperiorList 排除自己，避免把当前编辑用户列为自己的上级。
-const props = withDefaults(
-  defineProps<PermCardProps<WithdrawInitial> & { editingUserId?: number }>(),
-  {
-    initial: undefined,
-    initialEnabled: undefined,
-    tenantOptions: () => [],
-    editingUserId: 0,
-  },
-);
-
-const model = defineModel<WithdrawOutput | null>({ default: null });
-const enabled = defineModel<boolean>('enabled', { default: false });
-
-const { t, locale } = useI18n();
-const formRef = ref<FormInst | null>(null);
-
-const {
-  form,
-  selectedSuperiorIds,
-  currencyType,
-  currencyTypeOptions,
-  superiorOptions,
-  superiorLoading,
-  currencyLoading,
-  isMemberOrLeader,
-  isSupervisorOrManager,
-  currencyOptions,
-  currencyTenantOptions,
-  rules,
-  handleConfigGroupChange,
-  handleRankChange,
-  handleCurrencyTypeChange,
-  handleCurrencyChange,
-  toggleSuperior,
-  goDispatchConfig,
-  ORDER_AMOUNT_MIN,
-  ORDER_AMOUNT_MAX,
-  PROCESSING_LIMIT_MIN,
-  PROCESSING_LIMIT_MAX,
-} = useWithdrawConfigForm({
-  initial: toRef(props, 'initial'),
-  initialEnabled: toRef(props, 'initialEnabled'),
-  tenantOptions: toRef(props, 'tenantOptions'),
-  editingUserId: toRef(props, 'editingUserId'),
-  enabled,
-  output: model,
-});
-
-const tenantOptions = toRef(props, 'tenantOptions');
-
-async function validate(): Promise<boolean> {
-  if (!enabled.value) return true;
-  try {
-    await formRef.value?.validate();
-    return true;
-  } catch {
-    return false;
-  }
-}
-
-defineExpose({ validate });
-</script>
 
 <style lang="less" scoped>
 .perm-card {

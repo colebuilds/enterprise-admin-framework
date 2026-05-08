@@ -1,44 +1,11 @@
-<template>
-  <div class="batch-modal">
-    <p class="batch-modal__tip">
-      {{ t('system.sysUser.batch.adjustRangeTip', { count }) }}
-    </p>
-    <n-form
-      ref="formRef"
-      :model="form"
-      :rules="rules"
-      label-placement="top"
-      size="small"
-    >
-      <n-form-item
-        :label="t('system.sysUser.batch.minAmount')"
-        path="minAmount"
-      >
-        <ProNumberRange
-          v-model:min="form.minAmount"
-          v-model:max="form.maxAmount"
-          :precision="2"
-          :number-min="ORDER_AMOUNT_MIN"
-          :number-max="ORDER_AMOUNT_MAX"
-          :min-placeholder="t('system.sysUser.batch.minAmountPlaceholder')"
-          :max-placeholder="t('system.sysUser.batch.maxAmountPlaceholder')"
-        />
-      </n-form-item>
-    </n-form>
-    <div class="batch-modal__actions">
-      <n-button @click="emit('close')">{{ t('common.cancel') }}</n-button>
-      <n-button type="primary" :loading="loading" @click="handleSave">
-        {{ t('common.confirm') }}
-      </n-button>
-    </div>
-  </div>
-</template>
-
 <script setup lang="ts">
+import type { FormInst, FormRules } from 'naive-ui';
+
 import { reactive, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
+
 import { useMessage } from 'naive-ui';
-import type { FormInst, FormRules } from 'naive-ui';
+
 import { api } from '#/api';
 import { ProNumberRange } from '#/components/pro';
 
@@ -58,7 +25,7 @@ const formRef = ref<FormInst | null>(null);
 const ORDER_AMOUNT_MIN = 1;
 const ORDER_AMOUNT_MAX = 500_000_000;
 
-const form = reactive({ minAmount: 500, maxAmount: 100000000 });
+const form = reactive({ minAmount: 500, maxAmount: 100_000_000 });
 
 const rangeError = () =>
   t('system.sysUser.batchRange.rangeError', {
@@ -78,7 +45,8 @@ const rules: FormRules = {
       type: 'number',
       validator: (_rule, value: number) => {
         if (
-          value === null || value === undefined ||
+          value === null ||
+          value === undefined ||
           value < ORDER_AMOUNT_MIN ||
           value > ORDER_AMOUNT_MAX
         ) {
@@ -100,7 +68,8 @@ const rules: FormRules = {
       type: 'number',
       validator: (_rule, value: number) => {
         if (
-          value === null || value === undefined ||
+          value === null ||
+          value === undefined ||
           value < ORDER_AMOUNT_MIN ||
           value > ORDER_AMOUNT_MAX
         ) {
@@ -141,6 +110,42 @@ async function handleSave() {
   }
 }
 </script>
+
+<template>
+  <div class="batch-modal">
+    <p class="batch-modal__tip">
+      {{ t('system.sysUser.batch.adjustRangeTip', { count }) }}
+    </p>
+    <n-form
+      ref="formRef"
+      :model="form"
+      :rules="rules"
+      label-placement="top"
+      size="small"
+    >
+      <n-form-item
+        :label="t('system.sysUser.batch.minAmount')"
+        path="minAmount"
+      >
+        <ProNumberRange
+          v-model:min="form.minAmount"
+          v-model:max="form.maxAmount"
+          :precision="2"
+          :number-min="ORDER_AMOUNT_MIN"
+          :number-max="ORDER_AMOUNT_MAX"
+          :min-placeholder="t('system.sysUser.batch.minAmountPlaceholder')"
+          :max-placeholder="t('system.sysUser.batch.maxAmountPlaceholder')"
+        />
+      </n-form-item>
+    </n-form>
+    <div class="batch-modal__actions">
+      <n-button @click="emit('close')">{{ t('common.cancel') }}</n-button>
+      <n-button type="primary" :loading="loading" @click="handleSave">
+        {{ t('common.confirm') }}
+      </n-button>
+    </div>
+  </div>
+</template>
 
 <style lang="less" scoped>
 .batch-modal__tip {

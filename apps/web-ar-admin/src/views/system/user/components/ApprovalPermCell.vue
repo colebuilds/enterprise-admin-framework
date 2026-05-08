@@ -1,3 +1,23 @@
+<script lang="ts" setup>
+import type { SysUsersPageListRsp } from '#/api/system';
+
+import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+import { NPopover } from 'naive-ui';
+
+const props = defineProps<{ row: SysUsersPageListRsp }>();
+
+const { t } = useI18n();
+
+// approval_UserRole: 1=操作权限(绿) 2=审核权限(蓝)
+const roleColor = computed(() => {
+  if (props.row.approval_UserRole === 1) return '#16a34a';
+  if (props.row.approval_UserRole === 2) return '#2563eb';
+  return 'rgb(51, 54, 57)';
+});
+</script>
+
 <template>
   <span v-if="!row.hasApprovalConfig" class="perm-cell__empty">
     {{ t('system.sysUser.detail.notConfigured') }}
@@ -14,9 +34,7 @@
         :class="{ 'perm-cell--dim': row.approval_UserState !== 1 }"
       >
         <div>
-          <span class="perm-cell__label"
-            >{{ t('system.sysUser.approval.rolePermission') }}：</span
-          >
+          <span class="perm-cell__label">{{ t('system.sysUser.approval.rolePermission') }}：</span>
           <span
             class="perm-cell__value"
             :style="{ color: roleColor, fontWeight: 500 }"
@@ -25,25 +43,20 @@
           </span>
         </div>
         <div>
-          <span class="perm-cell__label"
-            >{{ t('system.sysUser.approval.tenant') }}：</span
-          >
+          <span class="perm-cell__label">{{ t('system.sysUser.approval.tenant') }}：</span>
           <span class="perm-cell__value">{{
             row.approval_TenantNames || '--'
           }}</span>
         </div>
         <div v-if="row.approval_RoleAuthorizeName">
           <span class="perm-cell__label">
-            {{ t('system.sysUser.approval.operationContent') }}：</span
-          >
+            {{ t('system.sysUser.approval.operationContent') }}：</span>
           <span class="perm-cell__value">{{
             row.approval_RoleAuthorizeName
           }}</span>
         </div>
         <div v-if="row.approval_SubRoleAuthorizeName">
-          <span class="perm-cell__label"
-            >{{ t('system.sysUser.approval.rechargePerms') }}：</span
-          >
+          <span class="perm-cell__label">{{ t('system.sysUser.approval.rechargePerms') }}：</span>
           <span class="perm-cell__value">{{
             row.approval_SubRoleAuthorizeName
           }}</span>
@@ -55,9 +68,7 @@
       :class="{ 'perm-cell--dim': row.approval_UserState !== 1 }"
     >
       <div>
-        <span class="perm-cell__label"
-          >{{ t('system.sysUser.approval.rolePermission') }}：</span
-        >
+        <span class="perm-cell__label">{{ t('system.sysUser.approval.rolePermission') }}：</span>
         <span
           class="perm-cell__value"
           :style="{ color: roleColor, fontWeight: 500 }"
@@ -66,63 +77,51 @@
         </span>
       </div>
       <div>
-        <span class="perm-cell__label"
-          >{{ t('system.sysUser.approval.tenant') }}：</span
-        >
+        <span class="perm-cell__label">{{ t('system.sysUser.approval.tenant') }}：</span>
         <span class="perm-cell__value">{{
           row.approval_TenantNames || '--'
         }}</span>
       </div>
       <div v-if="row.approval_RoleAuthorizeName">
         <span class="perm-cell__label">
-          {{ t('system.sysUser.approval.operationContent') }}：</span
-        >
+          {{ t('system.sysUser.approval.operationContent') }}：</span>
         <span class="perm-cell__value">{{
           row.approval_RoleAuthorizeName
         }}</span>
       </div>
       <div v-if="row.approval_SubRoleAuthorizeName">
-        <span class="perm-cell__label"
-          >{{ t('system.sysUser.approval.rechargePerms') }}：</span
-        >
+        <span class="perm-cell__label">{{ t('system.sysUser.approval.rechargePerms') }}：</span>
         <span class="perm-cell__value">{{
           row.approval_SubRoleAuthorizeName
         }}</span>
       </div>
       <div v-if="row.approval_DailyApplyLimit">
-        <span class="perm-cell__label"
-          >{{ t('system.sysUser.approval.dailyCountLimit') }}：</span
-        >
+        <span class="perm-cell__label">{{ t('system.sysUser.approval.dailyCountLimit') }}：</span>
         <span class="perm-cell__value">{{ row.approval_DailyApplyLimit }}</span>
       </div>
       <div v-if="row.approval_SingleRechargeAmountLimitText">
         <span class="perm-cell__label">
-          {{ t('system.sysUser.approval.singleAmountLimit') }}：</span
-        >
+          {{ t('system.sysUser.approval.singleAmountLimit') }}：</span>
         <span class="perm-cell__value">{{
           row.approval_SingleRechargeAmountLimitText
         }}</span>
       </div>
       <div v-if="row.approval_DailyBatchApplyLimit">
         <span class="perm-cell__label">
-          {{ t('system.sysUser.approval.batchDailyCountLimit') }}：</span
-        >
+          {{ t('system.sysUser.approval.batchDailyCountLimit') }}：</span>
         <span class="perm-cell__value">{{
           row.approval_DailyBatchApplyLimit
         }}</span>
       </div>
       <div v-if="row.approval_SingleBatchRechargeAmountLimitText">
         <span class="perm-cell__label">
-          {{ t('system.sysUser.approval.batchSingleAmountLimit') }}：</span
-        >
+          {{ t('system.sysUser.approval.batchSingleAmountLimit') }}：</span>
         <span class="perm-cell__value">{{
           row.approval_SingleBatchRechargeAmountLimitText
         }}</span>
       </div>
       <div v-if="row.approval_IsRequireApprovalName">
-        <span class="perm-cell__label"
-          >{{ t('system.sysUser.approval.needAudit') }}：</span
-        >
+        <span class="perm-cell__label">{{ t('system.sysUser.approval.needAudit') }}：</span>
         <span class="perm-cell__value">{{
           row.approval_IsRequireApprovalName
         }}</span>
@@ -130,24 +129,6 @@
     </div>
   </NPopover>
 </template>
-
-<script lang="ts" setup>
-import { computed } from 'vue';
-import { NPopover } from 'naive-ui';
-import { useI18n } from 'vue-i18n';
-import type { SysUsersPageListRsp } from '#/api/system';
-
-const props = defineProps<{ row: SysUsersPageListRsp }>();
-
-const { t } = useI18n();
-
-// approval_UserRole: 1=操作权限(绿) 2=审核权限(蓝)
-const roleColor = computed(() => {
-  if (props.row.approval_UserRole === 1) return '#16a34a';
-  if (props.row.approval_UserRole === 2) return '#2563eb';
-  return 'rgb(51, 54, 57)';
-});
-</script>
 
 <style lang="less" scoped>
 .perm-cell {

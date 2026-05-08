@@ -1,5 +1,10 @@
 <script lang="ts" setup>
 import type { RolePageReq, RolePageRsp } from '#/api/system';
+import type {
+  ProColumn,
+  ProCrudTableInstance,
+  ProSearchFormColumn,
+} from '#/components';
 
 import { computed, h, onMounted, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
@@ -9,7 +14,6 @@ import { NTag, useMessage, useModal } from 'naive-ui';
 
 import { api } from '#/api';
 import { createActionColumn, ProCrudTable, renderBoolTag } from '#/components';
-import type { ProColumn, ProCrudTableInstance, ProSearchFormColumn } from '#/components';
 import { usePermission } from '#/hooks/usePermission';
 import { filterMenu, flattenTree, getTreeAll } from '#/utils';
 
@@ -323,9 +327,9 @@ function createPrefix(data: any[]): any[] {
             type:
               item.menuType === 1
                 ? 'success'
-                : item.menuType === 2
+                : (item.menuType === 2
                   ? 'info'
-                  : 'warning',
+                  : 'warning'),
             size: 'small',
           },
           {

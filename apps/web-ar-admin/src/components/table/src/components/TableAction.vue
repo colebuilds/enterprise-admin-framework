@@ -1,14 +1,16 @@
 <!-- oxlint-disable -->
 <script lang="ts">
-import { computed, defineComponent, toRaw } from 'vue';
 import type { PropType } from 'vue';
+
+import type { ActionItem } from '../types/tableAction';
+
+import { computed, defineComponent, toRaw } from 'vue';
 
 import { DownOutlined } from '@vicons/antd';
 
 import { usePermission } from '#/hooks/usePermission';
 import { isBoolean, isFunction } from '#/utils/is';
 
-import type { ActionItem } from '../types/tableAction';
 import Popconfirm from './Popconfirm.vue';
 
 export default defineComponent({
@@ -38,15 +40,15 @@ export default defineComponent({
     const actionType =
       props.style === 'button'
         ? 'default'
-        : props.style === 'text'
+        : (props.style === 'text'
           ? 'primary'
-          : 'default';
+          : 'default');
     const actionText =
       props.style === 'button'
         ? undefined
-        : props.style === 'text'
+        : (props.style === 'text'
           ? true
-          : undefined;
+          : undefined);
 
     const getMoreProps = computed(() => {
       return {

@@ -15,9 +15,9 @@ export default defineConfig(async ({ mode } = {}) => {
   // Mock mode: both admin and tenant proxy to Nitro; domainUrl header differentiates
   const apiTarget = isMock
     ? 'http://localhost:5320'
-    : isTenant
+    : (isTenant
       ? env.VITE_TENANT_API_URL
-      : env.VITE_API_BASE_URL;
+      : env.VITE_API_BASE_URL);
 
   return {
     application: {},

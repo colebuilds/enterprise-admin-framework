@@ -3,6 +3,7 @@ import type { DictionaryRsp, PlatformDicRsp } from '#/api/common';
 import type { SysGropDictionaryRsp } from '#/api/system';
 
 import { ref } from 'vue';
+
 import { queryClient } from '#/lib/query-client';
 import { DICT_QUERY_KEY } from '#/store/dict';
 

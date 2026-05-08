@@ -30,7 +30,7 @@ import {
 /** 出款权限卡内部表单结构（TenantIds 对齐 option.value 使用 number[]，避免 n-select 选中状态匹配不上） */
 export interface WithdrawFormState {
   withdraw_ConfigGroupId: number | undefined;
-   
+
   withdraw_UserRank: any;
   withdraw_ParentSysUserIds: string;
   withdraw_ApprovalConfig: BatchAddSysUsersWithdrawApprovalConfigReq;
@@ -183,7 +183,8 @@ export function useWithdrawConfigForm(options: UseWithdrawConfigFormOptions) {
         const cfg = form.withdraw_ApprovalConfig;
         if (!isMemberOrLeader.value || !cfg) return true;
         if (
-          cfg.auditMinAmount === null || cfg.auditMinAmount === undefined ||
+          cfg.auditMinAmount === null ||
+          cfg.auditMinAmount === undefined ||
           cfg.auditMinAmount < ORDER_AMOUNT_MIN ||
           cfg.auditMinAmount > ORDER_AMOUNT_MAX
         ) {
@@ -195,7 +196,8 @@ export function useWithdrawConfigForm(options: UseWithdrawConfigFormOptions) {
           );
         }
         if (
-          cfg.auditMaxAmount !== null && cfg.auditMaxAmount !== undefined &&
+          cfg.auditMaxAmount !== null &&
+          cfg.auditMaxAmount !== undefined &&
           cfg.auditMinAmount > cfg.auditMaxAmount
         ) {
           return new Error(t('common.minMaxError'));
@@ -209,7 +211,8 @@ export function useWithdrawConfigForm(options: UseWithdrawConfigFormOptions) {
         const cfg = form.withdraw_ApprovalConfig;
         if (!isMemberOrLeader.value || !cfg) return true;
         if (
-          cfg.auditMaxAmount === null || cfg.auditMaxAmount === undefined ||
+          cfg.auditMaxAmount === null ||
+          cfg.auditMaxAmount === undefined ||
           cfg.auditMaxAmount < ORDER_AMOUNT_MIN ||
           cfg.auditMaxAmount > ORDER_AMOUNT_MAX
         ) {
@@ -221,7 +224,8 @@ export function useWithdrawConfigForm(options: UseWithdrawConfigFormOptions) {
           );
         }
         if (
-          cfg.auditMinAmount !== null && cfg.auditMinAmount !== undefined &&
+          cfg.auditMinAmount !== null &&
+          cfg.auditMinAmount !== undefined &&
           cfg.auditMinAmount > cfg.auditMaxAmount
         ) {
           return new Error(t('common.minMaxError'));
@@ -235,7 +239,8 @@ export function useWithdrawConfigForm(options: UseWithdrawConfigFormOptions) {
         const cfg = form.withdraw_ApprovalConfig;
         if (!isMemberOrLeader.value || !cfg) return true;
         if (
-          cfg.currentProcessingOrderLimit === null || cfg.currentProcessingOrderLimit === undefined ||
+          cfg.currentProcessingOrderLimit === null ||
+          cfg.currentProcessingOrderLimit === undefined ||
           cfg.currentProcessingOrderLimit < PROCESSING_LIMIT_MIN ||
           cfg.currentProcessingOrderLimit > PROCESSING_LIMIT_MAX
         ) {
@@ -257,7 +262,6 @@ export function useWithdrawConfigForm(options: UseWithdrawConfigFormOptions) {
     const seq = ++currencyRequestSeq;
     currencyLoading.value = true;
     try {
-       
       const { data } = await api.tenant.getFiatCurrencyList({
         currencyType: effectiveType as any,
       });

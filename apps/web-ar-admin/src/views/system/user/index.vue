@@ -1,10 +1,8 @@
-<template>
-  <component :is="activePage" />
-</template>
-
 <script lang="ts" setup>
 import { computed } from 'vue';
+
 import { useAppUserStore } from '#/store/app-user';
+
 import PlatformUserPage from './PlatformUserPage.vue';
 import TenantUserPage from './TenantUserPage.vue';
 
@@ -15,3 +13,7 @@ const activePage = computed(() =>
   userStore.isPlatformUser ? PlatformUserPage : TenantUserPage,
 );
 </script>
+
+<template>
+  <component :is="activePage" />
+</template>

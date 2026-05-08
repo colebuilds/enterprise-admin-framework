@@ -1,3 +1,76 @@
+<script setup lang="ts">
+import type { FormInst } from 'naive-ui';
+
+import type {
+  ApprovalInitial,
+  ApprovalOutput,
+  PermCardProps,
+} from './composables/permCardTypes';
+
+import { computed, ref, toRef } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+import { useDictionary } from '#/components/dict-select';
+import { ProNumberRange } from '#/components/pro';
+
+import { useApprovalConfigForm } from './composables/useApprovalConfigForm';
+
+/**
+ * 人工充值权限卡
+ * - v-model 输出 payload（`ApprovalOutput | null`）。
+ * - v-model:enabled 输出启用态，父组件响应式消费。
+ * - `initial` 统一回显入口：undefined = 新增；有值 = 复制 / 编辑（内部不区分）。
+ * - `initialEnabled` 仅在编辑场景下作为权威 seed；其他场景让卡片自行推断。
+ * - 所有 state / 快照恢复 / 字段裁剪都在 `useApprovalConfigForm` 里。
+ */
+const props = withDefaults(defineProps<PermCardProps<ApprovalInitial>>(), {
+  initial: undefined,
+  initialEnabled: undefined,
+  tenantOptions: () => [],
+});
+
+const model = defineModel<ApprovalOutput | null>({ default: null });
+const enabled = defineModel<boolean>('enabled', { default: false });
+
+const { t } = useI18n();
+const formRef = ref<FormInst | null>(null);
+// 角色权限选项走 common 字典 approvalUserRoleList（§1.1，code 为 number 与 form.approval_UserRole 同构）
+const dict = useDictionary({ source: 'common' });
+const approvalUserRoleOptions = computed(() =>
+  dict.getOptions('approvalUserRoleList'),
+);
+
+const {
+  form,
+  roleAuthorizeOptions,
+  subRoleAuthorizeOptions,
+  isOperator,
+  rules,
+  handleRoleChange,
+  handleRoleAuthorizeChange,
+} = useApprovalConfigForm({
+  initial: toRef(props, 'initial'),
+  initialEnabled: toRef(props, 'initialEnabled'),
+  tenantOptions: toRef(props, 'tenantOptions'),
+  enabled,
+  output: model,
+});
+
+const tenantOptions = toRef(props, 'tenantOptions');
+
+async function validate(): Promise<boolean> {
+  if (!enabled.value) return true;
+  try {
+    await formRef.value?.validate();
+    return true;
+  } catch {
+    return false;
+  }
+}
+
+defineExpose({ validate });
+</script>
+
 <template>
   <div class="perm-card" :class="{ 'perm-card--disabled': !enabled }">
     <div class="perm-card__title">
@@ -210,12 +283,16 @@
                   v-model:value="form.approval_IsRequireApproval"
                   size="small"
                 >
-                  <n-radio value="1">{{
+                  <n-radio value="1">
+{{
                     t('system.sysUser.approval.open')
-                  }}</n-radio>
-                  <n-radio value="0">{{
+                  }}
+</n-radio>
+                  <n-radio value="0">
+{{
                     t('system.sysUser.approval.close')
-                  }}</n-radio>
+                  }}
+</n-radio>
                 </n-radio-group>
               </n-form-item-gi>
             </n-grid>
@@ -248,75 +325,6 @@
     </div>
   </div>
 </template>
-
-<script setup lang="ts">
-import { ref, toRef, computed } from 'vue';
-import { useI18n } from 'vue-i18n';
-import type { FormInst } from 'naive-ui';
-import { useDictionary } from '#/components/dict-select';
-import { ProNumberRange } from '#/components/pro';
-import type {
-  ApprovalInitial,
-  ApprovalOutput,
-  PermCardProps,
-} from './composables/permCardTypes';
-import { useApprovalConfigForm } from './composables/useApprovalConfigForm';
-
-/**
- * 人工充值权限卡
- * - v-model 输出 payload（`ApprovalOutput | null`）。
- * - v-model:enabled 输出启用态，父组件响应式消费。
- * - `initial` 统一回显入口：undefined = 新增；有值 = 复制 / 编辑（内部不区分）。
- * - `initialEnabled` 仅在编辑场景下作为权威 seed；其他场景让卡片自行推断。
- * - 所有 state / 快照恢复 / 字段裁剪都在 `useApprovalConfigForm` 里。
- */
-const props = withDefaults(defineProps<PermCardProps<ApprovalInitial>>(), {
-  initial: undefined,
-  initialEnabled: undefined,
-  tenantOptions: () => [],
-});
-
-const model = defineModel<ApprovalOutput | null>({ default: null });
-const enabled = defineModel<boolean>('enabled', { default: false });
-
-const { t } = useI18n();
-const formRef = ref<FormInst | null>(null);
-// 角色权限选项走 common 字典 approvalUserRoleList（§1.1，code 为 number 与 form.approval_UserRole 同构）
-const dict = useDictionary({ source: 'common' });
-const approvalUserRoleOptions = computed(() =>
-  dict.getOptions('approvalUserRoleList'),
-);
-
-const {
-  form,
-  roleAuthorizeOptions,
-  subRoleAuthorizeOptions,
-  isOperator,
-  rules,
-  handleRoleChange,
-  handleRoleAuthorizeChange,
-} = useApprovalConfigForm({
-  initial: toRef(props, 'initial'),
-  initialEnabled: toRef(props, 'initialEnabled'),
-  tenantOptions: toRef(props, 'tenantOptions'),
-  enabled,
-  output: model,
-});
-
-const tenantOptions = toRef(props, 'tenantOptions');
-
-async function validate(): Promise<boolean> {
-  if (!enabled.value) return true;
-  try {
-    await formRef.value?.validate();
-    return true;
-  } catch {
-    return false;
-  }
-}
-
-defineExpose({ validate });
-</script>
 
 <style lang="less" scoped>
 .perm-card {

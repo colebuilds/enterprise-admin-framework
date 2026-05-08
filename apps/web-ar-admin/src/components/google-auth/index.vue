@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import { computed, reactive, ref } from 'vue';
-import { useAppUserStore } from '#/store/app-user';
 import { useI18n } from 'vue-i18n';
 
 import { useClipboard } from '@vueuse/core';
 import { useMessage } from 'naive-ui';
+
+import { useAppUserStore } from '#/store/app-user';
 
 const props = withDefaults(
   defineProps<{

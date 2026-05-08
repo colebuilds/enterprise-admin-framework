@@ -2,9 +2,9 @@
 import type { Component } from 'vue';
 import type { HTMLAttributes } from 'vue';
 
-import { NButton } from 'naive-ui';
-
 import type { PermissionsEnum } from '#/enums/permissionsEnum';
+
+import { NButton } from 'naive-ui';
 export interface ActionItem
   extends HTMLAttributes, Partial<InstanceType<typeof NButton>> {
   onClick?: () => void;

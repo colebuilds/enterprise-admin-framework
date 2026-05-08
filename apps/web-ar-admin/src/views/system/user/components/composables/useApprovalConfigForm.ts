@@ -139,8 +139,10 @@ export function useApprovalConfigForm(options: UseApprovalConfigFormOptions) {
         if (isOperator.value) return true;
         const cfg = form.approval_PermissionConfig;
         if (
-          cfg.auditMinAmount !== null && cfg.auditMinAmount !== undefined &&
-          cfg.auditMaxAmount !== null && cfg.auditMaxAmount !== undefined &&
+          cfg.auditMinAmount !== null &&
+          cfg.auditMinAmount !== undefined &&
+          cfg.auditMaxAmount !== null &&
+          cfg.auditMaxAmount !== undefined &&
           cfg.auditMinAmount > cfg.auditMaxAmount
         ) {
           return new Error(t('common.minMaxError'));
@@ -154,8 +156,10 @@ export function useApprovalConfigForm(options: UseApprovalConfigFormOptions) {
         if (isOperator.value) return true;
         const cfg = form.approval_PermissionConfig;
         if (
-          cfg.auditMinAmount !== null && cfg.auditMinAmount !== undefined &&
-          cfg.auditMaxAmount !== null && cfg.auditMaxAmount !== undefined &&
+          cfg.auditMinAmount !== null &&
+          cfg.auditMinAmount !== undefined &&
+          cfg.auditMaxAmount !== null &&
+          cfg.auditMaxAmount !== undefined &&
           cfg.auditMinAmount > cfg.auditMaxAmount
         ) {
           return new Error(t('common.minMaxError'));

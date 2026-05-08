@@ -1,3 +1,5 @@
+import type { ComputedRef, InjectionKey, Ref } from 'vue';
+
 /* oxlint-disable */
 import type {
   ProFieldInstance,
@@ -5,7 +7,6 @@ import type {
   ProValidationState,
 } from '../types';
 
-import type { ComputedRef, InjectionKey, Ref } from 'vue';
 import { inject, provide } from 'vue';
 
 /**

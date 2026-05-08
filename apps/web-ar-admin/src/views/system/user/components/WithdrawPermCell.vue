@@ -1,134 +1,11 @@
-<template>
-  <span v-if="!row.hasWithdrawConfig" class="perm-cell__empty">
-    {{ t('system.sysUser.detail.notConfigured') }}
-  </span>
-  <NPopover
-    v-else
-    trigger="click"
-    placement="bottom-start"
-    style="max-width: 420px"
-  >
-    <template #trigger>
-      <div
-        class="perm-cell"
-        :class="{ 'perm-cell--dim': row.withdraw_EnableState !== 1 }"
-      >
-        <div>
-          <span class="perm-cell__label"
-            >{{ t('system.sysUser.withdraw.configGroup') }}：</span
-          >
-          <span class="perm-cell__value">{{
-            row.withdraw_ConfigGroupName || '--'
-          }}</span>
-        </div>
-        <div>
-          <span class="perm-cell__label"
-            >{{ t('system.sysUser.withdraw.rank') }}：</span
-          >
-          <span class="perm-cell__value" :style="{ color: rankColor }">
-            {{ rankLabel }}
-          </span>
-          <template v-if="isMemberOrLeader">
-            <span class="perm-cell__label">
-              &nbsp;&nbsp;{{
-                t('system.sysUser.withdraw.maxConcurrent')
-              }}：</span
-            >
-            <span class="perm-cell__value">
-              {{ row.withdraw_CurrentProcessingOrderLimit ?? '--' }}
-            </span>
-          </template>
-        </div>
-        <div v-if="isMemberOrLeader">
-          <span class="perm-cell__label"
-            >{{ t('system.sysUser.withdraw.amountRange') }}：</span
-          >
-          <span class="perm-cell__value">{{
-            row.withdraw_AuditAmountRange || '--'
-          }}</span>
-        </div>
-      </div>
-    </template>
-    <div
-      class="perm-cell__popover"
-      :class="{ 'perm-cell--dim': row.withdraw_EnableState !== 1 }"
-    >
-      <div>
-        <span class="perm-cell__label"
-          >{{ t('system.sysUser.withdraw.configGroup') }}：</span
-        >
-        <span class="perm-cell__value">{{
-          row.withdraw_ConfigGroupName || '--'
-        }}</span>
-      </div>
-      <div>
-        <span class="perm-cell__label"
-          >{{ t('system.sysUser.withdraw.rank') }}：</span
-        >
-        <span
-          class="perm-cell__value"
-          :style="{ color: rankColor, fontWeight: 500 }"
-        >
-          {{ rankLabel }}
-        </span>
-        <template v-if="isMemberOrLeader">
-          <span class="perm-cell__label">
-            &nbsp;&nbsp;{{ t('system.sysUser.withdraw.maxConcurrent') }}：</span
-          >
-          <span class="perm-cell__value">
-            {{ row.withdraw_CurrentProcessingOrderLimit ?? '--' }}
-          </span>
-        </template>
-      </div>
-      <div v-if="isMemberOrLeader">
-        <span class="perm-cell__label"
-          >{{ t('system.sysUser.withdraw.amountRange') }}：</span
-        >
-        <span class="perm-cell__value">{{
-          row.withdraw_AuditAmountRange || '--'
-        }}</span>
-      </div>
-      <div v-if="isMemberOrLeader">
-        <span class="perm-cell__label"
-          >{{ t('system.sysUser.withdraw.currencyType') }}：</span
-        >
-        <span class="perm-cell__value">{{
-          row.withdraw_SysCurrency || '--'
-        }}</span>
-      </div>
-      <div v-if="row.withdraw_SuperiorUserNames">
-        <span class="perm-cell__label"
-          >{{ t('system.sysUser.withdraw.superior') }}：</span
-        >
-        <span class="perm-cell__value">{{
-          row.withdraw_SuperiorUserNames
-        }}</span>
-      </div>
-      <div v-if="row.withdraw_SubordinateUserNames">
-        <span class="perm-cell__label"
-          >{{ t('system.sysUser.withdraw.subordinate') }}：</span
-        >
-        <span class="perm-cell__value">{{
-          row.withdraw_SubordinateUserNames
-        }}</span>
-      </div>
-      <div>
-        <span class="perm-cell__label"
-          >{{ t('system.sysUser.withdraw.tenant') }}：</span
-        >
-        <span class="perm-cell__value">{{
-          row.withdraw_TenantNames || '--'
-        }}</span>
-      </div>
-    </div>
-  </NPopover>
-</template>
-
 <script lang="ts" setup>
-import { computed } from 'vue';
-import { NPopover } from 'naive-ui';
-import { useI18n } from 'vue-i18n';
 import type { SysUsersPageListRsp } from '#/api/system';
+
+import { computed } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+import { NPopover } from 'naive-ui';
+
 import { useDictionary } from '#/components/dict-select';
 
 const props = defineProps<{ row: SysUsersPageListRsp }>();
@@ -156,9 +33,113 @@ const rankColor = computed(
 );
 
 const isMemberOrLeader = computed(() =>
-  ['Staff', 'Leader'].includes(rankCode.value),
+  ['Leader', 'Staff'].includes(rankCode.value),
 );
 </script>
+
+<template>
+  <span v-if="!row.hasWithdrawConfig" class="perm-cell__empty">
+    {{ t('system.sysUser.detail.notConfigured') }}
+  </span>
+  <NPopover
+    v-else
+    trigger="click"
+    placement="bottom-start"
+    style="max-width: 420px"
+  >
+    <template #trigger>
+      <div
+        class="perm-cell"
+        :class="{ 'perm-cell--dim': row.withdraw_EnableState !== 1 }"
+      >
+        <div>
+          <span class="perm-cell__label">{{ t('system.sysUser.withdraw.configGroup') }}：</span>
+          <span class="perm-cell__value">{{
+            row.withdraw_ConfigGroupName || '--'
+          }}</span>
+        </div>
+        <div>
+          <span class="perm-cell__label">{{ t('system.sysUser.withdraw.rank') }}：</span>
+          <span class="perm-cell__value" :style="{ color: rankColor }">
+            {{ rankLabel }}
+          </span>
+          <template v-if="isMemberOrLeader">
+            <span class="perm-cell__label">
+              &nbsp;&nbsp;{{
+                t('system.sysUser.withdraw.maxConcurrent')
+              }}：</span>
+            <span class="perm-cell__value">
+              {{ row.withdraw_CurrentProcessingOrderLimit ?? '--' }}
+            </span>
+          </template>
+        </div>
+        <div v-if="isMemberOrLeader">
+          <span class="perm-cell__label">{{ t('system.sysUser.withdraw.amountRange') }}：</span>
+          <span class="perm-cell__value">{{
+            row.withdraw_AuditAmountRange || '--'
+          }}</span>
+        </div>
+      </div>
+    </template>
+    <div
+      class="perm-cell__popover"
+      :class="{ 'perm-cell--dim': row.withdraw_EnableState !== 1 }"
+    >
+      <div>
+        <span class="perm-cell__label">{{ t('system.sysUser.withdraw.configGroup') }}：</span>
+        <span class="perm-cell__value">{{
+          row.withdraw_ConfigGroupName || '--'
+        }}</span>
+      </div>
+      <div>
+        <span class="perm-cell__label">{{ t('system.sysUser.withdraw.rank') }}：</span>
+        <span
+          class="perm-cell__value"
+          :style="{ color: rankColor, fontWeight: 500 }"
+        >
+          {{ rankLabel }}
+        </span>
+        <template v-if="isMemberOrLeader">
+          <span class="perm-cell__label">
+            &nbsp;&nbsp;{{ t('system.sysUser.withdraw.maxConcurrent') }}：</span>
+          <span class="perm-cell__value">
+            {{ row.withdraw_CurrentProcessingOrderLimit ?? '--' }}
+          </span>
+        </template>
+      </div>
+      <div v-if="isMemberOrLeader">
+        <span class="perm-cell__label">{{ t('system.sysUser.withdraw.amountRange') }}：</span>
+        <span class="perm-cell__value">{{
+          row.withdraw_AuditAmountRange || '--'
+        }}</span>
+      </div>
+      <div v-if="isMemberOrLeader">
+        <span class="perm-cell__label">{{ t('system.sysUser.withdraw.currencyType') }}：</span>
+        <span class="perm-cell__value">{{
+          row.withdraw_SysCurrency || '--'
+        }}</span>
+      </div>
+      <div v-if="row.withdraw_SuperiorUserNames">
+        <span class="perm-cell__label">{{ t('system.sysUser.withdraw.superior') }}：</span>
+        <span class="perm-cell__value">{{
+          row.withdraw_SuperiorUserNames
+        }}</span>
+      </div>
+      <div v-if="row.withdraw_SubordinateUserNames">
+        <span class="perm-cell__label">{{ t('system.sysUser.withdraw.subordinate') }}：</span>
+        <span class="perm-cell__value">{{
+          row.withdraw_SubordinateUserNames
+        }}</span>
+      </div>
+      <div>
+        <span class="perm-cell__label">{{ t('system.sysUser.withdraw.tenant') }}：</span>
+        <span class="perm-cell__value">{{
+          row.withdraw_TenantNames || '--'
+        }}</span>
+      </div>
+    </div>
+  </NPopover>
+</template>
 
 <style lang="less" scoped>
 .perm-cell {
