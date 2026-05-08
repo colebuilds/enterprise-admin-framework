@@ -14,10 +14,7 @@ function getFixturesRoot(): string {
     );
   }
   // Bundled Nitro dev: cwd is apps/backend-mock/
-  return path.resolve(
-    process.cwd(),
-    '../web-ar-admin/tools/mock-fixtures',
-  );
+  return path.resolve(process.cwd(), '../web-ar-admin/tools/mock-fixtures');
 }
 
 export function resolveMode(domainUrl = ''): 'admin' | 'tenant' {

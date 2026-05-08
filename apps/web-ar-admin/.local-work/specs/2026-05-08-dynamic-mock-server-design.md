@@ -26,8 +26,7 @@ All fixtures captured successfully (`code=0`) except:
 
 - `Role/GetPageList` — `code=-1` DB error (must re-capture)
 
-Key list fixtures with usable data:
-`SysUsers/GetAdminPageList` (5), `SysUsers/GetTenantPageList`, `Organization/GetPageList` (5), `Tenant/GetPageList` (10), `IpWhitelist/GetPageList` (6), `SysLog/GetPageList` (20), `Country/GetPageList`, `Currency/GetPageList`, `Language/GetPageList`, `SysDictionary/GetPageList`
+Key list fixtures with usable data: `SysUsers/GetAdminPageList` (5), `SysUsers/GetTenantPageList`, `Organization/GetPageList` (5), `Tenant/GetPageList` (10), `IpWhitelist/GetPageList` (6), `SysLog/GetPageList` (20), `Country/GetPageList`, `Currency/GetPageList`, `Language/GetPageList`, `SysDictionary/GetPageList`
 
 ### Tenant (60 files)
 
@@ -89,8 +88,8 @@ apps/backend-mock/
 ```ts
 type ArHandler = (ctx: {
   body: Record<string, any>;
-  fixture: any;                    // full fixture JSON (may be null)
-  fixtures: Record<string, any>;   // all fixtures for this mode, keyed by path
+  fixture: any; // full fixture JSON (may be null)
+  fixtures: Record<string, any>; // all fixtures for this mode, keyed by path
 }) => any;
 
 type ArHandlerMap = Record<string, ArHandler>;
@@ -126,27 +125,35 @@ export function dispatchArHandler(
 
 ```ts
 // Slice list for current page, return CrudRequestResult shape
-function paginate(list: any[], pageNo: number, pageSize: number): {
+function paginate(
+  list: any[],
+  pageNo: number,
+  pageSize: number,
+): {
   list: any[];
   pageNo: number;
   pageSize: number;
   totalCount: number;
   totalPage: number;
-}
+};
 
 // Filter list items where any of `fields` contains `keyword` (case-insensitive)
-function filterByFields(list: any[], keyword: string | undefined, fields: string[]): any[]
+function filterByFields(
+  list: any[],
+  keyword: string | undefined,
+  fields: string[],
+): any[];
 
 // Find single item by id field value; returns first item if not found
-function findById(list: any[], id: any, idField: string): any | null
+function findById(list: any[], id: any, idField: string): any | null;
 
 // Wrap data in standard success envelope
-function wrapOk(data: any): { code: 0; data: any; msg: '' }
+function wrapOk(data: any): { code: 0; data: any; msg: '' };
 ```
 
 ---
 
-## Generic Handler (_generic.ts)
+## Generic Handler (\_generic.ts)
 
 Covers all endpoints NOT in the module handler registry:
 
@@ -160,6 +167,7 @@ Covers all endpoints NOT in the module handler registry:
 ## Module Handler Examples
 
 ### admin/role.ts
+
 ```ts
 '/Role/GetPageList': ({ body, fixture }) => {
   if (!fixture || fixture.code !== 0) return fixture;
@@ -169,6 +177,7 @@ Covers all endpoints NOT in the module handler registry:
 ```
 
 ### admin/sys-users.ts
+
 ```ts
 '/SysUsers/GetAdminPageList': ({ body, fixture }) => {
   const filtered = filterByFields(fixture.data.list, body.userName, ['userName', 'nickName']);
@@ -181,6 +190,7 @@ Covers all endpoints NOT in the module handler registry:
 ```
 
 ### admin/menu-tree.ts
+
 ```ts
 '/Menu/GetMenuTreeByRoleId': ({ body, fixture }) => {
   // Return full tree regardless of roleId (mock doesn't have per-role data)
@@ -189,6 +199,7 @@ Covers all endpoints NOT in the module handler registry:
 ```
 
 ### tenant/withdraw.ts
+
 ```ts
 '/WithdrawOrder/GetPageList': ({ body, fixture }) => {
   if (!fixture || fixture.code !== 0) return fixture;
@@ -209,13 +220,13 @@ For each module handler, derive the actual request params from the old project's
 Key params confirmed from old project pages:
 
 | Endpoint | Filter field(s) | Notes |
-|---|---|---|
+| --- | --- | --- |
 | `/Role/GetPageList` | `keyword` → `name` field | `orderBy:'Desc', sortField:'id'` |
-| `/SysUsers/GetAdminPageList` | `userName` → `userName, nickName` | |
+| `/SysUsers/GetAdminPageList` | `userName` → `userName, nickName` |  |
 | `/Organization/GetPageList` | `name` → `name` | `orderBy:'Desc'` |
-| `/Tenant/GetPageList` | `keyword` → `name` | |
-| `/IpWhitelist/GetPageList` | `ip` → `ip` | |
-| `/SysLog/GetPageList` | `keyword` → `userName, operationDesc` | |
+| `/Tenant/GetPageList` | `keyword` → `name` |  |
+| `/IpWhitelist/GetPageList` | `ip` → `ip` |  |
+| `/SysLog/GetPageList` | `keyword` → `userName, operationDesc` |  |
 | `/WithdrawOrder/GetPageList` | `tenantId`, `withdrawStates` | array filter |
 
 ---
@@ -228,14 +239,14 @@ Fixtures with `code=14` need re-capture with the correct `tenantId` in the signe
 2. Verify `code=0` in output before committing
 3. Broken fixtures that succeed → replaced; those that still fail → left as error stubs
 
-**Endpoints to re-capture (tenant, code=14):**
-`WithdrawOrder/GetPageList`, `WithdrawOrder/GetAuditPageList`, `WithdrawRecord/GetPageList`, `RechargeCategory/GetPageList`, `RechargeLocal*/GetPageList`, `v1/Users/*`
+**Endpoints to re-capture (tenant, code=14):** `WithdrawOrder/GetPageList`, `WithdrawOrder/GetAuditPageList`, `WithdrawRecord/GetPageList`, `RechargeCategory/GetPageList`, `RechargeLocal*/GetPageList`, `v1/Users/*`
 
 ---
 
 ## Write Operation Policy
 
 Any endpoint path NOT present in `registry[mode]` and NOT matching a fixture file → returns:
+
 ```json
 { "code": 0, "data": null, "msg": "ok" }
 ```

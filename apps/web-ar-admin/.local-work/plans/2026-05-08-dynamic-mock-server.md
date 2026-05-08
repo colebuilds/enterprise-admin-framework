@@ -13,7 +13,7 @@
 ## File Map
 
 | File | Action | Responsibility |
-|---|---|---|
+| --- | --- | --- |
 | `apps/backend-mock/utils/ar-mock-utils.ts` | Create | `paginate`, `filterByFields`, `findById`, `wrapOk` |
 | `apps/backend-mock/utils/ar-handlers/_generic.ts` | Create | Generic auto-paginate / passthrough handler |
 | `apps/backend-mock/utils/ar-handlers/admin/sys-users.ts` | Create | SysUsers filter by userName/keyword |
@@ -22,10 +22,10 @@
 | `apps/backend-mock/utils/ar-handlers/admin/common.ts` | Create | IpWhitelist filter by ip; SysLog filter by keyword; SysDictionary pagination |
 | `apps/backend-mock/utils/ar-handlers/admin/menu-tree.ts` | Create | Menu tree + GetMenuTreeByRoleId passthrough |
 | `apps/backend-mock/utils/ar-handlers/tenant/withdraw.ts` | Create | WithdrawOrder/Record/Category/Channel/ConfigGroup |
-| `apps/backend-mock/utils/ar-handlers/tenant/recharge.ts` | Create | RechargeCategory/Channel/Local* |
+| `apps/backend-mock/utils/ar-handlers/tenant/recharge.ts` | Create | RechargeCategory/Channel/Local\* |
 | `apps/backend-mock/utils/ar-handlers/tenant/payment.ts` | Create | ThirdPayMerchant + PaymentReport |
-| `apps/backend-mock/utils/ar-handlers/tenant/v1-users.ts` | Create | v1/Users/* filter by userName/userId |
-| `apps/backend-mock/utils/ar-handlers/tenant/v1-system.ts` | Create | v1/System/* logs pagination |
+| `apps/backend-mock/utils/ar-handlers/tenant/v1-users.ts` | Create | v1/Users/\* filter by userName/userId |
+| `apps/backend-mock/utils/ar-handlers/tenant/v1-system.ts` | Create | v1/System/\* logs pagination |
 | `apps/backend-mock/utils/ar-handlers/index.ts` | Create | Registry + `dispatchArHandler()` |
 | `apps/backend-mock/api/[...ar].ts` | Modify | Async, readBody, call dispatchArHandler |
 | `apps/web-ar-admin/tools/endpoints/tenant-read.ts` | Modify | Fix params for broken code=14/7 fixtures |
@@ -35,6 +35,7 @@
 ## Task 1: ar-mock-utils.ts — shared utility functions
 
 **Files:**
+
 - Create: `apps/backend-mock/utils/ar-mock-utils.ts`
 
 - [ ] **Step 1: Create the file**
@@ -75,17 +76,19 @@ export function filterByFields(
   if (!keyword || !keyword.trim()) return list;
   const kw = keyword.trim().toLowerCase();
   return list.filter((item) =>
-    fields.some((f) => String(item[f] ?? '').toLowerCase().includes(kw)),
+    fields.some((f) =>
+      String(item[f] ?? '')
+        .toLowerCase()
+        .includes(kw),
+    ),
   );
 }
 
-export function findById(
-  list: any[],
-  id: any,
-  idField: string,
-): any | null {
+export function findById(list: any[], id: any, idField: string): any | null {
   if (id == null) return list[0] ?? null;
-  return list.find((item) => String(item[idField]) === String(id)) ?? list[0] ?? null;
+  return (
+    list.find((item) => String(item[idField]) === String(id)) ?? list[0] ?? null
+  );
 }
 
 export function wrapOk(data: any): { code: 0; data: any; msg: string } {
@@ -110,9 +113,10 @@ git commit -m "feat(mock): add ar-mock-utils — paginate/filterByFields/findByI
 
 ---
 
-## Task 2: _generic.ts — generic fallback handler
+## Task 2: \_generic.ts — generic fallback handler
 
 **Files:**
+
 - Create: `apps/backend-mock/utils/ar-handlers/_generic.ts`
 
 - [ ] **Step 1: Create the file**
@@ -170,6 +174,7 @@ git commit -m "feat(mock): add generic fallback handler — auto-paginate list f
 ## Task 3: Admin handler — sys-users, role, org-tenant
 
 **Files:**
+
 - Create: `apps/backend-mock/utils/ar-handlers/admin/sys-users.ts`
 - Create: `apps/backend-mock/utils/ar-handlers/admin/role.ts`
 - Create: `apps/backend-mock/utils/ar-handlers/admin/org-tenant.ts`
@@ -182,37 +187,39 @@ Filter fields confirmed from old project `src/views/system/user/PlatformUserPage
 
 ```ts
 // apps/backend-mock/utils/ar-handlers/admin/sys-users.ts
-import { filterByFields, findById, paginate, wrapOk } from '../../ar-mock-utils';
+import {
+  filterByFields,
+  findById,
+  paginate,
+  wrapOk,
+} from '../../ar-mock-utils';
 import type { ArHandlerMap } from '../index';
 
 export const adminSysUsersHandlers: ArHandlerMap = {
   '/SysUsers/GetAdminPageList': ({ body, fixture }) => {
     if (!fixture || fixture.code !== 0) return fixture;
-    const filtered = filterByFields(
-      fixture.data.list,
-      body.userName,
-      ['userName', 'nickName'],
-    );
+    const filtered = filterByFields(fixture.data.list, body.userName, [
+      'userName',
+      'nickName',
+    ]);
     return wrapOk(paginate(filtered, body.pageNo ?? 1, body.pageSize ?? 10));
   },
 
   '/SysUsers/GetTenantPageList': ({ body, fixture }) => {
     if (!fixture || fixture.code !== 0) return fixture;
-    const filtered = filterByFields(
-      fixture.data.list,
-      body.userName,
-      ['userName', 'nickName'],
-    );
+    const filtered = filterByFields(fixture.data.list, body.userName, [
+      'userName',
+      'nickName',
+    ]);
     return wrapOk(paginate(filtered, body.pageNo ?? 1, body.pageSize ?? 10));
   },
 
   '/SysUsers/GetPageList': ({ body, fixture }) => {
     if (!fixture || fixture.code !== 0) return fixture;
-    const filtered = filterByFields(
-      fixture.data.list,
-      body.userName,
-      ['userName', 'nickName'],
-    );
+    const filtered = filterByFields(fixture.data.list, body.userName, [
+      'userName',
+      'nickName',
+    ]);
     return wrapOk(paginate(filtered, body.pageNo ?? 1, body.pageSize ?? 10));
   },
 
@@ -238,11 +245,7 @@ import type { ArHandlerMap } from '../index';
 export const adminRoleHandlers: ArHandlerMap = {
   '/Role/GetPageList': ({ body, fixture }) => {
     if (!fixture || fixture.code !== 0) return fixture;
-    const filtered = filterByFields(
-      fixture.data.list,
-      body.keyword,
-      ['name'],
-    );
+    const filtered = filterByFields(fixture.data.list, body.keyword, ['name']);
     return wrapOk(paginate(filtered, body.pageNo ?? 1, body.pageSize ?? 20));
   },
 };
@@ -301,6 +304,7 @@ git commit -m "feat(mock): admin handlers — sys-users, role, org-tenant"
 ## Task 4: Admin handler — common + menu-tree
 
 **Files:**
+
 - Create: `apps/backend-mock/utils/ar-handlers/admin/common.ts`
 - Create: `apps/backend-mock/utils/ar-handlers/admin/menu-tree.ts`
 
@@ -337,7 +341,9 @@ export const adminCommonHandlers: ArHandlerMap = {
 
   '/SysDictionary/GetPageList': ({ body, fixture }) => {
     if (!fixture || fixture.code !== 0) return fixture;
-    return wrapOk(paginate(fixture.data.list, body.pageNo ?? 1, body.pageSize ?? 20));
+    return wrapOk(
+      paginate(fixture.data.list, body.pageNo ?? 1, body.pageSize ?? 20),
+    );
   },
 };
 ```
@@ -352,17 +358,23 @@ import type { ArHandlerMap } from '../index';
 
 export const adminMenuTreeHandlers: ArHandlerMap = {
   // Return full tree regardless of roleId — no per-role data in fixtures
-  '/Menu/GetMenuTreeByRoleId': ({ fixture }) => fixture ?? { code: 0, data: [], msg: '' },
+  '/Menu/GetMenuTreeByRoleId': ({ fixture }) =>
+    fixture ?? { code: 0, data: [], msg: '' },
 
-  '/Menu/GetMenuTreeByOrgId': ({ fixture }) => fixture ?? { code: 0, data: [], msg: '' },
+  '/Menu/GetMenuTreeByOrgId': ({ fixture }) =>
+    fixture ?? { code: 0, data: [], msg: '' },
 
-  '/Menu/GetAdminMenuTree': ({ fixture }) => fixture ?? { code: 0, data: [], msg: '' },
+  '/Menu/GetAdminMenuTree': ({ fixture }) =>
+    fixture ?? { code: 0, data: [], msg: '' },
 
-  '/Menu/GetMenuTree': ({ fixture }) => fixture ?? { code: 0, data: [], msg: '' },
+  '/Menu/GetMenuTree': ({ fixture }) =>
+    fixture ?? { code: 0, data: [], msg: '' },
 
-  '/Menu/GetOrgMenuTree': ({ fixture }) => fixture ?? { code: 0, data: [], msg: '' },
+  '/Menu/GetOrgMenuTree': ({ fixture }) =>
+    fixture ?? { code: 0, data: [], msg: '' },
 
-  '/Menu/GetMenuTreeByCurrentSysUser': ({ fixture }) => fixture ?? { code: 0, data: [], msg: '' },
+  '/Menu/GetMenuTreeByCurrentSysUser': ({ fixture }) =>
+    fixture ?? { code: 0, data: [], msg: '' },
 };
 ```
 
@@ -379,9 +391,11 @@ git commit -m "feat(mock): admin handlers — common (IpWhitelist/SysLog/SysDict
 ## Task 5: Tenant handler — withdraw
 
 **Files:**
+
 - Create: `apps/backend-mock/utils/ar-handlers/tenant/withdraw.ts`
 
 Filter fields confirmed from:
+
 - `src/views/finance/withdrawOrder/records/useRecordsPage.ts`: `tenantId`, `userId`, `orderNo`, `withdrawCategoryId`, `withdrawChannelId`, `withdrawState`
 - `src/views/finance/withdrawType/withdrawCategory/index.vue` (via type): `customName`, `state`, `tenantId`
 
@@ -454,12 +468,16 @@ export const tenantWithdrawHandlers: ArHandlerMap = {
 
   '/WithdrawConfigGroup/GetPageList': ({ body, fixture }) => {
     if (!fixture || fixture.code !== 0) return fixture;
-    return wrapOk(paginate(fixture.data.list, body.pageNo ?? 1, body.pageSize ?? 20));
+    return wrapOk(
+      paginate(fixture.data.list, body.pageNo ?? 1, body.pageSize ?? 20),
+    );
   },
 
   '/WithdrawStaticDay/GetPageList': ({ body, fixture }) => {
     if (!fixture || fixture.code !== 0) return fixture;
-    return wrapOk(paginate(fixture.data.list, body.pageNo ?? 1, body.pageSize ?? 20));
+    return wrapOk(
+      paginate(fixture.data.list, body.pageNo ?? 1, body.pageSize ?? 20),
+    );
   },
 };
 ```
@@ -476,6 +494,7 @@ git commit -m "feat(mock): tenant withdraw handler — WithdrawOrder/Record/Cate
 ## Task 6: Tenant handler — recharge + payment
 
 **Files:**
+
 - Create: `apps/backend-mock/utils/ar-handlers/tenant/recharge.ts`
 - Create: `apps/backend-mock/utils/ar-handlers/tenant/payment.ts`
 
@@ -512,22 +531,30 @@ export const tenantRechargeHandlers: ArHandlerMap = {
 
   '/RechargeLocalBank/GetPageList': ({ body, fixture }) => {
     if (!fixture || fixture.code !== 0) return fixture;
-    return wrapOk(paginate(fixture.data.list, body.pageNo ?? 1, body.pageSize ?? 20));
+    return wrapOk(
+      paginate(fixture.data.list, body.pageNo ?? 1, body.pageSize ?? 20),
+    );
   },
 
   '/RechargeLocalEWallet/GetPageList': ({ body, fixture }) => {
     if (!fixture || fixture.code !== 0) return fixture;
-    return wrapOk(paginate(fixture.data.list, body.pageNo ?? 1, body.pageSize ?? 20));
+    return wrapOk(
+      paginate(fixture.data.list, body.pageNo ?? 1, body.pageSize ?? 20),
+    );
   },
 
   '/RechargeLocalUpi/GetPageList': ({ body, fixture }) => {
     if (!fixture || fixture.code !== 0) return fixture;
-    return wrapOk(paginate(fixture.data.list, body.pageNo ?? 1, body.pageSize ?? 20));
+    return wrapOk(
+      paginate(fixture.data.list, body.pageNo ?? 1, body.pageSize ?? 20),
+    );
   },
 
   '/RechargeLocalUsdt/GetPageList': ({ body, fixture }) => {
     if (!fixture || fixture.code !== 0) return fixture;
-    return wrapOk(paginate(fixture.data.list, body.pageNo ?? 1, body.pageSize ?? 20));
+    return wrapOk(
+      paginate(fixture.data.list, body.pageNo ?? 1, body.pageSize ?? 20),
+    );
   },
 };
 ```
@@ -542,17 +569,23 @@ import type { ArHandlerMap } from '../index';
 export const tenantPaymentHandlers: ArHandlerMap = {
   '/ThirdPayMerchant/GetPageList': ({ body, fixture }) => {
     if (!fixture || fixture.code !== 0) return fixture;
-    return wrapOk(paginate(fixture.data.list, body.pageNo ?? 1, body.pageSize ?? 20));
+    return wrapOk(
+      paginate(fixture.data.list, body.pageNo ?? 1, body.pageSize ?? 20),
+    );
   },
 
   '/PaymentReport/GetChannelPageList': ({ body, fixture }) => {
     if (!fixture || fixture.code !== 0) return fixture;
-    return wrapOk(paginate(fixture.data.list, body.pageNo ?? 1, body.pageSize ?? 20));
+    return wrapOk(
+      paginate(fixture.data.list, body.pageNo ?? 1, body.pageSize ?? 20),
+    );
   },
 
   '/PaymentReport/GetTenantPageList': ({ body, fixture }) => {
     if (!fixture || fixture.code !== 0) return fixture;
-    return wrapOk(paginate(fixture.data.list, body.pageNo ?? 1, body.pageSize ?? 20));
+    return wrapOk(
+      paginate(fixture.data.list, body.pageNo ?? 1, body.pageSize ?? 20),
+    );
   },
 };
 ```
@@ -570,6 +603,7 @@ git commit -m "feat(mock): tenant recharge + payment handlers"
 ## Task 7: Tenant handler — v1-users + v1-system
 
 **Files:**
+
 - Create: `apps/backend-mock/utils/ar-handlers/tenant/v1-users.ts`
 - Create: `apps/backend-mock/utils/ar-handlers/tenant/v1-system.ts`
 
@@ -579,7 +613,12 @@ Filter fields confirmed from `src/views/member/user/useUserPage.ts`: `tenantId`,
 
 ```ts
 // apps/backend-mock/utils/ar-handlers/tenant/v1-users.ts
-import { filterByFields, findById, paginate, wrapOk } from '../../ar-mock-utils';
+import {
+  filterByFields,
+  findById,
+  paginate,
+  wrapOk,
+} from '../../ar-mock-utils';
 import type { ArHandlerMap } from '../index';
 
 export const tenantV1UsersHandlers: ArHandlerMap = {
@@ -600,7 +639,9 @@ export const tenantV1UsersHandlers: ArHandlerMap = {
 
   '/v1/Users/GetOnlineUserPageList': ({ body, fixture }) => {
     if (!fixture || fixture.code !== 0) return fixture;
-    return wrapOk(paginate(fixture.data.list ?? [], body.pageNo ?? 1, body.pageSize ?? 10));
+    return wrapOk(
+      paginate(fixture.data.list ?? [], body.pageNo ?? 1, body.pageSize ?? 10),
+    );
   },
 
   '/v1/Users/GetUserDetail': ({ body, loadFixture }) => {
@@ -611,42 +652,58 @@ export const tenantV1UsersHandlers: ArHandlerMap = {
 
   '/v1/Users/GetUserBankCardPageList': ({ body, fixture }) => {
     if (!fixture || fixture.code !== 0) return fixture;
-    return wrapOk(paginate(fixture.data.list ?? [], body.pageNo ?? 1, body.pageSize ?? 10));
+    return wrapOk(
+      paginate(fixture.data.list ?? [], body.pageNo ?? 1, body.pageSize ?? 10),
+    );
   },
 
   '/v1/Users/GetUPIPageList': ({ body, fixture }) => {
     if (!fixture || fixture.code !== 0) return fixture;
-    return wrapOk(paginate(fixture.data.list ?? [], body.pageNo ?? 1, body.pageSize ?? 10));
+    return wrapOk(
+      paginate(fixture.data.list ?? [], body.pageNo ?? 1, body.pageSize ?? 10),
+    );
   },
 
   '/v1/Users/GetUserCpfPageList': ({ body, fixture }) => {
     if (!fixture || fixture.code !== 0) return fixture;
-    return wrapOk(paginate(fixture.data.list ?? [], body.pageNo ?? 1, body.pageSize ?? 10));
+    return wrapOk(
+      paginate(fixture.data.list ?? [], body.pageNo ?? 1, body.pageSize ?? 10),
+    );
   },
 
   '/v1/Users/GetUserRealNamePageList': ({ body, fixture }) => {
     if (!fixture || fixture.code !== 0) return fixture;
-    return wrapOk(paginate(fixture.data.list ?? [], body.pageNo ?? 1, body.pageSize ?? 10));
+    return wrapOk(
+      paginate(fixture.data.list ?? [], body.pageNo ?? 1, body.pageSize ?? 10),
+    );
   },
 
   '/v1/Users/GetUserUsdtPageList': ({ body, fixture }) => {
     if (!fixture || fixture.code !== 0) return fixture;
-    return wrapOk(paginate(fixture.data.list ?? [], body.pageNo ?? 1, body.pageSize ?? 10));
+    return wrapOk(
+      paginate(fixture.data.list ?? [], body.pageNo ?? 1, body.pageSize ?? 10),
+    );
   },
 
   '/v1/Users/GetUserWalletPageList': ({ body, fixture }) => {
     if (!fixture || fixture.code !== 0) return fixture;
-    return wrapOk(paginate(fixture.data.list ?? [], body.pageNo ?? 1, body.pageSize ?? 10));
+    return wrapOk(
+      paginate(fixture.data.list ?? [], body.pageNo ?? 1, body.pageSize ?? 10),
+    );
   },
 
   '/v1/Users/GetSubsetUserPageList': ({ body, fixture }) => {
     if (!fixture || fixture.code !== 0) return fixture;
-    return wrapOk(paginate(fixture.data.list ?? [], body.pageNo ?? 1, body.pageSize ?? 10));
+    return wrapOk(
+      paginate(fixture.data.list ?? [], body.pageNo ?? 1, body.pageSize ?? 10),
+    );
   },
 
   '/v1/Users/GetUserRelativePageList': ({ body, fixture }) => {
     if (!fixture || fixture.code !== 0) return fixture;
-    return wrapOk(paginate(fixture.data.list ?? [], body.pageNo ?? 1, body.pageSize ?? 10));
+    return wrapOk(
+      paginate(fixture.data.list ?? [], body.pageNo ?? 1, body.pageSize ?? 10),
+    );
   },
 
   // Type lists — return as-is (no pagination, just arrays)
@@ -669,17 +726,23 @@ import type { ArHandlerMap } from '../index';
 export const tenantV1SystemHandlers: ArHandlerMap = {
   '/v1/System/GetPlatformLogPageList': ({ body, fixture }) => {
     if (!fixture || fixture.code !== 0) return fixture;
-    return wrapOk(paginate(fixture.data.list ?? [], body.pageNo ?? 1, body.pageSize ?? 10));
+    return wrapOk(
+      paginate(fixture.data.list ?? [], body.pageNo ?? 1, body.pageSize ?? 10),
+    );
   },
 
   '/v1/System/GetWebLogPageList': ({ body, fixture }) => {
     if (!fixture || fixture.code !== 0) return fixture;
-    return wrapOk(paginate(fixture.data.list ?? [], body.pageNo ?? 1, body.pageSize ?? 10));
+    return wrapOk(
+      paginate(fixture.data.list ?? [], body.pageNo ?? 1, body.pageSize ?? 10),
+    );
   },
 
   '/v1/Finance/GetTabBanksPageList': ({ body, fixture }) => {
     if (!fixture || fixture.code !== 0) return fixture;
-    return wrapOk(paginate(fixture.data.list ?? [], body.pageNo ?? 1, body.pageSize ?? 10));
+    return wrapOk(
+      paginate(fixture.data.list ?? [], body.pageNo ?? 1, body.pageSize ?? 10),
+    );
   },
 };
 ```
@@ -697,6 +760,7 @@ git commit -m "feat(mock): tenant v1/Users + v1/System handlers"
 ## Task 8: Registry — ar-handlers/index.ts
 
 **Files:**
+
 - Create: `apps/backend-mock/utils/ar-handlers/index.ts`
 
 This task defines `ArHandler`, `ArHandlerMap`, and `dispatchArHandler`. All module files import `ArHandlerMap` from here, so TypeScript errors from previous tasks will resolve after this task.
@@ -752,7 +816,12 @@ export function dispatchArHandler(
   const fixture = loadArFixture(domainUrl, apiPath);
 
   const makeLoadFixture = (m: 'admin' | 'tenant') => (path: string) =>
-    loadArFixture(m === 'admin' ? 'https://sit-adminapi.lottotest6688.com' : 'https://sit-tenantadmin.lottotest6688.com', path);
+    loadArFixture(
+      m === 'admin'
+        ? 'https://sit-adminapi.lottotest6688.com'
+        : 'https://sit-tenantadmin.lottotest6688.com',
+      path,
+    );
 
   const handler = registry[mode]?.[apiPath];
   if (handler) {
@@ -806,11 +875,13 @@ git commit -m "feat(mock): ar-handlers registry — dispatchArHandler with two-t
 ## Task 9: Update [...ar].ts — wire in dispatchArHandler
 
 **Files:**
+
 - Modify: `apps/backend-mock/api/[...ar].ts`
 
 - [ ] **Step 1: Replace the file contents**
 
 Current content:
+
 ```ts
 // apps/backend-mock/api/[...ar].ts
 import { defineEventHandler, getHeader, getRequestURL } from 'h3';
@@ -830,6 +901,7 @@ export default defineEventHandler((event) => {
 ```
 
 Replace with:
+
 ```ts
 // apps/backend-mock/api/[...ar].ts
 import { defineEventHandler, getHeader, getRequestURL, readBody } from 'h3';
@@ -838,7 +910,7 @@ import { dispatchArHandler } from '~/utils/ar-handlers/index';
 export default defineEventHandler(async (event) => {
   const domainUrl = getHeader(event, 'domainUrl') ?? '';
   const apiPath = getRequestURL(event).pathname.replace(/^\/api/, '') || '/';
-  const body = await readBody(event).catch(() => ({})) as Record<string, any>;
+  const body = (await readBody(event).catch(() => ({}))) as Record<string, any>;
 
   return dispatchArHandler(domainUrl, apiPath, body ?? {});
 });
@@ -914,6 +986,7 @@ git commit -m "feat(mock): wire dispatchArHandler into [...ar].ts — dynamic mo
 Many tenant fixtures have error codes from the original capture (auth expiry, wrong params). This task fixes `tenant-read.ts` based on old project page code, then re-runs the capture script.
 
 **Files:**
+
 - Modify: `apps/web-ar-admin/tools/endpoints/tenant-read.ts`
 
 - [ ] **Step 1: Identify which fixtures are broken**
@@ -929,6 +1002,7 @@ done | sort
 ```
 
 Expected output (endpoints needing re-capture):
+
 ```
 code=11  Auth/CheckAuth
 code=11  WithdrawOrder/GetAuditPageList
@@ -999,6 +1073,7 @@ Read the output. For each endpoint with code=7, compare the body sent in the cur
 Open `apps/web-ar-admin/tools/endpoints/tenant-read.ts` and correct the body for each failing endpoint based on what you found in Step 2.
 
 Common patterns to check:
+
 - `WithdrawStaticDay/GetPageList`: may not want `tenantId`, needs a `dateType` field
 - `WithdrawChannel/GetPageList`: needs `tenantId` AND `channelId: 0` or similar
 - `PaymentReport/*`: needs specific date range params
@@ -1006,6 +1081,7 @@ Common patterns to check:
 - `v1/Users/GetUserBetTotal`: needs `userId: <validId>`, `pageNo: 0, pageSize: 0`
 
 After editing, verify the change makes sense by comparing with the old project API types:
+
 ```bash
 grep -A15 "WithdrawStaticDay\|WithdrawChannel\|PaymentReport" \
   /Users/cola/Documents/gs/feat1-ar_platform_admin/src/api/withdraw/types.ts | head -40
@@ -1049,6 +1125,7 @@ git commit -m "fix(mock): re-capture broken tenant fixtures — fix params for c
 The `admin/Role/GetPageList` fixture has `code=-1` (DB error). Re-capture it.
 
 **Files:**
+
 - Modify: `apps/web-ar-admin/tools/mock-fixtures/admin/Role/GetPageList.json` (replaced by capture)
 
 - [ ] **Step 1: Check current Role/GetPageList fixture**
@@ -1168,6 +1245,7 @@ No new files to commit — just note in the tracker that mock is complete.
 ## Self-Review
 
 **Spec coverage check:**
+
 - ✅ Two-tier dispatch (Tier 1 registry + Tier 2 generic) → Tasks 2, 8
 - ✅ `ar-mock-utils.ts` with all four functions → Task 1
 - ✅ Admin handlers: SysUsers, Role, Org+Tenant, IpWhitelist/SysLog/SysDict, MenuTree → Tasks 3, 4
@@ -1181,6 +1259,7 @@ No new files to commit — just note in the tracker that mock is complete.
 - ✅ No faker / no real write requests → confirmed by policy
 
 **Type consistency check:**
+
 - `ArHandler` defined in `index.ts`, imported in all module files ✅
 - `loadFixture` passed as `(path: string) => any` consistently in `GetInfo`/`GetUserDetail` handlers ✅
 - `paginate()` return shape matches `CrudRequestResult` (`list`, `totalCount`, `pageNo`) ✅

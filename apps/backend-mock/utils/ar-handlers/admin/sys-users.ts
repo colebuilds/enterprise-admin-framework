@@ -10,7 +10,7 @@ import {
 export const adminSysUsersHandlers: ArHandlerMap = {
   '/SysUsers/GetAdminPageList': ({ body, fixture }) => {
     if (!fixture || fixture.code !== 0) return fixture;
-    const filtered = filterByFields(fixture.data.list, body.userName, [
+    const filtered = filterByFields(fixture.data?.list ?? [], body.userName, [
       'userName',
       'nickName',
     ]);
@@ -19,7 +19,7 @@ export const adminSysUsersHandlers: ArHandlerMap = {
 
   '/SysUsers/GetTenantPageList': ({ body, fixture }) => {
     if (!fixture || fixture.code !== 0) return fixture;
-    const filtered = filterByFields(fixture.data.list, body.userName, [
+    const filtered = filterByFields(fixture.data?.list ?? [], body.userName, [
       'userName',
       'nickName',
     ]);
@@ -28,7 +28,7 @@ export const adminSysUsersHandlers: ArHandlerMap = {
 
   '/SysUsers/GetPageList': ({ body, fixture }) => {
     if (!fixture || fixture.code !== 0) return fixture;
-    const filtered = filterByFields(fixture.data.list, body.userName, [
+    const filtered = filterByFields(fixture.data?.list ?? [], body.userName, [
       'userName',
       'nickName',
     ]);

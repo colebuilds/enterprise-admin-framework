@@ -4,7 +4,7 @@
 
 ## 当前状态
 
-**阶段：** 2 — 第一个模块 **当前任务：** system/user **下一步：** 在老项目写 e2e/system/user.spec.ts，跑通后迁移代码
+**阶段：** 3 — 模块迭代 **当前任务：** ✅ system/user + system/role 已完成 **下一步：** 迁移下一个模块（system/menu 或 tenant/organization）
 
 ---
 

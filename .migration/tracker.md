@@ -9,7 +9,7 @@
 | Env 重构 | ⬜ | — | spec-env.md |
 | HTTP 客户端 | ✅ | — | spec-request.md；585 APIs / 12 模块；0 TS errors |
 | ProComponents 搬入 | ✅ | — | 96 文件，lint 规则已 suppress |
-| 登录 + 权限路由 | 🔄 | smoke/auth | spec-access.md；代码完成，待运行时验收 |
+| 登录 + 权限路由 | ✅ | smoke/auth | spec-access.md；routes 用小写 authority，roles:codes 传递，全部验收通过 |
 | 字典体系 | ⬜ | smoke/dict-loading | spec-dict.md |
 | 多语言 | ⬜ | 手动验证 | spec-i18n.md |
 
@@ -18,8 +18,8 @@
 | 模块 | 路径 | 状态 | e2e(老项目) | e2e(新项目) | 备注 |
 | --- | --- | --- | --- | --- | --- |
 | **system** |  |  |  |  |  |
-| 系统用户 | /system/user | ⬜ | ⬜ | ⬜ | 第一个模块，全链路验证 |
-| 角色管理 | /system/role | ⬜ | ⬜ | ⬜ |  |
+| 系统用户 | /system/user | ✅ | — | ✅ | e2e/system/user.spec.ts 5/5 通过（2026-05-08） |
+| 角色管理 | /system/role | ✅ | — | ✅ | e2e/system/role.spec.ts 3/3通过，2跳过（SIT无角色数据）（2026-05-08） |
 | 系统监控 | /system/monitor | ⬜ | ⬜ | ⬜ |  |
 | 缓存管理 | /system/cache | ⬜ | ⬜ | ⬜ |  |
 | 平台日志 | /system/platformLog | ⬜ | ⬜ | ⬜ |  |
