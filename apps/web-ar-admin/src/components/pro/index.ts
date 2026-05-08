@@ -82,7 +82,7 @@ export {
 } from './ProEditDataTable';
 
 // ProField - 表单字段组件
-export { ProField, ProFormItem } from './ProField';
+export { ProField, ProFormItem, ProNumberRange } from './ProField';
 
 // ProForm - 表单组件
 export { ProForm } from './ProForm';

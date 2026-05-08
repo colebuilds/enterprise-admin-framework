@@ -5,7 +5,8 @@ import type {
   ProValidationState,
 } from '../types';
 
-import { ComputedRef, inject, InjectionKey, provide, Ref } from 'vue';
+import type { ComputedRef, InjectionKey, Ref } from 'vue';
+import { inject, provide } from 'vue';
 
 /**
  * ProField 上下文接口

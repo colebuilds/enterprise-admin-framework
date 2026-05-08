@@ -7,15 +7,8 @@ import type {
   Recordable,
 } from '../types';
 
-import {
-  computed,
-  ComputedRef,
-  inject,
-  InjectionKey,
-  provide,
-  Ref,
-  shallowRef,
-} from 'vue';
+import type { ComputedRef, InjectionKey, Ref } from 'vue';
+import { computed, inject, provide, shallowRef } from 'vue';
 
 import { getValueByPath, setValueByPath } from '../utils';
 

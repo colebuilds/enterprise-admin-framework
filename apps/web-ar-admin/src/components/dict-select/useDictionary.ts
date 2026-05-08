@@ -3,11 +3,16 @@ import type { DictionaryRsp, PlatformDicRsp } from '#/api/common';
 import type { SysGropDictionaryRsp } from '#/api/system';
 
 import { ref } from 'vue';
-
-import { useAppUserStore } from '#/store/app-user';
+import { queryClient } from '#/lib/query-client';
+import { DICT_QUERY_KEY } from '#/store/dict';
 
 /** 字典数据来源 */
-export type DictionarySource = 'common' | 'group' | 'platform' | 'v1';
+export type DictionarySource =
+  | 'common'
+  | 'dynamic'
+  | 'group'
+  | 'platform'
+  | 'v1';
 
 /** 字典键名类型 */
 export type DictionaryType =
@@ -49,6 +54,7 @@ const SOURCE_DEFAULT_FIELDS: Record<DictionarySource, ResolvedFieldConfig> = {
     labelField: 'name',
     valueField: 'id',
   },
+  dynamic: {},
 };
 
 const SOURCE_LABEL_CANDIDATES: Record<DictionarySource, string[]> = {
@@ -63,6 +69,7 @@ const SOURCE_LABEL_CANDIDATES: Record<DictionarySource, string[]> = {
     'dictName',
   ],
   v1: ['name', 'label', 'value'],
+  dynamic: ['name', 'label', 'value'],
 };
 
 const SOURCE_VALUE_CANDIDATES: Record<DictionarySource, string[]> = {
@@ -78,6 +85,7 @@ const SOURCE_VALUE_CANDIDATES: Record<DictionarySource, string[]> = {
     'value',
   ],
   v1: ['id', 'code', 'key', 'value'],
+  dynamic: ['id', 'code', 'key', 'value'],
 };
 
 /**
@@ -94,23 +102,25 @@ export interface UseDictionaryConfig {
 
 export function useDictionary(config: UseDictionaryConfig = {}) {
   const defaultSource = config.source ?? 'common';
-  const userStore = useAppUserStore();
   const loading = ref(false);
 
   const resolveSourceData = (source: DictionarySource) => {
     switch (source) {
+      case 'dynamic': {
+        return queryClient.getQueryData(DICT_QUERY_KEY.dynamic) ?? {};
+      }
       case 'group': {
-        return userStore.getGropuData;
+        return queryClient.getQueryData(DICT_QUERY_KEY.group) ?? {};
       }
       case 'platform': {
-        return userStore.getPlatformDic;
+        return queryClient.getQueryData(DICT_QUERY_KEY.platform) ?? {};
       }
       case 'v1': {
-        return userStore.getV1Dictionary;
+        return queryClient.getQueryData(DICT_QUERY_KEY.v1) ?? {};
       }
       case 'common':
       default: {
-        return userStore.getDictionaryList;
+        return queryClient.getQueryData(DICT_QUERY_KEY.common) ?? {};
       }
     }
   };

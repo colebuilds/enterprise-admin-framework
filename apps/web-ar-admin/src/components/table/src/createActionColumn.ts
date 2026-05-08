@@ -9,7 +9,7 @@ import type { Recordable } from '#/components/pro/types';
 import { computed, h } from 'vue';
 import { useI18n } from 'vue-i18n';
 
-import { usePermission } from '#/hooks/web/usePermission';
+import { usePermission } from '#/hooks/usePermission';
 
 import TableAction from './components/TableAction.vue';
 
