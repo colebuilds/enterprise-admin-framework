@@ -8,5 +8,9 @@ export function usePermission() {
     return codes.some((c) => accessStore.accessCodes.includes(c.toLowerCase()));
   }
 
-  return { hasPermission };
+  function hasEveryPermission(codes: string[]): boolean {
+    return codes.every((c) => accessStore.accessCodes.includes(c.toLowerCase()));
+  }
+
+  return { hasEveryPermission, hasPermission };
 }
