@@ -24,7 +24,11 @@ import {
   zhCN,
 } from 'naive-ui';
 
+import { useLocaleSync } from '#/composables/use-locale-sync';
+
 defineOptions({ name: 'App' });
+
+useLocaleSync();
 
 const { commonTokens } = useNaiveDesignTokens();
 
