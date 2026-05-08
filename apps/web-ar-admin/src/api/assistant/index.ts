@@ -1,56 +1,57 @@
-import { requestClient } from '#/api/request';
 import type {
-  MetricsQueryDto,
-  CreateFeedbackDto,
-  MessageFeedbackVO,
-  IntentListResponseVO,
-  ChatRequestDto,
-  SSEEventVO,
-  ChatSessionsQueryDto,
-  PaginatedSessionDataVO,
-  MessagesQueryDto,
-  PaginatedMessageDataVO,
-  MessageIntentFeedbackDto,
-  ChatConfigQueryDto,
+  AlertConfigDataVO,
   AssistantConfigVO,
-  RuntimeRunVO,
-  TranslateRequestDto,
-  TranslateResponseDto,
+  ChatConfigQueryDto,
+  ChatRequestDto,
+  ChatSessionsQueryDto,
+  ContentGenLogsQueryDto,
+  ContentGenTextDto,
+  ContestStatsDataVO,
+  ContestStatsQueryDto,
+  CreateFeedbackDto,
+  DashboardSnapshotDataVO,
+  DocumentResponseDto,
+  EscalationQueryDto,
+  ExecuteSyncDataVO,
+  ExecuteSyncDto,
+  FailedQueriesQueryDto,
+  FailedQueryListDataVO,
   FeedbackStatsDataVO,
   IntentFeedbackStatsVO,
-  EscalationQueryDto,
-  ResolveEscalationDto,
+  IntentListResponseVO,
   KnowledgeDocumentsQueryDto,
+  MessageFeedbackVO,
+  MessageIntentFeedbackDto,
+  MessagesQueryDto,
+  MetricsQueryDto,
+  OptimizationsQueryDto,
   PaginatedDocumentDataDto,
-  DocumentResponseDto,
+  PaginatedMessageDataVO,
+  PaginatedSessionDataVO,
+  PaginatedSyncLogDataVO,
+  PlannerStatsDataVO,
+  PlannerStatsQueryDto,
+  PromptOptimizationListResponseVO,
+  PromptVersionListResponseVO,
+  RebuildKnowledgeIndexDataVO,
+  ReportSessionsQueryDto,
+  ResolveEscalationDto,
+  RuntimeRunVO,
   SearchRequestDto,
   SearchResponseDto,
-  ExecuteSyncDto,
-  ExecuteSyncDataVO,
-  SyncLogsQueryDto,
-  PaginatedSyncLogDataVO,
-  RebuildKnowledgeIndexDataVO,
-  ContentGenTextDto,
-  ContentGenLogsQueryDto,
-  SnapshotQueryDto,
-  DashboardSnapshotDataVO,
-  PlannerStatsQueryDto,
-  PlannerStatsDataVO,
-  AlertConfigDataVO,
-  UpdateAlertConfigDto,
-  ReportSessionsQueryDto,
   SessionDetailDataVO,
-  SixDimensionsQueryDto,
   SixDimensionEvaluationDataVO,
-  ContestStatsQueryDto,
-  ContestStatsDataVO,
+  SixDimensionsQueryDto,
+  SnapshotQueryDto,
+  SSEEventVO,
+  SyncLogsQueryDto,
+  TranslateRequestDto,
+  TranslateResponseDto,
+  UpdateAlertConfigDto,
   VersionsQueryDto,
-  PromptVersionListResponseVO,
-  OptimizationsQueryDto,
-  PromptOptimizationListResponseVO,
-  FailedQueriesQueryDto,
-  FailedQueryListDataVO
 } from './types';
+
+import { requestClient } from '#/api/request';
 
 // 导出类型
 export * from './types';
@@ -64,7 +65,7 @@ export * from './types';
  */
 export const metrics = (params: MetricsQueryDto) => {
   return requestClient.get<any>('/ai/metrics', { params });
-}
+};
 
 // ==================== Feedback ====================
 
@@ -75,7 +76,7 @@ export const metrics = (params: MetricsQueryDto) => {
  */
 export const feedback = (params: CreateFeedbackDto) => {
   return requestClient.post<MessageFeedbackVO>('/ai/feedback', params);
-}
+};
 
 /**
  * @description: 获取支持的意图列表
@@ -83,7 +84,7 @@ export const feedback = (params: CreateFeedbackDto) => {
  */
 export const intents = () => {
   return requestClient.get<IntentListResponseVO>('/ai/feedback/intents');
-}
+};
 
 // ==================== Chat - 对话服务 ====================
 
@@ -94,7 +95,7 @@ export const intents = () => {
  */
 export const chat = (params: ChatRequestDto) => {
   return requestClient.post<SSEEventVO>('/ai/chat', params);
-}
+};
 
 /**
  * @description: 会话列表
@@ -102,8 +103,10 @@ export const chat = (params: ChatRequestDto) => {
  * @url: /api/ai/chat/sessions
  */
 export const chatSessions = (params?: ChatSessionsQueryDto) => {
-  return requestClient.get<PaginatedSessionDataVO>('/ai/chat/sessions', { params });
-}
+  return requestClient.get<PaginatedSessionDataVO>('/ai/chat/sessions', {
+    params,
+  });
+};
 
 /**
  * @description: 删除会话
@@ -112,7 +115,7 @@ export const chatSessions = (params?: ChatSessionsQueryDto) => {
  */
 export const chatSessionsDelete = (id: string) => {
   return requestClient.delete<any>(`/ai/chat/sessions/${id}`);
-}
+};
 
 /**
  * @description: 获取历史消息
@@ -121,8 +124,11 @@ export const chatSessionsDelete = (id: string) => {
  * @url: /api/ai/chat/sessions/{sessionId}/messages
  */
 export const messages = (sessionId: string, params?: MessagesQueryDto) => {
-  return requestClient.get<PaginatedMessageDataVO>(`/ai/chat/sessions/${sessionId}/messages`, { params });
-}
+  return requestClient.get<PaginatedMessageDataVO>(
+    `/ai/chat/sessions/${sessionId}/messages`,
+    { params },
+  );
+};
 
 /**
  * @description: 提交消息意图反馈
@@ -130,9 +136,15 @@ export const messages = (sessionId: string, params?: MessagesQueryDto) => {
  * @param {MessageIntentFeedbackDto} params
  * @url: /api/ai/chat/messages/{messageId}/intent-feedback
  */
-export const intentFeedback = (messageId: string, params: MessageIntentFeedbackDto) => {
-  return requestClient.post<any>(`/ai/chat/messages/${messageId}/intent-feedback`, params);
-}
+export const intentFeedback = (
+  messageId: string,
+  params: MessageIntentFeedbackDto,
+) => {
+  return requestClient.post<any>(
+    `/ai/chat/messages/${messageId}/intent-feedback`,
+    params,
+  );
+};
 
 /**
  * @description: 获取 AI 助手配置
@@ -141,7 +153,7 @@ export const intentFeedback = (messageId: string, params: MessageIntentFeedbackD
  */
 export const chatConfig = (params?: ChatConfigQueryDto) => {
   return requestClient.get<AssistantConfigVO>('/ai/chat/config', { params });
-}
+};
 
 /**
  * @description: 获取任务运行详情
@@ -150,7 +162,7 @@ export const chatConfig = (params?: ChatConfigQueryDto) => {
  */
 export const runs = (runId: string) => {
   return requestClient.get<RuntimeRunVO>(`/ai/chat/runs/${runId}`);
-}
+};
 
 // ==================== Translate ====================
 
@@ -160,8 +172,11 @@ export const runs = (runId: string) => {
  * @url: /api/ai/admin/translate
  */
 export const translate = (params: TranslateRequestDto) => {
-  return requestClient.post<TranslateResponseDto>('/ai/admin/translate', params);
-}
+  return requestClient.post<TranslateResponseDto>(
+    '/ai/admin/translate',
+    params,
+  );
+};
 
 // ==================== Feedback Admin ====================
 
@@ -171,15 +186,17 @@ export const translate = (params: TranslateRequestDto) => {
  */
 export const feedbackStats = () => {
   return requestClient.get<FeedbackStatsDataVO>('/ai/admin/feedback/stats');
-}
+};
 
 /**
  * @description: 意图识别统计
  * @url: /api/ai/admin/feedback/intents/stats
  */
 export const intentsStats = () => {
-  return requestClient.get<IntentFeedbackStatsVO>('/ai/admin/feedback/intents/stats');
-}
+  return requestClient.get<IntentFeedbackStatsVO>(
+    '/ai/admin/feedback/intents/stats',
+  );
+};
 
 /**
  * @description: 按会话校正意图
@@ -187,8 +204,10 @@ export const intentsStats = () => {
  * @url: /api/ai/admin/feedback/intents/correct/session/{sessionId}
  */
 export const session = (sessionId: string) => {
-  return requestClient.post<any>(`/ai/admin/feedback/intents/correct/session/${sessionId}`);
-}
+  return requestClient.post<any>(
+    `/ai/admin/feedback/intents/correct/session/${sessionId}`,
+  );
+};
 
 /**
  * @description: 按消息校正意图
@@ -196,8 +215,10 @@ export const session = (sessionId: string) => {
  * @url: /api/ai/admin/feedback/intents/correct/message/{messageId}
  */
 export const message = (messageId: string) => {
-  return requestClient.post<any>(`/ai/admin/feedback/intents/correct/message/${messageId}`);
-}
+  return requestClient.post<any>(
+    `/ai/admin/feedback/intents/correct/message/${messageId}`,
+  );
+};
 
 // ==================== Escalation Admin ====================
 
@@ -208,7 +229,7 @@ export const message = (messageId: string) => {
  */
 export const escalation = (params?: EscalationQueryDto) => {
   return requestClient.get<any>('/ai/admin/escalation', { params });
-}
+};
 
 /**
  * @description: 标记工单已解决
@@ -217,8 +238,11 @@ export const escalation = (params?: EscalationQueryDto) => {
  * @url: /api/ai/admin/escalation/{id}/resolve
  */
 export const resolve = (id: string, params: ResolveEscalationDto) => {
-  return requestClient.request<any>(`/ai/admin/escalation/${id}/resolve`, { method: 'PATCH', data: params });
-}
+  return requestClient.request<any>(`/ai/admin/escalation/${id}/resolve`, {
+    method: 'PATCH',
+    data: params,
+  });
+};
 
 /**
  * @description: 转人工统计
@@ -226,7 +250,7 @@ export const resolve = (id: string, params: ResolveEscalationDto) => {
  */
 export const escalationStats = () => {
   return requestClient.get<any>('/ai/admin/escalation/stats');
-}
+};
 
 // ==================== Knowledge - 知识库管理 ====================
 
@@ -236,8 +260,11 @@ export const escalationStats = () => {
  * @url: /api/ai/knowledge/documents
  */
 export const knowledgeDocuments = (params?: KnowledgeDocumentsQueryDto) => {
-  return requestClient.get<PaginatedDocumentDataDto>('/ai/knowledge/documents', { params });
-}
+  return requestClient.get<PaginatedDocumentDataDto>(
+    '/ai/knowledge/documents',
+    { params },
+  );
+};
 
 /**
  * @description: 获取知识文档详情
@@ -245,8 +272,10 @@ export const knowledgeDocuments = (params?: KnowledgeDocumentsQueryDto) => {
  * @url: /api/ai/knowledge/documents/{id}
  */
 export const knowledgeDocumentsGet = (id: string) => {
-  return requestClient.get<DocumentResponseDto>(`/ai/knowledge/documents/${id}`);
-}
+  return requestClient.get<DocumentResponseDto>(
+    `/ai/knowledge/documents/${id}`,
+  );
+};
 
 /**
  * @description: 根据 docId 获取知识文档
@@ -254,8 +283,10 @@ export const knowledgeDocumentsGet = (id: string) => {
  * @url: /api/ai/knowledge/documents/by-doc-id/{docId}
  */
 export const byDocId = (docId: string) => {
-  return requestClient.get<DocumentResponseDto>(`/ai/knowledge/documents/by-doc-id/${docId}`);
-}
+  return requestClient.get<DocumentResponseDto>(
+    `/ai/knowledge/documents/by-doc-id/${docId}`,
+  );
+};
 
 /**
  * @description: 混合检索知识库
@@ -264,7 +295,7 @@ export const byDocId = (docId: string) => {
  */
 export const search = (params: SearchRequestDto) => {
   return requestClient.post<SearchResponseDto>('/ai/knowledge/search', params);
-}
+};
 
 /**
  * @description: 获取向量化队列状态
@@ -272,7 +303,7 @@ export const search = (params: SearchRequestDto) => {
  */
 export const queueStats = () => {
   return requestClient.get<any>('/ai/knowledge/queue/stats');
-}
+};
 
 /**
  * @description: 清理失败的向量化任务
@@ -280,7 +311,7 @@ export const queueStats = () => {
  */
 export const cleanFailed = () => {
   return requestClient.post<any>('/ai/knowledge/queue/clean-failed');
-}
+};
 
 // ==================== Sync ====================
 
@@ -291,7 +322,7 @@ export const cleanFailed = () => {
  */
 export const sync = (params: ExecuteSyncDto) => {
   return requestClient.post<ExecuteSyncDataVO>('/ai/sync', params);
-}
+};
 
 /**
  * @description: 同步日志
@@ -300,15 +331,17 @@ export const sync = (params: ExecuteSyncDto) => {
  */
 export const syncLogs = (params?: SyncLogsQueryDto) => {
   return requestClient.get<PaginatedSyncLogDataVO>('/ai/sync/logs', { params });
-}
+};
 
 /**
  * @description: 重建知识索引并重新入队向量化
  * @url: /api/ai/sync/rebuild-index
  */
 export const rebuildIndex = () => {
-  return requestClient.post<RebuildKnowledgeIndexDataVO>('/ai/sync/rebuild-index');
-}
+  return requestClient.post<RebuildKnowledgeIndexDataVO>(
+    '/ai/sync/rebuild-index',
+  );
+};
 
 // ==================== Health ====================
 
@@ -318,7 +351,7 @@ export const rebuildIndex = () => {
  */
 export const health = () => {
   return requestClient.get<any>('/ai/health');
-}
+};
 
 // ==================== User ====================
 
@@ -328,7 +361,7 @@ export const health = () => {
  */
 export const context = () => {
   return requestClient.get<any>('/ai/user/test/context');
-}
+};
 
 // ==================== ContentGen - 运营内容生成 ====================
 
@@ -339,7 +372,7 @@ export const context = () => {
  */
 export const text = (params: ContentGenTextDto) => {
   return requestClient.post<any>('/ai/content-gen/text', params);
-}
+};
 
 /**
  * @description: 内容生成操作日志
@@ -348,7 +381,7 @@ export const text = (params: ContentGenTextDto) => {
  */
 export const contentGenLogs = (params?: ContentGenLogsQueryDto) => {
   return requestClient.get<any>('/ai/content-gen/logs', { params });
-}
+};
 
 // ==================== Report - 报表统计 ====================
 
@@ -358,8 +391,11 @@ export const contentGenLogs = (params?: ContentGenLogsQueryDto) => {
  * @url: /api/ai/report/dashboard/snapshot
  */
 export const snapshot = (params?: SnapshotQueryDto) => {
-  return requestClient.get<DashboardSnapshotDataVO>('/ai/report/dashboard/snapshot', { params });
-}
+  return requestClient.get<DashboardSnapshotDataVO>(
+    '/ai/report/dashboard/snapshot',
+    { params },
+  );
+};
 
 /**
  * @description: 获取 planner 聚合统计
@@ -367,8 +403,10 @@ export const snapshot = (params?: SnapshotQueryDto) => {
  * @url: /api/ai/report/planner/stats
  */
 export const plannerStats = (params?: PlannerStatsQueryDto) => {
-  return requestClient.get<PlannerStatsDataVO>('/ai/report/planner/stats', { params });
-}
+  return requestClient.get<PlannerStatsDataVO>('/ai/report/planner/stats', {
+    params,
+  });
+};
 
 /**
  * @description: 获取告警配置
@@ -376,7 +414,7 @@ export const plannerStats = (params?: PlannerStatsQueryDto) => {
  */
 export const alertsConfig = () => {
   return requestClient.get<AlertConfigDataVO>('/ai/report/alerts/config');
-}
+};
 
 /**
  * @description: 更新告警配置
@@ -384,8 +422,11 @@ export const alertsConfig = () => {
  * @url: /api/ai/report/alerts/config
  */
 export const alertsConfigPut = (params: UpdateAlertConfigDto) => {
-  return requestClient.put<AlertConfigDataVO>('/ai/report/alerts/config', params);
-}
+  return requestClient.put<AlertConfigDataVO>(
+    '/ai/report/alerts/config',
+    params,
+  );
+};
 
 /**
  * @description: 获取会话分析列表
@@ -394,7 +435,7 @@ export const alertsConfigPut = (params: UpdateAlertConfigDto) => {
  */
 export const reportSessions = (params?: ReportSessionsQueryDto) => {
   return requestClient.get<any>('/ai/report/sessions', { params });
-}
+};
 
 /**
  * @description: 获取会话详情
@@ -402,8 +443,10 @@ export const reportSessions = (params?: ReportSessionsQueryDto) => {
  * @url: /api/ai/report/sessions/{sessionId}
  */
 export const reportSessionsGet = (sessionId: string) => {
-  return requestClient.get<SessionDetailDataVO>(`/ai/report/sessions/${sessionId}`);
-}
+  return requestClient.get<SessionDetailDataVO>(
+    `/ai/report/sessions/${sessionId}`,
+  );
+};
 
 /**
  * @description: 六维评估统计
@@ -411,8 +454,11 @@ export const reportSessionsGet = (sessionId: string) => {
  * @url: /api/ai/report/evaluation/six-dimensions
  */
 export const sixDimensions = (params: SixDimensionsQueryDto) => {
-  return requestClient.get<SixDimensionEvaluationDataVO>('/ai/report/evaluation/six-dimensions', { params });
-}
+  return requestClient.get<SixDimensionEvaluationDataVO>(
+    '/ai/report/evaluation/six-dimensions',
+    { params },
+  );
+};
 
 /**
  * @description: 对抗验证统计
@@ -420,8 +466,11 @@ export const sixDimensions = (params: SixDimensionsQueryDto) => {
  * @url: /api/ai/report/evaluation/contest-stats
  */
 export const contestStats = (params: ContestStatsQueryDto) => {
-  return requestClient.get<ContestStatsDataVO>('/ai/report/evaluation/contest-stats', { params });
-}
+  return requestClient.get<ContestStatsDataVO>(
+    '/ai/report/evaluation/contest-stats',
+    { params },
+  );
+};
 
 /**
  * @description: Prompt 版本列表
@@ -429,8 +478,11 @@ export const contestStats = (params: ContestStatsQueryDto) => {
  * @url: /api/ai/report/prompt/versions
  */
 export const versions = (params: VersionsQueryDto) => {
-  return requestClient.get<PromptVersionListResponseVO>('/ai/report/prompt/versions', { params });
-}
+  return requestClient.get<PromptVersionListResponseVO>(
+    '/ai/report/prompt/versions',
+    { params },
+  );
+};
 
 /**
  * @description: Prompt 优化记录
@@ -438,8 +490,11 @@ export const versions = (params: VersionsQueryDto) => {
  * @url: /api/ai/report/prompt/optimizations
  */
 export const optimizations = (params: OptimizationsQueryDto) => {
-  return requestClient.get<PromptOptimizationListResponseVO>('/ai/report/prompt/optimizations', { params });
-}
+  return requestClient.get<PromptOptimizationListResponseVO>(
+    '/ai/report/prompt/optimizations',
+    { params },
+  );
+};
 
 /**
  * @description: 激活指定 Prompt 版本
@@ -447,8 +502,10 @@ export const optimizations = (params: OptimizationsQueryDto) => {
  * @url: /api/ai/report/prompt/versions/{templateKey}/activate
  */
 export const activate = (templateKey: string) => {
-  return requestClient.post<any>(`/ai/report/prompt/versions/${templateKey}/activate`);
-}
+  return requestClient.post<any>(
+    `/ai/report/prompt/versions/${templateKey}/activate`,
+  );
+};
 
 /**
  * @description: 回滚 Prompt 到上一个版本
@@ -456,8 +513,10 @@ export const activate = (templateKey: string) => {
  * @url: /api/ai/report/prompt/versions/{templateKey}/rollback
  */
 export const rollback = (templateKey: string) => {
-  return requestClient.post<any>(`/ai/report/prompt/versions/${templateKey}/rollback`);
-}
+  return requestClient.post<any>(
+    `/ai/report/prompt/versions/${templateKey}/rollback`,
+  );
+};
 
 /**
  * @description: 审批通过优化记录
@@ -465,8 +524,10 @@ export const rollback = (templateKey: string) => {
  * @url: /api/ai/report/prompt/optimizations/{id}/approve
  */
 export const approve = (id: string) => {
-  return requestClient.post<any>(`/ai/report/prompt/optimizations/${id}/approve`);
-}
+  return requestClient.post<any>(
+    `/ai/report/prompt/optimizations/${id}/approve`,
+  );
+};
 
 /**
  * @description: 拒绝优化记录
@@ -474,8 +535,10 @@ export const approve = (id: string) => {
  * @url: /api/ai/report/prompt/optimizations/{id}/reject
  */
 export const reject = (id: string) => {
-  return requestClient.post<any>(`/ai/report/prompt/optimizations/${id}/reject`);
-}
+  return requestClient.post<any>(
+    `/ai/report/prompt/optimizations/${id}/reject`,
+  );
+};
 
 /**
  * @description: 获取失败查询列表
@@ -483,5 +546,7 @@ export const reject = (id: string) => {
  * @url: /api/ai/report/failed-queries
  */
 export const failedQueries = (params?: FailedQueriesQueryDto) => {
-  return requestClient.get<FailedQueryListDataVO>('/ai/report/failed-queries', { params });
-}
+  return requestClient.get<FailedQueryListDataVO>('/ai/report/failed-queries', {
+    params,
+  });
+};

@@ -1,0 +1,807 @@
+{
+  "generatedAt": "2026-05-07T15:55:19.820Z",
+  "dynamicMode": "explicit",
+  "overlaps": [
+    {
+      "key": "countryList",
+      "sources": [
+        "common",
+        "platform"
+      ]
+    },
+    {
+      "key": "currencyList",
+      "sources": [
+        "common",
+        "platform"
+      ]
+    },
+    {
+      "key": "financialTypeList",
+      "sources": [
+        "common",
+        "v1"
+      ]
+    }
+  ],
+  "sources": {
+    "common": {
+      "keys": [
+        "activityStateList",
+        "activityTypeList",
+        "analyticsEventTypeList",
+        "approvalRoleAuthorizeList",
+        "approvalSubRoleAuthorizeList",
+        "approvalUserRoleList",
+        "artificialRechargeTypeList",
+        "bankCardTypeList",
+        "blackContentTypeList",
+        "blackFreezeTypeList",
+        "cacheDBList",
+        "cacheInstanceList",
+        "clickTypeList",
+        "comparatorList",
+        "compensationReceiveTypeList",
+        "compensationStateList",
+        "compensationTypeList",
+        "countryList",
+        "currencyList",
+        "dictCategoryList",
+        "disablePermissList",
+        "dynamicDictionaryKeyList",
+        "emailConfigList",
+        "enableStateList",
+        "eventLogStateList",
+        "eventTriggerModeList",
+        "exportStateList",
+        "fbMsgSendStateList",
+        "fbTargetList",
+        "feedBackStateList",
+        "financialTypeList",
+        "frequencyList",
+        "gameCategoryList",
+        "gameTypeList",
+        "giftPackRewardTypeList",
+        "informationTypeList",
+        "inmailTargetList",
+        "intervalTimeTypeList",
+        "jumpPageList",
+        "jumpTypeList",
+        "language",
+        "lossReliefRewardTImeTypeList",
+        "lotteryGameCode",
+        "luckyDoubleActivteStateList",
+        "luskyDoubleTargetGroupList",
+        "messageJumpTypeList",
+        "orderDispatchModeList",
+        "orderStateEnum",
+        "ossFileTypeEnum",
+        "packageTransferConfigTypeList",
+        "packageTransferRewardModeList",
+        "packageTransferTargetTypeList",
+        "payModeList",
+        "pixWalletTypeList",
+        "platformTypeList",
+        "playTypeEnum",
+        "popupTypeList",
+        "promotionShareClaimPriorityTypeList",
+        "promotionShareClaimTypeList",
+        "promotionShareRewardTypeList",
+        "promotionShareUserTypeList",
+        "pushPriorityTypeList",
+        "rebateMode",
+        "rechargeCategoryEnumList",
+        "rechargeStateList",
+        "registerSourceList",
+        "schedulerRequestMethodList",
+        "schedulerTaskTypeList",
+        "schedulerTriggerTypeList",
+        "sendTimeTypeList",
+        "smsConfigList",
+        "stateList",
+        "sysEventLogEventCategoryList",
+        "sysUserNotifyMessageTypeList",
+        "targetList",
+        "taskCycleList",
+        "templateFileList",
+        "tenantStateList",
+        "thirdPayChannelTypeList",
+        "thirdStateList",
+        "topRechargeWithdrawTypeList",
+        "userActivityBlockTypeList",
+        "userPermissionLevelList",
+        "userTypeList",
+        "validTypeList",
+        "vipRewardTypeList",
+        "warningCategoryList",
+        "warningTypeList",
+        "withdrawAuditStateList",
+        "withdrawCategory",
+        "withdrawCategoryEnumList",
+        "withdrawOrderActionTypeList",
+        "withdrawStateList",
+        "withdrawUserActionTypeList",
+        "withdrawUserRankList",
+        "withdrawWalletTypeList",
+        "withdrawWorkProcessStateList",
+        "withdrawWorkStateFilterList",
+        "withdrawWorkStateList"
+      ],
+      "samples": {
+        "rebateMode": {
+          "id": 0,
+          "name": "Normal commission"
+        },
+        "tenantStateList": {
+          "id": 0,
+          "name": "Site Closed"
+        },
+        "lotteryGameCode": {
+          "id": "WinGo_30S",
+          "name": "WinGo_30S"
+        },
+        "orderStateEnum": {
+          "id": "Unsettled",
+          "name": "Unsettled"
+        },
+        "playTypeEnum": {
+          "id": "Num",
+          "name": "Number"
+        },
+        "ossFileTypeEnum": {
+          "id": "gamelogo",
+          "name": "Game Logo Image"
+        },
+        "withdrawCategory": {
+          "id": 1,
+          "name": "Bank Card (BankCard)"
+        },
+        "withdrawCategoryEnumList": {
+          "id": 1,
+          "name": "Bank Card"
+        },
+        "smsConfigList": {
+          "code": "SLSms",
+          "name": "SL SMS"
+        },
+        "emailConfigList": {
+          "code": "Alibaba",
+          "name": "Alibaba Cloud Email"
+        },
+        "stateList": {
+          "id": 1,
+          "name": "Normal"
+        },
+        "registerSourceList": {
+          "id": 1,
+          "name": "Investment Promotion"
+        },
+        "userTypeList": {
+          "id": 0,
+          "name": "Official Account"
+        },
+        "disablePermissList": {
+          "id": 2,
+          "name": "Withdrawal Prohibited"
+        },
+        "rechargeStateList": {
+          "code": "0",
+          "name": "Pending Payment"
+        },
+        "withdrawStateList": {
+          "id": 0,
+          "name": "Pending Audit"
+        },
+        "withdrawAuditStateList": {
+          "id": 0,
+          "name": "Pending Audit"
+        },
+        "withdrawWorkStateList": {
+          "code": "NoWork",
+          "name": "Off Work"
+        },
+        "withdrawWorkStateFilterList": {
+          "code": "Work_NoOpenTakeOrder",
+          "name": "Working - Not Dispatched"
+        },
+        "withdrawWorkProcessStateList": {
+          "code": "PendingDispatch",
+          "name": "Pending Dispatch"
+        },
+        "orderDispatchModeList": {
+          "code": "TimeRandom",
+          "name": "Random by Time"
+        },
+        "dynamicDictionaryKeyList": {
+          "code": "WithdrawCategoryList",
+          "name": "Withdraw Category List"
+        },
+        "financialTypeList": {
+          "code": "Recharge",
+          "name": "Recharge"
+        },
+        "artificialRechargeTypeList": {
+          "id": 1,
+          "name": "Bonus Recharge"
+        },
+        "bankCardTypeList": {
+          "id": 1,
+          "name": "Bank"
+        },
+        "thirdStateList": {
+          "id": 0,
+          "name": "Pending Submission"
+        },
+        "sysEventLogEventCategoryList": {
+          "id": 0,
+          "name": "None"
+        },
+        "withdrawOrderActionTypeList": {
+          "code": "StartAudit",
+          "name": "Start Audit"
+        },
+        "withdrawUserActionTypeList": {
+          "code": "StartWork",
+          "name": "Clock In"
+        },
+        "pixWalletTypeList": {
+          "code": "CNPJ",
+          "name": "CNPJ"
+        },
+        "withdrawWalletTypeList": {
+          "id": 1,
+          "name": "Bank Card"
+        },
+        "feedBackStateList": {
+          "id": 0,
+          "name": "Unread"
+        },
+        "gameCategoryList": {
+          "id": 0,
+          "name": "Electronic Games"
+        },
+        "gameTypeList": {
+          "id": 1,
+          "name": "Live"
+        },
+        "taskCycleList": {
+          "id": 1,
+          "name": "Day"
+        },
+        "activityStateList": {
+          "id": 1,
+          "name": "Not Started"
+        },
+        "schedulerTaskTypeList": {
+          "id": 1,
+          "name": "Url"
+        },
+        "schedulerTriggerTypeList": {
+          "id": 1,
+          "name": "Cron"
+        },
+        "schedulerRequestMethodList": {
+          "id": 1,
+          "name": "Get"
+        },
+        "intervalTimeTypeList": {
+          "id": 1,
+          "name": "Second"
+        },
+        "cacheInstanceList": {
+          "code": "Admin",
+          "name": "Admin Instance"
+        },
+        "cacheDBList": {
+          "code": "DB1",
+          "name": "Database 1"
+        },
+        "activityTypeList": {
+          "code": "CodeWashing",
+          "name": "Code Washing"
+        },
+        "templateFileList": {
+          "id": 1,
+          "name": "Third Party Recharge Bank"
+        },
+        "informationTypeList": {
+          "id": 0,
+          "name": "Link"
+        },
+        "popupTypeList": {
+          "id": 1,
+          "name": "New User Exclusive Package"
+        },
+        "topRechargeWithdrawTypeList": {
+          "id": "R1",
+          "name": "First Recharge"
+        },
+        "vipRewardTypeList": {
+          "id": 1,
+          "name": "Upgrade"
+        },
+        "exportStateList": {
+          "id": "WaitExport",
+          "name": "Waiting"
+        },
+        "giftPackRewardTypeList": {
+          "id": 0,
+          "name": "Amount Reward"
+        },
+        "validTypeList": {
+          "id": 1,
+          "name": "Permanent"
+        },
+        "jumpTypeList": {
+          "id": 1,
+          "name": "No Jump"
+        },
+        "jumpPageList": {
+          "id": 1,
+          "name": "Recharge"
+        },
+        "targetList": {
+          "id": 1,
+          "name": "All Members"
+        },
+        "inmailTargetList": {
+          "id": 1,
+          "name": "All Members"
+        },
+        "frequencyList": {
+          "id": 1,
+          "name": "Once"
+        },
+        "blackContentTypeList": {
+          "id": 0,
+          "name": "Blacklist IP"
+        },
+        "platformTypeList": {
+          "id": 1,
+          "name": "Web"
+        },
+        "pushPriorityTypeList": {
+          "id": 0,
+          "name": "Normal"
+        },
+        "sendTimeTypeList": {
+          "id": 1,
+          "name": "Send Now"
+        },
+        "clickTypeList": {
+          "id": 0,
+          "name": "No Action"
+        },
+        "fbMsgSendStateList": {
+          "id": 0,
+          "name": "Unsent"
+        },
+        "fbTargetList": {
+          "id": 1,
+          "name": "All Platform Members"
+        },
+        "analyticsEventTypeList": {
+          "id": 1,
+          "name": "Facebook"
+        },
+        "eventLogStateList": {
+          "id": 0,
+          "name": "Pending"
+        },
+        "eventTriggerModeList": {
+          "id": 0,
+          "name": "Client"
+        },
+        "sysUserNotifyMessageTypeList": {
+          "id": 1,
+          "name": "You have a new withdraw order. Please process it in time. Order No.: {OrderNo}"
+        },
+        "warningTypeList": {
+          "warningCategoryType": 1,
+          "id": 501,
+          "name": "代收通道失败率预警"
+        },
+        "warningCategoryList": {
+          "id": 1,
+          "name": "支代付通道预警"
+        },
+        "thirdPayChannelTypeList": {
+          "id": 1,
+          "name": "代收"
+        },
+        "messageJumpTypeList": {
+          "id": 0,
+          "name": "No Jump"
+        },
+        "language": {
+          "id": 0,
+          "nativeName": "英语",
+          "name": "英语",
+          "code": "en"
+        },
+        "currencyList": {
+          "currencyCode": "BRL",
+          "currencyName": "巴西雷亚尔",
+          "currencyRate": 5.66
+        },
+        "countryList": {
+          "id": 0,
+          "countryName": "阿富汗",
+          "countryCode": "AFG",
+          "timeZoneCode": "Asia/Kolkata",
+          "timeZone": "(UTC+5:30)Asia/Kolkata"
+        },
+        "blackFreezeTypeList": {
+          "id": 0,
+          "name": "Abnormal Related IP"
+        },
+        "payModeList": {
+          "id": 0,
+          "name": "Unknown"
+        },
+        "packageTransferConfigTypeList": {
+          "id": 0,
+          "name": "Force Transfer Config"
+        },
+        "packageTransferTargetTypeList": {
+          "id": 0,
+          "name": "All"
+        },
+        "packageTransferRewardModeList": {
+          "id": 0,
+          "name": "All"
+        },
+        "userActivityBlockTypeList": {
+          "id": -1,
+          "name": "All Activities"
+        },
+        "comparatorList": {
+          "code": "GreaterThanOrEqual",
+          "name": "Greater Than or Equal"
+        },
+        "promotionShareUserTypeList": {
+          "id": 1,
+          "name": "All Users"
+        },
+        "promotionShareClaimPriorityTypeList": {
+          "id": 1,
+          "name": "Low Priority"
+        },
+        "promotionShareClaimTypeList": {
+          "id": 1,
+          "name": "Daily"
+        },
+        "promotionShareRewardTypeList": {
+          "id": 1,
+          "name": "Agent Share"
+        },
+        "compensationStateList": {
+          "id": 1,
+          "name": "Pending Claim"
+        },
+        "compensationTypeList": {
+          "id": 1,
+          "name": "Compensation Amount"
+        },
+        "compensationReceiveTypeList": {
+          "id": 1,
+          "name": "Auto Claim"
+        },
+        "lossReliefRewardTImeTypeList": {
+          "id": 0,
+          "name": "Grant Time"
+        },
+        "luckyDoubleActivteStateList": {
+          "id": 0,
+          "name": "Pending"
+        },
+        "luskyDoubleTargetGroupList": {
+          "id": 0,
+          "name": "New Registered Users"
+        },
+        "enableStateList": {
+          "id": 1,
+          "name": "Enabled"
+        },
+        "withdrawUserRankList": {
+          "code": "Staff",
+          "name": "Staff"
+        },
+        "userPermissionLevelList": {
+          "id": 0,
+          "name": "Normal"
+        },
+        "approvalUserRoleList": {
+          "id": 1,
+          "name": "Submit"
+        },
+        "approvalRoleAuthorizeList": {
+          "id": 1,
+          "name": "Manual Recharge"
+        },
+        "approvalSubRoleAuthorizeList": {
+          "id": 1,
+          "name": "Manual Deposit"
+        },
+        "dictCategoryList": {
+          "id": 1,
+          "name": "Currency"
+        },
+        "rechargeCategoryEnumList": {
+          "id": 1,
+          "name": "Third-Party Fiat"
+        }
+      }
+    },
+    "v1": {
+      "keys": [
+        "agentTypeList",
+        "blockStateList",
+        "fXosoOrderStatusList",
+        "financialTypeList",
+        "gameOrderStateList",
+        "gameType5DList",
+        "gameTypeK3List",
+        "gameTypeWinList",
+        "logStateList",
+        "logTypeList",
+        "manualRechargePermissionStateList",
+        "manualRechargePermissionTypeList",
+        "manualRechargeRecordStateList",
+        "manualRechargeTypeList",
+        "onlineBankingStateList",
+        "orderOrderByTypeList",
+        "orderStatusList",
+        "phoneTypeList",
+        "queryTimeTypeList",
+        "sportGamesOrderStatusList",
+        "subsetUserLevelList",
+        "subsetUserOrderList",
+        "upiList",
+        "userOrderByList",
+        "userRelativeLevelList",
+        "userRelativeOrderList",
+        "userStateList",
+        "xosoBettingTypeList",
+        "xosoTypeParentList"
+      ],
+      "samples": {
+        "upiList": {
+          "code": "2",
+          "name": "UPI"
+        },
+        "financialTypeList": {
+          "code": "0",
+          "name": "Bet"
+        },
+        "orderStatusList": {
+          "id": 0,
+          "name": "Unsettled"
+        },
+        "sportGamesOrderStatusList": {
+          "code": "0",
+          "name": "Unsettled"
+        },
+        "orderOrderByTypeList": {
+          "id": 1,
+          "name": "Bet Amount Ascending"
+        },
+        "gameOrderStateList": {
+          "code": "0",
+          "name": "Not Win"
+        },
+        "gameTypeWinList": {
+          "code": "0",
+          "name": "Color"
+        },
+        "gameType5DList": {
+          "code": "1",
+          "name": "A"
+        },
+        "gameTypeK3List": {
+          "code": "1",
+          "name": "Sum"
+        },
+        "fXosoOrderStatusList": {
+          "code": "1",
+          "name": "To Be Drawn"
+        },
+        "xosoTypeParentList": {
+          "code": "1",
+          "name": "Bold"
+        },
+        "xosoBettingTypeList": {
+          "lotteryType": 1,
+          "oddsType": 1,
+          "oddsTypeStr": "Pack Two Yards"
+        },
+        "phoneTypeList": {
+          "code": "0",
+          "name": "PC"
+        },
+        "userStateList": {
+          "code": "0",
+          "name": "Disabled"
+        },
+        "agentTypeList": {
+          "code": "0",
+          "name": "Not Opened"
+        },
+        "blockStateList": {
+          "code": "0",
+          "name": "Normal"
+        },
+        "userOrderByList": {
+          "code": "AddTime desc",
+          "name": "Please Select"
+        },
+        "userRelativeLevelList": {
+          "code": "0",
+          "name": "0级"
+        },
+        "userRelativeOrderList": {
+          "code": "0",
+          "name": "Default"
+        },
+        "subsetUserLevelList": {
+          "code": "1",
+          "name": "1级"
+        },
+        "subsetUserOrderList": {
+          "code": "0",
+          "name": "Default"
+        },
+        "logTypeList": {
+          "code": "1",
+          "name": "Login Log"
+        },
+        "logStateList": {
+          "code": "0",
+          "name": "Failed"
+        },
+        "onlineBankingStateList": {
+          "code": "0",
+          "name": "Match Failed"
+        },
+        "manualRechargeRecordStateList": {
+          "id": 0,
+          "name": "Auditing"
+        },
+        "manualRechargeTypeList": {
+          "list": [
+            {
+              "id": 1,
+              "name": "Manual Deposit"
+            },
+            {
+              "id": 2,
+              "name": "Bonus Recharge"
+            },
+            {
+              "id": 3,
+              "name": "USDT Recharge"
+            },
+            {
+              "id": 4,
+              "name": "Manual Withdraw"
+            },
+            {
+              "id": 5,
+              "name": "Bonus Deduct"
+            },
+            {
+              "id": 6,
+              "name": "Withdrawal Refund"
+            }
+          ],
+          "id": 1,
+          "name": "Manual Recharge"
+        },
+        "manualRechargePermissionTypeList": {
+          "code": "1",
+          "name": "Operate"
+        },
+        "manualRechargePermissionStateList": {
+          "code": "0",
+          "name": "Disabled"
+        },
+        "queryTimeTypeList": {
+          "code": "0",
+          "name": "Bet Time"
+        }
+      }
+    },
+    "group": {
+      "keys": [
+        "countryDictionaryList",
+        "currencyDictionaryList",
+        "languageDictionaryList",
+        "timeZoneDictionaryList"
+      ],
+      "samples": {
+        "countryDictionaryList": {
+          "id": 104838,
+          "dictCode": "VCT",
+          "dictName": "圣文森特和格林纳丁斯",
+          "dictCategory": 4,
+          "dictValue": "VC"
+        },
+        "currencyDictionaryList": {
+          "id": 104998,
+          "dictCode": "XOF",
+          "dictName": "西非法郎",
+          "dictCategory": 1,
+          "dictValue": "CFA"
+        },
+        "languageDictionaryList": {
+          "id": 105116,
+          "dictCode": "nb",
+          "dictName": "书面挪威语",
+          "dictCategory": 3,
+          "dictValue": "书面挪威语"
+        },
+        "timeZoneDictionaryList": {
+          "id": 105193,
+          "dictCode": "Africa/Cairo",
+          "dictName": "埃及(+3)",
+          "dictCategory": 2,
+          "dictValue": "03:00:00"
+        }
+      }
+    },
+    "platform": {
+      "keys": [
+        "countryList",
+        "currencyList",
+        "languageList"
+      ],
+      "samples": {
+        "countryList": {
+          "countryCode": "AFG",
+          "countryName": "阿富汗",
+          "timeZoneCode": "Asia/Kolkata",
+          "timeZone": "(UTC+5:30)Asia/Kolkata"
+        },
+        "languageList": {
+          "languageCode": "en",
+          "languageName": "英语"
+        },
+        "currencyList": {
+          "currencyCode": "BRL",
+          "currencyName": "巴西雷亚尔",
+          "currencyRate": 5.66
+        }
+      }
+    },
+    "dynamic": {
+      "keys": [
+        "menuList",
+        "organizationList",
+        "payCodeList",
+        "rechargeCategoryList",
+        "roleList",
+        "sysCurrencyList",
+        "sysPayChannelList",
+        "tenantList",
+        "tenantPayChannelList",
+        "thirdPayMerchantList",
+        "withdrawCategoryList",
+        "withdrawConfigGroupList"
+      ],
+      "samples": {
+        "withdrawCategoryList": {},
+        "organizationList": {},
+        "tenantList": {},
+        "sysCurrencyList": {},
+        "payCodeList": {},
+        "thirdPayMerchantList": {},
+        "tenantPayChannelList": {},
+        "sysPayChannelList": {},
+        "rechargeCategoryList": {},
+        "roleList": {},
+        "menuList": {},
+        "withdrawConfigGroupList": {}
+      }
+    }
+  }
+}

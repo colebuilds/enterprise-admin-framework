@@ -1,0 +1,133 @@
+{
+  "skills": [
+    {
+      "path": "_template/SKILL.md",
+      "name": "my-private-skill",
+      "description": "简述该私有 skill 何时使用、解决什么问题。",
+      "keywords": [
+        "关键词A",
+        "关键词B",
+        "关键词C"
+      ]
+    },
+    {
+      "path": "archived-local-skill-a/SKILL.md",
+      "name": "archived-local-skill-a",
+      "description": "已归档的本地私有 skill，占位保留，不用于正常触发或日常调用。",
+      "keywords": [
+        "archived",
+        "disabled",
+        "local-a"
+      ]
+    },
+    {
+      "path": "archived-local-skill-b/SKILL.md",
+      "name": "archived-local-skill-b",
+      "description": "已归档的本地私有 skill，占位保留，不用于正常触发或日常调用。",
+      "keywords": [
+        "archived",
+        "disabled",
+        "local-b"
+      ]
+    },
+    {
+      "path": "bug-sop/SKILL.md",
+      "name": "bug-sop",
+      "description": "用于按项目缺陷处理 SOP 处理一轮 bug 列表任务，特别适合从禅道缺陷列表进入，先做清单化、信息分流、批次决策和 Bug 修复方案卡，然后把工作稳定路由到 pir-planner、pir-implementer、pir-reviewer。",
+      "keywords": [
+        "bug",
+        "bug-sop",
+        "zentao",
+        "禅道",
+        "缺陷",
+        "缺陷处理",
+        "bug列表",
+        "清单化",
+        "批次处理",
+        "方案卡",
+        "pir",
+        "planner",
+        "implementer",
+        "reviewer",
+        "sit",
+        "回填"
+      ]
+    },
+    {
+      "path": "commit-local/SKILL.md",
+      "name": "commit-local",
+      "description": "用于在当前仓库执行本地私有的提交信息口径，特别是当你希望 commit message 的 type/scope 保持英文规范值、subject 默认使用简体中文且不影响仓库共享 skill 时使用。",
+      "keywords": [
+        "commit",
+        "提交",
+        "commit message",
+        "中文 subject",
+        "本地提交规范",
+        "commit-local"
+      ]
+    },
+    {
+      "path": "branch-init/SKILL.md",
+      "name": "branch-init",
+      "description": "用于在当前仓库从 main 切出新分支、进入新 session 或接手具体模块前，先建立当前分支与目标模块的入口地图、共享能力入口和兼容性提醒，再开始开发。",
+      "keywords": [
+        "branch-init",
+        "分支初始化",
+        "开发前初始化",
+        "入口地图",
+        "共享能力",
+        "按需加载",
+        "新分支",
+        "当前分支",
+        "熟悉项目"
+      ]
+    },
+    {
+      "path": "module-i18n-onboarding-sop/SKILL.md",
+      "name": "module-i18n-onboarding-sop",
+      "description": "用于在当前仓库基于既有 i18n 方案，为一个明确模块或页面执行模块内多语言接入；它依赖 documents 中的方案、规范与实现手册，不负责设计新的多语言机制，特别适合用户提到国际化、多语言、i18n、namespace、switchLocale、补 locale、无刷切语言、提示词模板等场景。",
+      "keywords": [
+        "i18n",
+        "国际化",
+        "多语言",
+        "locale",
+        "namespace",
+        "switchLocale",
+        "zh/en",
+        "vi",
+        "id",
+        "无刷切换",
+        "模块内多语言接入",
+        "模块内国际化接入",
+        "模块 i18n 接入",
+        "提示词",
+        "模块接入",
+        "module-i18n-onboarding-sop"
+      ]
+    },
+    {
+      "path": "module-permission-onboarding-sop/SKILL.md",
+      "name": "module-permission-onboarding-sop",
+      "description": "用于在当前仓库按既定 SOP 处理单个模块或页面的权限码接入、核对与修复，特别适合用户提到权限、authCode、菜单树、v-permission、hasPermission、操作列、Tab、按钮权限、页面权限、权限遗漏、权限未接线等场景。",
+      "keywords": [
+        "permission",
+        "权限",
+        "authCode",
+        "菜单树",
+        "menuType",
+        "v-permission",
+        "hasPermission",
+        "auth",
+        "操作列",
+        "按钮权限",
+        "页面权限",
+        "Tab权限",
+        "权限遗漏",
+        "权限核对",
+        "模块权限接入",
+        "页面权限接入",
+        "module-permission-onboarding-sop"
+      ]
+    }
+  ]
+}

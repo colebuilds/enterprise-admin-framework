@@ -12,6 +12,7 @@ import { api } from '#/api';
 import { $t } from '#/locales';
 
 import { useAppUserStore } from './app-user';
+import { clearDictCache, prefetchStaticDicts } from './dict';
 
 export const useAuthStore = defineStore('auth', () => {
   const accessStore = useAccessStore();
@@ -27,17 +28,14 @@ export const useAuthStore = defineStore('auth', () => {
     try {
       loginLoading.value = true;
 
-      // 1. Login — map form field names to AR admin API field names
       const { token } = await api.admin.login({
         userName: params.username as string,
         pwd: params.password as string,
       });
       accessStore.setAccessToken(token);
 
-      // 2. Fetch user info (permission codes + user details)
       const vbenUserInfo = await fetchUserInfo();
 
-      // 3. Navigate
       if (accessStore.loginExpired) {
         accessStore.setLoginExpired(false);
       } else {
@@ -63,14 +61,16 @@ export const useAuthStore = defineStore('auth', () => {
   async function fetchUserInfo() {
     const appUserStore = useAppUserStore();
 
-    // Fetch full user info from AR admin
     const info = await api.admin.getSysUserInfo();
     appUserStore.setUserInfo(info);
 
-    // Extract permission codes from menus tree (flat walk)
+    // 登录后预热 4 条静态字典（non-blocking，TanStack Query cache）
+    // dynamic dict 按需懒加载，不在此预热
+    prefetchStaticDicts();
+
     const codes = appUserStore.getPermissionCodes;
 
-    // Add localhost sentinel for local dev permissions
+    // localhost sentinel — grants full access in local dev
     const hostname = globalThis.location?.hostname ?? '';
     if (
       hostname === 'localhost' ||
@@ -84,7 +84,6 @@ export const useAuthStore = defineStore('auth', () => {
 
     accessStore.setAccessCodes(codes);
 
-    // Sync minimal info to vben userStore (used by layout header etc.)
     const vbenUserInfo = {
       avatar: '',
       homePath: '/dashboard/welcome',
@@ -104,6 +103,10 @@ export const useAuthStore = defineStore('auth', () => {
     } catch {
       // ignore logout errors
     }
+
+    // 清理字典 cache，防止旧用户数据残留
+    clearDictCache();
+
     resetAllStores();
     accessStore.setLoginExpired(false);
 

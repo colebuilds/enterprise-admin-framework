@@ -33,6 +33,7 @@
     "@vben/utils": "workspace:*",
     "@vicons/antd": "^0.13.0",
     "@vicons/ionicons5": "^0.13.0",
+    "@tanstack/vue-query": "catalog:",
     "@vueuse/core": "catalog:",
     "cross-env": "catalog:",
     "date-fns": "^4.1.0",
@@ -47,6 +48,7 @@
     "vue-router": "catalog:"
   },
   "devDependencies": {
+    "@playwright/test": "catalog:",
     "@types/lodash-es": "^4.17.12",
     "@types/sortablejs": "catalog:",
     "@types/spark-md5": "^3.0.5",

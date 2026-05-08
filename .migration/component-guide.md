@@ -14,20 +14,20 @@
 ## 场景对照表
 
 | 场景 | 推荐组件 | 备注 |
-|------|---------|------|
+| --- | --- | --- |
 | 搜索表单 + 数据表格 | `ProCrudTable`（搬入版） | 老页面直接用；新页面可用 vxe-table |
 | 新数据表格（新页面） | `useVbenVxeGrid` | vben + vxe-table 方案 |
 | 表单 | `useVbenForm` | vben 封装，支持 schema 配置 |
 | 弹窗 | `VbenModal` / `NModal` | 复杂内容用 VbenModal，简单确认用 NModal |
-| 抽屉 | `VbenDrawer` | |
+| 抽屉 | `VbenDrawer` |  |
 | 数字滚动 | `CountTo` | `@vben/common-ui` |
 | 图片裁剪 | `Cropper` | `@vben/common-ui` |
-| 字典下拉 | `DictSelect`（搬入版）| #/components/dict-select/ |
+| 字典下拉 | `DictSelect`（搬入版） | #/components/dict-select/ |
 | 权限控制 | `v-permission="[...]"` | 指令名不变，44处用法不改 |
 | 图标 | `@vben/icons` | 不直接引 @vicons/antd |
 | 富文本 | `Tiptap`（搬入版） | #/components/tiptap/ |
-| 代码编辑器 | `CodeEditor`（搬入版）| #/components/code-editor/ |
-| 图表 | echarts + `Chart`（搬入版）| #/components/chart/ |
+| 代码编辑器 | `CodeEditor`（搬入版） | #/components/code-editor/ |
+| 图表 | echarts + `Chart`（搬入版） | #/components/chart/ |
 
 ## 主题变量规范
 

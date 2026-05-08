@@ -1,50 +1,51 @@
-import { requestClient } from '#/api/request';
 import type {
-  CodeNameRspListApiResponse,
-  CountryListReq,
-  CountryModelRspListPageBaseResponse,
   AddCountryReq,
-  UpdateCountryReq,
-  CountryGetReq,
-  CountryModelRsp,
-  CurrencyListReq,
-  CurrencyModelRspListPageBaseResponse,
   AddCurrencyReq,
-  UpdateCurrencyReq,
-  CurrencyGetReq,
-  CurrencyModelRsp,
-  LanguageListReq,
-  LanguageModelRspListPageBaseResponse,
   AddLanguageReq,
-  UpdateLanguageReq,
-  LanguageGetReq,
-  LanguageModelRsp,
+  AddOrganizationReq,
+  AddTenantReq,
+  AddTenantRsp,
+  BooleanApiResponse,
+  CodeNameRspListApiResponse,
+  CountryGetReq,
+  CountryListReq,
+  CountryModelRsp,
+  CountryModelRspListPageBaseResponse,
+  CurrencyGetReq,
+  CurrencyListReq,
+  CurrencyModelRsp,
+  CurrencyModelRspListPageBaseResponse,
+  DeleteOrganizationReq,
+  FiatCurrencyTenantRsp,
   GetOrganizationReq,
+  IdNameRspListApiResponse,
+  LanguageGetReq,
+  LanguageListReq,
+  LanguageModelRsp,
+  LanguageModelRspListPageBaseResponse,
+  MasterApiRequest,
   OrganizationDetailRsp,
   OrganizationPageListReq,
   OrganizationPageListRspListPageBaseResponse,
-  AddOrganizationReq,
+  OrganizationSelectRspListApiResponse,
+  OwnerTenantInfoListApiResponse,
+  TenantByFiatCurrencyReq,
+  TenantChildReq,
+  TenantReq,
+  TenantRspListPageBaseResponse,
+  TenantSearchReq,
+  TenantSelectReq,
+  TenantUpdateRemarkReq,
+  TenantUpdateStateReq,
+  TenantV3ModeReq,
+  UpdateCountryReq,
+  UpdateCurrencyReq,
+  UpdateLanguageReq,
   UpdateOrganizationReq,
   UpdateOrganizationStateReq,
-  DeleteOrganizationReq,
-  OrganizationSelectRspListApiResponse,
-  MasterApiRequest,
-  BooleanApiResponse,
-  TenantV3ModeReq,
-  AddTenantReq,
-  AddTenantRsp,
-  TenantSelectReq,
-  IdNameRspListApiResponse,
-  TenantByFiatCurrencyReq,
-  FiatCurrencyTenantRsp,
-  TenantSearchReq,
-  TenantRspListPageBaseResponse,
-  TenantReq,
-  TenantUpdateStateReq,
-  TenantUpdateRemarkReq,
-  TenantChildReq,
-  OwnerTenantInfoListApiResponse
 } from './types';
+
+import { requestClient } from '#/api/request';
 
 // 导出类型
 export * from './types';
@@ -56,16 +57,20 @@ export * from './types';
  * @url: /api/Country/GetAvailableCountryList
  */
 export const getAvailableCountryList = () => {
-  return requestClient.post<CodeNameRspListApiResponse>('/Country/GetAvailableCountryList');
-}
+  return requestClient.post<CodeNameRspListApiResponse>(
+    '/Country/GetAvailableCountryList',
+  );
+};
 
 /**
  * @description: 获取可新增的时区列表 (Auth)
  * @url: /api/Country/GetAvailableTimeZoneList
  */
 export const getAvailableTimeZoneList = () => {
-  return requestClient.post<CodeNameRspListApiResponse>('/Country/GetAvailableTimeZoneList');
-}
+  return requestClient.post<CodeNameRspListApiResponse>(
+    '/Country/GetAvailableTimeZoneList',
+  );
+};
 
 /**
  * @description: 查询国家列表 (Auth)
@@ -73,16 +78,21 @@ export const getAvailableTimeZoneList = () => {
  * @url: /api/Country/GetPageList
  */
 export const countryGetPageList = (params: CountryListReq) => {
-  return requestClient.post<CountryModelRspListPageBaseResponse>('/Country/GetPageList', params);
-}
+  return requestClient.post<CountryModelRspListPageBaseResponse>(
+    '/Country/GetPageList',
+    params,
+  );
+};
 /**
  * @description: 查询国家列表 (Auth)（导出，返回原生 blob 响应）
  * @param {CountryListReq} params
  * @url: /api/Country/GetPageList
  */
 export const countryGetPageListExport = (params: CountryListReq) => {
-  return requestClient.post<Blob>('/Country/GetPageList', params, { responseType: 'blob' });
-}
+  return requestClient.post<Blob>('/Country/GetPageList', params, {
+    responseType: 'blob',
+  });
+};
 
 /**
  * @description: 新增 (Auth)
@@ -91,7 +101,7 @@ export const countryGetPageListExport = (params: CountryListReq) => {
  */
 export const countryAdd = (params: AddCountryReq) => {
   return requestClient.post<any>('/Country/Add', params);
-}
+};
 
 /**
  * @description: 编辑 (Auth)
@@ -100,7 +110,7 @@ export const countryAdd = (params: AddCountryReq) => {
  */
 export const countryUpdate = (params: UpdateCountryReq) => {
   return requestClient.post<any>('/Country/Update', params);
-}
+};
 
 /**
  * @description: 按CountryCode查询 (Auth)
@@ -109,7 +119,7 @@ export const countryUpdate = (params: UpdateCountryReq) => {
  */
 export const countryGet = (params: CountryGetReq) => {
   return requestClient.post<CountryModelRsp>('/Country/Get', params);
-}
+};
 
 // ==================== Currency ====================
 
@@ -118,8 +128,10 @@ export const countryGet = (params: CountryGetReq) => {
  * @url: /api/Currency/GetAvailableCurrencyList
  */
 export const getAvailableCurrencyList = () => {
-  return requestClient.post<CodeNameRspListApiResponse>('/Currency/GetAvailableCurrencyList');
-}
+  return requestClient.post<CodeNameRspListApiResponse>(
+    '/Currency/GetAvailableCurrencyList',
+  );
+};
 
 /**
  * @description: 查询币种列表 (Auth)
@@ -127,16 +139,21 @@ export const getAvailableCurrencyList = () => {
  * @url: /api/Currency/GetPageList
  */
 export const currencyGetPageList = (params: CurrencyListReq) => {
-  return requestClient.post<CurrencyModelRspListPageBaseResponse>('/Currency/GetPageList', params);
-}
+  return requestClient.post<CurrencyModelRspListPageBaseResponse>(
+    '/Currency/GetPageList',
+    params,
+  );
+};
 /**
  * @description: 查询币种列表 (Auth)（导出，返回原生 blob 响应）
  * @param {CurrencyListReq} params
  * @url: /api/Currency/GetPageList
  */
 export const currencyGetPageListExport = (params: CurrencyListReq) => {
-  return requestClient.post<Blob>('/Currency/GetPageList', params, { responseType: 'blob' });
-}
+  return requestClient.post<Blob>('/Currency/GetPageList', params, {
+    responseType: 'blob',
+  });
+};
 
 /**
  * @description: 新增 (Auth)
@@ -145,7 +162,7 @@ export const currencyGetPageListExport = (params: CurrencyListReq) => {
  */
 export const currencyAdd = (params: AddCurrencyReq) => {
   return requestClient.post<any>('/Currency/Add', params);
-}
+};
 
 /**
  * @description: 编辑 (Auth)
@@ -154,7 +171,7 @@ export const currencyAdd = (params: AddCurrencyReq) => {
  */
 export const currencyUpdate = (params: UpdateCurrencyReq) => {
   return requestClient.post<any>('/Currency/Update', params);
-}
+};
 
 /**
  * @description: 按CurrencyCode查询 (Auth)
@@ -163,7 +180,7 @@ export const currencyUpdate = (params: UpdateCurrencyReq) => {
  */
 export const currencyGet = (params: CurrencyGetReq) => {
   return requestClient.post<CurrencyModelRsp>('/Currency/Get', params);
-}
+};
 
 // ==================== Language ====================
 
@@ -172,8 +189,10 @@ export const currencyGet = (params: CurrencyGetReq) => {
  * @url: /api/Language/GetAvailableLanguageList
  */
 export const getAvailableLanguageList = () => {
-  return requestClient.post<CodeNameRspListApiResponse>('/Language/GetAvailableLanguageList');
-}
+  return requestClient.post<CodeNameRspListApiResponse>(
+    '/Language/GetAvailableLanguageList',
+  );
+};
 
 /**
  * @description: 查询语言列表 (Auth)
@@ -181,16 +200,21 @@ export const getAvailableLanguageList = () => {
  * @url: /api/Language/GetPageList
  */
 export const languageGetPageList = (params: LanguageListReq) => {
-  return requestClient.post<LanguageModelRspListPageBaseResponse>('/Language/GetPageList', params);
-}
+  return requestClient.post<LanguageModelRspListPageBaseResponse>(
+    '/Language/GetPageList',
+    params,
+  );
+};
 /**
  * @description: 查询语言列表 (Auth)（导出，返回原生 blob 响应）
  * @param {LanguageListReq} params
  * @url: /api/Language/GetPageList
  */
 export const languageGetPageListExport = (params: LanguageListReq) => {
-  return requestClient.post<Blob>('/Language/GetPageList', params, { responseType: 'blob' });
-}
+  return requestClient.post<Blob>('/Language/GetPageList', params, {
+    responseType: 'blob',
+  });
+};
 
 /**
  * @description: 新增 (Auth)
@@ -199,7 +223,7 @@ export const languageGetPageListExport = (params: LanguageListReq) => {
  */
 export const languageAdd = (params: AddLanguageReq) => {
   return requestClient.post<any>('/Language/Add', params);
-}
+};
 
 /**
  * @description: 编辑 (Auth)
@@ -208,7 +232,7 @@ export const languageAdd = (params: AddLanguageReq) => {
  */
 export const languageUpdate = (params: UpdateLanguageReq) => {
   return requestClient.post<any>('/Language/Update', params);
-}
+};
 
 /**
  * @description: 按LanguageCode查询 (Auth)
@@ -217,7 +241,7 @@ export const languageUpdate = (params: UpdateLanguageReq) => {
  */
 export const languageGet = (params: LanguageGetReq) => {
   return requestClient.post<LanguageModelRsp>('/Language/Get', params);
-}
+};
 
 // ==================== Organization ====================
 
@@ -228,7 +252,7 @@ export const languageGet = (params: LanguageGetReq) => {
  */
 export const organizationGet = (params: GetOrganizationReq) => {
   return requestClient.post<OrganizationDetailRsp>('/Organization/Get', params);
-}
+};
 
 /**
  * @description: 分页获取集团列表 (Auth)
@@ -236,16 +260,23 @@ export const organizationGet = (params: GetOrganizationReq) => {
  * @url: /api/Organization/GetPageList
  */
 export const organizationGetPageList = (params: OrganizationPageListReq) => {
-  return requestClient.post<OrganizationPageListRspListPageBaseResponse>('/Organization/GetPageList', params);
-}
+  return requestClient.post<OrganizationPageListRspListPageBaseResponse>(
+    '/Organization/GetPageList',
+    params,
+  );
+};
 /**
  * @description: 分页获取集团列表 (Auth)（导出，返回原生 blob 响应）
  * @param {OrganizationPageListReq} params
  * @url: /api/Organization/GetPageList
  */
-export const organizationGetPageListExport = (params: OrganizationPageListReq) => {
-  return requestClient.post<Blob>('/Organization/GetPageList', params, { responseType: 'blob' });
-}
+export const organizationGetPageListExport = (
+  params: OrganizationPageListReq,
+) => {
+  return requestClient.post<Blob>('/Organization/GetPageList', params, {
+    responseType: 'blob',
+  });
+};
 
 /**
  * @description: 新增集团 (Auth)
@@ -254,7 +285,7 @@ export const organizationGetPageListExport = (params: OrganizationPageListReq) =
  */
 export const organizationAdd = (params: AddOrganizationReq) => {
   return requestClient.post<any>('/Organization/Add', params);
-}
+};
 
 /**
  * @description: 编辑集团 (Auth)
@@ -263,7 +294,7 @@ export const organizationAdd = (params: AddOrganizationReq) => {
  */
 export const organizationUpdate = (params: UpdateOrganizationReq) => {
   return requestClient.post<any>('/Organization/Update', params);
-}
+};
 
 /**
  * @description: 更新集团状态（启用/禁用，禁用时强制退出集团所有后台账号） (Auth)
@@ -272,7 +303,7 @@ export const organizationUpdate = (params: UpdateOrganizationReq) => {
  */
 export const updateState = (params: UpdateOrganizationStateReq) => {
   return requestClient.post<any>('/Organization/UpdateState', params);
-}
+};
 
 /**
  * @description: 删除集团 (Auth)
@@ -281,15 +312,17 @@ export const updateState = (params: UpdateOrganizationStateReq) => {
  */
 export const organizationDelete = (params: DeleteOrganizationReq) => {
   return requestClient.post<any>('/Organization/Delete', params);
-}
+};
 
 /**
  * @description: 获取集团下拉列表（新增商户时使用） (Auth)
  * @url: /api/Organization/GetSelectList
  */
 export const organizationGetSelectList = () => {
-  return requestClient.post<OrganizationSelectRspListApiResponse>('/Organization/GetSelectList');
-}
+  return requestClient.post<OrganizationSelectRspListApiResponse>(
+    '/Organization/GetSelectList',
+  );
+};
 
 // ==================== Tenant ====================
 
@@ -300,7 +333,7 @@ export const organizationGetSelectList = () => {
  */
 export const getV3Mode = (params: MasterApiRequest) => {
   return requestClient.post<BooleanApiResponse>('/Tenant/GetV3Mode', params);
-}
+};
 
 /**
  * @description: 设置商户V3模式开关 (Auth)
@@ -309,7 +342,7 @@ export const getV3Mode = (params: MasterApiRequest) => {
  */
 export const setV3Mode = (params: TenantV3ModeReq) => {
   return requestClient.post<any>('/Tenant/SetV3Mode', params);
-}
+};
 
 /**
  * @description: 新增商户 (Auth)
@@ -318,7 +351,7 @@ export const setV3Mode = (params: TenantV3ModeReq) => {
  */
 export const tenantAdd = (params: AddTenantReq) => {
   return requestClient.post<AddTenantRsp>('/Tenant/Add', params);
-}
+};
 
 /**
  * @description: 商户下拉列表 (Auth)
@@ -326,8 +359,11 @@ export const tenantAdd = (params: AddTenantReq) => {
  * @url: /api/Tenant/GetSelectList
  */
 export const tenantGetSelectList = (params: TenantSelectReq) => {
-  return requestClient.post<IdNameRspListApiResponse>('/Tenant/GetSelectList', params);
-}
+  return requestClient.post<IdNameRspListApiResponse>(
+    '/Tenant/GetSelectList',
+    params,
+  );
+};
 
 /**
  * @description: 获取币种及商户列表 (Auth)
@@ -335,8 +371,11 @@ export const tenantGetSelectList = (params: TenantSelectReq) => {
  * @url: /api/Tenant/GetFiatCurrencyList
  */
 export const getFiatCurrencyList = (params: TenantByFiatCurrencyReq) => {
-  return requestClient.post<FiatCurrencyTenantRsp>('/Tenant/GetFiatCurrencyList', params);
-}
+  return requestClient.post<FiatCurrencyTenantRsp>(
+    '/Tenant/GetFiatCurrencyList',
+    params,
+  );
+};
 
 /**
  * @description: 获取商户信息列表（带分页） (Auth)
@@ -344,16 +383,21 @@ export const getFiatCurrencyList = (params: TenantByFiatCurrencyReq) => {
  * @url: /api/Tenant/GetPageList
  */
 export const tenantGetPageList = (params: TenantSearchReq) => {
-  return requestClient.post<TenantRspListPageBaseResponse>('/Tenant/GetPageList', params);
-}
+  return requestClient.post<TenantRspListPageBaseResponse>(
+    '/Tenant/GetPageList',
+    params,
+  );
+};
 /**
  * @description: 获取商户信息列表（带分页） (Auth)（导出，返回原生 blob 响应）
  * @param {TenantSearchReq} params
  * @url: /api/Tenant/GetPageList
  */
 export const tenantGetPageListExport = (params: TenantSearchReq) => {
-  return requestClient.post<Blob>('/Tenant/GetPageList', params, { responseType: 'blob' });
-}
+  return requestClient.post<Blob>('/Tenant/GetPageList', params, {
+    responseType: 'blob',
+  });
+};
 
 /**
  * @description: 更新商户信息 (Auth)
@@ -362,7 +406,7 @@ export const tenantGetPageListExport = (params: TenantSearchReq) => {
  */
 export const tenantUpdate = (params: TenantReq) => {
   return requestClient.post<any>('/Tenant/Update', params);
-}
+};
 
 /**
  * @description: 修改商户状态（关站时强制退出所有相关后台账号） (Auth)
@@ -371,7 +415,7 @@ export const tenantUpdate = (params: TenantReq) => {
  */
 export const switchTenantState = (params: TenantUpdateStateReq) => {
   return requestClient.post<any>('/Tenant/SwitchTenantState', params);
-}
+};
 
 /**
  * @description: 修改商户备注 (Auth)
@@ -380,7 +424,7 @@ export const switchTenantState = (params: TenantUpdateStateReq) => {
  */
 export const updateTenantRemark = (params: TenantUpdateRemarkReq) => {
   return requestClient.post<any>('/Tenant/UpdateTenantRemark', params);
-}
+};
 
 /**
  * @description: 获取所属租户信息 (Auth)
@@ -388,5 +432,8 @@ export const updateTenantRemark = (params: TenantUpdateRemarkReq) => {
  * @url: /api/Tenant/GetOwnerTenantList
  */
 export const getOwnerTenantList = (params: TenantChildReq) => {
-  return requestClient.post<OwnerTenantInfoListApiResponse>('/Tenant/GetOwnerTenantList', params);
-}
+  return requestClient.post<OwnerTenantInfoListApiResponse>(
+    '/Tenant/GetOwnerTenantList',
+    params,
+  );
+};

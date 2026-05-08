@@ -40,6 +40,7 @@ src/composables/dict/
 ```
 
 **原则：**
+
 - 命令文件只写"读哪里 + 执行步骤"，不内联规则
 - 规则只在子系统 CLAUDE.md 里维护，改一处，所有命令自动受益
 - 架构文档（`documents/`）供人阅读，不作为命令的上下文来源
@@ -50,37 +51,33 @@ src/composables/dict/
 # i18n Agent Context
 
 ## 支持语言
+
 zh-CN / en-US（仅这两种）
 
 ## 调用 API
-模板:           $t('key.path')
-script setup:   const { t } = useI18n();  →  t('key.path')
-非组件上下文:   import { $t } from '#/locales'  →  $t('key.path')
+
+模板: $t('key.path') script setup: const { t } = useI18n(); → t('key.path') 非组件上下文: import { $t } from '#/locales' → $t('key.path')
 
 ## Key 命名规范
+
 - 以文件名为 namespace 前缀: finance.withdrawOrder.title
 - 嵌套对象表达层次: { finance: { withdrawOrder: { title: "..." } } }
 - 新增 key 风格参考同文件已有 key
 
 ## 文件推断（业务域 → JSON 文件）
-充值/提现/结算/财务/手续费  →  finance.json
-报表/报告/统计              →  report.json
-系统/用户/角色/权限/管理员  →  system.json
-商户/租户                   →  tenant.json
-会员/玩家                   →  member.json
-代理/分销                   →  agent.json
-游戏/彩票                   →  game.json
-菜单/导航                   →  menu.json
-运营/活动/公告              →  operations.json
-通用按钮/状态/操作/提示     →  page.json 或 common.json
+
+充值/提现/结算/财务/手续费 → finance.json报表/报告/统计 → report.json系统/用户/角色/权限/管理员 → system.json商户/租户 → tenant.json会员/玩家 → member.json代理/分销 → agent.json游戏/彩票 → game.json菜单/导航 → menu.json运营/活动/公告 → operations.json通用按钮/状态/操作/提示 → page.json 或 common.json
 
 ## 禁止
+
 - 状态枚举 label（启用/禁用/订单状态）→ 走字典，不走 locale JSON
 - 只改 zh-CN 不改 en-US（必须两套同步）
 - 修改 packages/locales/ 下的 vben 框架层文件
 
 ## 维护说明
+
 本文件是 i18n 执行规则的唯一来源。变更时必须同步检查：
+
 - .claude/commands/i18n-fix.md
 - .claude/commands/i18n.md
 - .claude/commands/i18n-check.md
@@ -95,31 +92,31 @@ script setup:   const { t } = useI18n();  →  t('key.path')
 # 字典 Agent Context
 
 ## 调用 API
+
 import { useDictOptions, useLabelMap } from '#/composables/dict'
 
-下拉选项:  useDictOptions('enableStateList')
-Label Map: useLabelMap('enableStateList')
-歧义 key:  useDictOptions('countryList', 'platform')  ← 必须指定 source
+下拉选项: useDictOptions('enableStateList') Label Map: useLabelMap('enableStateList') 歧义 key: useDictOptions('countryList', 'platform') ← 必须指定 source
 
 ## 歧义 key（必须显式指定 source，否则编译报错）
+
 countryList / currencyList / financialTypeList
 
 ## 禁止的旧写法
-❌ userStore.getDictionaryList?.enableStateList
-❌ const { getOptions } = useDictionary()
-❌ const dictStore = useDynamicDictionaryStore(); dictStore.load(...)
-❌ 手改 registry.ts
+
+❌ userStore.getDictionaryList?.enableStateList ❌ const { getOptions } = useDictionary() ❌ const dictStore = useDynamicDictionaryStore(); dictStore.load(...) ❌ 手改 registry.ts
 
 ## CRUD 后失效 dynamic dict
-import { queryClient } from '#/lib/query-client'
-import { DICT_QUERY_KEY } from '#/store/dict'
-queryClient.invalidateQueries({ queryKey: DICT_QUERY_KEY.dynamic })
+
+import { queryClient } from '#/lib/query-client' import { DICT_QUERY_KEY } from '#/store/dict' queryClient.invalidateQueries({ queryKey: DICT_QUERY_KEY.dynamic })
 
 ## Key 元数据（source、含义、label/value 字段）
+
 完整列表见：.migration/specs/spec-dict-keys.md
 
 ## 维护说明
+
 本文件是字典调用规则的唯一来源。变更时必须同步检查：
+
 - .claude/commands/dict.md
 - .claude/commands/dict-sync.md
 - 根目录 CLAUDE.md（字典规范摘要节）
@@ -137,8 +134,8 @@ queryClient.invalidateQueries({ queryKey: DICT_QUERY_KEY.dynamic })
 用途：扫描指定目录或文件下的所有多语言问题并直接修复。
 
 ## 用法
-/i18n-fix <路径>
-示例: /i18n-fix src/views/finance/
+
+/i18n-fix <路径> 示例: /i18n-fix src/views/finance/
 
 ## 执行步骤
 
@@ -167,8 +164,7 @@ queryClient.invalidateQueries({ queryKey: DICT_QUERY_KEY.dynamic })
 在文件头部加两行：
 
 ```markdown
-规则来源: src/composables/dict/CLAUDE.md
-数据来源: .migration/specs/spec-dict-keys.md
+规则来源: src/composables/dict/CLAUDE.md数据来源: .migration/specs/spec-dict-keys.md
 ```
 
 ## 6. 全局 CLAUDE.md 变更
@@ -181,6 +177,7 @@ queryClient.invalidateQueries({ queryKey: DICT_QUERY_KEY.dynamic })
 完整规则见 `src/composables/dict/CLAUDE.md`。
 
 核心约束（高频违规）：
+
 - 调用入口：`useDictOptions` / `useLabelMap`，从 `#/composables/dict` 导入
 - 歧义 key（countryList / currencyList / financialTypeList）必须指定 source
 - 禁止读 store、手改 registry.ts、使用旧 useDictionary hook
@@ -188,16 +185,16 @@ queryClient.invalidateQueries({ queryKey: DICT_QUERY_KEY.dynamic })
 
 ## 7. 文件清单
 
-| 操作 | 文件 |
-|---|---|
-| 新建 | `src/locales/CLAUDE.md` |
-| 新建 | `src/composables/dict/CLAUDE.md` |
-| 新建 | `.claude/commands/i18n-fix.md` |
-| 更新 | `.claude/commands/i18n.md`（加规则来源声明）|
-| 更新 | `.claude/commands/i18n-check.md`（加规则来源声明）|
-| 更新 | `.claude/commands/dict.md`（加规则来源声明）|
-| 更新 | `.claude/commands/dict-sync.md`（加规则来源声明）|
-| 更新 | 根目录 `CLAUDE.md`（字典章节瘦身）|
+| 操作 | 文件                                               |
+| ---- | -------------------------------------------------- |
+| 新建 | `src/locales/CLAUDE.md`                            |
+| 新建 | `src/composables/dict/CLAUDE.md`                   |
+| 新建 | `.claude/commands/i18n-fix.md`                     |
+| 更新 | `.claude/commands/i18n.md`（加规则来源声明）       |
+| 更新 | `.claude/commands/i18n-check.md`（加规则来源声明） |
+| 更新 | `.claude/commands/dict.md`（加规则来源声明）       |
+| 更新 | `.claude/commands/dict-sync.md`（加规则来源声明）  |
+| 更新 | 根目录 `CLAUDE.md`（字典章节瘦身）                 |
 
 ## 8. 不在范围内
 

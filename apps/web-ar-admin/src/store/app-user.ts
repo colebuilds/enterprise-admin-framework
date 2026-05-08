@@ -1,6 +1,6 @@
 import type { HomeSysUserInfoRsp, TenantInfoRsp } from '#/api/admin';
-import type { DictionaryRsp, PlatformDicRsp } from '#/api/common';
-import type { DictionaryRsp as V1DictionaryRsp } from '#/api/v1platform/types';
+
+import { computed, ref } from 'vue';
 
 import { defineStore } from 'pinia';
 
@@ -61,113 +61,90 @@ function buildTenantGroups(
   return groups;
 }
 
-function flattenTenants(groups: UserTenantGroupItem[]): UserTenantItem[] {
-  return groups.flatMap((g) => g.tenants);
-}
+export const useAppUserStore = defineStore('app-user', () => {
+  const info = ref<UserInfoType>({} as UserInfoType);
+  const activeTenantId = ref<null | number>(null);
 
-export interface IAppUserState {
-  info: UserInfoType;
-  activeTenantId: null | number;
-  dictionary: DictionaryRsp | null;
-  v1Dictionary: null | V1DictionaryRsp;
-  platformDic: null | PlatformDicRsp;
-  gropuData: any;
-}
+  const isPlatformUser = computed(() => info.value?.orgId === 0);
+  const isSuperAuthUser = computed(() => Boolean(info.value?.isSuperAuthUser));
 
-export const useAppUserStore = defineStore('app-user', {
-  state: (): IAppUserState => ({
-    info: {} as UserInfoType,
-    activeTenantId: null,
-    dictionary: null,
-    v1Dictionary: null,
-    platformDic: null,
-    gropuData: null,
-  }),
+  const getTenantGroups = computed(() => buildTenantGroups(info.value));
 
-  getters: {
-    getUserInfo: (state): UserInfoType => state.info,
-    getActiveTenantId: (state): null | number => state.activeTenantId,
-    getDictionaryList: (state): DictionaryRsp | null => state.dictionary,
-    getV1Dictionary: (state): null | V1DictionaryRsp => state.v1Dictionary,
-    getPlatformDic: (state): null | PlatformDicRsp => state.platformDic,
-    getGropuData: (state): any => state.gropuData,
+  const getTenantFlatList = computed(() =>
+    getTenantGroups.value.flatMap((g) => g.tenants),
+  );
 
-    isPlatformUser: (state): boolean => state.info?.orgId === 0,
-    isSuperAuthUser: (state): boolean => Boolean(state.info?.isSuperAuthUser),
+  const getTenantMap = computed(
+    () =>
+      new Map<number, UserTenantItem>(
+        getTenantFlatList.value.map((t) => [t.id, t]),
+      ),
+  );
 
-    getTenantGroups(): UserTenantGroupItem[] {
-      return buildTenantGroups(this.info);
-    },
-    getTenantFlatList(): UserTenantItem[] {
-      return flattenTenants(this.getTenantGroups);
-    },
-    getTenantMap(): Record<number, UserTenantItem> {
-      return Object.fromEntries(this.getTenantFlatList.map((t) => [t.id, t]));
-    },
-    getTenantById(): (id?: null | number) => null | UserTenantItem {
-      return (id) =>
-        typeof id === 'number' ? (this.getTenantMap[id] ?? null) : null;
-    },
-    getActiveTenant(): null | UserTenantItem {
-      return this.getTenantById(this.activeTenantId);
-    },
+  function getTenantById(id?: null | number): null | UserTenantItem {
+    return typeof id === 'number' ? (getTenantMap.value.get(id) ?? null) : null;
+  }
 
-    /** Permission codes extracted from menus tree (lowercase). */
-    getPermissionCodes(): string[] {
-      const codes: string[] = [];
-      const walk = (nodes: UserInfoType['menus']) => {
-        for (const node of nodes ?? []) {
-          if (node.authCode) codes.push(node.authCode.toLowerCase());
-          if (node.children?.length) walk(node.children);
-        }
-      };
-      walk(this.info?.menus);
-      return codes;
-    },
-  },
+  const getActiveTenant = computed(() => getTenantById(activeTenantId.value));
 
-  actions: {
-    setUserInfo(info: UserInfoType) {
-      this.info = info;
-      this._syncActiveTenantId();
-    },
-
-    setActiveTenantId(tenantId: null | number) {
-      if (tenantId === null) {
-        this.activeTenantId = null;
-        return;
+  const getPermissionCodes = computed<string[]>(() => {
+    const codes: string[] = [];
+    const walk = (nodes: UserInfoType['menus']) => {
+      for (const node of nodes ?? []) {
+        if (node.authCode) codes.push(node.authCode.toLowerCase());
+        if (node.children?.length) walk(node.children);
       }
-      const tenants = this.getTenantFlatList;
-      const found = tenants.find((t) => t.id === tenantId);
-      this.activeTenantId = found ? tenantId : (tenants[0]?.id ?? null);
-    },
+    };
+    walk(info.value?.menus);
+    return codes;
+  });
 
-    _syncActiveTenantId() {
-      const tenants = this.getTenantFlatList;
-      if (tenants.length === 0) {
-        this.activeTenantId = null;
-        return;
-      }
-      const valid = tenants.find((t) => t.id === this.activeTenantId);
-      this.activeTenantId = valid
-        ? this.activeTenantId
-        : (tenants[0]?.id ?? null);
-    },
+  function setUserInfo(newInfo: UserInfoType) {
+    info.value = newInfo;
+    _syncActiveTenantId();
+  }
 
-    setDictionary(dictionary: DictionaryRsp) {
-      this.dictionary = dictionary;
-    },
-    setPlatformDic(platformDic: PlatformDicRsp) {
-      this.platformDic = platformDic;
-    },
+  function setActiveTenantId(tenantId: null | number) {
+    if (tenantId === null) {
+      activeTenantId.value = null;
+      return;
+    }
+    const found = getTenantFlatList.value.find((t) => t.id === tenantId);
+    activeTenantId.value = found
+      ? tenantId
+      : (getTenantFlatList.value[0]?.id ?? null);
+  }
 
-    $reset() {
-      this.info = {} as UserInfoType;
-      this.activeTenantId = null;
-      this.dictionary = null;
-      this.v1Dictionary = null;
-      this.platformDic = null;
-      this.gropuData = null;
-    },
-  },
+  function _syncActiveTenantId() {
+    const tenants = getTenantFlatList.value;
+    if (tenants.length === 0) {
+      activeTenantId.value = null;
+      return;
+    }
+    const valid = tenants.find((t) => t.id === activeTenantId.value);
+    activeTenantId.value = valid
+      ? activeTenantId.value
+      : (tenants[0]?.id ?? null);
+  }
+
+  function $reset() {
+    info.value = {} as UserInfoType;
+    activeTenantId.value = null;
+  }
+
+  return {
+    info,
+    activeTenantId,
+    isPlatformUser,
+    isSuperAuthUser,
+    getTenantGroups,
+    getTenantFlatList,
+    getTenantMap,
+    getTenantById,
+    getActiveTenant,
+    getPermissionCodes,
+    setUserInfo,
+    setActiveTenantId,
+    $reset,
+  };
 });

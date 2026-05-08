@@ -1,107 +1,108 @@
-import { requestClient, uploadFile } from '#/api/request';
 import type {
-  AssetQueryDto,
-  AssetListResponse,
-  IdDto,
-  AssetResponse,
-  UpdateAssetDto,
-  BooleanResponseVO,
-  UploadAssetDto,
-  AssetResolveDto,
-  AssetResolveResult,
-  CreateDomainDto,
-  DomainQueryDto,
-  DomainListResponse,
-  DomainResponse,
-  DomainSeoDetailDto,
-  SeoResponse,
-  UpdateDomainDto,
-  DomainSeoSaveDto,
-  DomainOptionsDto,
-  DomainOptionsResponseVO,
-  DomainResolveDto,
-  DomainResolveResponse,
-  CreateLayoutDto,
-  LayoutQueryDto,
-  LayoutListResponse,
-  LayoutResponse,
-  UpdateLayoutDto,
-  LayoutCopyDto,
-  LayoutTabBarsResponseVO,
-  CreateTabBarDto,
-  TabBarQueryDto,
-  TabBarListResponse,
-  TabBarSelectQueryDto,
-  TabBarSelectListResponseVO,
-  TabBarResponse,
-  UpdateTabBarDto,
-  CreateThemeDto,
-  ThemeQueryDto,
-  ThemeListResponse,
-  ThemeResponse,
-  UpdateThemeDto,
-  ThemeAssetsResponseVO,
-  CreateAppRouteDto,
-  AppRouteQueryDto,
-  AppRouteListResponse,
-  AppRouteResponse,
-  UpdateAppRouteDto,
-  AppRouteStateDto,
-  AppRouteAvailableDto,
-  AppRouteAvailableResponseVO,
-  HealthCheckResultVO,
-  ConfigOptionsDto,
-  ConfigOptionsResponse,
   AgreementDetailDto,
   AgreementListResponseVO,
-  SaveAgreementDto,
-  RunnerRegisterDto,
-  RunnerHeartbeatDto,
-  RunnerQueryDto,
-  RunnerListResponse,
-  CreateJobDto,
-  JobVO,
-  JobQueryDto,
-  JobListResponse,
-  JobCancelResponseVO,
-  JobStatsQueryDto,
-  JobStatsVO,
-  JobLogQueryDto,
-  JobLogListResponse,
-  CreateAppVersionDto,
-  AppVersionVO,
-  AppVersionQueryDto,
-  AppVersionListDataVO,
-  CheckUpdateDto,
-  CheckUpdateVO,
-  UpdateAppVersionDto,
-  CreateAppPackageDto,
-  AppPackageVO,
-  AppPackageQueryDto,
-  AppPackageListDataVO,
-  UpdateAppPackageDto,
   AppPackageBuildDto,
   AppPackageJobsQueryDto,
-  UploadImageDto,
-  UploadResultVO,
-  UploadFileFormDto,
-  UploadFileResultVO,
-  MerchantSiteListResponseVO,
+  AppPackageListDataVO,
+  AppPackageQueryDto,
+  AppPackageVO,
+  AppRouteAvailableDto,
+  AppRouteAvailableResponseVO,
+  AppRouteListResponse,
+  AppRouteQueryDto,
+  AppRouteResponse,
+  AppRouteStateDto,
+  AppVersionListDataVO,
+  AppVersionQueryDto,
+  AppVersionVO,
+  AssetListResponse,
+  AssetQueryDto,
+  AssetResolveDto,
+  AssetResolveResult,
+  AssetResponse,
+  BooleanResponseVO,
+  CheckUpdateDto,
+  CheckUpdateVO,
+  ConfigOptionsDto,
+  ConfigOptionsResponse,
+  CreateAppPackageDto,
+  CreateAppRouteDto,
+  CreateAppVersionDto,
+  CreateDomainDto,
+  CreateJobDto,
+  CreateLayoutDto,
+  CreateTabBarDto,
+  CreateThemeDto,
+  DomainListResponse,
+  DomainOptionsDto,
+  DomainOptionsResponseVO,
+  DomainQueryDto,
+  DomainResolveDto,
+  DomainResolveResponse,
+  DomainResponse,
+  DomainSeoDetailDto,
+  DomainSeoSaveDto,
+  HealthCheckResultVO,
+  IdDto,
+  JobCancelResponseVO,
+  JobListResponse,
+  JobLogListResponse,
+  JobLogQueryDto,
+  JobQueryDto,
+  JobStatsQueryDto,
+  JobStatsVO,
+  JobVO,
+  LayoutCopyDto,
+  LayoutListResponse,
+  LayoutQueryDto,
+  LayoutResponse,
+  LayoutTabBarsResponseVO,
   MerchantDetailDto,
   MerchantDetailResponse,
+  MerchantGameNavDetailDto,
+  MerchantGameNavDetailResponse,
+  MerchantGameNavPublishDto,
+  MerchantGameNavSaveDto,
+  MerchantSaveDto,
+  MerchantSiteListResponseVO,
   MerchantTabBarDto,
   MerchantTabBarResponse,
   MerchantTabBarSaveDto,
-  MerchantGameNavDetailDto,
-  MerchantGameNavDetailResponse,
-  MerchantGameNavSaveDto,
-  MerchantGameNavPublishDto,
-  MerchantSaveDto,
+  RunnerHeartbeatDto,
+  RunnerListResponse,
+  RunnerQueryDto,
+  RunnerRegisterDto,
+  SaveAgreementDto,
+  SeoResponse,
+  TabBarListResponse,
+  TabBarQueryDto,
+  TabBarResponse,
+  TabBarSelectListResponseVO,
+  TabBarSelectQueryDto,
+  ThemeAssetsResponseVO,
+  ThemeListResponse,
+  ThemeQueryDto,
+  ThemeResponse,
+  UpdateAppPackageDto,
+  UpdateAppRouteDto,
+  UpdateAppVersionDto,
+  UpdateAssetDto,
+  UpdateDomainDto,
+  UpdateLayoutDto,
+  UpdateTabBarDto,
+  UpdateThemeDto,
+  UploadAssetDto,
+  UploadFileFormDto,
+  UploadFileResultVO,
+  UploadImageDto,
+  UploadResultVO,
   WebConfigDto,
   WebConfigResponse,
   WebGameDto,
-  WebGameResponse
+  WebGameResponse,
 } from './types';
+
+import { requestClient, uploadFile } from '#/api/request';
 
 // 导出类型
 export * from './types';
@@ -115,7 +116,7 @@ export * from './types';
  */
 export const assetsList = (params: AssetQueryDto) => {
   return requestClient.post<AssetListResponse>('/hub/assets/list', params);
-}
+};
 
 /**
  * @description: 资源详情
@@ -124,7 +125,7 @@ export const assetsList = (params: AssetQueryDto) => {
  */
 export const assetsDetail = (params: IdDto) => {
   return requestClient.post<AssetResponse>('/hub/assets/detail', params);
-}
+};
 
 /**
  * @description: 更新资源
@@ -133,7 +134,7 @@ export const assetsDetail = (params: IdDto) => {
  */
 export const assetsUpdate = (params: UpdateAssetDto) => {
   return requestClient.post<BooleanResponseVO>('/hub/assets/update', params);
-}
+};
 
 /**
  * @description: 删除资源
@@ -142,7 +143,7 @@ export const assetsUpdate = (params: UpdateAssetDto) => {
  */
 export const assetsDelete = (params: IdDto) => {
   return requestClient.post<AssetResponse>('/hub/assets/delete', params);
-}
+};
 
 /**
  * @description: 创建资源（幂等）
@@ -151,7 +152,7 @@ export const assetsDelete = (params: IdDto) => {
  */
 export const assetsCreate = (params: UploadAssetDto) => {
   return requestClient.post<BooleanResponseVO>('/hub/assets/create', params);
-}
+};
 
 /**
  * @description: 解析资源
@@ -160,7 +161,7 @@ export const assetsCreate = (params: UploadAssetDto) => {
  */
 export const assetsResolve = (params: AssetResolveDto) => {
   return requestClient.post<AssetResolveResult>('/hub/assets/resolve', params);
-}
+};
 
 // ==================== Domains - 域名管理 ====================
 
@@ -171,7 +172,7 @@ export const assetsResolve = (params: AssetResolveDto) => {
  */
 export const domainsCreate = (params: CreateDomainDto) => {
   return requestClient.post<BooleanResponseVO>('/hub/domains/create', params);
-}
+};
 
 /**
  * @description: 域名列表
@@ -180,7 +181,7 @@ export const domainsCreate = (params: CreateDomainDto) => {
  */
 export const domainsList = (params: DomainQueryDto) => {
   return requestClient.post<DomainListResponse>('/hub/domains/list', params);
-}
+};
 
 /**
  * @description: 域名详情
@@ -189,7 +190,7 @@ export const domainsList = (params: DomainQueryDto) => {
  */
 export const domainsDetail = (params: IdDto) => {
   return requestClient.post<DomainResponse>('/hub/domains/detail', params);
-}
+};
 
 /**
  * @description: 域名 SEO 详情
@@ -198,7 +199,7 @@ export const domainsDetail = (params: IdDto) => {
  */
 export const seoDetail = (params: DomainSeoDetailDto) => {
   return requestClient.post<SeoResponse>('/hub/domains/seo/detail', params);
-}
+};
 
 /**
  * @description: 更新域名
@@ -207,7 +208,7 @@ export const seoDetail = (params: DomainSeoDetailDto) => {
  */
 export const domainsUpdate = (params: UpdateDomainDto) => {
   return requestClient.post<BooleanResponseVO>('/hub/domains/update', params);
-}
+};
 
 /**
  * @description: 保存域名 SEO
@@ -216,7 +217,7 @@ export const domainsUpdate = (params: UpdateDomainDto) => {
  */
 export const seoSave = (params: DomainSeoSaveDto) => {
   return requestClient.post<BooleanResponseVO>('/hub/domains/seo/save', params);
-}
+};
 
 /**
  * @description: 删除域名
@@ -225,7 +226,7 @@ export const seoSave = (params: DomainSeoSaveDto) => {
  */
 export const domainsDelete = (params: IdDto) => {
   return requestClient.post<DomainResponse>('/hub/domains/delete', params);
-}
+};
 
 /**
  * @description: 域名下拉列表
@@ -233,8 +234,11 @@ export const domainsDelete = (params: IdDto) => {
  * @url: /api/hub/domains/options
  */
 export const domainsOptions = (params: DomainOptionsDto) => {
-  return requestClient.post<DomainOptionsResponseVO>('/hub/domains/options', params);
-}
+  return requestClient.post<DomainOptionsResponseVO>(
+    '/hub/domains/options',
+    params,
+  );
+};
 
 /**
  * @description: 根据域名解析配置
@@ -242,8 +246,11 @@ export const domainsOptions = (params: DomainOptionsDto) => {
  * @url: /api/hub/domains/resolve
  */
 export const domainsResolve = (params: DomainResolveDto) => {
-  return requestClient.post<DomainResolveResponse>('/hub/domains/resolve', params);
-}
+  return requestClient.post<DomainResolveResponse>(
+    '/hub/domains/resolve',
+    params,
+  );
+};
 
 // ==================== Layouts - 版型管理 ====================
 
@@ -254,7 +261,7 @@ export const domainsResolve = (params: DomainResolveDto) => {
  */
 export const layoutsCreate = (params: CreateLayoutDto) => {
   return requestClient.post<BooleanResponseVO>('/hub/layouts/create', params);
-}
+};
 
 /**
  * @description: 版型列表
@@ -263,7 +270,7 @@ export const layoutsCreate = (params: CreateLayoutDto) => {
  */
 export const layoutsList = (params: LayoutQueryDto) => {
   return requestClient.post<LayoutListResponse>('/hub/layouts/list', params);
-}
+};
 
 /**
  * @description: 版型详情
@@ -272,7 +279,7 @@ export const layoutsList = (params: LayoutQueryDto) => {
  */
 export const layoutsDetail = (params: IdDto) => {
   return requestClient.post<LayoutResponse>('/hub/layouts/detail', params);
-}
+};
 
 /**
  * @description: 更新版型
@@ -281,7 +288,7 @@ export const layoutsDetail = (params: IdDto) => {
  */
 export const layoutsUpdate = (params: UpdateLayoutDto) => {
   return requestClient.post<BooleanResponseVO>('/hub/layouts/update', params);
-}
+};
 
 /**
  * @description: 删除版型
@@ -290,7 +297,7 @@ export const layoutsUpdate = (params: UpdateLayoutDto) => {
  */
 export const layoutsDelete = (params: IdDto) => {
   return requestClient.post<LayoutResponse>('/hub/layouts/delete', params);
-}
+};
 
 /**
  * @description: 复制版型
@@ -299,7 +306,7 @@ export const layoutsDelete = (params: IdDto) => {
  */
 export const copy = (params: LayoutCopyDto) => {
   return requestClient.post<BooleanResponseVO>('/hub/layouts/copy', params);
-}
+};
 
 /**
  * @description: 关联TabBar列表
@@ -307,8 +314,11 @@ export const copy = (params: LayoutCopyDto) => {
  * @url: /api/hub/layouts/tabbars
  */
 export const tabbars = (params: IdDto) => {
-  return requestClient.post<LayoutTabBarsResponseVO>('/hub/layouts/tabbars', params);
-}
+  return requestClient.post<LayoutTabBarsResponseVO>(
+    '/hub/layouts/tabbars',
+    params,
+  );
+};
 
 // ==================== TabBar - 标签栏管理 ====================
 
@@ -319,7 +329,7 @@ export const tabbars = (params: IdDto) => {
  */
 export const tabbarsCreate = (params: CreateTabBarDto) => {
   return requestClient.post<BooleanResponseVO>('/hub/tabbars/create', params);
-}
+};
 
 /**
  * @description: TabBar 列表
@@ -328,7 +338,7 @@ export const tabbarsCreate = (params: CreateTabBarDto) => {
  */
 export const tabbarsList = (params: TabBarQueryDto) => {
   return requestClient.post<TabBarListResponse>('/hub/tabbars/list', params);
-}
+};
 
 /**
  * @description: TabBar 下拉列表
@@ -336,8 +346,11 @@ export const tabbarsList = (params: TabBarQueryDto) => {
  * @url: /api/hub/tabbars/select
  */
 export const select = (params: TabBarSelectQueryDto) => {
-  return requestClient.post<TabBarSelectListResponseVO>('/hub/tabbars/select', params);
-}
+  return requestClient.post<TabBarSelectListResponseVO>(
+    '/hub/tabbars/select',
+    params,
+  );
+};
 
 /**
  * @description: TabBar 详情
@@ -346,7 +359,7 @@ export const select = (params: TabBarSelectQueryDto) => {
  */
 export const tabbarsDetail = (params: IdDto) => {
   return requestClient.post<TabBarResponse>('/hub/tabbars/detail', params);
-}
+};
 
 /**
  * @description: 更新 TabBar
@@ -355,7 +368,7 @@ export const tabbarsDetail = (params: IdDto) => {
  */
 export const tabbarsUpdate = (params: UpdateTabBarDto) => {
   return requestClient.post<BooleanResponseVO>('/hub/tabbars/update', params);
-}
+};
 
 /**
  * @description: 删除 TabBar
@@ -364,7 +377,7 @@ export const tabbarsUpdate = (params: UpdateTabBarDto) => {
  */
 export const tabbarsDelete = (params: IdDto) => {
   return requestClient.post<TabBarResponse>('/hub/tabbars/delete', params);
-}
+};
 
 // ==================== Theme - 主题管理 ====================
 
@@ -375,7 +388,7 @@ export const tabbarsDelete = (params: IdDto) => {
  */
 export const themesCreate = (params: CreateThemeDto) => {
   return requestClient.post<BooleanResponseVO>('/hub/themes/create', params);
-}
+};
 
 /**
  * @description: 主题列表
@@ -384,7 +397,7 @@ export const themesCreate = (params: CreateThemeDto) => {
  */
 export const themesList = (params: ThemeQueryDto) => {
   return requestClient.post<ThemeListResponse>('/hub/themes/list', params);
-}
+};
 
 /**
  * @description: 主题详情
@@ -393,7 +406,7 @@ export const themesList = (params: ThemeQueryDto) => {
  */
 export const themesDetail = (params: IdDto) => {
   return requestClient.post<ThemeResponse>('/hub/themes/detail', params);
-}
+};
 
 /**
  * @description: 更新主题
@@ -402,7 +415,7 @@ export const themesDetail = (params: IdDto) => {
  */
 export const themesUpdate = (params: UpdateThemeDto) => {
   return requestClient.post<BooleanResponseVO>('/hub/themes/update', params);
-}
+};
 
 /**
  * @description: 删除主题
@@ -411,7 +424,7 @@ export const themesUpdate = (params: UpdateThemeDto) => {
  */
 export const themesDelete = (params: IdDto) => {
   return requestClient.post<ThemeResponse>('/hub/themes/delete', params);
-}
+};
 
 /**
  * @description: 获取主题资源
@@ -419,8 +432,11 @@ export const themesDelete = (params: IdDto) => {
  * @url: /api/hub/themes/assets
  */
 export const assets = (params: IdDto) => {
-  return requestClient.post<ThemeAssetsResponseVO>('/hub/themes/assets', params);
-}
+  return requestClient.post<ThemeAssetsResponseVO>(
+    '/hub/themes/assets',
+    params,
+  );
+};
 
 // ==================== AppRoute - APP线路管理 ====================
 
@@ -430,8 +446,11 @@ export const assets = (params: IdDto) => {
  * @url: /api/hub/app-routes/create
  */
 export const appRoutesCreate = (params: CreateAppRouteDto) => {
-  return requestClient.post<BooleanResponseVO>('/hub/app-routes/create', params);
-}
+  return requestClient.post<BooleanResponseVO>(
+    '/hub/app-routes/create',
+    params,
+  );
+};
 
 /**
  * @description: 线路列表
@@ -439,8 +458,11 @@ export const appRoutesCreate = (params: CreateAppRouteDto) => {
  * @url: /api/hub/app-routes/list
  */
 export const appRoutesList = (params: AppRouteQueryDto) => {
-  return requestClient.post<AppRouteListResponse>('/hub/app-routes/list', params);
-}
+  return requestClient.post<AppRouteListResponse>(
+    '/hub/app-routes/list',
+    params,
+  );
+};
 
 /**
  * @description: 线路详情
@@ -449,7 +471,7 @@ export const appRoutesList = (params: AppRouteQueryDto) => {
  */
 export const appRoutesDetail = (params: IdDto) => {
   return requestClient.post<AppRouteResponse>('/hub/app-routes/detail', params);
-}
+};
 
 /**
  * @description: 更新线路
@@ -457,8 +479,11 @@ export const appRoutesDetail = (params: IdDto) => {
  * @url: /api/hub/app-routes/update
  */
 export const appRoutesUpdate = (params: UpdateAppRouteDto) => {
-  return requestClient.post<BooleanResponseVO>('/hub/app-routes/update', params);
-}
+  return requestClient.post<BooleanResponseVO>(
+    '/hub/app-routes/update',
+    params,
+  );
+};
 
 /**
  * @description: 删除线路
@@ -467,7 +492,7 @@ export const appRoutesUpdate = (params: UpdateAppRouteDto) => {
  */
 export const appRoutesDelete = (params: IdDto) => {
   return requestClient.post<AppRouteResponse>('/hub/app-routes/delete', params);
-}
+};
 
 /**
  * @description: 启用/禁用线路
@@ -476,7 +501,7 @@ export const appRoutesDelete = (params: IdDto) => {
  */
 export const state = (params: AppRouteStateDto) => {
   return requestClient.post<BooleanResponseVO>('/hub/app-routes/state', params);
-}
+};
 
 /**
  * @description: 获取可用线路
@@ -484,8 +509,11 @@ export const state = (params: AppRouteStateDto) => {
  * @url: /api/hub/app-routes/available
  */
 export const available = (params: AppRouteAvailableDto) => {
-  return requestClient.post<AppRouteAvailableResponseVO>('/hub/app-routes/available', params);
-}
+  return requestClient.post<AppRouteAvailableResponseVO>(
+    '/hub/app-routes/available',
+    params,
+  );
+};
 
 /**
  * @description: 手动健康检查
@@ -493,8 +521,11 @@ export const available = (params: AppRouteAvailableDto) => {
  * @url: /api/hub/app-routes/health-check
  */
 export const healthCheck = (params: AppRouteAvailableDto) => {
-  return requestClient.post<HealthCheckResultVO>('/hub/app-routes/health-check', params);
-}
+  return requestClient.post<HealthCheckResultVO>(
+    '/hub/app-routes/health-check',
+    params,
+  );
+};
 
 // ==================== Config - 配置聚合 ====================
 
@@ -504,8 +535,11 @@ export const healthCheck = (params: AppRouteAvailableDto) => {
  * @url: /api/hub/config/options
  */
 export const configOptions = (params: ConfigOptionsDto) => {
-  return requestClient.post<ConfigOptionsResponse>('/hub/config/options', params);
-}
+  return requestClient.post<ConfigOptionsResponse>(
+    '/hub/config/options',
+    params,
+  );
+};
 
 // ==================== Agreement - 协议手册管理 ====================
 
@@ -515,8 +549,11 @@ export const configOptions = (params: ConfigOptionsDto) => {
  * @url: /api/hub/agreement/detail
  */
 export const agreementDetail = (params: AgreementDetailDto) => {
-  return requestClient.post<AgreementListResponseVO>('/hub/agreement/detail', params);
-}
+  return requestClient.post<AgreementListResponseVO>(
+    '/hub/agreement/detail',
+    params,
+  );
+};
 
 /**
  * @description: 保存协议
@@ -525,7 +562,7 @@ export const agreementDetail = (params: AgreementDetailDto) => {
  */
 export const agreementSave = (params: SaveAgreementDto) => {
   return requestClient.post<BooleanResponseVO>('/hub/agreement/save', params);
-}
+};
 
 // ==================== Runners - 执行器管理 ====================
 
@@ -536,7 +573,7 @@ export const agreementSave = (params: SaveAgreementDto) => {
  */
 export const register = (params: RunnerRegisterDto) => {
   return requestClient.post<any>('/hub/runners/register', params);
-}
+};
 
 /**
  * @description: 心跳上报
@@ -544,8 +581,11 @@ export const register = (params: RunnerRegisterDto) => {
  * @url: /api/hub/runners/heartbeat
  */
 export const heartbeat = (params: RunnerHeartbeatDto) => {
-  return requestClient.post<BooleanResponseVO>('/hub/runners/heartbeat', params);
-}
+  return requestClient.post<BooleanResponseVO>(
+    '/hub/runners/heartbeat',
+    params,
+  );
+};
 
 /**
  * @description: Runner 列表
@@ -554,7 +594,7 @@ export const heartbeat = (params: RunnerHeartbeatDto) => {
  */
 export const runnersList = (params: RunnerQueryDto) => {
   return requestClient.post<RunnerListResponse>('/hub/runners/list', params);
-}
+};
 
 // ==================== Jobs - 任务管理 ====================
 
@@ -565,7 +605,7 @@ export const runnersList = (params: RunnerQueryDto) => {
  */
 export const jobsCreate = (params: CreateJobDto) => {
   return requestClient.post<JobVO>('/hub/jobs/create', params);
-}
+};
 
 /**
  * @description: 任务列表
@@ -574,7 +614,7 @@ export const jobsCreate = (params: CreateJobDto) => {
  */
 export const jobsList = (params: JobQueryDto) => {
   return requestClient.post<JobListResponse>('/hub/jobs/list', params);
-}
+};
 
 /**
  * @description: 任务详情
@@ -583,7 +623,7 @@ export const jobsList = (params: JobQueryDto) => {
  */
 export const jobsDetail = (params: IdDto) => {
   return requestClient.post<JobVO>('/hub/jobs/detail', params);
-}
+};
 
 /**
  * @description: 取消任务
@@ -592,7 +632,7 @@ export const jobsDetail = (params: IdDto) => {
  */
 export const cancel = (params: IdDto) => {
   return requestClient.post<JobCancelResponseVO>('/hub/jobs/cancel', params);
-}
+};
 
 /**
  * @description: 重试任务
@@ -601,7 +641,7 @@ export const cancel = (params: IdDto) => {
  */
 export const retry = (params: IdDto) => {
   return requestClient.post<JobVO>('/hub/jobs/retry', params);
-}
+};
 
 /**
  * @description: 任务状态统计
@@ -610,7 +650,7 @@ export const retry = (params: IdDto) => {
  */
 export const stats = (params: JobStatsQueryDto) => {
   return requestClient.post<JobStatsVO>('/hub/jobs/stats', params);
-}
+};
 
 // ==================== Job Logs - 任务日志 ====================
 
@@ -621,7 +661,7 @@ export const stats = (params: JobStatsQueryDto) => {
  */
 export const jobLogsList = (params: JobLogQueryDto) => {
   return requestClient.post<JobLogListResponse>('/hub/job-logs/list', params);
-}
+};
 
 // ==================== App Versions - 应用版本管理 ====================
 
@@ -632,7 +672,7 @@ export const jobLogsList = (params: JobLogQueryDto) => {
  */
 export const appVersionsCreate = (params: CreateAppVersionDto) => {
   return requestClient.post<AppVersionVO>('/hub/app-versions/create', params);
-}
+};
 
 /**
  * @description: 版本列表
@@ -640,8 +680,11 @@ export const appVersionsCreate = (params: CreateAppVersionDto) => {
  * @url: /api/hub/app-versions/list
  */
 export const appVersionsList = (params: AppVersionQueryDto) => {
-  return requestClient.post<AppVersionListDataVO>('/hub/app-versions/list', params);
-}
+  return requestClient.post<AppVersionListDataVO>(
+    '/hub/app-versions/list',
+    params,
+  );
+};
 
 /**
  * @description: 检查更新
@@ -649,8 +692,11 @@ export const appVersionsList = (params: AppVersionQueryDto) => {
  * @url: /api/hub/app-versions/check-update
  */
 export const checkUpdate = (params: CheckUpdateDto) => {
-  return requestClient.post<CheckUpdateVO>('/hub/app-versions/check-update', params);
-}
+  return requestClient.post<CheckUpdateVO>(
+    '/hub/app-versions/check-update',
+    params,
+  );
+};
 
 /**
  * @description: 版本详情
@@ -659,7 +705,7 @@ export const checkUpdate = (params: CheckUpdateDto) => {
  */
 export const appVersionsDetail = (params: IdDto) => {
   return requestClient.post<AppVersionVO>('/hub/app-versions/detail', params);
-}
+};
 
 /**
  * @description: 更新版本
@@ -668,7 +714,7 @@ export const appVersionsDetail = (params: IdDto) => {
  */
 export const appVersionsUpdate = (params: UpdateAppVersionDto) => {
   return requestClient.post<AppVersionVO>('/hub/app-versions/update', params);
-}
+};
 
 /**
  * @description: 删除版本
@@ -677,7 +723,7 @@ export const appVersionsUpdate = (params: UpdateAppVersionDto) => {
  */
 export const appVersionsDelete = (params: IdDto) => {
   return requestClient.post<AppVersionVO>('/hub/app-versions/delete', params);
-}
+};
 
 /**
  * @description: 发布版本
@@ -686,7 +732,7 @@ export const appVersionsDelete = (params: IdDto) => {
  */
 export const publish = (params: IdDto) => {
   return requestClient.post<AppVersionVO>('/hub/app-versions/publish', params);
-}
+};
 
 /**
  * @description: 下架版本
@@ -694,8 +740,11 @@ export const publish = (params: IdDto) => {
  * @url: /api/hub/app-versions/unpublish
  */
 export const unpublish = (params: IdDto) => {
-  return requestClient.post<AppVersionVO>('/hub/app-versions/unpublish', params);
-}
+  return requestClient.post<AppVersionVO>(
+    '/hub/app-versions/unpublish',
+    params,
+  );
+};
 
 /**
  * @description: 下载版本文件
@@ -704,7 +753,7 @@ export const unpublish = (params: IdDto) => {
  */
 export const download = (params: IdDto) => {
   return requestClient.post<any>('/hub/app-versions/download', params);
-}
+};
 
 // ==================== App Packages - 打包配置管理 ====================
 
@@ -715,7 +764,7 @@ export const download = (params: IdDto) => {
  */
 export const appPackagesCreate = (params: CreateAppPackageDto) => {
   return requestClient.post<AppPackageVO>('/hub/app-packages/create', params);
-}
+};
 
 /**
  * @description: 打包配置列表
@@ -723,8 +772,11 @@ export const appPackagesCreate = (params: CreateAppPackageDto) => {
  * @url: /api/hub/app-packages/list
  */
 export const appPackagesList = (params: AppPackageQueryDto) => {
-  return requestClient.post<AppPackageListDataVO>('/hub/app-packages/list', params);
-}
+  return requestClient.post<AppPackageListDataVO>(
+    '/hub/app-packages/list',
+    params,
+  );
+};
 
 /**
  * @description: 打包配置详情
@@ -733,7 +785,7 @@ export const appPackagesList = (params: AppPackageQueryDto) => {
  */
 export const appPackagesDetail = (params: IdDto) => {
   return requestClient.post<AppPackageVO>('/hub/app-packages/detail', params);
-}
+};
 
 /**
  * @description: 更新打包配置
@@ -742,7 +794,7 @@ export const appPackagesDetail = (params: IdDto) => {
  */
 export const appPackagesUpdate = (params: UpdateAppPackageDto) => {
   return requestClient.post<AppPackageVO>('/hub/app-packages/update', params);
-}
+};
 
 /**
  * @description: 删除打包配置
@@ -751,7 +803,7 @@ export const appPackagesUpdate = (params: UpdateAppPackageDto) => {
  */
 export const appPackagesDelete = (params: IdDto) => {
   return requestClient.post<AppPackageVO>('/hub/app-packages/delete', params);
-}
+};
 
 /**
  * @description: 触发打包任务
@@ -760,7 +812,7 @@ export const appPackagesDelete = (params: IdDto) => {
  */
 export const build = (params: AppPackageBuildDto) => {
   return requestClient.post<JobVO>('/hub/app-packages/build', params);
-}
+};
 
 /**
  * @description: 打包配置任务列表
@@ -769,7 +821,7 @@ export const build = (params: AppPackageBuildDto) => {
  */
 export const jobs = (params: AppPackageJobsQueryDto) => {
   return requestClient.post<JobListResponse>('/hub/app-packages/jobs', params);
-}
+};
 
 // ==================== Upload - 文件上传 ====================
 
@@ -780,7 +832,7 @@ export const jobs = (params: AppPackageJobsQueryDto) => {
  */
 export const image = (params: UploadImageDto) => {
   return requestClient.post<UploadResultVO>('/hub/upload/image', params);
-}
+};
 
 /**
  * @description: 上传文件 (Multipart)
@@ -789,8 +841,12 @@ export const image = (params: UploadImageDto) => {
  * @url: /api/hub/upload/file
  */
 export const file = (file: File, params: Omit<UploadFileFormDto, 'file'>) => {
-  return uploadFile<UploadFileResultVO>({ url: '/hub/upload/file' }, { files: [file], ...params }, 'file');
-}
+  return uploadFile<UploadFileResultVO>(
+    { url: '/hub/upload/file' },
+    { files: [file], ...params },
+    'file',
+  );
+};
 
 // ==================== Merchant - 商户端配置 ====================
 
@@ -800,7 +856,7 @@ export const file = (file: File, params: Omit<UploadFileFormDto, 'file'>) => {
  */
 export const sites = () => {
   return requestClient.post<MerchantSiteListResponseVO>('/hub/merchant/sites');
-}
+};
 
 /**
  * @description: 商户配置详情
@@ -808,8 +864,11 @@ export const sites = () => {
  * @url: /api/hub/merchant/detail
  */
 export const merchantDetail = (params: MerchantDetailDto) => {
-  return requestClient.post<MerchantDetailResponse>('/hub/merchant/detail', params);
-}
+  return requestClient.post<MerchantDetailResponse>(
+    '/hub/merchant/detail',
+    params,
+  );
+};
 
 /**
  * @description: 获取 TabBar 配置
@@ -817,8 +876,11 @@ export const merchantDetail = (params: MerchantDetailDto) => {
  * @url: /api/hub/merchant/tabbar
  */
 export const tabbar = (params: MerchantTabBarDto) => {
-  return requestClient.post<MerchantTabBarResponse>('/hub/merchant/tabbar', params);
-}
+  return requestClient.post<MerchantTabBarResponse>(
+    '/hub/merchant/tabbar',
+    params,
+  );
+};
 
 /**
  * @description: 保存 TabBar 覆盖配置
@@ -826,8 +888,11 @@ export const tabbar = (params: MerchantTabBarDto) => {
  * @url: /api/hub/merchant/tabbar-save
  */
 export const tabbarSave = (params: MerchantTabBarSaveDto) => {
-  return requestClient.post<BooleanResponseVO>('/hub/merchant/tabbar-save', params);
-}
+  return requestClient.post<BooleanResponseVO>(
+    '/hub/merchant/tabbar-save',
+    params,
+  );
+};
 
 /**
  * @description: 获取游戏导航聚合配置
@@ -835,8 +900,11 @@ export const tabbarSave = (params: MerchantTabBarSaveDto) => {
  * @url: /api/hub/merchant/game-nav-detail
  */
 export const gameNavDetail = (params: MerchantGameNavDetailDto) => {
-  return requestClient.post<MerchantGameNavDetailResponse>('/hub/merchant/game-nav-detail', params);
-}
+  return requestClient.post<MerchantGameNavDetailResponse>(
+    '/hub/merchant/game-nav-detail',
+    params,
+  );
+};
 
 /**
  * @description: 保存游戏导航草稿
@@ -844,8 +912,11 @@ export const gameNavDetail = (params: MerchantGameNavDetailDto) => {
  * @url: /api/hub/merchant/game-nav-save
  */
 export const gameNavSave = (params: MerchantGameNavSaveDto) => {
-  return requestClient.post<BooleanResponseVO>('/hub/merchant/game-nav-save', params);
-}
+  return requestClient.post<BooleanResponseVO>(
+    '/hub/merchant/game-nav-save',
+    params,
+  );
+};
 
 /**
  * @description: 发布游戏导航版本
@@ -853,8 +924,11 @@ export const gameNavSave = (params: MerchantGameNavSaveDto) => {
  * @url: /api/hub/merchant/game-nav-publish
  */
 export const gameNavPublish = (params: MerchantGameNavPublishDto) => {
-  return requestClient.post<BooleanResponseVO>('/hub/merchant/game-nav-publish', params);
-}
+  return requestClient.post<BooleanResponseVO>(
+    '/hub/merchant/game-nav-publish',
+    params,
+  );
+};
 
 /**
  * @description: 保存商户配置
@@ -863,7 +937,7 @@ export const gameNavPublish = (params: MerchantGameNavPublishDto) => {
  */
 export const merchantSave = (params: MerchantSaveDto) => {
   return requestClient.post<BooleanResponseVO>('/hub/merchant/save', params);
-}
+};
 
 // ==================== Web - 前端配置 ====================
 
@@ -874,7 +948,7 @@ export const merchantSave = (params: MerchantSaveDto) => {
  */
 export const config = (params: WebConfigDto) => {
   return requestClient.post<WebConfigResponse>('/hub/web/config', params);
-}
+};
 
 /**
  * @description: 获取租户游戏导航
@@ -883,7 +957,7 @@ export const config = (params: WebConfigDto) => {
  */
 export const game = (params: WebGameDto) => {
   return requestClient.post<WebGameResponse>('/hub/web/game', params);
-}
+};
 
 // ==================== Debug - 调度调试 ====================
 
@@ -893,4 +967,4 @@ export const game = (params: WebGameDto) => {
  */
 export const orgTenantList = () => {
   return requestClient.post<any>('/hub/debug/scheduler/org-tenant-list');
-}
+};

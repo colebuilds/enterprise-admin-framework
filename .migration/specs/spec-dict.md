@@ -2,219 +2,323 @@
 
 ## 背景
 
-老项目字典体系有五条链路，分散在 `userStore` 和独立 `dynamicDictionaryStore` 里。
-业务代码通过 `userStore.*` 直接读取，共 20+ 处调用。
+老项目字典体系有五条链路，分散在 `userStore` 和独立 `dynamicDictionaryStore` 里。业务代码通过 `userStore.*` 直接读取，共 20+ 处调用。
 
 ## 五条链路全貌
 
-| 链路 | 接口 | 加载时机 | 存储位置 | 业务调用方式 |
-|------|------|---------|---------|------------|
-| common | `POST /Common/GetDictionary` | 登录后立即 | `appUserStore.dictionary` | `userStore.getDictionaryList` |
-| group | `api.system.getGroupData()` | 登录后立即 | `appUserStore.groupData` | `userStore.getGropuData` |
-| v1 | `POST /v1/Common/GetDictionary` | 登录后立即 | `appUserStore.v1Dictionary` | `userStore.getV1Dictionary` |
-| platform | `POST /Common/GetPlatformDic` | 部分页面按需 | `appUserStore.platformDic` | `userStore.getPlatformDic` |
-| dynamic | `POST /Common/GetDynamicDictionary` | 按 key 懒加载 | `dynamicDictionaryStore.cache` | `dynamicDictionaryStore.load(key)` |
+| 链路 | 接口 | 老项目缓存 | 加载时机 | 新 staleTime | 新消费方式 |
+| --- | --- | --- | --- | --- | --- |
+| common | `POST /Common/GetDictionary` | ❌ 无，裸 Pinia ref | 登录后预热（prefetch） | `Infinity` | `useDictOptions('enableStateList')` |
+| group | `POST /SysDictionary/GetGroupData` | ❌ 无，裸 Pinia ref | 登录后预热（prefetch） | `Infinity` | `useDictOptions('countryDictionaryList')` |
+| v1 | `POST /v1/Common/GetDictionary` | ❌ 无，裸 Pinia ref | 登录后预热（prefetch） | `Infinity` | `useDictOptions('userStateList')` |
+| platform | `POST /Common/GetPlatformDic` | ❌ 无，裸 Pinia ref | 登录后预热（prefetch） | `Infinity` | `useDictOptions('languageList')` |
+| dynamic | `POST /Common/GetDynamicDictionary` | ✅ 手写 5 分钟 + in-flight 去重 | 模块内按需懒加载 | `5 * 60 * 1000` | `useDictOptions('roleList')` |
 
-## appUserStore（迁移重点）
+---
 
-### 为什么不用 vben 的 useUserStore
+## 架构决策
 
-vben 的 `useUserStore` 只有 `userInfo` 和 `userRoles`，供 layout 渲染用。
-老项目 `userStore` 承载了**用户信息 + 字典 + 商户列表 + 权限**，是个 God Store。
+### 1. 五条链路全走 TanStack Query（统一基础设施）
 
-**策略：新建 `src/store/app-user.ts`，完整迁入老项目 `userStore` 的所有内容**，业务代码全指向这里。vben 的 `useUserStore` 只做最小同步（头像/名称）。
+**老项目的问题：**
 
-### app-user.ts 关键结构
+- static dict（4 条）：裸 Pinia ref，没有任何缓存或去重。`loadBaseDicts()` 若被并发调用（如路由守卫竞态），会重复发请求；失败后静默写空数据，没有重试。
+- dynamic dict（1 条）：老项目自己手写了 `cache + pending + loadedAt` 实现 5 分钟缓存 + in-flight 去重，逻辑复杂且不可复用。
+
+**TanStack Query 对所有 5 条链路统一提供：**
+
+- **in-flight 去重**：同一 queryKey 并发调用只发出 1 个请求
+- **失败重试**：`retry: 1`
+- **请求取消**：AbortSignal 自动传递
+- **staleTime 控制刷新策略**（见下）
+
+**staleTime 的选取：**
+
+- static dict → `staleTime: Infinity`
+
+  static dict 是 session 级别稳定的数据——登录时加载一次，session 内内容不变，**唯一需要刷新的场景是语言切换**。`Infinity` 表达"不自动过期，由业务显式失效"，语言切换时调 `queryClient.invalidateQueries({ queryKey: ['dict'] })` 触发重拉。这与老项目的实际行为（session 内存一份，语言切换重新调接口）完全一致，只是加上了去重和重试。
+
+- dynamic dict → `staleTime: 5 * 60 * 1000`
+
+  沿用老项目 `STALE_AFTER_MS = 5 * 60 * 1000` 的设定，含义不变：业务侧 CRUD 后主动调 `queryClient.invalidateQueries(['dict', 'dynamic'])` 失效；5 分钟兜底是"业务忘了失效"时的安全网。
+
+### 2. Static dict 的 prefetch 模式
+
+TanStack Query 的 `useQuery` 只能在组件/composable 上下文（setup）里调用。  
+登录时 auth store 不在组件上下文里，需要 `queryClient.prefetchQuery`（可在任意位置调用）。  
+这要求暴露一个**单例 `queryClient`**，auth store 和组件共享同一个实例。
+
+```
+登录时：auth store → queryClient.prefetchQuery → cache 预热
+组件内：useQuery(同 queryKey) → 命中 cache，不二次请求
+```
+
+### 3. 删除 useDictStore（Pinia store）
+
+dict 不再需要 Pinia store，TanStack Query cache 是唯一数据源。  
+`appUserStore` 保持不变（只管用户信息 + 商户 + 权限）。
+
+### 4. Registry + composable — TypeScript 强约束
+
+不变。见 registry 节。
+
+---
+
+## 实现细节
+
+### `src/lib/query-client.ts`（新增）
+
+单例 QueryClient，auth store 和 VueQueryPlugin 共享。
 
 ```ts
-// src/store/app-user.ts
-import { defineStore } from 'pinia';
-import { api } from '#/api';
-import type { DictionaryRsp } from '#/api/common';
-import type { SysGropDictionaryRsp } from '#/api/system';
-import type { DictionaryRsp as V1DictionaryRsp } from '#/api/v1platform';
-import type { PlatformDicRsp } from '#/api/common';
-import type { HomeSysUserInfoRsp } from '#/api/admin';
+import { QueryClient } from '@tanstack/vue-query';
 
-export type UserInfoType = HomeSysUserInfoRsp;
-
-export const useAppUserStore = defineStore('app-user', {
-  state: () => ({
-    // 用户信息
-    info: {} as Partial<UserInfoType>,
-    // 五类字典
-    dictionary: null as DictionaryRsp | null,
-    groupData: null as SysGropDictionaryRsp | null,
-    v1Dictionary: null as V1DictionaryRsp | null,
-    platformDic: null as PlatformDicRsp | null,
-    // 当前激活商户
-    activeTenantId: null as number | null,
-  }),
-
-  getters: {
-    // ─── 老项目 userStore getter 完整保留，业务代码零改动 ───
-    getToken: (state) => state.info?.token ?? '',
-    getAvatar: (state) => state.info?.avatar ?? '',
-    getNickname: (state) => state.info?.nickname ?? '',
-    getUserInfo: (state) => state.info,
-    getPermissions: (state) => state.info?.permissions ?? [],
-    // 权限码数组（供 accessStore.setAccessCodes 使用）
-    getPermissionCodes: (state): string[] =>
-      (state.info?.permissions ?? []).map((p: any) =>
-        (p.value ?? p).toLowerCase()
-      ),
-    getDictionaryList: (state) => state.dictionary,
-    getGropuData: (state) => state.groupData,
-    getV1Dictionary: (state) => state.v1Dictionary,
-    getPlatformDic: (state) => state.platformDic,
-    getActiveTenantId: (state) => state.activeTenantId,
-    getActiveTenant: (state) => {
-      // 从 info.tenants 中找到 activeTenantId 对应的商户
-      const tenants = (state.info as any)?.tenants ?? [];
-      return tenants.find((t: any) => t.id === state.activeTenantId) ?? null;
-    },
-    isSuperAuthUser: (state): boolean =>
-      Boolean((state.info as any)?.isSuperAuthUser),
-    isPlatformUser: (state): boolean =>
-      Boolean((state.info as any)?.isPlatformUser),
-    getTenantGroups: (state) => {
-      // 从老项目迁入 buildTenantGroups 逻辑
-      return buildTenantGroups(state.info);
-    },
-    getTenantFlatList: (state) => {
-      const groups = buildTenantGroups(state.info);
-      return groups.flatMap(g => g.tenants);
-    },
-    getTenantRechargeLevelList: (state) =>
-      (state.getActiveTenant as any)?.rechargeLevelList ?? [],
-    getCurrentTimezone: (state) =>
-      (state.info as any)?.timeZoneList?.[0] ?? null,
-    getCurrentTimezoneLabel: (state) => {
-      const tz = (state.info as any)?.timeZoneList?.[0];
-      return tz ? getTimeZoneOffsetLabel(tz.timeZoneCode, tz.timeZoneValue) : '';
-    },
-    getCurrentCurrency: (state) =>
-      (state.info as any)?.currentCurrency ??
-      (state.info as any)?.currencyList?.[0]?.currencyCode ?? '',
-    getCurrentLanguageName: (state) =>
-      (state.info as any)?.languageList?.[0]?.name ?? '',
-    getV3OssImageUrl: (state) => (state.info as any)?.v3OssImageUrl ?? '',
-  },
-
-  actions: {
-    // ─── 用户信息 ───
-    async fetchUserInfo() {
-      const { data } = await api.admin.homeBasic();
-      this.info = data;
-      this.activeTenantId = (data as any)?.activeTenantId ?? null;
-    },
-
-    setActiveTenantId(id: number | null) {
-      this.activeTenantId = id;
-    },
-
-    // ─── 字典加载 ───
-    async getDictionary() {
-      const { data, code } = await api.common.getDictionary();
-      if (code !== 0) return;
-      this.dictionary = data;
-    },
-
-    async getDictionaryDetail() {
-      const { data, code } = await api.system.getGroupData();
-      if (code !== 0) return;
-      this.groupData = data;
-    },
-
-    async loadV1Dictionary() {
-      const { data, code } = await api.v1platform.getDictionary();
-      if (code !== 0) return;
-      this.v1Dictionary = data;
-    },
-
-    async loadPlatformDic() {
-      const { data, code } = await api.common.getPlatformDic();
-      if (code !== 0) return;
-      this.platformDic = data;
-    },
-
-    // 登录后批量加载（common + group + v1）
-    async loadBaseDicts() {
-      await Promise.allSettled([
-        this.getDictionary(),
-        this.getDictionaryDetail(),
-        this.loadV1Dictionary(),
-      ]);
-    },
-
-    async logout() {
-      this.$reset();
-    },
-
-    // ─── 兼容老项目调用方式的别名 ───
-    getInfo() {
-      return this.fetchUserInfo();
-    },
-    login() {
-      // login 实际在 authStore 里，这里只是类型兼容占位
-      throw new Error('use authStore.login instead');
+export const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: 1,
+      refetchOnWindowFocus: false,
     },
   },
 });
 ```
 
-## dynamicDictionaryStore（直接搬，不重构）
+### `bootstrap.ts`（更新）
 
-老项目 `src/store/modules/dynamicDictionary.ts` 设计完善：
-- 按 key 缓存（STALE_AFTER_MS = 5分钟）
-- in-flight 去重（pending map）
-- 批量拉取（loadMany）
-- 强类型 Map（DynamicDictionaryItemMap）
+显式传入单例，保证 auth store 和组件用同一个 QueryClient：
 
-**迁移步骤：**
-1. 整块复制到 `src/store/dynamic-dictionary.ts`
-2. 修改 import 路径：`@/api/common` → `#/api/common`
-3. 不改任何业务逻辑
+```ts
+import { VueQueryPlugin } from '@tanstack/vue-query';
+import { queryClient } from '#/lib/query-client';
 
-## useDictionary hook（直接搬）
+app.use(router);
+app.use(VueQueryPlugin, { queryClient });
+```
 
-老项目 `src/components/DictSelect/useDictionary.ts` 整块迁入：
-- 修改 import：`@/store/modules` → `#/store/app-user`
-- `useUserStore` → `useAppUserStore`
-- 其余不变
+### `src/store/auth.ts`（更新）
 
-## DictSelect 组件（直接搬）
+登录后用 `queryClient.prefetchQuery` 预热 4 条 static dict（非阻塞）：
 
-整块迁入 `src/components/DictSelect/`，只改 import 路径。
-主题色使用 CSS 变量（检查有无硬编码颜色，如有替换为 `var(--primary-color)`）。
+```ts
+import { queryClient } from '#/lib/query-client';
 
-## 调用方兼容清单
+// 在 fetchUserInfo() 末尾，不 await，不阻塞导航
+Promise.allSettled([
+  queryClient.prefetchQuery({
+    queryKey: ['dict', 'common'],
+    queryFn: () => api.common.getDictionary(),
+    staleTime: Infinity,
+  }),
+  queryClient.prefetchQuery({
+    queryKey: ['dict', 'v1'],
+    queryFn: () => api.v1platform.getDictionary(),
+    staleTime: Infinity,
+  }),
+  queryClient.prefetchQuery({
+    queryKey: ['dict', 'group'],
+    queryFn: () => api.system.getGroupData(),
+    staleTime: Infinity,
+  }),
+  queryClient.prefetchQuery({
+    queryKey: ['dict', 'platform'],
+    queryFn: () => api.common.getPlatformDic(),
+    staleTime: Infinity,
+  }),
+]);
+```
 
-业务代码里 `userStore.xxx` → 迁移后 `appUserStore.xxx`，getter/action 名称不变：
+登出时清理 dict cache：
 
-| 老调用 | 新调用 | 次数 |
-|--------|--------|------|
-| `userStore.info` | `appUserStore.info` | 24 |
-| `userStore.isSuperAuthUser` | `appUserStore.isSuperAuthUser` | 15 |
-| `userStore.getActiveTenantId` | `appUserStore.getActiveTenantId` | 10 |
-| `userStore.getDictionaryList` | `appUserStore.getDictionaryList` | 2 |
-| `userStore.getDictionary()` | `appUserStore.getDictionary()` | 3 |
-| `userStore.getDictionaryDetail()` | `appUserStore.getDictionaryDetail()` | 3 |
-| `userStore.getGropuData` | `appUserStore.getGropuData` | 3 |
-| `userStore.loadPlatformDic()` | `appUserStore.loadPlatformDic()` | 3 |
-| `userStore.isPlatformUser` | `appUserStore.isPlatformUser` | 5 |
-| `userStore.getPermissions` | `appUserStore.getPermissions` | 5 |
-| `userStore.logout()` | `authStore.logout()` | 4 |
-| `userStore.getTenantGroups` | `appUserStore.getTenantGroups` | 3 |
-| `userStore.getTenantFlatList` | `appUserStore.getTenantFlatList` | 3 |
-| `userStore.getCurrentTimezone` | `appUserStore.getCurrentTimezone` | 3 |
+```ts
+queryClient.removeQueries({ queryKey: ['dict'] });
+```
 
-**迁移工具**：用全局替换 `from '@/store/modules'` → `from '#/store'`，并将 `useUserStore` 调用改为 `useAppUserStore`（注意区分 vben 的 `useUserStore` 和老项目的，import 来源不同）。
+### `src/composables/dict/useDictionary.ts`（更新）
+
+5 条链路全用 `useQuery`，差异只在 `staleTime`：
+
+```ts
+const STATIC_QUERY: Record<
+  string,
+  { queryKey: readonly unknown[]; queryFn: () => Promise<unknown> }
+> = {
+  common: {
+    queryKey: ['dict', 'common'],
+    queryFn: () => api.common.getDictionary(),
+  },
+  v1: {
+    queryKey: ['dict', 'v1'],
+    queryFn: () => api.v1platform.getDictionary(),
+  },
+  group: {
+    queryKey: ['dict', 'group'],
+    queryFn: () => api.system.getGroupData(),
+  },
+  platform: {
+    queryKey: ['dict', 'platform'],
+    queryFn: () => api.common.getPlatformDic(),
+  },
+};
+
+export function useDictOptions(
+  key: string,
+  source?: DictSource,
+): ComputedRef<DictOption[]> {
+  const resolvedSource = (source ?? KEY_SOURCE[key]) as DictSource;
+
+  if (resolvedSource === 'dynamic') {
+    // ⚠️ gen-api 把 DynamicDictionaryKeyEnum 错误生成为中文字面量，后端实际接收英文 camelCase。
+    // 空 body {} 在 SIT 验证返回 0 条数据；必须显式传 ALL_DYNAMIC_KEYS（英文 camelCase）。
+    // 后端某些环境返回 PascalCase key，queryFn 内统一转 camelCase。
+    const { data } = useQuery({
+      queryKey: DICT_QUERY_KEY.dynamic,
+      queryFn: async () => {
+        const res = await api.common.getDynamicDictionary({
+          keys: ALL_DYNAMIC_KEYS as any,
+        });
+        const raw = res.items as Record<string, unknown[]>;
+        const normalized: Record<string, unknown[]> = {};
+        for (const [k, v] of Object.entries(raw)) {
+          normalized[`${k[0]!.toLowerCase()}${k.slice(1)}`] = v;
+        }
+        return normalized;
+      },
+      staleTime: 5 * 60 * 1000,
+      gcTime: 10 * 60 * 1000,
+    });
+    return computed(() =>
+      toOptions('dynamic', key, (data.value as any)?.[key] ?? []),
+    );
+  }
+
+  // Static: prefetch 已在 auth store 里预热，这里命中 cache 不二次请求
+  const { queryKey, queryFn } = STATIC_QUERY[resolvedSource]!;
+  const { data } = useQuery({ queryKey, queryFn, staleTime: Infinity });
+  return computed(() =>
+    toOptions(
+      resolvedSource,
+      key,
+      getStaticRawList(data.value, resolvedSource, key),
+    ),
+  );
+}
+```
+
+### `src/composables/dict/registry.ts`（脚本生成，禁止手改）
+
+```ts
+export const KEY_SOURCE: Record<string, DictSource> = {
+  enableStateList: 'common',
+  userStateList: 'v1',
+  countryDictionaryList: 'group',
+  languageList: 'platform',
+  roleList: 'dynamic',
+  // ... 共 141 个
+};
+
+export const AMBIGUOUS_SOURCES: Record<string, DictSource[]> = {
+  countryList: ['common', 'platform'],
+  currencyList: ['common', 'platform'],
+  financialTypeList: ['common', 'v1'],
+};
+
+export type AmbiguousKey = keyof typeof AMBIGUOUS_SOURCES;
+export type DictSource = 'common' | 'v1' | 'group' | 'platform' | 'dynamic';
+```
+
+**更新命令**：`pnpm --filter web-ar-admin exec esno tools/dict-snapshot.ts`
+
+### `DYNAMIC_FIELDS` 映射（useDictionary.ts 内维护）
+
+dynamic dict 各 key 的 label/value 字段各不相同：
+
+```ts
+const DYNAMIC_FIELDS: Record<string, { label: string; value: string }> = {
+  withdrawCategoryList: { label: 'name', value: 'id' },
+  organizationList: { label: 'orgName', value: 'orgId' },
+  tenantList: { label: 'tenantName', value: 'tenantId' },
+  sysCurrencyList: { label: 'sysCurrency', value: 'sysCurrency' },
+  payCodeList: { label: 'payCode', value: 'payCode' },
+  thirdPayMerchantList: { label: 'customName', value: 'merchantId' },
+  tenantPayChannelList: { label: 'customName', value: 'tenantChannelId' },
+  sysPayChannelList: { label: 'sysChannelName', value: 'sysChannelId' },
+  rechargeCategoryList: { label: 'name', value: 'id' },
+  roleList: { label: 'roleName', value: 'roleId' },
+  menuList: { label: 'menuName', value: 'menuId' },
+  withdrawConfigGroupList: { label: 'groupName', value: 'configGroupId' },
+};
+```
+
+### TypeScript 重载（消费者 API 不变）
+
+```ts
+// 普通 key — 无需指定 source
+export function useDictOptions(key: UnambiguousKey): ComputedRef<DictOption[]>;
+// 歧义 key — 必须指定 source（编译器强制）
+export function useDictOptions(
+  key: AmbiguousKey,
+  source: DictSource,
+): ComputedRef<DictOption[]>;
+
+// label 查找 Map（value → label），供表格列渲染
+export function useLabelMap(
+  key: UnambiguousKey,
+): ComputedRef<Map<number | string, string>>;
+export function useLabelMap(
+  key: AmbiguousKey,
+  source: DictSource,
+): ComputedRef<Map<number | string, string>>;
+```
+
+---
+
+## 文件变动总结
+
+| 文件 | 变动 |
+| --- | --- |
+| `src/lib/query-client.ts` | **新增** — 单例 QueryClient |
+| `src/store/dict.ts` | **重写** — 移除 Pinia store，改为工具模块（导出 `DICT_QUERY_KEY` / `STATIC_DICT_QUERY_FN` / `prefetchStaticDicts` / `clearDictCache` / `invalidateDicts`） |
+| `src/store/auth.ts` | 更新 — prefetchQuery 替代 loadBaseDicts；登出时 removeQueries |
+| `src/bootstrap.ts` | 更新 — 传入单例 queryClient |
+| `src/composables/dict/useDictionary.ts` | 更新 — 5 条链路全走 useQuery |
+| `src/composables/dict/registry.ts` | 不变（脚本生成） |
+| `src/composables/dict/index.ts` | 不变 |
+
+---
+
+## 消费者示例
+
+```vue
+<script setup lang="ts">
+import { useDictOptions, useLabelMap } from '#/composables/dict';
+
+const statusOptions = useDictOptions('enableStateList'); // common，命中 prefetch cache
+const roleOptions = useDictOptions('roleList'); // dynamic，懒加载
+const countryOptions = useDictOptions('countryList', 'platform'); // 歧义 key，必须指定
+const statusMap = useLabelMap('enableStateList'); // 用于表格列渲染
+</script>
+```
+
+---
+
+## 语言切换 → 字典刷新
+
+语言切换后 static dict 内容变化（接口返回当前语言的文本），需要让 cache 失效：
+
+```ts
+// 切换语言后
+queryClient.invalidateQueries({ queryKey: ['dict'] });
+// 下一次 useQuery 会重新请求所有 dict，包括 static 和 dynamic
+```
+
+---
 
 ## 验证方法
 
-1. 登录后：`appUserStore.dictionary` 有值，`appUserStore.groupData` 有值
-2. 进入依赖 platformDic 的页面（operations/siteList）：`appUserStore.platformDic` 被加载
-3. `dynamicDictionaryStore.load('withdrawCategoryList')` 返回数据
-4. `DictSelect` 组件在表单里能渲染下拉选项
-5. e2e: `smoke/dict-loading.spec.ts` 通过
+1. **prefetch 生效**：登录后网络面板出现 4 个 dict 请求（common/v1/group/platform），无重复
+2. **dynamic 懒加载**：登录后无 `GetDynamicDictionary` 请求；进入使用 dynamic key 的页面后才触发
+3. **in-flight 去重**：两个组件同时调用 `useDictOptions('roleList')` 只发出 1 个网络请求
+4. **stale cache**：`useDictOptions('enableStateList')` 调用 N 次，网络请求只有登录时的 1 次
+5. **TypeScript**：`useDictOptions('countryList')` 无第二参数编译报错
+6. **E2E**：`smoke/dict-loading.spec.ts` — 验证 4 条 static dict 在登录后加载，dynamic 不在登录时加载
+7. **登出**：退出后 `queryClient.getQueryData(['dict', 'common'])` 为 undefined（cache 已清）

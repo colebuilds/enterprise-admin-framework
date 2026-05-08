@@ -1,9 +1,10 @@
-import { requestClient } from '#/api/request';
 import type {
-  VendorInfoRspListApiResponse,
   VendorGameListQuery,
-  VendorGameListRspListApiResponse
+  VendorGameListRspListApiResponse,
+  VendorInfoRspListApiResponse,
 } from './types';
+
+import { requestClient } from '#/api/request';
 
 // 导出类型
 export * from './types';
@@ -15,8 +16,10 @@ export * from './types';
  * @url: /api/PlatformTools/GetAllVendorInfo
  */
 export const getAllVendorInfo = () => {
-  return requestClient.post<VendorInfoRspListApiResponse>('/PlatformTools/GetAllVendorInfo');
-}
+  return requestClient.post<VendorInfoRspListApiResponse>(
+    '/PlatformTools/GetAllVendorInfo',
+  );
+};
 
 /**
  * @description: 根据厂商获取该厂商的所有子游戏
@@ -24,5 +27,8 @@ export const getAllVendorInfo = () => {
  * @url: /api/PlatformTools/GetVendorGameList
  */
 export const getVendorGameList = (params: VendorGameListQuery) => {
-  return requestClient.post<VendorGameListRspListApiResponse>('/PlatformTools/GetVendorGameList', params);
-}
+  return requestClient.post<VendorGameListRspListApiResponse>(
+    '/PlatformTools/GetVendorGameList',
+    params,
+  );
+};

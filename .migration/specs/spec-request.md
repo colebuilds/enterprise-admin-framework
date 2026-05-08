@@ -3,10 +3,12 @@
 ## 背景与问题
 
 老项目有两个 HTTP 客户端：
+
 - `src/utils/http/index.ts` → 导出 `http`（VAxios 封装，主力）
 - `src/utils/http/CFHttp.ts` → 第二客户端（grep 确认：无业务代码引用，死代码）
 
 业务代码实际调用量：
+
 - `http.post`：1053 次
 - `http.get`：56 次
 - `http.delete`：6 次
@@ -17,12 +19,14 @@
 ## 老项目拦截器逻辑（必须完整迁移）
 
 ### 请求拦截
+
 1. Token 注入：`Authorization: Bearer <token>`（从 localStorage `ACCESS-TOKEN` 读）
 2. URL 拼接：dev 环境加 `domainUrl` header（用于代理路由），生产环境用 `window.location.origin`
 3. 时间戳参数（GET 请求防缓存）
 4. 租户 ID（如有 `X-Tenant-Id` header，从 activeTenantId 读）
 
 ### 响应拦截
+
 1. `code === 0` → 返回 `data`
 2. `code === ResultEnum.LOGOUT`（token 失效）→ 弹对话框 → 清 token → 跳登录页
 3. `code !== 0` → `$message.error(msg)` → reject
@@ -145,7 +149,7 @@ const IMPORT = `import { requestClient } from '#/api/request';`;
 ## 调用方兼容清单
 
 | 老调用方式 | 新调用方式 | 改动 |
-|-----------|-----------|------|
+| --- | --- | --- |
 | `http.post<T>(url, params)` | `requestClient.post<T>(url, params)` | gen:api 模板自动替换 |
 | `http.get<T>(url, params)` | `requestClient.get<T>(url, { params })` | 注意参数位置变化 |
 | `http.put<T>(url, params)` | `requestClient.put<T>(url, params)` | 自动替换 |
@@ -153,8 +157,7 @@ const IMPORT = `import { requestClient } from '#/api/request';`;
 | `http.patch<T>(url, params)` | `requestClient.patch<T>(url, params)` | 自动替换 |
 | `http.uploadFile(config, params, key)` | `uploadFile(config, params, key)` | 兼容层，签名不变 |
 
-**注意**：vben requestClient 的 GET 请求参数放在 `{ params }` 里，老项目直接传第二个参数。
-gen:api 模板生成时要注意 GET 请求的参数处理。
+**注意**：vben requestClient 的 GET 请求参数放在 `{ params }` 里，老项目直接传第二个参数。gen:api 模板生成时要注意 GET 请求的参数处理。
 
 ## 验证方法
 

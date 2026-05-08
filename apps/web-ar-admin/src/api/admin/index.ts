@@ -1,32 +1,33 @@
-import { requestClient } from '#/api/request';
 import type {
-  HomeSysUserInfoRsp,
-  StringApiResponse,
+  BooleanApiResponse,
+  CreateSchedulerTaskReq,
+  DeleteSchedulerTaskReq,
+  DeleteTaskJobReq,
+  GetReadinessProbeQueryDto,
+  GetSchedulerTaskDetailReq,
+  GetSchedulerTaskListReq,
+  GetSchedulerTaskLogsReq,
+  GetStartupProbeQueryDto,
+  GetStaticCacheQueryDto,
   HealthCheckRsp,
+  HomeBasicInfoRsp,
+  HomeSysUserInfoRsp,
   LoginReq,
   LoginRsp,
-  HomeBasicInfoRsp,
-  GetStartupProbeQueryDto,
-  GetReadinessProbeQueryDto,
-  GetStaticCacheQueryDto,
-  CreateSchedulerTaskReq,
-  GetSchedulerTaskListReq,
-  SchedulerTaskDtoListApiResponse,
-  GetSchedulerTaskDetailReq,
-  SchedulerTaskDetailListRspListPageBaseResponse,
-  UpdateSchedulerTaskReq,
-  DeleteSchedulerTaskReq,
   PauseSchedulerTaskReq,
-  ResumeSchedulerTaskReq,
-  UpdateTaskStateReq,
-  RunNowSchedulerTaskReq,
   RegisterTasksForTenantsReq,
-  GetSchedulerTaskLogsReq,
+  ResumeSchedulerTaskReq,
+  RunNowSchedulerTaskReq,
+  SchedulerTaskDetailListRspListPageBaseResponse,
+  SchedulerTaskDtoListApiResponse,
   SchedulerTaskLogRspListPageBaseResponse,
-  DeleteTaskJobReq,
+  StringApiResponse,
+  UpdateSchedulerTaskReq,
   UpdateSettingReq,
-  BooleanApiResponse
+  UpdateTaskStateReq,
 } from './types';
+
+import { requestClient } from '#/api/request';
 
 // 导出类型
 export * from './types';
@@ -39,7 +40,7 @@ export * from './types';
  */
 export const openidConfiguration = () => {
   return requestClient.get<any>('/.well-known/openid-configuration');
-}
+};
 
 /**
  * @description: 获取Jwks配置
@@ -47,7 +48,7 @@ export const openidConfiguration = () => {
  */
 export const jwksJson = () => {
   return requestClient.get<any>('/.well-known/jwks.json');
-}
+};
 
 // ==================== Home ====================
 
@@ -57,7 +58,7 @@ export const jwksJson = () => {
  */
 export const getSysUserInfo = () => {
   return requestClient.post<HomeSysUserInfoRsp>('/Home/GetSysUserInfo');
-}
+};
 
 /**
  * @description: 用来自测的： 返回一个字符串，看看 k8s 是否发布成功
@@ -65,7 +66,7 @@ export const getSysUserInfo = () => {
  */
 export const getVersion = () => {
   return requestClient.post<StringApiResponse>('/Home/GetVersion');
-}
+};
 
 /**
  * @description: 健康检查：检测所有配置的外部服务是否可访问（读+写）
@@ -73,7 +74,7 @@ export const getVersion = () => {
  */
 export const checkHealth = () => {
   return requestClient.post<HealthCheckRsp>('/Home/CheckHealth');
-}
+};
 
 // ==================== Login ====================
 
@@ -87,7 +88,7 @@ export const checkHealth = () => {
  */
 export const login = (params: LoginReq) => {
   return requestClient.post<LoginRsp>('/Login/Login', params);
-}
+};
 
 /**
  * @description: 获取基础信息
@@ -95,7 +96,7 @@ export const login = (params: LoginReq) => {
  */
 export const homeBasic = () => {
   return requestClient.post<HomeBasicInfoRsp>('/Login/HomeBasic');
-}
+};
 
 /**
  * @description: 退出登录 (Auth)
@@ -103,7 +104,7 @@ export const homeBasic = () => {
  */
 export const loginOff = () => {
   return requestClient.post<any>('/Login/LoginOff');
-}
+};
 
 // ==================== Probe ====================
 
@@ -114,7 +115,7 @@ export const loginOff = () => {
  */
 export const getStartupProbe = (params?: GetStartupProbeQueryDto) => {
   return requestClient.get<any>('/Probe/GetStartupProbe', { params });
-}
+};
 
 /**
  * @description: 就绪探针 确认程序是否就绪
@@ -123,7 +124,7 @@ export const getStartupProbe = (params?: GetStartupProbeQueryDto) => {
  */
 export const getReadinessProbe = (params?: GetReadinessProbeQueryDto) => {
   return requestClient.get<any>('/Probe/GetReadinessProbe', { params });
-}
+};
 
 /**
  * @description: 获取静态缓存数据
@@ -132,7 +133,7 @@ export const getReadinessProbe = (params?: GetReadinessProbeQueryDto) => {
  */
 export const getStaticCache = (params?: GetStaticCacheQueryDto) => {
   return requestClient.get<any>('/StaticCache/GetStaticCache', { params });
-}
+};
 
 // ==================== SchedulerTask ====================
 
@@ -143,7 +144,7 @@ export const getStaticCache = (params?: GetStaticCacheQueryDto) => {
  */
 export const create = (params: CreateSchedulerTaskReq) => {
   return requestClient.post<any>('/SchedulerTask/Create', params);
-}
+};
 
 /**
  * @description: 获取调度任务列表 (Auth)
@@ -151,8 +152,11 @@ export const create = (params: CreateSchedulerTaskReq) => {
  * @url: /api/SchedulerTask/GetList
  */
 export const getList = (params: GetSchedulerTaskListReq) => {
-  return requestClient.post<SchedulerTaskDtoListApiResponse>('/SchedulerTask/GetList', params);
-}
+  return requestClient.post<SchedulerTaskDtoListApiResponse>(
+    '/SchedulerTask/GetList',
+    params,
+  );
+};
 
 /**
  * @description: 获取调度任务详情 (Auth)
@@ -160,16 +164,21 @@ export const getList = (params: GetSchedulerTaskListReq) => {
  * @url: /api/SchedulerTask/GetDetail
  */
 export const getDetail = (params: GetSchedulerTaskDetailReq) => {
-  return requestClient.post<SchedulerTaskDetailListRspListPageBaseResponse>('/SchedulerTask/GetDetail', params);
-}
+  return requestClient.post<SchedulerTaskDetailListRspListPageBaseResponse>(
+    '/SchedulerTask/GetDetail',
+    params,
+  );
+};
 /**
  * @description: 获取调度任务详情 (Auth)（导出，返回原生 blob 响应）
  * @param {GetSchedulerTaskDetailReq} params
  * @url: /api/SchedulerTask/GetDetail
  */
 export const getDetailExport = (params: GetSchedulerTaskDetailReq) => {
-  return requestClient.post<Blob>('/SchedulerTask/GetDetail', params, { responseType: 'blob' });
-}
+  return requestClient.post<Blob>('/SchedulerTask/GetDetail', params, {
+    responseType: 'blob',
+  });
+};
 
 /**
  * @description: 更新调度任务 (Auth)
@@ -178,7 +187,7 @@ export const getDetailExport = (params: GetSchedulerTaskDetailReq) => {
  */
 export const schedulerTaskUpdate = (params: UpdateSchedulerTaskReq) => {
   return requestClient.post<any>('/SchedulerTask/Update', params);
-}
+};
 
 /**
  * @description: 删除调度任务 (Auth)
@@ -187,7 +196,7 @@ export const schedulerTaskUpdate = (params: UpdateSchedulerTaskReq) => {
  */
 export const schedulerTaskDelete = (params: DeleteSchedulerTaskReq) => {
   return requestClient.post<any>('/SchedulerTask/Delete', params);
-}
+};
 
 /**
  * @description: 暂停调度任务 (Auth)
@@ -196,7 +205,7 @@ export const schedulerTaskDelete = (params: DeleteSchedulerTaskReq) => {
  */
 export const pause = (params: PauseSchedulerTaskReq) => {
   return requestClient.post<any>('/SchedulerTask/Pause', params);
-}
+};
 
 /**
  * @description: 恢复调度任务 (Auth)
@@ -205,7 +214,7 @@ export const pause = (params: PauseSchedulerTaskReq) => {
  */
 export const resume = (params: ResumeSchedulerTaskReq) => {
   return requestClient.post<any>('/SchedulerTask/Resume', params);
-}
+};
 
 /**
  * @description: 启用调度任务 (Auth)
@@ -214,7 +223,7 @@ export const resume = (params: ResumeSchedulerTaskReq) => {
  */
 export const enable = (params: UpdateTaskStateReq) => {
   return requestClient.post<any>('/SchedulerTask/Enable', params);
-}
+};
 
 /**
  * @description: 禁用调度任务 (Auth)
@@ -223,7 +232,7 @@ export const enable = (params: UpdateTaskStateReq) => {
  */
 export const disable = (params: UpdateTaskStateReq) => {
   return requestClient.post<any>('/SchedulerTask/Disable', params);
-}
+};
 
 /**
  * @description: 立即执行调度任务 (Auth)
@@ -232,7 +241,7 @@ export const disable = (params: UpdateTaskStateReq) => {
  */
 export const runNow = (params: RunNowSchedulerTaskReq) => {
   return requestClient.post<any>('/SchedulerTask/RunNow', params);
-}
+};
 
 /**
  * @description: 为多个集团注册所有调度任务 (Auth)
@@ -240,8 +249,11 @@ export const runNow = (params: RunNowSchedulerTaskReq) => {
  * @url: /api/SchedulerTask/RegisterTasksForTenants
  */
 export const registerTasksForTenants = (params: RegisterTasksForTenantsReq) => {
-  return requestClient.post<any>('/SchedulerTask/RegisterTasksForTenants', params);
-}
+  return requestClient.post<any>(
+    '/SchedulerTask/RegisterTasksForTenants',
+    params,
+  );
+};
 
 /**
  * @description: 获取调度任务日志列表 (Auth)
@@ -249,16 +261,21 @@ export const registerTasksForTenants = (params: RegisterTasksForTenantsReq) => {
  * @url: /api/SchedulerTask/GetLogs
  */
 export const getLogs = (params: GetSchedulerTaskLogsReq) => {
-  return requestClient.post<SchedulerTaskLogRspListPageBaseResponse>('/SchedulerTask/GetLogs', params);
-}
+  return requestClient.post<SchedulerTaskLogRspListPageBaseResponse>(
+    '/SchedulerTask/GetLogs',
+    params,
+  );
+};
 /**
  * @description: 获取调度任务日志列表 (Auth)（导出，返回原生 blob 响应）
  * @param {GetSchedulerTaskLogsReq} params
  * @url: /api/SchedulerTask/GetLogs
  */
 export const getLogsExport = (params: GetSchedulerTaskLogsReq) => {
-  return requestClient.post<Blob>('/SchedulerTask/GetLogs', params, { responseType: 'blob' });
-}
+  return requestClient.post<Blob>('/SchedulerTask/GetLogs', params, {
+    responseType: 'blob',
+  });
+};
 
 /**
  * @description: 删除调度任务的作业 (Auth)
@@ -267,7 +284,7 @@ export const getLogsExport = (params: GetSchedulerTaskLogsReq) => {
  */
 export const deleteTaskJob = (params: DeleteTaskJobReq) => {
   return requestClient.post<any>('/SchedulerTask/DeleteTaskJob', params);
-}
+};
 
 // ==================== Setting ====================
 
@@ -278,4 +295,4 @@ export const deleteTaskJob = (params: DeleteTaskJobReq) => {
  */
 export const settingUpdate = (params: UpdateSettingReq) => {
   return requestClient.post<BooleanApiResponse>('/Setting/Update', params);
-}
+};

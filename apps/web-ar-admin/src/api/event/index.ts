@@ -1,103 +1,104 @@
-import { requestClient } from '#/api/request';
 import type {
-  EventMetricsQueryDto,
-  NodeInfoListResponseVO,
-  AggregatedMetricsVO,
-  TrendQueryDto,
-  TrafficTrendListResponseVO,
-  HealthSummaryVO,
-  ServiceSummaryVO,
-  OptionsResponseVO,
-  EventBatchDto,
-  SingleEventDto,
-  PageViewDto,
-  CreateProjectDto,
-  ProjectVO,
-  AdminProjectGetQueryDto,
-  ProjectListResponseVO,
-  UpdateProjectDto,
-  CreateAlarmDto,
-  AlarmRuleVO,
   AdminAlarmGetQueryDto,
-  AlarmRuleListResponseVO,
-  MessagesQueryDto,
+  AdminCardGetQueryDto,
+  AdminCardPageGetQueryDto,
+  AdminProjectGetQueryDto,
+  AggregatedMetricsVO,
   AlarmMessageListResponseVO,
+  AlarmMessageVO,
+  AlarmRuleListResponseVO,
+  AlarmRuleVO,
   AlarmStatsQueryDto,
   AlarmStatsVO,
-  AlarmMessageVO,
-  UpdateAlarmDto,
-  TestAlarmResultVO,
-  CreateCardDto,
-  CardVO,
-  AdminCardGetQueryDto,
+  AttributionVO,
+  BindIdentityDto,
+  BindResultVO,
+  CardDataQueryDto,
+  CardDataVO,
   CardListResponseVO,
   CardListWithDataQueryDto,
   CardListWithDataResponseVO,
-  UpdateCardDto,
-  SortCardsDto,
-  SortResultVO,
-  CardDataQueryDto,
-  CardDataVO,
-  GroupByQueryDto,
-  GroupByResultListResponseVO,
-  HeatmapQueryDto,
-  HeatmapDataVO,
-  CreateCardPageDto,
-  CardPageVO,
-  AdminCardPageGetQueryDto,
   CardPageListResponseVO,
-  TreeQueryDto,
   CardPageTreeResponseVO,
-  UpdateCardPageDto,
-  BindIdentityDto,
-  BindResultVO,
-  UnbindIdentityDto,
-  UnbindResultVO,
-  StatusQueryDto,
-  PvUvQueryDto,
-  PvUvResultListResponseVO,
-  EventTrendQueryDto,
-  EventTrendListResponseVO,
-  RealtimeQueryDto,
-  RealtimeStatsVO,
-  TopPagesQueryDto,
-  TopPageListResponseVO,
-  OverviewQueryDto,
-  OverviewStatsVO,
-  RetentionQueryDto,
-  RetentionAnalysisListResponseVO,
-  QuickRetentionVO,
-  RetentionMatrixQueryDto,
-  RetentionMatrixResponseVO,
-  CohortQueryDto,
+  CardPageVO,
+  CardVO,
   CohortAnalysisListResponseVO,
-  PathQueryDto,
-  PathAnalysisVO,
-  PagePathQueryDto,
-  PagePathListResponseVO,
-  UserPathQueryDto,
-  UserPathEventListResponseVO,
-  SessionPathQueryDto,
-  SessionPathEventListResponseVO,
-  TopPathsQueryDto,
-  TopPathListResponseVO,
-  FlowDataVO,
-  RelationsQueryDto,
-  UserRelationListResponseVO,
-  UserIdentityDto,
-  UserIdentityVO,
-  UserJourneyQueryDto,
-  UserJourneyEventListResponseVO,
+  CohortQueryDto,
   ConversionAttributionDto,
-  AttributionVO,
+  CreateAlarmDto,
+  CreateCardDto,
+  CreateCardPageDto,
+  CreateProjectDto,
   CrossDeviceQueryDto,
   CrossDeviceVO,
-  MergeUsersDto,
+  EventBatchDto,
+  EventMetricsQueryDto,
+  EventTrendListResponseVO,
+  EventTrendQueryDto,
+  FlowDataVO,
+  GroupByQueryDto,
+  GroupByResultListResponseVO,
+  HealthSummaryVO,
+  HeatmapDataVO,
+  HeatmapQueryDto,
   MergeResultVO,
+  MergeUsersDto,
+  MessagesQueryDto,
+  NodeInfoListResponseVO,
+  OptionsResponseVO,
+  OverviewQueryDto,
+  OverviewStatsVO,
+  PagePathListResponseVO,
+  PagePathQueryDto,
+  PageViewDto,
+  PathAnalysisVO,
+  PathQueryDto,
+  ProjectListResponseVO,
+  ProjectVO,
+  PvUvQueryDto,
+  PvUvResultListResponseVO,
+  QuickRetentionVO,
+  RealtimeQueryDto,
+  RealtimeStatsVO,
+  RelationsQueryDto,
   RelationStatsVO,
+  RetentionAnalysisListResponseVO,
+  RetentionMatrixQueryDto,
+  RetentionMatrixResponseVO,
+  RetentionQueryDto,
+  ServiceSummaryVO,
+  SessionPathEventListResponseVO,
+  SessionPathQueryDto,
+  SingleEventDto,
+  SortCardsDto,
+  SortResultVO,
+  SourceValueListResponseVO,
   SourceValuesQueryDto,
-  SourceValueListResponseVO
+  StatusQueryDto,
+  TestAlarmResultVO,
+  TopPageListResponseVO,
+  TopPagesQueryDto,
+  TopPathListResponseVO,
+  TopPathsQueryDto,
+  TrafficTrendListResponseVO,
+  TreeQueryDto,
+  TrendQueryDto,
+  UnbindIdentityDto,
+  UnbindResultVO,
+  UpdateAlarmDto,
+  UpdateCardDto,
+  UpdateCardPageDto,
+  UpdateProjectDto,
+  UserIdentityDto,
+  UserIdentityVO,
+  UserJourneyEventListResponseVO,
+  UserJourneyQueryDto,
+  UserPathEventListResponseVO,
+  UserPathQueryDto,
+  UserRelationListResponseVO,
 } from './types';
+
+import { requestClient } from '#/api/request';
 
 // 导出类型
 export * from './types';
@@ -111,7 +112,7 @@ export * from './types';
  */
 export const eventMetrics = (params: EventMetricsQueryDto) => {
   return requestClient.get<any>('/event/metrics', { params });
-}
+};
 
 // ==================== 流量监控 ====================
 
@@ -121,7 +122,7 @@ export const eventMetrics = (params: EventMetricsQueryDto) => {
  */
 export const nodes = () => {
   return requestClient.get<NodeInfoListResponseVO>('/event/traffic/nodes');
-}
+};
 
 /**
  * @description: 获取汇总指标
@@ -129,7 +130,7 @@ export const nodes = () => {
  */
 export const trafficMetrics = () => {
   return requestClient.get<AggregatedMetricsVO>('/event/traffic/metrics');
-}
+};
 
 /**
  * @description: 获取流量趋势
@@ -137,8 +138,10 @@ export const trafficMetrics = () => {
  * @url: /api/event/traffic/trend
  */
 export const trend = (params?: TrendQueryDto) => {
-  return requestClient.get<TrafficTrendListResponseVO>('/event/traffic/trend', { params });
-}
+  return requestClient.get<TrafficTrendListResponseVO>('/event/traffic/trend', {
+    params,
+  });
+};
 
 /**
  * @description: 获取实例健康状态
@@ -146,7 +149,7 @@ export const trend = (params?: TrendQueryDto) => {
  */
 export const health = () => {
   return requestClient.get<HealthSummaryVO>('/event/traffic/health');
-}
+};
 
 /**
  * @description: 获取服务统计摘要
@@ -154,7 +157,7 @@ export const health = () => {
  */
 export const summary = () => {
   return requestClient.get<ServiceSummaryVO>('/event/traffic/summary');
-}
+};
 
 /**
  * @description: 调试 - 获取 Redis 指标原始数据
@@ -162,7 +165,7 @@ export const summary = () => {
  */
 export const debug = () => {
   return requestClient.get<any>('/event/traffic/debug');
-}
+};
 
 // ==================== Options - 全局配置选项 ====================
 
@@ -172,7 +175,7 @@ export const debug = () => {
  */
 export const options = () => {
   return requestClient.get<OptionsResponseVO>('/event/options');
-}
+};
 
 // ==================== Collect - 数据采集 ====================
 
@@ -183,7 +186,7 @@ export const options = () => {
  */
 export const batch = (params: EventBatchDto) => {
   return requestClient.post<any>('/event/sdk/collect/batch', params);
-}
+};
 
 /**
  * @description: 单个事件上报
@@ -192,7 +195,7 @@ export const batch = (params: EventBatchDto) => {
  */
 export const event = (params: SingleEventDto) => {
   return requestClient.post<any>('/event/sdk/collect/event', params);
-}
+};
 
 /**
  * @description: PV 上报
@@ -201,7 +204,7 @@ export const event = (params: SingleEventDto) => {
  */
 export const pageview = (params: PageViewDto) => {
   return requestClient.post<any>('/event/sdk/collect/pageview', params);
-}
+};
 
 /**
  * @description: 心跳检测
@@ -209,7 +212,7 @@ export const pageview = (params: PageViewDto) => {
  */
 export const ping = () => {
   return requestClient.post<any>('/event/sdk/collect/ping');
-}
+};
 
 // ==================== Project - 项目管理 ====================
 
@@ -220,7 +223,7 @@ export const ping = () => {
  */
 export const adminProject = (params: CreateProjectDto) => {
   return requestClient.post<ProjectVO>('/event/admin/project', params);
-}
+};
 
 /**
  * @description: 项目列表
@@ -228,8 +231,10 @@ export const adminProject = (params: CreateProjectDto) => {
  * @url: /api/event/admin/project
  */
 export const adminProjectGet = (params?: AdminProjectGetQueryDto) => {
-  return requestClient.get<ProjectListResponseVO>('/event/admin/project', { params });
-}
+  return requestClient.get<ProjectListResponseVO>('/event/admin/project', {
+    params,
+  });
+};
 
 /**
  * @description: 项目详情
@@ -238,7 +243,7 @@ export const adminProjectGet = (params?: AdminProjectGetQueryDto) => {
  */
 export const adminProjectGet2 = (id: string) => {
   return requestClient.get<ProjectVO>(`/event/admin/project/${id}`);
-}
+};
 
 /**
  * @description: 更新项目
@@ -248,7 +253,7 @@ export const adminProjectGet2 = (id: string) => {
  */
 export const adminProjectPut = (id: string, params: UpdateProjectDto) => {
   return requestClient.put<ProjectVO>(`/event/admin/project/${id}`, params);
-}
+};
 
 /**
  * @description: 归档项目
@@ -257,7 +262,7 @@ export const adminProjectPut = (id: string, params: UpdateProjectDto) => {
  */
 export const adminProjectDelete = (id: string) => {
   return requestClient.delete<ProjectVO>(`/event/admin/project/${id}`);
-}
+};
 
 // ==================== Alarm - 告警配置 ====================
 
@@ -268,7 +273,7 @@ export const adminProjectDelete = (id: string) => {
  */
 export const adminAlarm = (params: CreateAlarmDto) => {
   return requestClient.post<AlarmRuleVO>('/event/admin/alarm', params);
-}
+};
 
 /**
  * @description: 告警规则列表
@@ -276,8 +281,10 @@ export const adminAlarm = (params: CreateAlarmDto) => {
  * @url: /api/event/admin/alarm
  */
 export const adminAlarmGet = (params?: AdminAlarmGetQueryDto) => {
-  return requestClient.get<AlarmRuleListResponseVO>('/event/admin/alarm', { params });
-}
+  return requestClient.get<AlarmRuleListResponseVO>('/event/admin/alarm', {
+    params,
+  });
+};
 
 /**
  * @description: 获取告警消息
@@ -285,8 +292,11 @@ export const adminAlarmGet = (params?: AdminAlarmGetQueryDto) => {
  * @url: /api/event/admin/alarm/messages
  */
 export const messages = (params?: MessagesQueryDto) => {
-  return requestClient.get<AlarmMessageListResponseVO>('/event/admin/alarm/messages', { params });
-}
+  return requestClient.get<AlarmMessageListResponseVO>(
+    '/event/admin/alarm/messages',
+    { params },
+  );
+};
 
 /**
  * @description: 告警统计
@@ -294,8 +304,10 @@ export const messages = (params?: MessagesQueryDto) => {
  * @url: /api/event/admin/alarm/stats
  */
 export const alarmStats = (params?: AlarmStatsQueryDto) => {
-  return requestClient.get<AlarmStatsVO>('/event/admin/alarm/stats', { params });
-}
+  return requestClient.get<AlarmStatsVO>('/event/admin/alarm/stats', {
+    params,
+  });
+};
 
 /**
  * @description: 标记消息已读
@@ -303,8 +315,10 @@ export const alarmStats = (params?: AlarmStatsQueryDto) => {
  * @url: /api/event/admin/alarm/messages/{messageId}/read
  */
 export const read = (messageId: string) => {
-  return requestClient.post<AlarmMessageVO>(`/event/admin/alarm/messages/${messageId}/read`);
-}
+  return requestClient.post<AlarmMessageVO>(
+    `/event/admin/alarm/messages/${messageId}/read`,
+  );
+};
 
 /**
  * @description: 告警规则详情
@@ -313,7 +327,7 @@ export const read = (messageId: string) => {
  */
 export const adminAlarmGet2 = (id: string) => {
   return requestClient.get<AlarmRuleVO>(`/event/admin/alarm/${id}`);
-}
+};
 
 /**
  * @description: 更新告警规则
@@ -323,7 +337,7 @@ export const adminAlarmGet2 = (id: string) => {
  */
 export const adminAlarmPut = (id: string, params: UpdateAlarmDto) => {
   return requestClient.put<AlarmRuleVO>(`/event/admin/alarm/${id}`, params);
-}
+};
 
 /**
  * @description: 删除告警规则
@@ -332,7 +346,7 @@ export const adminAlarmPut = (id: string, params: UpdateAlarmDto) => {
  */
 export const adminAlarmDelete = (id: string) => {
   return requestClient.delete<AlarmRuleVO>(`/event/admin/alarm/${id}`);
-}
+};
 
 /**
  * @description: 启用告警规则
@@ -341,7 +355,7 @@ export const adminAlarmDelete = (id: string) => {
  */
 export const enable = (id: string) => {
   return requestClient.post<AlarmRuleVO>(`/event/admin/alarm/${id}/enable`);
-}
+};
 
 /**
  * @description: 禁用告警规则
@@ -350,7 +364,7 @@ export const enable = (id: string) => {
  */
 export const disable = (id: string) => {
   return requestClient.post<AlarmRuleVO>(`/event/admin/alarm/${id}/disable`);
-}
+};
 
 /**
  * @description: 测试告警
@@ -359,7 +373,7 @@ export const disable = (id: string) => {
  */
 export const test = (id: string) => {
   return requestClient.post<TestAlarmResultVO>(`/event/admin/alarm/${id}/test`);
-}
+};
 
 // ==================== Card - 数据卡片 ====================
 
@@ -370,7 +384,7 @@ export const test = (id: string) => {
  */
 export const adminCard = (params: CreateCardDto) => {
   return requestClient.post<CardVO>('/event/admin/card', params);
-}
+};
 
 /**
  * @description: 卡片列表
@@ -379,7 +393,7 @@ export const adminCard = (params: CreateCardDto) => {
  */
 export const adminCardGet = (params?: AdminCardGetQueryDto) => {
   return requestClient.get<CardListResponseVO>('/event/admin/card', { params });
-}
+};
 
 /**
  * @description: 卡片列表含数据
@@ -387,8 +401,11 @@ export const adminCardGet = (params?: AdminCardGetQueryDto) => {
  * @url: /api/event/admin/card/list-with-data
  */
 export const listWithData = (params: CardListWithDataQueryDto) => {
-  return requestClient.post<CardListWithDataResponseVO>('/event/admin/card/list-with-data', params);
-}
+  return requestClient.post<CardListWithDataResponseVO>(
+    '/event/admin/card/list-with-data',
+    params,
+  );
+};
 
 /**
  * @description: 卡片详情
@@ -397,7 +414,7 @@ export const listWithData = (params: CardListWithDataQueryDto) => {
  */
 export const adminCardGet2 = (id: string) => {
   return requestClient.get<CardVO>(`/event/admin/card/${id}`);
-}
+};
 
 /**
  * @description: 更新卡片
@@ -407,7 +424,7 @@ export const adminCardGet2 = (id: string) => {
  */
 export const adminCardPut = (id: string, params: UpdateCardDto) => {
   return requestClient.put<CardVO>(`/event/admin/card/${id}`, params);
-}
+};
 
 /**
  * @description: 删除卡片
@@ -416,7 +433,7 @@ export const adminCardPut = (id: string, params: UpdateCardDto) => {
  */
 export const adminCardDelete = (id: string) => {
   return requestClient.delete<CardVO>(`/event/admin/card/${id}`);
-}
+};
 
 /**
  * @description: 复制卡片
@@ -425,7 +442,7 @@ export const adminCardDelete = (id: string) => {
  */
 export const copy = (id: string) => {
   return requestClient.post<CardVO>(`/event/admin/card/${id}/copy`);
-}
+};
 
 /**
  * @description: 卡片排序
@@ -434,7 +451,7 @@ export const copy = (id: string) => {
  */
 export const sort = (params: SortCardsDto) => {
   return requestClient.post<SortResultVO>('/event/admin/card/sort', params);
-}
+};
 
 /**
  * @description: 获取卡片数据
@@ -444,7 +461,7 @@ export const sort = (params: SortCardsDto) => {
  */
 export const data = (id: string, params: CardDataQueryDto) => {
   return requestClient.post<CardDataVO>(`/event/admin/card/${id}/data`, params);
-}
+};
 
 /**
  * @description: 分组查询
@@ -452,8 +469,11 @@ export const data = (id: string, params: CardDataQueryDto) => {
  * @url: /api/event/admin/card/group-by
  */
 export const groupBy = (params: GroupByQueryDto) => {
-  return requestClient.post<GroupByResultListResponseVO>('/event/admin/card/group-by', params);
-}
+  return requestClient.post<GroupByResultListResponseVO>(
+    '/event/admin/card/group-by',
+    params,
+  );
+};
 
 /**
  * @description: 热力图数据
@@ -462,7 +482,7 @@ export const groupBy = (params: GroupByQueryDto) => {
  */
 export const heatmap = (params: HeatmapQueryDto) => {
   return requestClient.post<HeatmapDataVO>('/event/admin/card/heatmap', params);
-}
+};
 
 // ==================== CardPage - 卡片页面 ====================
 
@@ -473,7 +493,7 @@ export const heatmap = (params: HeatmapQueryDto) => {
  */
 export const adminCardPage = (params: CreateCardPageDto) => {
   return requestClient.post<CardPageVO>('/event/admin/card-page', params);
-}
+};
 
 /**
  * @description: 页面列表
@@ -481,8 +501,10 @@ export const adminCardPage = (params: CreateCardPageDto) => {
  * @url: /api/event/admin/card-page
  */
 export const adminCardPageGet = (params?: AdminCardPageGetQueryDto) => {
-  return requestClient.get<CardPageListResponseVO>('/event/admin/card-page', { params });
-}
+  return requestClient.get<CardPageListResponseVO>('/event/admin/card-page', {
+    params,
+  });
+};
 
 /**
  * @description: 树形结构
@@ -490,8 +512,11 @@ export const adminCardPageGet = (params?: AdminCardPageGetQueryDto) => {
  * @url: /api/event/admin/card-page/tree
  */
 export const tree = (params?: TreeQueryDto) => {
-  return requestClient.get<CardPageTreeResponseVO>('/event/admin/card-page/tree', { params });
-}
+  return requestClient.get<CardPageTreeResponseVO>(
+    '/event/admin/card-page/tree',
+    { params },
+  );
+};
 
 /**
  * @description: 更新页面/分组
@@ -501,7 +526,7 @@ export const tree = (params?: TreeQueryDto) => {
  */
 export const adminCardPagePut = (id: string, params: UpdateCardPageDto) => {
   return requestClient.put<CardPageVO>(`/event/admin/card-page/${id}`, params);
-}
+};
 
 /**
  * @description: 删除页面/分组
@@ -510,7 +535,7 @@ export const adminCardPagePut = (id: string, params: UpdateCardPageDto) => {
  */
 export const adminCardPageDelete = (id: string) => {
   return requestClient.delete<CardPageVO>(`/event/admin/card-page/${id}`);
-}
+};
 
 // ==================== SDK - 身份管理 ====================
 
@@ -521,8 +546,11 @@ export const adminCardPageDelete = (id: string) => {
  * @url: /api/event/admin/identity/{projectId}/bind
  */
 export const bind = (projectId: string, params: BindIdentityDto) => {
-  return requestClient.post<BindResultVO>(`/event/admin/identity/${projectId}/bind`, params);
-}
+  return requestClient.post<BindResultVO>(
+    `/event/admin/identity/${projectId}/bind`,
+    params,
+  );
+};
 
 /**
  * @description: 解绑用户身份
@@ -531,8 +559,11 @@ export const bind = (projectId: string, params: BindIdentityDto) => {
  * @url: /api/event/admin/identity/{projectId}/unbind
  */
 export const unbind = (projectId: string, params: UnbindIdentityDto) => {
-  return requestClient.delete<UnbindResultVO>(`/event/admin/identity/${projectId}/unbind`, { params });
-}
+  return requestClient.delete<UnbindResultVO>(
+    `/event/admin/identity/${projectId}/unbind`,
+    { params },
+  );
+};
 
 // ==================== init ====================
 
@@ -542,7 +573,7 @@ export const unbind = (projectId: string, params: UnbindIdentityDto) => {
  */
 export const init = () => {
   return requestClient.post<any>('/event/admin/init');
-}
+};
 
 /**
  * @description: 获取集团初始化状态
@@ -551,7 +582,7 @@ export const init = () => {
  */
 export const status = (params?: StatusQueryDto) => {
   return requestClient.get<any>('/event/admin/init/status', { params });
-}
+};
 
 // ==================== Analyze - 数据分析 ====================
 
@@ -561,8 +592,11 @@ export const status = (params?: StatusQueryDto) => {
  * @url: /api/event/analysis/event/pv-uv
  */
 export const pvUv = (params: PvUvQueryDto) => {
-  return requestClient.post<PvUvResultListResponseVO>('/event/analysis/event/pv-uv', params);
-}
+  return requestClient.post<PvUvResultListResponseVO>(
+    '/event/analysis/event/pv-uv',
+    params,
+  );
+};
 
 /**
  * @description: 事件趋势
@@ -570,8 +604,11 @@ export const pvUv = (params: PvUvQueryDto) => {
  * @url: /api/event/analysis/event/event-trend
  */
 export const eventTrend = (params: EventTrendQueryDto) => {
-  return requestClient.post<EventTrendListResponseVO>('/event/analysis/event/event-trend', params);
-}
+  return requestClient.post<EventTrendListResponseVO>(
+    '/event/analysis/event/event-trend',
+    params,
+  );
+};
 
 /**
  * @description: 实时统计
@@ -579,8 +616,10 @@ export const eventTrend = (params: EventTrendQueryDto) => {
  * @url: /api/event/analysis/event/realtime
  */
 export const realtime = (params?: RealtimeQueryDto) => {
-  return requestClient.get<RealtimeStatsVO>('/event/analysis/event/realtime', { params });
-}
+  return requestClient.get<RealtimeStatsVO>('/event/analysis/event/realtime', {
+    params,
+  });
+};
 
 /**
  * @description: 热门页面
@@ -588,8 +627,11 @@ export const realtime = (params?: RealtimeQueryDto) => {
  * @url: /api/event/analysis/event/top-pages
  */
 export const topPages = (params: TopPagesQueryDto) => {
-  return requestClient.post<TopPageListResponseVO>('/event/analysis/event/top-pages', params);
-}
+  return requestClient.post<TopPageListResponseVO>(
+    '/event/analysis/event/top-pages',
+    params,
+  );
+};
 
 /**
  * @description: 概览统计
@@ -597,8 +639,11 @@ export const topPages = (params: TopPagesQueryDto) => {
  * @url: /api/event/analysis/event/overview
  */
 export const overview = (params: OverviewQueryDto) => {
-  return requestClient.post<OverviewStatsVO>('/event/analysis/event/overview', params);
-}
+  return requestClient.post<OverviewStatsVO>(
+    '/event/analysis/event/overview',
+    params,
+  );
+};
 
 // ==================== Retention - 留存分析 ====================
 
@@ -608,8 +653,11 @@ export const overview = (params: OverviewQueryDto) => {
  * @url: /api/event/analysis/retention/analyze
  */
 export const retentionAnalyze = (params: RetentionQueryDto) => {
-  return requestClient.post<RetentionAnalysisListResponseVO>('/event/analysis/retention/analyze', params);
-}
+  return requestClient.post<RetentionAnalysisListResponseVO>(
+    '/event/analysis/retention/analyze',
+    params,
+  );
+};
 
 /**
  * @description: 快速留存统计
@@ -617,8 +665,11 @@ export const retentionAnalyze = (params: RetentionQueryDto) => {
  * @url: /api/event/analysis/retention/quick
  */
 export const quick = (params: RetentionQueryDto) => {
-  return requestClient.post<QuickRetentionVO>('/event/analysis/retention/quick', params);
-}
+  return requestClient.post<QuickRetentionVO>(
+    '/event/analysis/retention/quick',
+    params,
+  );
+};
 
 /**
  * @description: 留存矩阵
@@ -626,8 +677,11 @@ export const quick = (params: RetentionQueryDto) => {
  * @url: /api/event/analysis/retention/matrix
  */
 export const matrix = (params: RetentionMatrixQueryDto) => {
-  return requestClient.post<RetentionMatrixResponseVO>('/event/analysis/retention/matrix', params);
-}
+  return requestClient.post<RetentionMatrixResponseVO>(
+    '/event/analysis/retention/matrix',
+    params,
+  );
+};
 
 /**
  * @description: 分群留存分析
@@ -635,8 +689,11 @@ export const matrix = (params: RetentionMatrixQueryDto) => {
  * @url: /api/event/analysis/retention/cohort
  */
 export const cohort = (params: CohortQueryDto) => {
-  return requestClient.post<CohortAnalysisListResponseVO>('/event/analysis/retention/cohort', params);
-}
+  return requestClient.post<CohortAnalysisListResponseVO>(
+    '/event/analysis/retention/cohort',
+    params,
+  );
+};
 
 // ==================== Path - 路径分析 ====================
 
@@ -646,8 +703,11 @@ export const cohort = (params: CohortQueryDto) => {
  * @url: /api/event/analysis/path/analyze
  */
 export const pathAnalyze = (params: PathQueryDto) => {
-  return requestClient.post<PathAnalysisVO>('/event/analysis/path/analyze', params);
-}
+  return requestClient.post<PathAnalysisVO>(
+    '/event/analysis/path/analyze',
+    params,
+  );
+};
 
 /**
  * @description: 页面路径分析
@@ -655,8 +715,11 @@ export const pathAnalyze = (params: PathQueryDto) => {
  * @url: /api/event/analysis/path/pages
  */
 export const pages = (params: PagePathQueryDto) => {
-  return requestClient.post<PagePathListResponseVO>('/event/analysis/path/pages', params);
-}
+  return requestClient.post<PagePathListResponseVO>(
+    '/event/analysis/path/pages',
+    params,
+  );
+};
 
 /**
  * @description: 用户路径
@@ -664,8 +727,11 @@ export const pages = (params: PagePathQueryDto) => {
  * @url: /api/event/analysis/path/user
  */
 export const user = (params: UserPathQueryDto) => {
-  return requestClient.post<UserPathEventListResponseVO>('/event/analysis/path/user', params);
-}
+  return requestClient.post<UserPathEventListResponseVO>(
+    '/event/analysis/path/user',
+    params,
+  );
+};
 
 /**
  * @description: 会话路径
@@ -673,8 +739,11 @@ export const user = (params: UserPathQueryDto) => {
  * @url: /api/event/analysis/path/session
  */
 export const session = (params: SessionPathQueryDto) => {
-  return requestClient.post<SessionPathEventListResponseVO>('/event/analysis/path/session', params);
-}
+  return requestClient.post<SessionPathEventListResponseVO>(
+    '/event/analysis/path/session',
+    params,
+  );
+};
 
 /**
  * @description: 热门路径
@@ -682,8 +751,11 @@ export const session = (params: SessionPathQueryDto) => {
  * @url: /api/event/analysis/path/top
  */
 export const top = (params: TopPathsQueryDto) => {
-  return requestClient.post<TopPathListResponseVO>('/event/analysis/path/top', params);
-}
+  return requestClient.post<TopPathListResponseVO>(
+    '/event/analysis/path/top',
+    params,
+  );
+};
 
 /**
  * @description: 流向数据
@@ -692,7 +764,7 @@ export const top = (params: TopPathsQueryDto) => {
  */
 export const flow = (params: PathQueryDto) => {
   return requestClient.post<FlowDataVO>('/event/analysis/path/flow', params);
-}
+};
 
 // ==================== Analysis - 用户分析 ====================
 
@@ -702,8 +774,11 @@ export const flow = (params: PathQueryDto) => {
  * @url: /api/event/analysis/user/relations
  */
 export const relations = (params: RelationsQueryDto) => {
-  return requestClient.get<UserRelationListResponseVO>('/event/analysis/user/relations', { params });
-}
+  return requestClient.get<UserRelationListResponseVO>(
+    '/event/analysis/user/relations',
+    { params },
+  );
+};
 
 /**
  * @description: 获取用户身份
@@ -711,8 +786,11 @@ export const relations = (params: RelationsQueryDto) => {
  * @url: /api/event/analysis/user/identities
  */
 export const identities = (params: UserIdentityDto) => {
-  return requestClient.post<UserIdentityVO>('/event/analysis/user/identities', params);
-}
+  return requestClient.post<UserIdentityVO>(
+    '/event/analysis/user/identities',
+    params,
+  );
+};
 
 /**
  * @description: 用户完整旅程
@@ -720,8 +798,11 @@ export const identities = (params: UserIdentityDto) => {
  * @url: /api/event/analysis/user/journey
  */
 export const journey = (params: UserJourneyQueryDto) => {
-  return requestClient.post<UserJourneyEventListResponseVO>('/event/analysis/user/journey', params);
-}
+  return requestClient.post<UserJourneyEventListResponseVO>(
+    '/event/analysis/user/journey',
+    params,
+  );
+};
 
 /**
  * @description: 转化归因分析
@@ -729,8 +810,11 @@ export const journey = (params: UserJourneyQueryDto) => {
  * @url: /api/event/analysis/user/attribution
  */
 export const attribution = (params: ConversionAttributionDto) => {
-  return requestClient.post<AttributionVO>('/event/analysis/user/attribution', params);
-}
+  return requestClient.post<AttributionVO>(
+    '/event/analysis/user/attribution',
+    params,
+  );
+};
 
 /**
  * @description: 跨设备行为
@@ -738,8 +822,11 @@ export const attribution = (params: ConversionAttributionDto) => {
  * @url: /api/event/analysis/user/cross-device
  */
 export const crossDevice = (params: CrossDeviceQueryDto) => {
-  return requestClient.post<CrossDeviceVO>('/event/analysis/user/cross-device', params);
-}
+  return requestClient.post<CrossDeviceVO>(
+    '/event/analysis/user/cross-device',
+    params,
+  );
+};
 
 /**
  * @description: 合并用户身份
@@ -747,8 +834,11 @@ export const crossDevice = (params: CrossDeviceQueryDto) => {
  * @url: /api/event/analysis/user/merge
  */
 export const merge = (params: MergeUsersDto) => {
-  return requestClient.post<MergeResultVO>('/event/analysis/user/merge', params);
-}
+  return requestClient.post<MergeResultVO>(
+    '/event/analysis/user/merge',
+    params,
+  );
+};
 
 /**
  * @description: 关联统计
@@ -756,8 +846,10 @@ export const merge = (params: MergeUsersDto) => {
  * @url: /api/event/analysis/user/{projectId}/stats
  */
 export const userStats = (projectId: string) => {
-  return requestClient.get<RelationStatsVO>(`/event/analysis/user/${projectId}/stats`);
-}
+  return requestClient.get<RelationStatsVO>(
+    `/event/analysis/user/${projectId}/stats`,
+  );
+};
 
 /**
  * @description: 来源字段值
@@ -765,6 +857,12 @@ export const userStats = (projectId: string) => {
  * @param {SourceValuesQueryDto} params
  * @url: /api/event/analysis/user/{projectId}/source-values
  */
-export const sourceValues = (projectId: string, params: SourceValuesQueryDto) => {
-  return requestClient.get<SourceValueListResponseVO>(`/event/analysis/user/${projectId}/source-values`, { params });
-}
+export const sourceValues = (
+  projectId: string,
+  params: SourceValuesQueryDto,
+) => {
+  return requestClient.get<SourceValueListResponseVO>(
+    `/event/analysis/user/${projectId}/source-values`,
+    { params },
+  );
+};

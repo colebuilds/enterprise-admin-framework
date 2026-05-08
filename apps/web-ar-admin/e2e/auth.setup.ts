@@ -9,7 +9,7 @@ import { AUTH_FILE } from './constants';
 const USERNAME = process.env.E2E_USERNAME ?? 'milogly01';
 const PASSWORD = process.env.E2E_PASSWORD ?? '12345678';
 
-const AUTH_MAX_AGE_MS = 8 * 60 * 60 * 1000; // 8 hours
+const AUTH_MAX_AGE_MS = 4 * 60 * 60 * 1000; // 4 hours (SIT JWT TTL ~4h)
 
 function isAuthFresh(): boolean {
   if (!fs.existsSync(AUTH_FILE)) return false;

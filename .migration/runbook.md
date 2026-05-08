@@ -4,7 +4,7 @@
 
 ## 当前状态
 
-**阶段：** 1 — 基础设施 **当前任务：** 1.3 验收（运行时测试）**下一步：** `pnpm dev` 用真实账号登录，验收 dashboard welcome 页显示正常
+**阶段：** 2 — 第一个模块 **当前任务：** system/user **下一步：** 在老项目写 e2e/system/user.spec.ts，跑通后迁移代码
 
 ---
 
@@ -73,26 +73,28 @@
 - [x] 修改 route meta: dashboard 路由无权限限制（其余业务路由随模块迁入时处理）
 - [x] 配置 guard（vben 内置已生效，i18n namespace 懒加载推迟到 1.5）
 
-**验收：** 能用真实账号登录，看到 dashboard welcome 页，菜单按权限显示。
+**验收：** 能用真实账号登录，看到 dashboard welcome 页，菜单按权限显示。✅（smoke/auth.spec.ts 全绿 2026-05-07）
 
 ### 1.4 五类字典链路（参考 spec-dict.md）
 
-- [ ] 登录 action 里调 loadBaseDicts()（common + group + v1）
-- [ ] dynamicDictionary store 迁入
-- [ ] useDictionary hook 迁入
-- [ ] DictSelect 组件迁入
+- [x] 登录 action 里调 loadBaseDicts()（所有 5 条链路）
+- [x] dynamicDict 合并进 appUserStore（GetDynamicDictionary 空 body 全量，无需独立 store）
+- [x] 新建 src/composables/dict/registry.ts（脚本生成，141 个 unambiguous key + 3 个 ambiguous）
+- [x] 新建 src/composables/dict/useDictionary.ts（useDictOptions / useLabelMap，TypeScript 重载）
+- [ ] DictSelect 组件改用新 composable（待业务模块迁入时顺手处理）
 
-**验收：** 登录后 appUserStore.dictionary 有值，smoke/dict-loading.spec.ts 通过。
+**验收：** 登录后 appUserStore.dictionary 有值，smoke/dict-loading.spec.ts 通过。✅（2026-05-07）
 
-### 1.5 多语言（参考 spec-i18n.md）
+### 1.5 多语言（参考 spec-i18n.md）✅
 
-- [ ] 建 src/locales/ 结构
-- [ ] 迁入 langs/en、zh、vi、id 所有语言文件
-- [ ] 实现 loadNamespaces + PATH_NAMESPACE_MAP
-- [ ] 配置 naive-ui locale（vi/id fallback to en-US）
-- [ ] 语言切换后重拉字典
+- [x] 建 src/locales/ 结构（langs/zh-CN + langs/en-US，17 个业务 JSON + page.json + demos.json）
+- [x] 迁入 langs/en-US、zh-CN 语言文件（仅支持这两种语言，vi-VN/id-ID 不引入）
+- [x] vben 3 层架构接入（vue-i18n → @vben/locales → app loadMessages 钩子）
+- [x] 配置 naive-ui locale（NAIVE_LOCALE_MAP，zh-CN/en-US）
+- [x] resolveRequestLanguage() — signBody 语言字段实时读 preferences，不再硬编码
+- [x] useLocaleSync — 语言切换后自动失效字典缓存 + 同步后端语言偏好（已登录时）
 
-**验收：** 切换语言后页面文字更新，naive-ui 组件语言同步。
+**验收：** 切换语言后页面文字更新，naive-ui 组件语言同步，Network 请求 language 字段跟随变化。✅（2026-05-08）
 
 ### 阶段 1 整体验收
 

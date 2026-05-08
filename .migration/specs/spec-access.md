@@ -3,12 +3,14 @@
 ## 背景与问题
 
 ### 老项目现状
+
 - 权限判断：`userStore.getPermissions`（数组，含 `{ value: 'code' }` 对象）
 - 路由过滤：`generateDynamicRoutes(permissionsList, permissionsCodes)` 在前端静态路由表过滤
 - 路由守卫：自写 `createRouterGuards`，含 token 检查、动态路由注册、i18n namespace 懒加载
 - 权限指令：`v-permission="['Xxx:Yyy:Zzz']"`，44 处用法
 
 ### vben 现状
+
 - `accessStore.accessCodes: string[]` — 权限码列表
 - `accessStore.accessToken` — token
 - `generateAccessible('frontend', options)` — 前端模式路由过滤（和老项目逻辑等价）
@@ -18,7 +20,7 @@
 ## 设计决策
 
 | 决策项 | 选择 | 理由 |
-|--------|------|------|
+| --- | --- | --- |
 | accessMode | `frontend` | 老项目是前端路由表+权限码过滤，逻辑一致 |
 | v-permission | **保留指令名，重写实现** | 44处用法不动，内部换数据源 |
 | asyncRoutes | **整体迁入** | 格式兼容，改 meta 字段即可 |
@@ -51,7 +53,10 @@ src/
 ### access.ts
 
 ```ts
-import type { ComponentRecordType, GenerateMenuAndRoutesOptions } from '@vben/types';
+import type {
+  ComponentRecordType,
+  GenerateMenuAndRoutesOptions,
+} from '@vben/types';
 import { generateAccessible } from '@vben/access';
 import { BasicLayout, IFrameView } from '#/layouts';
 
@@ -167,7 +172,10 @@ interface PermissionBinding {
 }
 
 export const permission: ObjectDirective = {
-  mounted(el: HTMLElement, binding: DirectiveBinding<string[] | PermissionBinding>) {
+  mounted(
+    el: HTMLElement,
+    binding: DirectiveBinding<string[] | PermissionBinding>,
+  ) {
     const { accessCodes } = useAccessStore();
 
     // 兼容两种调用方式：
@@ -183,8 +191,9 @@ export const permission: ObjectDirective = {
       effect = binding.value?.effect;
     }
 
-    const hasPermission = actions.length === 0 ||
-      actions.some(code => accessCodes.includes(code.toLowerCase()));
+    const hasPermission =
+      actions.length === 0 ||
+      actions.some((code) => accessCodes.includes(code.toLowerCase()));
 
     if (!hasPermission) {
       if (effect === 'disabled') {
@@ -209,7 +218,7 @@ export function usePermission() {
 
   function hasPermission(accesses: string[]): boolean {
     if (!accesses?.length) return true;
-    return accesses.some(code => accessCodes.includes(code.toLowerCase()));
+    return accesses.some((code) => accessCodes.includes(code.toLowerCase()));
   }
 
   return { hasPermission };
@@ -220,7 +229,7 @@ export function usePermission() {
 
 ```ts
 // 不替换 vben guard，在其基础上追加 i18n namespace 懒加载
-import { createRouterGuard } from '@vben/layouts';  // vben 内置
+import { createRouterGuard } from '@vben/layouts'; // vben 内置
 import { collectRouteNamespaces, loadNamespaces } from '#/locales';
 import type { Router } from 'vue-router';
 
@@ -241,7 +250,7 @@ export function setupGuard(router: Router) {
 ## 调用方兼容清单
 
 | 老项目调用 | 新项目对应 | 是否需要改调用方 |
-|-----------|-----------|----------------|
+| --- | --- | --- |
 | `v-permission="[...]"` | `v-permission="[...]"` | **不需要改** |
 | `usePermission().hasPermission(codes)` | `usePermission().hasPermission(codes)` | **不需要改** |
 | `userStore.getPermissions` | `useAppUserStore().getPermissionCodes` | 需改（仅 5 处） |

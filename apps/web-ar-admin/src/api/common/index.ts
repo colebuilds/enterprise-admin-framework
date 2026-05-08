@@ -1,33 +1,34 @@
-import { requestClient } from '#/api/request';
 import type {
-  CheckAuthReq,
-  GetSysUserInfoRsp,
-  OrgTenantListRspListApiResponse,
-  DateTimeScopeTypeRsp,
-  StringListApiResponse,
-  SyncBasicTableToRedisReq,
-  DeleteRedisKeyReq,
-  GetListRedisKeyReq,
-  GetListRedisValueReq,
-  ObjectGetListRedisValueRsp,
-  TemplateFileReq,
-  FileTemplateRsp,
-  GetSettingReq,
-  SettingsReadOnlyEntity,
-  GetDynamicDictionaryReq,
-  DynamicDictionaryRsp,
-  DictionaryRsp,
-  PlatformDicRsp,
-  ThirdPayMerchantSelectReq,
-  ThirdPayMerchantSelectRsp,
+  BucketFilesReq,
+  BucketFilesRsp,
   ChannelSelectReq,
   ChannelSelectRsp,
+  CheckAuthReq,
   CurrencySelectReq,
-  UploadToOssFormDto,
+  DateTimeScopeTypeRsp,
+  DeleteRedisKeyReq,
+  DictionaryRsp,
+  DynamicDictionaryRsp,
+  FileTemplateRsp,
+  GetDynamicDictionaryReq,
+  GetListRedisKeyReq,
+  GetListRedisValueReq,
+  GetSettingReq,
+  GetSysUserInfoRsp,
+  ObjectGetListRedisValueRsp,
   ObjectListApiResponse,
-  BucketFilesReq,
-  BucketFilesRsp
+  OrgTenantListRspListApiResponse,
+  PlatformDicRsp,
+  SettingsReadOnlyEntity,
+  StringListApiResponse,
+  SyncBasicTableToRedisReq,
+  TemplateFileReq,
+  ThirdPayMerchantSelectReq,
+  ThirdPayMerchantSelectRsp,
+  UploadToOssFormDto,
 } from './types';
+
+import { requestClient } from '#/api/request';
 
 // 导出类型
 export * from './types';
@@ -41,15 +42,17 @@ export * from './types';
  */
 export const checkAuth = (params: CheckAuthReq) => {
   return requestClient.post<GetSysUserInfoRsp>('/Auth/CheckAuth', params);
-}
+};
 
 /**
  * @description: 获取集团商户列表- 内网调用
  * @url: /api/Auth/GetOrgTenantList
  */
 export const getOrgTenantList = () => {
-  return requestClient.post<OrgTenantListRspListApiResponse>('/Auth/GetOrgTenantList');
-}
+  return requestClient.post<OrgTenantListRspListApiResponse>(
+    '/Auth/GetOrgTenantList',
+  );
+};
 
 // ==================== Common ====================
 
@@ -59,15 +62,17 @@ export const getOrgTenantList = () => {
  */
 export const reloadedPage = () => {
   return requestClient.post<any>('/Common/ReloadedPage');
-}
+};
 
 /**
  * @description: 获取时间范围枚举类型 (Auth)
  * @url: /api/Common/GetDateTimeScopeTypes
  */
 export const getDateTimeScopeTypes = () => {
-  return requestClient.post<DateTimeScopeTypeRsp>('/Common/GetDateTimeScopeTypes');
-}
+  return requestClient.post<DateTimeScopeTypeRsp>(
+    '/Common/GetDateTimeScopeTypes',
+  );
+};
 
 /**
  * @description: 获取基础表名列表 (Auth)
@@ -75,7 +80,7 @@ export const getDateTimeScopeTypes = () => {
  */
 export const getListBasicTable = () => {
   return requestClient.post<StringListApiResponse>('/Common/GetListBasicTable');
-}
+};
 
 /**
  * @description: 同步基础表至Redis (Auth)
@@ -84,7 +89,7 @@ export const getListBasicTable = () => {
  */
 export const syncBasicTableToRedis = (params: SyncBasicTableToRedisReq) => {
   return requestClient.post<any>('/Common/SyncBasicTableToRedis', params);
-}
+};
 
 /**
  * @description: 删除RedisKey (Auth)
@@ -93,7 +98,7 @@ export const syncBasicTableToRedis = (params: SyncBasicTableToRedisReq) => {
  */
 export const deleteRedisKey = (params: DeleteRedisKeyReq) => {
   return requestClient.post<any>('/Common/DeleteRedisKey', params);
-}
+};
 
 /**
  * @description: 查询RedisKey(支持模糊查询) (Auth)
@@ -101,8 +106,11 @@ export const deleteRedisKey = (params: DeleteRedisKeyReq) => {
  * @url: /api/Common/GetListRedisKey
  */
 export const getListRedisKey = (params: GetListRedisKeyReq) => {
-  return requestClient.post<StringListApiResponse>('/Common/GetListRedisKey', params);
-}
+  return requestClient.post<StringListApiResponse>(
+    '/Common/GetListRedisKey',
+    params,
+  );
+};
 
 /**
  * @description: 查询RedisValue (Auth)
@@ -110,16 +118,21 @@ export const getListRedisKey = (params: GetListRedisKeyReq) => {
  * @url: /api/Common/GetListRedisValue
  */
 export const getListRedisValue = (params: GetListRedisValueReq) => {
-  return requestClient.post<ObjectGetListRedisValueRsp>('/Common/GetListRedisValue', params);
-}
+  return requestClient.post<ObjectGetListRedisValueRsp>(
+    '/Common/GetListRedisValue',
+    params,
+  );
+};
 /**
  * @description: 查询RedisValue (Auth)（导出，返回原生 blob 响应）
  * @param {GetListRedisValueReq} params
  * @url: /api/Common/GetListRedisValue
  */
 export const getListRedisValueExport = (params: GetListRedisValueReq) => {
-  return requestClient.post<Blob>('/Common/GetListRedisValue', params, { responseType: 'blob' });
-}
+  return requestClient.post<Blob>('/Common/GetListRedisValue', params, {
+    responseType: 'blob',
+  });
+};
 
 /**
  * @description: 获取模板文件下载地址(功能模板文件下载) : (Auth)
@@ -127,8 +140,11 @@ export const getListRedisValueExport = (params: GetListRedisValueReq) => {
  * @url: /api/Common/GetExeclTemplateFileURL
  */
 export const getExeclTemplateFileURL = (params: TemplateFileReq) => {
-  return requestClient.post<FileTemplateRsp>('/Common/GetExeclTemplateFileURL', params);
-}
+  return requestClient.post<FileTemplateRsp>(
+    '/Common/GetExeclTemplateFileURL',
+    params,
+  );
+};
 
 /**
  * @description: 根据key获取系统字典值 (Auth)
@@ -136,8 +152,11 @@ export const getExeclTemplateFileURL = (params: TemplateFileReq) => {
  * @url: /api/Common/GetSettingByKey
  */
 export const getSettingByKey = (params: GetSettingReq) => {
-  return requestClient.post<SettingsReadOnlyEntity>('/Common/GetSettingByKey', params);
-}
+  return requestClient.post<SettingsReadOnlyEntity>(
+    '/Common/GetSettingByKey',
+    params,
+  );
+};
 
 /**
  * @description: 获取动态字典（来自 DB / 缓存的运行时数据，区别于 GetDictionary 里的枚举常量）。
@@ -156,8 +175,11 @@ export const getSettingByKey = (params: GetSettingReq) => {
  * @url: /api/Common/GetDynamicDictionary
  */
 export const getDynamicDictionary = (params: GetDynamicDictionaryReq) => {
-  return requestClient.post<DynamicDictionaryRsp>('/Common/GetDynamicDictionary', params);
-}
+  return requestClient.post<DynamicDictionaryRsp>(
+    '/Common/GetDynamicDictionary',
+    params,
+  );
+};
 
 /**
  * @description: 获取公共字典映射 (Auth)
@@ -165,7 +187,7 @@ export const getDynamicDictionary = (params: GetDynamicDictionaryReq) => {
  */
 export const getDictionary = () => {
   return requestClient.post<DictionaryRsp>('/Common/GetDictionary');
-}
+};
 
 /**
  * @description: 获取平台配置数据-国家语言币种 (Auth)
@@ -173,7 +195,7 @@ export const getDictionary = () => {
  */
 export const getPlatformDic = () => {
   return requestClient.post<PlatformDicRsp>('/Common/GetPlatformDic');
-}
+};
 
 // ==================== LottoBasicSelect ====================
 
@@ -184,9 +206,14 @@ export const getPlatformDic = () => {
  * @param {ThirdPayMerchantSelectReq} params
  * @url: /api/LottoBasicSelect/GetThirdPayMerchantSelectData
  */
-export const getThirdPayMerchantSelectData = (params: ThirdPayMerchantSelectReq) => {
-  return requestClient.post<ThirdPayMerchantSelectRsp>('/LottoBasicSelect/GetThirdPayMerchantSelectData', params);
-}
+export const getThirdPayMerchantSelectData = (
+  params: ThirdPayMerchantSelectReq,
+) => {
+  return requestClient.post<ThirdPayMerchantSelectRsp>(
+    '/LottoBasicSelect/GetThirdPayMerchantSelectData',
+    params,
+  );
+};
 
 /**
  * @description: 【通道字典管理】获取通道字典下拉数据
@@ -195,8 +222,11 @@ export const getThirdPayMerchantSelectData = (params: ThirdPayMerchantSelectReq)
  * @url: /api/LottoBasicSelect/GetChannelSelectData
  */
 export const getChannelSelectData = (params: ChannelSelectReq) => {
-  return requestClient.post<ChannelSelectRsp>('/LottoBasicSelect/GetChannelSelectData', params);
-}
+  return requestClient.post<ChannelSelectRsp>(
+    '/LottoBasicSelect/GetChannelSelectData',
+    params,
+  );
+};
 
 /**
  * @description: 获取通道字典币种下拉数据（按通道类型区分，去重） (Auth)
@@ -204,8 +234,11 @@ export const getChannelSelectData = (params: ChannelSelectReq) => {
  * @url: /api/LottoBasicSelect/GetCurrencySelectData
  */
 export const getCurrencySelectData = (params: CurrencySelectReq) => {
-  return requestClient.post<StringListApiResponse>('/LottoBasicSelect/GetCurrencySelectData', params);
-}
+  return requestClient.post<StringListApiResponse>(
+    '/LottoBasicSelect/GetCurrencySelectData',
+    params,
+  );
+};
 
 // ==================== UploadFile ====================
 
@@ -215,8 +248,11 @@ export const getCurrencySelectData = (params: CurrencySelectReq) => {
  * @url: /api/UploadFile/UploadToOss
  */
 export const uploadToOss = (params: UploadToOssFormDto) => {
-  return requestClient.post<ObjectListApiResponse>('/UploadFile/UploadToOss', params);
-}
+  return requestClient.post<ObjectListApiResponse>(
+    '/UploadFile/UploadToOss',
+    params,
+  );
+};
 
 /**
  * @description: 获取某个桶里的所有数据 (Auth)
@@ -224,5 +260,8 @@ export const uploadToOss = (params: UploadToOssFormDto) => {
  * @url: /api/UploadFile/GetBucketFiles
  */
 export const getBucketFiles = (params: BucketFilesReq) => {
-  return requestClient.post<BucketFilesRsp>('/UploadFile/GetBucketFiles', params);
-}
+  return requestClient.post<BucketFilesRsp>(
+    '/UploadFile/GetBucketFiles',
+    params,
+  );
+};

@@ -1,31 +1,32 @@
-import { requestClient } from '#/api/request';
 import type {
+  PaymentChannelReportPageReq,
+  PaymentChannelReportRowRspListPageBaseResponse,
+  PaymentMultiPeriodTrendReq,
+  PaymentMultiPeriodTrendRsp,
+  PaymentMultiTenantTrendReq,
+  PaymentMultiTenantTrendRsp,
+  PaymentRealtime24HourSummaryReq,
+  PaymentRealtime24HourSummaryRsp,
   PaymentReportOverviewReq,
   PaymentReportOverviewRsp,
   PaymentTenantReportPageReq,
   PaymentTenantReportRowRspPageBaseResponseWithSum,
-  PaymentChannelReportPageReq,
-  PaymentChannelReportRowRspListPageBaseResponse,
   PaymentThirdPayMerchantReportPageReq,
   PaymentThirdPayMerchantReportRowRspListPageBaseResponse,
-  PaymentRealtime24HourSummaryReq,
-  PaymentRealtime24HourSummaryRsp,
-  PaymentMultiTenantTrendReq,
-  PaymentMultiTenantTrendRsp,
-  PaymentMultiPeriodTrendReq,
-  PaymentMultiPeriodTrendRsp,
-  ThirdPayChannelWarningSummaryReq,
-  ThirdPayChannelWarningSummaryRsp,
+  SaveThirdPayChannelWarningRuleConfigReq,
+  ThirdPayChannelWarningBatchOperateReq,
+  ThirdPayChannelWarningBatchOperateRsp,
+  ThirdPayChannelWarningDetailRsp,
+  ThirdPayChannelWarningIdReq,
+  ThirdPayChannelWarningOperateReq,
   ThirdPayChannelWarningPageListReq,
   ThirdPayChannelWarningPageListRspListPageBaseResponse,
-  ThirdPayChannelWarningIdReq,
-  ThirdPayChannelWarningDetailRsp,
   ThirdPayChannelWarningRuleConfigRsp,
-  SaveThirdPayChannelWarningRuleConfigReq,
-  ThirdPayChannelWarningOperateReq,
-  ThirdPayChannelWarningBatchOperateReq,
-  ThirdPayChannelWarningBatchOperateRsp
+  ThirdPayChannelWarningSummaryReq,
+  ThirdPayChannelWarningSummaryRsp,
 } from './types';
+
+import { requestClient } from '#/api/request';
 
 // 导出类型
 export * from './types';
@@ -38,8 +39,11 @@ export * from './types';
  * @url: /api/PaymentReport/GetPageList
  */
 export const paymentReportGetPageList = (params: PaymentReportOverviewReq) => {
-  return requestClient.post<PaymentReportOverviewRsp>('/PaymentReport/GetPageList', params);
-}
+  return requestClient.post<PaymentReportOverviewRsp>(
+    '/PaymentReport/GetPageList',
+    params,
+  );
+};
 
 /**
  * @description: 商户报表分页：每个 (TenantId, SysCurrency) 一行 + 跨全部页的总计。
@@ -49,8 +53,11 @@ export const paymentReportGetPageList = (params: PaymentReportOverviewReq) => {
  * @url: /api/PaymentReport/GetTenantPageList
  */
 export const getTenantPageList = (params: PaymentTenantReportPageReq) => {
-  return requestClient.post<PaymentTenantReportRowRspPageBaseResponseWithSum>('/PaymentReport/GetTenantPageList', params);
-}
+  return requestClient.post<PaymentTenantReportRowRspPageBaseResponseWithSum>(
+    '/PaymentReport/GetTenantPageList',
+    params,
+  );
+};
 /**
  * @description: 商户报表分页：每个 (TenantId, SysCurrency) 一行 + 跨全部页的总计。
 同一接口被两个页面复用：商户报表页、三方商户号报表-产生数据的商户-查看详情弹窗。
@@ -59,8 +66,10 @@ export const getTenantPageList = (params: PaymentTenantReportPageReq) => {
  * @url: /api/PaymentReport/GetTenantPageList
  */
 export const getTenantPageListExport = (params: PaymentTenantReportPageReq) => {
-  return requestClient.post<Blob>('/PaymentReport/GetTenantPageList', params, { responseType: 'blob' });
-}
+  return requestClient.post<Blob>('/PaymentReport/GetTenantPageList', params, {
+    responseType: 'blob',
+  });
+};
 
 /**
  * @description: 通道报表 / 商户通道明细 / 三方商户号产生数据的通道明细 共用接口，按 ChannelKind + ThirdPayMerchantIds + TenantIds 区分调用方。
@@ -69,34 +78,52 @@ export const getTenantPageListExport = (params: PaymentTenantReportPageReq) => {
  * @url: /api/PaymentReport/GetChannelPageList
  */
 export const getChannelPageList = (params: PaymentChannelReportPageReq) => {
-  return requestClient.post<PaymentChannelReportRowRspListPageBaseResponse>('/PaymentReport/GetChannelPageList', params);
-}
+  return requestClient.post<PaymentChannelReportRowRspListPageBaseResponse>(
+    '/PaymentReport/GetChannelPageList',
+    params,
+  );
+};
 /**
  * @description: 通道报表 / 商户通道明细 / 三方商户号产生数据的通道明细 共用接口，按 ChannelKind + ThirdPayMerchantIds + TenantIds 区分调用方。
 多个 [CustomAuthCode] 取 OR (Auth)（导出，返回原生 blob 响应）
  * @param {PaymentChannelReportPageReq} params
  * @url: /api/PaymentReport/GetChannelPageList
  */
-export const getChannelPageListExport = (params: PaymentChannelReportPageReq) => {
-  return requestClient.post<Blob>('/PaymentReport/GetChannelPageList', params, { responseType: 'blob' });
-}
+export const getChannelPageListExport = (
+  params: PaymentChannelReportPageReq,
+) => {
+  return requestClient.post<Blob>('/PaymentReport/GetChannelPageList', params, {
+    responseType: 'blob',
+  });
+};
 
 /**
  * @description: 三方商户号报表分页：每个 (ThirdPayMerchantId, SysCurrency) 一行 (Auth)
  * @param {PaymentThirdPayMerchantReportPageReq} params
  * @url: /api/PaymentReport/GetThirdPayMerchantPageList
  */
-export const getThirdPayMerchantPageList = (params: PaymentThirdPayMerchantReportPageReq) => {
-  return requestClient.post<PaymentThirdPayMerchantReportRowRspListPageBaseResponse>('/PaymentReport/GetThirdPayMerchantPageList', params);
-}
+export const getThirdPayMerchantPageList = (
+  params: PaymentThirdPayMerchantReportPageReq,
+) => {
+  return requestClient.post<PaymentThirdPayMerchantReportRowRspListPageBaseResponse>(
+    '/PaymentReport/GetThirdPayMerchantPageList',
+    params,
+  );
+};
 /**
  * @description: 三方商户号报表分页：每个 (ThirdPayMerchantId, SysCurrency) 一行 (Auth)（导出，返回原生 blob 响应）
  * @param {PaymentThirdPayMerchantReportPageReq} params
  * @url: /api/PaymentReport/GetThirdPayMerchantPageList
  */
-export const getThirdPayMerchantPageListExport = (params: PaymentThirdPayMerchantReportPageReq) => {
-  return requestClient.post<Blob>('/PaymentReport/GetThirdPayMerchantPageList', params, { responseType: 'blob' });
-}
+export const getThirdPayMerchantPageListExport = (
+  params: PaymentThirdPayMerchantReportPageReq,
+) => {
+  return requestClient.post<Blob>(
+    '/PaymentReport/GetThirdPayMerchantPageList',
+    params,
+    { responseType: 'blob' },
+  );
+};
 
 /**
  * @description: 24小时报表-顶部实时汇总（充提差 / 代收 / 代付 + 同比对比） (Auth)
@@ -104,8 +131,11 @@ export const getThirdPayMerchantPageListExport = (params: PaymentThirdPayMerchan
  * @url: /api/PaymentReport/GetRealtimeSummary
  */
 export const getRealtimeSummary = (params: PaymentRealtime24HourSummaryReq) => {
-  return requestClient.post<PaymentRealtime24HourSummaryRsp>('/PaymentReport/GetRealtimeSummary', params);
-}
+  return requestClient.post<PaymentRealtime24HourSummaryRsp>(
+    '/PaymentReport/GetRealtimeSummary',
+    params,
+  );
+};
 
 /**
  * @description: 24小时报表-多商户走势（每商户一条线，无对比） (Auth)
@@ -113,8 +143,11 @@ export const getRealtimeSummary = (params: PaymentRealtime24HourSummaryReq) => {
  * @url: /api/PaymentReport/GetMultiTenantTrend
  */
 export const getMultiTenantTrend = (params: PaymentMultiTenantTrendReq) => {
-  return requestClient.post<PaymentMultiTenantTrendRsp>('/PaymentReport/GetMultiTenantTrend', params);
-}
+  return requestClient.post<PaymentMultiTenantTrendRsp>(
+    '/PaymentReport/GetMultiTenantTrend',
+    params,
+  );
+};
 
 /**
  * @description: 24小时报表-多周期聚合走势（每个 Period 一条线，跨选中商户聚合） (Auth)
@@ -122,8 +155,11 @@ export const getMultiTenantTrend = (params: PaymentMultiTenantTrendReq) => {
  * @url: /api/PaymentReport/GetMultiPeriodTrend
  */
 export const getMultiPeriodTrend = (params: PaymentMultiPeriodTrendReq) => {
-  return requestClient.post<PaymentMultiPeriodTrendRsp>('/PaymentReport/GetMultiPeriodTrend', params);
-}
+  return requestClient.post<PaymentMultiPeriodTrendRsp>(
+    '/PaymentReport/GetMultiPeriodTrend',
+    params,
+  );
+};
 
 // ==================== ThirdPayChannelWarning ====================
 
@@ -133,25 +169,39 @@ export const getMultiPeriodTrend = (params: PaymentMultiPeriodTrendReq) => {
  * @url: /api/ThirdPayChannelWarning/GetSummary
  */
 export const getSummary = (params: ThirdPayChannelWarningSummaryReq) => {
-  return requestClient.post<ThirdPayChannelWarningSummaryRsp>('/ThirdPayChannelWarning/GetSummary', params);
-}
+  return requestClient.post<ThirdPayChannelWarningSummaryRsp>(
+    '/ThirdPayChannelWarning/GetSummary',
+    params,
+  );
+};
 
 /**
  * @description: 分页查询 (Auth)
  * @param {ThirdPayChannelWarningPageListReq} params
  * @url: /api/ThirdPayChannelWarning/GetPageList
  */
-export const thirdPayChannelWarningGetPageList = (params: ThirdPayChannelWarningPageListReq) => {
-  return requestClient.post<ThirdPayChannelWarningPageListRspListPageBaseResponse>('/ThirdPayChannelWarning/GetPageList', params);
-}
+export const thirdPayChannelWarningGetPageList = (
+  params: ThirdPayChannelWarningPageListReq,
+) => {
+  return requestClient.post<ThirdPayChannelWarningPageListRspListPageBaseResponse>(
+    '/ThirdPayChannelWarning/GetPageList',
+    params,
+  );
+};
 /**
  * @description: 分页查询 (Auth)（导出，返回原生 blob 响应）
  * @param {ThirdPayChannelWarningPageListReq} params
  * @url: /api/ThirdPayChannelWarning/GetPageList
  */
-export const thirdPayChannelWarningGetPageListExport = (params: ThirdPayChannelWarningPageListReq) => {
-  return requestClient.post<Blob>('/ThirdPayChannelWarning/GetPageList', params, { responseType: 'blob' });
-}
+export const thirdPayChannelWarningGetPageListExport = (
+  params: ThirdPayChannelWarningPageListReq,
+) => {
+  return requestClient.post<Blob>(
+    '/ThirdPayChannelWarning/GetPageList',
+    params,
+    { responseType: 'blob' },
+  );
+};
 
 /**
  * @description: 查询详情 (Auth)
@@ -159,25 +209,35 @@ export const thirdPayChannelWarningGetPageListExport = (params: ThirdPayChannelW
  * @url: /api/ThirdPayChannelWarning/Get
  */
 export const get = (params: ThirdPayChannelWarningIdReq) => {
-  return requestClient.post<ThirdPayChannelWarningDetailRsp>('/ThirdPayChannelWarning/Get', params);
-}
+  return requestClient.post<ThirdPayChannelWarningDetailRsp>(
+    '/ThirdPayChannelWarning/Get',
+    params,
+  );
+};
 
 /**
  * @description: 查询规则配置 (Auth)
  * @url: /api/ThirdPayChannelWarning/GetRuleConfig
  */
 export const getRuleConfig = () => {
-  return requestClient.post<ThirdPayChannelWarningRuleConfigRsp>('/ThirdPayChannelWarning/GetRuleConfig');
-}
+  return requestClient.post<ThirdPayChannelWarningRuleConfigRsp>(
+    '/ThirdPayChannelWarning/GetRuleConfig',
+  );
+};
 
 /**
  * @description: 保存规则配置 (Auth)
  * @param {SaveThirdPayChannelWarningRuleConfigReq} params
  * @url: /api/ThirdPayChannelWarning/SaveRuleConfig
  */
-export const saveRuleConfig = (params: SaveThirdPayChannelWarningRuleConfigReq) => {
-  return requestClient.post<any>('/ThirdPayChannelWarning/SaveRuleConfig', params);
-}
+export const saveRuleConfig = (
+  params: SaveThirdPayChannelWarningRuleConfigReq,
+) => {
+  return requestClient.post<any>(
+    '/ThirdPayChannelWarning/SaveRuleConfig',
+    params,
+  );
+};
 
 /**
  * @description: 标记已处理 (Auth)
@@ -186,7 +246,7 @@ export const saveRuleConfig = (params: SaveThirdPayChannelWarningRuleConfigReq) 
  */
 export const handle = (params: ThirdPayChannelWarningOperateReq) => {
   return requestClient.post<any>('/ThirdPayChannelWarning/Handle', params);
-}
+};
 
 /**
  * @description: 忽略 (Auth)
@@ -195,7 +255,7 @@ export const handle = (params: ThirdPayChannelWarningOperateReq) => {
  */
 export const ignore = (params: ThirdPayChannelWarningOperateReq) => {
   return requestClient.post<any>('/ThirdPayChannelWarning/Ignore', params);
-}
+};
 
 /**
  * @description: 批量标记已处理 (Auth)
@@ -203,8 +263,11 @@ export const ignore = (params: ThirdPayChannelWarningOperateReq) => {
  * @url: /api/ThirdPayChannelWarning/BatchHandle
  */
 export const batchHandle = (params: ThirdPayChannelWarningBatchOperateReq) => {
-  return requestClient.post<ThirdPayChannelWarningBatchOperateRsp>('/ThirdPayChannelWarning/BatchHandle', params);
-}
+  return requestClient.post<ThirdPayChannelWarningBatchOperateRsp>(
+    '/ThirdPayChannelWarning/BatchHandle',
+    params,
+  );
+};
 
 /**
  * @description: 批量忽略 (Auth)
@@ -212,5 +275,8 @@ export const batchHandle = (params: ThirdPayChannelWarningBatchOperateReq) => {
  * @url: /api/ThirdPayChannelWarning/BatchIgnore
  */
 export const batchIgnore = (params: ThirdPayChannelWarningBatchOperateReq) => {
-  return requestClient.post<ThirdPayChannelWarningBatchOperateRsp>('/ThirdPayChannelWarning/BatchIgnore', params);
-}
+  return requestClient.post<ThirdPayChannelWarningBatchOperateRsp>(
+    '/ThirdPayChannelWarning/BatchIgnore',
+    params,
+  );
+};
