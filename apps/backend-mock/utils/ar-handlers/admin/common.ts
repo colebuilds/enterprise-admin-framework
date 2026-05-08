@@ -10,9 +10,10 @@ export const adminCommonHandlers: ArHandlerMap = {
     if (body.userName !== ADMIN_USERNAME || body.pwd !== ADMIN_PASSWORD) {
       return { code: 1, data: null, msg: '账号或密码错误' };
     }
-    return fixture ?? { code: 0, data: { token: 'mock-admin-token' }, msg: '成功' };
+    return (
+      fixture ?? { code: 0, data: { token: 'mock-admin-token' }, msg: '成功' }
+    );
   },
-
 
   '/IpWhitelist/GetPageList': ({ body, fixture }) => {
     if (!fixture || fixture.code !== 0) return fixture;

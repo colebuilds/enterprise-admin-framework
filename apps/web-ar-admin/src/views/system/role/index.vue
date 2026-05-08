@@ -325,9 +325,9 @@ function createPrefix(data: any[]): any[] {
             type:
               item.menuType === 1
                 ? 'success'
-                : item.menuType === 2
+                : (item.menuType === 2
                   ? 'info'
-                  : 'warning',
+                  : 'warning'),
             size: 'small',
           },
           {

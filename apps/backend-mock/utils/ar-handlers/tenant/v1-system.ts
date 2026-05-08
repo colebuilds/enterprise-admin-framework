@@ -10,9 +10,10 @@ export const tenantV1SystemHandlers: ArHandlerMap = {
     if (body.userName !== TENANT_USERNAME || body.pwd !== TENANT_PASSWORD) {
       return { code: 1, data: null, msg: '账号或密码错误' };
     }
-    return fixture ?? { code: 0, data: { token: 'mock-tenant-token' }, msg: '成功' };
+    return (
+      fixture ?? { code: 0, data: { token: 'mock-tenant-token' }, msg: '成功' }
+    );
   },
-
 
   '/v1/System/GetPlatformLogPageList': ({ body, fixture }) => {
     if (!fixture || fixture.code !== 0) return fixture;

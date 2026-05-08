@@ -194,9 +194,7 @@ async function handleConfirm() {
     <!-- 权限模板 + 覆盖规则 -->
     <div class="bgp__control-bar">
       <div class="bgp__control-group">
-        <span class="bgp__label"
-          >{{ t('system.sysUser.grantPerm.permTemplate') }}：</span
-        >
+        <span class="bgp__label">{{ t('system.sysUser.grantPerm.permTemplate') }}：</span>
         <n-radio-group v-model:value="source" size="small">
           <n-radio value="custom">
             {{ t('system.sysUser.grantPerm.customConfig') }}
@@ -232,19 +230,15 @@ async function handleConfirm() {
                 {{ t('system.sysUser.grantPerm.overrideAllDesc') }}
               </div>
               <div>
-                <strong
-                  >{{
+                <strong>{{
                     t('system.sysUser.grantPerm.overrideConfigured')
-                  }}：</strong
-                >
+                  }}：</strong>
                 {{ t('system.sysUser.grantPerm.overrideConfiguredDesc') }}
               </div>
               <div>
-                <strong
-                  >{{
+                <strong>{{
                     t('system.sysUser.grantPerm.overrideNotConfigured')
-                  }}：</strong
-                >
+                  }}：</strong>
                 {{ t('system.sysUser.grantPerm.overrideNotConfiguredDesc') }}
               </div>
             </div>
