@@ -88,6 +88,8 @@ if (missing.length === 0 && badCode.length === 0) {
   console.log('\n✅ 100% coverage — all fixtures present and code=0\n');
   process.exit(0);
 } else {
-  console.log(`\n❌ ${missing.length + badCode.length} fixture(s) need attention.\n`);
+  console.log(
+    `\n❌ ${missing.length + badCode.length} fixture(s) need attention.\n`,
+  );
   process.exit(1);
 }

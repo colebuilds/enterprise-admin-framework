@@ -51,7 +51,12 @@ export const ADMIN_READ_ENDPOINTS: Endpoint[] = [
     body: { keys: ALL_DYNAMIC_KEYS },
   },
   // skip: SIT returns code=14 "no permission" for sys_milo
-  { method: 'POST', path: '/Common/GetDateTimeScopeTypes', body: {}, skip: true },
+  {
+    method: 'POST',
+    path: '/Common/GetDateTimeScopeTypes',
+    body: {},
+    skip: true,
+  },
   { method: 'POST', path: '/Common/GetListBasicTable', body: {} },
   // skip: SIT returns code=7 "invalid param" — key 'SiteSetting' may not exist in SIT
   {
@@ -108,7 +113,12 @@ export const ADMIN_READ_ENDPOINTS: Endpoint[] = [
     skip: true,
   },
   // skip: SIT returns code=14 "no permission" for sys_milo
-  { method: 'POST', path: '/SysUsers/GetSuperAuthUser', body: { orgId: 0 }, skip: true },
+  {
+    method: 'POST',
+    path: '/SysUsers/GetSuperAuthUser',
+    body: { orgId: 0 },
+    skip: true,
+  },
   // ── Tenant mgmt ────────────────────────────────────────────
   {
     method: 'POST',
@@ -121,7 +131,9 @@ export const ADMIN_READ_ENDPOINTS: Endpoint[] = [
     path: '/Country/Get',
     idFrom: {
       listPath: '/Country/GetPageList',
-      extractId: (d) => ({ countryCode: d?.data?.list?.[0]?.countryCode ?? 'CN' }),
+      extractId: (d) => ({
+        countryCode: d?.data?.list?.[0]?.countryCode ?? 'CN',
+      }),
     },
     skip: true,
   },
@@ -136,7 +148,9 @@ export const ADMIN_READ_ENDPOINTS: Endpoint[] = [
     path: '/Currency/Get',
     idFrom: {
       listPath: '/Currency/GetPageList',
-      extractId: (d) => ({ currencyCode: d?.data?.list?.[0]?.currencyCode ?? 'CNY' }),
+      extractId: (d) => ({
+        currencyCode: d?.data?.list?.[0]?.currencyCode ?? 'CNY',
+      }),
     },
     skip: true,
   },
@@ -151,7 +165,9 @@ export const ADMIN_READ_ENDPOINTS: Endpoint[] = [
     path: '/Language/Get',
     idFrom: {
       listPath: '/Language/GetPageList',
-      extractId: (d) => ({ languageCode: d?.data?.list?.[0]?.languageCode ?? 'zh-CN' }),
+      extractId: (d) => ({
+        languageCode: d?.data?.list?.[0]?.languageCode ?? 'zh-CN',
+      }),
     },
     skip: true,
   },
@@ -185,19 +201,59 @@ export const ADMIN_READ_ENDPOINTS: Endpoint[] = [
     skip: true,
   },
   // ── Hub (separate microservice — not routed through admin URL) ─
-  { method: 'POST', path: '/hub/domains/list', body: { page: 1, pageSize: 20 }, skip: true },
-  { method: 'POST', path: '/hub/assets/list', body: { page: 1, pageSize: 20 }, skip: true },
-  { method: 'POST', path: '/hub/jobs/list', body: { page: 1, pageSize: 20 }, skip: true },
+  {
+    method: 'POST',
+    path: '/hub/domains/list',
+    body: { page: 1, pageSize: 20 },
+    skip: true,
+  },
+  {
+    method: 'POST',
+    path: '/hub/assets/list',
+    body: { page: 1, pageSize: 20 },
+    skip: true,
+  },
+  {
+    method: 'POST',
+    path: '/hub/jobs/list',
+    body: { page: 1, pageSize: 20 },
+    skip: true,
+  },
   { method: 'POST', path: '/hub/jobs/stats', body: {}, skip: true },
-  { method: 'POST', path: '/hub/job-logs/list', body: { page: 1, pageSize: 20 }, skip: true },
+  {
+    method: 'POST',
+    path: '/hub/job-logs/list',
+    body: { page: 1, pageSize: 20 },
+    skip: true,
+  },
   { method: 'POST', path: '/hub/runners/list', body: {}, skip: true },
-  { method: 'POST', path: '/hub/themes/list', body: { page: 1, pageSize: 20 }, skip: true },
-  { method: 'POST', path: '/hub/layouts/list', body: { page: 1, pageSize: 20 }, skip: true },
-  { method: 'POST', path: '/hub/tabbars/list', body: { page: 1, pageSize: 20 }, skip: true },
+  {
+    method: 'POST',
+    path: '/hub/themes/list',
+    body: { page: 1, pageSize: 20 },
+    skip: true,
+  },
+  {
+    method: 'POST',
+    path: '/hub/layouts/list',
+    body: { page: 1, pageSize: 20 },
+    skip: true,
+  },
+  {
+    method: 'POST',
+    path: '/hub/tabbars/list',
+    body: { page: 1, pageSize: 20 },
+    skip: true,
+  },
   { method: 'POST', path: '/hub/merchant/sites', body: {}, skip: true },
   { method: 'POST', path: '/hub/web/config', body: {}, skip: true },
   { method: 'POST', path: '/hub/web/game', body: {}, skip: true },
-  { method: 'POST', path: '/hub/debug/scheduler/org-tenant-list', body: {}, skip: true },
+  {
+    method: 'POST',
+    path: '/hub/debug/scheduler/org-tenant-list',
+    body: {},
+    skip: true,
+  },
   // ── Event (separate microservice — not routed through admin URL) ─
   { method: 'POST', path: '/event/metrics', body: {}, skip: true },
   { method: 'POST', path: '/event/options', body: {}, skip: true },
@@ -214,13 +270,33 @@ export const ADMIN_READ_ENDPOINTS: Endpoint[] = [
   { method: 'POST', path: '/ai/metrics', body: {}, skip: true },
   { method: 'POST', path: '/ai/health', body: {}, skip: true },
   { method: 'POST', path: '/ai/chat/config', body: {}, skip: true },
-  { method: 'POST', path: '/ai/chat/sessions', body: { page: 1, pageSize: 20 }, skip: true },
+  {
+    method: 'POST',
+    path: '/ai/chat/sessions',
+    body: { page: 1, pageSize: 20 },
+    skip: true,
+  },
   { method: 'POST', path: '/ai/knowledge/queue/stats', body: {}, skip: true },
-  { method: 'POST', path: '/ai/knowledge/search', body: { q: 'test', limit: 5 }, skip: true },
+  {
+    method: 'POST',
+    path: '/ai/knowledge/search',
+    body: { q: 'test', limit: 5 },
+    skip: true,
+  },
   { method: 'POST', path: '/ai/admin/escalation/stats', body: {}, skip: true },
   { method: 'POST', path: '/ai/admin/feedback/stats', body: {}, skip: true },
-  { method: 'POST', path: '/ai/report/sessions', body: { page: 1, pageSize: 10 }, skip: true },
+  {
+    method: 'POST',
+    path: '/ai/report/sessions',
+    body: { page: 1, pageSize: 10 },
+    skip: true,
+  },
   { method: 'POST', path: '/ai/report/alerts/config', body: {}, skip: true },
-  { method: 'POST', path: '/ai/report/failed-queries', body: { page: 1, pageSize: 10 }, skip: true },
+  {
+    method: 'POST',
+    path: '/ai/report/failed-queries',
+    body: { page: 1, pageSize: 10 },
+    skip: true,
+  },
   { method: 'POST', path: '/ai/report/planner/stats', body: {}, skip: true },
 ];

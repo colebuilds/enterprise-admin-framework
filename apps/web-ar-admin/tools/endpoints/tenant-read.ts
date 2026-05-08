@@ -63,7 +63,12 @@ export const TENANT_READ_ENDPOINTS: Endpoint[] = [
     body: { keys: ALL_DYNAMIC_KEYS },
   },
   // skip: SIT returns code=14 "no permission" for org_milo
-  { method: 'POST', path: '/Common/GetDateTimeScopeTypes', body: {}, skip: true },
+  {
+    method: 'POST',
+    path: '/Common/GetDateTimeScopeTypes',
+    body: {},
+    skip: true,
+  },
   { method: 'POST', path: '/v1/Common/GetDictionary', body: {} },
   // ── Recharge (tenantId in signature) ──────────────────────
   {
@@ -304,13 +309,43 @@ export const TENANT_READ_ENDPOINTS: Endpoint[] = [
     body: { ...PAGE_T },
   },
   // ── Hub (separate microservice — SIT returns 401 through tenant URL) ─
-  { method: 'POST', path: '/hub/domains/list', body: { page: 1, pageSize: 20 }, skip: true },
-  { method: 'POST', path: '/hub/assets/list', body: { page: 1, pageSize: 20 }, skip: true },
-  { method: 'POST', path: '/hub/jobs/list', body: { page: 1, pageSize: 20 }, skip: true },
+  {
+    method: 'POST',
+    path: '/hub/domains/list',
+    body: { page: 1, pageSize: 20 },
+    skip: true,
+  },
+  {
+    method: 'POST',
+    path: '/hub/assets/list',
+    body: { page: 1, pageSize: 20 },
+    skip: true,
+  },
+  {
+    method: 'POST',
+    path: '/hub/jobs/list',
+    body: { page: 1, pageSize: 20 },
+    skip: true,
+  },
   { method: 'POST', path: '/hub/jobs/stats', body: {}, skip: true },
-  { method: 'POST', path: '/hub/themes/list', body: { page: 1, pageSize: 20 }, skip: true },
-  { method: 'POST', path: '/hub/layouts/list', body: { page: 1, pageSize: 20 }, skip: true },
-  { method: 'POST', path: '/hub/tabbars/list', body: { page: 1, pageSize: 20 }, skip: true },
+  {
+    method: 'POST',
+    path: '/hub/themes/list',
+    body: { page: 1, pageSize: 20 },
+    skip: true,
+  },
+  {
+    method: 'POST',
+    path: '/hub/layouts/list',
+    body: { page: 1, pageSize: 20 },
+    skip: true,
+  },
+  {
+    method: 'POST',
+    path: '/hub/tabbars/list',
+    body: { page: 1, pageSize: 20 },
+    skip: true,
+  },
   { method: 'POST', path: '/hub/merchant/sites', body: {}, skip: true },
   { method: 'POST', path: '/hub/web/config', body: {}, skip: true },
   // ── Event (separate microservice — SIT returns 404 through tenant URL) ─
