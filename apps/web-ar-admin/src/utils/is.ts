@@ -11,3 +11,15 @@ export const isObject = (val: unknown): val is Record<string, unknown> =>
 export const isArray = Array.isArray;
 export const isNullOrUnDef = (val: unknown): val is null | undefined =>
   val === null || val === undefined;
+
+export function isIPv4Address(value: string): boolean {
+  const parts = value.split('.');
+  return (
+    parts.length === 4 &&
+    parts.every((part) => {
+      if (!/^\d{1,3}$/.test(part)) return false;
+      const num = Number(part);
+      return num >= 0 && num <= 255;
+    })
+  );
+}
