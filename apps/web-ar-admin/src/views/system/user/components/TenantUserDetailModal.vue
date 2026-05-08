@@ -223,11 +223,7 @@ async function handleSave() {
   };
   saving.value = true;
   try {
-    const { code, msg } = await api.system.updateTenantSysUser(req);
-    if (code !== 0) {
-      message.error(msg || t('system.sysUser.detail.saveFailed'));
-      return;
-    }
+    await api.system.updateTenantSysUser(req);
 
     // 出款/充值权限的 enabled 开关 **不在** updateTenantSysUser 接口语义内，
     // 若用户在编辑弹窗里改了开关，单独走 updateTenantSysUserState 切状态
@@ -258,7 +254,7 @@ async function handleSave() {
     message.success(t('system.sysUser.detail.saveSuccess'));
     emit('save');
   } catch {
-    message.error(t('system.sysUser.detail.saveFailed'));
+    // interceptor already showed the error toast
   } finally {
     saving.value = false;
   }

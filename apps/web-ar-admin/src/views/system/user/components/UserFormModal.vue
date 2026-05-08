@@ -166,7 +166,7 @@ async function handleSave() {
   loading.value = true;
   try {
     if (props.mode === 'add') {
-      const { code, msg } = await api.system.sysUsersAdd({
+      await api.system.sysUsersAdd({
         userName: formData.account.trim(),
         nickName: formData.nickName.trim(),
         password: formData.password || '',
@@ -177,14 +177,10 @@ async function handleSave() {
         isOpenGoogle: formData.isOpenGoogle,
         userState: formData.enabled ? 1 : 0,
       });
-      if (code !== 0) {
-        message.error(msg);
-        return;
-      }
       message.success(t('system.sysUser.userForm.msg.addSuccess'));
     } else {
       if (!props.record?.userId) return;
-      const { code, msg } = await api.system.sysUsersUpdate({
+      await api.system.sysUsersUpdate({
         userId: props.record.userId,
         nickName: formData.nickName.trim(),
         roleIds: formData.roleIds,
@@ -192,13 +188,11 @@ async function handleSave() {
         agentId: 0,
         isOpenGoogle: formData.isOpenGoogle,
       });
-      if (code !== 0) {
-        message.error(msg);
-        return;
-      }
       message.success(t('system.sysUser.userForm.msg.updateSuccess'));
     }
     emit('save');
+  } catch {
+    // interceptor already showed the error toast
   } finally {
     loading.value = false;
   }

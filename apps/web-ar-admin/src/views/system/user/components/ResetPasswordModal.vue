@@ -71,18 +71,14 @@ async function handleSave() {
 
   loading.value = true;
   try {
-    const { code, msg } = await api.system.revisePassword({
+    await api.system.revisePassword({
       userId: payload.userId,
       sysUserPassword: payload.password,
     });
-
-    if (code !== 0) {
-      message.error(msg);
-      return;
-    }
-
     message.success(t('system.sysUser.resetPassword.msg.success'));
     emit('save');
+  } catch {
+    // interceptor already showed the error toast
   } finally {
     loading.value = false;
   }

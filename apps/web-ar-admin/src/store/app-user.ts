@@ -16,6 +16,8 @@ export interface UserTenantGroupItem {
   tenants: UserTenantItem[];
 }
 
+const ACTIVE_TENANT_STORAGE_KEY = 'ar-admin:active-tenant-id';
+
 function pickFirstText(...values: Array<null | string | undefined>): string {
   return values.find((v) => typeof v === 'string' && v.trim() !== '') ?? '';
 }
@@ -87,6 +89,12 @@ export const useAppUserStore = defineStore('app-user', () => {
 
   const getActiveTenant = computed(() => getTenantById(activeTenantId.value));
 
+  const getActiveTenantGroup = computed(() => {
+    const tenant = getActiveTenant.value;
+    if (!tenant) return null;
+    return getTenantGroups.value.find((g) => g.orgId === tenant.orgId) ?? null;
+  });
+
   const getPermissionCodes = computed<string[]>(() => {
     const codes: string[] = [];
     const walk = (nodes: UserInfoType['menus']) => {
@@ -107,12 +115,19 @@ export const useAppUserStore = defineStore('app-user', () => {
   function setActiveTenantId(tenantId: null | number) {
     if (tenantId === null) {
       activeTenantId.value = null;
+      localStorage.removeItem(ACTIVE_TENANT_STORAGE_KEY);
       return;
     }
     const found = getTenantFlatList.value.find((t) => t.id === tenantId);
     activeTenantId.value = found
       ? tenantId
       : (getTenantFlatList.value[0]?.id ?? null);
+    if (activeTenantId.value !== null) {
+      localStorage.setItem(
+        ACTIVE_TENANT_STORAGE_KEY,
+        String(activeTenantId.value),
+      );
+    }
   }
 
   function _syncActiveTenantId() {
@@ -121,15 +136,19 @@ export const useAppUserStore = defineStore('app-user', () => {
       activeTenantId.value = null;
       return;
     }
-    const valid = tenants.find((t) => t.id === activeTenantId.value);
-    activeTenantId.value = valid
-      ? activeTenantId.value
-      : (tenants[0]?.id ?? null);
+    const stored = localStorage.getItem(ACTIVE_TENANT_STORAGE_KEY);
+    const storedId = stored === null ? null : Number(stored);
+    const preferred =
+      storedId === null ? undefined : tenants.find((t) => t.id === storedId);
+    const valid =
+      preferred ?? tenants.find((t) => t.id === activeTenantId.value);
+    activeTenantId.value = valid ? valid.id : (tenants[0]?.id ?? null);
   }
 
   function $reset() {
     info.value = {} as UserInfoType;
     activeTenantId.value = null;
+    localStorage.removeItem(ACTIVE_TENANT_STORAGE_KEY);
   }
 
   return {
@@ -142,6 +161,7 @@ export const useAppUserStore = defineStore('app-user', () => {
     getTenantMap,
     getTenantById,
     getActiveTenant,
+    getActiveTenantGroup,
     getPermissionCodes,
     setUserInfo,
     setActiveTenantId,

@@ -135,7 +135,7 @@ async function loadDataTable(params: RolePageReq) {
     pageNo: params.pageNo ?? 1,
   };
   const data = await api.system.roleGetPageList(requestParams);
-  
+
   return data;
 }
 
@@ -192,13 +192,13 @@ function handleEdit(record: RoleRow) {
 }
 
 async function handleDelete(record: RoleRow) {
-  const { code, msg } = await api.system.deleteMark({ id: record.id });
-  if (code !== 0) {
-    message.info(msg);
-    return;
+  try {
+    await api.system.deleteMark({ id: record.id });
+    message.success(t('common.delete_success'));
+    tableRef.value?.reload(1);
+  } catch {
+    // interceptor already showed the error toast
   }
-  message.success(t('common.delete_success'));
-  tableRef.value?.reload(1);
 }
 
 async function handleMenuAuth(record: RoleRow) {
@@ -274,16 +274,14 @@ async function doSaveRole() {
   formBtnLoading.value = true;
   try {
     const list = getRoleTree();
-    const { msg, code } = await api.system.updateList({
+    await api.system.updateList({
       roleId: Number(roleId.value),
       list,
     });
-    if (code !== 0) {
-      message.error(msg);
-      return;
-    }
     message.success(t('common.edit_success'));
     tableRef.value?.reload();
+  } catch {
+    // interceptor already showed the error toast
   } finally {
     formBtnLoading.value = false;
   }
@@ -353,7 +351,7 @@ function createPrefix(data: any[]): any[] {
 }
 
 onMounted(async () => {
-  const { data = [] } = await api.system.getAdminMenuTree({});
+  const _tree = await api.system.getAdminMenuTree({}); const data = Array.isArray(_tree) ? _tree : [];
   expandedKeys.value = getTreeAll(data);
   checkedAll.value = false;
   treeData.value = filterMenu(createPrefix(data), false);

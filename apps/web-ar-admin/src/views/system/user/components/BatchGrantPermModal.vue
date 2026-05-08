@@ -151,7 +151,7 @@ async function handleConfirm() {
     if (approvalPermRef.value && !(await approvalPermRef.value.validate()))
       return;
 
-    const { code, msg } = await api.system.batchUpdateTenantSysUserPermission({
+    await api.system.batchUpdateTenantSysUserPermission({
       userIds: props.selectedUsers.map((u) => u.userId),
       coverageRule: coverageRuleMap[overrideMode.value],
       // 归属商户列表（由顶部 TenantCheckPanel 选中），后端接口新增 publicConfig 字段
@@ -163,14 +163,10 @@ async function handleConfirm() {
       withdrawConfig: withdrawConfig.value ?? undefined,
       approvalConfig: approvalConfig.value ?? undefined,
     });
-    if (code !== 0) {
-      message.error(msg || t('system.sysUser.grantPerm.grantFailed'));
-      return;
-    }
     message.success(t('common.operationSuccess'));
     emit('save');
   } catch {
-    message.error(t('system.sysUser.grantPerm.grantFailed'));
+    // interceptor already showed the error toast
   } finally {
     saving.value = false;
   }
