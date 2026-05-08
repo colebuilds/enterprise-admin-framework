@@ -8,11 +8,14 @@ const FIXTURES_ROOT = path.resolve(
   '../../web-ar-admin/tools/mock-fixtures',
 );
 
-function resolveMode(domainUrl = ''): 'admin' | 'tenant' {
+export function resolveMode(domainUrl = ''): 'admin' | 'tenant' {
   return domainUrl.includes('tenantadmin') ? 'tenant' : 'admin';
 }
 
-export function loadArFixture(domainUrl: string, apiPath: string): null | unknown {
+export function loadArFixture(
+  domainUrl: string,
+  apiPath: string,
+): null | unknown {
   const mode = resolveMode(domainUrl);
   const rel = apiPath.replace(/^\//, '');
   const filePath = path.join(FIXTURES_ROOT, mode, `${rel}.json`);
