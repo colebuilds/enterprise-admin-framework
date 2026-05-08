@@ -7,10 +7,16 @@ import { loadEnv } from 'vite';
 export default defineConfig(async ({ mode } = {}) => {
   const env = loadEnv(mode ?? 'dev', process.cwd());
 
-  // cross-env VITE_APP_TYPE=TENANT takes precedence over env file
   const appType = process.env.VITE_APP_TYPE ?? env.VITE_APP_TYPE ?? 'ADMIN';
   const isTenant = appType === 'TENANT';
-  const apiTarget = isTenant ? env.VITE_TENANT_API_URL : env.VITE_API_BASE_URL;
+  const isMock = (process.env.VITE_NITRO_MOCK ?? env.VITE_NITRO_MOCK) === 'true';
+
+  // Mock mode: both admin and tenant proxy to Nitro; domainUrl header differentiates
+  const apiTarget = isMock
+    ? 'http://localhost:5320'
+    : (isTenant
+      ? env.VITE_TENANT_API_URL
+      : env.VITE_API_BASE_URL);
 
   return {
     application: {},

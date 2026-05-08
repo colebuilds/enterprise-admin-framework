@@ -57,3 +57,5 @@ vite.config.ts.*
 .claude
 .codex
 skills-lock.json
+
+apps/web-ar-admin/tools/mock-fixtures/
