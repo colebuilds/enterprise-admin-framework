@@ -11,7 +11,7 @@
   name: 'SystemUser',
   component: () => import('#/views/system/user/index.vue'),
   meta: {
-    authority: ['SystemManage:SysUser'],  // 老项目 meta.permissions 原样复制
+    authority: ['systemmanage:sysuser'],  // 老项目 meta.permissions 转小写后填入
     title: 'menu.user',
     icon: 'lucide:users',
   },
@@ -20,14 +20,14 @@
 
 - `meta.authority` 未设置 = 所有已登录用户可访问
 - 多个码是 OR 关系（命中任一即通过）
-- 大小写不敏感（内部转小写比较），建议保留原始大小写
+- **必须小写**：`getPermissionCodes` 对 authCode 做 `.toLowerCase()`，`meta.authority` 必须匹配，即全小写
 
 ## 查老项目权限码
 
 ```
 老项目路由文件：/Users/cola/Documents/gs/feat1-ar_platform_admin/src/router/modules/<模块>.ts
 字段：meta.permissions
-直接复制到新项目 meta.authority
+复制到新项目 meta.authority 后全部转小写（e.g. "SystemManage:SysUser" → "systemmanage:sysuser"）
 ```
 
 ## 新建路由模块
@@ -70,15 +70,15 @@ export default routes;
 ## 页面内权限消费
 
 ```typescript
-import { usePermission } from '#/hooks/web/usePermission';
+import { usePermission } from '#/hooks/usePermission';
 
 const { hasPermission, hasEveryPermission } = usePermission();
 
 // OR 逻辑（有任一码即通过）
-hasPermission(['SystemManage:SysUser'])
+hasPermission(['SystemManage:SysUser']);
 
 // AND 逻辑（全部具备才通过）
-hasEveryPermission(['SystemManage:SysUser', 'SystemManage:SysUser:Add'])
+hasEveryPermission(['SystemManage:SysUser', 'SystemManage:SysUser:Add']);
 ```
 
 ```html
@@ -86,7 +86,10 @@ hasEveryPermission(['SystemManage:SysUser', 'SystemManage:SysUser:Add'])
 <n-button v-permission="['SystemManage:SysUser:Add']">新增</n-button>
 
 <!-- 无权限时禁用 -->
-<n-button v-permission="{ action: ['SystemManage:SysUser:Export'], effect: 'disabled' }">导出</n-button>
+<n-button
+  v-permission="{ action: ['SystemManage:SysUser:Export'], effect: 'disabled' }"
+  >导出</n-button
+>
 ```
 
 ## 禁止

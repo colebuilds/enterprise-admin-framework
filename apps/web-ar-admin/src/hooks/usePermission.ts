@@ -9,7 +9,9 @@ export function usePermission() {
   }
 
   function hasEveryPermission(codes: string[]): boolean {
-    return codes.every((c) => accessStore.accessCodes.includes(c.toLowerCase()));
+    return codes.every((c) =>
+      accessStore.accessCodes.includes(c.toLowerCase()),
+    );
   }
 
   return { hasEveryPermission, hasPermission };

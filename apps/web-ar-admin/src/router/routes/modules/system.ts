@@ -6,7 +6,7 @@ const routes: RouteRecordRaw[] = [
     name: 'System',
     redirect: '/system/user',
     meta: {
-      authority: ['SystemManage'],
+      authority: ['systemmanage'],
       icon: 'lucide:settings',
       order: 10,
       title: 'menu.system',
@@ -17,10 +17,21 @@ const routes: RouteRecordRaw[] = [
         name: 'SystemUser',
         component: () => import('#/views/system/user/index.vue'),
         meta: {
-          authority: ['SystemManage:SysUser'],
+          authority: ['systemmanage:sysuser'],
           icon: 'lucide:users',
           keepAlive: false,
           title: 'menu.user',
+        },
+      },
+      {
+        path: 'role',
+        name: 'SystemRole',
+        component: () => import('#/views/system/role/index.vue'),
+        meta: {
+          authority: ['systemmanage:sysrole'],
+          icon: 'lucide:shield-check',
+          keepAlive: false,
+          title: 'menu.role',
         },
       },
     ],
