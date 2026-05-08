@@ -30,8 +30,7 @@ audience: human, ai-agent
 
 ## 2. 当前仓库权限运行时链路
 
-> ⚠️ 本节已更新为 **vben 迁移版**（2026-05-08）。完整技术细节见
-> `documents/design/technical/2026-05-08-权限系统技术方案.md`。
+> ⚠️ 本节已更新为 **vben 迁移版**（2026-05-08）。完整技术细节见 `documents/design/technical/2026-05-08-权限系统技术方案.md`。
 
 ### 2.1 权限数据源
 
@@ -254,7 +253,7 @@ audience: human, ai-agent
 
 页面能否进入、菜单能否显示，优先使用：
 
-- `meta.permissions`
+- `meta.authority`
 
 不要把按钮权限直接塞到路由入口层，也不要用一个 `GetPageList` 权限兜住整页所有操作。
 
