@@ -351,7 +351,8 @@ function createPrefix(data: any[]): any[] {
 }
 
 onMounted(async () => {
-  const _tree = await api.system.getAdminMenuTree({}); const data = Array.isArray(_tree) ? _tree : [];
+  const _tree = await api.system.getAdminMenuTree({});
+  const data = Array.isArray(_tree) ? _tree : [];
   expandedKeys.value = getTreeAll(data);
   checkedAll.value = false;
   treeData.value = filterMenu(createPrefix(data), false);
