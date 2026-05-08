@@ -9,7 +9,8 @@ export const overridesPreferences = defineOverridesPreferences({
   // overrides
   app: {
     accessMode: 'frontend',
-    defaultHomePath: '/dashboard/welcome',
+    defaultHomePath: '/system/user',
+    locale: 'zh-CN',
     name: import.meta.env.VITE_APP_TITLE,
   },
 });

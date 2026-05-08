@@ -86,9 +86,9 @@ export const useAuthStore = defineStore('auth', () => {
 
     const vbenUserInfo = {
       avatar: '',
-      homePath: '/dashboard/welcome',
+      homePath: '/system/user',
       realName: info.userName,
-      roles: [] as string[],
+      roles: codes,
       userId: String(info.userId),
       username: info.userName,
     };

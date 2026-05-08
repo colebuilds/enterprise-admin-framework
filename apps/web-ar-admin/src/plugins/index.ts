@@ -1,11 +1,96 @@
 import type { App } from 'vue';
 
+import {
+  create,
+  NAlert,
+  NAvatar,
+  NBackTop,
+  NBadge,
+  NBreadcrumb,
+  NBreadcrumbItem,
+  NButton,
+  NCard,
+  NCascader,
+  NCheckbox,
+  NCheckboxGroup,
+  NCol,
+  NConfigProvider,
+  NDataTable,
+  NDatePicker,
+  NDescriptions,
+  NDescriptionsItem,
+  NDialogProvider,
+  NDivider,
+  NDrawer,
+  NDrawerContent,
+  NDropdown,
+  NElement,
+  NForm,
+  NFormItem,
+  NGrid,
+  NGridItem,
+  NIcon,
+  NInput,
+  NInputGroup,
+  NInputNumber,
+  NLayout,
+  NLayoutContent,
+  NLayoutFooter,
+  NLayoutHeader,
+  NLayoutSider,
+  NList,
+  NListItem,
+  NLoadingBarProvider,
+  NMenu,
+  NMessageProvider,
+  NModal,
+  NNotificationProvider,
+  NPagination,
+  NPopover,
+  NProgress,
+  NRadio,
+  NRadioGroup,
+  NResult,
+  NRow,
+  NScrollbar,
+  NSelect,
+  NSkeleton,
+  NSpace,
+  NSpin,
+  NSwitch,
+  NTable,
+  NTabPane,
+  NTabs,
+  NTag,
+  NThing,
+  NTimePicker,
+  NTooltip,
+  NTree,
+  NUpload,
+} from 'naive-ui';
+
 import { permission } from '#/directives/permission';
 
-// Phase 1 迁入：注册高频 naive-ui 组件
-export function setupNaive(_app: App) {}
+const naive = create({
+  components: [
+    NAlert, NAvatar, NBackTop, NBadge, NBreadcrumb, NBreadcrumbItem,
+    NButton, NCard, NCascader, NCheckbox, NCheckboxGroup, NCol,
+    NConfigProvider, NDataTable, NDatePicker, NDescriptions, NDescriptionsItem,
+    NDialogProvider, NDivider, NDrawer, NDrawerContent, NDropdown, NElement,
+    NForm, NFormItem, NGrid, NGridItem, NIcon, NInput, NInputGroup, NInputNumber,
+    NLayout, NLayoutContent, NLayoutFooter, NLayoutHeader, NLayoutSider,
+    NList, NListItem, NLoadingBarProvider, NMenu, NMessageProvider, NModal,
+    NNotificationProvider, NPagination, NPopover, NProgress, NRadio, NRadioGroup,
+    NResult, NRow, NScrollbar, NSelect, NSkeleton, NSpace, NSpin, NSwitch,
+    NTable, NTabPane, NTabs, NTag, NThing, NTimePicker, NTooltip, NTree, NUpload,
+  ],
+});
 
-// Phase 1 迁入：createDiscreteApi（message/dialog/notification 在组件外调用）
+export function setupNaive(app: App) {
+  app.use(naive);
+}
+
+// discrete API (message/dialog/notification) 由 adapter/naive.ts 在模块级初始化
 export function setupNaiveDiscreteApi() {}
 
 export function setupDirectives(app: App) {
