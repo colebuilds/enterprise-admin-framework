@@ -18,18 +18,18 @@ zh-CN / en-US（仅这两种）
 
 ## 文件推断（业务域 → JSON 文件）
 
-| 关键词含义 | 推断文件 |
-| --- | --- |
-| 充值/提现/结算/财务/手续费 | `finance.json` |
-| 报表/报告/统计 | `report.json` |
-| 系统/用户/角色/权限/管理员 | `system.json` |
-| 商户/租户 | `tenant.json` |
-| 会员/玩家 | `member.json` |
-| 代理/分销 | `agent.json` |
-| 游戏/彩票 | `game.json` |
-| 菜单/导航 | `menu.json` |
-| 运营/活动/公告 | `operations.json` |
-| 通用按钮/状态/操作/提示 | `page.json` 或 `common.json` |
+| 关键词含义                 | 推断文件                     |
+| -------------------------- | ---------------------------- |
+| 充值/提现/结算/财务/手续费 | `finance.json`               |
+| 报表/报告/统计             | `report.json`                |
+| 系统/用户/角色/权限/管理员 | `system.json`                |
+| 商户/租户                  | `tenant.json`                |
+| 会员/玩家                  | `member.json`                |
+| 代理/分销                  | `agent.json`                 |
+| 游戏/彩票                  | `game.json`                  |
+| 菜单/导航                  | `menu.json`                  |
+| 运营/活动/公告             | `operations.json`            |
+| 通用按钮/状态/操作/提示    | `page.json` 或 `common.json` |
 
 ## 禁止
 
