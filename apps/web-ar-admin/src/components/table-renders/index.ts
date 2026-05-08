@@ -268,7 +268,8 @@ export function renderMemberIdLink(
   options?: { bold?: boolean; fallback?: string; tenantLabel?: null | string },
 ): string | VNode {
   const fallback = options?.fallback ?? '--';
-  if (memberId === null || memberId === undefined || memberId === '') return fallback;
+  if (memberId === null || memberId === undefined || memberId === '')
+    return fallback;
   const bold = options?.bold !== false;
   const style = bold
     ? '#1890ff; 600; color: cursor: font-weight: pointer;'

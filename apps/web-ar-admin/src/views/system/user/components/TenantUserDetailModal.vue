@@ -82,7 +82,7 @@ const tabs = computed(() => [
   },
 ]);
 
-const statusMap = computed<Record<TabStatus, { cls: string; text: string; }>>(
+const statusMap = computed<Record<TabStatus, { cls: string; text: string }>>(
   () => ({
     on: {
       text: t('system.sysUser.detail.enabled'),

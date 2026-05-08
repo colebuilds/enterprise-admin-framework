@@ -98,7 +98,9 @@ const copiedApprovalEnabled = ref<boolean | undefined>(undefined);
 const fetchUserSelectList = computed(() => {
   const tenantIds = publicConfig.manageTenantIds.map(Number);
   return () =>
-    api.system.getTenantUserSelectList(tenantIds.length > 0 ? { tenantIds } : {});
+    api.system.getTenantUserSelectList(
+      tenantIds.length > 0 ? { tenantIds } : {},
+    );
 });
 
 async function handleCopyUserPerm(userId: number) {
@@ -270,15 +272,11 @@ async function handleSubmit() {
           @update:value="handlePermSourceChange"
         >
           <n-radio value="custom">
-{{
-            t('system.sysUser.create.customConfig')
-          }}
-</n-radio>
+            {{ t('system.sysUser.create.customConfig') }}
+          </n-radio>
           <n-radio value="copy">
-{{
-            t('system.sysUser.create.copyUser')
-          }}
-</n-radio>
+            {{ t('system.sysUser.create.copyUser') }}
+          </n-radio>
         </n-radio-group>
         <AsyncSelect
           v-if="permSource === 'copy'"
@@ -318,10 +316,8 @@ async function handleSubmit() {
     <div class="tu-create__actions">
       <n-button @click="emit('close')">{{ t('common.cancel') }}</n-button>
       <n-button type="primary" :loading="loading" @click="handleSubmit">
-{{
-        t('system.sysUser.create.confirmCreate')
-      }}
-</n-button>
+        {{ t('system.sysUser.create.confirmCreate') }}
+      </n-button>
     </div>
   </div>
 </template>

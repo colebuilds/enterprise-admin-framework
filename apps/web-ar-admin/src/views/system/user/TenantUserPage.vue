@@ -476,7 +476,7 @@ const hasSelection = computed(() => selectedRows.value.length > 0);
 
 // 批量调整出款权限下拉选项（按各自子权限过滤）
 const batchWithdrawOptions = computed(() => {
-  const opts: Array<{ key: string; label: string; }> = [];
+  const opts: Array<{ key: string; label: string }> = [];
   if (
     hasPermission([
       'SystemManage:SysUserPage:UserPage:BatchUpdateTenantSysUserWithdrawAuditAmountRange',
@@ -729,15 +729,17 @@ async function loadDataTable(params: {
     roleId: params?.roleId,
     tenantId: params?.tenantId || undefined,
     // 充提权限筛选
-    withdraw_TenantIds: permFilter.withdrawTenantIds.length > 0
-      ? permFilter.withdrawTenantIds
-      : undefined,
+    withdraw_TenantIds:
+      permFilter.withdrawTenantIds.length > 0
+        ? permFilter.withdrawTenantIds
+        : undefined,
     withdraw_UserRank: permFilter.withdrawUserRank || undefined,
     withdraw_ConfigGroupId: permFilter.withdrawConfigGroupId ?? undefined,
     withdrawState: permFilter.withdrawState ?? undefined,
-    approval_TenantIds: permFilter.approvalTenantIds.length > 0
-      ? permFilter.approvalTenantIds
-      : undefined,
+    approval_TenantIds:
+      permFilter.approvalTenantIds.length > 0
+        ? permFilter.approvalTenantIds
+        : undefined,
     approval_UserRole: permFilter.approvalUserRole ?? undefined,
     approvalState: permFilter.approvalState ?? undefined,
     orderBy: 'Desc',
@@ -888,10 +890,8 @@ async function handleRefreshGoogleCaptcha(record: SysUsersPageListRsp) {
           @select="handleBatchWithdraw"
         >
           <n-button :disabled="!hasSelection">
-{{
-            t('system.sysUser.batch.adjustWithdraw')
-          }}
-</n-button>
+            {{ t('system.sysUser.batch.adjustWithdraw') }}
+          </n-button>
         </NDropdown>
         <NDropdown
           v-if="canChangeBatchStatus"
@@ -900,10 +900,8 @@ async function handleRefreshGoogleCaptcha(record: SysUsersPageListRsp) {
           @select="handleBatchStatus"
         >
           <n-button :disabled="!hasSelection">
-{{
-            t('system.sysUser.batch.changeStatus')
-          }}
-</n-button>
+            {{ t('system.sysUser.batch.changeStatus') }}
+          </n-button>
         </NDropdown>
         <n-button
           v-permission="[

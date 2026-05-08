@@ -350,10 +350,8 @@ export function formatTimeZone(
 }
 
 // 获取当天开始时间和结束时间
-export const startDate = () =>
-  startOfDay(formatToCurrentZone(Date.now()));
-export const endDate = () =>
-  endOfDay(formatToCurrentZone(Date.now()));
+export const startDate = () => startOfDay(formatToCurrentZone(Date.now()));
+export const endDate = () => endOfDay(formatToCurrentZone(Date.now()));
 // 获取昨天开始时间和结束时间
 export const yesterdayStart = () =>
   startOfDay(formatToCurrentZone(Date.now() - 24 * 60 * 60 * 1000));

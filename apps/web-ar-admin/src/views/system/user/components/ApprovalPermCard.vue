@@ -284,15 +284,11 @@ defineExpose({ validate });
                   size="small"
                 >
                   <n-radio value="1">
-{{
-                    t('system.sysUser.approval.open')
-                  }}
-</n-radio>
+                    {{ t('system.sysUser.approval.open') }}
+                  </n-radio>
                   <n-radio value="0">
-{{
-                    t('system.sysUser.approval.close')
-                  }}
-</n-radio>
+                    {{ t('system.sysUser.approval.close') }}
+                  </n-radio>
                 </n-radio-group>
               </n-form-item-gi>
             </n-grid>
