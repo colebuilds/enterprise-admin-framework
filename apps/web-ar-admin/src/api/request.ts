@@ -1,3 +1,4 @@
+import { preferences } from '@vben/preferences';
 import { RequestClient } from '@vben/request';
 import { useAccessStore } from '@vben/stores';
 
@@ -53,8 +54,12 @@ function removeArrayFields(value: unknown): unknown {
   return value;
 }
 
+function resolveRequestLanguage(): string {
+  return preferences.app.locale.split('-')[0] ?? 'zh';
+}
+
 function signBody(body: Record<string, unknown>): Record<string, unknown> {
-  const language = 'en'; // Phase 1.5: replace with i18n locale
+  const language = resolveRequestLanguage();
   const random = randomInt(12);
   const withMeta = { ...body, language, random };
   const forSign = removeArrayFields(withMeta) as Record<string, unknown>;
