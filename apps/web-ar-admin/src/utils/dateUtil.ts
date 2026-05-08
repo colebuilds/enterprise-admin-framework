@@ -33,8 +33,7 @@ function normalizeDateValue(value: Date | null | number | string | undefined) {
  * @returns {string} 时区编码，缺失时返回空字符串
  */
 function getCurrentTimeZoneCode() {
-  // TODO: fix type — useAppUserStore has no timeZoneList; wire to user info when available
-  return (useAppUserStore().info as any)?.timeZoneList?.[0]?.timeZoneCode ?? '';
+  return useAppUserStore().info.timeZoneList?.[0]?.timeZoneCode ?? '';
 }
 
 /**
@@ -42,10 +41,7 @@ function getCurrentTimeZoneCode() {
  * @returns {string} 时区偏移值，缺失时返回空字符串
  */
 function getCurrentTimeZoneValue() {
-  // TODO: fix type — useAppUserStore has no timeZoneList; wire to user info when available
-  return (
-    (useAppUserStore().info as any)?.timeZoneList?.[0]?.timeZoneValue ?? ''
-  );
+  return useAppUserStore().info.timeZoneList?.[0]?.timeZoneValue ?? '';
 }
 
 function extractTimeZoneOffsetParts(timeZoneValue?: TimeZoneValue) {
