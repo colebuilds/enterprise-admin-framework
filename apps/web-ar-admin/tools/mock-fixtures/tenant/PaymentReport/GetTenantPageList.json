@@ -4,14 +4,14 @@
       "orgId": 0,
       "tenantId": 0,
       "sysCurrency": "",
-      "rechargeChannelCount": 29,
+      "rechargeChannelCount": 31,
       "rechargeAmount": 0,
       "rechargeCount": 176,
       "rechargeSuccessRate": 0,
       "rechargeUserCount": 41,
       "withdrawChannelCount": 3,
       "withdrawAmount": 0,
-      "withdrawCount": 754,
+      "withdrawCount": 755,
       "withdrawUserCount": 9,
       "rechargeAmountByCurrency": [
         {
@@ -26,7 +26,7 @@
       "withdrawAmountByCurrency": [
         {
           "sysCurrency": "INR",
-          "amount": 1687359.8
+          "amount": 1688359.8
         }
       ]
     },
@@ -34,14 +34,14 @@
       "orgId": 0,
       "tenantId": 0,
       "sysCurrency": "",
-      "rechargeChannelCount": 29,
+      "rechargeChannelCount": 31,
       "rechargeAmount": 0,
       "rechargeCount": 176,
       "rechargeSuccessRate": 0,
       "rechargeUserCount": 41,
       "withdrawChannelCount": 3,
       "withdrawAmount": 0,
-      "withdrawCount": 754,
+      "withdrawCount": 755,
       "withdrawUserCount": 9,
       "rechargeAmountByCurrency": [
         {
@@ -56,7 +56,7 @@
       "withdrawAmountByCurrency": [
         {
           "sysCurrency": "INR",
-          "amount": 1687359.8
+          "amount": 1688359.8
         }
       ]
     },
@@ -65,14 +65,14 @@
         "orgId": 1000,
         "tenantId": 2001,
         "sysCurrency": "INR",
-        "rechargeChannelCount": 27,
+        "rechargeChannelCount": 29,
         "rechargeAmount": 617171.04,
         "rechargeCount": 172,
         "rechargeSuccessRate": 0.0001,
         "rechargeUserCount": 40,
         "withdrawChannelCount": 3,
-        "withdrawAmount": 1687359.8,
-        "withdrawCount": 754,
+        "withdrawAmount": 1688359.8,
+        "withdrawCount": 755,
         "withdrawUserCount": 9,
         "rechargeAmountByCurrency": [],
         "withdrawAmountByCurrency": []
@@ -84,7 +84,7 @@
         "rechargeChannelCount": 2,
         "rechargeAmount": 41525.4,
         "rechargeCount": 4,
-        "rechargeSuccessRate": 0.2667,
+        "rechargeSuccessRate": 0.1818,
         "rechargeUserCount": 1,
         "withdrawChannelCount": 0,
         "withdrawAmount": 0,

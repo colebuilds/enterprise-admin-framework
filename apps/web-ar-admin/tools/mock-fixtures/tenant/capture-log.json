@@ -1,6 +1,6 @@
 {
   "mode": "tenant",
-  "capturedAt": "2026-05-08T11:47:55.392Z",
+  "capturedAt": "2026-05-08T13:17:46.426Z",
   "results": [
     {
       "path": "/menu/all",
@@ -26,10 +26,6 @@
       "status": "ok"
     },
     {
-      "path": "/Auth/CheckAuth",
-      "status": "ok"
-    },
-    {
       "path": "/Auth/GetOrgTenantList",
       "status": "ok"
     },
@@ -43,10 +39,6 @@
     },
     {
       "path": "/Common/GetDynamicDictionary",
-      "status": "ok"
-    },
-    {
-      "path": "/Common/GetDateTimeScopeTypes",
       "status": "ok"
     },
     {
@@ -95,10 +87,6 @@
     },
     {
       "path": "/WithdrawOrder/GetPageList",
-      "status": "ok"
-    },
-    {
-      "path": "/WithdrawOrder/GetAuditPageList",
       "status": "ok"
     },
     {
@@ -191,62 +179,6 @@
     },
     {
       "path": "/v1/System/GetWebLogPageList",
-      "status": "ok"
-    },
-    {
-      "path": "/hub/domains/list",
-      "status": "ok"
-    },
-    {
-      "path": "/hub/assets/list",
-      "status": "ok"
-    },
-    {
-      "path": "/hub/jobs/list",
-      "status": "ok"
-    },
-    {
-      "path": "/hub/jobs/stats",
-      "status": "ok"
-    },
-    {
-      "path": "/hub/themes/list",
-      "status": "ok"
-    },
-    {
-      "path": "/hub/layouts/list",
-      "status": "ok"
-    },
-    {
-      "path": "/hub/tabbars/list",
-      "status": "ok"
-    },
-    {
-      "path": "/hub/merchant/sites",
-      "status": "ok"
-    },
-    {
-      "path": "/hub/web/config",
-      "status": "ok"
-    },
-    {
-      "path": "/event/metrics",
-      "status": "ok"
-    },
-    {
-      "path": "/event/traffic/health",
-      "status": "ok"
-    },
-    {
-      "path": "/event/traffic/summary",
-      "status": "ok"
-    },
-    {
-      "path": "/ai/metrics",
-      "status": "ok"
-    },
-    {
-      "path": "/ai/health",
       "status": "ok"
     }
   ]

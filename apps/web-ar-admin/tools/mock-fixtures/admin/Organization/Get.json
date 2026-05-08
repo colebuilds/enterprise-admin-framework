@@ -1,1 +1,12 @@
-{ "code": 0, "data": null, "msg": "" }
+{
+  "data": {
+    "id": 61022,
+    "name": "figo集团",
+    "remark": "",
+    "state": 1,
+    "adminUserName": "figoadmin"
+  },
+  "code": 0,
+  "msg": "成功",
+  "msgCode": 0
+}

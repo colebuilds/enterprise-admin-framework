@@ -1,25 +1,9 @@
 {
   "data": {
-    "list": [
-      {
-        "tenantId": 2001,
-        "bId": 4001,
-        "userId": 2247621,
-        "bankId": 2001,
-        "bankNameStr": "Paytm",
-        "beneficiaryName": "MemberNNGNQUWZ",
-        "accountNo": "9999999999@paytm",
-        "mobileNO": "9188888888",
-        "withType": 3,
-        "withTypeName": "Wallet",
-        "addTime": "2026-04-28 10:00:00",
-        "updateTime": "2026-04-28 10:00:00",
-        "lastUpdateOperator": null
-      }
-    ],
+    "list": [],
     "pageNo": 1,
-    "totalPage": 1,
-    "totalCount": 1
+    "totalPage": 0,
+    "totalCount": 0
   },
   "code": 0,
   "msg": "成功",

@@ -49,13 +49,11 @@ export const TENANT_READ_ENDPOINTS: Endpoint[] = [
     path: '/Login/Login',
     body: { userName: 'org_milo', pwd: '12345678' },
   },
-  { method: 'GET', path: '/menu/all' },
-  { method: 'GET', path: '/user/info' },
-  { method: 'GET', path: '/auth/codes' },
   { method: 'POST', path: '/Home/GetSysUserInfo', body: {} },
   { method: 'POST', path: '/Login/HomeBasic', body: {} },
   // ── Auth/Common (no tenantId in signature for these) ──────
-  { method: 'POST', path: '/Auth/CheckAuth', body: {} },
+  // skip: SIT returns code=11 "invalid param" for org_milo — no auth context available
+  { method: 'POST', path: '/Auth/CheckAuth', body: {}, skip: true },
   { method: 'POST', path: '/Auth/GetOrgTenantList', body: {} },
   { method: 'POST', path: '/Common/GetDictionary', body: {} },
   { method: 'POST', path: '/Common/GetPlatformDic', body: {} },
@@ -64,7 +62,8 @@ export const TENANT_READ_ENDPOINTS: Endpoint[] = [
     path: '/Common/GetDynamicDictionary',
     body: { keys: ALL_DYNAMIC_KEYS },
   },
-  { method: 'POST', path: '/Common/GetDateTimeScopeTypes', body: {} },
+  // skip: SIT returns code=14 "no permission" for org_milo
+  { method: 'POST', path: '/Common/GetDateTimeScopeTypes', body: {}, skip: true },
   { method: 'POST', path: '/v1/Common/GetDictionary', body: {} },
   // ── Recharge (tenantId in signature) ──────────────────────
   {
@@ -117,10 +116,12 @@ export const TENANT_READ_ENDPOINTS: Endpoint[] = [
     path: '/WithdrawOrder/GetPageList',
     body: { ...PAGE_T, dateType: 0, sortField: 'CreateTime' },
   },
+  // skip: requires userId in body — SIT audit queue is empty; no records to capture
   {
     method: 'POST',
     path: '/WithdrawOrder/GetAuditPageList',
     body: { ...PAGE_T, dateType: 0, sortField: 'CreateTime' },
+    skip: true,
   },
   {
     method: 'POST',
@@ -302,33 +303,21 @@ export const TENANT_READ_ENDPOINTS: Endpoint[] = [
     path: '/v1/System/GetWebLogPageList',
     body: { ...PAGE_T },
   },
-  // ── Hub (tenant has its own hub) ───────────────────────────
-  {
-    method: 'POST',
-    path: '/hub/domains/list',
-    body: { page: 1, pageSize: 20 },
-  },
-  { method: 'POST', path: '/hub/assets/list', body: { page: 1, pageSize: 20 } },
-  { method: 'POST', path: '/hub/jobs/list', body: { page: 1, pageSize: 20 } },
-  { method: 'POST', path: '/hub/jobs/stats', body: {} },
-  { method: 'POST', path: '/hub/themes/list', body: { page: 1, pageSize: 20 } },
-  {
-    method: 'POST',
-    path: '/hub/layouts/list',
-    body: { page: 1, pageSize: 20 },
-  },
-  {
-    method: 'POST',
-    path: '/hub/tabbars/list',
-    body: { page: 1, pageSize: 20 },
-  },
-  { method: 'POST', path: '/hub/merchant/sites', body: {} },
-  { method: 'POST', path: '/hub/web/config', body: {} },
-  // ── Event ──────────────────────────────────────────────────
-  { method: 'POST', path: '/event/metrics', body: {} },
-  { method: 'POST', path: '/event/traffic/health', body: {} },
-  { method: 'POST', path: '/event/traffic/summary', body: {} },
-  // ── AI ─────────────────────────────────────────────────────
-  { method: 'POST', path: '/ai/metrics', body: {} },
-  { method: 'POST', path: '/ai/health', body: {} },
+  // ── Hub (separate microservice — SIT returns 401 through tenant URL) ─
+  { method: 'POST', path: '/hub/domains/list', body: { page: 1, pageSize: 20 }, skip: true },
+  { method: 'POST', path: '/hub/assets/list', body: { page: 1, pageSize: 20 }, skip: true },
+  { method: 'POST', path: '/hub/jobs/list', body: { page: 1, pageSize: 20 }, skip: true },
+  { method: 'POST', path: '/hub/jobs/stats', body: {}, skip: true },
+  { method: 'POST', path: '/hub/themes/list', body: { page: 1, pageSize: 20 }, skip: true },
+  { method: 'POST', path: '/hub/layouts/list', body: { page: 1, pageSize: 20 }, skip: true },
+  { method: 'POST', path: '/hub/tabbars/list', body: { page: 1, pageSize: 20 }, skip: true },
+  { method: 'POST', path: '/hub/merchant/sites', body: {}, skip: true },
+  { method: 'POST', path: '/hub/web/config', body: {}, skip: true },
+  // ── Event (separate microservice — SIT returns 404 through tenant URL) ─
+  { method: 'POST', path: '/event/metrics', body: {}, skip: true },
+  { method: 'POST', path: '/event/traffic/health', body: {}, skip: true },
+  { method: 'POST', path: '/event/traffic/summary', body: {}, skip: true },
+  // ── AI (separate microservice — SIT returns 404 through tenant URL) ──
+  { method: 'POST', path: '/ai/metrics', body: {}, skip: true },
+  { method: 'POST', path: '/ai/health', body: {}, skip: true },
 ];

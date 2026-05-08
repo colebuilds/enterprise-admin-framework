@@ -1,24 +1,9 @@
 {
   "data": {
-    "list": [
-      {
-        "tenantId": 2001,
-        "bId": 2001,
-        "userId": 2247621,
-        "bankId": 1001,
-        "bankNameStr": "Nubank",
-        "beneficiaryName": "MemberNNGNQUWZ",
-        "accountNo": "12345678901",
-        "cpf": "123.456.789-01",
-        "mobileNO": "9188888888",
-        "addTime": "2026-04-28 10:00:00",
-        "updateTime": "2026-04-28 10:00:00",
-        "lastUpdateOperator": null
-      }
-    ],
+    "list": [],
     "pageNo": 1,
-    "totalPage": 1,
-    "totalCount": 1
+    "totalPage": 0,
+    "totalCount": 0
   },
   "code": 0,
   "msg": "成功",

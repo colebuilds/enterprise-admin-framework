@@ -1,19 +1,9 @@
 {
   "data": {
-    "list": [
-      {
-        "realId": 3001,
-        "tenantId": 2001,
-        "userId": 2247621,
-        "realName": "Mock User Name",
-        "idCard": "AB1234567",
-        "addTime": "2026-04-28 10:00:00",
-        "upTime": "2026-04-28 10:00:00"
-      }
-    ],
+    "list": [],
     "pageNo": 1,
-    "totalPage": 1,
-    "totalCount": 1
+    "totalPage": 0,
+    "totalCount": 0
   },
   "code": 0,
   "msg": "成功",

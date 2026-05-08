@@ -81,7 +81,9 @@ async function run() {
     [];
   const listCache = new Map<string, any>();
 
-  const endpoints = cfg.endpoints.filter((e) => e.path !== cfg.loginPath);
+  const endpoints = cfg.endpoints.filter(
+    (e) => e.path !== cfg.loginPath && !e.skip,
+  );
 
   for (const ep of endpoints) {
     let body = ep.body ?? {};

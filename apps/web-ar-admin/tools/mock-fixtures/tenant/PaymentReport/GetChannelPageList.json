@@ -4,19 +4,19 @@
       {
         "orgId": 1000,
         "tenantId": 2001,
-        "channelType": 1,
+        "channelType": "Withdraw",
         "tenantChannelId": 480028,
         "thirdPayMerchantId": 340009,
         "sysCurrency": "INR",
-        "successAmount": 1685145.8,
-        "successCount": 746,
+        "successAmount": 1686145.8,
+        "successCount": 747,
         "userCount": 9,
         "successRate": 0
       },
       {
         "orgId": 1000,
         "tenantId": 2001,
-        "channelType": 0,
+        "channelType": "Recharge",
         "tenantChannelId": 3,
         "thirdPayMerchantId": 0,
         "sysCurrency": "INR",
@@ -28,7 +28,7 @@
       {
         "orgId": 1000,
         "tenantId": 2001,
-        "channelType": 0,
+        "channelType": "Recharge",
         "tenantChannelId": 484002,
         "thirdPayMerchantId": 344001,
         "sysCurrency": "INR",
@@ -40,19 +40,19 @@
       {
         "orgId": 1000,
         "tenantId": 2001,
-        "channelType": 0,
+        "channelType": "Recharge",
         "tenantChannelId": 484002,
         "thirdPayMerchantId": 344001,
         "sysCurrency": "USDT",
         "successAmount": 41525.4,
         "successCount": 4,
         "userCount": 1,
-        "successRate": 0.8
+        "successRate": 0.6667
       },
       {
         "orgId": 1000,
         "tenantId": 2001,
-        "channelType": 0,
+        "channelType": "Recharge",
         "tenantChannelId": 480033,
         "thirdPayMerchantId": 340009,
         "sysCurrency": "INR",
@@ -64,7 +64,7 @@
       {
         "orgId": 1000,
         "tenantId": 2001,
-        "channelType": 0,
+        "channelType": "Recharge",
         "tenantChannelId": 480031,
         "thirdPayMerchantId": 340010,
         "sysCurrency": "INR",
@@ -76,7 +76,7 @@
       {
         "orgId": 1000,
         "tenantId": 2001,
-        "channelType": 0,
+        "channelType": "Recharge",
         "tenantChannelId": 9,
         "thirdPayMerchantId": 0,
         "sysCurrency": "INR",
@@ -88,7 +88,7 @@
       {
         "orgId": 1000,
         "tenantId": 2001,
-        "channelType": 0,
+        "channelType": "Recharge",
         "tenantChannelId": 480032,
         "thirdPayMerchantId": 340010,
         "sysCurrency": "INR",
@@ -100,7 +100,7 @@
       {
         "orgId": 1000,
         "tenantId": 2001,
-        "channelType": 0,
+        "channelType": "Recharge",
         "tenantChannelId": 484009,
         "thirdPayMerchantId": 344002,
         "sysCurrency": "INR",
@@ -112,7 +112,7 @@
       {
         "orgId": 1000,
         "tenantId": 2001,
-        "channelType": 0,
+        "channelType": "Recharge",
         "tenantChannelId": 82,
         "thirdPayMerchantId": 0,
         "sysCurrency": "INR",
@@ -124,7 +124,7 @@
       {
         "orgId": 1000,
         "tenantId": 2001,
-        "channelType": 0,
+        "channelType": "Recharge",
         "tenantChannelId": 484026,
         "thirdPayMerchantId": 344006,
         "sysCurrency": "INR",
@@ -136,7 +136,7 @@
       {
         "orgId": 1000,
         "tenantId": 2001,
-        "channelType": 0,
+        "channelType": "Recharge",
         "tenantChannelId": 158,
         "thirdPayMerchantId": 0,
         "sysCurrency": "INR",
@@ -148,7 +148,7 @@
       {
         "orgId": 1000,
         "tenantId": 2001,
-        "channelType": 0,
+        "channelType": "Recharge",
         "tenantChannelId": 484027,
         "thirdPayMerchantId": 344006,
         "sysCurrency": "INR",
@@ -160,7 +160,7 @@
       {
         "orgId": 1000,
         "tenantId": 2001,
-        "channelType": 0,
+        "channelType": "Recharge",
         "tenantChannelId": 330001,
         "thirdPayMerchantId": 0,
         "sysCurrency": "INR",
@@ -172,7 +172,7 @@
       {
         "orgId": 1000,
         "tenantId": 2001,
-        "channelType": 0,
+        "channelType": "Recharge",
         "tenantChannelId": 484034,
         "thirdPayMerchantId": 344006,
         "sysCurrency": "INR",
@@ -184,7 +184,7 @@
       {
         "orgId": 1000,
         "tenantId": 2001,
-        "channelType": 0,
+        "channelType": "Recharge",
         "tenantChannelId": 484028,
         "thirdPayMerchantId": 344006,
         "sysCurrency": "INR",
@@ -196,7 +196,7 @@
       {
         "orgId": 1000,
         "tenantId": 2001,
-        "channelType": 1,
+        "channelType": "Withdraw",
         "tenantChannelId": 484031,
         "thirdPayMerchantId": 344006,
         "sysCurrency": "INR",
@@ -208,7 +208,7 @@
       {
         "orgId": 1000,
         "tenantId": 2001,
-        "channelType": 0,
+        "channelType": "Recharge",
         "tenantChannelId": 484018,
         "thirdPayMerchantId": 340010,
         "sysCurrency": "INR",
@@ -220,7 +220,7 @@
       {
         "orgId": 1000,
         "tenantId": 2001,
-        "channelType": 0,
+        "channelType": "Recharge",
         "tenantChannelId": 480030,
         "thirdPayMerchantId": 340009,
         "sysCurrency": "INR",
@@ -232,7 +232,7 @@
       {
         "orgId": 1000,
         "tenantId": 2001,
-        "channelType": 1,
+        "channelType": "Withdraw",
         "tenantChannelId": 480026,
         "thirdPayMerchantId": 340006,
         "sysCurrency": "INR",
@@ -244,7 +244,7 @@
     ],
     "pageNo": 1,
     "totalPage": 2,
-    "totalCount": 32
+    "totalCount": 34
   },
   "code": 0,
   "msg": "成功",

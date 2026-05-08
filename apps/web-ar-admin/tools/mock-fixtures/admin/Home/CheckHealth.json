@@ -6,35 +6,35 @@
         "name": "Apollo",
         "checkType": "Read",
         "status": "OK",
-        "elapsedMs": 5,
+        "elapsedMs": 4,
         "error": null
       },
       {
         "name": "ES:Org:Asia-1",
         "checkType": "Read",
         "status": "OK",
-        "elapsedMs": 29,
+        "elapsedMs": 30,
         "error": null
       },
       {
         "name": "GameSaas:ADB",
         "checkType": "Read",
         "status": "OK",
-        "elapsedMs": 146,
+        "elapsedMs": 33,
         "error": null
       },
       {
         "name": "GameSaas:API",
         "checkType": "Read",
         "status": "OK",
-        "elapsedMs": 13,
+        "elapsedMs": 10,
         "error": null
       },
       {
         "name": "GameSaas:Basic",
         "checkType": "Read",
         "status": "OK",
-        "elapsedMs": 13,
+        "elapsedMs": 18,
         "error": null
       },
       {
@@ -55,49 +55,49 @@
         "name": "IPArea:RequestIp",
         "checkType": "Read",
         "status": "OK",
-        "elapsedMs": 48,
+        "elapsedMs": 46,
         "error": "IP=8.211.42.128; Area=Germany; Province=Hesse; City=Frankfurt am Main; AreaLocal=Germany Hesse; ErrMsg="
       },
       {
         "name": "IPArea:Validate:8.211.42.128",
         "checkType": "Read",
         "status": "OK",
-        "elapsedMs": 10,
+        "elapsedMs": 12,
         "error": "IP=8.211.42.128; ExpectedArea=Germany; ExpectedProvince=Hesse; ExpectedAreaLocal=Germany Hesse; ActualArea=Germany; ActualProvince=Hesse; ActualCity=Frankfurt am Main; ActualAreaLocal=Germany Hesse; ErrMsg="
       },
       {
         "name": "OSS:Aliyun",
         "checkType": "Write",
         "status": "OK",
-        "elapsedMs": 170,
+        "elapsedMs": 142,
         "error": null
       },
       {
         "name": "Redis:Admin",
         "checkType": "ReadWrite",
         "status": "OK",
-        "elapsedMs": 29,
+        "elapsedMs": 19,
         "error": null
       },
       {
         "name": "Redis:Basic",
         "checkType": "ReadWrite",
         "status": "OK",
-        "elapsedMs": 7,
+        "elapsedMs": 10,
         "error": null
       },
       {
         "name": "Redis:Persistence",
         "checkType": "ReadWrite",
         "status": "OK",
-        "elapsedMs": 7,
+        "elapsedMs": 6,
         "error": null
       },
       {
         "name": "Redis:PlatformApi",
         "checkType": "ReadWrite",
         "status": "OK",
-        "elapsedMs": 4,
+        "elapsedMs": 9,
         "error": null
       },
       {
@@ -111,35 +111,35 @@
         "name": "RocketMQ",
         "checkType": "Read",
         "status": "OK",
-        "elapsedMs": 9,
+        "elapsedMs": 17,
         "error": null
       },
       {
         "name": "SQL:LottoBasic",
         "checkType": "Read",
         "status": "OK",
-        "elapsedMs": 16,
+        "elapsedMs": 12,
         "error": null
       },
       {
         "name": "SQL:Org:Asia-1",
         "checkType": "Read",
         "status": "OK",
-        "elapsedMs": 49,
+        "elapsedMs": 36,
         "error": null
       },
       {
         "name": "SQL:OrgADB:Asia-1",
         "checkType": "Read",
         "status": "OK",
-        "elapsedMs": 20,
+        "elapsedMs": 24,
         "error": null
       },
       {
         "name": "TenantRedis:2001:LotteryApi",
         "checkType": "ReadWrite",
         "status": "OK",
-        "elapsedMs": 39,
+        "elapsedMs": 37,
         "error": null
       },
       {
@@ -160,28 +160,28 @@
         "name": "TenantSqlServer:2001",
         "checkType": "ReadWrite",
         "status": "OK",
-        "elapsedMs": 42,
+        "elapsedMs": 46,
         "error": null
       },
       {
         "name": "TenantSqlServer:2002",
         "checkType": "ReadWrite",
         "status": "OK",
-        "elapsedMs": 40,
+        "elapsedMs": 45,
         "error": null
       },
       {
         "name": "TenantSqlServer:2007",
         "checkType": "ReadWrite",
         "status": "OK",
-        "elapsedMs": 40,
+        "elapsedMs": 44,
         "error": null
       },
       {
         "name": "WebSocket:Tenant(0)",
         "checkType": "Read",
         "status": "OK",
-        "elapsedMs": 210,
+        "elapsedMs": 216,
         "error": null
       }
     ]

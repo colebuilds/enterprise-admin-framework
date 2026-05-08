@@ -1,44 +1,9 @@
 {
   "data": {
-    "list": [
-      {
-        "sysUserId": 404056,
-        "userName": "sys_raymond",
-        "nickName": "sys_raymond",
-        "positionName": "Staff",
-        "roleIds": "100000",
-        "roleName": "superadmin",
-        "auditedOrderCount": 15,
-        "transOutOrderCount": 2,
-        "transInOrderCount": 3,
-        "avgAuditDuration": 120,
-        "avgAuditDurationText": "2分钟",
-        "unAuditTimeoutTimes": 0,
-        "auditedTimeoutOrderCount": 0,
-        "workDuration": 28800,
-        "workDurationText": "8小时"
-      },
-      {
-        "sysUserId": 404057,
-        "userName": "sys_len",
-        "nickName": "sys_len",
-        "positionName": "Staff",
-        "roleIds": "100001",
-        "roleName": "operator",
-        "auditedOrderCount": 8,
-        "transOutOrderCount": 1,
-        "transInOrderCount": 0,
-        "avgAuditDuration": 180,
-        "avgAuditDurationText": "3分钟",
-        "unAuditTimeoutTimes": 1,
-        "auditedTimeoutOrderCount": 1,
-        "workDuration": 14400,
-        "workDurationText": "4小时"
-      }
-    ],
+    "list": [],
     "pageNo": 1,
-    "totalPage": 1,
-    "totalCount": 2
+    "totalPage": 0,
+    "totalCount": 0
   },
   "code": 0,
   "msg": "成功",

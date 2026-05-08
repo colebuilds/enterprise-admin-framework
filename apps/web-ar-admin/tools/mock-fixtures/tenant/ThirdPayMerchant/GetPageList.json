@@ -2,6 +2,65 @@
   "data": {
     "list": [
       {
+        "id": 344015,
+        "payCode": "RAPayINR",
+        "sysCurrency": "INR",
+        "customName": "ttt-ERROR",
+        "merchantCode": "",
+        "publicKeyMask": "",
+        "tenantNameWithId": "",
+        "thirdPayMerchantRelationList": [],
+        "createTime": 1778244111977,
+        "creator": "org_figo",
+        "lastUpdateMan": "org_figo",
+        "lastUpdateTime": 1778245802293,
+        "state": 0,
+        "balance": 0,
+        "balanceUpdateTime": -1
+      },
+      {
+        "id": 344014,
+        "payCode": "RAPayINR",
+        "sysCurrency": "INR",
+        "customName": "raytest",
+        "merchantCode": "5s1kjKKAAQRBjDrnFxGVEQ2oen0vhfXf",
+        "publicKeyMask": "",
+        "tenantNameWithId": "sit-inr(2001)",
+        "thirdPayMerchantRelationList": [
+          {
+            "tenantId": 2001,
+            "tenantNameWithId": "sit-inr(2001)",
+            "rechargeWithdrawChannelList": [
+              {
+                "channelId": 484063,
+                "sysChannelId": 12183,
+                "channelType": "Recharge",
+                "channelNameWithId": "RAPayINR-QR",
+                "state": 1,
+                "lastUpdateMan": "org_figo",
+                "lastUpdateTime": 1778245199803
+              },
+              {
+                "channelId": 484064,
+                "sysChannelId": 12184,
+                "channelType": "Recharge",
+                "channelNameWithId": "RAPayINR-PaytmQR",
+                "state": 1,
+                "lastUpdateMan": "org_figo",
+                "lastUpdateTime": 1778245194501
+              }
+            ]
+          }
+        ],
+        "createTime": 1778243631034,
+        "creator": "org_figo",
+        "lastUpdateMan": "org_figo",
+        "lastUpdateTime": 1778243631034,
+        "state": 1,
+        "balance": 0,
+        "balanceUpdateTime": -1
+      },
+      {
         "id": 344013,
         "payCode": "MovPayINR",
         "sysCurrency": "INR",
@@ -31,15 +90,6 @@
                 "state": 0,
                 "lastUpdateMan": "org_figo",
                 "lastUpdateTime": 1778238977782
-              },
-              {
-                "channelId": 484060,
-                "sysChannelId": 12120,
-                "channelType": "Recharge",
-                "channelNameWithId": "MovPayINR-PaytmQR3",
-                "state": 0,
-                "lastUpdateMan": "org_figo",
-                "lastUpdateTime": 1778238979868
               }
             ]
           }
@@ -278,7 +328,7 @@
         "lastUpdateTime": 1778045076001,
         "state": 1,
         "balance": 90.71,
-        "balanceUpdateTime": 1778240849286
+        "balanceUpdateTime": 1778246228837
       },
       {
         "id": 344005,
@@ -605,7 +655,7 @@
         "lastUpdateTime": 1777278355758,
         "state": 1,
         "balance": 10000,
-        "balanceUpdateTime": 1778240819050
+        "balanceUpdateTime": 1778246198557
       },
       {
         "id": 340008,
@@ -735,7 +785,7 @@
     ],
     "pageNo": 1,
     "totalPage": 1,
-    "totalCount": 18
+    "totalCount": 20
   },
   "code": 0,
   "msg": "成功",

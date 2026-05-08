@@ -1,22 +1,7 @@
 {
   "mode": "admin",
-  "capturedAt": "2026-05-08T12:05:21.765Z",
+  "capturedAt": "2026-05-08T13:16:09.473Z",
   "results": [
-    {
-      "path": "/menu/all",
-      "status": "error",
-      "note": "HTTP 404 /menu/all"
-    },
-    {
-      "path": "/user/info",
-      "status": "error",
-      "note": "HTTP 404 /user/info"
-    },
-    {
-      "path": "/auth/codes",
-      "status": "error",
-      "note": "HTTP 404 /auth/codes"
-    },
     {
       "path": "/Home/GetSysUserInfo",
       "status": "ok"
@@ -31,15 +16,6 @@
     },
     {
       "path": "/Login/HomeBasic",
-      "status": "ok"
-    },
-    {
-      "path": "/.well-known/openid-configuration",
-      "status": "error",
-      "note": "HTTP 404 /.well-known/openid-configuration"
-    },
-    {
-      "path": "/Auth/CheckAuth",
       "status": "ok"
     },
     {
@@ -63,15 +39,7 @@
       "status": "ok"
     },
     {
-      "path": "/Common/GetDateTimeScopeTypes",
-      "status": "ok"
-    },
-    {
       "path": "/Common/GetListBasicTable",
-      "status": "ok"
-    },
-    {
-      "path": "/Common/GetSettingByKey",
       "status": "ok"
     },
     {
@@ -80,10 +48,6 @@
     },
     {
       "path": "/IpWhitelist/GetPageList",
-      "status": "ok"
-    },
-    {
-      "path": "/Menu/Get",
       "status": "ok"
     },
     {
@@ -108,10 +72,6 @@
     },
     {
       "path": "/SysUsers/GetTenantPageList",
-      "status": "ok"
-    },
-    {
-      "path": "/SysUsers/GetSuperAuthUser",
       "status": "ok"
     },
     {
@@ -153,186 +113,6 @@
     {
       "path": "/Tenant/GetV3Mode",
       "status": "ok"
-    },
-    {
-      "path": "/hub/domains/list",
-      "status": "error",
-      "note": "HTTP 404 /hub/domains/list"
-    },
-    {
-      "path": "/hub/assets/list",
-      "status": "error",
-      "note": "HTTP 404 /hub/assets/list"
-    },
-    {
-      "path": "/hub/jobs/list",
-      "status": "error",
-      "note": "HTTP 404 /hub/jobs/list"
-    },
-    {
-      "path": "/hub/jobs/stats",
-      "status": "error",
-      "note": "HTTP 404 /hub/jobs/stats"
-    },
-    {
-      "path": "/hub/job-logs/list",
-      "status": "error",
-      "note": "HTTP 404 /hub/job-logs/list"
-    },
-    {
-      "path": "/hub/runners/list",
-      "status": "error",
-      "note": "HTTP 404 /hub/runners/list"
-    },
-    {
-      "path": "/hub/themes/list",
-      "status": "error",
-      "note": "HTTP 404 /hub/themes/list"
-    },
-    {
-      "path": "/hub/layouts/list",
-      "status": "error",
-      "note": "HTTP 404 /hub/layouts/list"
-    },
-    {
-      "path": "/hub/tabbars/list",
-      "status": "error",
-      "note": "HTTP 404 /hub/tabbars/list"
-    },
-    {
-      "path": "/hub/merchant/sites",
-      "status": "error",
-      "note": "HTTP 404 /hub/merchant/sites"
-    },
-    {
-      "path": "/hub/web/config",
-      "status": "error",
-      "note": "HTTP 404 /hub/web/config"
-    },
-    {
-      "path": "/hub/web/game",
-      "status": "error",
-      "note": "HTTP 404 /hub/web/game"
-    },
-    {
-      "path": "/hub/debug/scheduler/org-tenant-list",
-      "status": "error",
-      "note": "HTTP 404 /hub/debug/scheduler/org-tenant-list"
-    },
-    {
-      "path": "/event/metrics",
-      "status": "error",
-      "note": "HTTP 404 /event/metrics"
-    },
-    {
-      "path": "/event/options",
-      "status": "error",
-      "note": "HTTP 404 /event/options"
-    },
-    {
-      "path": "/event/admin/card-page",
-      "status": "error",
-      "note": "HTTP 404 /event/admin/card-page"
-    },
-    {
-      "path": "/event/admin/project",
-      "status": "error",
-      "note": "HTTP 404 /event/admin/project"
-    },
-    {
-      "path": "/event/admin/init/status",
-      "status": "error",
-      "note": "HTTP 404 /event/admin/init/status"
-    },
-    {
-      "path": "/event/admin/alarm/stats",
-      "status": "error",
-      "note": "HTTP 404 /event/admin/alarm/stats"
-    },
-    {
-      "path": "/event/traffic/health",
-      "status": "error",
-      "note": "HTTP 404 /event/traffic/health"
-    },
-    {
-      "path": "/event/traffic/metrics",
-      "status": "error",
-      "note": "HTTP 404 /event/traffic/metrics"
-    },
-    {
-      "path": "/event/traffic/summary",
-      "status": "error",
-      "note": "HTTP 404 /event/traffic/summary"
-    },
-    {
-      "path": "/event/traffic/trend",
-      "status": "error",
-      "note": "HTTP 404 /event/traffic/trend"
-    },
-    {
-      "path": "/event/traffic/nodes",
-      "status": "error",
-      "note": "HTTP 404 /event/traffic/nodes"
-    },
-    {
-      "path": "/ai/metrics",
-      "status": "error",
-      "note": "HTTP 404 /ai/metrics"
-    },
-    {
-      "path": "/ai/health",
-      "status": "error",
-      "note": "HTTP 404 /ai/health"
-    },
-    {
-      "path": "/ai/chat/config",
-      "status": "error",
-      "note": "HTTP 404 /ai/chat/config"
-    },
-    {
-      "path": "/ai/chat/sessions",
-      "status": "error",
-      "note": "HTTP 404 /ai/chat/sessions"
-    },
-    {
-      "path": "/ai/knowledge/queue/stats",
-      "status": "error",
-      "note": "HTTP 404 /ai/knowledge/queue/stats"
-    },
-    {
-      "path": "/ai/knowledge/search",
-      "status": "error",
-      "note": "HTTP 404 /ai/knowledge/search"
-    },
-    {
-      "path": "/ai/admin/escalation/stats",
-      "status": "error",
-      "note": "HTTP 404 /ai/admin/escalation/stats"
-    },
-    {
-      "path": "/ai/admin/feedback/stats",
-      "status": "error",
-      "note": "HTTP 404 /ai/admin/feedback/stats"
-    },
-    {
-      "path": "/ai/report/sessions",
-      "status": "error",
-      "note": "HTTP 404 /ai/report/sessions"
-    },
-    {
-      "path": "/ai/report/alerts/config",
-      "status": "error",
-      "note": "HTTP 404 /ai/report/alerts/config"
-    },
-    {
-      "path": "/ai/report/failed-queries",
-      "status": "error",
-      "note": "HTTP 404 /ai/report/failed-queries"
-    },
-    {
-      "path": "/ai/report/planner/stats",
-      "status": "error",
-      "note": "HTTP 404 /ai/report/planner/stats"
     }
   ]
 }
