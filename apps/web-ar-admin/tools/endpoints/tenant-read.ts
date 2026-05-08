@@ -17,16 +17,22 @@ const ALL_DYNAMIC_KEYS = [
   'withdrawConfigGroupList',
 ];
 
+// First tenant available to org_milo on SIT (used wherever backend rejects tenantId=0)
+const SIT_TENANT_ID = 2001;
+
 // Helpers for body shapes (tenant backend signs EXACTLY these fields)
 const PAGE_T = {
   pageNo: 1,
   pageSize: 20,
   orderBy: 'Desc',
-  tenantId: 0,
+  tenantId: SIT_TENANT_ID,
 } as const;
 const PAGE_NO_T = { pageNo: 1, pageSize: 20, orderBy: 'Desc' } as const;
-// TypeList endpoints: zero-value pagination with tenantId
-const TYPE_LIST = { pageNo: 0, pageSize: 0, orderBy: 0, tenantId: 0 } as const;
+// TypeList endpoints: orderBy is an enum string, tenantId must be non-zero
+const TYPE_LIST = { pageNo: 1, pageSize: 20, orderBy: 'Desc', tenantId: SIT_TENANT_ID } as const;
+
+// Date range for report endpoints — last 30 days relative to fixture capture date
+const REPORT_DATE_RANGE = { startDate: '2026-04-08', endDate: '2026-05-08' } as const;
 
 export const TENANT_READ_ENDPOINTS: Endpoint[] = [
   // ── Core auth ──────────────────────────────────────────────
@@ -113,22 +119,22 @@ export const TENANT_READ_ENDPOINTS: Endpoint[] = [
     path: '/WithdrawRecord/GetPageList',
     body: { ...PAGE_T, sortField: 'CreateTime' },
   },
-  // WithdrawStaticDay does NOT include tenantId in signature
+  // WithdrawStaticDay requires startWorkTime (required field)
   {
     method: 'POST',
     path: '/WithdrawStaticDay/GetPageList',
-    body: { ...PAGE_NO_T },
+    body: { ...PAGE_NO_T, startWorkTime: '2026-04-08', endWorkTime: '2026-05-08' },
   },
-  // ── Report (no tenantId in signature) ─────────────────────
+  // ── Report (no tenantId in signature; startDate/endDate required) ─────────
   {
     method: 'POST',
     path: '/PaymentReport/GetChannelPageList',
-    body: { ...PAGE_NO_T },
+    body: { ...PAGE_NO_T, ...REPORT_DATE_RANGE },
   },
   {
     method: 'POST',
     path: '/PaymentReport/GetTenantPageList',
-    body: { ...PAGE_NO_T },
+    body: { ...PAGE_NO_T, ...REPORT_DATE_RANGE },
   },
   // ── v1 Finance ─────────────────────────────────────────────
   {
@@ -148,8 +154,8 @@ export const TENANT_READ_ENDPOINTS: Endpoint[] = [
     idFrom: {
       listPath: '/v1/Users/GetUserPageList',
       extractId: (d) => ({
-        userId: d?.data?.list?.[0]?.id ?? d?.data?.list?.[0]?.userId ?? 1,
-        tenantId: 0,
+        userId: d?.data?.list?.[0]?.userId ?? d?.data?.list?.[0]?.id ?? 1,
+        tenantId: SIT_TENANT_ID,
       }),
     },
   },
@@ -158,13 +164,11 @@ export const TENANT_READ_ENDPOINTS: Endpoint[] = [
     path: '/v1/Users/GetUserBetTotal',
     idFrom: {
       listPath: '/v1/Users/GetUserPageList',
-      // GetUserBetTotal uses zero-value pagination + tenantId
       extractId: (d) => ({
-        userId: d?.data?.list?.[0]?.id ?? 1,
-        pageNo: 0,
-        pageSize: 0,
-        orderBy: 0,
-        tenantId: 0,
+        userId: d?.data?.list?.[0]?.userId ?? d?.data?.list?.[0]?.id ?? 1,
+        startTime: '2026-04-08 00:00:00',
+        endTime: '2026-05-08 23:59:59',
+        ...PAGE_T,
       }),
     },
   },
@@ -174,7 +178,7 @@ export const TENANT_READ_ENDPOINTS: Endpoint[] = [
     idFrom: {
       listPath: '/v1/Users/GetUserPageList',
       extractId: (d) => ({
-        userId: String(d?.data?.list?.[0]?.id ?? '1'),
+        userId: String(d?.data?.list?.[0]?.userId ?? d?.data?.list?.[0]?.id ?? '1'),
         ...PAGE_T,
       }),
     },
@@ -185,7 +189,7 @@ export const TENANT_READ_ENDPOINTS: Endpoint[] = [
     idFrom: {
       listPath: '/v1/Users/GetUserPageList',
       extractId: (d) => ({
-        userId: String(d?.data?.list?.[0]?.id ?? '1'),
+        userId: String(d?.data?.list?.[0]?.userId ?? d?.data?.list?.[0]?.id ?? '1'),
         ...PAGE_T,
       }),
     },
@@ -206,7 +210,7 @@ export const TENANT_READ_ENDPOINTS: Endpoint[] = [
     idFrom: {
       listPath: '/v1/Users/GetUserPageList',
       extractId: (d) => ({
-        userId: d?.data?.list?.[0]?.id ?? 1,
+        userId: d?.data?.list?.[0]?.userId ?? d?.data?.list?.[0]?.id ?? 1,
         ...PAGE_T,
       }),
     },
@@ -217,7 +221,7 @@ export const TENANT_READ_ENDPOINTS: Endpoint[] = [
     idFrom: {
       listPath: '/v1/Users/GetUserPageList',
       extractId: (d) => ({
-        userId: String(d?.data?.list?.[0]?.id ?? '1'),
+        userId: String(d?.data?.list?.[0]?.userId ?? d?.data?.list?.[0]?.id ?? '1'),
         ...PAGE_T,
       }),
     },
@@ -228,7 +232,7 @@ export const TENANT_READ_ENDPOINTS: Endpoint[] = [
     idFrom: {
       listPath: '/v1/Users/GetUserPageList',
       extractId: (d) => ({
-        userId: String(d?.data?.list?.[0]?.id ?? '1'),
+        userId: String(d?.data?.list?.[0]?.userId ?? d?.data?.list?.[0]?.id ?? '1'),
         ...PAGE_T,
       }),
     },
@@ -239,7 +243,7 @@ export const TENANT_READ_ENDPOINTS: Endpoint[] = [
     idFrom: {
       listPath: '/v1/Users/GetUserPageList',
       extractId: (d) => ({
-        userId: String(d?.data?.list?.[0]?.id ?? '1'),
+        userId: String(d?.data?.list?.[0]?.userId ?? d?.data?.list?.[0]?.id ?? '1'),
         ...PAGE_T,
       }),
     },
@@ -250,7 +254,7 @@ export const TENANT_READ_ENDPOINTS: Endpoint[] = [
     idFrom: {
       listPath: '/v1/Users/GetUserPageList',
       extractId: (d) => ({
-        userId: String(d?.data?.list?.[0]?.id ?? '1'),
+        userId: String(d?.data?.list?.[0]?.userId ?? d?.data?.list?.[0]?.id ?? '1'),
         ...PAGE_T,
       }),
     },

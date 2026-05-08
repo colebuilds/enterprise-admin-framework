@@ -1,6 +1,6 @@
-export { usePermission } from './usePermission';
-
 import { h, ref } from 'vue';
+
+export { usePermission } from './usePermission';
 
 export interface TenantOption {
   label: string;
