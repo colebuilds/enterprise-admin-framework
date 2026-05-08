@@ -11,7 +11,8 @@
     "build:prod": "vite build --mode prod",
     "preview": "vite preview",
     "typecheck": "vue-tsc --noEmit --skipLibCheck",
-    "gen:api": "esno tools/api.ts"
+    "gen:api": "esno tools/api.ts",
+    "validate:fixtures": "esno tools/validate-fixtures.ts"
   },
   "imports": {
     "#/*": "./src/*"
