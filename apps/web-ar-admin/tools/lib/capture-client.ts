@@ -19,7 +19,10 @@ export class CaptureClient {
     return res.json() as Promise<T>;
   }
 
-  async post<T = unknown>(path: string, body: Record<string, unknown> = {}): Promise<T> {
+  async post<T = unknown>(
+    path: string,
+    body: Record<string, unknown> = {},
+  ): Promise<T> {
     const signed = signBody(body);
     const res = await fetch(`${this.opts.baseUrl}${path}`, {
       method: 'POST',
@@ -30,7 +33,9 @@ export class CaptureClient {
     return res.json() as Promise<T>;
   }
 
-  setToken(token: string) { this.token = token; }
+  setToken(token: string) {
+    this.token = token;
+  }
 
   private buildHeaders(): Record<string, string> {
     const headers: Record<string, string> = {

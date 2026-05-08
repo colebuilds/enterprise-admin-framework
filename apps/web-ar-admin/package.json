@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite --mode dev",
     "dev:tenant": "cross-env VITE_APP_TYPE=TENANT vite --mode dev",
+    "sit:tenant": "cross-env VITE_APP_TYPE=TENANT vite --mode sit",
     "build:sit": "vite build --mode sit",
     "build:prod": "vite build --mode prod",
     "preview": "vite preview",

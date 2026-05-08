@@ -29,10 +29,18 @@ const PAGE_T = {
 } as const;
 const PAGE_NO_T = { pageNo: 1, pageSize: 20, orderBy: 'Desc' } as const;
 // TypeList endpoints: orderBy is an enum string, tenantId must be non-zero
-const TYPE_LIST = { pageNo: 1, pageSize: 20, orderBy: 'Desc', tenantId: SIT_TENANT_ID } as const;
+const TYPE_LIST = {
+  pageNo: 1,
+  pageSize: 20,
+  orderBy: 'Desc',
+  tenantId: SIT_TENANT_ID,
+} as const;
 
 // Date range for report endpoints — last 30 days relative to fixture capture date
-const REPORT_DATE_RANGE = { startDate: '2026-04-08', endDate: '2026-05-08' } as const;
+const REPORT_DATE_RANGE = {
+  startDate: '2026-04-08',
+  endDate: '2026-05-08',
+} as const;
 
 export const TENANT_READ_ENDPOINTS: Endpoint[] = [
   // ── Core auth ──────────────────────────────────────────────
@@ -123,7 +131,11 @@ export const TENANT_READ_ENDPOINTS: Endpoint[] = [
   {
     method: 'POST',
     path: '/WithdrawStaticDay/GetPageList',
-    body: { ...PAGE_NO_T, startWorkTime: '2026-04-08', endWorkTime: '2026-05-08' },
+    body: {
+      ...PAGE_NO_T,
+      startWorkTime: '2026-04-08',
+      endWorkTime: '2026-05-08',
+    },
   },
   // ── Report (no tenantId in signature; startDate/endDate required) ─────────
   {
@@ -178,7 +190,9 @@ export const TENANT_READ_ENDPOINTS: Endpoint[] = [
     idFrom: {
       listPath: '/v1/Users/GetUserPageList',
       extractId: (d) => ({
-        userId: String(d?.data?.list?.[0]?.userId ?? d?.data?.list?.[0]?.id ?? '1'),
+        userId: String(
+          d?.data?.list?.[0]?.userId ?? d?.data?.list?.[0]?.id ?? '1',
+        ),
         ...PAGE_T,
       }),
     },
@@ -189,7 +203,9 @@ export const TENANT_READ_ENDPOINTS: Endpoint[] = [
     idFrom: {
       listPath: '/v1/Users/GetUserPageList',
       extractId: (d) => ({
-        userId: String(d?.data?.list?.[0]?.userId ?? d?.data?.list?.[0]?.id ?? '1'),
+        userId: String(
+          d?.data?.list?.[0]?.userId ?? d?.data?.list?.[0]?.id ?? '1',
+        ),
         ...PAGE_T,
       }),
     },
@@ -221,7 +237,9 @@ export const TENANT_READ_ENDPOINTS: Endpoint[] = [
     idFrom: {
       listPath: '/v1/Users/GetUserPageList',
       extractId: (d) => ({
-        userId: String(d?.data?.list?.[0]?.userId ?? d?.data?.list?.[0]?.id ?? '1'),
+        userId: String(
+          d?.data?.list?.[0]?.userId ?? d?.data?.list?.[0]?.id ?? '1',
+        ),
         ...PAGE_T,
       }),
     },
@@ -232,7 +250,9 @@ export const TENANT_READ_ENDPOINTS: Endpoint[] = [
     idFrom: {
       listPath: '/v1/Users/GetUserPageList',
       extractId: (d) => ({
-        userId: String(d?.data?.list?.[0]?.userId ?? d?.data?.list?.[0]?.id ?? '1'),
+        userId: String(
+          d?.data?.list?.[0]?.userId ?? d?.data?.list?.[0]?.id ?? '1',
+        ),
         ...PAGE_T,
       }),
     },
@@ -243,7 +263,9 @@ export const TENANT_READ_ENDPOINTS: Endpoint[] = [
     idFrom: {
       listPath: '/v1/Users/GetUserPageList',
       extractId: (d) => ({
-        userId: String(d?.data?.list?.[0]?.userId ?? d?.data?.list?.[0]?.id ?? '1'),
+        userId: String(
+          d?.data?.list?.[0]?.userId ?? d?.data?.list?.[0]?.id ?? '1',
+        ),
         ...PAGE_T,
       }),
     },
@@ -254,7 +276,9 @@ export const TENANT_READ_ENDPOINTS: Endpoint[] = [
     idFrom: {
       listPath: '/v1/Users/GetUserPageList',
       extractId: (d) => ({
-        userId: String(d?.data?.list?.[0]?.userId ?? d?.data?.list?.[0]?.id ?? '1'),
+        userId: String(
+          d?.data?.list?.[0]?.userId ?? d?.data?.list?.[0]?.id ?? '1',
+        ),
         ...PAGE_T,
       }),
     },
