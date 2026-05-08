@@ -137,9 +137,13 @@ export const useAppUserStore = defineStore('app-user', () => {
       return;
     }
     const stored = localStorage.getItem(ACTIVE_TENANT_STORAGE_KEY);
-    const storedId = stored === null ? null : Number(stored);
+    const storedId =
+      stored !== null && /^\d+$/.test(stored) ? Number(stored) : null;
     const preferred =
       storedId === null ? undefined : tenants.find((t) => t.id === storedId);
+    if (storedId !== null && !preferred) {
+      localStorage.removeItem(ACTIVE_TENANT_STORAGE_KEY);
+    }
     const valid =
       preferred ?? tenants.find((t) => t.id === activeTenantId.value);
     activeTenantId.value = valid ? valid.id : (tenants[0]?.id ?? null);
