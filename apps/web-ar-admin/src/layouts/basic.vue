@@ -218,6 +218,9 @@ watch(
 
 <template>
   <BasicLayout @clear-preferences-and-logout="handleLogout">
+    <template #header-left-10>
+      <HeaderTenant />
+    </template>
     <template #user-dropdown>
       <UserDropdown
         :avatar
