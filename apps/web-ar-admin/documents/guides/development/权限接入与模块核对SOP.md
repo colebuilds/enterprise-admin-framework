@@ -5,7 +5,7 @@ status: stable
 author: cole
 owner: cole
 created: 2026-05-01
-updated: 2026-05-01
+updated: 2026-05-08
 audience: human, ai-agent
 ---
 
@@ -30,20 +30,23 @@ audience: human, ai-agent
 
 ## 2. 当前仓库权限运行时链路
 
+> ⚠️ 本节已更新为 **vben 迁移版**（2026-05-08）。完整技术细节见
+> `documents/design/technical/2026-05-08-权限系统技术方案.md`。
+
 ### 2.1 权限数据源
 
 当前前端权限的源头是用户信息接口返回的菜单树。
 
 核心入口：
 
-- `src/store/modules/user.ts`
+- `src/store/app-user.ts` → `getPermissionCodes` computed（递归提取 menus 树的 authCode）
+- `src/store/auth.ts` → `fetchUserInfo`（登录后调用，将 codes 写入 accessStore）
 
 当前实现要点：
 
-- 前端会把后端返回的 `menus` 做树拍平
-- 读取每个节点的 `authCode`
-- 统一转小写后写入 `userStore.permissions`
-- 本地开发域名场景会额外补一个 `localhost` 权限
+- 前端递归遍历后端返回的 `menus` 树，读取每个节点的 `authCode`
+- 统一转小写后写入 `accessStore.accessCodes`（vben 全局 store）
+- 本地开发域名（localhost / 192.168.x / 10.x 等）自动追加 `'localhost'` 权限
 
 这意味着当前仓库里几乎所有权限判断，本质上都在消费同一份拍平后的权限码集合。
 
@@ -51,15 +54,15 @@ audience: human, ai-agent
 
 核心入口：
 
-- `src/router/generator.ts`
-- `src/router/guards.ts`
+- `src/router/access.ts`（generateAccess，调用 vben 内置 generateAccessible）
+- `src/router/routes/modules/`（各模块路由定义）
 
 当前实现要点：
 
-- 页面路由权限写在路由 `meta.permissions`
-- 动态路由生成时，会用当前用户权限过滤 `asyncRoutes`
-- 多个权限码按“命中任一项即可”的 OR 语义处理
-- 如果用户手输一个受控路由但没有权限，守卫会跳转到 `403`
+- 页面路由权限写在路由 **`meta.authority`**（vben 字段，替换老项目的 `meta.permissions`）
+- vben `generateRoutesByFrontend` 用 `accessCodes` 过滤静态路由，OR 语义（命中任一即通过）
+- `meta.authority` 未设置 = 所有已登录用户可访问（公共页面）
+- 如果用户手输一个受控路由但没有权限，跳转至 `403`
 
 所以路由层权限主要回答的是：
 
@@ -70,9 +73,9 @@ audience: human, ai-agent
 
 当前仓库常见的权限消费方式分为以下几类：
 
-1. 路由 / 页面入口：`meta.permissions`
+1. 路由 / 页面入口：`meta.authority`
 2. 静态按钮：`v-permission`
-3. 动态区块 / tab / layout：`hasPermission()`
+3. 动态区块 / tab / layout：`hasPermission()` / `hasEveryPermission()`
 4. 表格行操作：`auth`
 5. 批量操作：`batchActions.auth`
 6. 组件内部禁用态：`permission` prop
@@ -82,18 +85,18 @@ audience: human, ai-agent
 
 - `src/hooks/web/usePermission.ts`
 - `src/directives/permission.ts`
-- `src/components/Table/src/createActionColumn.ts`
-- `src/components/Table/src/components/TableAction.vue`
-- `src/components/ProComponents/ProCrudTable/ProCrudTable.vue`
-- `src/components/ConfirmSwitch/index.vue`
+- `src/components/table/src/createActionColumn.ts`
+- `src/components/table/src/components/TableAction.vue`
+- `src/components/pro/ProCrudTable/ProCrudTable.vue`
 
 ### 2.4 当前仓库的关键语义
 
 执行模块核对时，至少要记住以下语义：
 
-- 权限判断统一按小写比较
-- 多个权限码通常是 OR 关系，不是 AND 关系
-- `v-permission` 默认是“无权限直接移除 DOM”
+- 权限判断统一按小写比较（传入时大小写均可，内部转小写）
+- 多个权限码通常是 OR 关系，不是 AND 关系（`hasPermission`）
+- AND 关系用 `hasEveryPermission`（需同时具备所有码）
+- `v-permission` 默认是”无权限直接移除 DOM”
 - 表格操作列不仅会看 `auth`，还会叠加 `ifShow`
 - 批量操作和组件内开关并不是只靠 `v-permission`
 
