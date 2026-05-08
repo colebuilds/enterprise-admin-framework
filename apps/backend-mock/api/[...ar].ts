@@ -1,16 +1,10 @@
-// apps/backend-mock/api/[...ar].ts
-// Catch-all for AR admin API paths. Uses domainUrl header to select admin/tenant fixtures.
-import { defineEventHandler, getHeader, getRequestURL } from 'h3';
-import { loadArFixture } from '~/utils/ar-fixtures';
+import { defineEventHandler, getHeader, getRequestURL, readBody } from 'h3';
+import { dispatchArHandler } from '~/utils/ar-handlers/index';
 
-export default defineEventHandler((event) => {
+export default defineEventHandler(async (event) => {
   const domainUrl = getHeader(event, 'domainUrl') ?? '';
   const apiPath = getRequestURL(event).pathname.replace(/^\/api/, '') || '/';
+  const body = (await readBody(event).catch(() => ({}))) as Record<string, any>;
 
-  const fixture = loadArFixture(domainUrl, apiPath);
-  if (fixture !== null) {
-    return fixture;
-  }
-
-  return { code: 0, data: null, msg: 'ok (mock stub)' };
+  return dispatchArHandler(domainUrl, apiPath, body ?? {});
 });
